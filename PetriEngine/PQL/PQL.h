@@ -98,7 +98,7 @@ public:
 	/** Evaluate the expression given marking and assignment */
 	virtual int evaluate(const EvaluationContext& context) const = 0;
 	/** Generate LLVM intermediate code for this expr  */
-	virtual llvm::Value* codegen(CodeGenerationContext& context) const = 0;
+	//virtual llvm::Value* codegen(CodeGenerationContext& context) const = 0;
 	/** Convert expression to string */
 	virtual std::string toString() const = 0;
 	/** Expression type */
@@ -121,7 +121,7 @@ public:
 	/** Analyze constraints for over-approximation */
 	virtual void findConstraints(ConstraintAnalysisContext& context) const = 0;
 	/** Generate LLVM intermediate code for this condition  */
-	virtual llvm::Value* codegen(CodeGenerationContext& context) const = 0;
+	//virtual llvm::Value* codegen(CodeGenerationContext& context) const = 0;
 	/** Convert condition to string */
 	virtual std::string toString() const = 0;
 	/** Export condition to TAPAAL query (add EF manually!) */

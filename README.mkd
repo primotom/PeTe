@@ -1,27 +1,19 @@
-PeTe - Petri Engine exTremE
+PeTAPAAL
 ===========================
-PeTe is a graphical Petri net modelling and verification tool.
-A binary package for Ubuntu can be found [here](https://github.com/downloads/jopsen/PeTe/pete_1.0-1ubuntu1_i386.deb) and a PPA for Ubuntu 10.10 is available [here](https://launchpad.net/~jopsen/+archive/pete).
+This is a hack on PeTe sources to create a fast untimed engine for TAPAAL.
 
-Building PeTe
+Building PeTAPAAL
 -------------
-PeTe is cross-platform, but it might require some tweaks to build it on a
-non-unix platform. Following dependencies are required for building:
+PeTAPAAL is build using a simple makefile, depending on you platform and configuration of it,
+you might need to modify the makefile in order link correctly against following dependencies: 
 
-  * Qt (>= 4.7)
-  * qmake (>= 2.0)
-  * UnitTest++ (>= 1.4)
-  * pkg-config (>= 0.25)
   * GNU Bison (>= 2.4)
   * flex (>= 2.5)
   * lp_solve (>= 5.5)
-  * llvm (>= 2.8)
-  * igraph (>= 0.5.3)
-  * libproc (>= 3.2.8)
 
 License
 -------
-PeTe is available under the terms of the GNU GPL versoin 3 or (at your option) any later version.
+PeTAPAAL is available under the terms of the GNU GPL versoin 3 or (at your option) any later version.
 If this license doesn't suit you're welcome to contact us, and purpose an alternative license.
 
 Authors

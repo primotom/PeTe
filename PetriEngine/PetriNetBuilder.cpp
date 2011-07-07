@@ -22,7 +22,7 @@
 #include "PQL/PQLParser.h"
 #include "PQL/PQL.h"
 #include "PQL/Contexts.h"
-#include "PQL/CompiledCondition.h"
+//#include "PQL/CompiledCondition.h"
 
 #include <assert.h>
 
@@ -90,7 +90,7 @@ PetriNet* PetriNetBuilder::makePetriNet(){
 			net->_conditions[i] = PQL::ParseQuery(conditions[i]);
 			if(net->_conditions[i]){
 				PQL::AnalysisContext context(*net);
-				if(_jit){
+				/*if(_jit){
 					PQL::CompiledCondition* CC = new PQL::CompiledCondition(net->_conditions[i]);
 					CC->analyze(context);
 					if(CC->compile())
@@ -100,7 +100,7 @@ PetriNet* PetriNetBuilder::makePetriNet(){
 						CC = NULL;
 						//TODO: Print to stderr
 					}
-				}else
+				}else*/
 					net->_conditions[i]->analyze(context);
 
 				//Delete if there we're errors

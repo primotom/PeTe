@@ -44,13 +44,13 @@ public:
 	void analyze(AnalysisContext& context);
 	bool pfree() const;
 	int evaluate(const EvaluationContext& context) const;
-	llvm::Value* codegen(CodeGenerationContext& context) const;
+	//llvm::Value* codegen(CodeGenerationContext& context) const;
 	std::string toString() const;
 	void scale(int factor);
 private:
 	virtual int apply(int v1, int v2) const = 0;
 	/** LLVM binary operator (llvm::Instruction::BinaryOps) */
-	virtual int binaryOp() const = 0;
+	//virtual int binaryOp() const = 0;
 	virtual std::string op() const = 0;
 	Expr* _expr1;
 	Expr* _expr2;
@@ -63,7 +63,7 @@ public:
 	Expr::Types type() const;
 private:
 	int apply(int v1, int v2) const;
-	int binaryOp() const;
+	//int binaryOp() const;
 	std::string op() const;
 };
 
@@ -74,7 +74,7 @@ public:
 	Expr::Types type() const;
 private:
 	int apply(int v1, int v2) const;
-	int binaryOp() const;
+	//int binaryOp() const;
 	std::string op() const;
 };
 
@@ -85,7 +85,7 @@ public:
 	Expr::Types type() const;
 private:
 	int apply(int v1, int v2) const;
-	int binaryOp() const;
+	//int binaryOp() const;
 	std::string op() const;
 };
 
@@ -99,7 +99,7 @@ public:
 	void analyze(AnalysisContext& context);
 	bool pfree() const;
 	int evaluate(const EvaluationContext& context) const;
-	llvm::Value* codegen(CodeGenerationContext& context) const;
+	//llvm::Value* codegen(CodeGenerationContext& context) const;
 	std::string toString() const;
 	Expr::Types type() const;
 	void scale(int factor);
@@ -114,7 +114,7 @@ public:
 	void analyze(AnalysisContext& context);
 	bool pfree() const;
 	int evaluate(const EvaluationContext& context) const;
-	llvm::Value* codegen(CodeGenerationContext& context) const;
+	//llvm::Value* codegen(CodeGenerationContext& context) const;
 	std::string toString() const;
 	Expr::Types type() const;
 	int value() const { return _value; };
@@ -133,7 +133,7 @@ public:
 	void analyze(AnalysisContext& context);
 	bool pfree() const;
 	int evaluate(const EvaluationContext& context) const;
-	llvm::Value* codegen(CodeGenerationContext& context) const;
+	//llvm::Value* codegen(CodeGenerationContext& context) const;
 	std::string toString() const;
 	Expr::Types type() const;
 	/** Offset in marking or valuation */
@@ -163,7 +163,7 @@ public:
 	void analyze(AnalysisContext& context);
 	bool evaluate(const EvaluationContext& context) const;
 	void findConstraints(ConstraintAnalysisContext& context) const;
-	llvm::Value* codegen(CodeGenerationContext& context) const;
+	//llvm::Value* codegen(CodeGenerationContext& context) const;
 	double distance(DistanceContext& context) const;
 	std::string toString() const;
 	void scale(int factor);
@@ -171,7 +171,7 @@ public:
 private:
 	virtual bool apply(bool b1, bool b2) const = 0;
 	/** LLVM binary operator (llvm::Instruction::BinaryOps) */
-	virtual int logicalOp() const = 0;
+	//virtual int logicalOp() const = 0;
 	virtual double delta(double d1, double d2, const DistanceContext& context) const = 0;
 	virtual std::string op() const = 0;
 	virtual void mergeConstraints(ConstraintAnalysisContext::ConstraintSet& result, ConstraintAnalysisContext::ConstraintSet& other, bool negated) const = 0;
@@ -185,7 +185,7 @@ public:
 	AndCondition(Condition* cond1, Condition* cond2) : LogicalCondition(cond1,cond2) {}
 private:
 	bool apply(bool b1, bool b2) const;
-	int logicalOp() const;
+	//int logicalOp() const;
 	double delta(double d1, double d2, const DistanceContext& context) const;
 	void mergeConstraints(ConstraintAnalysisContext::ConstraintSet& result, ConstraintAnalysisContext::ConstraintSet& other, bool negated) const;
 	std::string op() const;
@@ -197,7 +197,7 @@ public:
 	OrCondition(Condition* cond1, Condition* cond2) : LogicalCondition(cond1,cond2) {}
 private:
 	bool apply(bool b1, bool b2) const;
-	int logicalOp() const;
+	//int logicalOp() const;
 	double delta(double d1, double d2, const DistanceContext& context) const;
 	void mergeConstraints(ConstraintAnalysisContext::ConstraintSet& result, ConstraintAnalysisContext::ConstraintSet& other, bool negated) const;
 	std::string op() const;
@@ -214,7 +214,7 @@ public:
 	void analyze(AnalysisContext& context);
 	bool evaluate(const EvaluationContext& context) const;
 	void findConstraints(ConstraintAnalysisContext& context) const;
-	llvm::Value* codegen(CodeGenerationContext& context) const;
+	//llvm::Value* codegen(CodeGenerationContext& context) const;
 	double distance(DistanceContext& context) const;
 	std::string toString() const;
 	void scale(int factor);
@@ -222,7 +222,7 @@ public:
 private:
 	virtual bool apply(int v1, int v2) const = 0;
 	/** LLVM Comparison predicate (llvm::ICmpInst::Predicate) */
-	virtual int compareOp() const = 0;
+	//virtual int compareOp() const = 0;
 	virtual double delta(int v1, int v2, bool negated) const = 0;
 	virtual std::string op() const = 0;
 	/** Operator when exported to TAPAAL */
@@ -241,7 +241,7 @@ public:
 	EqualCondition(Expr* expr1, Expr* expr2) : CompareCondition(expr1,expr2) {}
 private:
 	bool apply(int v1, int v2) const;
-	int compareOp() const;
+	//int compareOp() const;
 	double delta(int v1, int v2, bool negated) const;
 	void addConstraints(ConstraintAnalysisContext& context,	IdentifierExpr* id, int value) const;
 	void addConstraints(ConstraintAnalysisContext& context, int value,	IdentifierExpr* id) const;
@@ -257,7 +257,7 @@ public:
 	std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
 private:
 	bool apply(int v1, int v2) const;
-	int compareOp() const;
+	//int compareOp() const;
 	double delta(int v1, int v2, bool negated) const;
 	void addConstraints(ConstraintAnalysisContext& context,	IdentifierExpr* id, int value) const;
 	void addConstraints(ConstraintAnalysisContext& context, int value,	IdentifierExpr* id) const;
@@ -272,7 +272,7 @@ public:
 	LessThanCondition(Expr* expr1, Expr* expr2) : CompareCondition(expr1,expr2) {}
 private:
 	bool apply(int v1, int v2) const;
-	int compareOp() const;
+	//int compareOp() const;
 	double delta(int v1, int v2, bool negated) const;
 	void addConstraints(ConstraintAnalysisContext& context,	IdentifierExpr* id, int value) const;
 	void addConstraints(ConstraintAnalysisContext& context, int value,	IdentifierExpr* id) const;
@@ -287,7 +287,7 @@ public:
 	LessThanOrEqualCondition(Expr* expr1, Expr* expr2) : CompareCondition(expr1,expr2) {}
 private:
 	bool apply(int v1, int v2) const;
-	int compareOp() const;
+	//int compareOp() const;
 	double delta(int v1, int v2, bool negated) const;
 	void addConstraints(ConstraintAnalysisContext& context,	IdentifierExpr* id, int value) const;
 	void addConstraints(ConstraintAnalysisContext& context, int value,	IdentifierExpr* id) const;
@@ -302,7 +302,7 @@ public:
 	GreaterThanCondition(Expr* expr1, Expr* expr2) : CompareCondition(expr1,expr2) {}
 private:
 	bool apply(int v1, int v2) const;
-	int compareOp() const;
+	//int compareOp() const;
 	double delta(int v1, int v2, bool negated) const;
 	void addConstraints(ConstraintAnalysisContext& context,	IdentifierExpr* id, int value) const;
 	void addConstraints(ConstraintAnalysisContext& context, int value,	IdentifierExpr* id) const;
@@ -317,7 +317,7 @@ public:
 	GreaterThanOrEqualCondition(Expr* expr1, Expr* expr2) : CompareCondition(expr1,expr2) {}
 private:
 	bool apply(int v1, int v2) const;
-	int compareOp() const;
+	//int compareOp() const;
 	double delta(int v1, int v2, bool negated) const;
 	void addConstraints(ConstraintAnalysisContext& context,	IdentifierExpr* id, int value) const;
 	void addConstraints(ConstraintAnalysisContext& context, int value,	IdentifierExpr* id) const;
@@ -336,7 +336,7 @@ public:
 	void analyze(AnalysisContext& context);
 	bool evaluate(const EvaluationContext& context) const;
 	void findConstraints(ConstraintAnalysisContext& context) const;
-	llvm::Value* codegen(CodeGenerationContext& context) const;
+	//llvm::Value* codegen(CodeGenerationContext& context) const;
 	double distance(DistanceContext& context) const;
 	std::string toString() const;
 	std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
