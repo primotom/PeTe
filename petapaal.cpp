@@ -44,25 +44,6 @@ using namespace PetriEngine;
 using namespace PetriEngine::PQL;
 using namespace PetriEngine::Reachability;
 
-/* Command line interface:
-	PeTAPAAL [options] model-file query-file
-	Options:
-		-k	--k-bound <number of tokens>			Max-number of tokens, 0 to ignore (default)
-		-t	--trace									Provide XML-trace to stderr
-		-s	--search-strategy <strategy>			Search strategy:
-													 - BestFS	Heuristic search (default)
-													 - BFS		Best first search
-													 - DFS		Depth first search
-													 - RDFS		Random depth first search
-		-m	--memory-limit <megabyte>				Memory limit for state space in MB, 0 for unlimited (1 GB default)
-
-	Return Values:
-		0		Successful, query satisfiable
-		1		Unsuccesful, query not satisfiable
-		2		Unknown, algorithm was unable to answer the question
-		3		Error, see stderr for error message
-*/
-
 /** Enumeration of return values from PeTAPAAL */
 enum ReturnValues{
 	SuccessCode	= 0,
@@ -78,6 +59,8 @@ enum SearchStrategies{
 	DFS,		//LinearOverAproxx + DepthFirstReachabilitySearch
 	RDFS		//LinearOverAproxx + RandomDFS
 };
+
+#define VERSION		"0.1"
 
 int main(int argc, char* argv[]){
 	// Commandline arguments
@@ -119,6 +102,39 @@ int main(int argc, char* argv[]){
 				return ErrorCode;
 			}else
 				memorylimit *= 1024;
+		}else if(strcmp(argv[i], "-h") == 0 || strcmp(argv[i], "--help") == 0){
+			printf(	"Usage: PeTAPAAL [options] model-file query-file\n"
+					"Determine untimed reachability of a query for a Petri net.\n"
+					"\n"
+					"Options:\n"
+					"  -k, --k-bound <number of tokens>   Token bound, 0 to ignore (default)\n"
+					"  -t, --trace                        Provide XML-trace to stderr\n"
+					"  -s, --search-strategy <strategy>   Search strategy:\n"
+					"                                     - BestFS   Heuristic search (default)\n"
+					"                                     - BFS      Best first search\n"
+					"                                     - DFS      Depth first search\n"
+					"                                     - RDFS     Random depth first search\n"
+					"  -m, --memory-limit <megabyte>      Memory limit for state space in MB,\n"
+					"                                     0 for unlimited (1 GB default)\n"
+					"  -h, --help                         Display this help message\n"
+					"  -v, --version                      Display version information\n"
+					"\n"
+					"Return Values:\n"
+					"  0   Successful, query satisfiable\n"
+					"  1   Unsuccesful, query not satisfiable\n"
+					"  2   Unknown, algorithm was unable to answer the question\n"
+					"  3   Error, see stderr for error message\n"
+					"\n"
+					"PeTAPAAL is a compilation of PeTe as untimed backend for TAPAAL.\n"
+					"PeTe project page: <https://github.com/jopsen/PeTe>\n");
+			return 0;
+		}else if(strcmp(argv[i], "-v") == 0 || strcmp(argv[i], "--version") == 0){
+			printf("PeTAPAAL (PeTe for TAPAAL) %s\n", VERSION);
+			printf("Copyright (C) 2011 Jonas Finnemann Jensen <jopsen@gmail.com>,\n");
+			printf("                   Thomas Søndersø Nielsen <primogens@gmail.com>,\n");
+			printf("                   Lars Kærlund Østergaard <larsko@gmail.com>\n");
+			printf("GNU GPLv3 or later <http://gnu.org/licenses/gpl.html>\n");
+			return 0;
 		}else if(modelfile == NULL){
 			modelfile = argv[i];
 		}else if(queryfile == NULL){

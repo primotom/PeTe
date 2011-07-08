@@ -61,6 +61,7 @@ private:
 	void parseElement(XMLSP::DOMElement* element);
 	void parsePlace(XMLSP::DOMElement* element);
 	void parseArc(XMLSP::DOMElement* element);
+	void parseTransportArc(XMLSP::DOMElement* element);
 	void parseTransition(XMLSP::DOMElement* element);
 	void parseVariable(XMLSP::DOMElement* element);
 	void parseValue(XMLSP::DOMElement* element, std::string& text);

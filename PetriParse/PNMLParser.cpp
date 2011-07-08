@@ -98,6 +98,8 @@ void PNMLParser::parseElement(DOMElement* element){
 				 (*it)->getElementName() == "inputArc" ||
 				 (*it)->getElementName() == "outputArc"){
 			parseArc(*it);
+		}else if((*it)->getElementName() == "transportArc"){
+			parseTransportArc(*it);
 		}else if((*it)->getElementName() == "variable"){
 			parseVariable(*it);
 		} else if((*it)->getElementName() == "queries"){
@@ -148,6 +150,25 @@ void PNMLParser::parsePlace(DOMElement* element){
 	nn.name = name;
 	nn.isPlace = true;
 	id2name[id] = nn;
+}
+
+void PNMLParser::parseTransportArc(DOMElement* element){
+	string source		= element->getAttribute("source"),
+		   transiton	= element->getAttribute("transition"),
+		   target		= element->getAttribute("target");
+	int weight = 1;
+
+	Arc inArc;
+	inArc.source = source;
+	inArc.target = transiton;
+	inArc.weight = weight;
+	arcs.push_back(inArc);
+
+	Arc outArc;
+	outArc.source = transiton;
+	outArc.target = target;
+	outArc.weight = weight;
+	arcs.push_back(outArc);
 }
 
 void PNMLParser::parseArc(DOMElement* element){
