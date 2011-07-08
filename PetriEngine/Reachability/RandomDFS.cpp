@@ -20,7 +20,7 @@
 #include "../PQL/PQL.h"
 #include "../PQL/Contexts.h"
 #include "../Structures/StateSet.h"
-#include "../Structures/StateAllocator.h"
+#include "../Structures/LimitedStateAllocator.h"
 
 #include <list>
 #include <string.h>
@@ -43,17 +43,23 @@ ReachabilityResult RandomDFS::reachable(const PetriNet &net,
 								  "A state satisfying the query was found");
 
 	StateSet states(net);
-	StateAllocator<> allocator(net);
+	LimitedStateAllocator<> allocator(net, _memorylimit);
 	std::list<State*> stack;
 	srand(time(0));	// Chosen by fair dice roll
 
 	State* s0 = allocator.createState();
+	if(!s0)
+		return ReachabilityResult(ReachabilityResult::Unknown,
+								   "Memory bound exceeded");
 	memcpy(s0->marking(), m0, sizeof(MarkVal)*net.numberOfPlaces());
 	memcpy(s0->valuation(), v0, sizeof(VarVal)*net.numberOfVariables());
 
 	stack.push_back(s0);
 	states.add(s0);
 	State* ns = allocator.createState();
+	if(!ns)
+		return ReachabilityResult(ReachabilityResult::Unknown,
+								   "Memory bound exceeded");
 
 	int countdown = rand() % 800000;
 	unsigned int max = 0;
@@ -92,7 +98,7 @@ ReachabilityResult RandomDFS::reachable(const PetriNet &net,
 		State* succ[net.numberOfTransitions()];
 		memset(succ, 0, net.numberOfTransitions()*sizeof(State*));
 		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
-			if(net.fire(t, s, ns)){
+			if(net.fire(t, s, ns, 1, _kbound)){
 				if(states.add(ns)){
 					exploredStates++;
 					ns->setParent(s);
@@ -102,6 +108,10 @@ ReachabilityResult RandomDFS::reachable(const PetriNet &net,
 												"A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
 					succ[t] = ns;
 					ns = allocator.createState();
+					if(!ns)
+						return ReachabilityResult(ReachabilityResult::Unknown,
+												   "Memory bound exceeded",
+												   expandedStates, exploredStates);
 				}
 			}
 		}

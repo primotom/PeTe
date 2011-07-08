@@ -28,7 +28,12 @@ namespace PetriEngine { namespace Reachability {
 class DepthFirstReachabilitySearch : public ReachabilitySearchStrategy
 {
 public:
-	DepthFirstReachabilitySearch() : ReachabilitySearchStrategy(){}
+	DepthFirstReachabilitySearch(int kbound = 0, int memorylimit = 0)
+		: ReachabilitySearchStrategy(){
+		_kbound = kbound;
+		_memorylimit = memorylimit;
+	}
+
 
 	/** Perform reachability check using DFS with hash table */
 	ReachabilityResult reachable(const PetriNet &net,
@@ -45,6 +50,8 @@ private:
 		Structures::State* state;
 		unsigned int t;
 	};
+	int _kbound;
+	int _memorylimit;
 };
 } // Reachability
 } // PetriEngine

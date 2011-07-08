@@ -30,13 +30,20 @@ namespace Reachability{
 class UltimateSearch : public ReachabilitySearchStrategy
 {
 public:
-	UltimateSearch(bool depthFirst = true){this->depthFirst = depthFirst;}
+	UltimateSearch(bool depthFirst = true, int kbound = 0, int memorylimit = 0)
+		: ReachabilitySearchStrategy(){
+		this->depthFirst = depthFirst;
+		_kbound = kbound;
+		_memorylimit = memorylimit;
+	}
 	ReachabilityResult reachable(const PetriNet &net,
 								 const MarkVal* m0,
 								 const VarVal* v0,
 								 PQL::Condition* query);
 private:
 	bool depthFirst;
+	int _kbound;
+	int _memorylimit;
 };
 
 } // Reachability

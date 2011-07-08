@@ -32,8 +32,12 @@
 #include <PetriEngine/Reachability/LinearOverApprox.h>
 #include <PetriEngine/Reachability/BestFirstReachabilitySearch.h>
 #include <PetriEngine/PQL/Contexts.h>
+
+#include <PetriEngine/Reachability/UltimateSearch.h>
 #include <PetriEngine/Reachability/RandomDFS.h>
-#include <PetriEngine/Reachability/RandomQueryGenerator.h>
+#include <PetriEngine/Reachability/DepthFirstReachabilitySearch.h>
+#include <PetriEngine/Reachability/BreadthFirstReachabilitySearch.h>
+
 
 using namespace std;
 using namespace PetriEngine;
@@ -69,17 +73,17 @@ enum ReturnValues{
 
 /** Enumeration of search-strategies in PeTAPAAL */
 enum SearchStrategies{
-	BestFS,		//LinearOverAproxx + UltimateSearch					Memory, k-bound
-	BFS,		//LinearOverAproxx + BreadthFirstReachabilitySearch	Memory, k-bound
-	DFS,		//LinearOverAproxx + DepthFirstReachabilitySearch	Memory, k-bound
-	RDFS		//LinearOverAproxx + RandomDFS						Memory, k-bound
+	BestFS,		//LinearOverAproxx + UltimateSearch
+	BFS,		//LinearOverAproxx + BreadthFirstReachabilitySearch
+	DFS,		//LinearOverAproxx + DepthFirstReachabilitySearch
+	RDFS		//LinearOverAproxx + RandomDFS
 };
 
 int main(int argc, char* argv[]){
 	// Commandline arguments
-	bool trace = false;
+	bool outputtrace = false;
 	int kbound = 0;
-	SearchStrategies strategy = BestFS;
+	SearchStrategies searchstrategy = BestFS;
 	int memorylimit = 1024*1024*1024;
 	char* modelfile = NULL;
 	char* queryfile = NULL;
@@ -94,17 +98,17 @@ int main(int argc, char* argv[]){
 				return ErrorCode;
 			}
 		}else if(strcmp(argv[i], "-t") == 0 || strcmp(argv[i], "--trace") == 0){
-			trace = true;
+			outputtrace = true;
 		}else if(strcmp(argv[i], "-s") == 0 || strcmp(argv[i], "--search-strategy") == 0){
 			char* s = argv[++i];
 			if(strcmp(s, "BestFS") == 0)
-				strategy = BestFS;
+				searchstrategy = BestFS;
 			else if(strcmp(s, "BFS") == 0)
-				strategy = BFS;
+				searchstrategy = BFS;
 			else if(strcmp(s, "DFS") == 0)
-				strategy = DFS;
+				searchstrategy = DFS;
 			else if(strcmp(s, "RDFS") == 0)
-				strategy = RDFS;
+				searchstrategy = RDFS;
 			else{
 				fprintf(stderr, "Argument Error: Unrecognized search strategy \"%s\"\n", s);
 				return ErrorCode;
@@ -201,8 +205,13 @@ int main(int argc, char* argv[]){
 		//Check if is invariant
 		isInvariant = querystr.substr(0, 2) == "AG";
 
+		//Warp in not if isInvariant
+		string querystring = querystr.substr(2);
+		if(isInvariant)
+			querystring = "not ( " + querystring + " )";
+
 		//Parse query
-		query = ParseQuery(querystr.substr(2));
+		query = ParseQuery(querystring);
 		if(!query){
 			fprintf(stderr, "Error: Failed to parse query \"%s\"\n", querystr.substr(2).c_str());
 			return ErrorCode;
@@ -231,33 +240,71 @@ int main(int argc, char* argv[]){
 
 	//----------------------- Reachability -----------------------//
 
+	//Create reachability search strategy
+	ReachabilitySearchStrategy* strategy = NULL;
+	if(searchstrategy == BestFS)
+		strategy = new UltimateSearch(true, kbound, memorylimit);
+	else if(searchstrategy == BFS)
+		strategy = new BreadthFirstReachabilitySearch(kbound, memorylimit);
+	else if(searchstrategy == DFS)
+		strategy = new DepthFirstReachabilitySearch(kbound, memorylimit);
+	else if(searchstrategy == RDFS)
+		strategy = new RandomDFS(kbound, memorylimit);
+	else{
+		fprintf(stderr, "Error: Search strategy selection out of range.\n");
+		return ErrorCode;
+	}
 
+	//Reachability search
+	ReachabilityResult result = strategy->reachable(*net, m0, v0, query);
 
-	//----------------------- Output trace -----------------------//
+	//----------------------- Output Trace -----------------------//
 
-	return UnknownCode;
+	const std::vector<unsigned int>& trace = result.trace();
+	const std::vector<std::string>& tnames = net->transitionNames();
+	const std::vector<std::string>& pnames = net->placeNames();
+
+	//Print result to stderr
+	if(outputtrace && trace.size() != 0){
+		fprintf(stderr, "Trace:\n<trace>\n");
+		for(size_t i = 0; i < trace.size(); i++){
+			fprintf(stderr, "\t<transition id=\"%s\">\n", tnames[trace[i]].c_str());
+			for(unsigned int p = 0; p < net->numberOfPlaces(); p++){
+				if(net->inArc(p, trace[i]))
+					fprintf(stderr, "\t\t<token place=\"%s\" age=\"0\"/>\n", pnames[p].c_str());
+			}
+			fprintf(stderr, "\t</transition>\n");
+		}
+		fprintf(stderr, "</trace>\n");
+	}
+
+	//----------------------- Output Statistics -----------------------//
+
+	//Print statistics
+	fprintf(stdout, "STATS:\n");
+	fprintf(stdout, "\texplored states: %lli\n", result.exploredStates());
+	fprintf(stdout, "\texpanded states: %lli\n", result.expandedStates());
+
+	//----------------------- Output Result -----------------------//
+
+	ReturnValues retval = ErrorCode;
+
+	//Find result code
+	if(result.result() == ReachabilityResult::Unknown)
+		retval = UnknownCode;
+	else if(result.result() == ReachabilityResult::Satisfied)
+		retval = isInvariant ? FailedCode : SuccessCode;
+	else if(result.result() == ReachabilityResult::NotSatisfied)
+		retval = isInvariant ? SuccessCode : FailedCode;
+
+	//Print result
+	if(retval == UnknownCode)
+		fprintf(stdout, "Unable to decide if query is satisfyable.\n");
+	else if(retval == SuccessCode)
+		fprintf(stdout, "Query is satisfyable.\n");
+	else if(retval == FailedCode)
+		fprintf(stdout, "Query is not satisfyable.\n");
+
+	return retval;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

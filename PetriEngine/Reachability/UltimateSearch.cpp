@@ -20,7 +20,7 @@
 
 #include "../Structures/EnhancedPriorityQueue.h"
 #include "../Structures/StateSet.h"
-#include "../Structures/BoundedStateAllocator.h"
+#include "../Structures/LimitedStateAllocator.h"
 #include "../PQL/Contexts.h"
 #include "../Structures/DistanceMatrix.h"
 
@@ -63,7 +63,7 @@ ReachabilityResult UltimateSearch::reachable(const PetriNet &net,
 	}
 
 	// Create allocator, stateset and queue
-	BoundedStateAllocator<ULTIMATE_MEMORY_BOUND> allocator(net);
+	LimitedStateAllocator<> allocator(net, _memorylimit);
 	StateSet states(net);
 	EnhancedPriorityQueue<State*> queue;
 
@@ -106,7 +106,7 @@ ReachabilityResult UltimateSearch::reachable(const PetriNet &net,
 
 		// Try firing each transition
 		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
-			if(net.fire(t, s, ns) && states.add(ns)){
+			if(net.fire(t, s, ns, 1, _kbound) && states.add(ns)){
 				// Update statistics
 				explored++;
 				ns->setParent(s);

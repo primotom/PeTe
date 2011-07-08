@@ -20,7 +20,7 @@
 #include "../PQL/PQL.h"
 #include "../PQL/Contexts.h"
 #include "../Structures/StateSet.h"
-#include "../Structures/StateAllocator.h"
+#include "../Structures/LimitedStateAllocator.h"
 
 #include <list>
 #include <string.h>
@@ -42,9 +42,11 @@ ReachabilityResult BreadthFirstReachabilitySearch::reachable(const PetriNet &net
 	StateSet states(net);
 	std::list<State*> queue;
 
-	StateAllocator<1000000> allocator(net);
+	LimitedStateAllocator<> allocator(net, _memorylimit);
 
 	State* s0 = allocator.createState();
+	if(!s0)
+		return ReachabilityResult(ReachabilityResult::Unknown, "Memory bound exceeded");
 	memcpy(s0->marking(), m0, sizeof(MarkVal)*net.numberOfPlaces());
 	memcpy(s0->valuation(), v0, sizeof(VarVal)*net.numberOfVariables());
 
@@ -55,6 +57,8 @@ ReachabilityResult BreadthFirstReachabilitySearch::reachable(const PetriNet &net
 	BigInt expandedStates = 0;
 	BigInt exploredStates = 0;
 	State* ns = allocator.createState();
+	if(!ns)
+		return ReachabilityResult(ReachabilityResult::Unknown, "Memory bound exceeded");
 	while(!queue.empty()){
 		// Progress reporting and abort checking
 		if(count++ & 1<<17){
@@ -72,7 +76,7 @@ ReachabilityResult BreadthFirstReachabilitySearch::reachable(const PetriNet &net
 		State* s = queue.front();
 		queue.pop_front();
 		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
-			if(net.fire(t, s, ns)){
+			if(net.fire(t, s, ns, 1, _kbound)){
 				if(states.add(ns)){
 					exploredStates++;
 					ns->setParent(s);
@@ -85,6 +89,10 @@ ReachabilityResult BreadthFirstReachabilitySearch::reachable(const PetriNet &net
 
 					queue.push_back(ns);
 					ns = allocator.createState();
+					if(!ns)
+						return ReachabilityResult(ReachabilityResult::Unknown,
+												   "Memory bound exceeded",
+												   expandedStates, exploredStates);
 				}
 			}
 		}

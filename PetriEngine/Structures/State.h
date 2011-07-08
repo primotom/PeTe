@@ -31,6 +31,7 @@ namespace PetriEngine { namespace Structures {
 
 template<size_t blocksize> class StateAllocator;
 template<size_t blocksize> class BoundedStateAllocator;
+template<size_t blocksize> class LimitedStateAllocator;
 
 /** GeneralState class for reachability searches.
   * Used in most reachability search cases */
@@ -135,6 +136,7 @@ public:
 	};
 	template<size_t blocksize> friend class StateAllocator;
 	template<size_t blocksize> friend class BoundedStateAllocator;
+	template<size_t blocksize> friend class LimitedStateAllocator;
 private:
 	State* _parent;
 	unsigned int _parentTransition;

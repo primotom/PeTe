@@ -20,7 +20,7 @@
 #include "../PQL/PQL.h"
 #include "../PQL/Contexts.h"
 #include "../Structures/StateSet.h"
-#include "../Structures/StateAllocator.h"
+#include "../Structures/LimitedStateAllocator.h"
 
 #include <list>
 #include <string.h>
@@ -42,9 +42,12 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 	StateSet states(net);
 	std::list<Step> stack;
 
-	StateAllocator<1000000> allocator(net);
+	LimitedStateAllocator<> allocator(net, _memorylimit);
 
 	State* s0 = allocator.createState();
+	if(!s0)
+		return ReachabilityResult(ReachabilityResult::Unknown,
+								   "Memory bound exceeded");
 	memcpy(s0->marking(), m0, sizeof(MarkVal)*net.numberOfPlaces());
 	memcpy(s0->valuation(), v0, sizeof(VarVal)*net.numberOfVariables());
 
@@ -55,6 +58,10 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 	BigInt exploredStates = 0;
 	BigInt expandedStates = 0;
 	State* ns = allocator.createState();
+	if(!ns)
+		return ReachabilityResult(ReachabilityResult::Unknown,
+								   "Memory bound exceeded",
+								   expandedStates, exploredStates);
 	while(!stack.empty()){
 		if(count++ & 1<<18){
 			if(stack.size() > max)
@@ -75,7 +82,7 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 		ns->setParent(s);
 		bool foundSomething = false;
 		for(unsigned int t = stack.back().t; t < net.numberOfTransitions(); t++){
-			if(net.fire(t, s->marking(), s->valuation(), ns->marking(), ns->valuation())){
+			if(net.fire(t, s, ns, 1, _kbound)){
 				if(states.add(ns)){
 					ns->setTransition(t);
 					if(query->evaluate(PQL::EvaluationContext(ns->marking(), ns->valuation())))
@@ -86,6 +93,10 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 					exploredStates++;
 					foundSomething = true;
 					ns = allocator.createState();
+					if(!ns)
+						return ReachabilityResult(ReachabilityResult::Unknown,
+												   "Memory bound exceeded",
+												   expandedStates, exploredStates);
 					break;
 				}
 			}

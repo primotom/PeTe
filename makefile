@@ -1,20 +1,30 @@
-#Target
-TARGET			= PeTAPAAL
-
-#Source files
-FLEX_SOURCES	= $(shell find -name "*.l")
-BISON_SOURCES	= $(shell find -name "*.y")
-SOURCES			= $(shell find -name "*.cpp" | grep -v ".lexer.cpp")	\
-				  $(BISON_SOURCES:.y=.parser.cpp)						\
-				  $(FLEX_SOURCES:.l=.lexer.cpp)
-
-#Platform dependent settings
+#Programs for processing
 LEX				= flex
 YACC			= bison
 CC				= g++
 RM				= rm
+FIND			= find
+GREP			= grep
+
+#Compiler and linker flags
 CFLAGS			= -O3 -I.
 LDFLAGS			= -static -O3 -llpsolve55 -lcolamd -ldl
+
+#Target
+TARGET			= PeTAPAAL
+
+#Source files
+FLEX_SOURCES	= $(shell $(FIND) * -name "*.l")
+BISON_SOURCES	= $(shell $(FIND) * -name "*.y")
+SOURCES			= $(shell $(FIND) * -name "*.cpp" | $(GREP) -v ".\\(parser\\|lexer\\).cpp")	\
+				  $(BISON_SOURCES:.y=.parser.cpp)												\
+				  $(FLEX_SOURCES:.l=.lexer.cpp)
+
+#Intermediate files
+OBJECTS			= $(SOURCES:.cpp=.o)															\
+				  $(FLEX_SOURCES:.l=.lexer.cpp)													\
+				  $(BISON_SOURCES:.y=.parser.cpp)												\
+				  $(BISON_SOURCES:.y=.parser.hpp)
 
 #Build rules
 %.lexer.cpp: %.l
@@ -29,9 +39,5 @@ $(TARGET): $(SOURCES:.cpp=.o)
 #Phony targets
 all: $(TARGET)
 clean:
-	$(RM) -f $(SOURCES:.cpp=.o)					\
-			 $(FLEX_SOURCES:.l=.lexer.cpp)		\
-			 $(BISON_SOURCES:.y=.parser.cpp)	\
-			 $(BISON_SOURCES:.y=.parser.hpp)	\
-			 $(TARGET)
+	$(RM) -f $(OBJECTS) $(TARGET)
 .PHONY: all clean

@@ -27,13 +27,20 @@ namespace PetriEngine { namespace Reachability {
 /** Implements reachability check in a BFS manner using a hash table */
 class BreadthFirstReachabilitySearch : public ReachabilitySearchStrategy {
 public:
-	BreadthFirstReachabilitySearch() : ReachabilitySearchStrategy() {}
+	BreadthFirstReachabilitySearch(int kbound = 0, int memorylimit = 0)
+		: ReachabilitySearchStrategy(){
+		_kbound = kbound;
+		_memorylimit = memorylimit;
+	}
 
 	/** Perform reachability check using BFS with hasing */
 	ReachabilityResult reachable(const PetriNet &net,
 								 const MarkVal *m0,
 								 const VarVal *v0,
 								 PQL::Condition *query);
+private:
+	int _kbound;
+	int _memorylimit;
 };
 
 }} // Namespaces
