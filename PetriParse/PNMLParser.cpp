@@ -31,6 +31,8 @@ void PNMLParser::parse(const std::string& xml,
 	//Clear any left overs
 	id2name.clear();
 	arcs.clear();
+	transitions.clear();
+	inhibarcs.clear();
 
 	//Set the builder
 	this->builder = builder;
@@ -38,6 +40,41 @@ void PNMLParser::parse(const std::string& xml,
 	//Parser the xml
 	DOMElement* root = DOMElement::loadXML(xml);
 	parseElement(root);
+
+	//Create inhibitor arcs
+	for(InhibitorArcIter inhb = inhibarcs.begin(); inhb != inhibarcs.end(); inhb++){
+		//Check that source id exists
+		if(id2name.find(inhb->source) == id2name.end()){
+			fprintf(stderr,
+					"XML Parsing error: Inhibitor arc source with id=\"%s\" wasn't found!\n",
+					inhb->source.c_str());
+			continue;
+		}
+		//Check that target id exists
+		if(id2name.find(inhb->target) == id2name.end()){
+			fprintf(stderr,
+					"XML Parsing error: Inhibitor arc target with id=\"%s\" wasn't found!\n",
+					inhb->target.c_str());
+			continue;
+		}
+		//Find source and target
+		NodeName source = id2name[inhb->source];
+		NodeName target = id2name[inhb->target];
+
+		//Find target transition
+		for(TransitionIter it = transitions.begin(); it != transitions.end(); it++){
+			if(it->name == target.name){
+				if(it->cond.empty())
+					it->cond = source.name + " == 0";
+				else
+					it->cond = source.name + " == 0 and ( " + it->cond + " )";
+			}
+		}
+	}
+
+	//Add all the transition
+	for(TransitionIter it = transitions.begin(); it != transitions.end(); it++)
+		builder->addTransition(it->name, it->cond, it->assign, it->x, it->y);
 
 	//Add all the arcs
 	for(ArcIter it = arcs.begin(); it != arcs.end(); it++){
@@ -80,6 +117,8 @@ void PNMLParser::parse(const std::string& xml,
 	//Cleanup
 	id2name.clear();
 	arcs.clear();
+	transitions.clear();
+	inhibarcs.clear();
 }
 
 void PNMLParser::makePetriNet(){
@@ -100,6 +139,8 @@ void PNMLParser::parseElement(DOMElement* element){
 			parseArc(*it);
 		}else if((*it)->getElementName() == "transportArc"){
 			parseTransportArc(*it);
+		}else if((*it)->getElementName() == "inhibitorArc"){
+			parseInhibitorArc(*it);
 		}else if((*it)->getElementName() == "variable"){
 			parseVariable(*it);
 		} else if((*it)->getElementName() == "queries"){
@@ -171,6 +212,14 @@ void PNMLParser::parseTransportArc(DOMElement* element){
 	arcs.push_back(outArc);
 }
 
+void PNMLParser::parseInhibitorArc(DOMElement* element){
+	InhibitorArc arc;
+	arc.source = element->getAttribute("source");
+	arc.target = element->getAttribute("target");
+
+	inhibarcs.push_back(arc);
+}
+
 void PNMLParser::parseArc(DOMElement* element){
 	string source = element->getAttribute("source"),
 		   target = element->getAttribute("target");
@@ -194,29 +243,29 @@ void PNMLParser::parseArc(DOMElement* element){
 }
 
 void PNMLParser::parseTransition(DOMElement* element){
-	double x = 0, y = 0;
-	string name = element->getAttribute("name"),
-		   id = element->getAttribute("id");
-	string cond, assign;
+	Transition t;
+	t.x = 0; t.y = 0;
+	t.name = element->getAttribute("name");
+	string id = element->getAttribute("id");
 
 	DOMElements elements = element->getChilds();
 	DOMElements::iterator it;
 	for(it = elements.begin(); it != elements.end(); it++){
 		if((*it)->getElementName() == "name"){
-			parseValue(*it, name);
+			parseValue(*it, t.name);
 		}else if((*it)->getElementName() == "graphics"){
-			parsePosition(*it, x, y);
+			parsePosition(*it, t.x, t.y);
 		}else if((*it)->getElementName() == "conditions"){
-			cond = (*it)->getCData();
+			t.cond = (*it)->getCData();
 		}else if((*it)->getElementName() == "assignments"){
-			assign = (*it)->getCData();
+			t.assign = (*it)->getCData();
 		}
 	}
-	//Create place
-	builder->addTransition(name, cond, assign, x, y);
+	//Add transition to list
+	transitions.push_back(t);
 	//Map id to name
 	NodeName nn;
-	nn.name = name;
+	nn.name = t.name;
 	nn.isPlace = false;
 	id2name[id] = nn;
 }

@@ -28,7 +28,6 @@
 
 class PNMLParser
 {
-
 	struct Arc{
 		std::string source,
 					target;
@@ -36,6 +35,20 @@ class PNMLParser
 	};
 	typedef std::vector<Arc> ArcList;
 	typedef ArcList::iterator ArcIter;
+	struct Transition{
+		std::string name,
+					cond,
+					assign;
+		double x, y;
+	};
+	typedef std::vector<Transition> TransitionList;
+	typedef TransitionList::iterator TransitionIter;
+	struct InhibitorArc{
+		std::string source,
+					target;
+	};
+	typedef std::vector<InhibitorArc> InhibitorArcList;
+	typedef InhibitorArcList::iterator InhibitorArcIter;
 	struct NodeName{
 		std::string name;
 		bool isPlace;
@@ -62,6 +75,7 @@ private:
 	void parsePlace(XMLSP::DOMElement* element);
 	void parseArc(XMLSP::DOMElement* element);
 	void parseTransportArc(XMLSP::DOMElement* element);
+	void parseInhibitorArc(XMLSP::DOMElement* element);
 	void parseTransition(XMLSP::DOMElement* element);
 	void parseVariable(XMLSP::DOMElement* element);
 	void parseValue(XMLSP::DOMElement* element, std::string& text);
@@ -70,6 +84,8 @@ private:
 	PetriEngine::AbstractPetriNetBuilder* builder;
 	NodeNameMap id2name;
 	ArcList arcs;
+	TransitionList transitions;
+	InhibitorArcList inhibarcs;
 	std::vector<Query> queries;
 };
 

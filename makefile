@@ -5,6 +5,7 @@ CC				= g++
 RM				= rm
 FIND			= find
 GREP			= grep
+SED				= sed
 
 #Compiler and linker flags
 CFLAGS			= -O0 -I. -g
@@ -36,8 +37,20 @@ OBJECTS			= $(SOURCES:.cpp=.o)															\
 $(TARGET): $(SOURCES:.cpp=.o)
 	$(CC) $^ $(LDFLAGS) -o $@
 
-#Phony targets
 all: $(TARGET)
 clean:
 	$(RM) -f $(OBJECTS) $(TARGET)
-.PHONY: all clean
+
+#Check the build
+check: all
+	@for f in Tests/*.xml; do																	\
+		echo "Testing $$f:";																	\
+		./$(TARGET) -m 256 $$f $$f.q;																	\
+		if [ `echo $$f | $(SED) -e "s/.*-\([0-9]\)\.xml/\1/"` -ne $$? ]; then 					\
+			echo " --- Test Failed!"; 															\
+		else																					\
+			echo " +++ Test Succeeded"; 														\
+		fi 																						\
+	done 
+
+.PHONY: all clean check
