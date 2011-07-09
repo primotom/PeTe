@@ -21,6 +21,7 @@
 #include "../PQL/Contexts.h"
 #include "../Structures/StateSet.h"
 #include "../Structures/LimitedStateAllocator.h"
+//#include "../Structures/StateAllocator.h"
 
 #include <list>
 #include <string.h>
@@ -43,6 +44,7 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 	std::list<Step> stack;
 
 	LimitedStateAllocator<> allocator(net, _memorylimit);
+//	StateAllocator<> allocator(net);
 
 	State* s0 = allocator.createState();
 	if(!s0)

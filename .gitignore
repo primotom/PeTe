@@ -4,3 +4,5 @@
 *.parser.hpp
 testconfig.py
 testconfig.pyc
+*.o
+PeTAPAAL

@@ -25,12 +25,13 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include <math.h>
 
 namespace PetriEngine {
 namespace Structures {
 
 /** State allocator that is limited on memory */
-template<size_t blocksize = 50000>
+template<size_t blocksize = 100000>
 class LimitedStateAllocator{
 	struct Block{
 		Block* parent;
@@ -40,7 +41,10 @@ public:
 	LimitedStateAllocator(const PetriNet& net, int memorylimit = 0){
 		_nPlaces = net.numberOfPlaces();
 		_nVars = net.numberOfVariables();
-		_memorylimit = memorylimit;
+		if(memorylimit != 0)
+			_blocklimit = ceil(memorylimit / (stateSize() * blocksize));
+		else
+			_blocklimit = -1;
 		_b = NULL;
 		createNewBlock();
 	}
@@ -53,8 +57,8 @@ public:
 	}
 	/** Create new state */
 	State* createState(){
-		if(_offset == (_memorylimit != 0 ? _memorylimit : blocksize)-1){
-			if(_memorylimit != 0)
+		if(_offset == blocksize - 1){
+			if(_blocklimit == 0)
 				return NULL;
 			createNewBlock();
 		}
@@ -73,7 +77,9 @@ private:
 		return sizeof(State) + sizeof(MarkVal) * _nPlaces + sizeof(VarVal) * _nVars;
 	}
 	void createNewBlock(){
-		size_t s = sizeof(Block) + stateSize() * (_memorylimit != 0 ? _memorylimit : blocksize);
+		if(_blocklimit > 0)
+			_blocklimit--;
+		size_t s = sizeof(Block) + stateSize() * blocksize;
 		char* m = new char[s];
 		memset(m, 0, s);
 		Block* b = (Block*)m;
@@ -86,7 +92,7 @@ private:
 	Block* _b;
 	int _nPlaces;
 	int _nVars;
-	int _memorylimit;
+	int _blocklimit;
 };
 
 } // Structures
