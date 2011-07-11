@@ -154,7 +154,8 @@ double BestFSCooling::lookaheadDistance(const PetriNet& net,
 										const PQL::Condition* query,
 										int depth){
 	double min = -1;
-	State* ns = (State*)alloca(StateAllocator<>::stateSize(net));
+	char d[StateAllocator<>::stateSize(net)];
+	State* ns = (State*)d;
 	StateAllocator<>::initializeState(ns, net);
 	for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
 		if(net.fire(t, state, ns) && !_states->contains(ns)){
