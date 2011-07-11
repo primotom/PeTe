@@ -11,6 +11,9 @@ you might need to modify the makefile in order link correctly against following 
   * flex (>= 2.5)
   * lp_solve (>= 5.5)
 
+To build on Linux, run `make -j4`, (`-j4` to use for processes in parallel).
+To cross compile for Windows, using mingw32, run `make -f makefile.mingw32 -j4`.
+
 License
 -------
 PeTAPAAL is available under the terms of the GNU GPL versoin 3 or (at your option) any later version.

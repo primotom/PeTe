@@ -6,6 +6,8 @@ RM				= rm
 FIND			= find
 GREP			= grep
 SED				= sed
+WGET			= wget
+UNZIP			= unzip
 
 #Compiler and linker flags
 CFLAGS			= -O3 -I.
@@ -38,9 +40,9 @@ $(TARGET): lpsolve $(SOURCES:.cpp=.o)
 	$(CC) $(SOURCES:.cpp=.o) $(LDFLAGS) -o $@
 	cp lpsolve/lpsolve55.dll lpsolve55.dll
 lpsolve:
-	wget http://sourceforge.net/projects/lpsolve/files/lpsolve/5.5.2.0/lp_solve_5.5.2.0_dev_win32.zip/download
-	unzip download -d lpsolve
-	rm download
+	$(WGET) http://sourceforge.net/projects/lpsolve/files/lpsolve/5.5.2.0/lp_solve_5.5.2.0_dev_win32.zip/download
+	$(UNZIP) download -d lpsolve
+	$(RM) download
 
 all: $(TARGET)
 clean:
