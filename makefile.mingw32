@@ -14,7 +14,7 @@ CFLAGS			= -O3 -I.
 LDFLAGS			= -L./lpsolve -static -O3 -llpsolve55
 
 #Target
-TARGET			= PeTAPAAL
+TARGET			= PeTAPAAL.exe
 
 #Source files
 FLEX_SOURCES	= $(shell $(FIND) * -name "*.l")
