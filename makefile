@@ -8,8 +8,8 @@ GREP			= grep
 SED				= sed
 
 #Compiler and linker flags
-CFLAGS			= -O0 -I. -g
-LDFLAGS			= -g -static -O3 -llpsolve55 -lcolamd -ldl
+CFLAGS			= -O3 -I.
+LDFLAGS			= -static -O3 -llpsolve55 -lcolamd -ldl
 
 #Target
 TARGET			= PeTAPAAL
