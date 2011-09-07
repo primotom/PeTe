@@ -37,6 +37,7 @@
 #define NAME_DFS								"Naive DFS with Hash"
 #define NAME_RandomDFS							"Random DFS with Hash"
 #define NAME_BFS								"Naive BFS with Hash"
+
 //Heuristics
 #define NAME_DFSArcCount						"DFS-ArcCount"
 #define NAME_DFSTokenCost						"DFS-TokenCost"
@@ -129,6 +130,7 @@
 #define NAME_UltimateSearchBFS					"BestFS Ultimate Edition BFS"
 #define NAME_StateSearchBFS						"State Search BFS"
 #define NAME_StateSearchDFS						"State Search DFS"
+#define NAME_GeneralSearch						"Linear Overapprox. and Heuristic Combo"
 
 #include <stdio.h>
 
@@ -142,10 +144,10 @@ std::vector<std::string> ReachabilitySearchStrategy::listStrategies(){
 		NAME_DFS,
 		NAME_RandomDFS,
 		NAME_BFS,
-		NAME_DFSArcCount,
+		/*NAME_DFSArcCount,
 		NAME_DFSTokenCost,
 		NAME_DFSDelta,
-		NAME_BestFSDeltaSumExtreme,
+		NAME_BestFSDeltaSumExtreme,*/
 		NAME_BestFSDeltaDeepSumExtreme,
 		/*NAME_BestFSDeltaDeepSumAverage
 		NAME_BestFSDeltaSumAverage,
@@ -167,13 +169,14 @@ std::vector<std::string> ReachabilitySearchStrategy::listStrategies(){
 		NAME_BestFSTokenCostDeepAverageExtreme,
 		NAME_BestFSTokenCostDeep2Average,
 		NAME_BestFSTokenCostDeepSumExtreme,
-		NAME_BestFSTokenCostDeepSumAverage*/
+		NAME_BestFSTokenCostDeepSumAverage,
 		NAME_BestFSTokenCostSumExtremeBFS,
 		NAME_BestFSTokenCostSumExtremeDFS,
 		NAME_BestFSDeltaSumExtremeBFS,
-		NAME_BestFSDeltaSumExtremeDFS,
+		NAME_BestFSDeltaSumExtremeDFS,*/
 		NAME_LinearOverApprox,
-		NAME_BestFSDeltaSumExtremeLH1,
+		NAME_GeneralSearch
+		/*NAME_BestFSDeltaSumExtremeLH1,
 		NAME_BestFSDeltaSumExtremeLH2,
 		NAME_BestFSDeltaSumExtremeLH3,
 		NAME_BestFSDeltaSumExtremeLH4,
@@ -183,7 +186,7 @@ std::vector<std::string> ReachabilitySearchStrategy::listStrategies(){
 		NAME_UltimateSearchDFS,
 		NAME_UltimateSearchBFS,
 		NAME_StateSearchBFS,
-		NAME_StateSearchDFS
+		NAME_StateSearchDFS*/
 	};
 	return std::vector<std::string>(strats, strats + sizeof(strats) / sizeof(std::string));
 }
@@ -366,6 +369,10 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 	//Linear over-approximation
 	if(strategy == NAME_LinearOverApprox){
 		return new LinearOverApprox();
+	}
+	if(strategy == NAME_GeneralSearch){
+		int flags = PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;
+		return new LinearOverApprox(new BestFirstReachabilitySearch((PQL::DistanceContext::DistanceStrategy)flags, false, true));
 	}
 
 	if(strategy == NAME_BestFSCoolingDeltaDFS){

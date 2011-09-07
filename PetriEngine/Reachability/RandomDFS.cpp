@@ -82,9 +82,9 @@ ReachabilityResult RandomDFS::reachable(const PetriNet &net,
 		if(!query && countdown-- <= 0){
 			//TODO: Remove this hack or copy the code for random state generation, if we need that feature...
 			printf("%s == %i ", net.placeNames()[0].c_str(), s->marking()[0]);
-			for(int p = 1; p < net.numberOfPlaces(); p++)
+			for(unsigned int p = 1; p < net.numberOfPlaces(); p++)
 				printf(" and %s == %i ", net.placeNames()[p].c_str(), s->marking()[p]);
-			for(int x = 0; x < net.numberOfVariables(); x++)
+			for(unsigned int x = 0; x < net.numberOfVariables(); x++)
 				printf(" and %s == %i ", net.variableNames()[x].c_str(), s->valuation()[x]);
 			return ReachabilityResult();
 		}
@@ -127,9 +127,9 @@ ReachabilityResult RandomDFS::reachable(const PetriNet &net,
 	//Hack for when query is null and we're look to print a random state
 	if(!query){
 		printf("%s == %i ", net.placeNames()[0].c_str(), s->marking()[0]);
-			for(int p = 1; p < net.numberOfPlaces(); p++)
+			for(unsigned int p = 1; p < net.numberOfPlaces(); p++)
 				printf(" and %s == %i ", net.placeNames()[p].c_str(), s->marking()[p]);
-			for(int x = 0; x < net.numberOfVariables(); x++)
+			for(unsigned int x = 0; x < net.numberOfVariables(); x++)
 				printf(" and %s == %i ", net.variableNames()[x].c_str(), s->valuation()[x]);
 	}
 
