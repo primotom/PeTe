@@ -189,31 +189,6 @@ private:
 	llvm::LLVMContext& _context;
 };
 
-/** Performs contextual analysis on places and variables to
-  * determine if they are good or bad
-  */
-class MonotonicityContext{
-public:
-	MonotonicityContext(PetriNet* net) :
-		_places(net->placeNames()),
-		_variables(net->variableNames()) {}
-	MonotonicityContext(std::vector<std::string> places, std::vector<std::string> variables) :
-		_places(places),
-		_variables(variables) {}
-
-	/** Getters for the places and variables */
-	std::vector<bool> goodPlaces(){ return _goodPlaces; }
-	std::vector<bool> goodVariables(){ return _goodVariables; }
-	bool inNot(){ return _inNot; }
-	void setNot(bool isNot){ _inNot = isNot; }
-private:
-	bool _inNot;
-	std::vector<bool> _goodPlaces;
-	std::vector<bool> _goodVariables;
-	std::vector<std::string> _places;
-	std::vector<std::string> _variables;
-};
-
 } // PQL
 } // PetriEngine
 
