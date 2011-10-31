@@ -15,7 +15,8 @@ SOURCES	   +=   main.cpp \
     PetriEngineTests/StateSetTest.cpp \
     PetriEngineTests/BlockStackTest.cpp \
     PetriEngineTests/PriorityQueueTest.cpp \
-    PetriEngineTests/CompiledConditionTest.cpp
+    PetriEngineTests/CompiledConditionTest.cpp \
+    PetriEngineTests/MonotonicityContextTest.cpp
 
 HEADERS		+= \
 

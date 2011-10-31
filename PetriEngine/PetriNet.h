@@ -80,6 +80,8 @@ public:
 	const std::vector<std::string>& variableNames() const {return _variables;}
 	/** Get vector transition names, don't use this to get the number of variable */
 	const std::vector<std::string>& transitionNames() const {return _transitions;}
+	/** Get the array of Conditions */
+	PQL::Condition** getConditions() const { return _conditions; }
 private:
 	std::vector<std::string> _places;
 	std::vector<std::string> _transitions;

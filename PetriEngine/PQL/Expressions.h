@@ -224,7 +224,7 @@ public:
 	std::string toString() const;
 	void scale(int factor);
 	std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
-	virtual void isBad(MonotonicityContext &context);
+	void isBad(MonotonicityContext &context);
 private:
 	virtual bool apply(int v1, int v2) const = 0;
 	/** LLVM Comparison predicate (llvm::ICmpInst::Predicate) */
@@ -245,7 +245,6 @@ private:
 class EqualCondition : public CompareCondition{
 public:
 	EqualCondition(Expr* expr1, Expr* expr2) : CompareCondition(expr1,expr2) {}
-	void isBad(MonotonicityContext &context);
 private:
 	bool apply(int v1, int v2) const;
 	int compareOp() const;
@@ -262,7 +261,6 @@ class NotEqualCondition : public CompareCondition{
 public:
 	NotEqualCondition(Expr* expr1, Expr* expr2) : CompareCondition(expr1,expr2) {}
 	std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
-	void isBad(MonotonicityContext &context);
 private:
 	bool apply(int v1, int v2) const;
 	int compareOp() const;
@@ -278,7 +276,6 @@ private:
 class LessThanCondition : public CompareCondition{
 public:
 	LessThanCondition(Expr* expr1, Expr* expr2) : CompareCondition(expr1,expr2) {}
-	void isBad(MonotonicityContext &context);
 private:
 	bool apply(int v1, int v2) const;
 	int compareOp() const;
@@ -294,7 +291,6 @@ private:
 class LessThanOrEqualCondition : public CompareCondition{
 public:
 	LessThanOrEqualCondition(Expr* expr1, Expr* expr2) : CompareCondition(expr1,expr2) {}
-	void isBad(MonotonicityContext &context);
 private:
 	bool apply(int v1, int v2) const;
 	int compareOp() const;

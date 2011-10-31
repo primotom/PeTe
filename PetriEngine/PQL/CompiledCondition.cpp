@@ -169,5 +169,7 @@ string CompiledCondition::toTAPAALQuery(TAPAALConditionExportContext& context) c
 
 void CompiledCondition::scale(int factor){ _cond->scale(factor); }
 
+void CompiledCondition::isBad(MonotonicityContext &context) { _cond->isBad(context); }
+
 } // PQL
 } // PetriEngine

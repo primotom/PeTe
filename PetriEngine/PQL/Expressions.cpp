@@ -329,6 +329,45 @@ void MinusExpr::isBad(MonotonicityContext &context){
 	_expr->isBad(context);
 }
 
+void LiteralExpr::isBad(MonotonicityContext &context){
+	return;
+}
+
+void IdentifierExpr::isBad(MonotonicityContext &context){
+	if(isPlace){
+		if(_offsetInMarking != -1)
+			context.setPlaceBad(_offsetInMarking);
+	} else {
+		if(_offsetInMarking != -1)
+			context.setVariableBad(_offsetInMarking);
+	}
+}
+
+void LogicalCondition::isBad(MonotonicityContext &context){
+	_cond1->isBad(context);
+	_cond2->isBad(context);
+}
+
+void CompareCondition::isBad(MonotonicityContext &context){
+	if(this->op() == "==" ||
+	   this->op() == "!=" ||
+	   this->op() == "<=" ||
+	   this->op() == "<"){
+		_expr1->isBad(context);
+		_expr2->isBad(context);
+	} else if(context.inNot()){
+		_expr1->isBad(context);
+		_expr2->isBad(context);
+	}
+}
+
+void NotCondition::isBad(MonotonicityContext &context){
+	context.setNot(true);
+	_cond->isBad(context);
+	context.setNot(false);
+}
+
+
 /******************** Constraint Analysis ********************/
 
 void LogicalCondition::findConstraints(ConstraintAnalysisContext& context) const{

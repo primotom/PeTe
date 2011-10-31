@@ -194,12 +194,27 @@ private:
   */
 class MonotonicityContext{
 public:
-	MonotonicityContext(PetriNet* net) :
-		_places(net->placeNames()),
-		_variables(net->variableNames()) {}
-	MonotonicityContext(std::vector<std::string> places, std::vector<std::string> variables) :
-		_places(places),
-		_variables(variables) {}
+	MonotonicityContext(PetriNet* net) {
+		_inNot = false;
+		for(unsigned int i = 0; i < net->numberOfPlaces(); i++)
+			_goodPlaces.push_back(true);
+		for(unsigned int i = 0; i < net->numberOfVariables(); i++)
+			_goodVariables.push_back(true);
+
+		int c = 0;
+		while(net->getConditions()[c]){
+			net->getConditions()[c]->isBad(*this);
+			c++;
+		}
+	}
+
+	/** Set bad places and variables */
+	void setPlaceBad(int offset){
+		_goodPlaces[offset] = false;
+	}
+	void setVariableBad(int offset){
+		_goodVariables[offset] = false;
+	}
 
 	/** Getters for the places and variables */
 	std::vector<bool> goodPlaces(){ return _goodPlaces; }
@@ -210,8 +225,6 @@ private:
 	bool _inNot;
 	std::vector<bool> _goodPlaces;
 	std::vector<bool> _goodVariables;
-	std::vector<std::string> _places;
-	std::vector<std::string> _variables;
 };
 
 } // PQL

@@ -47,6 +47,7 @@ public:
 	std::string toString() const;
 	std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
 	void scale(int factor);
+	void isBad(MonotonicityContext &context);
 private:
 	Condition* _cond;
 	llvm::ExecutionEngine* _engine;
