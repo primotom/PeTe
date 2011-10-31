@@ -39,6 +39,7 @@ class DistanceContext;
 class ConstraintAnalysisContext;
 class CodeGenerationContext;
 class TAPAALConditionExportContext;
+class MonotonicityContext;
 
 /** Representation of a PQL error */
 class ExprError{
@@ -105,6 +106,8 @@ public:
 	virtual Types type() const = 0;
 	/** Scale all nested literals by factor */
 	virtual void scale(int factor) = 0;
+	/** Explores expressions to find bad places and variables */
+	virtual void isBad(MonotonicityContext& context) = 0;
 };
 
 /** Base condition */
@@ -130,6 +133,8 @@ public:
 	virtual double distance(DistanceContext& context) const = 0;
 	/** Scale all nested literals by factor */
 	virtual void scale(int factor) = 0;
+	/** Explores conditions to find bad places and variables */
+	virtual void isBad(MonotonicityContext& context) = 0;
 };
 
 /** Assignment expression */

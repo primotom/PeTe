@@ -47,6 +47,7 @@ public:
 	llvm::Value* codegen(CodeGenerationContext& context) const;
 	std::string toString() const;
 	void scale(int factor);
+	void isBad(MonotonicityContext &context);
 private:
 	virtual int apply(int v1, int v2) const = 0;
 	/** LLVM binary operator (llvm::Instruction::BinaryOps) */
@@ -103,6 +104,7 @@ public:
 	std::string toString() const;
 	Expr::Types type() const;
 	void scale(int factor);
+	void isBad(MonotonicityContext &context);
 private:
 	Expr* _expr;
 };
@@ -119,6 +121,7 @@ public:
 	Expr::Types type() const;
 	int value() const { return _value; };
 	void scale(int factor);
+	void isBad(MonotonicityContext &context);
 private:
 	int _value;
 };
@@ -139,6 +142,7 @@ public:
 	/** Offset in marking or valuation */
 	int offset() const{ return _offsetInMarking; }
 	void scale(int factor);
+	void isBad(MonotonicityContext &context);
 private:
 	/** Is this identifier a place? Or a variable.. */
 	bool isPlace;
@@ -168,6 +172,7 @@ public:
 	std::string toString() const;
 	void scale(int factor);
 	std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
+	void isBad(MonotonicityContext &context);
 private:
 	virtual bool apply(bool b1, bool b2) const = 0;
 	/** LLVM binary operator (llvm::Instruction::BinaryOps) */
@@ -219,6 +224,7 @@ public:
 	std::string toString() const;
 	void scale(int factor);
 	std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
+	virtual void isBad(MonotonicityContext &context);
 private:
 	virtual bool apply(int v1, int v2) const = 0;
 	/** LLVM Comparison predicate (llvm::ICmpInst::Predicate) */
@@ -239,6 +245,7 @@ private:
 class EqualCondition : public CompareCondition{
 public:
 	EqualCondition(Expr* expr1, Expr* expr2) : CompareCondition(expr1,expr2) {}
+	void isBad(MonotonicityContext &context);
 private:
 	bool apply(int v1, int v2) const;
 	int compareOp() const;
@@ -255,6 +262,7 @@ class NotEqualCondition : public CompareCondition{
 public:
 	NotEqualCondition(Expr* expr1, Expr* expr2) : CompareCondition(expr1,expr2) {}
 	std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
+	void isBad(MonotonicityContext &context);
 private:
 	bool apply(int v1, int v2) const;
 	int compareOp() const;
@@ -270,6 +278,7 @@ private:
 class LessThanCondition : public CompareCondition{
 public:
 	LessThanCondition(Expr* expr1, Expr* expr2) : CompareCondition(expr1,expr2) {}
+	void isBad(MonotonicityContext &context);
 private:
 	bool apply(int v1, int v2) const;
 	int compareOp() const;
@@ -285,6 +294,7 @@ private:
 class LessThanOrEqualCondition : public CompareCondition{
 public:
 	LessThanOrEqualCondition(Expr* expr1, Expr* expr2) : CompareCondition(expr1,expr2) {}
+	void isBad(MonotonicityContext &context);
 private:
 	bool apply(int v1, int v2) const;
 	int compareOp() const;
@@ -341,6 +351,7 @@ public:
 	std::string toString() const;
 	std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
 	void scale(int factor);
+	void isBad(MonotonicityContext &context);
 private:
 	Condition* _cond;
 };

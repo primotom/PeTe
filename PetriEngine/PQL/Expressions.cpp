@@ -318,6 +318,17 @@ void LogicalCondition::scale(int factor)	{_cond1->scale(factor);_cond2->scale(fa
 void CompareCondition::scale(int factor)	{_expr1->scale(factor);_expr2->scale(factor);}
 void NotCondition::scale(int factor)		{_cond->scale(factor);}
 
+/******************** Monotonicity Contextual Analysis ********************/
+
+void BinaryExpr::isBad(MonotonicityContext &context){
+	_expr1->isBad(context);
+	_expr2->isBad(context);
+}
+
+void MinusExpr::isBad(MonotonicityContext &context){
+	_expr->isBad(context);
+}
+
 /******************** Constraint Analysis ********************/
 
 void LogicalCondition::findConstraints(ConstraintAnalysisContext& context) const{
