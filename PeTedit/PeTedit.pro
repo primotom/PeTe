@@ -51,7 +51,8 @@ SOURCES	   += \
     DataFormats/DTAPNParser.cpp \
     Dialogs/ImportDTAPNDialog.cpp \
     Commands/DeleteItemsCommand.cpp \
-    DataFormats/TAPAALExportBuilder.cpp
+    DataFormats/TAPAALExportBuilder.cpp \
+    DataFormats/protocolparser.cpp
 
 
 HEADERS		+= \
@@ -96,7 +97,8 @@ HEADERS		+= \
     DataFormats/DTAPNParser.h \
     Dialogs/ImportDTAPNDialog.h \
     Commands/DeleteItemsCommand.h \
-    DataFormats/TAPAALExportBuilder.h
+    DataFormats/TAPAALExportBuilder.h \
+    DataFormats/protocolparser.h
 
 
 FORMS		+= MainWindow.ui \
