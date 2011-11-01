@@ -96,7 +96,8 @@ HEADERS		+= \
     DataFormats/DTAPNParser.h \
     Dialogs/ImportDTAPNDialog.h \
     Commands/DeleteItemsCommand.h \
-    DataFormats/TAPAALExportBuilder.h
+    DataFormats/TAPAALExportBuilder.h \
+    Widgets/VariableValueBox.h
 
 
 FORMS		+= MainWindow.ui \
