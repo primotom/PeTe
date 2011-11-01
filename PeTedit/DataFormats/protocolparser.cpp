@@ -5,6 +5,7 @@
 #include <QtGlobal>
 #include <QDebug>
 
+#include <iostream>
 
 void ProtocolParser::parse(QIODevice *input, PetriEngine::AbstractPetriNetBuilder *builder, AbstractQueryListBuilder* qBuilder){
 	this->qBuilder = qBuilder;
@@ -21,12 +22,9 @@ void ProtocolParser::parse(QIODevice *input, PetriEngine::AbstractPetriNetBuilde
 	while(xml.readNextStartElement()){
 		if(xml.name() == "protocol"){
 			parseprotocol();
-		}else if(xml.name() == "role"){
-			parserole();
 		}else
 			xml.skipCurrentElement();
 	}
-
 	//Create arcs
 	foreach(ArcEntry entry, arcs){
 		if(!idmap.contains(entry.src)){
@@ -62,24 +60,27 @@ void ProtocolParser::parseprotocol(){
 	while(xml.readNextStartElement()){
 		if(xml.name() == "messages"){
 			parseVariable();
+		}else if(xml.name() == "role"){
+			parserole();
 		}else
 			xml.skipCurrentElement();
 	}
 }
 
 void ProtocolParser::parseVariable(){
-	QString name = xml.readElementText(QXmlStreamReader::SkipChildElements);
-	builder->addVariable(name.toStdString(), 0, 1);
-
-	//Should work fine, even if it's a empty-element
-	xml.skipCurrentElement();
+	while(xml.readNextStartElement()){
+		if(xml.name() == "message"){
+			QString name = xml.readElementText(QXmlStreamReader::SkipChildElements);
+			builder->addVariable(name.toStdString(), 0, 1);
+		}else
+			xml.skipCurrentElement();
+	}
 }
 
 
 void ProtocolParser::parserole(){
 
 	QString roleName = xml.attributes().value("name").toString();
-
 	while(xml.readNextStartElement()){
 		if(xml.name() == "states"){
 			parseStates(roleName);
@@ -102,29 +103,23 @@ void ProtocolParser::parseStates(QString roleName){
 }
 
 void ProtocolParser::parseState(QString roleName){
-	while(xml.readNextStartElement()){
-	if(xml.name() == "state"){
-		qreal x = 0, y = 0;
-		QString name = xml.readElementText(QXmlStreamReader::SkipChildElements);
-		name += roleName + "_" ;
-		int initialMarking = 0;
-		if(xml.attributes().value("type").toString() == "initial")
-		initialMarking = 1;
+	qreal x = 0, y = 0;
+	QString name = xml.readElementText(QXmlStreamReader::SkipChildElements);
+	name = roleName + "_" + name;
+	int initialMarking = 0;
+	if(xml.attributes().value("type").toString() == "initial")
+	initialMarking = 1;
 
-		//Create place
-		builder->addPlace(name.toStdString(), initialMarking, x, y);
-		//Map id to name
-		idmap[name] = NodeName(Place, name);
-
-	}else
-		xml.skipCurrentElement();
-	}
+	//Create place
+	builder->addPlace(name.toStdString(), initialMarking, x, y);
+	//Map id to name
+	idmap[name] = NodeName(Place, name);
 }
 
 void ProtocolParser::parseRule(QString roleName){//TODO
 	qreal x = 0, y = 0;
 	QString name = xml.attributes().value("id").toString();
-	name += roleName + "_";
+	name = roleName + "_" + name;
 	QString conditions, assignments;
 
 	while(xml.readNextStartElement()){
@@ -152,9 +147,9 @@ void ProtocolParser::parsePre(QString& pre, QString roleName, QString transName)
 			arcs.append(ArcEntry(roleName+ "_" + source, transName, 1));
 		}else if(xml.name() == "received_message"){
 			QString message = xml.readElementText(QXmlStreamReader::SkipChildElements);//TODO Check syntax
-			if (pre != "")
-				pre += " && ";
-			pre += message + "== true";
+			//if (pre != "")
+			//	pre += " && ";
+			//pre += message + "== true";
 		}else
 			xml.skipCurrentElement();
 	}
@@ -167,7 +162,7 @@ void ProtocolParser::parsePost(QString& post, QString roleName, QString transNam
 			arcs.append(ArcEntry(transName,roleName+ "_" + destination , 1));
 		}else if(xml.name() == "send_message"){
 			QString message = xml.readElementText(QXmlStreamReader::SkipChildElements); //TODO Check syntax
-			post += message + ":= true; ";
+			//post += message + ":= true; ";
 		}else
 			xml.skipCurrentElement();
 	}
