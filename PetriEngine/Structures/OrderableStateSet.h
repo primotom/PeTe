@@ -1,22 +1,42 @@
 #ifndef ORDERABLESTATESET_H
 #define ORDERABLESTATESET_H
-#include "StateSet.h"
+
 #include "PQL/Contexts.h"
+#include <list>
 
 namespace PetriEngine { namespace Structures {
-class OrderableStateSet : public StateSet{
+
+class OrderableStateSet {
 public:
-    OrderableStateSet(const PetriNet& net, PQL::MonotonicityContext& context):StateSet(net){
+    OrderableStateSet(const PetriNet& net, PQL::MonotonicityContext& context){
 	_context = &context;
 	_net = &net;
     }
     bool add(State* state){
-	for(const_iter it = this->begin() ; it != this->end();it++){
-	    if (leq(state,*it))
-		return false;
+
+	for(std::list<std::pair<bool,State*> >::iterator it = _states.begin() ; it != _states.end();){
+	    if (leq(state,(*it).second)){
+		_states.remove(*it++);
+	    }else{
+		if(leq(state,(*it).second)){
+		    return false;
+		}
+		it++;
+	    }
 	}
-	std::pair<iter, bool> result = this->insert(state);
-	return result.second;
+	;
+	_states.push_back(std::make_pair(false,state));;
+	return true;
+
+    }
+
+    void visit(State* state){
+	for(std::list<std::pair<bool,State*> >::iterator it = _states.begin() ; it != _states.end();it++){
+	    if ((*it).second == state){
+		(*it).first = true;
+		return;
+	    }
+	}
     }
 
 private:
@@ -47,6 +67,7 @@ private:
     }
     const PetriNet* _net;
     PQL::MonotonicityContext* _context;
+    std::list<std::pair<bool,State*> > _states; //true = visited //false = waiting
 };
 
 }}
