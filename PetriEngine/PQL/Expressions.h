@@ -156,7 +156,26 @@ private:
 
 /******************** CONDITIONS ********************/
 
-/* Logical conditon */
+/* Boolean condition */
+class BooleanCondition : public Condition{
+public:
+	BooleanCondition(bool b){
+		_value = b;
+	}
+	void analyze(AnalysisContext &context);
+	bool evaluate(const EvaluationContext &context) const;
+	void findConstraints(ConstraintAnalysisContext &context) const;
+	llvm::Value* codegen(CodeGenerationContext &context) const;
+	double distance(DistanceContext &context) const;
+	std::string toString() const;
+	void scale(int factor);
+	std::string toTAPAALQuery(TAPAALConditionExportContext &context) const;
+	void isBad(MonotonicityContext &context);
+private:
+	bool _value;
+};
+
+/* Logical condition */
 class LogicalCondition : public Condition{
 public:
 	LogicalCondition(Condition* cond1, Condition* cond2){

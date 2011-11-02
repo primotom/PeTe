@@ -23,6 +23,12 @@ letter        [a-zA-Z_]
 "OR"						{return TOKEN(OR);}
 "not"						{return TOKEN(NOT);}
 "NOT"						{return TOKEN(NOT);}
+"true"						{return TOKEN(TRUE);}
+"TRUE"						{return TOKEN(TRUE);}
+"tt"						{return TOKEN(TRUE);}
+"false"						{return TOKEN(FALSE);}
+"FALSE"						{return TOKEN(FALSE);}
+"ff"						{return TOKEN(FALSE);}
 {letter}({letter}|{digit})*	{SAVE_TOKEN; return ID;}
 {digit}+					{SAVE_TOKEN; return INT;}
 "&&"						{return TOKEN(AND);}

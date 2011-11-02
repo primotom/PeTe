@@ -26,6 +26,7 @@ void pqlqerror(const char *s) {printf("ERROR: %s\n", s);}
 %token <token> AND OR NOT
 %token <token> EQUAL NEQUAL LESS LESSEQUAL GREATER GREATEREQUAL
 %token <token> PLUS MINUS MULTIPLY
+%token <token> TRUE FALSE
 
 /* Terminal associativity */
 %left AND OR
@@ -49,6 +50,8 @@ logic	: logic AND logic	{ $$ = new AndCondition($1, $3); }
 		| logic OR logic 	{ $$ = new OrCondition($1, $3); }
 		| NOT logic			{ $$ = new NotCondition($2); }
 		| LPAREN logic RPAREN	{ $$ = $2; }
+		| TRUE				{ $$ = new BooleanCondition(true); }
+		| FALSE				{ $$ = new BooleanCondition(false); }
 		| compare			{ $$ = $1; }
 		;
 
