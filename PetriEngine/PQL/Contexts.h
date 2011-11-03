@@ -227,6 +227,7 @@ private:
   */
 class MonotonicityContext{
 public:
+
 	MonotonicityContext(PetriNet* net) {
 		_inNot = false;
 		for(unsigned int i = 0; i < net->numberOfPlaces(); i++)
@@ -248,6 +249,7 @@ public:
 	void setVariableBad(int offset){
 		_goodVariables[offset] = false;
 	}
+
 
 	/** Getters for the places and variables */
 	std::vector<bool> goodPlaces(){ return _goodPlaces; }

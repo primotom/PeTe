@@ -20,8 +20,8 @@
 #include "../PQL/PQL.h"
 #include "../PQL/Contexts.h"
 #include "../Structures/StateSet.h"
+#include "../Structures/OrderableStateSet.h"
 #include "../Structures/StateAllocator.h"
-
 #include <list>
 #include <string.h>
 
@@ -39,7 +39,8 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 		return ReachabilityResult(ReachabilityResult::Satisfied,
 								  "A state satisfying the query was found");
 	//Create StateSet
-	StateSet states(net);
+	MonotonicityContext* test;
+	OrderableStateSet states(net,*test);
 	std::list<Step> stack;
 
 	StateAllocator<1000000> allocator(net);
@@ -70,6 +71,8 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 
 		//Take first step of the stack
 		State* s = stack.back().state;
+		//Mark as visited
+		states.visit(s);
 		//if(stack.back().t == 0)
 			//expandedStates++;
 		ns->setParent(s);
