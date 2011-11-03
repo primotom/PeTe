@@ -175,6 +175,31 @@ private:
 	bool _value;
 };
 
+/* Variable condition */
+class VariableCondition : public Condition{
+public:
+	VariableCondition(const std::string& name, int srcOffset) : _name(name){
+		_offsetInMarking = -1;
+		_srcOffset = srcOffset;
+	}
+	void analyze(AnalysisContext &context);
+	bool evaluate(const EvaluationContext &context) const;
+	void findConstraints(ConstraintAnalysisContext &context) const;
+	llvm::Value* codegen(CodeGenerationContext &context) const;
+	double distance(DistanceContext &context) const;
+	std::string toString() const;
+	void scale(int factor);
+	std::string toTAPAALQuery(TAPAALConditionExportContext &context) const;
+	void isBad(MonotonicityContext &context);
+private:
+	/** Offset in marking, -1 if undefined, should be resolved during analysis */
+	int _offsetInMarking;
+	/** Offset in source, as provided to parser */
+	int _srcOffset;
+	/** Identifier text */
+	std::string _name;
+};
+
 /* Logical condition */
 class LogicalCondition : public Condition{
 public:

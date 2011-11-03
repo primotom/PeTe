@@ -36,6 +36,7 @@ class AnalysisContext{
 private:
 	std::vector<std::string> _places;
 	std::vector<std::string> _variables;
+	std::vector<std::string> _boolVariables;
 	std::vector<ExprError> _errors;
 public:
 	/** A resolution result */
@@ -47,11 +48,16 @@ public:
 		/** True if the identifer was resolved to a place */
 		bool isPlace;
 	};
+	//TODO: Remember to grab boolVariables from Petrinet once we pull from Karsten
 	AnalysisContext(const PetriNet& net)
-	 : _places(net.placeNames()), _variables(net.variableNames()) {}
+	 : _places(net.placeNames()), _variables(net.variableNames()), _boolVariables() {}
 	AnalysisContext(const std::vector<std::string>& places,
 					const std::vector<std::string>& variables)
-	 : _places(places), _variables(variables) {}
+	 : _places(places), _variables(variables), _boolVariables() {}
+	AnalysisContext(const std::vector<std::string> &places,
+					const std::vector<std::string> &variables,
+					const std::vector<std::string> &boolVariables)
+	 : _places(places), _variables(variables), _boolVariables(boolVariables) {}
 
 	/** Resolve an identifier */
 	ResolutionResult resolve(std::string identifier) const{
@@ -68,6 +74,14 @@ public:
 		}
 		for(size_t i = 0; i < _variables.size(); i++){
 			if(_variables[i] == identifier){
+				result.offset = i;
+				result.isPlace = false;
+				result.success = true;
+				return result;
+			}
+		}
+		for(size_t i = 0; i < _boolVariables.size(); i++){
+			if(_boolVariables[i] == identifier){
 				result.offset = i;
 				result.isPlace = false;
 				result.success = true;

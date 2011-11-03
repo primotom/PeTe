@@ -94,6 +94,10 @@ std::string BooleanCondition::toString() const{
 	return _value ? "true" : "false";
 }
 
+std::string VariableCondition::toString() const{
+	return _name;
+}
+
 std::string LogicalCondition::toString() const{
 	return "(" + _cond1->toString() + " " + op() + " " + _cond2->toString() + ")";
 }
@@ -107,6 +111,12 @@ std::string NotCondition::toString() const {
 }
 
 /******************** To TAPAAL Query ********************/
+
+//TODO: I don't know if these two can be implemented in TAPAALS funny stuff
+std::string BooleanCondition::toTAPAALQuery(TAPAALConditionExportContext &context) const{
+	context.failed = true;
+	return " false ";
+}
 
 std::string BooleanCondition::toTAPAALQuery(TAPAALConditionExportContext &context) const{
 	context.failed = true;
@@ -185,6 +195,18 @@ void IdentifierExpr::analyze(AnalysisContext& context){
 
 void BooleanCondition::analyze(AnalysisContext&){
 	return;
+}
+
+void VariableCondition::analyze(AnalysisContext &context){
+	AnalysisContext::ResolutionResult result = context.resolve(_name);
+	if(result.success)
+		_offsetInMarking = result.offset;
+	else{
+		ExprError error("Unable to resolve boolean variable \"" +_name+ "\"",
+		_srcOffset,
+		_name.length());
+		context.reportError(error);
+	}
 }
 
 void LogicalCondition::analyze(AnalysisContext& context){

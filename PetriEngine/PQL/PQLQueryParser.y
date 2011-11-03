@@ -52,6 +52,7 @@ logic	: logic AND logic	{ $$ = new AndCondition($1, $3); }
 		| LPAREN logic RPAREN	{ $$ = $2; }
 		| TRUE				{ $$ = new BooleanCondition(true); }
 		| FALSE				{ $$ = new BooleanCondition(false); }
+		| ID				{ $$ = new VariableCondition(*$1, @1.first_column); delete $1; }
 		| compare			{ $$ = $1; }
 		;
 
