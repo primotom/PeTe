@@ -254,12 +254,14 @@ public:
 	/** Getters for the places and variables */
 	std::vector<bool> goodPlaces(){ return _goodPlaces; }
 	std::vector<bool> goodVariables(){ return _goodVariables; }
+	std::vector<bool> goodBoolVariables(){ return _goodBoolVariables; }
 	bool inNot(){ return _inNot; }
 	void setNot(bool isNot){ _inNot = isNot; }
 private:
 	bool _inNot;
 	std::vector<bool> _goodPlaces;
 	std::vector<bool> _goodVariables;
+	std::vector<bool> _goodBoolVariables;
 };
 
 } // PQL
