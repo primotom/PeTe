@@ -41,7 +41,7 @@ typedef int MarkVal;
 /** Type used for holding integer variable values */
 typedef int VarVal;
 /** Type used for holding boolean variable values */
-typedef vector<bool> BoolVal;
+typedef std::vector<bool> BoolVal;
 
 #define MARK_INF					INT_MAX
 

@@ -46,7 +46,7 @@ public:
 	}
 	StateConstraints(const PetriNet& net){
 		nPlaces = net.numberOfPlaces();
-		nVars = net.numberOfVariables();
+		nVars = net.numberOfIntVariables();
 		pcs = new Constraint[nPlaces];
 		vcs = new Constraint[nVars];
 		reset();

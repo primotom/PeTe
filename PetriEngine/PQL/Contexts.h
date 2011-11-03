@@ -231,7 +231,7 @@ public:
 		_inNot = false;
 		for(unsigned int i = 0; i < net->numberOfPlaces(); i++)
 			_goodPlaces.push_back(true);
-		for(unsigned int i = 0; i < net->numberOfVariables(); i++)
+		for(unsigned int i = 0; i < net->numberOfIntVariables(); i++)
 			_goodVariables.push_back(true);
 
 		int c = 0;
