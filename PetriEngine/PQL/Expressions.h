@@ -351,6 +351,25 @@ private:
 	std::string sopTAPAAL() const;
 };
 
+/* VariableCondition */
+class VariableCondition : public Condition{
+public:
+	VariableCondition(std::string name, int srcOffset) : _name(name) {
+		_srcOffset = srcOffset;
+	}
+	bool evaluate(const EvaluationContext &context) const;
+	void analyze(AnalysisContext &context);
+	bool evaluate(const EvaluationContext &context) const;
+	std::string toString() const;
+	double distance(DistanceContext &context) const;
+	void scale(int factor);
+	void isBad(MonotonicityContext &context);
+private:
+	std::string _name;
+	int _srcOffset;
+	int _offsetInMarking;
+};
+
 /* Not condition */
 class NotCondition : public Condition{
 public:

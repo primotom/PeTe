@@ -102,6 +102,10 @@ std::string CompareCondition::toString() const{
 	return "(" + _expr1->toString() + " " + op() + " " + _expr2->toString() + ")";
 }
 
+std::string VariableCondition::toString() const{
+	return _name;
+}
+
 std::string NotCondition::toString() const {
 	return "(not " + _cond->toString() + ")";
 }
@@ -168,19 +172,11 @@ void IntegerLiteralExpr::analyze(AnalysisContext&){
 	return;
 }
 
-//TODO: Fix this one too
 void IdentifierExpr::analyze(AnalysisContext& context){
 	AnalysisContext::ResolutionResult result = context.resolve(_name);
 	if(result.success){
 		_offsetInMarking = result.offset;
 		isPlace = result.isPlace;
-		isBool = result.isBool;
-		if(isBool && !context.isSafeForBool()){
-			ExprError error("Boolean variable \"" + _name + "\" used illegally",
-							_srcOffset,
-							_name.length());
-			context.reportError(error);
-		}
 	}
 	else{
 		ExprError error("Unable to resolve identifier \"" + _name + "\"",
@@ -196,11 +192,20 @@ void LogicalCondition::analyze(AnalysisContext& context){
 }
 
 void CompareCondition::analyze(AnalysisContext& context){
-	if(this->op() == "==" || this->op() == "!=")
-		context.setSafeForBool(true);
 	_expr1->analyze(context);
 	_expr2->analyze(context);
-	context.setSafeForBool(false);
+}
+
+void VariableCondition::analyze(AnalysisContext &context){
+	AnalysisContext::ResolutionResult result = context.resolve(_name);
+	if(result.success)
+		_offsetInMarking = result.offset;
+	else {
+		ExprError error("Unable to resolve boolean variable \"" + _name + "\"",
+		_srcOffset,
+		_name.length());
+		context.reportError(error);
+	}
 }
 
 void NotCondition::analyze(AnalysisContext &context){
@@ -242,6 +247,9 @@ bool CompareCondition::evaluate(const EvaluationContext& context) const{
 	return apply(v1,v2);
 }
 
+bool VariableCondition::evaluate(const EvaluationContext &context) const{
+	return context.booleans()[_offsetInMarking];
+}
 
 bool NotCondition::evaluate(const EvaluationContext& context) const{
 	return !(_cond->evaluate(context));
@@ -336,6 +344,7 @@ void IdentifierExpr::scale(int)		{}
 void LogicalCondition::scale(int factor)	{_cond1->scale(factor);_cond2->scale(factor);}
 void CompareCondition::scale(int factor)	{_expr1->scale(factor);_expr2->scale(factor);}
 void NotCondition::scale(int factor)		{_cond->scale(factor);}
+void VariableCondition::scale(int)			{}
 
 /******************** Monotonicity Contextual Analysis ********************/
 
@@ -378,6 +387,10 @@ void CompareCondition::isBad(MonotonicityContext &context){
 		_expr1->isBad(context);
 		_expr2->isBad(context);
 	}
+}
+
+void VariableCondition::isBad(MonotonicityContext &context){
+
 }
 
 void NotCondition::isBad(MonotonicityContext &context){

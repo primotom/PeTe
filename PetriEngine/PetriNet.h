@@ -100,6 +100,8 @@ public:
 	const std::vector<std::string>& transitionNames() const {return _transitions;}
 	/** Get the array of Conditions */
 	PQL::Condition** getConditions() const { return _conditions; }
+	/** Get the array of Assignments */
+	PQL::AssignmentExpression** getAssignments() const { return _assignments; }
 private:
 	std::vector<std::string> _places;
 	std::vector<std::string> _transitions;

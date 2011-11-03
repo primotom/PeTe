@@ -23,14 +23,36 @@
 namespace PetriEngine {
 namespace PQL {
 
+/************ Escape methods on base classes ************/
+
 Expr::~Expr(){}
+
+bool Expr::pfree() { return false; }
+
+llvm::Value* Expr::codegen(CodeGenerationContext &context) const { return NULL; }
+
+Types Expr::type() const{ return Undefined; }
+
+Condition::~Condition(){}
 
 bool Condition::evaluate(Structures::State &state) const{
 	return evaluate(EvaluationContext(state.marking(), state.valuation()));
 }
 
-Condition::~Condition(){}
+void Condition::findConstraints(ConstraintAnalysisContext &context) const{
+	context.canAnalyze = false;
+}
 
+llvm::Value* Condition::codegen(CodeGenerationContext &context) const{
+	return NULL;
+}
+
+std::string Condition::toTAPAALQuery(TAPAALConditionExportContext &context) const{
+	context.failed = true;
+	return " false ";
+}
+
+/*********** Assignment analysis ***********/
 
 void AssignmentExpression::analyze(AnalysisContext& context){
 	for(iter it = assignments.begin(); it != assignments.end(); it++){

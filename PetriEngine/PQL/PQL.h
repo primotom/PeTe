@@ -89,7 +89,9 @@ public:
 		/** Literal integer expression */
 		LiteralExpr,
 		/** Identifier expression */
-		IdentifierExpr
+		IdentifierExpr,
+		/** Undefined type */
+		Undefined
 	};
 public:
 	/** Virtual destructor, an expression should know it subexpressions */
@@ -97,15 +99,15 @@ public:
 	/** Perform context analysis */
 	virtual void analyze(AnalysisContext& context) = 0;
 	/** True, if the expression is p-free */
-	virtual bool pfree() const = 0;
+	virtual bool pfree() const;
 	/** Evaluate the expression given marking and assignment */
 	virtual int evaluate(const EvaluationContext& context) const = 0;
 	/** Generate LLVM intermediate code for this expr  */
-	virtual llvm::Value* codegen(CodeGenerationContext& context) const = 0;
+	virtual llvm::Value* codegen(CodeGenerationContext& context) const;
 	/** Convert expression to string */
 	virtual std::string toString() const = 0;
 	/** Expression type */
-	virtual Types type() const = 0;
+	virtual Types type() const;
 	/** Scale all nested literals by factor */
 	virtual void scale(int factor) = 0;
 	/** Explores expressions to find bad places and variables */
@@ -124,13 +126,13 @@ public:
 	/** Evaluate condition */
 	virtual bool evaluate(const EvaluationContext& context) const = 0;
 	/** Analyze constraints for over-approximation */
-	virtual void findConstraints(ConstraintAnalysisContext& context) const = 0;
+	virtual void findConstraints(ConstraintAnalysisContext& context) const;
 	/** Generate LLVM intermediate code for this condition  */
-	virtual llvm::Value* codegen(CodeGenerationContext& context) const = 0;
+	virtual llvm::Value* codegen(CodeGenerationContext& context) const;
 	/** Convert condition to string */
 	virtual std::string toString() const = 0;
 	/** Export condition to TAPAAL query (add EF manually!) */
-	virtual std::string toTAPAALQuery(TAPAALConditionExportContext& context) const = 0;
+	virtual std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
 	/** Get distance to query */
 	virtual double distance(DistanceContext& context) const = 0;
 	/** Scale all nested literals by factor */
