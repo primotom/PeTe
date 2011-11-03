@@ -39,11 +39,16 @@ public:
 	MarkVal* marking(){return _marking;}
 	const MarkVal* marking() const{return _marking;}
 
-	VarVal* valuation(){return _valuation; }
-	const VarVal* valuation() const{return _valuation; }
+	VarVal* intValuation(){return _intValuation; }
+	const VarVal* intValuation() const{return _intValuation; }
+
+	BoolVal* boolValuation(){return _boolValuation; }
+	const BoolVal* boolValuation() const{return _boolValuation; }
+
 
 	void setMarking(MarkVal* m){ _marking = m;}
-	void setValuation(VarVal* v){ _valuation = v;}
+	void setIntValuation(VarVal* v){ _intValuation = v;}
+	void setBoolValuation(BoolVal* v){ _boolValuation = v;}
 
 	/** Getter for the parent */
 	State* parent(){ return _parent; }
@@ -96,15 +101,16 @@ public:
 			size_t hash = 0;
 			for(unsigned int i = 0; i < nPlaces; i++)
 				hash ^=	(state->_marking[i] << (i*4 % (sizeof(MarkVal)*8))) | (state->_marking[i] >> (32 - (i*4 % (sizeof(MarkVal)*8))));
-			for(unsigned int i = 0; i < nVariables; i++)
-				hash ^= (state->_valuation[i] << (i*4 % (sizeof(VarVal)*8))) | (state->_valuation[i] >> (32 - (i*4 % (sizeof(VarVal)*8))));
-			return hash;
+			for(unsigned int i = 0; i < nIntVariables; i++)
+				hash ^= (state->_intValuation[i] << (i*4 % (sizeof(VarVal)*8))) | (state->_intValuation[i] >> (32 - (i*4 % (sizeof(VarVal)*8))));
+			return hash; //TODO need implementation for bools if we are going to use it
 		}
 		hash(unsigned int places, unsigned int variables)
-			: nPlaces(places), nVariables(variables){}
+			: nPlaces(places), nIntVariables(variables){}
 	private:
 		unsigned int nPlaces;
-		unsigned int nVariables;
+		unsigned int nIntVariables;
+		unsigned int nBoolVariables;
 	};
 
 	/** State specialisation of std::equal_to */
@@ -112,9 +118,15 @@ public:
 	public:
 		bool operator()(const State* state1, const State* state2) const{
 			bool equal = true;
-			//Check assignment
-			for(unsigned int i = 0; i < nVariables; i++){
-				equal &= state1->_valuation[i] == state2->_valuation[i];
+			//Check int valuations
+			for(unsigned int i = 0; i < nIntVariables; i++){
+				equal &= state1->_intValuation[i] == state2->_intValuation[i];
+				if(!equal)
+					return false;
+			}
+			//Check bool valuations
+			for(unsigned int i = 0; i < nBoolVariables; i++){
+				equal &= state1->_boolValuation[i] == state2->_boolValuation[i];
 				if(!equal)
 					return false;
 			}
@@ -127,11 +139,12 @@ public:
 			}
 			return true;
 		}
-		equal_to(unsigned int places, unsigned int variables)
-			: nPlaces(places), nVariables(variables) {}
+		equal_to(unsigned int places, unsigned int intVariables, unsigned int boolVariables)
+			: nPlaces(places), nIntVariables(intVariables), nBoolVariables(boolVariables) {}
 	private:
 		unsigned int nPlaces;
-		unsigned int nVariables;
+		unsigned int nIntVariables;
+		unsigned int nBoolVariables;
 	};
 	template<size_t blocksize> friend class StateAllocator;
 	template<size_t blocksize> friend class BoundedStateAllocator;
@@ -140,7 +153,8 @@ private:
 	unsigned int _parentTransition;
 	unsigned int _transitionMultiplicity;
 	MarkVal* _marking;
-	VarVal* _valuation;
+	VarVal* _intValuation;
+	BoolVal* _boolValuation;
 };
 
 }}

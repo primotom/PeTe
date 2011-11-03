@@ -28,12 +28,13 @@ using namespace std;
 
 namespace PetriEngine{
 
-PetriNet::PetriNet(int places, int transitions, int variables)
-	: _places(places), _transitions(transitions), _variables(variables) {
+PetriNet::PetriNet(int places, int transitions, int variables, int booleans)
+	: _places(places), _transitions(transitions), _intVariables(variables), _boolVariables(booleans){
 	//Store size for later
 	_nPlaces = places;
 	_nTransitions = transitions;
-	_nVariables = variables;
+	_nIntVariables = variables;
+	_nBoolVariables = booleans;
 
 	//Allocate space for ranges
 	_ranges = new VarVal[variables];
@@ -69,7 +70,7 @@ bool PetriNet::fire(unsigned int t,
 					const MarkVal* m,
 					const VarVal* a,
 					MarkVal* result_m,
-					VarVal* result_a) const{
+					VarVal* result_int) const{
 	//Check the condition
 	if(_conditions[t] &&
 	   !_conditions[t]->evaluate(PQL::EvaluationContext(m, a)))
@@ -88,10 +89,42 @@ bool PetriNet::fire(unsigned int t,
 
 
 	if(_assignments[t])
-		_assignments[t]->evaluate(m, a, result_a, _ranges, _nVariables);
+		_assignments[t]->evaluate(m, a, result_int, _ranges, _nIntVariables);
 	else
-		memcpy(result_a, a, sizeof(VarVal) * _nVariables);
+		memcpy(result_int, a, sizeof(VarVal) * _nIntVariables);
+	return true;
+}
 
+bool PetriNet::fire(unsigned int t,
+					const MarkVal* m,
+					const VarVal* a,
+					const BoolVal* b,
+					MarkVal* result_m,
+					VarVal* result_int,
+					BoolVal* result_bool) const{
+	//Check the condition
+	if(_conditions[t] &&
+	   !_conditions[t]->evaluate(PQL::EvaluationContext(m, a)))
+		return false;
+
+	const MarkVal* tv = _tv(t);
+	//Check that we can take from the marking
+	for(size_t i = 0; i < _nPlaces; i++){
+		result_m[i] = m[i] - tv[i];
+		if(result_m[i] < 0)
+			return false;
+	}
+	//Add stuff that the marking gives us
+	for(size_t i = 0; i < _nPlaces; i++)
+		result_m[i] += tv[i+_nPlaces];
+
+
+	if(_assignments[t])
+		_assignments[t]->evaluate(m, a,b, result_int, result_bool, _ranges, _nIntVariables, _nBoolVariables);
+	else{
+		memcpy(result_int, a, sizeof(VarVal) * _nIntVariables);
+		memcpy(result_bool, b, sizeof(BoolVal) * _nBoolVariables);
+	}
 	return true;
 }
 
@@ -121,9 +154,11 @@ bool PetriNet::fire(unsigned int t,
 
 
 	if(_assignments[t])
-		_assignments[t]->evaluate(s->marking(), s->valuation(), ns->valuation(), _ranges, _nVariables);
-	else
-		memcpy(ns->valuation(), s->valuation(), sizeof(VarVal) * _nVariables);
+		_assignments[t]->evaluate(s->marking(), s->intValuation(),s->boolValuation(), ns->intValuation(),ns->boolValuation(), _ranges, _nIntVariables,_nBoolVariables);
+	else{
+		memcpy(ns->intValuation(), s->intValuation(), sizeof(VarVal) * _nIntVariables);
+		memcpy(ns->boolValuation(), s->boolValuation(), sizeof(BoolVal)* _nBoolVariables);
+	}
 
 	return true;
 }
@@ -140,9 +175,9 @@ void PetriNet::fireWithoutCheck(unsigned int t,
 	// e.g. reuse of memory...
 	//Assume that multiplicity is zero if there's an assignment
 	if(_assignments[t])
-		_assignments[t]->evaluate(m0, a0, a2, _ranges, _nVariables);
+		_assignments[t]->evaluate(m0, a0, a2, _ranges, _nIntVariables);
 	else
-		memcpy(a2, a0, sizeof(VarVal) * _nVariables);
+		memcpy(a2, a0, sizeof(VarVal) * _nIntVariables);
 
 	const MarkVal* tv = _tv(t);
 	//Check that we can take from the marking
@@ -178,9 +213,9 @@ bool PetriNet::fireWithMarkInf(unsigned int t,
 
 
 	if(_assignments[t]) //TODO: Use evaluate that respects MarkInf
-		_assignments[t]->evaluate(m, a, result_a, _ranges, _nVariables);
+		_assignments[t]->evaluate(m, a, result_a, _ranges, _nIntVariables);
 	else
-		memcpy(result_a, a, sizeof(VarVal) * _nVariables);
+		memcpy(result_a, a, sizeof(VarVal) * _nIntVariables);
 
 	return true;
 }
