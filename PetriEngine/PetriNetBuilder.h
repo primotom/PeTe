@@ -39,7 +39,7 @@ class PetriNetBuilder : public AbstractPetriNetBuilder
 public:
 	PetriNetBuilder(bool JIT = false);
 	void addVariable(const std::string& name, int initialValue, int range);
-	void addBoolVariable(const std::string& name, bool initialValue);
+	void addBoolVariable(const std::string& name, int initialValue);
 	void addPlace(const std::string& name, int tokens, double x, double y);
 	void addTransition(const std::string& name,
 					   const std::string& condition,
@@ -66,7 +66,7 @@ private:
 	std::vector<std::string> variables;
 	std::vector<std::string> boolVariables;
 	std::vector<int> initialVariableValues;
-	std::vector<int> initialBoolVariableValues;
+	std::vector<bool> initialBoolVariableValues;
 	std::vector<int> ranges;
 	std::vector<Arc> inputArcs;
 	std::vector<Arc> outputArcs;

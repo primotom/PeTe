@@ -125,6 +125,7 @@ bool PetriNet::fire(unsigned int t,
 		memcpy(result_int, a, sizeof(VarVal) * _nIntVariables);
 		memcpy(result_bool, b, sizeof(BoolVal) * _nBoolVariables);
 	}
+
 	return true;
 }
 
@@ -133,6 +134,7 @@ bool PetriNet::fire(unsigned int t,
 					Structures::State* ns,
 					int multiplicity) const{
 	//Check the condition
+
 	if(_conditions[t] &&
 	   !_conditions[t]->evaluate(PQL::EvaluationContext(s->marking(), s->valuation())))
 		return false;

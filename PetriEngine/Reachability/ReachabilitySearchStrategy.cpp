@@ -28,7 +28,6 @@
 #include "BestFSCooling.h"
 #include "UltimateSearch.h"
 #include "HeuristicDFS.h"
-#include "MagicSearch.h"
 #include "StateSearch.h"
 #include "../PQL/Contexts.h"
 #include <stdio.h>
@@ -378,14 +377,6 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 	if(strategy == NAME_BestFSCoolingDeltaDFS){
 		int flags = PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;
 		return new BestFSCooling((PQL::DistanceContext::DistanceStrategy)flags, true);
-	}
-
-	if(strategy == NAME_MagicSearchBFS){
-		int flags = PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;;
-		return new MagicSearch((PQL::DistanceContext::DistanceStrategy)flags,
-								false,
-								Scale(0, 0.5, 0),
-								Scale(0.01, 0, 0));
 	}
 
 	if(strategy == NAME_UltimateSearchDFS){

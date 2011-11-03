@@ -29,13 +29,13 @@ class StateSet : std::tr1::unordered_set<State*, State::hash, State::equal_to>{
 public:
 	StateSet(const PetriNet& net)
 		: std::tr1::unordered_set<State*, State::hash, State::equal_to>
-			(8, State::hash(net.numberOfPlaces(), net.numberOfVariables()),
-			 State::equal_to(net.numberOfPlaces(),net.numberOfVariables()))
+			(8, State::hash(net.numberOfPlaces(), net.numberOfIntVariables()),
+			 State::equal_to(net.numberOfPlaces(),net.numberOfIntVariables(),net.numberOfBoolVariables()))
 		{}
-	StateSet(unsigned int places, unsigned int variables)
+	StateSet(unsigned int places, unsigned int variables, unsigned int booleans)
 		: std::tr1::unordered_set<State*, State::hash, State::equal_to>
 			(8, State::hash(places, variables),
-			 State::equal_to(places, variables))
+			 State::equal_to(places, variables, booleans))
 		{}
 	bool add(State* state) {
 		std::pair<iter, bool> result = this->insert(state);

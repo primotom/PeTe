@@ -80,7 +80,7 @@ PetriNet* PetriNetBuilder::makePetriNet(){
 	size_t i;
 	//Create int variables
 	for(i = 0; i < variables.size(); i++){
-		net->_variables[i] = variables[i];
+		net->_intVariables[i] = variables[i];
 		net->_ranges[i] = ranges[i];
 	}
 	//Create boolean variables
@@ -197,7 +197,7 @@ VarVal* PetriNetBuilder::makeInitialAssignment(){
 BoolVal* PetriNetBuilder::makeInitialBoolAssignment(){
 	BoolVal* b = new BoolVal[boolVariables.size()];
 	for(size_t i = 0; i < boolVariables.size(); i++)
-		b[i] = initialBoolVariableValues[i];
+		(*b)[i] = initialBoolVariableValues[i];
 	return b;
 }
 

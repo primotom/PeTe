@@ -46,7 +46,7 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 
 	State* s0 = allocator.createState();
 	memcpy(s0->marking(), m0, sizeof(MarkVal)*net.numberOfPlaces());
-	memcpy(s0->valuation(), v0, sizeof(VarVal)*net.numberOfVariables());
+	memcpy(s0->intValuation(), v0, sizeof(VarVal)*net.numberOfIntVariables());
 
 	stack.push_back(Step(s0, 0));
 
@@ -75,10 +75,10 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 		ns->setParent(s);
 		bool foundSomething = false;
 		for(unsigned int t = stack.back().t; t < net.numberOfTransitions(); t++){
-			if(net.fire(t, s->marking(), s->valuation(), ns->marking(), ns->valuation())){
+			if(net.fire(t, s->marking(), s->intValuation(), ns->marking(), ns->intValuation())){
 				if(states.add(ns)){
 					ns->setTransition(t);
-					if(query->evaluate(PQL::EvaluationContext(ns->marking(), ns->valuation())))
+					if(query->evaluate(PQL::EvaluationContext(ns->marking(), ns->intValuation())))
 						return ReachabilityResult(ReachabilityResult::Satisfied,
 									  "A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
 					stack.back().t = t + 1;

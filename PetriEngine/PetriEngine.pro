@@ -30,8 +30,6 @@ SOURCES		   += \
     Structures/StateConstraints.cpp \
     Reachability/LinearOverApprox.cpp \
     Reachability/BestFSCooling.cpp \
-    Structures/SmartState.cpp \
-    Reachability/MagicSearch.cpp \
     Reachability/UltimateSearch.cpp \
     Reachability/RandomQueryGenerator.cpp \
     Reachability/StateSearch.cpp
@@ -72,10 +70,6 @@ HEADERS		   += \
     Reachability/LinearOverApprox.h \
     Structures/EnhancedPriorityQueue.h \
     Reachability/BestFSCooling.h \
-    Structures/SmartState.h \
-    Structures/SmartStateAllocator.h \
-    Structures/SmartStateSet.h \
-    Reachability/MagicSearch.h \
     Structures/Scale.h \
     Structures/BitField.h \
     Structures/BoundedStateAllocator.h \
