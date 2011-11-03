@@ -109,10 +109,27 @@ private:
 	Expr* _expr;
 };
 
-/** Literal integer value expression */
-class LiteralExpr : public Expr {
+/** Literal boolean value expression */
+class BooleanLiteralExpr : public Expr {
 public:
-	LiteralExpr(int value) : _value(value){}
+	BooleanLiteralExpr(bool value) : _value() {}
+	void analyze(AnalysisContext &context);
+	bool pfree() const;
+	int evaluate(const EvaluationContext &context) const;
+	llvm::Value* codegen(CodeGenerationContext &context) const;
+	std::string toString() const;
+	Expr::Types type() const;
+	bool value() const { return _value; }
+	void scale(int factor);
+	void isBad(MonotonicityContext &context);
+private:
+	bool _value;
+};
+
+/** Literal integer value expression */
+class IntegerLiteralExpr : public Expr {
+public:
+	IntegerLiteralExpr(int value) : _value(value){}
 	void analyze(AnalysisContext& context);
 	bool pfree() const;
 	int evaluate(const EvaluationContext& context) const;
@@ -146,6 +163,8 @@ public:
 private:
 	/** Is this identifier a place? Or a variable.. */
 	bool isPlace;
+	/** Is this identifier a boolean variable? */
+	bool isBool;
 	/** Offset in marking, -1 if undefined, should be resolved during analysis */
 	int _offsetInMarking;
 	/** Offset in source, as provided to parser */
@@ -155,50 +174,6 @@ private:
 };
 
 /******************** CONDITIONS ********************/
-
-/* Boolean condition */
-class BooleanCondition : public Condition{
-public:
-	BooleanCondition(bool b){
-		_value = b;
-	}
-	void analyze(AnalysisContext &context);
-	bool evaluate(const EvaluationContext &context) const;
-	void findConstraints(ConstraintAnalysisContext &context) const;
-	llvm::Value* codegen(CodeGenerationContext &context) const;
-	double distance(DistanceContext &context) const;
-	std::string toString() const;
-	void scale(int factor);
-	std::string toTAPAALQuery(TAPAALConditionExportContext &context) const;
-	void isBad(MonotonicityContext &context);
-private:
-	bool _value;
-};
-
-/* Variable condition */
-class VariableCondition : public Condition{
-public:
-	VariableCondition(const std::string& name, int srcOffset) : _name(name){
-		_offsetInMarking = -1;
-		_srcOffset = srcOffset;
-	}
-	void analyze(AnalysisContext &context);
-	bool evaluate(const EvaluationContext &context) const;
-	void findConstraints(ConstraintAnalysisContext &context) const;
-	llvm::Value* codegen(CodeGenerationContext &context) const;
-	double distance(DistanceContext &context) const;
-	std::string toString() const;
-	void scale(int factor);
-	std::string toTAPAALQuery(TAPAALConditionExportContext &context) const;
-	void isBad(MonotonicityContext &context);
-private:
-	/** Offset in marking, -1 if undefined, should be resolved during analysis */
-	int _offsetInMarking;
-	/** Offset in source, as provided to parser */
-	int _srcOffset;
-	/** Identifier text */
-	std::string _name;
-};
 
 /* Logical condition */
 class LogicalCondition : public Condition{

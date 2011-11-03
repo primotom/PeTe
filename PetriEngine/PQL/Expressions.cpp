@@ -72,7 +72,11 @@ NotCondition::~NotCondition(){
 
 /******************** To String ********************/
 
-std::string LiteralExpr::toString() const{
+std::string BooleanLiteralExpr::toString() const{
+	return _value ? "true" : "false";
+}
+
+std::string IntegerLiteralExpr::toString() const{
 	std::stringstream stream;
 	stream <<_value;
 	return stream.str();
@@ -90,14 +94,6 @@ std::string MinusExpr::toString() const{
 	return "-" + _expr->toString();
 }
 
-std::string BooleanCondition::toString() const{
-	return _value ? "true" : "false";
-}
-
-std::string VariableCondition::toString() const{
-	return _name;
-}
-
 std::string LogicalCondition::toString() const{
 	return "(" + _cond1->toString() + " " + op() + " " + _cond2->toString() + ")";
 }
@@ -111,17 +107,6 @@ std::string NotCondition::toString() const {
 }
 
 /******************** To TAPAAL Query ********************/
-
-//TODO: I don't know if these two can be implemented in TAPAALS funny stuff
-std::string BooleanCondition::toTAPAALQuery(TAPAALConditionExportContext &context) const{
-	context.failed = true;
-	return " false ";
-}
-
-std::string BooleanCondition::toTAPAALQuery(TAPAALConditionExportContext &context) const{
-	context.failed = true;
-	return " false ";
-}
 
 std::string LogicalCondition::toTAPAALQuery(TAPAALConditionExportContext& context) const{
 	return " ( " + _cond1->toTAPAALQuery(context) + " " + op() + " " + _cond2->toTAPAALQuery(context) + " ) ";
@@ -175,36 +160,32 @@ void MinusExpr::analyze(AnalysisContext& context){
 	_expr->analyze(context);
 }
 
-void LiteralExpr::analyze(AnalysisContext&){
+void BooleanLiteralExpr::analyze(AnalysisContext&){
 	return;
 }
 
+void IntegerLiteralExpr::analyze(AnalysisContext&){
+	return;
+}
+
+//TODO: Fix this one too
 void IdentifierExpr::analyze(AnalysisContext& context){
 	AnalysisContext::ResolutionResult result = context.resolve(_name);
 	if(result.success){
 		_offsetInMarking = result.offset;
 		isPlace = result.isPlace;
+		isBool = result.isBool;
+		if(isBool && !context.isSafeForBool()){
+			ExprError error("Boolean variable \"" + _name + "\" used illegally",
+							_srcOffset,
+							_name.length());
+			context.reportError(error);
+		}
 	}
 	else{
 		ExprError error("Unable to resolve identifier \"" + _name + "\"",
 						_srcOffset,
 						_name.length());
-		context.reportError(error);
-	}
-}
-
-void BooleanCondition::analyze(AnalysisContext&){
-	return;
-}
-
-void VariableCondition::analyze(AnalysisContext &context){
-	AnalysisContext::ResolutionResult result = context.resolve(_name);
-	if(result.success)
-		_offsetInMarking = result.offset;
-	else{
-		ExprError error("Unable to resolve boolean variable \"" +_name+ "\"",
-		_srcOffset,
-		_name.length());
 		context.reportError(error);
 	}
 }
@@ -215,8 +196,11 @@ void LogicalCondition::analyze(AnalysisContext& context){
 }
 
 void CompareCondition::analyze(AnalysisContext& context){
+	if(this->op() == "==" || this->op() == "!=")
+		context.setSafeForBool(true);
 	_expr1->analyze(context);
 	_expr2->analyze(context);
+	context.setSafeForBool(false);
 }
 
 void NotCondition::analyze(AnalysisContext &context){
@@ -235,7 +219,11 @@ int MinusExpr::evaluate(const EvaluationContext& context) const{
 	return -(_expr->evaluate(context));
 }
 
-int LiteralExpr::evaluate(const EvaluationContext&) const{
+int BooleanLiteralExpr::evaluate(const EvaluationContext&) const{
+	return _value ? 1 : 0;
+}
+
+int IntegerLiteralExpr::evaluate(const EvaluationContext&) const{
 	return _value;
 }
 
@@ -243,17 +231,9 @@ int IdentifierExpr::evaluate(const EvaluationContext& context) const{
 	assert(_offsetInMarking != -1);
 	if(isPlace)
 		return context.marking()[_offsetInMarking];
+	if(isBool)
+		return context.booleans()[_offsetInMarking] ? 1 : 0;
 	return context.assignment()[_offsetInMarking];
-}
-
-bool BooleanCondition::evaluate(const EvaluationContext&) const{
-	return _value;
-}
-
-bool LogicalCondition::evaluate(const EvaluationContext& context) const{
-	bool b1 = _cond1->evaluate(context);
-	bool b2 = _cond2->evaluate(context);
-	return apply(b1,b2);
 }
 
 bool CompareCondition::evaluate(const EvaluationContext& context) const{
@@ -332,7 +312,7 @@ std::string GreaterThanOrEqualCondition::op() const	{ return ">=";	}
 
 bool BinaryExpr::pfree() const		{ return _expr1->pfree() && _expr2->pfree(); }
 bool MinusExpr::pfree() const		{ return _expr->pfree(); }
-bool LiteralExpr::pfree() const		{ return true; }
+bool IntegerLiteralExpr::pfree() const		{ return true; }
 bool IdentifierExpr::pfree() const	{ return !this->isPlace; }
 
 /******************** Expr::type() implementation ********************/
@@ -341,19 +321,18 @@ Expr::Types PlusExpr::type() const			{ return Expr::PlusExpr;		}
 Expr::Types SubtractExpr::type() const		{ return Expr::SubtractExpr;	}
 Expr::Types MultiplyExpr::type() const		{ return Expr::MinusExpr;		}
 Expr::Types MinusExpr::type() const			{ return Expr::MinusExpr;		}
-Expr::Types LiteralExpr::type() const		{ return Expr::LiteralExpr;		}
+Expr::Types IntegerLiteralExpr::type() const		{ return Expr::LiteralExpr;		}
 Expr::Types IdentifierExpr::type() const	{ return Expr::IdentifierExpr;	}
 
 /******************** Scale Expression ********************/
 
 void BinaryExpr::scale(int factor)	{_expr1->scale(factor); _expr2->scale(factor);}
 void MinusExpr::scale(int factor)	{_expr->scale(factor);}
-void LiteralExpr::scale(int factor)	{_value = _value * factor;}
+void IntegerLiteralExpr::scale(int factor)	{_value = _value * factor;}
 void IdentifierExpr::scale(int)		{}
 
 /******************** Scale Conditions ********************/
 
-void BooleanCondition::scale(int)			{return;}
 void LogicalCondition::scale(int factor)	{_cond1->scale(factor);_cond2->scale(factor);}
 void CompareCondition::scale(int factor)	{_expr1->scale(factor);_expr2->scale(factor);}
 void NotCondition::scale(int factor)		{_cond->scale(factor);}
@@ -369,7 +348,7 @@ void MinusExpr::isBad(MonotonicityContext &context){
 	_expr->isBad(context);
 }
 
-void LiteralExpr::isBad(MonotonicityContext&){
+void IntegerLiteralExpr::isBad(MonotonicityContext&){
 	return;
 }
 
@@ -381,10 +360,6 @@ void IdentifierExpr::isBad(MonotonicityContext &context){
 		if(_offsetInMarking != -1)
 			context.setVariableBad(_offsetInMarking);
 	}
-}
-
-void BooleanCondition::isBad(MonotonicityContext&){
-	return;
 }
 
 void LogicalCondition::isBad(MonotonicityContext &context){
@@ -413,11 +388,6 @@ void NotCondition::isBad(MonotonicityContext &context){
 
 
 /******************** Constraint Analysis ********************/
-
-//TODO: Figure out how to do constraint analysis on boolean values
-void BooleanCondition::findConstraints(ConstraintAnalysisContext&) const{
-	return;
-}
 
 void LogicalCondition::findConstraints(ConstraintAnalysisContext& context) const{
 	if(!context.canAnalyze)
@@ -451,11 +421,11 @@ void CompareCondition::findConstraints(ConstraintAnalysisContext& context) const
 	context.retval.clear();
 	if(_expr1->type() == Expr::LiteralExpr && _expr2->type() == Expr::IdentifierExpr){
 		IdentifierExpr* id = (IdentifierExpr*)_expr2;
-		LiteralExpr* literal = (LiteralExpr*)_expr1;
+		IntegerLiteralExpr* literal = (IntegerLiteralExpr*)_expr1;
 		addConstraints(context, literal->value(), id);
 	}else if(_expr1->type() == Expr::IdentifierExpr && _expr2->type() == Expr::LiteralExpr){
 		IdentifierExpr* id = (IdentifierExpr*)_expr1;
-		LiteralExpr* literal = (LiteralExpr*)_expr2;
+		IntegerLiteralExpr* literal = (IntegerLiteralExpr*)_expr2;
 		addConstraints(context, id, literal->value());
 	}else
 		context.canAnalyze = false;
@@ -680,13 +650,6 @@ void GreaterThanOrEqualCondition::addConstraints(ConstraintAnalysisContext& cont
 #define MAX(v1, v2)		(v1 > v2 ? v1 : v2)
 #define MIN(v1, v2)		(v1 < v2 ? v1 : v2)
 
-double BooleanCondition::distance(DistanceContext &context) const{
-	if(context.negated())
-		return !this->evaluate(context) ? 0 : 1;
-	return this->evaluate(context) ? 0 : 1;
-
-}
-
 double NotCondition::distance(DistanceContext& context) const{
 	context.negate();
 	double retval = _cond->distance(context);
@@ -906,7 +869,7 @@ Value* MinusExpr::codegen(CodeGenerationContext &context) const{
 								  context.label());
 }
 
-Value* LiteralExpr::codegen(CodeGenerationContext &context) const{
+Value* IntegerLiteralExpr::codegen(CodeGenerationContext &context) const{
 	return ConstantInt::get(IntegerType::get(context.context(), 32),
 							this->_value,
 							true);
@@ -933,12 +896,6 @@ Value* IdentifierExpr::codegen(CodeGenerationContext &context) const{
 
 
 /******************** Code Generation Conditions ********************/
-
-Value* BooleanCondition::codegen(CodeGenerationContext &context) const{
-	//TODO: This is probably wrong
-	int value = _value ? 1 : 0;
-	return ConstantInt::get(IntegerType::get(context.context(), 1), value, false);
-}
 
 Value* LogicalCondition::codegen(CodeGenerationContext &context) const{
 	Value* v1 = _cond1->codegen(context);

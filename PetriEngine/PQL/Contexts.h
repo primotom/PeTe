@@ -38,6 +38,7 @@ private:
 	std::vector<std::string> _variables;
 	std::vector<std::string> _boolVariables;
 	std::vector<ExprError> _errors;
+	bool _boolSafe;
 public:
 	/** A resolution result */
 	struct ResolutionResult {
@@ -47,17 +48,29 @@ public:
 		bool success;
 		/** True if the identifer was resolved to a place */
 		bool isPlace;
+		/** True if the identifier was resolved to a boolean variable*/
+		bool isBool;
 	};
-	//TODO: Remember to grab boolVariables from Petrinet once we pull from Karsten
+
 	AnalysisContext(const PetriNet& net)
-	 : _places(net.placeNames()), _variables(net.variableNames()), _boolVariables() {}
+	 : _places(net.placeNames()), _variables(net.intVariableNames()), _boolVariables(net.boolVariableNames()) {
+		_boolSafe = false;
+	 }
 	AnalysisContext(const std::vector<std::string>& places,
 					const std::vector<std::string>& variables)
-	 : _places(places), _variables(variables), _boolVariables() {}
+	 : _places(places), _variables(variables), _boolVariables() {
+		_boolSafe = false;
+	 }
 	AnalysisContext(const std::vector<std::string> &places,
 					const std::vector<std::string> &variables,
 					const std::vector<std::string> &boolVariables)
-	 : _places(places), _variables(variables), _boolVariables(boolVariables) {}
+	 : _places(places), _variables(variables), _boolVariables(boolVariables) {
+		_boolSafe = false;
+	 }
+
+	/** Are we in a state safe for bools? */
+	bool isSafeForBool(){ return _boolSafe; }
+	void setSafeForBool(bool b){ _boolSafe = b; }
 
 	/** Resolve an identifier */
 	ResolutionResult resolve(std::string identifier) const{
@@ -68,6 +81,7 @@ public:
 			if(_places[i] == identifier){
 				result.offset = i;
 				result.isPlace = true;
+				result.isBool = false;
 				result.success = true;
 				return result;
 			}
@@ -76,6 +90,7 @@ public:
 			if(_variables[i] == identifier){
 				result.offset = i;
 				result.isPlace = false;
+				result.isBool = false;
 				result.success = true;
 				return result;
 			}
@@ -84,6 +99,7 @@ public:
 			if(_boolVariables[i] == identifier){
 				result.offset = i;
 				result.isPlace = false;
+				result.isBool = true;
 				result.success = true;
 				return result;
 			}
@@ -105,15 +121,18 @@ public:
 class EvaluationContext{
 public:
 	/** Create evaluation context, this doesn't take ownershop */
-	EvaluationContext(const MarkVal* marking, const VarVal* assignment){
+	EvaluationContext(const MarkVal* marking, const VarVal* assignment, const BoolVal* booleans = NULL){
 		_marking = marking;
 		_assignment = assignment;
+		_booleans = booleans;
 	}
 	const MarkVal* marking() const {return _marking;}
 	const VarVal* assignment() const {return _assignment;}
+	const BoolVal* booleans() const { return _booleans; }
 private:
 	const MarkVal* _marking;
 	const VarVal* _assignment;
+	const BoolVal* _booleans;
 };
 
 /** Context for distance computation */

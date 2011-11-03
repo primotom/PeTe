@@ -84,6 +84,8 @@ public:
 		MultiplyExpr,
 		/** Unary minus expression */
 		MinusExpr,
+		/** Literal boolean expression */
+		BooleanExpr,
 		/** Literal integer expression */
 		LiteralExpr,
 		/** Identifier expression */
