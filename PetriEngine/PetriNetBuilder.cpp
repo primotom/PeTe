@@ -45,6 +45,11 @@ void PetriNetBuilder::addVariable(const string &name, int initialValue, int rang
 	ranges.push_back(range);
 }
 
+void PetriNetBuilder::addBoolVariable(const string &name, int initialValue){
+	boolVariables.push_back(name);
+	initialBoolVariableValues.push_back(initialValue);
+}
+
 void PetriNetBuilder::addTransition(const string &name,
 									const string &condition,
 									const string &assignment,
@@ -71,12 +76,16 @@ void PetriNetBuilder::addOutputArc(const string &transition, const string &place
 }
 
 PetriNet* PetriNetBuilder::makePetriNet(){
-	PetriNet* net = new PetriNet(places.size(), transitions.size(), variables.size());
+	PetriNet* net = new PetriNet(places.size(), transitions.size(), variables.size(), boolVariables.size());
 	size_t i;
-	//Create variables
+	//Create int variables
 	for(i = 0; i < variables.size(); i++){
 		net->_variables[i] = variables[i];
 		net->_ranges[i] = ranges[i];
+	}
+	//Create boolean variables
+	for(i = 0; i < boolVariables.size(); i++){
+		net->_boolVariables[i] = boolVariables[i];
 	}
 	//Create place names
 	for(i = 0; i < places.size(); i++)
@@ -185,5 +194,11 @@ VarVal* PetriNetBuilder::makeInitialAssignment(){
 	return a;
 }
 
+BoolVal* PetriNetBuilder::makeInitialBoolAssignment(){
+	BoolVal* b = new BoolVal[boolVariables.size()];
+	for(size_t i = 0; i < boolVariables.size(); i++)
+		b[i] = initialBoolVariableValues[i];
+	return b;
+}
 
 } // PetriEngine
