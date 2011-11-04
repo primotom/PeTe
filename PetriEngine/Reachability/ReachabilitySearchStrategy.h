@@ -47,6 +47,7 @@ public:
 	virtual ReachabilityResult reachable(const PetriNet &net,
 										 const MarkVal* initialMarking,
 										 const VarVal* initialAssignment,
+										 const BoolVal* initialBooleanAssignment,
 										 PQL::Condition* query) = 0;
 
 	/** Sets the concrete progress reporter */

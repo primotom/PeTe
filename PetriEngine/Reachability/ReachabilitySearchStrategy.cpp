@@ -374,10 +374,10 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 		return new LinearOverApprox(new BestFirstReachabilitySearch((PQL::DistanceContext::DistanceStrategy)flags, false, true));
 	}
 
-	if(strategy == NAME_BestFSCoolingDeltaDFS){
+	/*if(strategy == NAME_BestFSCoolingDeltaDFS){
 		int flags = PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;
 		return new BestFSCooling((PQL::DistanceContext::DistanceStrategy)flags, true);
-	}
+	}*/
 
 	if(strategy == NAME_UltimateSearchDFS){
 		return new UltimateSearch(true);
