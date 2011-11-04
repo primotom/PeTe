@@ -390,7 +390,9 @@ void CompareCondition::isBad(MonotonicityContext &context){
 }
 
 void VariableCondition::isBad(MonotonicityContext &context){
-
+	if(context.inNot())
+		if(_offsetInMarking != -1)
+			context.setBooleanBad(_offsetInMarking);
 }
 
 void NotCondition::isBad(MonotonicityContext &context){
@@ -662,6 +664,13 @@ void GreaterThanOrEqualCondition::addConstraints(ConstraintAnalysisContext& cont
 
 #define MAX(v1, v2)		(v1 > v2 ? v1 : v2)
 #define MIN(v1, v2)		(v1 < v2 ? v1 : v2)
+
+double VariableCondition::distance(DistanceContext &context) const{
+	bool retVal = this->evaluate(context);
+	if(context.negated())
+		return retVal ? 1 : 0;
+	return retVal ? 0 : 1;
+}
 
 double NotCondition::distance(DistanceContext& context) const{
 	context.negate();

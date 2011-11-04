@@ -137,8 +137,9 @@ public:
 					DistanceStrategy strategy,
 					const MarkVal* marking,
 					const VarVal* valuation,
+					const BoolVal* booleans,
 					Structures::DistanceMatrix* dm)
-		: EvaluationContext(marking, valuation), _net(net) {
+		: EvaluationContext(marking, valuation, booleans), _net(net) {
 		_strategy = strategy;
 		_negated = false;
 		_dm = dm;
@@ -218,8 +219,12 @@ public:
 			_goodPlaces.push_back(true);
 		for(unsigned int i = 0; i < net->numberOfIntVariables(); i++)
 			_goodVariables.push_back(true);
+		for(unsigned int i = 0; i < net->numberOfBoolVariables(); i++)
+			_goodBoolVariables.push_back(true);
 
 		int c = 0;
+
+
 		while(net->getConditions()[c]){
 			net->getConditions()[c]->isBad(*this);
 			c++;
@@ -232,6 +237,9 @@ public:
 	}
 	void setVariableBad(int offset){
 		_goodVariables[offset] = false;
+	}
+	void setBooleanBad(int offset){
+		_goodBoolVariables[offset] = false;
 	}
 
 
