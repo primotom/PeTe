@@ -136,7 +136,7 @@ bool PetriNet::fire(unsigned int t,
 	//Check the condition
 
 	if(_conditions[t] &&
-	   !_conditions[t]->evaluate(PQL::EvaluationContext(s->marking(), s->valuation())))
+	   !_conditions[t]->evaluate(PQL::EvaluationContext(s->marking(), s->intValuation(),s->boolValuation())))
 		return false;
 
 	// We can handle multiplicity if there's conditions or assignments on the transition
@@ -161,63 +161,6 @@ bool PetriNet::fire(unsigned int t,
 		memcpy(ns->intValuation(), s->intValuation(), sizeof(VarVal) * _nIntVariables);
 		memcpy(ns->boolValuation(), s->boolValuation(), sizeof(BoolVal)* _nBoolVariables);
 	}
-
-	return true;
-}
-
-void PetriNet::fireWithoutCheck(unsigned int t,
-								const MarkVal *m0,
-								const VarVal *a0,
-								MarkVal *m2,
-								VarVal *a2,
-								int multiplicity) const {
-	//Don't check conditions
-
-	// Do assignment first, so that we can allow m0 == m2 and a0 == a2
-	// e.g. reuse of memory...
-	//Assume that multiplicity is zero if there's an assignment
-	if(_assignments[t])
-		_assignments[t]->evaluate(m0, a0, a2, _ranges, _nIntVariables);
-	else
-		memcpy(a2, a0, sizeof(VarVal) * _nIntVariables);
-
-	const MarkVal* tv = _tv(t);
-	//Check that we can take from the marking
-	for(size_t i = 0; i < _nPlaces; i++)
-		m2[i] = m0[i] - tv[i] * multiplicity + tv[i+_nPlaces] * multiplicity;
-}
-
-bool PetriNet::fireWithMarkInf(unsigned int t,
-							   const MarkVal* m,
-							   const VarVal* a,
-							   MarkVal* result_m,
-							   VarVal* result_a) const{
-	//Check the condition
-	if(_conditions[t] && //TODO: Use evaluate that respects MarkInf
-	   !_conditions[t]->evaluate(PQL::EvaluationContext(m, a)))
-		return false;
-
-	const MarkVal* tv = _tv(t);
-	//Check that we can take from the marking
-	for(size_t i = 0; i < _nPlaces; i++){
-		if(m[i] == MARK_INF)
-			continue;
-		result_m[i] = m[i] - tv[i];
-		if(result_m[i] < 0)
-			return false;
-	}
-	//Add stuff that the marking gives us
-	for(size_t i = 0; i < _nPlaces; i++){
-		if(m[i] == MARK_INF)
-			continue;
-		result_m[i] += tv[i+_nPlaces];
-	}
-
-
-	if(_assignments[t]) //TODO: Use evaluate that respects MarkInf
-		_assignments[t]->evaluate(m, a, result_a, _ranges, _nIntVariables);
-	else
-		memcpy(result_a, a, sizeof(VarVal) * _nIntVariables);
 
 	return true;
 }
