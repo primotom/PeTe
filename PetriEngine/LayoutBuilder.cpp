@@ -34,7 +34,7 @@ void LayoutBuilder::addVariable(const std::string &name, int initialValue, int r
 	v.range = range;
 	vars.push_back(v);
 }
-void LayoutBuilder::addBoolVariable(const std::string &name, int initialValue){
+void LayoutBuilder::addBoolVariable(const std::string &name, bool initialValue){
 	BoolVar v;
 	v.name = name;
 	v.initialValue = initialValue;

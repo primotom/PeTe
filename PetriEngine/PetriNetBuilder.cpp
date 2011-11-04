@@ -45,7 +45,7 @@ void PetriNetBuilder::addVariable(const string &name, int initialValue, int rang
 	ranges.push_back(range);
 }
 
-void PetriNetBuilder::addBoolVariable(const string &name, int initialValue){
+void PetriNetBuilder::addBoolVariable(const string &name, bool initialValue){
 	boolVariables.push_back(name);
 	initialBoolVariableValues.push_back(initialValue);
 }

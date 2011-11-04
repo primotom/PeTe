@@ -113,6 +113,8 @@ public:
 	void addVariable(const std::string& name,
 					 int initialValue,
 					 int range);
+	void addBoolVariable(const std::string &name,
+					bool initialValue);
 	void addPlace(const std::string& name,
 				  int tokens,
 				  double x,
@@ -140,6 +142,7 @@ private:
 	int countMatchingIds(const std::string& id);
 	std::vector<ValidationError> _errors;
 	std::vector<std::string> _varNames;
+	std::vector<std::string> _boolVarNames;
 	std::vector<std::string> _placeNames;
 	std::vector<std::string> _transitionNames;
 	std::vector<std::string> _conditions;

@@ -32,7 +32,7 @@ public:
 							 int range) = 0;
 	/** Add a new bool variable */
 	virtual void addBoolVariable(const std::string& name,
-							 int initialValue) = 0;
+							 bool initialValue) = 0;
 	/** Add a new place with a unique name */
 	virtual void addPlace(const std::string& name,
 						  int tokens,
