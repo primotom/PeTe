@@ -34,6 +34,12 @@ void LayoutBuilder::addVariable(const std::string &name, int initialValue, int r
 	v.range = range;
 	vars.push_back(v);
 }
+void LayoutBuilder::addBoolVariable(const std::string &name, int initialValue){
+	BoolVar v;
+	v.name = name;
+	v.initialValue = initialValue;
+	boolVars.push_back(v);
+}
 
 void LayoutBuilder::addPlace(const std::string &name, int tokens, double, double){
 	Place p;
@@ -274,6 +280,9 @@ void LayoutBuilder::produce(AbstractPetriNetBuilder *builder){
 	for(VarIter it = vars.begin(); it != vars.end(); it++)
 		builder->addVariable(it->name, it->initialValue, it->range);
 
+	for(BoolVarIter it = boolVars.begin(); it != BoolVars.end(); it++)
+		builder->addBoolVariable(it->name, it->initialValue);
+
 	for(PlaceIter it = places.begin(); it != places.end(); it++)
 		builder->addPlace(it->name, it->tokens, it->x, it->y);
 
@@ -288,6 +297,7 @@ void LayoutBuilder::produce(AbstractPetriNetBuilder *builder){
 
 	//Reset builder state (just in case some idoit decides to reuse it!
 	vars.clear();
+	boolVars.clear();
 	places.clear();
 	transitions.clear();
 	inArcs.clear();

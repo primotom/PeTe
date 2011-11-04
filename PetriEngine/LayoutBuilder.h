@@ -42,6 +42,13 @@ class LayoutBuilder : public AbstractPetriNetBuilder
 	typedef std::list<Var> VarList;
 	typedef std::list<Var>::iterator VarIter;
 
+	struct BoolVar{
+		std::string name;
+		bool initialValue;
+	};
+	typedef std:list<BoolVar> BoolVarList;
+	typedef std::list<BoolVar>::iterator BoolVarIter;
+
 	struct Place{
 		std::string name;
 		int tokens;
@@ -73,6 +80,7 @@ public:
 		margin = 50;
 	}
 	void addVariable(const std::string &name, int initialValue, int range);
+	void addBoolVariable(const std::string &name, int initialValue);
 	void addPlace(const std::string &name, int tokens, double x, double y);
 	void addTransition(const std::string &name, const std::string &conditions, const std::string &assignments, double x, double y);
 	void addInputArc(const std::string &place, const std::string &transition, int weight);
@@ -84,6 +92,7 @@ private:
 	int factor;
 	int margin;
 	VarList vars;
+	BoolVarList boolVars;
 	PlaceList places;
 	TransitionList transitions;
 	ArcList inArcs, outArcs;
