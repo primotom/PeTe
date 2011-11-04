@@ -33,9 +33,10 @@ namespace PetriEngine{ namespace Reachability {
 ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 														   const MarkVal *m0,
 														   const VarVal *v0,
+														   const BoolVal *b0,
 														   PQL::Condition *query){
 	//Do we initially satisfy query?
-	if(query->evaluate(PQL::EvaluationContext(m0, v0)))
+	if(query->evaluate(PQL::EvaluationContext(m0, v0, b0)))
 		return ReachabilityResult(ReachabilityResult::Satisfied,
 								  "A state satisfying the query was found");
 	//Create StateSet
@@ -48,6 +49,7 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 	State* s0 = allocator.createState();
 	memcpy(s0->marking(), m0, sizeof(MarkVal)*net.numberOfPlaces());
 	memcpy(s0->intValuation(), v0, sizeof(VarVal)*net.numberOfIntVariables());
+	memcpy(s0->boolValuation(), b0, sizeof(BoolVal)*net.numberOfBoolVariables());
 
 	stack.push_back(Step(s0, 0));
 
@@ -78,10 +80,10 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 		ns->setParent(s);
 		bool foundSomething = false;
 		for(unsigned int t = stack.back().t; t < net.numberOfTransitions(); t++){
-			if(net.fire(t, s->marking(), s->intValuation(), ns->marking(), ns->intValuation())){
+			if(net.fire(t, s->marking(), s->intValuation(),s->boolValuation(), ns->marking(), ns->intValuation(), ns->boolValuation())){
 				if(states.add(ns)){
 					ns->setTransition(t);
-					if(query->evaluate(PQL::EvaluationContext(ns->marking(), ns->intValuation())))
+					if(query->evaluate(PQL::EvaluationContext(ns->marking(), ns->intValuation(), ns->boolValuation())))
 						return ReachabilityResult(ReachabilityResult::Satisfied,
 									  "A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
 					stack.back().t = t + 1;

@@ -17,7 +17,6 @@ SOURCES		   += \
 	Reachability/ReachabilitySearchStrategy.cpp \
     PQL/Expressions.cpp \
     PQL/PQL.cpp \
-    Reachability/HashUnderApproximation.cpp \
     PQL/CompiledCondition.cpp \
     Structures/DistanceMatrix.cpp \
     LayoutBuilder.cpp \
@@ -29,7 +28,6 @@ SOURCES		   += \
     Reachability/BestFirstReachabilitySearch.cpp \
     Structures/StateConstraints.cpp \
     Reachability/LinearOverApprox.cpp \
-    Reachability/BestFSCooling.cpp \
     Reachability/UltimateSearch.cpp \
     Reachability/RandomQueryGenerator.cpp \
     Reachability/StateSearch.cpp
@@ -52,7 +50,6 @@ HEADERS		   += \
     PQL/Expressions.h \
     Structures/BlockStack.h \
     Structures/PriorityQueue.h \
-    Reachability/HashUnderApproximation.h \
     PQL/CompiledCondition.h \
     PQL/Contexts.h \
     Structures/DistanceMatrix.h \
@@ -69,7 +66,6 @@ HEADERS		   += \
     Structures/StateConstraints.h \
     Reachability/LinearOverApprox.h \
     Structures/EnhancedPriorityQueue.h \
-    Reachability/BestFSCooling.h \
     Structures/Scale.h \
     Structures/BitField.h \
     Structures/BoundedStateAllocator.h \

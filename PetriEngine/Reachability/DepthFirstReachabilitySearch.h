@@ -34,6 +34,7 @@ public:
 	ReachabilityResult reachable(const PetriNet &net,
 								 const MarkVal* initialMarking,
 								 const VarVal* initialAssignment,
+								 const BoolVal* initialBooleanAssignment,
 								 PQL::Condition* query);
 private:
 	/** A step in the reachability search */
