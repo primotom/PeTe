@@ -50,6 +50,14 @@ void ValidationBuilder::addVariable(const std::string& name,
 	}
 }
 
+
+void ValidationBuilder::addBoolVariable(const std::string& name,
+									bool initialValue){
+	_boolVarNames.push_back(name);
+
+}
+
+
 void ValidationBuilder::addPlace(const std::string& name,
 								 int tokens,
 								 double,
@@ -99,6 +107,8 @@ int ValidationBuilder::countMatchingIds(const std::string& id){
 	int count = 0;
 	for(size_t i = 0; i < _varNames.size(); i++)
 		if(_varNames[i] == id) count++;
+	for(size_t i = 0; i < _boolVarNames.size(); i++)
+		if(_boolVarNames[i] == id) count++;
 	for(size_t i = 0; i < _placeNames.size(); i++)
 		if(_placeNames[i] == id) count++;
 	for(size_t i = 0; i < _transitionNames.size(); i++)
@@ -112,6 +122,19 @@ bool ValidationBuilder::validate(){
 	//Check variable names
 	for(size_t i = 0; i < _varNames.size(); i++){
 		const string& id = _varNames[i];
+		int count = countMatchingIds(id);
+		assert(count >= 1);
+		if(count > 1 && reportedDuplicates.count(id) == 0){
+			reportedDuplicates.insert(id);
+			_errors.push_back(ValidationError(id,
+											  "The identifiers must be unique, \""
+											  + id + "\" is shared by "
+											  + int2string(count) + " entities"));
+		}
+	}
+	//Check bool variable names
+	for(size_t i = 0; i < _boolVarNames.size(); i++){
+		const string& id = _boolVarNames[i];
 		int count = countMatchingIds(id);
 		assert(count >= 1);
 		if(count > 1 && reportedDuplicates.count(id) == 0){
@@ -213,7 +236,7 @@ bool ValidationBuilder::validate(){
 		if(_conditions[i].empty()) continue;
 		PQL::Condition* cond = PQL::ParseQuery(_conditions[i]);
 		if(cond){
-			PQL::AnalysisContext context(_placeNames, _varNames);
+			PQL::AnalysisContext context(_placeNames, _varNames, _boolVarNames);
 			cond->analyze(context);
 			for(size_t j = 0; j < context.errors().size(); j++){
 				_errors.push_back(ValidationError(_transitionNames[i],
@@ -231,7 +254,7 @@ bool ValidationBuilder::validate(){
 		if(_assignments[i].empty()) continue;
 		PQL::AssignmentExpression* a = PQL::ParseAssignment(_assignments[i]);
 		if(a){
-			PQL::AnalysisContext context(_placeNames, _varNames);
+			PQL::AnalysisContext context(_placeNames, _varNames, _boolVarNames);
 			a->analyze(context);
 			for(size_t j = 0; j < context.errors().size(); j++){
 				_errors.push_back(ValidationError(_transitionNames[i],
