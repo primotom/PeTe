@@ -57,6 +57,7 @@ private:
 
 	}
 
+	/*
 	for(size_t i = 0; i <  _net->numberOfIntVariables(); i++){
 		if(_context->goodVariables()[i]){
 			if(s1->intValuation()[i] > s2->intValuation()[i]){
@@ -70,10 +71,11 @@ private:
 				return false;
 		}
 	}
-
+	*/
 	for(size_t i = 0; i <  _net->numberOfBoolVariables(); i++){
 		if(_context->goodBoolVariables()[i]) {
-			if(s1->boolValuation()[i] && !s2->boolValuation()[i]){
+
+			if((*s1->boolValuation())[i] && (!(*s2->boolValuation())[i])){
 				return false;
 			}
 		}else{
