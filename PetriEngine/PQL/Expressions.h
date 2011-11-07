@@ -163,8 +163,6 @@ public:
 private:
 	/** Is this identifier a place? Or a variable.. */
 	bool isPlace;
-	/** Is this identifier a boolean variable? */
-	bool isBool;
 	/** Offset in marking, -1 if undefined, should be resolved during analysis */
 	int _offsetInMarking;
 	/** Offset in source, as provided to parser */

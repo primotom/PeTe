@@ -148,6 +148,7 @@ private:
 		std::string identifier;
 		int offset;
 		Expr* expr;
+		Condition* cond;
 	};
 	typedef std::list<VariableAssignment>::iterator iter;
 	typedef std::list<VariableAssignment>::const_iterator const_iter;
@@ -157,15 +158,28 @@ public:
 		va.offset = -1;
 		va.identifier = identifier;
 		va.expr = expr;
+		va.cond = NULL;
 		assignments.push_front(va);
 	}
+	void prepend(const std::string& identifier, Condition* cond){
+		VariableAssignment va;
+		va.offset = -1;
+		va.identifier = identifier;
+		va.expr = NULL;
+		va.cond = cond;
+		assignments.push_front(va);
+	}
+
 	void analyze(AnalysisContext& context);
 	/** Evaluate the assignment expression */
 	void evaluate(const MarkVal* m,
 				  const VarVal* a,
+				  const BoolVal* b,
 				  VarVal* result_a,
+				  BoolVal* result_b,
 				  VarVal* ranges,
-				  size_t nvars) const;
+				  size_t nInts,
+				  size_t nBools) const;
 	std::string toString(){
 		std::string t;
 		for(iter it = assignments.begin(); it != assignments.end(); it++){

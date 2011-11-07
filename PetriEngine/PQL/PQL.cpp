@@ -60,7 +60,7 @@ void AssignmentExpression::analyze(AnalysisContext& context){
 		if(result.success && !result.isPlace){
 			it->offset = result.offset;
 		}else if(result.isPlace){
-			context.reportError(ExprError("You cannot assign to an place!"));
+			context.reportError(ExprError("You cannot assign to a place!"));
 		}else{
 			context.reportError(ExprError("Variable for assignment could not be resolved!"));
 		}

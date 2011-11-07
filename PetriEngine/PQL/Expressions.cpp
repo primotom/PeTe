@@ -236,8 +236,6 @@ int IdentifierExpr::evaluate(const EvaluationContext& context) const{
 	assert(_offsetInMarking != -1);
 	if(isPlace)
 		return context.marking()[_offsetInMarking];
-	if(isBool)
-		return context.booleans()[_offsetInMarking] ? 1 : 0;
 	return context.assignment()[_offsetInMarking];
 }
 
@@ -257,22 +255,37 @@ bool NotCondition::evaluate(const EvaluationContext& context) const{
 
 void AssignmentExpression::evaluate(const MarkVal* m,
 									const VarVal *a,
+									const BoolVal *b,
 									VarVal* result_a,
+									BoolVal* result_b,
 									VarVal* ranges,
-									size_t nvars) const{
+									size_t nInts,
+									size_t nBools) const{
+	//Should work as long as we don't have Integers AND Boolean variables at the same time
+
 	//If the same memory is used for a and result_a, do a little hack...
 	if(a == result_a){
-		VarVal acpy[nvars];
-		memcpy(acpy, a, sizeof(VarVal) * nvars);
-		memcpy(result_a, acpy, sizeof(VarVal) * nvars);
+		VarVal acpy[nInts];
+		memcpy(acpy, a, sizeof(VarVal) * nInts);
+		memcpy(result_a, acpy, sizeof(VarVal) * nInts);
 		EvaluationContext context(m, acpy);
 		for(const_iter it = assignments.begin(); it != assignments.end(); it++)
-			result_a[it->offset] = it->expr->evaluate(context) % (ranges[it->offset]+1);
+			if(it->expr)
+				result_a[it->offset] = it->expr->evaluate(context) % (ranges[it->offset]+1);
 	}else{
-		memcpy(result_a, a, sizeof(VarVal) * nvars);
+		memcpy(result_a, a, sizeof(VarVal) * nInts);
 		EvaluationContext context(m, a);
 		for(const_iter it = assignments.begin(); it != assignments.end(); it++)
-			result_a[it->offset] = it->expr->evaluate(context) % (ranges[it->offset]+1);
+			if(it->expr)
+				result_a[it->offset] = it->expr->evaluate(context) % (ranges[it->offset]+1);
+	}
+
+	if(b){
+		result_b = new vector<bool>(b);
+		EvaluationContext context(m, result_b);
+		for(const_iter it = assignments.begin(); it != assignments.end(); it++)
+			if(it->cond)
+				result_b[it->offset] = it->cond->evaluate(context);
 	}
 }
 
@@ -348,15 +361,6 @@ void VariableCondition::scale(int)			{}
 
 /******************** Monotonicity Contextual Analysis ********************/
 
-void BinaryExpr::isBad(MonotonicityContext &context){
-	_expr1->isBad(context);
-	_expr2->isBad(context);
-}
-
-void MinusExpr::isBad(MonotonicityContext &context){
-	_expr->isBad(context);
-}
-
 void IntegerLiteralExpr::isBad(MonotonicityContext&){
 	return;
 }
@@ -365,9 +369,6 @@ void IdentifierExpr::isBad(MonotonicityContext &context){
 	if(isPlace){
 		if(_offsetInMarking != -1)
 			context.setPlaceBad(_offsetInMarking);
-	} else {
-		if(_offsetInMarking != -1)
-			context.setVariableBad(_offsetInMarking);
 	}
 }
 
@@ -392,7 +393,7 @@ void CompareCondition::isBad(MonotonicityContext &context){
 void VariableCondition::isBad(MonotonicityContext &context){
 	if(context.inNot())
 		if(_offsetInMarking != -1)
-			context.setBooleanBad(_offsetInMarking);
+			context.setVariableBad(_offsetInMarking);
 }
 
 void NotCondition::isBad(MonotonicityContext &context){

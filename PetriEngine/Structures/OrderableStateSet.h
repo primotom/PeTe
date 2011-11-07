@@ -50,7 +50,7 @@ public:
 
 		for(size_t i = 0; i <  _net->numberOfBoolVariables(); i++){
 			if(_context->goodBoolVariables()[i]) {
-				if(s1->boolValuation()[i] && !s2->boolValuation()[i]){
+				if((*s1->boolValuation())[i] && !(*s2->boolValuation())[i]){
 					return true;
 				}
 			}
@@ -62,7 +62,7 @@ public:
 	bool greaterBool(State* s1, State* s2){
 		for(size_t i = 0; i <  _net->numberOfBoolVariables(); i++){
 			if(_context->goodBoolVariables()[i]) {
-				if(s1->boolValuation()[i] && !s2->boolValuation()[i]){
+				if((*s1->boolValuation())[i] && !(*s2->boolValuation())[i]){
 					return true;
 				}
 			}
@@ -75,41 +75,20 @@ private:
     bool leq(State* s1, State* s2){
 		for(size_t i = 0; i <  _net->numberOfPlaces(); i++){
 			if(_context->goodPlaces()[i]) {
-				if(s1->marking()[i] > s2->marking()[i]){
+				if(s1->marking()[i] > s2->marking()[i])
 					return false;
-				}else{
-					if(s1->marking()[i] != s2->marking()[i])
-						return false;
-				}
-			}else{
-				if(s1->marking()[i] != s2->marking()[i])
+				else if(s1->marking()[i] != s2->marking()[i])
 					return false;
-			}
-		}
-
-		for(size_t i = 0; i <  _net->numberOfIntVariables(); i++){
-			if(_context->goodVariables()[i]){
-				if(s1->intValuation()[i] > s2->intValuation()[i]){
-					return false;
-				}else{
-					if(s1->intValuation()[i] != s2->intValuation()[i])
-						return false;
-				}
-			}else{
-				if(s1->intValuation()[i] != s2->intValuation()[i])
-					return false;
-			}
+			}else if(s1->marking()[i] != s2->marking()[i])
+				return false;
 		}
 
 		for(size_t i = 0; i <  _net->numberOfBoolVariables(); i++){
 			if(_context->goodBoolVariables()[i]) {
-				if(s1->boolValuation()[i] && !s2->boolValuation()[i]){
+				if((*s1->boolValuation())[i] && (!(*s2->boolValuation())[i]))
 					return false;
-				}
-			}else{
-				if(s1->boolValuation()[i] != s2->boolValuation()[i])
-					return false;
-			}
+			}else if(s1->boolValuation()[i] != s2->boolValuation()[i])
+				return false;
 		}
 		return true;
     }

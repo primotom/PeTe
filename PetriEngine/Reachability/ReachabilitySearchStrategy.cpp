@@ -21,11 +21,11 @@
 //#include "KarpMillerL1SearchStrategy.h"
 #include "DepthFirstReachabilitySearch.h"
 #include "BreadthFirstReachabilitySearch.h"
-#include "HashUnderApproximation.h"
+
 #include "BestFirstReachabilitySearch.h"
 #include "LinearOverApprox.h"
 #include "RandomDFS.h"
-#include "BestFSCooling.h"
+
 #include "UltimateSearch.h"
 #include "HeuristicDFS.h"
 #include "StateSearch.h"
@@ -36,6 +36,10 @@
 #define NAME_DFS								"Naive DFS with Hash"
 #define NAME_RandomDFS							"Random DFS with Hash"
 #define NAME_BFS								"Naive BFS with Hash"
+
+//Ordered
+#define NAME_OrderedState						"Fire state with larger bools"
+#define NAME_FullOrderedState					"Fire state with larger states"
 
 //Heuristics
 #define NAME_DFSArcCount						"DFS-ArcCount"
@@ -141,6 +145,8 @@ namespace PetriEngine { namespace Reachability {
 std::vector<std::string> ReachabilitySearchStrategy::listStrategies(){
 	std::string strats[] = {
 		NAME_DFS,
+		NAME_OrderedState,
+		NAME_FullOrderedState,
 		NAME_RandomDFS,
 		NAME_BFS,
 		/*NAME_DFSArcCount,
@@ -194,11 +200,16 @@ std::vector<std::string> ReachabilitySearchStrategy::listStrategies(){
 ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std::string& strategy){
 	if(strategy == NAME_DFS)
 		return new DepthFirstReachabilitySearch();
-	if(strategy == NAME_RandomDFS)
-		return new RandomDFS();
-	if(strategy == NAME_BFS)
-		return new BreadthFirstReachabilitySearch();
-	if(strategy == NAME_DFSArcCount){
+	//if(strategy == NAME_OrderedState) //TODO comment in when merge
+//		return new DepthFirstReachabilitySearch();
+//	if(strategy == NAME_FullOrderedState)
+//		return new DepthFirstReachabilitySearch();
+
+//	if(strategy == NAME_RandomDFS)
+//		return new RandomDFS();
+//	if(strategy == NAME_BFS)
+//		return new BreadthFirstReachabilitySearch();
+/*	if(strategy == NAME_DFSArcCount){
 		int flags = PQL::DistanceContext::ArcCount | PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;
 		return new HeuristicDFS((PQL::DistanceContext::DistanceStrategy)flags);
 	}
@@ -219,7 +230,7 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 		int flags = PQL::DistanceContext::TokenCost | PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;
 		return new BestFirstReachabilitySearch((PQL::DistanceContext::DistanceStrategy)flags, false, false);
 	}
-
+*/
 	//BestFSDelta
 	/*if(strategy == NAME_BestFSDeltaAverageExtreme){
 		int flags = PQL::DistanceContext::AndAverage | PQL::DistanceContext::OrExtreme;
@@ -245,11 +256,11 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 		int flags = PQL::DistanceContext::AndSum | PQL::DistanceContext::OrAverage;
 		return new BestFirstReachabilitySearch((PQL::DistanceContext::DistanceStrategy)flags);
 	}*/
-	if(strategy == NAME_BestFSDeltaSumExtreme){
+	/*if(strategy == NAME_BestFSDeltaSumExtreme){
 		int flags = PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;
 		return new BestFirstReachabilitySearch((PQL::DistanceContext::DistanceStrategy)flags);
 	}
-
+*/
 	//BestFSDelta-Deep
 	/*if(strategy == NAME_BestFSDeltaDeepAverageExtreme){
 		int flags = PQL::DistanceContext::AndAverage | PQL::DistanceContext::OrExtreme;
@@ -274,12 +285,12 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 	if(strategy == NAME_BestFSDeltaDeepSumAverage){
 		int flags = PQL::DistanceContext::AndSum | PQL::DistanceContext::OrAverage;
 		return new BestFirstReachabilitySearch((PQL::DistanceContext::DistanceStrategy)flags, true);
-	}*/
+	}
 	if(strategy == NAME_BestFSDeltaDeepSumExtreme){
 		int flags = PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;
 		return new BestFirstReachabilitySearch((PQL::DistanceContext::DistanceStrategy)flags, true);
 	}
-
+*/
 	//BestFSTokenCost
 	/*if(strategy == NAME_BestFSTokenCost2Extreme){
 		int flags = PQL::DistanceContext::TokenCost | PQL::DistanceContext::AndExtreme | PQL::DistanceContext::OrExtreme;
@@ -333,7 +344,7 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 	}*/
 
 	//BestFSDelta-LHx
-	if(strategy == NAME_BestFSDeltaSumExtremeLH1){
+/*	if(strategy == NAME_BestFSDeltaSumExtremeLH1){
 		int flags = PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;
 		return new BestFirstReachabilitySearch((PQL::DistanceContext::DistanceStrategy)flags, false, true, 1);
 	}
@@ -353,8 +364,8 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 		int flags = PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;
 		return new BestFirstReachabilitySearch((PQL::DistanceContext::DistanceStrategy)flags, false, true, 5);
 	}
-
-
+*/
+/*
 	if(strategy == NAME_BestFSDeltaSumExtremeBFS){
 		int flags = PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;
 		return new BestFirstReachabilitySearch((PQL::DistanceContext::DistanceStrategy)flags, false, false);
@@ -373,11 +384,11 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 		int flags = PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;
 		return new LinearOverApprox(new BestFirstReachabilitySearch((PQL::DistanceContext::DistanceStrategy)flags, false, true));
 	}
-
+*/
 	/*if(strategy == NAME_BestFSCoolingDeltaDFS){
 		int flags = PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;
 		return new BestFSCooling((PQL::DistanceContext::DistanceStrategy)flags, true);
-	}*/
+	}
 
 	if(strategy == NAME_UltimateSearchDFS){
 		return new UltimateSearch(true);
@@ -389,7 +400,7 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 		return new StateSearch(false);
 	if(strategy == NAME_StateSearchDFS)
 		return new StateSearch(true);
-
+*/
 	//If we didn't find it
 	fprintf(stderr, "Reachability strategy: \"%s\" not found!\n", strategy.c_str());
 	return new DepthFirstReachabilitySearch();
