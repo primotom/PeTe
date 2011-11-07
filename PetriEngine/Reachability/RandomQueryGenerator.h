@@ -30,7 +30,8 @@ public:
 	/** Generate a random query */
 	std::string gen(const PetriNet& net,
 					const MarkVal* m0,
-					const VarVal* v0);
+					const VarVal* v0,
+					const BoolVal* b0);
 };
 
 } // Reachability
