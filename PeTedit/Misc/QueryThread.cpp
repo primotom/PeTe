@@ -48,6 +48,7 @@ QueryThread::QueryThread(QString query,
 	_net = builder.makePetriNet();
 	_m0 = builder.makeInitialMarking();
 	_a0 = builder.makeInitialAssignment();
+	_b0 = builder.makeInitialBoolAssignment();
 
 	//Parse query
 	_query = ParseQuery(query.toStdString());
@@ -105,7 +106,7 @@ void QueryThread::run(){
 	_startClock = clock();
 
 	//Run the strategy
-	_result = strategy->reachable(*_net, _m0, _a0, _query);
+	_result = strategy->reachable(*_net, _m0, _a0, _b0, _query);
 
 	_finishTime = ((qreal)(clock() - _startClock)) / (qreal)CLOCKS_PER_SEC;
 }

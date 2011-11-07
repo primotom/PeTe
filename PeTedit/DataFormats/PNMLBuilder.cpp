@@ -48,6 +48,13 @@ void PNMLBuilder::addVariable(const std::string& name, int initialValue, int ran
 	xml.writeAttribute("range", QString::number(range));
 }
 
+void PNMLBuilder::addBoolVariable(const std::string& name, bool initialValue){
+	xml.writeEmptyElement("boolean_variable");
+	xml.writeAttribute("name", name.c_str());
+	xml.writeAttribute("initial-value", QString::number((int)initialValue)); //TODO BAD Karsten bad bad karsten no cast to int
+	xml.writeAttribute("range", QString::number(1));
+}
+
 
 void PNMLBuilder::addTransition(const std::string &name,
 								const std::string &conditions,

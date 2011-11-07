@@ -59,6 +59,9 @@ void TAPAALExportBuilder::addVariable(const std::string& name, int initialValue,
 	_comments += "Variable \"" + QString(name.c_str()) + "\" = " + QString::number(initialValue) +" with upperbound " + QString::number(range) + " was ignored\n";
 }
 
+void TAPAALExportBuilder::addBoolVariable(const std::string& name, bool initialValue){
+	_comments += "Boolean Variable \"" + QString(name.c_str()) + "\" = " + QString::number((int)initialValue) + " was ignored\n";
+}
 
 void TAPAALExportBuilder::addTransition(const std::string &name,
 								const std::string &conditions,

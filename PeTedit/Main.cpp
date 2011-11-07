@@ -118,6 +118,7 @@ int main(int argc, char *argv[])
 		PetriNet* net = builder.makePetriNet();
 		MarkVal* m0 = builder.makeInitialMarking();
 		VarVal* a0 = builder.makeInitialAssignment();
+		BoolVal* b0 = builder.makeInitialBoolAssignment();
 
 		foreach(const DTAPNParser::Query& q, p.getQueries()){
 			//Translate query
@@ -143,7 +144,7 @@ int main(int argc, char *argv[])
 
 			//Run the query
 			clock_t startClock = clock();
-			ReachabilityResult result = strat->reachable(*net, m0, a0, query);
+			ReachabilityResult result = strat->reachable(*net, m0, a0, b0, query);
 			qreal finishTime = ((qreal)(clock() - startClock)) / (qreal)CLOCKS_PER_SEC;
 
 			//Release resources
@@ -181,6 +182,7 @@ int main(int argc, char *argv[])
 		PetriNet* net = builder.makePetriNet();
 		MarkVal* m0 = builder.makeInitialMarking();
 		VarVal* a0 = builder.makeInitialAssignment();
+		BoolVal* b0 = builder.makeInitialBoolAssignment();
 		QList<QueryModel::Query> queries = qBuilder.makeQueries();
 
 		if(listQueries){
@@ -224,7 +226,7 @@ int main(int argc, char *argv[])
 		ReachabilityResult result;
 
 		clock_t startClock = clock();
-		result = strat->reachable(*net, m0, a0, query);
+		result = strat->reachable(*net, m0, a0, b0, query);
 		qreal finishTime = ((qreal)(clock() - startClock)) / (qreal)CLOCKS_PER_SEC;
 
 		delete query;
