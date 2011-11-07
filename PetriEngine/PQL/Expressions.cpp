@@ -235,6 +235,12 @@ int IdentifierExpr::evaluate(const EvaluationContext& context) const{
 	return context.assignment()[_offsetInMarking];
 }
 
+bool LogicalCondition::evaluate(const EvaluationContext &context) const{
+	bool b1 = _cond1->evaluate(context);
+	bool b2 = _cond2->evaluate(context);
+	return apply(b1,b2);
+}
+
 bool CompareCondition::evaluate(const EvaluationContext& context) const{
 	int v1 = _expr1->evaluate(context);
 	int v2 = _expr2->evaluate(context);
@@ -427,6 +433,10 @@ void VariableCondition::isBad(MonotonicityContext &context){
 	if(context.inNot())
 		if(_offsetInMarking != -1)
 			context.setVariableBad(_offsetInMarking);
+}
+
+void BooleanLiteral::isBad(MonotonicityContext&){
+	return;
 }
 
 void NotCondition::isBad(MonotonicityContext &context){
