@@ -72,7 +72,7 @@ NotCondition::~NotCondition(){
 
 /******************** To String ********************/
 
-std::string BooleanLiteralExpr::toString() const{
+std::string BooleanLiteral::toString() const{
 	return _value ? "true" : "false";
 }
 
@@ -164,10 +164,6 @@ void MinusExpr::analyze(AnalysisContext& context){
 	_expr->analyze(context);
 }
 
-void BooleanLiteralExpr::analyze(AnalysisContext&){
-	return;
-}
-
 void IntegerLiteralExpr::analyze(AnalysisContext&){
 	return;
 }
@@ -208,6 +204,10 @@ void VariableCondition::analyze(AnalysisContext &context){
 	}
 }
 
+void BooleanLiteral::analyze(AnalysisContext&){
+	return;
+}
+
 void NotCondition::analyze(AnalysisContext &context){
 	_cond->analyze(context);
 }
@@ -222,10 +222,6 @@ int BinaryExpr::evaluate(const EvaluationContext& context) const{
 
 int MinusExpr::evaluate(const EvaluationContext& context) const{
 	return -(_expr->evaluate(context));
-}
-
-int BooleanLiteralExpr::evaluate(const EvaluationContext&) const{
-	return _value ? 1 : 0;
 }
 
 int IntegerLiteralExpr::evaluate(const EvaluationContext&) const{
@@ -246,7 +242,11 @@ bool CompareCondition::evaluate(const EvaluationContext& context) const{
 }
 
 bool VariableCondition::evaluate(const EvaluationContext &context) const{
-	return context.booleans()[_offsetInMarking];
+	return (*context.booleans())[_offsetInMarking];
+}
+
+bool BooleanLiteral::evaluate(const EvaluationContext&) const{
+	return _value;
 }
 
 bool NotCondition::evaluate(const EvaluationContext& context) const{
@@ -260,32 +260,33 @@ void AssignmentExpression::evaluate(const MarkVal* m,
 									BoolVal* result_b,
 									VarVal* ranges,
 									size_t nInts,
-									size_t nBools) const{
-	//Should work as long as we don't have Integers AND Boolean variables at the same time
+									size_t) const{
+	//Should work
+	if(b){
+		result_b = new std::vector<bool>(*b);
+	}
 
 	//If the same memory is used for a and result_a, do a little hack...
 	if(a == result_a){
 		VarVal acpy[nInts];
 		memcpy(acpy, a, sizeof(VarVal) * nInts);
 		memcpy(result_a, acpy, sizeof(VarVal) * nInts);
-		EvaluationContext context(m, acpy);
-		for(const_iter it = assignments.begin(); it != assignments.end(); it++)
+		EvaluationContext context(m, acpy, b);
+		for(const_iter it = assignments.begin(); it != assignments.end(); it++){
 			if(it->expr)
 				result_a[it->offset] = it->expr->evaluate(context) % (ranges[it->offset]+1);
+			else
+				(*result_b)[it->offset] = it->cond->evaluate(context);
+		}
 	}else{
 		memcpy(result_a, a, sizeof(VarVal) * nInts);
-		EvaluationContext context(m, a);
-		for(const_iter it = assignments.begin(); it != assignments.end(); it++)
+		EvaluationContext context(m, a, b);
+		for(const_iter it = assignments.begin(); it != assignments.end(); it++){
 			if(it->expr)
 				result_a[it->offset] = it->expr->evaluate(context) % (ranges[it->offset]+1);
-	}
-
-	if(b){
-		result_b = new vector<bool>(b);
-		EvaluationContext context(m, result_b);
-		for(const_iter it = assignments.begin(); it != assignments.end(); it++)
-			if(it->cond)
-				result_b[it->offset] = it->cond->evaluate(context);
+			else
+				(*result_b)[it->offset] = it->cond->evaluate(context);
+		}
 	}
 }
 
@@ -358,8 +359,31 @@ void LogicalCondition::scale(int factor)	{_cond1->scale(factor);_cond2->scale(fa
 void CompareCondition::scale(int factor)	{_expr1->scale(factor);_expr2->scale(factor);}
 void NotCondition::scale(int factor)		{_cond->scale(factor);}
 void VariableCondition::scale(int)			{}
+void BooleanLiteral::scale(int)				{}
 
 /******************** Monotonicity Contextual Analysis ********************/
+
+void LogicalCondition::monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus){
+
+}
+
+void CompareCondition::monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus){
+
+}
+
+void VariableCondition::monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus){
+
+}
+
+void BooleanLiteral::monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus){
+
+}
+
+void NotCondition::monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus){
+
+}
+
+/******** isBad ********/
 
 void IntegerLiteralExpr::isBad(MonotonicityContext&){
 	return;

@@ -216,12 +216,18 @@ public:
 		_inNot = false;
 		for(unsigned int i = 0; i < net->numberOfPlaces(); i++)
 			_goodPlaces.push_back(true);
-		for(unsigned int i = 0; i < net->numberOfBoolVariables(); i++)
+		for(unsigned int i = 0; i < net->numberOfBoolVariables(); i++){
 			_goodVariables.push_back(true);
+			_variableStatus.push_back(0);
+		}
 
 		int c = 0;
-		//TODO: Look through assignments; make sure no booleans are assigned to false
+		while(net->getAssignments()[c]){
+			net->getAssignments()[c]->monoStatus(*this, _variableStatus);
+			c++;
+		}
 
+		c = 0;
 		while(net->getConditions()[c]){
 			net->getConditions()[c]->isBad(*this);
 			c++;
@@ -240,13 +246,14 @@ public:
 	/** Getters for the places and variables */
 	std::vector<bool> goodPlaces(){ return _goodPlaces; }
 	std::vector<bool> goodBoolVariables(){ return _goodVariables; }
+	std::vector<int>* variableStatus(){ return &_variableStatus; }
 	bool inNot(){ return _inNot; }
 	void setNot(bool isNot){ _inNot = isNot; }
 private:
 	bool _inNot;
 	std::vector<bool> _goodPlaces;
 	std::vector<bool> _goodVariables;
-	std::vector<bool> _assignedTrue;
+	std::vector<int> _variableStatus;
 };
 
 } // PQL

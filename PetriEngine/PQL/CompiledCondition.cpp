@@ -171,5 +171,7 @@ void CompiledCondition::scale(int factor){ _cond->scale(factor); }
 
 void CompiledCondition::isBad(MonotonicityContext &context) { _cond->isBad(context); }
 
+void CompiledCondition::monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus) { _cond->monoStatus(context, variableStatus); }
+
 } // PQL
 } // PetriEngine
