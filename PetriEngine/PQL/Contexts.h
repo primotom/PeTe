@@ -239,7 +239,7 @@ public:
 
 	/** Getters for the places and variables */
 	std::vector<bool> goodPlaces(){ return _goodPlaces; }
-	std::vector<bool> goodVariables(){ return _goodVariables; }
+	std::vector<bool> goodBoolVariables(){ return _goodVariables; }
 	bool inNot(){ return _inNot; }
 	void setNot(bool isNot){ _inNot = isNot; }
 private:
