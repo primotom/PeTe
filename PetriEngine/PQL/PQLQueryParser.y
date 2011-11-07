@@ -10,6 +10,7 @@ void pqlqerror(const char *s) {printf("ERROR: %s\n", s);}
 %}
 
 %name-prefix "pqlq"
+%expect 2
 
 /* Possible data representation */
 %union {
@@ -25,15 +26,14 @@ void pqlqerror(const char *s) {printf("ERROR: %s\n", s);}
 %token <token> AND OR NOT
 %token <token> EQUAL NEQUAL LESS LESSEQUAL GREATER GREATEREQUAL
 %token <token> PLUS MINUS MULTIPLY
-%token <token> TRUE FALSE
 
 /* Terminal associativity */
 %left AND OR
 %right NOT
 
 /* Nonterminal type definition */
-%type <expr> factor
-%type <cond> logics logic
+%type <expr> expr term factor
+%type <cond> logic compare
 
 /* Operator precedence, more possibly coming */
 
@@ -41,28 +41,36 @@ void pqlqerror(const char *s) {printf("ERROR: %s\n", s);}
 
 %%
 
-query	: logics					{ query = $1; }
-		| error						{ yyerrok; }
+query	: logic				{ query = $1; }
+		| error				{ yyerrok; }
 		;
 
-logics	: logics AND logic			{ $$ = new AndCondition($1, $3); }
-		| logics OR logic			{ $$ = new OrCondition($1, $3); }
-		| LPAREN logics RPAREN		{ $$ = $2; }
-		| logic						{ $$ = $1; }
+logic	: logic AND logic	{ $$ = new AndCondition($1, $3); }
+		| logic OR logic 	{ $$ = new OrCondition($1, $3); }
+		| NOT logic			{ $$ = new NotCondition($2); }
+		| LPAREN logic RPAREN	{ $$ = $2; }
+		| compare			{ $$ = $1; }
 		;
 
-logic	: ID EQUAL factor			{ $$ = new EqualCondition($1, $3); }
-		| ID NEQUAL factor			{ $$ = new NotEqualCondition($1, $3); }
-		| ID LESS factor			{ $$ = new LessThanCondition($1, $3); }
-		| ID LESSEQUAL factor 		{ $$ = new LessThanOrEqualCondition($1, $3); }
-		| ID GREATER factor			{ $$ = new GreaterThanCondition($1, $3); }
-		| ID GREATEREQUAL factor	{ $$ = new GreaterThanOrEqualCondition($1, $3); }
-		| ID						{ $$ = new VariableCondition(*$1, @1.first_column); delete $1; }
-		| NOT ID					{ $$ = new NotCondition(new VariableCondition(*$2, @2.first_column)); delete $2; }
+compare	: expr EQUAL expr		{ $$ = new EqualCondition($1, $3); }
+		| expr NEQUAL expr		{ $$ = new NotEqualCondition($1, $3); }
+		| expr LESS expr			{ $$ = new LessThanCondition($1, $3); }
+		| expr LESSEQUAL expr 	{ $$ = new LessThanOrEqualCondition($1, $3); }
+		| expr GREATER expr		{ $$ = new GreaterThanCondition($1, $3); }
+		| expr GREATEREQUAL expr	{ $$ = new GreaterThanOrEqualCondition($1, $3); }
 		;
 
-factor	: INT						{ $$ = new LiteralExpr(atol($1->c_str())); delete $1; }
-		| ID						{ $$ = new IdentifierExpr(*$1, @1.first_column); delete $1; }
+expr	: expr PLUS term	{ $$ = new PlusExpr($1, $3); }
+		| expr MINUS term	{ $$ = new SubtractExpr($1, $3); }
+		| MINUS expr		{ $$ = new MinusExpr($2); }
+		| term				{ $$ = $1; }
 		;
 
+term	: term MULTIPLY factor	{ $$ = new MultiplyExpr($1, $3); }
+		| factor				{ $$ = $1; }
+		;
 
+factor	: LPAREN expr RPAREN	{ $$ = $2; }
+		| INT			{ $$ = new LiteralExpr(atol($1->c_str())); delete $1; }
+		| ID			{ $$ = new IdentifierExpr(*$1, @1.first_column); delete $1; }
+		;
