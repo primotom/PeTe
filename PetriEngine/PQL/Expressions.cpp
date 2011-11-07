@@ -385,6 +385,15 @@ void NotCondition::monoStatus(MonotonicityContext &context, std::vector<int> &va
 
 /******** isBad ********/
 
+void BinaryExpr::isBad(MonotonicityContext &context){
+	_expr1->isBad(context);
+	_expr2->isBad(context);
+}
+
+void MinusExpr::isBad(MonotonicityContext &context){
+	_expr->isBad(context);
+}
+
 void IntegerLiteralExpr::isBad(MonotonicityContext&){
 	return;
 }
