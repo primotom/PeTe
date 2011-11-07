@@ -26,9 +26,10 @@ void pqlaerror(const char *s) {printf("ERROR: %s\n", s);}
 %token <token> AND OR NOT
 %token <token> EQUAL NEQUAL LESS LESSEQUAL GREATER GREATEREQUAL
 %token <token> PLUS MINUS MULTIPLY
+%token <token> TRUE FALSE INTS BOOLS
 
 /* Nonterminal type definition */
-%type <expr> expr term factor
+%type <expr> expr compare term factor
 %type <assExpr> assignment
 
 /* Operator precedence, more possibly coming */
@@ -65,3 +66,4 @@ factor	: LPAREN expr RPAREN	{ $$ = $2; }
 		| INT			{ $$ = new LiteralExpr(atol($1->c_str())); delete $1; }
 		| ID			{ $$ = new IdentifierExpr(*$1, @1.first_column); delete $1; }
 		;
+
