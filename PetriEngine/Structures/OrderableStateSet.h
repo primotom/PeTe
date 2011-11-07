@@ -38,7 +38,27 @@ public:
 		}
     }
 
-	//Are some good boolean variable in s1 greater than the one in s2, where true > false
+	//Is some good boolean variable or marking in s1 greater than the one in s2, where true > false
+	bool greater(State* s1, State* s2){
+		for(size_t i = 0; i <  _net->numberOfPlaces(); i++){
+			if(_context->goodPlaces()[i]) {
+				if(s1->marking()[i] > s2->marking()[i]){
+					return true;
+				}
+			}
+		}
+
+		for(size_t i = 0; i <  _net->numberOfBoolVariables(); i++){
+			if(_context->goodBoolVariables()[i]) {
+				if(s1->boolValuation()[i] && !s2->boolValuation()[i]){
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	//Is some good boolean variable in s1 greater than the one in s2, where true > false
 	bool greaterBool(State* s1, State* s2){
 		for(size_t i = 0; i <  _net->numberOfBoolVariables(); i++){
 			if(_context->goodBoolVariables()[i]) {
