@@ -44,7 +44,7 @@ letter        [a-zA-Z_]
 %%
 
 namespace PetriEngine{ namespace PQL{
-Condition* ParseQuery(const std::string& queryString){
+Condition* ParseCondition(const std::string& queryString){
 	query = NULL;
 
 	//Load up input buffer in Flex
