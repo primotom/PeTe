@@ -37,7 +37,7 @@ class BoundedStateAllocator{
 public:
 	BoundedStateAllocator(const PetriNet& net){
 		_nPlaces = net.numberOfPlaces();
-		_nVars = net.numberOfVariables();
+		_nVars = net.numberOfIntVariables();
 		_allocated = memory + MEMORY_STEP;
 		do{
 			_allocated -= MEMORY_STEP;
@@ -67,7 +67,7 @@ public:
 		s->_parentTransition = 0;
 		s->_transitionMultiplicity = 0;
 		s->_marking = (MarkVal*)(d + sizeof(State));
-		s->_valuation = (VarVal*)(d + sizeof(State) + sizeof(MarkVal) * _nPlaces);
+		s->_intValuation = (VarVal*)(d + sizeof(State) + sizeof(MarkVal) * _nPlaces);
 		_offset += stateSize();
 		return s;
 	}

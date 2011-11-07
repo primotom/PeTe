@@ -40,13 +40,14 @@ namespace Reachability {
 /** Generate a random query */
 std::string RandomQueryGenerator::gen(const PetriNet& net,
 									  const MarkVal* m0,
-									  const VarVal* v0){
+									  const VarVal* v0,
+									  const BoolVal *ba){
 	srand(time(0));	// Chosen by fair dice roll
 
 	StateAllocator<> allocator(net);
 	State* s = allocator.createState();
 	memcpy(s->marking(), m0, sizeof(MarkVal)*net.numberOfPlaces());
-	memcpy(s->valuation(), v0, sizeof(VarVal)*net.numberOfVariables());
+	memcpy(s->intValuation(), v0, sizeof(VarVal)*net.numberOfIntVariables());
 
 	int countdown = rand() % 5000000;
 
@@ -79,8 +80,8 @@ std::string RandomQueryGenerator::gen(const PetriNet& net,
 	ss<<net.placeNames()[0]<<" == "<<s->marking()[0];
 	for(unsigned int p = 1; p < net.numberOfPlaces(); p++)
 		ss<<" and "<<net.placeNames()[p]<<" == "<<s->marking()[p];
-	for(unsigned int x = 0; x < net.numberOfVariables(); x++)
-		ss<<" and "<<net.variableNames()[x]<<" == "<<s->valuation()[x];
+	for(unsigned int x = 0; x < net.numberOfIntVariables(); x++)
+		ss<<" and "<<net.intVariableNames()[x]<<" == "<<s->intValuation()[x];
 	return ss.str();
 }
 

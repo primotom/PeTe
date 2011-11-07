@@ -38,6 +38,7 @@ namespace Reachability{
 ReachabilityResult UltimateSearch::reachable(const PetriNet &net,
 											 const MarkVal *m0,
 											 const VarVal *v0,
+											 const BoolVal *ba,
 											 PQL::Condition *query){
 	// Test if it initally satisfied
 	{
@@ -72,7 +73,7 @@ ReachabilityResult UltimateSearch::reachable(const PetriNet &net,
 	s0.setParent(NULL);
 	s0.setTransition(0);
 	s0.setMarking(const_cast<MarkVal*>(m0));
-	s0.setValuation(const_cast<VarVal*>(v0));
+	s0.setIntValuation(const_cast<VarVal*>(v0));
 
 	// Push s0
 	queue.push(1, &s0);
@@ -123,7 +124,8 @@ ReachabilityResult UltimateSearch::reachable(const PetriNet &net,
 				DistanceContext context(net,
 										flags,
 										ns->marking(),
-										ns->valuation(),
+										ns->intValuation(),
+										ns->boolValuation(),
 										NULL);
 				queue.push(query->distance(context), ns);
 

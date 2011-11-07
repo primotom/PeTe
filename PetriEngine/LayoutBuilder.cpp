@@ -280,7 +280,7 @@ void LayoutBuilder::produce(AbstractPetriNetBuilder *builder){
 	for(VarIter it = vars.begin(); it != vars.end(); it++)
 		builder->addVariable(it->name, it->initialValue, it->range);
 
-	for(BoolVarIter it = boolVars.begin(); it != BoolVars.end(); it++)
+	for(BoolVarIter it = boolVars.begin(); it != boolVars.end(); it++)
 		builder->addBoolVariable(it->name, it->initialValue);
 
 	for(PlaceIter it = places.begin(); it != places.end(); it++)

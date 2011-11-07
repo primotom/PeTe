@@ -36,6 +36,7 @@ namespace PetriEngine{ namespace Reachability {
 ReachabilityResult RandomDFS::reachable(const PetriNet &net,
 										const MarkVal *m0,
 										const VarVal *v0,
+										const BoolVal *ba,
 										PQL::Condition *query){
 	//Do we initially satisfy query?
 	if(query && query->evaluate(PQL::EvaluationContext(m0, v0)))
@@ -49,7 +50,7 @@ ReachabilityResult RandomDFS::reachable(const PetriNet &net,
 
 	State* s0 = allocator.createState();
 	memcpy(s0->marking(), m0, sizeof(MarkVal)*net.numberOfPlaces());
-	memcpy(s0->valuation(), v0, sizeof(VarVal)*net.numberOfVariables());
+	memcpy(s0->intValuation(), v0, sizeof(VarVal)*net.numberOfIntVariables());
 
 	stack.push_back(s0);
 	states.add(s0);
@@ -84,8 +85,8 @@ ReachabilityResult RandomDFS::reachable(const PetriNet &net,
 			printf("%s == %i ", net.placeNames()[0].c_str(), s->marking()[0]);
 			for(unsigned int p = 1; p < net.numberOfPlaces(); p++)
 				printf(" and %s == %i ", net.placeNames()[p].c_str(), s->marking()[p]);
-			for(unsigned int x = 0; x < net.numberOfVariables(); x++)
-				printf(" and %s == %i ", net.variableNames()[x].c_str(), s->valuation()[x]);
+			for(unsigned int x = 0; x < net.numberOfIntVariables(); x++)
+				printf(" and %s == %i ", net.intVariableNames()[x].c_str(), s->intValuation()[x]);
 			return ReachabilityResult();
 		}
 
@@ -129,8 +130,8 @@ ReachabilityResult RandomDFS::reachable(const PetriNet &net,
 		printf("%s == %i ", net.placeNames()[0].c_str(), s->marking()[0]);
 			for(unsigned int p = 1; p < net.numberOfPlaces(); p++)
 				printf(" and %s == %i ", net.placeNames()[p].c_str(), s->marking()[p]);
-			for(unsigned int x = 0; x < net.numberOfVariables(); x++)
-				printf(" and %s == %i ", net.variableNames()[x].c_str(), s->valuation()[x]);
+			for(unsigned int x = 0; x < net.numberOfIntVariables(); x++)
+				printf(" and %s == %i ", net.intVariableNames()[x].c_str(), s->intValuation()[x]);
 	}
 
 

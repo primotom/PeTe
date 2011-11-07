@@ -33,6 +33,7 @@ namespace PetriEngine{ namespace Reachability {
 ReachabilityResult BreadthFirstReachabilitySearch::reachable(const PetriNet &net,
 															 const MarkVal *m0,
 															 const VarVal *v0,
+															 const BoolVal *ba,
 															 PQL::Condition *query){
 	//Do we initially satisfy query?
 	if(query->evaluate(PQL::EvaluationContext(m0, v0)))
@@ -46,7 +47,7 @@ ReachabilityResult BreadthFirstReachabilitySearch::reachable(const PetriNet &net
 
 	State* s0 = allocator.createState();
 	memcpy(s0->marking(), m0, sizeof(MarkVal)*net.numberOfPlaces());
-	memcpy(s0->valuation(), v0, sizeof(VarVal)*net.numberOfVariables());
+	memcpy(s0->intValuation(), v0, sizeof(VarVal)*net.numberOfIntVariables());
 
 	queue.push_back(s0);
 
