@@ -89,7 +89,7 @@ bool PetriNet::fire(unsigned int t,
 
 
 	if(_assignments[t])
-		_assignments[t]->evaluate(m, a, result_int, _ranges, _nIntVariables);
+		_assignments[t]->evaluate(m, a, NULL, result_int, NULL, _ranges, _nIntVariables, 0);
 	else
 		memcpy(result_int, a, sizeof(VarVal) * _nIntVariables);
 	return true;
@@ -120,7 +120,7 @@ bool PetriNet::fire(unsigned int t,
 
 
 	if(_assignments[t])
-		_assignments[t]->evaluate(m, a,b, result_int, result_bool, _ranges, _nIntVariables, _nBoolVariables);
+		_assignments[t]->evaluate(m, a, b, result_int, result_bool, _ranges, _nIntVariables, _nBoolVariables);
 	else{
 		memcpy(result_int, a, sizeof(VarVal) * _nIntVariables);
 		memcpy(result_bool, b, sizeof(BoolVal) * _nBoolVariables);

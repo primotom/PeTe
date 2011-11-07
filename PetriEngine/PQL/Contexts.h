@@ -45,7 +45,7 @@ public:
 		int offset;
 		/** True, if the resolution was successful */
 		bool success;
-		/** True if the identifer was resolved to a place */
+		/** True if the identifier was resolved to a place */
 		bool isPlace;
 	};
 
@@ -212,18 +212,15 @@ private:
   */
 class MonotonicityContext{
 public:
-
 	MonotonicityContext(PetriNet* net) {
 		_inNot = false;
 		for(unsigned int i = 0; i < net->numberOfPlaces(); i++)
 			_goodPlaces.push_back(true);
-		for(unsigned int i = 0; i < net->numberOfIntVariables(); i++)
-			_goodVariables.push_back(true);
 		for(unsigned int i = 0; i < net->numberOfBoolVariables(); i++)
-			_goodBoolVariables.push_back(true);
+			_goodVariables.push_back(true);
 
 		int c = 0;
-
+		//TODO: Look through assignments; make sure no booleans are assigned to false
 
 		while(net->getConditions()[c]){
 			net->getConditions()[c]->isBad(*this);
@@ -238,22 +235,17 @@ public:
 	void setVariableBad(int offset){
 		_goodVariables[offset] = false;
 	}
-	void setBooleanBad(int offset){
-		_goodBoolVariables[offset] = false;
-	}
 
 
 	/** Getters for the places and variables */
 	std::vector<bool> goodPlaces(){ return _goodPlaces; }
 	std::vector<bool> goodVariables(){ return _goodVariables; }
-	std::vector<bool> goodBoolVariables(){ return _goodBoolVariables; }
 	bool inNot(){ return _inNot; }
 	void setNot(bool isNot){ _inNot = isNot; }
 private:
 	bool _inNot;
 	std::vector<bool> _goodPlaces;
 	std::vector<bool> _goodVariables;
-	std::vector<bool> _goodBoolVariables;
 	std::vector<bool> _assignedTrue;
 };
 
