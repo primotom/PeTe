@@ -45,12 +45,12 @@ letter        [a-zA-Z_]
 "="							{return TOKEN(EQUAL);}
 ":="						{return TOKEN(ASSIGN);}
 ";"							{return TOKEN(SEMI);}
-.							{printf("Unknown token %s!\n", pqlqtext); yyterminate();}
+.							{printf("Unknown token %s!\n", pqlcatext); yyterminate();}
 
 %%
 
 namespace PetriEngine{ namespace PQL{
-Condition* ParseAssignment(const std::string& queryString){
+AssignmentExpression* ParseAssignment(const std::string& queryString){
 	assignment = NULL;
 
 	//Load up input buffer in Flex

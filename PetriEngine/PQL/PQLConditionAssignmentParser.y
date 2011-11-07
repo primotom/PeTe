@@ -58,8 +58,8 @@ logic	: logic AND logic		{ $$ = new AndCondition($1, $3); }
 		| logic OR logic		{ $$ = new OrCondition($1, $3); }
 		| LPAREN logic RPAREN	{ $$ = $2; }
 		| ID					{ $$ = new VariableCondition(*$1, @1.first_column); delete $1; }
-		| NOT ID				{ $$ = new NotCondition(new VariableCondition(*$1, @1.first_column)); 
-								  delete $1; }
+		| NOT ID				{ $$ = new NotCondition(new VariableCondition(*$2, @1.first_column));
+								  delete $2; }
 		| TRUE					{ $$ = new BooleanLiteral(true); }
 		| FALSE					{ $$ = new BooleanLiteral(false); }
 		| compare				{ $$ = $1; }
@@ -73,6 +73,6 @@ compare	: expr EQUAL expr			{ $$ = new EqualCondition($1, $3); }
 		| expr GREATEREQUAL expr	{ $$ = new GreaterThanOrEqualCondition($1, $3); }
 		;
 
-expr	: INT			{ $$ = new LiteralExpr(atol($1->c_str())); delete $1; }
+expr	: INT			{ $$ = new IntegerLiteralExpr(atol($1->c_str())); delete $1; }
 		| ID			{ $$ = new IdentifierExpr(*$1, @1.first_column); delete $1; }
 		;

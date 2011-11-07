@@ -697,6 +697,10 @@ double VariableCondition::distance(DistanceContext &context) const{
 	return retVal ? 0 : 1;
 }
 
+double BooleanLiteral::distance(DistanceContext &context) const{
+	return 0;
+}
+
 double NotCondition::distance(DistanceContext& context) const{
 	context.negate();
 	double retval = _cond->distance(context);

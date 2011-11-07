@@ -360,6 +360,7 @@ public:
 	void analyze(AnalysisContext &context);
 	bool evaluate(const EvaluationContext &context) const;
 	std::string toString() const;
+	double distance(DistanceContext &context) const;
 	bool value() const { return _value; }
 	void scale(int factor);
 	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus);

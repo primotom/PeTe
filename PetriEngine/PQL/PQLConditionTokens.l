@@ -39,7 +39,7 @@ letter        [a-zA-Z_]
 "("							{return TOKEN(LPAREN);}
 ")"							{return TOKEN(RPAREN);}
 "="							{return TOKEN(EQUAL);}
-.							{printf("Unknown token %s!\n", pqlqtext); yyterminate();}
+.							{printf("Unknown token %s!\n", pqlctext); yyterminate();}
 
 %%
 
