@@ -48,7 +48,8 @@ QueryDialog::QueryDialog(const QueryModel::Query& query, QWidget *parent)
 void QueryDialog::accept(){
 	//Test for parsing errors
 	QString query = ui->queryEdit->toPlainText();
-	PetriEngine::PQL::Condition* cond = PetriEngine::PQL::ParseQuery(query.toStdString());
+	//PetriEngine::PQL::Condition* cond = PetriEngine::PQL::ParseQuery(query.toStdString());
+	PetriEngine::PQL::Condition* cond = PetriEngine::PQL::ParseCondition(query.toStdString());
 	//TODO: Do context analysis here and display errors we get from this
 	//		Errors should be annotated in the tree and reported during analysis
 	if(cond){

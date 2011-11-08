@@ -206,7 +206,8 @@ int main(int argc, char *argv[])
 			return 1;
 		}
 
-		PQL::Condition* query = PQL::ParseQuery(queryString.toStdString());
+		//PQL::Condition* query = PQL::ParseQuery(queryString.toStdString());
+		PQL::Condition* query = PQL::ParseCondition((queryString.toStdString()));
 
 		//Load and analyze query
 		if(!query) {

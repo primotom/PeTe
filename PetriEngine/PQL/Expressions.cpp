@@ -369,24 +369,53 @@ void BooleanLiteral::scale(int)				{}
 
 /******************** Monotonicity Contextual Analysis ********************/
 
-void LogicalCondition::monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus){
-
+void LogicalCondition::monoStatus(MonotonicityContext &context,
+								  std::vector<int> &variableStatus,
+								  int varIndex){
+	_cond1->monoStatus(context, variableStatus, varIndex);
+	_cond2->monoStatus(context, variableStatus, varIndex);
 }
 
-void CompareCondition::monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus){
-
+void CompareCondition::monoStatus(MonotonicityContext &context,
+								  std::vector<int> &variableStatus,
+								  int varIndex){
+	variableStatus[varIndex] = 3;
+	context.setVariableBad(varIndex);
 }
 
-void VariableCondition::monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus){
-
+void VariableCondition::monoStatus(MonotonicityContext &context,
+								   std::vector<int> &variableStatus,
+								   int varIndex){
+	variableStatus[varIndex] = 3;
+	context.setVariableBad(varIndex);
 }
 
-void BooleanLiteral::monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus){
+void BooleanLiteral::monoStatus(MonotonicityContext &context,
+								std::vector<int> &variableStatus,
+								int varIndex){
+	bool var = !context.inNot() && _value;
 
+	if(var && variableStatus[varIndex] < 2)
+		variableStatus[varIndex] = 1;
+	else if(var && variableStatus[varIndex] > 1){
+		variableStatus[varIndex] = 3;
+		context.setVariableBad(varIndex);
+	} else if(!var &&
+			  (variableStatus[varIndex] == 0  ||
+			  variableStatus[varIndex] == 2))
+		variableStatus[varIndex] = 2;
+	else {
+		variableStatus[varIndex] = 3;
+		context.setVariableBad(varIndex);
+	}
 }
 
-void NotCondition::monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus){
-
+void NotCondition::monoStatus(MonotonicityContext &context,
+							  std::vector<int> &variableStatus,
+							  int varIndex){
+	context.setNot(true);
+	_cond->monoStatus(context, variableStatus, varIndex);
+	context.setNot(false);
 }
 
 /******** isBad ********/
@@ -423,15 +452,12 @@ void CompareCondition::isBad(MonotonicityContext &context){
 	   this->op() == "<"){
 		_expr1->isBad(context);
 		_expr2->isBad(context);
-	} else if(context.inNot()){
-		_expr1->isBad(context);
-		_expr2->isBad(context);
 	}
 }
 
 void VariableCondition::isBad(MonotonicityContext &context){
-	if(context.inNot())
-		if(_offsetInMarking != -1)
+	if(_offsetInMarking != -1)
+		if(context.inNot() && (*context.variableStatus())[_offsetInMarking] != 2)
 			context.setVariableBad(_offsetInMarking);
 }
 
@@ -716,7 +742,7 @@ double VariableCondition::distance(DistanceContext &context) const{
 	return retVal ? 0 : 1;
 }
 
-double BooleanLiteral::distance(DistanceContext &context) const{
+double BooleanLiteral::distance(DistanceContext&) const{
 	return 0;
 }
 

@@ -75,27 +75,32 @@ TEST(Test1){
 	ReachabilityResult result;
 
 	//Query1
-	PQL::Condition* expr = PQL::ParseQuery(query1);
+	//PQL::Condition* expr = PQL::ParseQuery(query1);
+	PQL::Condition* expr = PQL::ParseCondition(query1);
 	expr->analyze(aContext);
 	result = dfs.reachable(*(net), marking, valuation, booleans, expr);
 	CHECK(result.result() == result.Satisfied);
 	//Query2
-	expr = PQL::ParseQuery(query2);
+	//expr = PQL::ParseQuery(query2);
+	expr = PQL::ParseCondition(query2);
 	expr->analyze(aContext);
 	result = dfs.reachable(*(net), marking, valuation, booleans, expr);
 	CHECK(result.result() == result.Satisfied);
 	//Query3
-	expr = PQL::ParseQuery(query3);
+	//expr = PQL::ParseQuery(query3);
+	expr = PQL::ParseCondition(query3);
 	expr->analyze(aContext);
 	result = dfs.reachable(*(net), marking, valuation, booleans, expr);
 	CHECK(result.result() == result.Satisfied);
 	//NQuery1
-	expr = PQL::ParseQuery(nQuery1);
+	//expr = PQL::ParseQuery(nQuery1);
+	expr = PQL::ParseCondition(nQuery1);
 	expr->analyze(aContext);
 	result = dfs.reachable(*(net), marking, valuation, booleans, expr);
 	CHECK(result.result() == result.NotSatisfied);
 	//NQuery2
-	expr = PQL::ParseQuery(nQuery2);
+	//expr = PQL::ParseQuery(nQuery2);
+	expr = PQL::ParseCondition(nQuery2);
 	expr->analyze(aContext);
 	result = dfs.reachable(*(net), marking, valuation, booleans, expr);
 	CHECK(result.result() == result.NotSatisfied);

@@ -172,7 +172,7 @@ public:
 	std::string toString() const;
 	void scale(int factor);
 	std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
-	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus);
+	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus, int varIndex);
 	void isBad(MonotonicityContext &context);
 private:
 	virtual bool apply(bool b1, bool b2) const = 0;
@@ -225,7 +225,7 @@ public:
 	std::string toString() const;
 	void scale(int factor);
 	std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
-	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus);
+	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus, int varIndex);
 	void isBad(MonotonicityContext &context);
 private:
 	virtual bool apply(int v1, int v2) const = 0;
@@ -345,7 +345,7 @@ public:
 	std::string toString() const;
 	double distance(DistanceContext &context) const;
 	void scale(int factor);
-	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus);
+	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus, int varIndex);
 	void isBad(MonotonicityContext &context);
 private:
 	std::string _name;
@@ -363,7 +363,7 @@ public:
 	double distance(DistanceContext &context) const;
 	bool value() const { return _value; }
 	void scale(int factor);
-	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus);
+	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus, int varIndex);
 	void isBad(MonotonicityContext &context);
 private:
 	bool _value;
@@ -384,7 +384,7 @@ public:
 	std::string toString() const;
 	std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
 	void scale(int factor);
-	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus);
+	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus, int varIndex);
 	void isBad(MonotonicityContext &context);
 private:
 	Condition* _cond;

@@ -35,7 +35,7 @@ namespace Reachability{
 ReachabilityResult BestFirstReachabilitySearch::reachable(const PetriNet &net,
 															const MarkVal *m0,
 															const VarVal *v0,
-															const BoolVal *ba,
+															const BoolVal*,
 															PQL::Condition *query){
 	StateAllocator<> allocator(net);
 

@@ -7,7 +7,7 @@
 #define TOKEN(t) (pqlcalval.token = t)
 
 extern "C" int pqlcawrap(){return 1;}
-extern PetriEngine::PQL::AssignmentExpression* assignment;
+extern PetriEngine::PQL::AssignmentExpression* conditionAssignment;
 extern int pqlcaparse();
 %}
 %option prefix="pqlca"
@@ -50,8 +50,8 @@ letter        [a-zA-Z_]
 %%
 
 namespace PetriEngine{ namespace PQL{
-AssignmentExpression* ParseAssignment(const std::string& queryString){
-	assignment = NULL;
+AssignmentExpression* ParseConditionAssignment(const std::string& queryString){
+	conditionAssignment = NULL;
 
 	//Load up input buffer in Flex
 	YY_BUFFER_STATE buf = pqlca_scan_string(queryString.c_str());
@@ -62,6 +62,6 @@ AssignmentExpression* ParseAssignment(const std::string& queryString){
 	//Delete the buffer
 	pqlca_delete_buffer(buf);
 
-	return assignment;
+	return conditionAssignment;
 }
 }}
