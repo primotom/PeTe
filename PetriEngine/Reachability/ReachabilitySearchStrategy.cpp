@@ -200,10 +200,10 @@ std::vector<std::string> ReachabilitySearchStrategy::listStrategies(){
 ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std::string& strategy){
 	if(strategy == NAME_DFS)
 		return new DepthFirstReachabilitySearch();
-	//if(strategy == NAME_OrderedState) //TODO comment in when merge
-//		return new DepthFirstReachabilitySearch();
-//	if(strategy == NAME_FullOrderedState)
-//		return new DepthFirstReachabilitySearch();
+	if(strategy == NAME_OrderedState) //TODO comment in when merge
+		return new DepthFirstReachabilitySearch();
+	if(strategy == NAME_FullOrderedState)
+		return new DepthFirstReachabilitySearch();
 
 //	if(strategy == NAME_RandomDFS)
 //		return new RandomDFS();
