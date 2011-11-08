@@ -71,7 +71,7 @@ void ProtocolParser::parseVariable(){
 	while(xml.readNextStartElement()){
 		if(xml.name() == "message"){
 			QString name = xml.readElementText(QXmlStreamReader::SkipChildElements);
-			builder->addVariable(name.toStdString(), 0, 1);
+			builder->addBoolVariable(name.toStdString(), false);
 		}else
 			xml.skipCurrentElement();
 	}
@@ -146,10 +146,10 @@ void ProtocolParser::parsePre(QString& pre, QString roleName, QString transName)
 			QString source = xml.readElementText(QXmlStreamReader::SkipChildElements);
 			arcs.append(ArcEntry(roleName+ "_" + source, transName, 1));
 		}else if(xml.name() == "received_message"){
-			QString message = xml.readElementText(QXmlStreamReader::SkipChildElements);//TODO Check syntax
-			//if (pre != "")
-			//	pre += " && ";
-			//pre += message + "== true";
+			QString message = xml.readElementText(QXmlStreamReader::SkipChildElements);
+			if (pre != "")
+				pre += " && ";
+			pre += message;
 		}else
 			xml.skipCurrentElement();
 	}
@@ -162,7 +162,7 @@ void ProtocolParser::parsePost(QString& post, QString roleName, QString transNam
 			arcs.append(ArcEntry(transName,roleName+ "_" + destination , 1));
 		}else if(xml.name() == "send_message"){
 			QString message = xml.readElementText(QXmlStreamReader::SkipChildElements); //TODO Check syntax
-			//post += message + ":= true; ";
+			post += message + ":= true; ";
 		}else
 			xml.skipCurrentElement();
 	}
