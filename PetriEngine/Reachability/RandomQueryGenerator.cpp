@@ -41,7 +41,7 @@ namespace Reachability {
 std::string RandomQueryGenerator::gen(const PetriNet& net,
 									  const MarkVal* m0,
 									  const VarVal* v0,
-									  const BoolVal*){
+									  const BoolVal *ba){
 	srand(time(0));	// Chosen by fair dice roll
 
 	StateAllocator<> allocator(net);

@@ -25,6 +25,7 @@
 #include "PQL/CompiledCondition.h"
 
 #include <assert.h>
+#include <stdio.h>
 
 using namespace std;
 
@@ -117,7 +118,7 @@ PetriNet* PetriNetBuilder::makePetriNet(){
 				if(context.errors().size() > 0){
 					delete net->_conditions[i];
 					net->_conditions[i] = NULL;
-					//TODO: Print to stderr
+					fprintf(stderr, "Contextual errors were found during Petri net construction. Net is incomplete.\n");
 				}
 			}
 		}
@@ -131,7 +132,7 @@ PetriNet* PetriNetBuilder::makePetriNet(){
 				if(context.errors().size() > 0){
 					delete net->_assignments[i];
 					net->_assignments[i] = NULL;
-					//TODO: Print to stderr
+					fprintf(stderr, "Contextual errors were found during Petri net construction. Net is incomplete.\n");
 				}
 			}
 		}
@@ -197,9 +198,9 @@ VarVal* PetriNetBuilder::makeInitialAssignment(){
 }
 
 BoolVal* PetriNetBuilder::makeInitialBoolAssignment(){
-	BoolVal* b = new BoolVal[boolVariables.size()];
+	BoolVal* b = new std::vector<bool>();
 	for(size_t i = 0; i < boolVariables.size(); i++)
-		(*b)[i] = initialBoolVariableValues[i];
+		b->push_back(initialBoolVariableValues[i]);
 	return b;
 }
 

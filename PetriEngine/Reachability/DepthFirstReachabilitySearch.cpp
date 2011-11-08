@@ -41,6 +41,7 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 								  "A state satisfying the query was found");
 	//Create StateSet
 	MonotonicityContext test(&net, query);
+	test.analyze();
 	OrderableStateSet states(net,&test);
 	std::list<Step> stack;
 
