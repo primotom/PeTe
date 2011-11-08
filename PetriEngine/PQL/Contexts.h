@@ -216,27 +216,33 @@ class MonotonicityContext{
 public:
 	MonotonicityContext(const PetriNet* net, Condition* query = NULL) {
 		_inNot = false;
-		for(unsigned int i = 0; i < net->numberOfPlaces(); i++)
-			_goodPlaces.push_back(true);
-		for(unsigned int i = 0; i < net->numberOfBoolVariables(); i++){
-			_goodVariables.push_back(true);
-			_variableStatus.push_back(0);
-		}
-		int c = 0;
-		while(net->getAssignments()[c]){
-			net->getAssignments()[c]->monoStatus(*this, _variableStatus);
-			c++;
-		}
+		_net = net;
+		_query = query;
+	}
 
-		if(query)
-			query->isBad(*this);
+	void analyze(){
+		for(unsigned int i = 0; i < _net->numberOfPlaces(); i++)
+				_goodPlaces.push_back(true);
+			for(unsigned int i = 0; i < _net->numberOfBoolVariables(); i++){
+				_goodVariables.push_back(true);
+				_variableStatus.push_back(0);
+			}
 
-		c = 0;
-		while(net->getConditions()[c]){
-			net->getConditions()[c]->isBad(*this);
-			c++;
-		}
+			unsigned int c;
+			for(c = 0; c < _net->numberOfTransitions(); c++)
+				if(_net->getAssignments()[c])
+					_net->getAssignments()[c]->monoStatus(*this, _variableStatus);
 
+			for(c = 0; c < _variableStatus.size(); c++)
+				if(_variableStatus[c] == 0)
+					_variableStatus[c] = 2;
+
+			if(_query)
+				_query->isBad(*this);
+
+			for(c = 0; c < _net->numberOfTransitions(); c++)
+				if(_net->getConditions()[c])
+					_net->getConditions()[c]->isBad(*this);
 	}
 
 	/** Set bad places and variables */
@@ -255,6 +261,8 @@ public:
 	bool inNot(){ return _inNot; }
 	void setNot(bool isNot){ _inNot = isNot; }
 private:
+	const PetriNet* _net;
+	Condition* _query;
 	bool _inNot;
 	std::vector<bool> _goodPlaces;
 	std::vector<bool> _goodVariables;

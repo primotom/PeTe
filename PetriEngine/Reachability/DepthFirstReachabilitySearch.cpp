@@ -41,7 +41,6 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 								  "A state satisfying the query was found");
 	//Create StateSet
 	StateSet states(net);
-
 	std::list<Step> stack;
 
 	StateAllocator<1000000> allocator(net);

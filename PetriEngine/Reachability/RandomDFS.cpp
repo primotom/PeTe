@@ -36,7 +36,7 @@ namespace PetriEngine{ namespace Reachability {
 ReachabilityResult RandomDFS::reachable(const PetriNet &net,
 										const MarkVal *m0,
 										const VarVal *v0,
-										const BoolVal*,
+										const BoolVal *ba,
 										PQL::Condition *query){
 	//Do we initially satisfy query?
 	if(query && query->evaluate(PQL::EvaluationContext(m0, v0, ba)))

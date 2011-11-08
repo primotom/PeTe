@@ -18,8 +18,6 @@ SUITE(MonotonicityContextTest){
 		builder.addOutputArc("T1", "P2", 1);
 
 		PetriNet* net = builder.makePetriNet();
-		//MarkVal* marking = builder.makeInitialMarking();
-		//VarVal* valuation = builder.makeInitialAssignment();
 
 		int index1 = 0;
 		int index2 = 0;
@@ -32,6 +30,7 @@ SUITE(MonotonicityContextTest){
 		}
 
 		MonotonicityContext context(net);
+		context.analyze();
 		CHECK(context.goodPlaces()[index1] == false);
 		CHECK(context.goodPlaces()[index2] == true);
 	}
@@ -47,8 +46,6 @@ SUITE(MonotonicityContextTest){
 		builder.addOutputArc("T1", "P2", 1);
 
 		PetriNet* net = builder.makePetriNet();
-		//MarkVal* marking = builder.makeInitialMarking();
-		//VarVal* valuation = builder.makeInitialAssignment();
 
 		int indexBad = 0;
 		int indexGood = 0;
@@ -61,7 +58,7 @@ SUITE(MonotonicityContextTest){
 		}
 
 		MonotonicityContext context(net);
-		std::cout<<"The real HEST"<<std::endl;
+		context.analyze();
 		CHECK(context.goodBoolVariables()[indexBad] == false);
 		CHECK(context.goodBoolVariables()[indexGood] == true);
 
