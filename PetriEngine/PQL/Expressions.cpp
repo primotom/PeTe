@@ -269,7 +269,7 @@ void AssignmentExpression::evaluate(const MarkVal* m,
 									size_t) const{
 	//Should work
 	if(b){
-		result_b = new std::vector<bool>(*b);
+		result_b = new std::vector<bool>(b->size());
 	}
 
 	//If the same memory is used for a and result_a, do a little hack...

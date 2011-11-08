@@ -104,11 +104,13 @@ void ProtocolParser::parseStates(QString roleName){
 
 void ProtocolParser::parseState(QString roleName){
 	qreal x = 0, y = 0;
-	QString name = xml.readElementText(QXmlStreamReader::SkipChildElements);
-	name = roleName + "_" + name;
+
 	int initialMarking = 0;
 	if(xml.attributes().value("type").toString() == "initial")
-	initialMarking = 1;
+		initialMarking = 1;
+
+	QString name = xml.readElementText(QXmlStreamReader::SkipChildElements);
+	name = roleName + "_" + name;
 
 	//Create place
 	builder->addPlace(name.toStdString(), initialMarking, x, y);
