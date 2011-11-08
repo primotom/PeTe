@@ -48,6 +48,7 @@ std::string RandomQueryGenerator::gen(const PetriNet& net,
 	State* s = allocator.createState();
 	memcpy(s->marking(), m0, sizeof(MarkVal)*net.numberOfPlaces());
 	memcpy(s->intValuation(), v0, sizeof(VarVal)*net.numberOfIntVariables());
+	memcpy(s->boolValuation(), ba, sizeof(BoolVal)*net.numberOfBoolVariables());
 
 	int countdown = rand() % 5000000;
 
@@ -82,6 +83,8 @@ std::string RandomQueryGenerator::gen(const PetriNet& net,
 		ss<<" and "<<net.placeNames()[p]<<" == "<<s->marking()[p];
 	for(unsigned int x = 0; x < net.numberOfIntVariables(); x++)
 		ss<<" and "<<net.intVariableNames()[x]<<" == "<<s->intValuation()[x];
+	for(unsigned int x = 0; x < net.numberOfBoolVariables(); x++)
+		ss<<" and "<< ((*s->boolValuation())[x] ? "" : "!") << net.boolVariableNames()[x];
 	return ss.str();
 }
 
