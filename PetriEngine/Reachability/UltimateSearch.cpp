@@ -38,11 +38,11 @@ namespace Reachability{
 ReachabilityResult UltimateSearch::reachable(const PetriNet &net,
 											 const MarkVal *m0,
 											 const VarVal *v0,
-											 const BoolVal*,
+											 const BoolVal *b0,
 											 PQL::Condition *query){
 	// Test if it initally satisfied
 	{
-		if(query->evaluate(EvaluationContext(m0, v0)))
+		if(query->evaluate(EvaluationContext(m0, v0, b0)))
 			return ReachabilityResult(ReachabilityResult::Satisfied, "Satisifed initially", 0, 0, 0);
 	}
 
@@ -74,6 +74,7 @@ ReachabilityResult UltimateSearch::reachable(const PetriNet &net,
 	s0.setTransition(0);
 	s0.setMarking(const_cast<MarkVal*>(m0));
 	s0.setIntValuation(const_cast<VarVal*>(v0));
+	s0.setBoolValuation(const_cast<BoolVal*>(b0));
 
 	// Push s0
 	queue.push(1, &s0);

@@ -42,6 +42,7 @@ ReachabilityResult BestFirstReachabilitySearch::reachable(const PetriNet &net,
 	State* s0 = allocator.createState();
 	memcpy(s0->marking(), m0, sizeof(MarkVal) * net.numberOfPlaces());
 	memcpy(s0->intValuation(), v0, sizeof(VarVal) * net.numberOfIntVariables());
+	memcpy(s0->boolValuation(), ba, sizeof(BoolVal) * net.numberOfBoolVariables());
 
 	if(query->evaluate(*s0))
 		return ReachabilityResult(ReachabilityResult::Satisfied, "Satisfied initially", 0, 0);
@@ -81,7 +82,7 @@ ReachabilityResult BestFirstReachabilitySearch::reachable(const PetriNet &net,
 
 		// Attempt to fire each transition
 		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
-			if(net.fire(t, s->marking(), s->intValuation(), ns->marking(), ns->intValuation())){
+			if(net.fire(t, s->marking(), s->intValuation(), s->boolValuation(), ns->marking(), ns->intValuation(), ns->boolValuation())){
 				//If it's new
 				if(states.add(ns)){
 					exploredStates++;
@@ -99,7 +100,6 @@ ReachabilityResult BestFirstReachabilitySearch::reachable(const PetriNet &net,
 					// Insert in queue, with given priority
 					double bestp = priority(ns, query, net);
 					queue.push(bestp, ns);
-
 
 					if(fireUntillNoBetter && net.fire(t, ns, ns2)){
 						if(query->evaluate(*ns2)){
