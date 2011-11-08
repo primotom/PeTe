@@ -27,6 +27,7 @@
 #include <string>
 #include <vector>
 #include <list>
+#include <iostream>
 
 namespace PetriEngine {
 namespace PQL{
@@ -207,12 +208,13 @@ private:
 	llvm::LLVMContext& _context;
 };
 
+
 /** Performs contextual analysis on places and variables to
   * determine if they are good or bad
   */
 class MonotonicityContext{
 public:
-	MonotonicityContext(const PetriNet* net) {
+	MonotonicityContext(const PetriNet* net, Condition* query = NULL) {
 		_inNot = false;
 		for(unsigned int i = 0; i < net->numberOfPlaces(); i++)
 			_goodPlaces.push_back(true);
@@ -220,18 +222,21 @@ public:
 			_goodVariables.push_back(true);
 			_variableStatus.push_back(0);
 		}
-
 		int c = 0;
 		while(net->getAssignments()[c]){
 			net->getAssignments()[c]->monoStatus(*this, _variableStatus);
 			c++;
 		}
 
+		if(query)
+			query->isBad(*this);
+
 		c = 0;
 		while(net->getConditions()[c]){
 			net->getConditions()[c]->isBad(*this);
 			c++;
 		}
+
 	}
 
 	/** Set bad places and variables */
@@ -253,6 +258,12 @@ private:
 	bool _inNot;
 	std::vector<bool> _goodPlaces;
 	std::vector<bool> _goodVariables;
+	/** Holds information about the variables in assignments
+	  *		0 - Undefined
+	  *		1 - Only assigned true
+	  *		2 - Only assigned false
+	  *		3 - Bad
+	  */
 	std::vector<int> _variableStatus;
 };
 

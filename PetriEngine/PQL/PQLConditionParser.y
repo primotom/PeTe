@@ -4,7 +4,7 @@
 #include "Expressions.h"
 using namespace PetriEngine::PQL;
 
-Condition* query;
+Condition* conditionQuery;
 extern int pqlclex();
 void pqlcerror(const char *s) {printf("ERROR: %s\n", s);}
 %}
@@ -37,7 +37,7 @@ void pqlcerror(const char *s) {printf("ERROR: %s\n", s);}
 
 %%
 
-query	: logic					{ query = $1; }
+query	: logic					{ conditionQuery = $1; }
 		| error					{ yyerrok; }
 		;
 

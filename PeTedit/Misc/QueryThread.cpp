@@ -51,7 +51,8 @@ QueryThread::QueryThread(QString query,
 	_b0 = builder.makeInitialBoolAssignment();
 
 	//Parse query
-	_query = ParseQuery(query.toStdString());
+	//_query = ParseQuery(query.toStdString());
+	_query = ParseCondition(query.toStdString());
 	if(_query){
 		AnalysisContext context(*_net);
 		if(jit){

@@ -39,7 +39,7 @@ namespace Reachability{
 ReachabilityResult StateSearch::reachable(const PetriNet &net,
 										  const MarkVal *m0,
 										  const VarVal *v0,
-										  const BoolVal *ba,
+										  const BoolVal*,
 										  PQL::Condition *query){
 	// Test if it initally satisfied
 	{

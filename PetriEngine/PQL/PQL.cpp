@@ -43,7 +43,7 @@ void Condition::findConstraints(ConstraintAnalysisContext &context) const{
 	context.canAnalyze = false;
 }
 
-llvm::Value* Condition::codegen(CodeGenerationContext &context) const{
+llvm::Value* Condition::codegen(CodeGenerationContext&) const{
 	return NULL;
 }
 
@@ -74,7 +74,7 @@ void AssignmentExpression::analyze(AnalysisContext& context){
 void AssignmentExpression::monoStatus(MonotonicityContext& context, std::vector<int>& status){
 	for(const_iter it = assignments.begin(); it != assignments.end(); it++){
 		if(it->cond)
-			it->cond->monoStatus(context, status);
+			it->cond->monoStatus(context, status, it->offset);
 	}
 }
 

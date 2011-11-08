@@ -4,7 +4,7 @@
 #include "Expressions.h"
 using namespace PetriEngine::PQL;
 
-AssignmentExpression* assignment;
+AssignmentExpression* conditionAssignment;
 extern int pqlcalex();
 void pqlcaerror(const char *s) {printf("ERROR: %s\n", s);}
 %}
@@ -40,7 +40,7 @@ void pqlcaerror(const char *s) {printf("ERROR: %s\n", s);}
 
 %%
 
-root	: assignment			{ assignment = $1; }
+root	: assignment			{ conditionAssignment = $1; }
 		| error					{ yyerrok; }
 		;
 

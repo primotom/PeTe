@@ -96,7 +96,8 @@ PetriNet* PetriNetBuilder::makePetriNet(){
 	//Parse conditions and assignments
 	for(i = 0; i < transitions.size(); i++){
 		if(conditions[i] != ""){
-			net->_conditions[i] = PQL::ParseQuery(conditions[i]);
+			//net->_conditions[i] = PQL::ParseQuery(conditions[i]);
+			net->_conditions[i] = PQL::ParseCondition(conditions[i]);
 			if(net->_conditions[i]){
 				PQL::AnalysisContext context(*net);
 				if(_jit){
@@ -121,7 +122,8 @@ PetriNet* PetriNetBuilder::makePetriNet(){
 			}
 		}
 		if(assignments[i] != ""){
-			net->_assignments[i] = PQL::ParseAssignment(assignments[i]);
+			//net->_assignments[i] = PQL::ParseAssignment(assignments[i]);
+			net->_assignments[i] = PQL::ParseConditionAssignment(assignments[i]);
 			if(net->_assignments[i]){
 				PQL::AnalysisContext context(*net);
 				net->_assignments[i]->analyze(context);

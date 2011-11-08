@@ -138,7 +138,7 @@ public:
 	/** Scale all nested literals by factor */
 	virtual void scale(int factor) = 0;
 	/** Explores assignment conditions to identify possible bad and good places */
-	virtual void monoStatus(MonotonicityContext& context, std::vector<int>& variableStatus) = 0;
+	virtual void monoStatus(MonotonicityContext& context, std::vector<int>& variableStatus, int varIndex) = 0;
 	/** Explores conditions to find bad places and variables */
 	virtual void isBad(MonotonicityContext& context) = 0;
 };
