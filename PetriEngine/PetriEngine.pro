@@ -17,7 +17,6 @@ SOURCES		   += \
 	Reachability/ReachabilitySearchStrategy.cpp \
     PQL/Expressions.cpp \
     PQL/PQL.cpp \
-    Reachability/HashUnderApproximation.cpp \
     PQL/CompiledCondition.cpp \
     Structures/DistanceMatrix.cpp \
     LayoutBuilder.cpp \
@@ -29,9 +28,6 @@ SOURCES		   += \
     Reachability/BestFirstReachabilitySearch.cpp \
     Structures/StateConstraints.cpp \
     Reachability/LinearOverApprox.cpp \
-    Reachability/BestFSCooling.cpp \
-    Structures/SmartState.cpp \
-    Reachability/MagicSearch.cpp \
     Reachability/UltimateSearch.cpp \
     Reachability/RandomQueryGenerator.cpp \
     Reachability/StateSearch.cpp
@@ -54,7 +50,6 @@ HEADERS		   += \
     PQL/Expressions.h \
     Structures/BlockStack.h \
     Structures/PriorityQueue.h \
-    Reachability/HashUnderApproximation.h \
     PQL/CompiledCondition.h \
     PQL/Contexts.h \
     Structures/DistanceMatrix.h \
@@ -71,17 +66,13 @@ HEADERS		   += \
     Structures/StateConstraints.h \
     Reachability/LinearOverApprox.h \
     Structures/EnhancedPriorityQueue.h \
-    Reachability/BestFSCooling.h \
-    Structures/SmartState.h \
-    Structures/SmartStateAllocator.h \
-    Structures/SmartStateSet.h \
-    Reachability/MagicSearch.h \
     Structures/Scale.h \
     Structures/BitField.h \
     Structures/BoundedStateAllocator.h \
     Reachability/UltimateSearch.h \
     Reachability/RandomQueryGenerator.h \
-    Reachability/StateSearch.h
+    Reachability/StateSearch.h \
+    Structures/OrderableStateSet.h
 	#Reachability/CoverabilityTreeNode.h
 
 TARGET			= ../PetriEngine
@@ -92,8 +83,12 @@ include(bison.pri)
 FLEXSOURCES		+= \
 	PQL/PQLQueryTokens.l \
 	PQL/PQLAssignmentTokens.l \
-	PQL/SUMoQueryTokens.l
+	PQL/SUMoQueryTokens.l \
+	PQL/PQLConditionTokens.l \
+	PQL/PQLConditionAssignmentTokens.l
 BISONSOURCES	+= \
 	PQL/PQLQueryParser.y \
 	PQL/PQLAssignmentParser.y \
-	PQL/SUMoQueryParser.y
+	PQL/SUMoQueryParser.y \
+	PQL/PQLConditionParser.y \
+	PQL/PQLConditionAssignmentParser.y

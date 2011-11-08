@@ -72,7 +72,11 @@ NotCondition::~NotCondition(){
 
 /******************** To String ********************/
 
-std::string LiteralExpr::toString() const{
+std::string BooleanLiteral::toString() const{
+	return _value ? "true" : "false";
+}
+
+std::string IntegerLiteralExpr::toString() const{
 	std::stringstream stream;
 	stream <<_value;
 	return stream.str();
@@ -96,6 +100,10 @@ std::string LogicalCondition::toString() const{
 
 std::string CompareCondition::toString() const{
 	return "(" + _expr1->toString() + " " + op() + " " + _expr2->toString() + ")";
+}
+
+std::string VariableCondition::toString() const{
+	return _name;
 }
 
 std::string NotCondition::toString() const {
@@ -156,7 +164,7 @@ void MinusExpr::analyze(AnalysisContext& context){
 	_expr->analyze(context);
 }
 
-void LiteralExpr::analyze(AnalysisContext&){
+void IntegerLiteralExpr::analyze(AnalysisContext&){
 	return;
 }
 
@@ -184,6 +192,22 @@ void CompareCondition::analyze(AnalysisContext& context){
 	_expr2->analyze(context);
 }
 
+void VariableCondition::analyze(AnalysisContext &context){
+	AnalysisContext::ResolutionResult result = context.resolve(_name);
+	if(result.success)
+		_offsetInMarking = result.offset;
+	else {
+		ExprError error("Unable to resolve boolean variable \"" + _name + "\"",
+		_srcOffset,
+		_name.length());
+		context.reportError(error);
+	}
+}
+
+void BooleanLiteral::analyze(AnalysisContext&){
+	return;
+}
+
 void NotCondition::analyze(AnalysisContext &context){
 	_cond->analyze(context);
 }
@@ -200,7 +224,7 @@ int MinusExpr::evaluate(const EvaluationContext& context) const{
 	return -(_expr->evaluate(context));
 }
 
-int LiteralExpr::evaluate(const EvaluationContext&) const{
+int IntegerLiteralExpr::evaluate(const EvaluationContext&) const{
 	return _value;
 }
 
@@ -211,7 +235,7 @@ int IdentifierExpr::evaluate(const EvaluationContext& context) const{
 	return context.assignment()[_offsetInMarking];
 }
 
-bool LogicalCondition::evaluate(const EvaluationContext& context) const{
+bool LogicalCondition::evaluate(const EvaluationContext &context) const{
 	bool b1 = _cond1->evaluate(context);
 	bool b2 = _cond2->evaluate(context);
 	return apply(b1,b2);
@@ -223,6 +247,13 @@ bool CompareCondition::evaluate(const EvaluationContext& context) const{
 	return apply(v1,v2);
 }
 
+bool VariableCondition::evaluate(const EvaluationContext &context) const{
+	return (*context.booleans())[_offsetInMarking];
+}
+
+bool BooleanLiteral::evaluate(const EvaluationContext&) const{
+	return _value;
+}
 
 bool NotCondition::evaluate(const EvaluationContext& context) const{
 	return !(_cond->evaluate(context));
@@ -230,22 +261,38 @@ bool NotCondition::evaluate(const EvaluationContext& context) const{
 
 void AssignmentExpression::evaluate(const MarkVal* m,
 									const VarVal *a,
+									const BoolVal *b,
 									VarVal* result_a,
+									BoolVal* result_b,
 									VarVal* ranges,
-									size_t nvars) const{
+									size_t nInts,
+									size_t) const{
+	//Should work
+	if(b){
+		result_b = new std::vector<bool>(*b);
+	}
+
 	//If the same memory is used for a and result_a, do a little hack...
 	if(a == result_a){
-		VarVal acpy[nvars];
-		memcpy(acpy, a, sizeof(VarVal) * nvars);
-		memcpy(result_a, acpy, sizeof(VarVal) * nvars);
-		EvaluationContext context(m, acpy);
-		for(const_iter it = assignments.begin(); it != assignments.end(); it++)
-			result_a[it->offset] = it->expr->evaluate(context) % (ranges[it->offset]+1);
+		VarVal acpy[nInts];
+		memcpy(acpy, a, sizeof(VarVal) * nInts);
+		memcpy(result_a, acpy, sizeof(VarVal) * nInts);
+		EvaluationContext context(m, acpy, b);
+		for(const_iter it = assignments.begin(); it != assignments.end(); it++){
+			if(it->expr)
+				result_a[it->offset] = it->expr->evaluate(context) % (ranges[it->offset]+1);
+			else
+				(*result_b)[it->offset] = it->cond->evaluate(context);
+		}
 	}else{
-		memcpy(result_a, a, sizeof(VarVal) * nvars);
-		EvaluationContext context(m, a);
-		for(const_iter it = assignments.begin(); it != assignments.end(); it++)
-			result_a[it->offset] = it->expr->evaluate(context) % (ranges[it->offset]+1);
+		memcpy(result_a, a, sizeof(VarVal) * nInts);
+		EvaluationContext context(m, a, b);
+		for(const_iter it = assignments.begin(); it != assignments.end(); it++){
+			if(it->expr)
+				result_a[it->offset] = it->expr->evaluate(context) % (ranges[it->offset]+1);
+			else
+				(*result_b)[it->offset] = it->cond->evaluate(context);
+		}
 	}
 }
 
@@ -293,7 +340,7 @@ std::string GreaterThanOrEqualCondition::op() const	{ return ">=";	}
 
 bool BinaryExpr::pfree() const		{ return _expr1->pfree() && _expr2->pfree(); }
 bool MinusExpr::pfree() const		{ return _expr->pfree(); }
-bool LiteralExpr::pfree() const		{ return true; }
+bool IntegerLiteralExpr::pfree() const		{ return true; }
 bool IdentifierExpr::pfree() const	{ return !this->isPlace; }
 
 /******************** Expr::type() implementation ********************/
@@ -302,14 +349,14 @@ Expr::Types PlusExpr::type() const			{ return Expr::PlusExpr;		}
 Expr::Types SubtractExpr::type() const		{ return Expr::SubtractExpr;	}
 Expr::Types MultiplyExpr::type() const		{ return Expr::MinusExpr;		}
 Expr::Types MinusExpr::type() const			{ return Expr::MinusExpr;		}
-Expr::Types LiteralExpr::type() const		{ return Expr::LiteralExpr;		}
+Expr::Types IntegerLiteralExpr::type() const		{ return Expr::LiteralExpr;		}
 Expr::Types IdentifierExpr::type() const	{ return Expr::IdentifierExpr;	}
 
 /******************** Scale Expression ********************/
 
 void BinaryExpr::scale(int factor)	{_expr1->scale(factor); _expr2->scale(factor);}
 void MinusExpr::scale(int factor)	{_expr->scale(factor);}
-void LiteralExpr::scale(int factor)	{_value = _value * factor;}
+void IntegerLiteralExpr::scale(int factor)	{_value = _value * factor;}
 void IdentifierExpr::scale(int)		{}
 
 /******************** Scale Conditions ********************/
@@ -317,6 +364,113 @@ void IdentifierExpr::scale(int)		{}
 void LogicalCondition::scale(int factor)	{_cond1->scale(factor);_cond2->scale(factor);}
 void CompareCondition::scale(int factor)	{_expr1->scale(factor);_expr2->scale(factor);}
 void NotCondition::scale(int factor)		{_cond->scale(factor);}
+void VariableCondition::scale(int)			{}
+void BooleanLiteral::scale(int)				{}
+
+/******************** Monotonicity Contextual Analysis ********************/
+
+void LogicalCondition::monoStatus(MonotonicityContext &context,
+								  std::vector<int> &variableStatus,
+								  int varIndex){
+	_cond1->monoStatus(context, variableStatus, varIndex);
+	_cond2->monoStatus(context, variableStatus, varIndex);
+}
+
+void CompareCondition::monoStatus(MonotonicityContext &context,
+								  std::vector<int> &variableStatus,
+								  int varIndex){
+	variableStatus[varIndex] = 3;
+	context.setVariableBad(varIndex);
+}
+
+void VariableCondition::monoStatus(MonotonicityContext &context,
+								   std::vector<int> &variableStatus,
+								   int varIndex){
+	variableStatus[varIndex] = 3;
+	context.setVariableBad(varIndex);
+}
+
+void BooleanLiteral::monoStatus(MonotonicityContext &context,
+								std::vector<int> &variableStatus,
+								int varIndex){
+	bool var = !context.inNot() && _value;
+
+	if(var && variableStatus[varIndex] < 2)
+		variableStatus[varIndex] = 1;
+	else if(var && variableStatus[varIndex] > 1){
+		variableStatus[varIndex] = 3;
+		context.setVariableBad(varIndex);
+	} else if(!var &&
+			  (variableStatus[varIndex] == 0  ||
+			  variableStatus[varIndex] == 2))
+		variableStatus[varIndex] = 2;
+	else {
+		variableStatus[varIndex] = 3;
+		context.setVariableBad(varIndex);
+	}
+}
+
+void NotCondition::monoStatus(MonotonicityContext &context,
+							  std::vector<int> &variableStatus,
+							  int varIndex){
+	context.setNot(true);
+	_cond->monoStatus(context, variableStatus, varIndex);
+	context.setNot(false);
+}
+
+/******** isBad ********/
+
+void BinaryExpr::isBad(MonotonicityContext &context){
+	_expr1->isBad(context);
+	_expr2->isBad(context);
+}
+
+void MinusExpr::isBad(MonotonicityContext &context){
+	_expr->isBad(context);
+}
+
+void IntegerLiteralExpr::isBad(MonotonicityContext&){
+	return;
+}
+
+void IdentifierExpr::isBad(MonotonicityContext &context){
+	if(isPlace){
+		if(_offsetInMarking != -1)
+			context.setPlaceBad(_offsetInMarking);
+	}
+}
+
+void LogicalCondition::isBad(MonotonicityContext &context){
+	_cond1->isBad(context);
+	_cond2->isBad(context);
+}
+
+void CompareCondition::isBad(MonotonicityContext &context){
+	if(this->op() == "==" ||
+	   this->op() == "!=" ||
+	   this->op() == "<=" ||
+	   this->op() == "<"){
+		_expr1->isBad(context);
+		_expr2->isBad(context);
+	}
+}
+
+void VariableCondition::isBad(MonotonicityContext &context){
+	if(_offsetInMarking != -1)
+		if(context.inNot() && (*context.variableStatus())[_offsetInMarking] != 2)
+			context.setVariableBad(_offsetInMarking);
+}
+
+void BooleanLiteral::isBad(MonotonicityContext&){
+	return;
+}
+
+void NotCondition::isBad(MonotonicityContext &context){
+	context.setNot(true);
+	_cond->isBad(context);
+	context.setNot(false);
+}
+
 
 /******************** Constraint Analysis ********************/
 
@@ -352,11 +506,11 @@ void CompareCondition::findConstraints(ConstraintAnalysisContext& context) const
 	context.retval.clear();
 	if(_expr1->type() == Expr::LiteralExpr && _expr2->type() == Expr::IdentifierExpr){
 		IdentifierExpr* id = (IdentifierExpr*)_expr2;
-		LiteralExpr* literal = (LiteralExpr*)_expr1;
+		IntegerLiteralExpr* literal = (IntegerLiteralExpr*)_expr1;
 		addConstraints(context, literal->value(), id);
 	}else if(_expr1->type() == Expr::IdentifierExpr && _expr2->type() == Expr::LiteralExpr){
 		IdentifierExpr* id = (IdentifierExpr*)_expr1;
-		LiteralExpr* literal = (LiteralExpr*)_expr2;
+		IntegerLiteralExpr* literal = (IntegerLiteralExpr*)_expr2;
 		addConstraints(context, id, literal->value());
 	}else
 		context.canAnalyze = false;
@@ -581,6 +735,17 @@ void GreaterThanOrEqualCondition::addConstraints(ConstraintAnalysisContext& cont
 #define MAX(v1, v2)		(v1 > v2 ? v1 : v2)
 #define MIN(v1, v2)		(v1 < v2 ? v1 : v2)
 
+double VariableCondition::distance(DistanceContext &context) const{
+	bool retVal = this->evaluate(context);
+	if(context.negated())
+		return retVal ? 1 : 0;
+	return retVal ? 0 : 1;
+}
+
+double BooleanLiteral::distance(DistanceContext&) const{
+	return 0;
+}
+
 double NotCondition::distance(DistanceContext& context) const{
 	context.negate();
 	double retval = _cond->distance(context);
@@ -800,7 +965,7 @@ Value* MinusExpr::codegen(CodeGenerationContext &context) const{
 								  context.label());
 }
 
-Value* LiteralExpr::codegen(CodeGenerationContext &context) const{
+Value* IntegerLiteralExpr::codegen(CodeGenerationContext &context) const{
 	return ConstantInt::get(IntegerType::get(context.context(), 32),
 							this->_value,
 							true);

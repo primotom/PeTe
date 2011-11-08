@@ -34,6 +34,7 @@ public:
 	ReachabilityResult reachable(const PetriNet &net,
 								 const MarkVal* m0,
 								 const VarVal* v0,
+								 const BoolVal* b0,
 								 PQL::Condition* query);
 private:
 	bool depthFirst;

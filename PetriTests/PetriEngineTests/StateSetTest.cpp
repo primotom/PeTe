@@ -28,7 +28,7 @@ using namespace PetriEngine::Structures;
 
 SUITE(StateSetTest){
 	TEST(StateSetDuplicationDetection){
-		StateAllocator<10> allocator(5,5);
+		StateAllocator<10> allocator(5,5,5);
 		//The states
 		State* s1 = allocator.createState();
 		State* s2 = allocator.createState();
@@ -40,7 +40,7 @@ SUITE(StateSetTest){
 			s2->valuation()[i] = i;
 		}*/
 		//Add states to stateSet!
-		StateSet set(5, 5);
+		StateSet set(5, 5, 5);
 		CHECK(set.add(s1));
 		CHECK(!set.add(s2));
 

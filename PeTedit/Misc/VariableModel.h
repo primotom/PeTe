@@ -32,12 +32,16 @@ public:
 	struct Variable{
 		Variable(){
 			name = "";
-			value=0;
+			intValue=0;
+			boolValue = false;
 			range=0;
+			type = "";
 		}
 		QString name;
-		int value;
+		int intValue;
+		bool boolValue;
 		int range;
+		QString type;
 	};
 
 	explicit VariableModel(PetriNetScene* net);

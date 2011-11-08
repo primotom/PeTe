@@ -35,12 +35,14 @@ namespace Reachability{
 ReachabilityResult BestFirstReachabilitySearch::reachable(const PetriNet &net,
 															const MarkVal *m0,
 															const VarVal *v0,
+															const BoolVal*,
 															PQL::Condition *query){
 	StateAllocator<> allocator(net);
 
 	State* s0 = allocator.createState();
 	memcpy(s0->marking(), m0, sizeof(MarkVal) * net.numberOfPlaces());
-	memcpy(s0->valuation(), v0, sizeof(VarVal) * net.numberOfVariables());
+	memcpy(s0->intValuation(), v0, sizeof(VarVal) * net.numberOfIntVariables());
+	memcpy(s0->boolValuation(), ba, sizeof(BoolVal) * net.numberOfBoolVariables());
 
 	if(query->evaluate(*s0))
 		return ReachabilityResult(ReachabilityResult::Satisfied, "Satisfied initially", 0, 0);
@@ -80,7 +82,7 @@ ReachabilityResult BestFirstReachabilitySearch::reachable(const PetriNet &net,
 
 		// Attempt to fire each transition
 		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
-			if(net.fire(t, s->marking(), s->valuation(), ns->marking(), ns->valuation())){
+			if(net.fire(t, s->marking(), s->intValuation(), s->boolValuation(), ns->marking(), ns->intValuation(), ns->boolValuation())){
 				//If it's new
 				if(states.add(ns)){
 					exploredStates++;
@@ -98,7 +100,6 @@ ReachabilityResult BestFirstReachabilitySearch::reachable(const PetriNet &net,
 					// Insert in queue, with given priority
 					double bestp = priority(ns, query, net);
 					queue.push(bestp, ns);
-
 
 					if(fireUntillNoBetter && net.fire(t, ns, ns2)){
 						if(query->evaluate(*ns2)){
@@ -147,7 +148,8 @@ double BestFirstReachabilitySearch::priority(const Structures::State *state,
 	PQL::DistanceContext context(net,
 								 _distanceStrategy,
 								 state->marking(),
-								 state->valuation(),
+								 state->intValuation(),
+								 state->boolValuation(),
 								 _dm);
 	double d = query->distance(context);
 	if(_lookahead > 0){
@@ -174,7 +176,8 @@ double BestFirstReachabilitySearch::lookaheadDistance(const PetriNet& net,
 			PQL::DistanceContext context(net,
 										 _distanceStrategy,
 										 ns->marking(),
-										 ns->valuation(),
+										 ns->intValuation(),
+										 ns->boolValuation(),
 										 _dm);
 			double d = query->distance(context);
 			if(d < min || min == -1)

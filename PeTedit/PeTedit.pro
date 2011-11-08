@@ -99,6 +99,7 @@ HEADERS		+= \
     Commands/DeleteItemsCommand.h \
     DataFormats/TAPAALExportBuilder.h \
     DataFormats/protocolparser.h
+    Widgets/VariableValueBox.h
 
 
 FORMS		+= MainWindow.ui \

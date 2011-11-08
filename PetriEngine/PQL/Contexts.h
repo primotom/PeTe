@@ -27,6 +27,7 @@
 #include <string>
 #include <vector>
 #include <list>
+#include <iostream>
 
 namespace PetriEngine {
 namespace PQL{
@@ -36,6 +37,7 @@ class AnalysisContext{
 private:
 	std::vector<std::string> _places;
 	std::vector<std::string> _variables;
+	std::vector<std::string> _boolVariables;
 	std::vector<ExprError> _errors;
 public:
 	/** A resolution result */
@@ -44,14 +46,19 @@ public:
 		int offset;
 		/** True, if the resolution was successful */
 		bool success;
-		/** True if the identifer was resolved to a place */
+		/** True if the identifier was resolved to a place */
 		bool isPlace;
 	};
+
 	AnalysisContext(const PetriNet& net)
-	 : _places(net.placeNames()), _variables(net.variableNames()) {}
+	 : _places(net.placeNames()), _variables(net.intVariableNames()), _boolVariables(net.boolVariableNames()) {}
 	AnalysisContext(const std::vector<std::string>& places,
 					const std::vector<std::string>& variables)
-	 : _places(places), _variables(variables) {}
+	 : _places(places), _variables(variables), _boolVariables() {}
+	AnalysisContext(const std::vector<std::string> &places,
+					const std::vector<std::string> &variables,
+					const std::vector<std::string> &boolVariables)
+	 : _places(places), _variables(variables), _boolVariables(boolVariables) {}
 
 	/** Resolve an identifier */
 	ResolutionResult resolve(std::string identifier) const{
@@ -68,6 +75,14 @@ public:
 		}
 		for(size_t i = 0; i < _variables.size(); i++){
 			if(_variables[i] == identifier){
+				result.offset = i;
+				result.isPlace = false;
+				result.success = true;
+				return result;
+			}
+		}
+		for(size_t i = 0; i < _boolVariables.size(); i++){
+			if(_boolVariables[i] == identifier){
 				result.offset = i;
 				result.isPlace = false;
 				result.success = true;
@@ -91,15 +106,18 @@ public:
 class EvaluationContext{
 public:
 	/** Create evaluation context, this doesn't take ownershop */
-	EvaluationContext(const MarkVal* marking, const VarVal* assignment){
+	EvaluationContext(const MarkVal* marking, const VarVal* assignment, const BoolVal* booleans = NULL){
 		_marking = marking;
 		_assignment = assignment;
+		_booleans = booleans;
 	}
 	const MarkVal* marking() const {return _marking;}
 	const VarVal* assignment() const {return _assignment;}
+	const BoolVal* booleans() const { return _booleans; }
 private:
 	const MarkVal* _marking;
 	const VarVal* _assignment;
+	const BoolVal* _booleans;
 };
 
 /** Context for distance computation */
@@ -120,8 +138,9 @@ public:
 					DistanceStrategy strategy,
 					const MarkVal* marking,
 					const VarVal* valuation,
+					const BoolVal* booleans,
 					Structures::DistanceMatrix* dm)
-		: EvaluationContext(marking, valuation), _net(net) {
+		: EvaluationContext(marking, valuation, booleans), _net(net) {
 		_strategy = strategy;
 		_negated = false;
 		_dm = dm;
@@ -187,6 +206,65 @@ private:
 	llvm::Value* _valuation;
 	llvm::BasicBlock* _label;
 	llvm::LLVMContext& _context;
+};
+
+
+/** Performs contextual analysis on places and variables to
+  * determine if they are good or bad
+  */
+class MonotonicityContext{
+public:
+	MonotonicityContext(const PetriNet* net, Condition* query = NULL) {
+		_inNot = false;
+		for(unsigned int i = 0; i < net->numberOfPlaces(); i++)
+			_goodPlaces.push_back(true);
+		for(unsigned int i = 0; i < net->numberOfBoolVariables(); i++){
+			_goodVariables.push_back(true);
+			_variableStatus.push_back(0);
+		}
+		int c = 0;
+		while(net->getAssignments()[c]){
+			net->getAssignments()[c]->monoStatus(*this, _variableStatus);
+			c++;
+		}
+
+		if(query)
+			query->isBad(*this);
+
+		c = 0;
+		while(net->getConditions()[c]){
+			net->getConditions()[c]->isBad(*this);
+			c++;
+		}
+
+	}
+
+	/** Set bad places and variables */
+	void setPlaceBad(int offset){
+		_goodPlaces[offset] = false;
+	}
+	void setVariableBad(int offset){
+		_goodVariables[offset] = false;
+	}
+
+
+	/** Getters for the places and variables */
+	std::vector<bool> goodPlaces(){ return _goodPlaces; }
+	std::vector<bool> goodBoolVariables(){ return _goodVariables; }
+	std::vector<int>* variableStatus(){ return &_variableStatus; }
+	bool inNot(){ return _inNot; }
+	void setNot(bool isNot){ _inNot = isNot; }
+private:
+	bool _inNot;
+	std::vector<bool> _goodPlaces;
+	std::vector<bool> _goodVariables;
+	/** Holds information about the variables in assignments
+	  *		0 - Undefined
+	  *		1 - Only assigned true
+	  *		2 - Only assigned false
+	  *		3 - Bad
+	  */
+	std::vector<int> _variableStatus;
 };
 
 } // PQL

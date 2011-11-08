@@ -38,6 +38,10 @@ void PetriNetSceneBuilder::addVariable(const std::string& name, int initialValue
 	scene->variables()->addVariable(name.c_str(), initialValue, range);
 }
 
+void PetriNetSceneBuilder::addBoolVariable(const std::string& name, bool initialValue){
+	scene->variables()->addVariable(name.c_str(), (int)initialValue, 1); //TODO bad cast to int
+}
+
 void PetriNetSceneBuilder::addTransition(const std::string &name,
 										 const std::string &conditions,
 										 const std::string &assignments,

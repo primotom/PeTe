@@ -640,7 +640,7 @@ void PetriNetScene::produce(PetriEngine::AbstractPetriNetBuilder* builder){
 
 	for(int row = 0; row < this->_variables->rowCount(); row++){
 		const VariableModel::Variable& var = _variables->variable(row);
-		builder->addVariable(var.name.toStdString(), var.value, var.range);
+		builder->addVariable(var.name.toStdString(), var.intValue, var.range);
 	}
 
 	foreach(QGraphicsItem* item, this->items()) {

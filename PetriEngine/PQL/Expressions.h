@@ -47,6 +47,7 @@ public:
 	llvm::Value* codegen(CodeGenerationContext& context) const;
 	std::string toString() const;
 	void scale(int factor);
+	void isBad(MonotonicityContext &context);
 private:
 	virtual int apply(int v1, int v2) const = 0;
 	/** LLVM binary operator (llvm::Instruction::BinaryOps) */
@@ -103,14 +104,15 @@ public:
 	std::string toString() const;
 	Expr::Types type() const;
 	void scale(int factor);
+	void isBad(MonotonicityContext &context);
 private:
 	Expr* _expr;
 };
 
 /** Literal integer value expression */
-class LiteralExpr : public Expr {
+class IntegerLiteralExpr : public Expr {
 public:
-	LiteralExpr(int value) : _value(value){}
+	IntegerLiteralExpr(int value) : _value(value){}
 	void analyze(AnalysisContext& context);
 	bool pfree() const;
 	int evaluate(const EvaluationContext& context) const;
@@ -119,6 +121,7 @@ public:
 	Expr::Types type() const;
 	int value() const { return _value; };
 	void scale(int factor);
+	void isBad(MonotonicityContext &context);
 private:
 	int _value;
 };
@@ -139,6 +142,7 @@ public:
 	/** Offset in marking or valuation */
 	int offset() const{ return _offsetInMarking; }
 	void scale(int factor);
+	void isBad(MonotonicityContext &context);
 private:
 	/** Is this identifier a place? Or a variable.. */
 	bool isPlace;
@@ -152,7 +156,7 @@ private:
 
 /******************** CONDITIONS ********************/
 
-/* Logical conditon */
+/* Logical condition */
 class LogicalCondition : public Condition{
 public:
 	LogicalCondition(Condition* cond1, Condition* cond2){
@@ -168,6 +172,8 @@ public:
 	std::string toString() const;
 	void scale(int factor);
 	std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
+	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus, int varIndex);
+	void isBad(MonotonicityContext &context);
 private:
 	virtual bool apply(bool b1, bool b2) const = 0;
 	/** LLVM binary operator (llvm::Instruction::BinaryOps) */
@@ -219,6 +225,8 @@ public:
 	std::string toString() const;
 	void scale(int factor);
 	std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
+	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus, int varIndex);
+	void isBad(MonotonicityContext &context);
 private:
 	virtual bool apply(int v1, int v2) const = 0;
 	/** LLVM Comparison predicate (llvm::ICmpInst::Predicate) */
@@ -326,6 +334,41 @@ private:
 	std::string sopTAPAAL() const;
 };
 
+/* VariableCondition */
+class VariableCondition : public Condition{
+public:
+	VariableCondition(std::string name, int srcOffset) : _name(name) {
+		_srcOffset = srcOffset;
+	}
+	void analyze(AnalysisContext &context);
+	bool evaluate(const EvaluationContext &context) const;
+	std::string toString() const;
+	double distance(DistanceContext &context) const;
+	void scale(int factor);
+	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus, int varIndex);
+	void isBad(MonotonicityContext &context);
+private:
+	std::string _name;
+	int _srcOffset;
+	int _offsetInMarking;
+};
+
+/** Literal boolean value expression */
+class BooleanLiteral : public Condition {
+public:
+	BooleanLiteral(bool value) : _value(value) {}
+	void analyze(AnalysisContext &context);
+	bool evaluate(const EvaluationContext &context) const;
+	std::string toString() const;
+	double distance(DistanceContext &context) const;
+	bool value() const { return _value; }
+	void scale(int factor);
+	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus, int varIndex);
+	void isBad(MonotonicityContext &context);
+private:
+	bool _value;
+};
+
 /* Not condition */
 class NotCondition : public Condition{
 public:
@@ -341,6 +384,8 @@ public:
 	std::string toString() const;
 	std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
 	void scale(int factor);
+	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus, int varIndex);
+	void isBad(MonotonicityContext &context);
 private:
 	Condition* _cond;
 };

@@ -39,6 +39,7 @@ class PetriNetBuilder : public AbstractPetriNetBuilder
 public:
 	PetriNetBuilder(bool JIT = false);
 	void addVariable(const std::string& name, int initialValue, int range);
+	void addBoolVariable(const std::string& name, bool initialValue);
 	void addPlace(const std::string& name, int tokens, double x, double y);
 	void addTransition(const std::string& name,
 					   const std::string& condition,
@@ -55,13 +56,17 @@ public:
 	MarkVal* makeInitialMarking();
 	/** Make the resulting initial assignment, you take ownership */
 	VarVal* makeInitialAssignment();
+	/** Make the resulting initial assignment, you take ownership */
+	BoolVal* makeInitialBoolAssignment();
 private:
 	std::vector<std::string> places;
 	std::vector<std::string> transitions;
 	std::vector<std::string> conditions;
 	std::vector<std::string> assignments;
 	std::vector<std::string> variables;
+	std::vector<std::string> boolVariables;
 	std::vector<int> initialVariableValues;
+	std::vector<bool> initialBoolVariableValues;
 	std::vector<int> ranges;
 	std::vector<Arc> inputArcs;
 	std::vector<Arc> outputArcs;

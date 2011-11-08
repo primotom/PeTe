@@ -39,6 +39,7 @@ class DistanceContext;
 class ConstraintAnalysisContext;
 class CodeGenerationContext;
 class TAPAALConditionExportContext;
+class MonotonicityContext;
 
 /** Representation of a PQL error */
 class ExprError{
@@ -83,10 +84,14 @@ public:
 		MultiplyExpr,
 		/** Unary minus expression */
 		MinusExpr,
+		/** Literal boolean expression */
+		BooleanExpr,
 		/** Literal integer expression */
 		LiteralExpr,
 		/** Identifier expression */
-		IdentifierExpr
+		IdentifierExpr,
+		/** Undefined type */
+		Undefined
 	};
 public:
 	/** Virtual destructor, an expression should know it subexpressions */
@@ -94,17 +99,19 @@ public:
 	/** Perform context analysis */
 	virtual void analyze(AnalysisContext& context) = 0;
 	/** True, if the expression is p-free */
-	virtual bool pfree() const = 0;
+	virtual bool pfree() const;
 	/** Evaluate the expression given marking and assignment */
 	virtual int evaluate(const EvaluationContext& context) const = 0;
 	/** Generate LLVM intermediate code for this expr  */
-	virtual llvm::Value* codegen(CodeGenerationContext& context) const = 0;
+	virtual llvm::Value* codegen(CodeGenerationContext& context) const;
 	/** Convert expression to string */
 	virtual std::string toString() const = 0;
 	/** Expression type */
-	virtual Types type() const = 0;
+	virtual Types type() const;
 	/** Scale all nested literals by factor */
 	virtual void scale(int factor) = 0;
+	/** Explores expressions to find bad places and variables */
+	virtual void isBad(MonotonicityContext& context) = 0;
 };
 
 /** Base condition */
@@ -119,17 +126,21 @@ public:
 	/** Evaluate condition */
 	virtual bool evaluate(const EvaluationContext& context) const = 0;
 	/** Analyze constraints for over-approximation */
-	virtual void findConstraints(ConstraintAnalysisContext& context) const = 0;
+	virtual void findConstraints(ConstraintAnalysisContext& context) const;
 	/** Generate LLVM intermediate code for this condition  */
-	virtual llvm::Value* codegen(CodeGenerationContext& context) const = 0;
+	virtual llvm::Value* codegen(CodeGenerationContext& context) const;
 	/** Convert condition to string */
 	virtual std::string toString() const = 0;
 	/** Export condition to TAPAAL query (add EF manually!) */
-	virtual std::string toTAPAALQuery(TAPAALConditionExportContext& context) const = 0;
+	virtual std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
 	/** Get distance to query */
 	virtual double distance(DistanceContext& context) const = 0;
 	/** Scale all nested literals by factor */
 	virtual void scale(int factor) = 0;
+	/** Explores assignment conditions to identify possible bad and good places */
+	virtual void monoStatus(MonotonicityContext& context, std::vector<int>& variableStatus, int varIndex) = 0;
+	/** Explores conditions to find bad places and variables */
+	virtual void isBad(MonotonicityContext& context) = 0;
 };
 
 /** Assignment expression */
@@ -139,6 +150,7 @@ private:
 		std::string identifier;
 		int offset;
 		Expr* expr;
+		Condition* cond;
 	};
 	typedef std::list<VariableAssignment>::iterator iter;
 	typedef std::list<VariableAssignment>::const_iterator const_iter;
@@ -148,15 +160,30 @@ public:
 		va.offset = -1;
 		va.identifier = identifier;
 		va.expr = expr;
+		va.cond = NULL;
 		assignments.push_front(va);
 	}
+	void prepend(const std::string& identifier, Condition* cond){
+		VariableAssignment va;
+		va.offset = -1;
+		va.identifier = identifier;
+		va.expr = NULL;
+		va.cond = cond;
+		assignments.push_front(va);
+	}
+
 	void analyze(AnalysisContext& context);
 	/** Evaluate the assignment expression */
 	void evaluate(const MarkVal* m,
 				  const VarVal* a,
+				  const BoolVal* b,
 				  VarVal* result_a,
+				  BoolVal* result_b,
 				  VarVal* ranges,
-				  size_t nvars) const;
+				  size_t nInts,
+				  size_t nBools) const;
+	/** Perform status check on variables for MonotonicityContext */
+	void monoStatus(MonotonicityContext &context, std::vector<int> &status);
 	std::string toString(){
 		std::string t;
 		for(iter it = assignments.begin(); it != assignments.end(); it++){

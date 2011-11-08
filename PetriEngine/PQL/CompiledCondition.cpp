@@ -169,5 +169,9 @@ string CompiledCondition::toTAPAALQuery(TAPAALConditionExportContext& context) c
 
 void CompiledCondition::scale(int factor){ _cond->scale(factor); }
 
+void CompiledCondition::isBad(MonotonicityContext &context) { _cond->isBad(context); }
+
+void CompiledCondition::monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus, int varStatus) { _cond->monoStatus(context, variableStatus, varStatus); }
+
 } // PQL
 } // PetriEngine

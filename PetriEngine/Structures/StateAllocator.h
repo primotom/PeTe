@@ -37,15 +37,17 @@ class StateAllocator{
 		char* m;
 	} __attribute__((__packed__));
 public:
-	StateAllocator(int nPlaces, int nVars){
+	StateAllocator(int nPlaces, int nVars, int nBoolVars){
 		_nPlaces = nPlaces;
 		_nVars = nVars;
+		_nBoolVars = nBoolVars;
 		_b = NULL;
 		createNewBlock();
 	}
 	StateAllocator(const PetriNet& net){
 		_nPlaces = net.numberOfPlaces();
-		_nVars = net.numberOfVariables();
+		_nVars = net.numberOfIntVariables();
+		_nBoolVars = net.numberOfBoolVariables();
 		_b = NULL;
 		createNewBlock();
 	}
@@ -66,13 +68,14 @@ public:
 		s->_parentTransition = 0;
 		s->_transitionMultiplicity = 0;
 		s->_marking = (MarkVal*)(d + sizeof(State));
-		s->_valuation = (VarVal*)(d + sizeof(State) + sizeof(MarkVal) * _nPlaces);
+		s->_intValuation = (VarVal*)(d + sizeof(State) + sizeof(MarkVal) * _nPlaces);
+		s->_boolValuation = (BoolVal*)(d + sizeof(State) + (sizeof(MarkVal) * _nPlaces)+(sizeof(VarVal) * _nVars));
 		_offset++;
 		return s;
 	}
 	/** Get the size of a state, use for alloca */
 	static inline size_t stateSize(const PetriNet& net){
-		return sizeof(State) + sizeof(MarkVal) * net.numberOfPlaces() + sizeof(VarVal) * net.numberOfVariables();
+		return sizeof(State) + sizeof(MarkVal) * net.numberOfPlaces() + (sizeof(VarVal) * net.numberOfIntVariables())+ (sizeof(BoolVal) * net.numberOfBoolVariables());
 	}
 	/** Initialize state allocated using alloc, size of memory is expected to be stateSize(net) */
 	static inline void initializeState(State* memory, const PetriNet& net){
@@ -81,11 +84,12 @@ public:
 		memory->_parentTransition = 0;
 		memory->_transitionMultiplicity = 0;
 		memory->_marking = (MarkVal*)(d + sizeof(State));
-		memory->_valuation = (VarVal*)(d + sizeof(State) + sizeof(MarkVal) * net.numberOfPlaces());
+		memory->_intValuation = (VarVal*)(d + sizeof(State) + sizeof(MarkVal) * net.numberOfPlaces());
+		memory->_boolValuation = (BoolVal*)(d + sizeof(State) + (sizeof(MarkVal) * net.numberOfPlaces()) + (sizeof(VarVal) * net.numberOfIntVariables()));
 	}
 private:
 	size_t stateSize(){
-		return sizeof(State) + sizeof(MarkVal) * _nPlaces + sizeof(VarVal) * _nVars;
+		return sizeof(State) + sizeof(MarkVal) * _nPlaces + sizeof(VarVal) * _nVars + sizeof(BoolVal) * _nBoolVars;
 	}
 	void createNewBlock(){
 		size_t s = sizeof(Block) + stateSize() * blocksize;
@@ -101,6 +105,7 @@ private:
 	Block* _b;
 	int _nPlaces;
 	int _nVars;
+	int _nBoolVars;
 };
 
 } // Structures

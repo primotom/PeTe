@@ -38,57 +38,65 @@ class PetriNetBuilder;
 
 /** Type used for holding markings values */
 typedef int MarkVal;
-/** Type used for holding variable values */
+/** Type used for holding integer variable values */
 typedef int VarVal;
+/** Type used for holding boolean variable values */
+typedef std::vector<bool> BoolVal;
 
 #define MARK_INF					INT_MAX
 
 /** Efficient representation of PetriNet */
 class PetriNet
 {
-	PetriNet(int places, int transitions, int variables);
+	PetriNet(int places, int transitions, int variables, int booleans);
 public:
 	~PetriNet();
 	/** Fire transition if possible and store result in result */
 	bool fire(unsigned int transition,
 			  const MarkVal* marking,
-			  const VarVal* assignment,
+			  const VarVal* VarValues,
 			  MarkVal* resultMarking,
-			  VarVal* resultAssignment) const;
-	bool fire(unsigned int transition, const Structures::State* s, Structures::State* ns, int multiplicity = 1) const;
-	/** Fire without checkings conditions */
-	void fireWithoutCheck(unsigned int transition,
-						  const MarkVal* marking,
-						  const VarVal* assignment,
-						  MarkVal* resultMarking,
-						  VarVal* resultAssignment,
-						  int multiplicity = 1) const;
-	/** Fire transition if possible and store result in result (Respect MARK_INF */
-	bool fireWithMarkInf(unsigned int transition,
+			  VarVal* resultVarValues) const;
+
+	bool fire(unsigned int transition,
 			  const MarkVal* marking,
-			  const VarVal* assignment,
+			  const VarVal* VarValues,
+			  const BoolVal* boolValues,
 			  MarkVal* resultMarking,
-			  VarVal* resultAssignment) const;
+			  VarVal* resultVarValues,
+			  BoolVal* resultBoolValues) const;
+
+	bool fire(unsigned int transition, const Structures::State* s, Structures::State* ns, int multiplicity = 1) const;
+
 	unsigned int numberOfTransitions() const {return _nTransitions;}
-	unsigned int numberOfVariables() const {return _nVariables;}
+	unsigned int numberOfIntVariables() const {return _nIntVariables;}
+	unsigned int numberOfBoolVariables() const {return _nBoolVariables;}
 	unsigned int numberOfPlaces() const {return _nPlaces;}
+
 	int inArc(unsigned int place, unsigned int transition) const;
 	int outArc(unsigned int transition, unsigned int place) const;
 	/** Get vector place names, don't use this to get the number of places */
 	const std::vector<std::string>& placeNames() const {return _places;}
-	/** Get vector variable names, don't use this to get the number of variable */
-	const std::vector<std::string>& variableNames() const {return _variables;}
+	/** Get vector intvariable names, don't use this to get the number of intvariable */
+	const std::vector<std::string>& intVariableNames() const {return _intVariables;}
+	/** Get vector boolvariable names, don't use this to get the number of boolvariable */
+	const std::vector<std::string>& boolVariableNames() const {return _boolVariables;}
 	/** Get vector transition names, don't use this to get the number of variable */
 	const std::vector<std::string>& transitionNames() const {return _transitions;}
+	/** Get the array of Conditions */
+	PQL::Condition** getConditions() const { return _conditions; }
+	/** Get the array of Assignments */
+	PQL::AssignmentExpression** getAssignments() const { return _assignments; }
 private:
 	std::vector<std::string> _places;
 	std::vector<std::string> _transitions;
-	std::vector<std::string> _variables;
+	std::vector<std::string> _intVariables;
+	std::vector<std::string> _boolVariables;
 	/** Number of x variables
 	 * @remarks We could also get this from the _places vector, but I don't see any
 	 * any complexity garentees for this type.
 	 */
-	size_t _nPlaces, _nTransitions, _nVariables;
+	size_t _nPlaces, _nTransitions, _nIntVariables, _nBoolVariables;
 	/** Transition matrix, see transition vector */
 	MarkVal* _tm;
 	/** Get a transition vector
