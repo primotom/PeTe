@@ -59,6 +59,7 @@ TEST(Test1){
 	PetriNet* net = builder.makePetriNet();
 	MarkVal* marking = builder.makeInitialMarking();
 	VarVal* valuation = builder.makeInitialAssignment();
+	BoolVal* booleans = builder.makeInitialBoolAssignment();
 
 	//Satisfiable queries
 	std::string query1("P0 == 3 and P3 == 0");
@@ -76,33 +77,33 @@ TEST(Test1){
 	//Query1
 	PQL::Condition* expr = PQL::ParseQuery(query1);
 	expr->analyze(aContext);
-	result = dfs.reachable(*(net), marking, valuation, expr);
+	result = dfs.reachable(*(net), marking, valuation, booleans, expr);
 	CHECK(result.result() == result.Satisfied);
 	//Query2
 	expr = PQL::ParseQuery(query2);
 	expr->analyze(aContext);
-	result = dfs.reachable(*(net), marking, valuation, expr);
+	result = dfs.reachable(*(net), marking, valuation, booleans, expr);
 	CHECK(result.result() == result.Satisfied);
 	//Query3
 	expr = PQL::ParseQuery(query3);
 	expr->analyze(aContext);
-	result = dfs.reachable(*(net), marking, valuation, expr);
+	result = dfs.reachable(*(net), marking, valuation, booleans, expr);
 	CHECK(result.result() == result.Satisfied);
 	//NQuery1
 	expr = PQL::ParseQuery(nQuery1);
 	expr->analyze(aContext);
-	result = dfs.reachable(*(net), marking, valuation, expr);
+	result = dfs.reachable(*(net), marking, valuation, booleans, expr);
 	CHECK(result.result() == result.NotSatisfied);
 	//NQuery2
 	expr = PQL::ParseQuery(nQuery2);
 	expr->analyze(aContext);
-	result = dfs.reachable(*(net), marking, valuation, expr);
+	result = dfs.reachable(*(net), marking, valuation, booleans, expr);
 	CHECK(result.result() == result.NotSatisfied);
 }
 
 TEST(UNORDERED_SET){
-	StateAllocator<10> allocator(12, 0);
-	StateSet states(12,0);
+	StateAllocator<10> allocator(12, 0, 0);
+	StateSet states(12,0,0);
 	for(int i = 0; i < 100000; i++){
 		State* s0 = allocator.createState();
 		s0->marking()[0] = i;
