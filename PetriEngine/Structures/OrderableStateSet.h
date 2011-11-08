@@ -8,8 +8,8 @@ namespace PetriEngine { namespace Structures {
 
 class OrderableStateSet {
 public:
-    OrderableStateSet(const PetriNet& net, PQL::MonotonicityContext& context){
-	_context = &context;
+	OrderableStateSet(const PetriNet& net, PQL::MonotonicityContext* context){
+	_context = context;
 	_net = &net;
     }
     bool add(State* state){
@@ -89,7 +89,7 @@ private:
 
     }
     const PetriNet* _net;
-    PQL::MonotonicityContext* _context;
+	PQL::MonotonicityContext* _context;
     std::list<std::pair<bool,State*> > _states; //true = visited //false = waiting
 };
 

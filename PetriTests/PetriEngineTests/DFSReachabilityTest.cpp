@@ -70,7 +70,7 @@ TEST(Test1){
 	std::string nQuery2("P1 == 2 and P2 == 1");
 
 	PQL::AnalysisContext aContext(*(net));
-	PQL::EvaluationContext eContext(marking, valuation);
+	PQL::EvaluationContext eContext(marking, valuation, booleans);
 	DepthFirstReachabilitySearch dfs;
 	ReachabilityResult result;
 

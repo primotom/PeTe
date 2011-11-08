@@ -212,7 +212,7 @@ private:
   */
 class MonotonicityContext{
 public:
-	MonotonicityContext(PetriNet* net) {
+	MonotonicityContext(const PetriNet* net) {
 		_inNot = false;
 		for(unsigned int i = 0; i < net->numberOfPlaces(); i++)
 			_goodPlaces.push_back(true);
