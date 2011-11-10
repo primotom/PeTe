@@ -51,7 +51,9 @@ SOURCES	   += \
     DataFormats/DTAPNParser.cpp \
     Dialogs/ImportDTAPNDialog.cpp \
     Commands/DeleteItemsCommand.cpp \
-    DataFormats/TAPAALExportBuilder.cpp
+    DataFormats/TAPAALExportBuilder.cpp \
+    Misc/BooleanVariableModel.cpp \
+    Widgets/BooleanVariableDelegate.cpp
 
 
 HEADERS		+= \
@@ -97,7 +99,9 @@ HEADERS		+= \
     Dialogs/ImportDTAPNDialog.h \
     Commands/DeleteItemsCommand.h \
     DataFormats/TAPAALExportBuilder.h \
-    Widgets/VariableValueBox.h
+    Widgets/VariableValueBox.h \
+    Misc/BooleanVariableModel.h \
+    Widgets/BooleanVariableDelegate.h
 
 
 FORMS		+= MainWindow.ui \
