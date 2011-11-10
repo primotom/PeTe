@@ -272,6 +272,7 @@ void AssignmentExpression::evaluate(const MarkVal* m,
 	//	result_b = new std::vector<bool>(*b);
 	//}
 
+
 	//If the same memory is used for a and result_a, do a little hack...
 	if(a == result_a){
 		VarVal acpy[nInts];

@@ -104,7 +104,7 @@ bool PetriNet::fire(unsigned int t,
 					BoolVal* result_bool) const{
 	//Check the condition
 	if(_conditions[t] &&
-	   !_conditions[t]->evaluate(PQL::EvaluationContext(m, a)))
+	   !_conditions[t]->evaluate(PQL::EvaluationContext(m, a,b)))
 		return false;
 
 	const MarkVal* tv = _tv(t);

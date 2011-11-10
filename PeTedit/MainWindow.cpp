@@ -29,6 +29,7 @@
 
 #include "DataFormats/PNMLParser.h"
 #include "DataFormats/PNMLBuilder.h"
+#include "DataFormats/protocolparser.h"
 #include "DataFormats/TAPAALExportBuilder.h"
 #include "NetItems/PetriNetSceneBuilder.h"
 #include "Widgets/VariableDelegate.h"
@@ -200,8 +201,16 @@ void MainWindow::on_OpenAction_triggered(){
 		lastLoadSavePath = QFileInfo(fname).absoluteDir().absolutePath();
 		PetriNetView* view = new PetriNetView();
 		PetriNetSceneBuilder builder(&undoGroup, view);
-		PNMLParser p;
-		p.parse(&file, &builder, &builder);
+
+
+		if (fname.endsWith(".xml")){
+			ProtocolParser p;
+			p.parse(&file, &builder, &builder);
+		}else{
+			PNMLParser p;
+			p.parse(&file, &builder, &builder);
+		}
+
 		file.close();
 		PetriNetScene* scene = builder.makeScene();
 		scene->setFilename(fname);
