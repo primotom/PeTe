@@ -110,6 +110,16 @@ void ProtocolParser::parseState(QString roleName){
 		initialMarking = 1;
 
 	QString name = xml.readElementText(QXmlStreamReader::SkipChildElements);
+
+	if(name == "Invalid"){
+		QueryModel::Query q;
+		q.name = roleName + " invalid?";
+		q.query = roleName + "_" + name + " > 0;";
+		q.strategy = "Naive DFS with Hash"; //TODO: change this to the right strategy
+		q.jit = false;
+		qBuilder->addQuery(q);
+	}
+
 	name = roleName + "_" + name;
 
 	//Create place
