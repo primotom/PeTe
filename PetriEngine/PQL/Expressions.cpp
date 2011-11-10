@@ -248,6 +248,7 @@ bool CompareCondition::evaluate(const EvaluationContext& context) const{
 }
 
 bool VariableCondition::evaluate(const EvaluationContext &context) const{
+	std::cerr<<"offset"<<_offsetInMarking<<">"<<context.booleans()[_offsetInMarking]<<std::endl;
 	return context.booleans()[_offsetInMarking];
 }
 
