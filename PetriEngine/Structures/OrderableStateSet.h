@@ -75,7 +75,7 @@ private:
 	for(size_t i = 0; i <  _net->numberOfBoolVariables(); i++){
 		if(_context->goodBoolVariables()[i]) {
 
-			if((*s1->boolValuation())[i] && (!(*s2->boolValuation())[i])){
+			if(s1->boolValuation()[i] && (!s2->boolValuation()[i])){
 				return false;
 			}
 		}else{

@@ -248,7 +248,7 @@ bool CompareCondition::evaluate(const EvaluationContext& context) const{
 }
 
 bool VariableCondition::evaluate(const EvaluationContext &context) const{
-	return (*context.booleans())[_offsetInMarking];
+	return context.booleans()[_offsetInMarking];
 }
 
 bool BooleanLiteral::evaluate(const EvaluationContext&) const{
@@ -283,7 +283,7 @@ void AssignmentExpression::evaluate(const MarkVal* m,
 			if(it->expr)
 				result_a[it->offset] = it->expr->evaluate(context) % (ranges[it->offset]+1);
 			else
-				(*result_b)[it->offset] = it->cond->evaluate(context);
+				(result_b)[it->offset] = it->cond->evaluate(context);
 		}
 	}else{
 		memcpy(result_a, a, sizeof(VarVal) * nInts);
@@ -292,7 +292,7 @@ void AssignmentExpression::evaluate(const MarkVal* m,
 			if(it->expr)
 				result_a[it->offset] = it->expr->evaluate(context) % (ranges[it->offset]+1);
 			else
-				(*result_b)[it->offset] = it->cond->evaluate(context);
+				result_b[it->offset] = it->cond->evaluate(context);
 		}
 	}
 }

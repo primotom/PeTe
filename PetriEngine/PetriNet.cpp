@@ -35,7 +35,6 @@ PetriNet::PetriNet(int places, int transitions, int variables, int booleans)
 	_nTransitions = transitions;
 	_nIntVariables = variables;
 	_nBoolVariables = booleans;
-	std::cerr<<"petri "<< booleans<<std::endl;
 	//Allocate space for ranges
 	_ranges = new VarVal[variables];
 
@@ -103,6 +102,7 @@ bool PetriNet::fire(unsigned int t,
 					VarVal* result_int,
 					BoolVal* result_bool) const{
 	//Check the condition
+
 	if(_conditions[t] &&
 	   !_conditions[t]->evaluate(PQL::EvaluationContext(m, a,b)))
 		return false;
@@ -119,9 +119,9 @@ bool PetriNet::fire(unsigned int t,
 		result_m[i] += tv[i+_nPlaces];
 
 
-	if(_assignments[t])
+	if(_assignments[t]){
 		_assignments[t]->evaluate(m, a, b, result_int, result_bool, _ranges, _nIntVariables, _nBoolVariables);
-	else{
+	}else{
 		memcpy(result_int, a, sizeof(VarVal) * _nIntVariables);
 		memcpy(result_bool, b, sizeof(BoolVal) * _nBoolVariables);
 	}

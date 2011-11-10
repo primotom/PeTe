@@ -84,7 +84,7 @@ std::string RandomQueryGenerator::gen(const PetriNet& net,
 	for(unsigned int x = 0; x < net.numberOfIntVariables(); x++)
 		ss<<" and "<<net.intVariableNames()[x]<<" == "<<s->intValuation()[x];
 	for(unsigned int x = 0; x < net.numberOfBoolVariables(); x++)
-		ss<<" and "<< ((*s->boolValuation())[x] ? "" : "!") << net.boolVariableNames()[x];
+		ss<<" and "<< (s->boolValuation()[x] ? "" : "!") << net.boolVariableNames()[x];
 	return ss.str();
 }
 

@@ -89,7 +89,7 @@ ReachabilityResult RandomDFS::reachable(const PetriNet &net,
 			for(unsigned int x = 0; x < net.numberOfIntVariables(); x++)
 				printf(" and %s == %i ", net.intVariableNames()[x].c_str(), s->intValuation()[x]);
 			for(unsigned int x = 0; x < net.numberOfBoolVariables(); x++)
-				printf(" and %s == %i ", net.boolVariableNames()[x].c_str(), (*s->boolValuation())[x]);
+				printf(" and %s == %i ", net.boolVariableNames()[x].c_str(), s->boolValuation()[x]);
 			return ReachabilityResult();
 		}
 
@@ -136,7 +136,7 @@ ReachabilityResult RandomDFS::reachable(const PetriNet &net,
 			for(unsigned int x = 0; x < net.numberOfIntVariables(); x++)
 				printf(" and %s == %i ", net.intVariableNames()[x].c_str(), s->intValuation()[x]);
 			for(unsigned int x = 0; x < net.numberOfBoolVariables(); x++)
-				printf(" and %s == %i ", net.boolVariableNames()[x].c_str(), (*s->boolValuation())[x]);
+				printf(" and %s == %i ", net.boolVariableNames()[x].c_str(), s->boolValuation()[x]);
 
 	}
 

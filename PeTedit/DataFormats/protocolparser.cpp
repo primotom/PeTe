@@ -71,7 +71,6 @@ void ProtocolParser::parseVariable(){
 	while(xml.readNextStartElement()){
 		if(xml.name() == "message"){
 			QString name = xml.readElementText(QXmlStreamReader::SkipChildElements);
-			std::cerr<<"add bool in parser>"<<name.toStdString()<<std::endl;
 			builder->addBoolVariable(name.toStdString(), false);
 
 		}else
@@ -125,7 +124,6 @@ void ProtocolParser::parseState(QString roleName){
 	name = roleName + "_" + name;
 
 	//Create place
-	std::cerr<<"add place in parser>"<<name.toStdString()<<std::endl;
 	builder->addPlace(name.toStdString(), initialMarking, x, y);
 	//Map id to name
 	idmap[name] = NodeName(Place, name);
