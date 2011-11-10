@@ -35,7 +35,7 @@ PetriNet::PetriNet(int places, int transitions, int variables, int booleans)
 	_nTransitions = transitions;
 	_nIntVariables = variables;
 	_nBoolVariables = booleans;
-
+	std::cerr<<"petri "<< booleans<<std::endl;
 	//Allocate space for ranges
 	_ranges = new VarVal[variables];
 

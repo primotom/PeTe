@@ -24,8 +24,6 @@
 #include <QObject>
 #include <QSize>
 #include <QSpinBox>
-#include <QComboBox>
-#include <QStringList>
 
 class VariableDelegate : public QItemDelegate{
 	Q_OBJECT
@@ -41,10 +39,6 @@ public:
 
 	void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option,
 							  const QModelIndex &index) const;
-
-private:
-	QStringList _types;
-	QStringList _boolNames;
 };
 
 

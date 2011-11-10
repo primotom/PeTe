@@ -37,6 +37,7 @@ PetriNetBuilder::PetriNetBuilder(bool JIT) : AbstractPetriNetBuilder(){
 
 void PetriNetBuilder::addPlace(const string &name, int tokens, double, double){
 	places.push_back(name);
+	std::cerr<<"add place in builder>"<<name<<std::endl;
 	initialMarking.push_back(tokens);
 }
 
@@ -46,8 +47,9 @@ void PetriNetBuilder::addVariable(const string &name, int initialValue, int rang
 	ranges.push_back(range);
 }
 
-void PetriNetBuilder::addBoolVariable(const string &name, bool initialValue){
+void PetriNetBuilder::addBoolVariable(const std::string &name, bool initialValue){
 	boolVariables.push_back(name);
+	std::cerr<<"add bool in builder>"<<name<<std::endl;
 	initialBoolVariableValues.push_back(initialValue);
 }
 
@@ -77,6 +79,7 @@ void PetriNetBuilder::addOutputArc(const string &transition, const string &place
 }
 
 PetriNet* PetriNetBuilder::makePetriNet(){
+	std::cerr<<"builder"<<boolVariables.size()<<std::endl;
 	PetriNet* net = new PetriNet(places.size(), transitions.size(), variables.size(), boolVariables.size());
 	size_t i;
 	//Create int variables
