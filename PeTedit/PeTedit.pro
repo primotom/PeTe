@@ -52,12 +52,10 @@ SOURCES	   += \
     Dialogs/ImportDTAPNDialog.cpp \
     Commands/DeleteItemsCommand.cpp \
     DataFormats/TAPAALExportBuilder.cpp \
-<<<<<<< HEAD
     DataFormats/protocolparser.cpp
-=======
     Misc/BooleanVariableModel.cpp \
     Widgets/BooleanVariableDelegate.cpp
->>>>>>> origin/contextual
+
 
 
 HEADERS		+= \
