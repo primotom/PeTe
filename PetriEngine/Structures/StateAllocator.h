@@ -41,7 +41,6 @@ public:
 		_nPlaces = nPlaces;
 		_nVars = nVars;
 		_nBoolVars = nBoolVars;
-		std::cerr<<","<< _nBoolVars<<std::endl;
 		_b = NULL;
 		createNewBlock();
 	}
@@ -49,7 +48,6 @@ public:
 		_nPlaces = net.numberOfPlaces();
 		_nVars = net.numberOfIntVariables();
 		_nBoolVars = net.numberOfBoolVariables();
-		std::cerr<<",."<< _nBoolVars<<std::endl;
 		_b = NULL;
 		createNewBlock();
 	}

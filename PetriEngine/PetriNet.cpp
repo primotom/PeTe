@@ -105,7 +105,6 @@ bool PetriNet::fire(unsigned int t,
 
 	if(_conditions[t] &&
 	   !_conditions[t]->evaluate(PQL::EvaluationContext(m, a, b))){
-		std::cerr<<"condition breaks"<<std::endl;
 		return false;
 	}
 
