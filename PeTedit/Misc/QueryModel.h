@@ -24,6 +24,7 @@
 #include <QIODevice>
 
 #include "PetriEngine/Reachability/ReachabilityResult.h"
+#include "TraceModel.h"
 
 class PetriNetScene;
 class QueryThread;
@@ -39,11 +40,13 @@ class QueryModel : public QAbstractTableModel
 			thread = NULL;
 			progress = 0;
 			time = 0;
+			trace = NULL;
 		}
 		QueryThread* thread;
 		double progress;
 		double time;
 		PetriEngine::Reachability::ReachabilityResult result;
+		TraceModel* trace;
 	};
 public:
 	/** Internal representation of a query */

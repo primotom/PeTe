@@ -88,9 +88,13 @@ MainWindow::MainWindow(QWidget *parent) :
 	QAction* toggleValidationDock = ui->validationDock->toggleViewAction();
 	toggleValidationDock->setText(tr("Show validation issues"));
 	ui->menuView->addAction(toggleValidationDock);
+	QAction* toggleTraceDock = ui->traceDock->toggleViewAction();
+	toggleTraceDock->setText(tr("Show trace"));
+	ui->menuView->addAction(toggleTraceDock);
 
-	//Hide validation dock initially
+	//Hide validation and trace docks initially
 	ui->validationDock->hide();
+	ui->traceDock->hide();
 
 	// Decide which dock-widget gets the corners
 	this->setCorner(Qt::BottomLeftCorner, Qt::LeftDockWidgetArea);

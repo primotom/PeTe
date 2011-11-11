@@ -54,7 +54,9 @@ SOURCES	   += \
     DataFormats/TAPAALExportBuilder.cpp \
 	DataFormats/protocolparser.cpp \
     Misc/BooleanVariableModel.cpp \
-    Widgets/BooleanVariableDelegate.cpp
+    Widgets/BooleanVariableDelegate.cpp \
+    Misc/TraceModel.cpp \
+    Commands/FireTransitionCommand.cpp
 
 
 
@@ -104,7 +106,9 @@ HEADERS		+= \
 	DataFormats/protocolparser.h \
 	Widgets/VariableValueBox.h \
     Misc/BooleanVariableModel.h \
-    Widgets/BooleanVariableDelegate.h
+    Widgets/BooleanVariableDelegate.h \
+    Misc/TraceModel.h \
+    Commands/FireTransitionCommand.h
 
 
 

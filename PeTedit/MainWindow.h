@@ -46,6 +46,8 @@ private:
 	PetriNetScene* currentScene;
 	/** Undogroup for the documents */
 	QUndoGroup undoGroup;
+	/** Undogroup for trace */
+	QUndoGroup traceUndoGround;
 	/** Action group for selecting mode */
 	QActionGroup* modeActionGroup;
 	/** Zoom spin box, used for zooming */
