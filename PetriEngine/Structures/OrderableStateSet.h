@@ -11,18 +11,23 @@ public:
 	OrderableStateSet(const PetriNet& net, PQL::MonotonicityContext* context){
 	_context = context;
 	_net = &net;
+	_countSkip =0;
+	_countAdd =0;
     }
 
 	bool add(State* state){
+		_countAdd++;
 		for(std::list<std::pair<bool,State*> >::iterator it = _states.begin() ; it != _states.end();){
-			if (less((*it).second, state)){
-				_states.remove(*it++);
-			}else{
+			//if (less((*it).second, state)){//TODO: Think about using this again
+			//	_states.remove(*it++);
+				//_countSkip++;
+			//}else{
 				if(leq(state,(*it).second)){
+					_countSkip++;
 					return false;
 				}
 				it++;
-			}
+			//}
 		}
 		_states.push_back(std::make_pair(false,state));;
 		return true;
@@ -70,6 +75,12 @@ public:
 	}
 
 	std::list<std::pair<bool,State*> > States() {return _states;}
+
+	void writeStatistics(){
+		std::cout<<"Number of states skipped: "<<_countSkip<<std::endl;
+		std::cout<<"Number of states not skipped: "<<_countAdd-_countSkip<<std::endl;
+		std::cout<<"Final size of visited and waiting: "<<_states.size()<<std::endl;
+	}
 
 private:
 	//Is S1 less or equal to S2
@@ -123,6 +134,9 @@ private:
     const PetriNet* _net;
 	PQL::MonotonicityContext* _context;
     std::list<std::pair<bool,State*> > _states; //true = visited //false = waiting
+
+	int _countSkip;
+	int _countAdd;
 };
 
 }}

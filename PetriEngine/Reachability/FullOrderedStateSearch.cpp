@@ -76,7 +76,7 @@ ReachabilityResult FullOrderedStateSearch::reachable(const PetriNet &net,
 		//Take first step of the stack
 		State* s = stack.back().state;
 		//Mark as visited
-		states.visit(s);
+		//states.visit(s);
 		ns->setParent(s);
 		bool foundSomething = false;
 		for(unsigned int t = stack.back().t; t < net.numberOfTransitions(); t++){

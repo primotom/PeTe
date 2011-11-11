@@ -77,7 +77,7 @@ ReachabilityResult OrderedStateSearch::reachable(const PetriNet &net,
 		//Take first step of the stack
 		State* s = stack.back().state;
 		//Mark as visited
-		states.visit(s);
+		//states.visit(s);
 		ns->setParent(s);
 		bool foundSomething = false;
 		for(unsigned int t = stack.back().t; t < net.numberOfTransitions(); t++){
@@ -89,10 +89,10 @@ ReachabilityResult OrderedStateSearch::reachable(const PetriNet &net,
 									  "A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
 					stack.back().t = t + 1;
 
-					if(states.greaterBool(ns,s))
+					//if(states.greaterBool(ns,s))
 						stack.push_back(Step(ns,0));
-					else
-						stack.push_front(Step(ns, 0));
+					//else
+					//	stack.push_front(Step(ns, 0));
 
 					exploredStates++;
 					foundSomething = true;
@@ -106,6 +106,7 @@ ReachabilityResult OrderedStateSearch::reachable(const PetriNet &net,
 			expandedStates++;
 		}
 	}
+	states.writeStatistics();
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
 							"No state satisfying the query exists.", expandedStates, count);
 }

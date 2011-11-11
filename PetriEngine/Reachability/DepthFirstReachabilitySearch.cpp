@@ -85,6 +85,7 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 						return ReachabilityResult(ReachabilityResult::Satisfied,
 									  "A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
 					stack.back().t = t + 1;
+
 					stack.push_back(Step(ns, 0));
 					exploredStates++;
 					foundSomething = true;
