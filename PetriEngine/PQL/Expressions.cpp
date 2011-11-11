@@ -248,7 +248,6 @@ bool CompareCondition::evaluate(const EvaluationContext& context) const{
 }
 
 bool VariableCondition::evaluate(const EvaluationContext &context) const{
-	std::cerr<<"offset"<<_offsetInMarking<<">"<<context.booleans()[_offsetInMarking]<<std::endl;
 	return context.booleans()[_offsetInMarking];
 }
 
@@ -267,7 +266,7 @@ void AssignmentExpression::evaluate(const MarkVal* m,
 									BoolVal* result_b,
 									VarVal* ranges,
 									size_t nInts,
-									size_t) const{
+									size_t nBools) const{
 	//Should work
 	//if(b){
 	//	result_b = new std::vector<bool>(*b);
@@ -277,9 +276,16 @@ void AssignmentExpression::evaluate(const MarkVal* m,
 	//If the same memory is used for a and result_a, do a little hack...
 	if(a == result_a){
 		VarVal acpy[nInts];
+		BoolVal bcpy[nBools];
+
 		memcpy(acpy, a, sizeof(VarVal) * nInts);
+		memcpy(bcpy, b, sizeof(BoolVal) * nBools);
+
 		memcpy(result_a, acpy, sizeof(VarVal) * nInts);
-		EvaluationContext context(m, acpy, b);
+		memcpy(result_b, bcpy, sizeof(BoolVal) * nBools);
+
+
+		EvaluationContext context(m, acpy, bcpy);
 		for(const_iter it = assignments.begin(); it != assignments.end(); it++){
 			if(it->expr)
 				result_a[it->offset] = it->expr->evaluate(context) % (ranges[it->offset]+1);
@@ -288,6 +294,7 @@ void AssignmentExpression::evaluate(const MarkVal* m,
 		}
 	}else{
 		memcpy(result_a, a, sizeof(VarVal) * nInts);
+		memcpy(result_b, b, sizeof(BoolVal) * nBools);
 		EvaluationContext context(m, a, b);
 		for(const_iter it = assignments.begin(); it != assignments.end(); it++){
 			if(it->expr)
