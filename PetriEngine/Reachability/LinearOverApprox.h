@@ -30,7 +30,7 @@ public:
 	LinearOverApprox(ReachabilitySearchStrategy* fallback = NULL){
 		this->fallback = fallback;
 	}
-	ReachabilityResult reachable(const PetriNet &net, const MarkVal *initialMarking, const VarVal *initialAssignment, PQL::Condition *query);
+	ReachabilityResult reachable(const PetriNet &net, const MarkVal *initialMarking, const VarVal *initialAssignment,const BoolVal *initialBoolAssignment, PQL::Condition *query);
 private:
 	ReachabilitySearchStrategy* fallback;
 };

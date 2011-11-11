@@ -18,13 +18,11 @@ SUITE(MonotonicityContextTest){
 		builder.addOutputArc("T1", "P2", 1);
 
 		PetriNet* net = builder.makePetriNet();
-		MarkVal* marking = builder.makeInitialMarking();
-		VarVal* valuation = builder.makeInitialAssignment();
 
 		int index1 = 0;
 		int index2 = 0;
 
-		for(int i = 0; i < net->numberOfPlaces(); i++){
+		for(unsigned int i = 0; i < net->numberOfPlaces(); i++){
 			if(net->placeNames()[i] == "P1")
 				index1 = i;
 			if(net->placeNames()[i] == "P2")
@@ -32,6 +30,7 @@ SUITE(MonotonicityContextTest){
 		}
 
 		MonotonicityContext context(net);
+		context.analyze();
 		CHECK(context.goodPlaces()[index1] == false);
 		CHECK(context.goodPlaces()[index2] == true);
 	}
@@ -40,28 +39,29 @@ SUITE(MonotonicityContextTest){
 		PetriNetBuilder builder;
 		builder.addPlace("P1", 1, 0, 0);
 		builder.addPlace("P2", 0, 0, 0);
-		builder.addVariable("V1", 1, 5);
-		builder.addVariable("V2", 0, 2);
-		builder.addTransition("T1", "V1 < 3 or V2 > 0", "", 0, 0);
+		builder.addBoolVariable("B1", false);
+		builder.addBoolVariable("B2", false);
+		builder.addTransition("T1", "B1 or !B2", "B2 := true", 0, 0);
 		builder.addInputArc("P1", "T1", 1);
 		builder.addOutputArc("T1", "P2", 1);
 
 		PetriNet* net = builder.makePetriNet();
-		MarkVal* marking = builder.makeInitialMarking();
-		VarVal* valuation = builder.makeInitialAssignment();
 
 		int indexBad = 0;
 		int indexGood = 0;
 
-		for(int i = 0; i < net->numberOfVariables(); i++){
-			if(net->variableNames()[i] == "V1")
+		for(unsigned int i = 0; i < net->numberOfBoolVariables(); i++){
+			if(net->boolVariableNames()[i] == "B2")
 				indexBad = i;
-			if(net->variableNames()[i] == "V2")
+			if(net->boolVariableNames()[i] == "B1")
 				indexGood = i;
 		}
 
 		MonotonicityContext context(net);
-		CHECK(context.goodVariables()[indexBad] == false);
-		CHECK(context.goodVariables()[indexGood] == true);
+		context.analyze();
+		CHECK(context.goodBoolVariables()[indexBad] == false);
+		CHECK(context.goodBoolVariables()[indexGood] == true);
+
 	}
+
 }

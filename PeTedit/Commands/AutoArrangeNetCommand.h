@@ -46,6 +46,7 @@ public:
 			double x, y;
 		};
 		void addVariable(const std::string &name, int initialValue, int range);
+		void addBoolVariable(const std::string &name, bool initialValue);
 		void addPlace(const std::string &name, int tokens, double x, double y);
 		void addTransition(const std::string &name, const std::string &conditions, const std::string &assignments, double x, double y);
 		void addInputArc(const std::string &place, const std::string &transition, int weight);

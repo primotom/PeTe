@@ -55,7 +55,7 @@
 #include <QMessageBox>
 #include <QPainterPath>
 #include <QDebug>
-#include "../Misc/VariableModel.h"
+#include "../Misc/BooleanVariableModel.h"
 
 #define MAX(a,b)	(a < b ? b : a)
 #define MIN(a,b)	(a > b ? b : a)
@@ -73,7 +73,7 @@ PetriNetScene::PetriNetScene(QUndoGroup* undoGroup, PetriNetView* parent) :
 	undoGroup->addStack(this->_undoStack);
 
 	// Create variable model (name,value,range)
-	this->_variables = new VariableModel(this);
+	this->_variables = new BooleanVariableModel(this);
 
 	// Create query model
 	this->_queries = new QueryModel(this);
@@ -639,8 +639,9 @@ void PetriNetScene::produce(PNMLBuilder* builder){
 void PetriNetScene::produce(PetriEngine::AbstractPetriNetBuilder* builder){
 
 	for(int row = 0; row < this->_variables->rowCount(); row++){
-		const VariableModel::Variable& var = _variables->variable(row);
-		builder->addVariable(var.name.toStdString(), var.intValue, var.range);
+		const BooleanVariableModel::Variable& var = _variables->variable(row);
+		//builder->addVariable(var.name.toStdString(), var.intValue, var.range);
+		builder->addBoolVariable(var.name.toStdString(), var.value);
 	}
 
 	foreach(QGraphicsItem* item, this->items()) {

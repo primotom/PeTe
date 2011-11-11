@@ -34,6 +34,7 @@ public:
 	TAPAALExportBuilder(QIODevice* device);
 	void addPlace(const std::string &name, int tokens, double x, double y);
 	void addVariable(const std::string& name, int initialValue, int range);
+	void addBoolVariable(const std::string& name, bool initialValue);
 	void addTransition(const std::string &name,
 					   const std::string &conditions,
 					   const std::string &assignments,

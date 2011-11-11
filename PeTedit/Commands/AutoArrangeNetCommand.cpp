@@ -101,6 +101,10 @@ void AutoArrangeNetCommand
 
 void AutoArrangeNetCommand
 	 ::NetItemPositionListBuilder
+	 ::addBoolVariable(const std::string &, bool){}
+
+void AutoArrangeNetCommand
+	 ::NetItemPositionListBuilder
 	 ::addPlace(const std::string &name, int, double x, double y){
 	NetItemPosition itemPos;
 	itemPos.item = scene->findNetItem(name.c_str());

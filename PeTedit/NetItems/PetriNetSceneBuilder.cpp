@@ -22,7 +22,7 @@
 #include "PlaceItem.h"
 #include "ArcItem.h"
 #include "TransitionItem.h"
-#include "../Misc/VariableModel.h"
+#include "../Misc/BooleanVariableModel.h"
 
 PetriNetSceneBuilder::PetriNetSceneBuilder(QUndoGroup* undoGroup, PetriNetView* sceneParent){
 	scene = new PetriNetScene(undoGroup, sceneParent);
@@ -34,8 +34,12 @@ void PetriNetSceneBuilder::addPlace(const std::string &name, int tokens, double 
 	scene->addNetItem(item);
 }
 
-void PetriNetSceneBuilder::addVariable(const std::string& name, int initialValue, int range){
-	scene->variables()->addVariable(name.c_str(), initialValue, range);
+void PetriNetSceneBuilder::addVariable(const std::string&, int, int){
+	//scene->variables()->addVariable(name.c_str(), initialValue, range);
+}
+
+void PetriNetSceneBuilder::addBoolVariable(const std::string& name, bool initialValue){
+	scene->variables()->addVariable(name.c_str(), initialValue);
 }
 
 void PetriNetSceneBuilder::addTransition(const std::string &name,

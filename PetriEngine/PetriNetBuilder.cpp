@@ -25,6 +25,7 @@
 #include "PQL/CompiledCondition.h"
 
 #include <assert.h>
+#include <stdio.h>
 
 using namespace std;
 
@@ -45,7 +46,7 @@ void PetriNetBuilder::addVariable(const string &name, int initialValue, int rang
 	ranges.push_back(range);
 }
 
-void PetriNetBuilder::addBoolVariable(const string &name, bool initialValue){
+void PetriNetBuilder::addBoolVariable(const std::string &name, bool initialValue){
 	boolVariables.push_back(name);
 	initialBoolVariableValues.push_back(initialValue);
 }
@@ -96,7 +97,8 @@ PetriNet* PetriNetBuilder::makePetriNet(){
 	//Parse conditions and assignments
 	for(i = 0; i < transitions.size(); i++){
 		if(conditions[i] != ""){
-			net->_conditions[i] = PQL::ParseQuery(conditions[i]);
+			//net->_conditions[i] = PQL::ParseQuery(conditions[i]);
+			net->_conditions[i] = PQL::ParseCondition(conditions[i]);
 			if(net->_conditions[i]){
 				PQL::AnalysisContext context(*net);
 				if(_jit){
@@ -116,12 +118,13 @@ PetriNet* PetriNetBuilder::makePetriNet(){
 				if(context.errors().size() > 0){
 					delete net->_conditions[i];
 					net->_conditions[i] = NULL;
-					//TODO: Print to stderr
+					fprintf(stderr, "Contextual errors were found during Petri net construction. Net is incomplete.\n");
 				}
 			}
 		}
 		if(assignments[i] != ""){
-			net->_assignments[i] = PQL::ParseAssignment(assignments[i]);
+			//net->_assignments[i] = PQL::ParseAssignment(assignments[i]);
+			net->_assignments[i] = PQL::ParseConditionAssignment(assignments[i]);
 			if(net->_assignments[i]){
 				PQL::AnalysisContext context(*net);
 				net->_assignments[i]->analyze(context);
@@ -129,7 +132,7 @@ PetriNet* PetriNetBuilder::makePetriNet(){
 				if(context.errors().size() > 0){
 					delete net->_assignments[i];
 					net->_assignments[i] = NULL;
-					//TODO: Print to stderr
+					fprintf(stderr, "Contextual errors were found during Petri net construction. Net is incomplete.\n");
 				}
 			}
 		}
@@ -195,9 +198,9 @@ VarVal* PetriNetBuilder::makeInitialAssignment(){
 }
 
 BoolVal* PetriNetBuilder::makeInitialBoolAssignment(){
-	BoolVal* b = new BoolVal[boolVariables.size()];
+	BoolVal* b = new BoolVal[boolVariables.size()]();
 	for(size_t i = 0; i < boolVariables.size(); i++)
-		(*b)[i] = initialBoolVariableValues[i];
+		b[i] = initialBoolVariableValues[i];
 	return b;
 }
 

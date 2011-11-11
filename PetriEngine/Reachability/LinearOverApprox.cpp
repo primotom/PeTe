@@ -28,6 +28,7 @@ namespace Reachability{
 ReachabilityResult LinearOverApprox::reachable(const PetriNet &net,
 											   const MarkVal *m0,
 											   const VarVal *ia,
+											   const BoolVal *ba,
 											   PQL::Condition *query){
 	PQL::ConstraintAnalysisContext context(net);
 	query->findConstraints(context);
@@ -54,7 +55,7 @@ ReachabilityResult LinearOverApprox::reachable(const PetriNet &net,
 	// Try fallback strategy if there's one
 	if(fallback){
 		fallback->setProgressReporter(this->reporter());
-		return fallback->reachable(net, m0, ia, query);
+		return fallback->reachable(net, m0, ia, ba, query);
 	}
 
 	// If there's complex expression we can't do anything

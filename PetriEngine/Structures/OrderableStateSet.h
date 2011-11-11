@@ -8,8 +8,8 @@ namespace PetriEngine { namespace Structures {
 
 class OrderableStateSet {
 public:
-    OrderableStateSet(const PetriNet& net, PQL::MonotonicityContext& context){
-	_context = &context;
+	OrderableStateSet(const PetriNet& net, PQL::MonotonicityContext* context){
+	_context = context;
 	_net = &net;
     }
 
@@ -62,9 +62,8 @@ public:
 	bool greaterBool(State* s1, State* s2){
 		for(size_t i = 0; i <  _net->numberOfBoolVariables(); i++){
 			if(_context->goodBoolVariables()[i]) {
-				if((*s1->boolValuation())[i] && !(*s2->boolValuation())[i]){
-					return true;
-				}
+				if(s1->boolValuation()[i] && (!s2->boolValuation()[i]))
+					return false;
 			}
 		}
 		return false;
@@ -94,7 +93,7 @@ private:
     }
 
     const PetriNet* _net;
-    PQL::MonotonicityContext* _context;
+	PQL::MonotonicityContext* _context;
     std::list<std::pair<bool,State*> > _states; //true = visited //false = waiting
 };
 

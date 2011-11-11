@@ -72,7 +72,7 @@ NotCondition::~NotCondition(){
 
 /******************** To String ********************/
 
-std::string BooleanLiteralExpr::toString() const{
+std::string BooleanLiteral::toString() const{
 	return _value ? "true" : "false";
 }
 
@@ -164,10 +164,6 @@ void MinusExpr::analyze(AnalysisContext& context){
 	_expr->analyze(context);
 }
 
-void BooleanLiteralExpr::analyze(AnalysisContext&){
-	return;
-}
-
 void IntegerLiteralExpr::analyze(AnalysisContext&){
 	return;
 }
@@ -208,6 +204,10 @@ void VariableCondition::analyze(AnalysisContext &context){
 	}
 }
 
+void BooleanLiteral::analyze(AnalysisContext&){
+	return;
+}
+
 void NotCondition::analyze(AnalysisContext &context){
 	_cond->analyze(context);
 }
@@ -224,10 +224,6 @@ int MinusExpr::evaluate(const EvaluationContext& context) const{
 	return -(_expr->evaluate(context));
 }
 
-int BooleanLiteralExpr::evaluate(const EvaluationContext&) const{
-	return _value ? 1 : 0;
-}
-
 int IntegerLiteralExpr::evaluate(const EvaluationContext&) const{
 	return _value;
 }
@@ -239,6 +235,12 @@ int IdentifierExpr::evaluate(const EvaluationContext& context) const{
 	return context.assignment()[_offsetInMarking];
 }
 
+bool LogicalCondition::evaluate(const EvaluationContext &context) const{
+	bool b1 = _cond1->evaluate(context);
+	bool b2 = _cond2->evaluate(context);
+	return apply(b1,b2);
+}
+
 bool CompareCondition::evaluate(const EvaluationContext& context) const{
 	int v1 = _expr1->evaluate(context);
 	int v2 = _expr2->evaluate(context);
@@ -247,6 +249,10 @@ bool CompareCondition::evaluate(const EvaluationContext& context) const{
 
 bool VariableCondition::evaluate(const EvaluationContext &context) const{
 	return context.booleans()[_offsetInMarking];
+}
+
+bool BooleanLiteral::evaluate(const EvaluationContext&) const{
+	return _value;
 }
 
 bool NotCondition::evaluate(const EvaluationContext& context) const{
@@ -260,32 +266,34 @@ void AssignmentExpression::evaluate(const MarkVal* m,
 									BoolVal* result_b,
 									VarVal* ranges,
 									size_t nInts,
-									size_t nBools) const{
-	//Should work as long as we don't have Integers AND Boolean variables at the same time
+									size_t) const{
+	//Should work
+	//if(b){
+	//	result_b = new std::vector<bool>(*b);
+	//}
+
 
 	//If the same memory is used for a and result_a, do a little hack...
 	if(a == result_a){
 		VarVal acpy[nInts];
 		memcpy(acpy, a, sizeof(VarVal) * nInts);
 		memcpy(result_a, acpy, sizeof(VarVal) * nInts);
-		EvaluationContext context(m, acpy);
-		for(const_iter it = assignments.begin(); it != assignments.end(); it++)
+		EvaluationContext context(m, acpy, b);
+		for(const_iter it = assignments.begin(); it != assignments.end(); it++){
 			if(it->expr)
 				result_a[it->offset] = it->expr->evaluate(context) % (ranges[it->offset]+1);
+			else
+				(result_b)[it->offset] = it->cond->evaluate(context);
+		}
 	}else{
 		memcpy(result_a, a, sizeof(VarVal) * nInts);
-		EvaluationContext context(m, a);
-		for(const_iter it = assignments.begin(); it != assignments.end(); it++)
+		EvaluationContext context(m, a, b);
+		for(const_iter it = assignments.begin(); it != assignments.end(); it++){
 			if(it->expr)
 				result_a[it->offset] = it->expr->evaluate(context) % (ranges[it->offset]+1);
-	}
-
-	if(b){
-		result_b = new vector<bool>(b);
-		EvaluationContext context(m, result_b);
-		for(const_iter it = assignments.begin(); it != assignments.end(); it++)
-			if(it->cond)
+			else
 				result_b[it->offset] = it->cond->evaluate(context);
+		}
 	}
 }
 
@@ -358,8 +366,69 @@ void LogicalCondition::scale(int factor)	{_cond1->scale(factor);_cond2->scale(fa
 void CompareCondition::scale(int factor)	{_expr1->scale(factor);_expr2->scale(factor);}
 void NotCondition::scale(int factor)		{_cond->scale(factor);}
 void VariableCondition::scale(int)			{}
+void BooleanLiteral::scale(int)				{}
 
 /******************** Monotonicity Contextual Analysis ********************/
+
+void LogicalCondition::monoStatus(MonotonicityContext &context,
+								  std::vector<int> &variableStatus,
+								  int varIndex){
+	_cond1->monoStatus(context, variableStatus, varIndex);
+	_cond2->monoStatus(context, variableStatus, varIndex);
+}
+
+void CompareCondition::monoStatus(MonotonicityContext &context,
+								  std::vector<int> &variableStatus,
+								  int varIndex){
+	variableStatus[varIndex] = 3;
+	context.setVariableBad(varIndex);
+}
+
+void VariableCondition::monoStatus(MonotonicityContext &context,
+								   std::vector<int> &variableStatus,
+								   int varIndex){
+	variableStatus[varIndex] = 3;
+	context.setVariableBad(varIndex);
+}
+
+void BooleanLiteral::monoStatus(MonotonicityContext &context,
+								std::vector<int> &variableStatus,
+								int varIndex){
+	bool var = !context.inNot() && _value;
+
+	if(var && variableStatus[varIndex] < 2)
+		variableStatus[varIndex] = 1;
+	else if(var && variableStatus[varIndex] > 1){
+		variableStatus[varIndex] = 3;
+		context.setVariableBad(varIndex);
+	} else if(!var &&
+			  (variableStatus[varIndex] == 0  ||
+			  variableStatus[varIndex] == 2))
+		variableStatus[varIndex] = 2;
+	else {
+		variableStatus[varIndex] = 3;
+		context.setVariableBad(varIndex);
+	}
+}
+
+void NotCondition::monoStatus(MonotonicityContext &context,
+							  std::vector<int> &variableStatus,
+							  int varIndex){
+	context.setNot(true);
+	_cond->monoStatus(context, variableStatus, varIndex);
+	context.setNot(false);
+}
+
+/******** isBad ********/
+
+void BinaryExpr::isBad(MonotonicityContext &context){
+	_expr1->isBad(context);
+	_expr2->isBad(context);
+}
+
+void MinusExpr::isBad(MonotonicityContext &context){
+	_expr->isBad(context);
+}
 
 void IntegerLiteralExpr::isBad(MonotonicityContext&){
 	return;
@@ -384,16 +453,17 @@ void CompareCondition::isBad(MonotonicityContext &context){
 	   this->op() == "<"){
 		_expr1->isBad(context);
 		_expr2->isBad(context);
-	} else if(context.inNot()){
-		_expr1->isBad(context);
-		_expr2->isBad(context);
 	}
 }
 
 void VariableCondition::isBad(MonotonicityContext &context){
-	if(context.inNot())
-		if(_offsetInMarking != -1)
+	if(_offsetInMarking != -1)
+		if(context.inNot() && (*context.variableStatus())[_offsetInMarking] != 2)
 			context.setVariableBad(_offsetInMarking);
+}
+
+void BooleanLiteral::isBad(MonotonicityContext&){
+	return;
 }
 
 void NotCondition::isBad(MonotonicityContext &context){
@@ -671,6 +741,10 @@ double VariableCondition::distance(DistanceContext &context) const{
 	if(context.negated())
 		return retVal ? 1 : 0;
 	return retVal ? 0 : 1;
+}
+
+double BooleanLiteral::distance(DistanceContext&) const{
+	return 0;
 }
 
 double NotCondition::distance(DistanceContext& context) const{

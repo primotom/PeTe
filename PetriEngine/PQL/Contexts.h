@@ -27,6 +27,7 @@
 #include <string>
 #include <vector>
 #include <list>
+#include <iostream>
 
 namespace PetriEngine {
 namespace PQL{
@@ -207,25 +208,41 @@ private:
 	llvm::LLVMContext& _context;
 };
 
+
 /** Performs contextual analysis on places and variables to
   * determine if they are good or bad
   */
 class MonotonicityContext{
 public:
-	MonotonicityContext(PetriNet* net) {
+	MonotonicityContext(const PetriNet* net, Condition* query = NULL) {
 		_inNot = false;
-		for(unsigned int i = 0; i < net->numberOfPlaces(); i++)
-			_goodPlaces.push_back(true);
-		for(unsigned int i = 0; i < net->numberOfBoolVariables(); i++)
-			_goodVariables.push_back(true);
+		_net = net;
+		_query = query;
+	}
 
-		int c = 0;
-		//TODO: Look through assignments; make sure no booleans are assigned to false
+	void analyze(){
+		for(unsigned int i = 0; i < _net->numberOfPlaces(); i++)
+				_goodPlaces.push_back(true);
+			for(unsigned int i = 0; i < _net->numberOfBoolVariables(); i++){
+				_goodVariables.push_back(true);
+				_variableStatus.push_back(0);
+			}
 
-		while(net->getConditions()[c]){
-			net->getConditions()[c]->isBad(*this);
-			c++;
-		}
+			unsigned int c;
+			for(c = 0; c < _net->numberOfTransitions(); c++)
+				if(_net->getAssignments()[c])
+					_net->getAssignments()[c]->monoStatus(*this, _variableStatus);
+
+			for(c = 0; c < _variableStatus.size(); c++)
+				if(_variableStatus[c] == 0)
+					_variableStatus[c] = 2;
+
+			if(_query)
+				_query->isBad(*this);
+
+			for(c = 0; c < _net->numberOfTransitions(); c++)
+				if(_net->getConditions()[c])
+					_net->getConditions()[c]->isBad(*this);
 	}
 
 	/** Set bad places and variables */
@@ -240,13 +257,22 @@ public:
 	/** Getters for the places and variables */
 	std::vector<bool> goodPlaces(){ return _goodPlaces; }
 	std::vector<bool> goodBoolVariables(){ return _goodVariables; }
+	std::vector<int>* variableStatus(){ return &_variableStatus; }
 	bool inNot(){ return _inNot; }
 	void setNot(bool isNot){ _inNot = isNot; }
 private:
+	const PetriNet* _net;
+	Condition* _query;
 	bool _inNot;
 	std::vector<bool> _goodPlaces;
 	std::vector<bool> _goodVariables;
-	std::vector<bool> _assignedTrue;
+	/** Holds information about the variables in assignments
+	  *		0 - Undefined
+	  *		1 - Only assigned true
+	  *		2 - Only assigned false
+	  *		3 - Bad
+	  */
+	std::vector<int> _variableStatus;
 };
 
 } // PQL

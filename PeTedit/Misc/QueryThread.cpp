@@ -48,9 +48,11 @@ QueryThread::QueryThread(QString query,
 	_net = builder.makePetriNet();
 	_m0 = builder.makeInitialMarking();
 	_a0 = builder.makeInitialAssignment();
+	_b0 = builder.makeInitialBoolAssignment();
 
 	//Parse query
-	_query = ParseQuery(query.toStdString());
+	//_query = ParseQuery(query.toStdString());
+	_query = ParseCondition(query.toStdString());
 	if(_query){
 		AnalysisContext context(*_net);
 		if(jit){
@@ -105,9 +107,19 @@ void QueryThread::run(){
 	_startClock = clock();
 
 	//Run the strategy
-	_result = strategy->reachable(*_net, _m0, _a0, _query);
+	_result = strategy->reachable(*_net, _m0, _a0, _b0, _query);
 
 	_finishTime = ((qreal)(clock() - _startClock)) / (qreal)CLOCKS_PER_SEC;
+
+	for(std::vector<unsigned int>::const_iterator iter = _result.trace().begin(); iter != _result.trace().end();iter++ ){
+		std::cout<<_net->transitionNames()[*iter]<<std::endl;
+	}
+
+	/*for(int i = 0; i < _net->numberOfTransitions(); i++){
+		//std::cout<<_net->transitionNames()[i]<<std::endl;
+		if(_net->transitionNames()[i] == "COORDINATOR_Canceling_Compensated_p_INBOUND")
+			std::cout<<_net->getConditions()[i]->toString()<<std::endl;
+	}*/
 }
 
 void QueryThread::abort(){

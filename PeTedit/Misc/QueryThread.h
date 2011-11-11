@@ -69,6 +69,7 @@ private:
 	PetriEngine::PetriNet* _net;
 	PetriEngine::MarkVal* _m0;
 	PetriEngine::VarVal* _a0;
+	PetriEngine::BoolVal* _b0;
 	PetriEngine::Reachability::ReachabilityResult _result;
 	void emitProgressChanged(qreal progress);
 private slots:

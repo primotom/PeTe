@@ -29,15 +29,16 @@
 
 #include "DataFormats/PNMLParser.h"
 #include "DataFormats/PNMLBuilder.h"
+#include "DataFormats/protocolparser.h"
 #include "DataFormats/TAPAALExportBuilder.h"
 #include "NetItems/PetriNetSceneBuilder.h"
-#include "Widgets/VariableDelegate.h"
+#include "Widgets/BooleanVariableDelegate.h"
 #include "Widgets/MemoryMonitor.h"
 
 #include "Misc/ValidationIssuesModel.h"
 #include "Misc/QueryModel.h"
 #include "Misc/ProgressViewDelegate.h"
-#include "Misc/VariableModel.h"
+#include "Misc/BooleanVariableModel.h"
 #include "DataFormats/DTAPNParser.h"
 #include "Dialogs/ImportDTAPNDialog.h"
 
@@ -71,7 +72,7 @@ MainWindow::MainWindow(QWidget *parent) :
 	ui->statusBar->addPermanentWidget(new MemoryMonitor(this));
 
 	// Variable editor
-	VariableDelegate* delegate = new VariableDelegate(this);
+	BooleanVariableDelegate* delegate = new BooleanVariableDelegate(this);
 	ui->variableView->setItemDelegate(delegate);
 
 	//Set delegate for query editor
@@ -200,8 +201,16 @@ void MainWindow::on_OpenAction_triggered(){
 		lastLoadSavePath = QFileInfo(fname).absoluteDir().absolutePath();
 		PetriNetView* view = new PetriNetView();
 		PetriNetSceneBuilder builder(&undoGroup, view);
-		PNMLParser p;
-		p.parse(&file, &builder, &builder);
+
+
+		if (fname.endsWith(".xml")){
+			ProtocolParser p;
+			p.parse(&file, &builder, &builder);
+		}else{
+			PNMLParser p;
+			p.parse(&file, &builder, &builder);
+		}
+
 		file.close();
 		PetriNetScene* scene = builder.makeScene();
 		scene->setFilename(fname);

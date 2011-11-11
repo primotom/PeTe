@@ -40,8 +40,7 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 		return ReachabilityResult(ReachabilityResult::Satisfied,
 								  "A state satisfying the query was found");
 	//Create StateSet
-	MonotonicityContext* test;
-	OrderableStateSet states(net,*test);
+	StateSet states(net);
 	std::list<Step> stack;
 
 	StateAllocator<1000000> allocator(net);
@@ -73,8 +72,7 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 
 		//Take first step of the stack
 		State* s = stack.back().state;
-		//Mark as visited
-		states.visit(s);
+
 		//if(stack.back().t == 0)
 			//expandedStates++;
 		ns->setParent(s);

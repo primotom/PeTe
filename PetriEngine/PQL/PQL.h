@@ -137,6 +137,8 @@ public:
 	virtual double distance(DistanceContext& context) const = 0;
 	/** Scale all nested literals by factor */
 	virtual void scale(int factor) = 0;
+	/** Explores assignment conditions to identify possible bad and good places */
+	virtual void monoStatus(MonotonicityContext& context, std::vector<int>& variableStatus, int varIndex) = 0;
 	/** Explores conditions to find bad places and variables */
 	virtual void isBad(MonotonicityContext& context) = 0;
 };
@@ -180,6 +182,8 @@ public:
 				  VarVal* ranges,
 				  size_t nInts,
 				  size_t nBools) const;
+	/** Perform status check on variables for MonotonicityContext */
+	void monoStatus(MonotonicityContext &context, std::vector<int> &status);
 	std::string toString(){
 		std::string t;
 		for(iter it = assignments.begin(); it != assignments.end(); it++){

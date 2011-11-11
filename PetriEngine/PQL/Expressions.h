@@ -109,23 +109,6 @@ private:
 	Expr* _expr;
 };
 
-/** Literal boolean value expression */
-class BooleanLiteralExpr : public Expr {
-public:
-	BooleanLiteralExpr(bool value) : _value() {}
-	void analyze(AnalysisContext &context);
-	bool pfree() const;
-	int evaluate(const EvaluationContext &context) const;
-	llvm::Value* codegen(CodeGenerationContext &context) const;
-	std::string toString() const;
-	Expr::Types type() const;
-	bool value() const { return _value; }
-	void scale(int factor);
-	void isBad(MonotonicityContext &context);
-private:
-	bool _value;
-};
-
 /** Literal integer value expression */
 class IntegerLiteralExpr : public Expr {
 public:
@@ -189,6 +172,7 @@ public:
 	std::string toString() const;
 	void scale(int factor);
 	std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
+	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus, int varIndex);
 	void isBad(MonotonicityContext &context);
 private:
 	virtual bool apply(bool b1, bool b2) const = 0;
@@ -241,6 +225,7 @@ public:
 	std::string toString() const;
 	void scale(int factor);
 	std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
+	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus, int varIndex);
 	void isBad(MonotonicityContext &context);
 private:
 	virtual bool apply(int v1, int v2) const = 0;
@@ -355,17 +340,33 @@ public:
 	VariableCondition(std::string name, int srcOffset) : _name(name) {
 		_srcOffset = srcOffset;
 	}
-	bool evaluate(const EvaluationContext &context) const;
 	void analyze(AnalysisContext &context);
 	bool evaluate(const EvaluationContext &context) const;
 	std::string toString() const;
 	double distance(DistanceContext &context) const;
 	void scale(int factor);
+	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus, int varIndex);
 	void isBad(MonotonicityContext &context);
 private:
 	std::string _name;
 	int _srcOffset;
 	int _offsetInMarking;
+};
+
+/** Literal boolean value expression */
+class BooleanLiteral : public Condition {
+public:
+	BooleanLiteral(bool value) : _value(value) {}
+	void analyze(AnalysisContext &context);
+	bool evaluate(const EvaluationContext &context) const;
+	std::string toString() const;
+	double distance(DistanceContext &context) const;
+	bool value() const { return _value; }
+	void scale(int factor);
+	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus, int varIndex);
+	void isBad(MonotonicityContext &context);
+private:
+	bool _value;
 };
 
 /* Not condition */
@@ -383,6 +384,7 @@ public:
 	std::string toString() const;
 	std::string toTAPAALQuery(TAPAALConditionExportContext& context) const;
 	void scale(int factor);
+	void monoStatus(MonotonicityContext &context, std::vector<int> &variableStatus, int varIndex);
 	void isBad(MonotonicityContext &context);
 private:
 	Condition* _cond;

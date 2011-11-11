@@ -22,8 +22,7 @@
 #define COL_NAME	0
 #define COL_VALUE	1
 #define COL_RANGE	2
-#define COL_TYPE	3
-#define COL_COUNT	4
+#define COL_COUNT	3
 
 VariableModel::VariableModel(PetriNetScene* net)
 	: QAbstractTableModel(net)
@@ -49,17 +48,10 @@ QVariant VariableModel::data(const QModelIndex &index, int role) const{
 
 	if(index.column() == COL_NAME)
 		return variable.name;
-	if(index.column() == COL_VALUE) {
-		if(variable.type == "Integer")
-			return variable.intValue;
-		else
-			return variable.boolValue;
-	}
+	if(index.column() == COL_VALUE)
+		return variable.value;
 	if(index.column() == COL_RANGE)
 		return variable.range;
-	if(index.column() == COL_TYPE){
-		return variable.type;
-	}
 
 	return QVariant();
 }
@@ -77,46 +69,28 @@ bool VariableModel::setData(const QModelIndex &index, const QVariant &value, int
 		}
 	}
 	if(index.column() == COL_VALUE){
-		if(variable.type == "Integer"){
-			int newValue = value.toInt();
-			if(newValue <= variable.range && newValue >= 0){
-				variable.intValue = newValue;
-				retVal = true;
-			} else if(newValue >= 0){
-				variable.intValue = variable.range;
-			}
-		} else {
-			QString newValue = value.toString();
-			if(newValue == "true" && !variable.boolValue){
-				variable.boolValue = true;
-				retVal = true;
-			} else if(newValue == "false" && variable.boolValue){
-				variable.boolValue = false;
-				retVal = true;
-			}
+		int newValue = value.toInt();
+		if(newValue <= variable.range && newValue >= 0){
+			variable.value = newValue;
+			retVal = true;
+		} else if(newValue >= 0){
+			variable.value = variable.range;
 		}
 	}
 	if(index.column() == COL_RANGE){
 		int newValue = value.toInt();
 		if(newValue < 0){
 			variable.range = 0;
-			variable.intValue = 0;
+			variable.value = 0;
 		}
-		if(newValue <= variable.intValue){
-			variable.intValue = newValue;
+		if(newValue <= variable.value){
+			variable.value = newValue;
 			variable.range = newValue;
 		}else{
 			variable.range = newValue;
 			retVal = true;
 		}
 	}
-	if(index.column() == COL_TYPE){
-		if(variable.type != value.toString()){
-			variable.type = value.toString();
-			retVal = true;
-		}
-	}
-
 	emitDataChanged(index.row());
 	return retVal;
 }
@@ -130,8 +104,6 @@ QVariant VariableModel::headerData(int section, Qt::Orientation orientation, int
 		return tr("Value");
 	else if(section == COL_RANGE)
 		return tr("Range");
-	else if(section == COL_TYPE)
-		return tr("Type");
 	return QVariant();
 }
 
@@ -155,9 +127,8 @@ void VariableModel::addVariable(QString name, int value, int range){
 
 	Variable v;
 	v.name = name;
-	v.intValue=value;
+	v.value=value;
 	v.range=range;
-	v.type="Integer";
 	_variables.insert(row,v);
 	this->endInsertRows();
 }

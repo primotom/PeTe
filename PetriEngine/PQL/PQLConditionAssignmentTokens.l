@@ -1,16 +1,16 @@
 %{
 #include <string>
 #include "PQL.h"
-#include "PQLConditionParser.parser.hpp"
+#include "PQLConditionAssignmentParser.parser.hpp"
 
-#define SAVE_TOKEN pqlclval.string = new std::string(pqlctext, pqlcleng)
-#define TOKEN(t) (pqlclval.token = t)
+#define SAVE_TOKEN pqlcalval.string = new std::string(pqlcatext, pqlcaleng)
+#define TOKEN(t) (pqlcalval.token = t)
 
-extern "C" int pqlcwrap(){return 1;}
-extern PetriEngine::PQL::Condition* conditionQuery;
-extern int pqlcparse();
+extern "C" int pqlcawrap(){return 1;}
+extern PetriEngine::PQL::AssignmentExpression* conditionAssignment;
+extern int pqlcaparse();
 %}
-%option prefix="pqlc"
+%option prefix="pqlca"
 %option nounput
 
 digit         [0-9]
@@ -25,6 +25,10 @@ letter        [a-zA-Z_]
 "OR"						{return TOKEN(OR);}
 "not"						{return TOKEN(NOT);}
 "NOT"						{return TOKEN(NOT);}
+"true"						{return TOKEN(TRUE);}
+"TRUE"						{return TOKEN(TRUE);}
+"false"						{return TOKEN(FALSE);}
+"FALSE"						{return TOKEN(FALSE);}
 {letter}({letter}|{digit})*	{SAVE_TOKEN; return ID;}
 {digit}+					{SAVE_TOKEN; return INT;}
 "&&"						{return TOKEN(AND);}
@@ -39,23 +43,25 @@ letter        [a-zA-Z_]
 "("							{return TOKEN(LPAREN);}
 ")"							{return TOKEN(RPAREN);}
 "="							{return TOKEN(EQUAL);}
-.							{printf("Unknown token %s!\n", pqlctext); yyterminate();}
+":="						{return TOKEN(ASSIGN);}
+";"							{return TOKEN(SEMI);}
+.							{printf("Unknown token %s!\n", pqlcatext); yyterminate();}
 
 %%
 
 namespace PetriEngine{ namespace PQL{
-Condition* ParseCondition(const std::string& queryString){
-	conditionQuery = NULL;
+AssignmentExpression* ParseConditionAssignment(const std::string& queryString){
+	conditionAssignment = NULL;
 
 	//Load up input buffer in Flex
-	YY_BUFFER_STATE buf = pqlc_scan_string(queryString.c_str());
+	YY_BUFFER_STATE buf = pqlca_scan_string(queryString.c_str());
 
-	if(pqlcparse() != 0)
+	if(pqlcaparse() != 0)
 		return NULL;
 
 	//Delete the buffer
-	pqlc_delete_buffer(buf);
+	pqlca_delete_buffer(buf);
 
-	return conditionQuery;
+	return conditionAssignment;
 }
 }}

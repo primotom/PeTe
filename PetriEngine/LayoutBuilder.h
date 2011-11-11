@@ -46,7 +46,7 @@ class LayoutBuilder : public AbstractPetriNetBuilder
 		std::string name;
 		bool initialValue;
 	};
-	typedef std:list<BoolVar> BoolVarList;
+	typedef std::list<BoolVar> BoolVarList;
 	typedef std::list<BoolVar>::iterator BoolVarIter;
 
 	struct Place{

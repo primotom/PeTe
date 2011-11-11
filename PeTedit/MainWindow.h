@@ -24,8 +24,9 @@
 #include <QActionGroup>
 #include <QTableView>
 #include <QDoubleSpinBox>
-
 #include "NetItems/PetriNetScene.h"
+
+#include <iostream>
 
 namespace Ui {
     class MainWindow;

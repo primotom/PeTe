@@ -37,5 +37,8 @@ Condition* ParseQuery(const std::string& queryString);
 SUMoQuery ParseSUMoQuery(const std::string& queryString);
 AssignmentExpression* ParseAssignment(const std::string& assignmentString);
 
+Condition* ParseCondition(const std::string& queryString);
+AssignmentExpression* ParseConditionAssignment(const std::string& assignmentString);
+
 }}
 #endif // PQLPARSER_H

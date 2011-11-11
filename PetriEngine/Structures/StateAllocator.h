@@ -41,6 +41,7 @@ public:
 		_nPlaces = nPlaces;
 		_nVars = nVars;
 		_nBoolVars = nBoolVars;
+		std::cerr<<","<< _nBoolVars<<std::endl;
 		_b = NULL;
 		createNewBlock();
 	}
@@ -48,6 +49,7 @@ public:
 		_nPlaces = net.numberOfPlaces();
 		_nVars = net.numberOfIntVariables();
 		_nBoolVars = net.numberOfBoolVariables();
+		std::cerr<<",."<< _nBoolVars<<std::endl;
 		_b = NULL;
 		createNewBlock();
 	}
@@ -75,6 +77,7 @@ public:
 	}
 	/** Get the size of a state, use for alloca */
 	static inline size_t stateSize(const PetriNet& net){
+
 		return sizeof(State) + sizeof(MarkVal) * net.numberOfPlaces() + (sizeof(VarVal) * net.numberOfIntVariables())+ (sizeof(BoolVal) * net.numberOfBoolVariables());
 	}
 	/** Initialize state allocated using alloc, size of memory is expected to be stateSize(net) */

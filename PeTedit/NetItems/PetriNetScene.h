@@ -35,7 +35,7 @@ class ArcItem;
 class ValidationIssuesModel;
 class QueryModel;
 class PNMLBuilder;
-class VariableModel;
+class BooleanVariableModel;
 class PetriNetView;
 class TAPAALExportBuilder;
 
@@ -96,7 +96,7 @@ public:
 	void produce(TAPAALExportBuilder* builder);
 
 	/** Get the variables */
-	VariableModel* variables() { return this->_variables; }
+	BooleanVariableModel* variables() { return this->_variables; }
 
 	/** Get query model */
 	QueryModel* queries() { return _queries; }
@@ -130,7 +130,7 @@ private:
 	QString _filename;
 
 	/** Model representing the variables of the net */
-	VariableModel* _variables;
+	BooleanVariableModel* _variables;
 
 	/** Model holding queries */
 	QueryModel* _queries;
