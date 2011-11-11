@@ -104,8 +104,10 @@ bool PetriNet::fire(unsigned int t,
 	//Check the condition
 
 	if(_conditions[t] &&
-	   !_conditions[t]->evaluate(PQL::EvaluationContext(m, a, b)))
+	   !_conditions[t]->evaluate(PQL::EvaluationContext(m, a, b))){
+		std::cerr<<"condition breaks"<<std::endl;
 		return false;
+	}
 
 	const MarkVal* tv = _tv(t);
 	//Check that we can take from the marking
