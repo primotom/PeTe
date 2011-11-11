@@ -17,11 +17,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include "OrderedStateSearch.h"
+#include "FullOrderedStateSearch.h"
 #include "../PQL/PQL.h"
 #include "../PQL/Contexts.h"
-#include "../Structures/StateSet.h"
-#include "../Structures/FullOrderableStateSet.h"
+#include "../Structures/OrderableStateSet.h"
 #include "../Structures/StateAllocator.h"
 #include <list>
 #include <string.h>
@@ -42,7 +41,7 @@ ReachabilityResult FullOrderedStateSearch::reachable(const PetriNet &net,
 								  "A state satisfying the query was found");
 	//Create StateSet
 	MonotonicityContext* test;
-	OrderableStateSet states(net,*test);
+	OrderableStateSet states(net,test);
 	std::list<Step> stack;
 
 	StateAllocator<1000000> allocator(net);

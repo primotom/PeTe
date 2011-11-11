@@ -41,7 +41,7 @@ SUITE(OrderableStateSetTest){
 		}
 
 		PetriNetBuilder* b;
-		b->addPace("p1", 0, 0,0);
+		//b->addPace("p1", 0, 0,0);
 
 
 
