@@ -40,8 +40,10 @@ ReachabilityResult FullOrderedStateSearch::reachable(const PetriNet &net,
 		return ReachabilityResult(ReachabilityResult::Satisfied,
 								  "A state satisfying the query was found");
 	//Create StateSet
-	MonotonicityContext* test;
-	OrderableStateSet states(net,test);
+	MonotonicityContext context(&net);
+	context.analyze();
+
+	OrderableStateSet states(net,&context);
 	std::list<Step> stack;
 
 	StateAllocator<1000000> allocator(net);
