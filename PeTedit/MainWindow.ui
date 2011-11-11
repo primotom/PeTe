@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>821</width>
-    <height>591</height>
+    <width>790</width>
+    <height>614</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -66,8 +66,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>821</width>
-     <height>24</height>
+     <width>790</width>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -154,6 +154,8 @@
    <addaction name="InsertTransitionModeAction"/>
    <addaction name="InsertArcModeAction"/>
    <addaction name="PointerModeAction"/>
+   <addaction name="separator"/>
+   <addaction name="SimulationModeAction"/>
   </widget>
   <widget class="QToolBar" name="toolsToolBar">
    <property name="windowTitle">
@@ -509,6 +511,64 @@
     </layout>
    </widget>
   </widget>
+  <widget class="QDockWidget" name="traceDock">
+   <property name="features">
+    <set>QDockWidget::DockWidgetClosable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::BottomDockWidgetArea|Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Trace</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_6">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QListView" name="traceView"/>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QPushButton" name="traceUpButton">
+         <property name="text">
+          <string>Ups</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="traceDownButton">
+         <property name="text">
+          <string>Downs</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
   <action name="NewPNDVAction">
    <property name="icon">
     <iconset resource="resources.qrc">
@@ -718,6 +778,22 @@
     <string>Export TAPN for &amp;TAPAAL</string>
    </property>
   </action>
+  <action name="SimulationModeAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/Icons/24x24/begin-simulation.png</normaloff>
+     <normalon>:/Icons/24x24/end-simulation.png</normalon>:/Icons/24x24/begin-simulation.png</iconset>
+   </property>
+   <property name="text">
+    <string>Simulation Mode</string>
+   </property>
+   <property name="toolTip">
+    <string>Enter simulation mode to investigate the network</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
@@ -731,8 +807,8 @@
    <slot>trigger()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>43</x>
-     <y>459</y>
+     <x>126</x>
+     <y>481</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
