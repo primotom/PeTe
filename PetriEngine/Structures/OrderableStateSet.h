@@ -16,12 +16,9 @@ public:
 	bool add(State* state){
 		for(std::list<std::pair<bool,State*> >::iterator it = _states.begin() ; it != _states.end();){
 			if (less((*it).second, state)){
-				std::cerr<<"remove "<<std::endl;
 				_states.remove(*it++);
 			}else{
-				std::cerr<<"else "<<std::endl;
 				if(leq(state,(*it).second)){
-					std::cerr<<"return "<<std::endl;
 					return false;
 				}
 				it++;
