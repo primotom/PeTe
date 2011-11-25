@@ -29,7 +29,7 @@ public:
 				it++;
 			//}
 		}
-		_states.push_back(std::make_pair(false,state));;
+		_states.push_back(std::make_pair(false,state));
 		return true;
 
     }

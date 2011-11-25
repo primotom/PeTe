@@ -22,6 +22,7 @@
 #include "../PQL/Contexts.h"
 #include "../Structures/StateSet.h"
 #include "../Structures/OrderableStateSet.h"
+#include "../Structures/NaiveListStateSet.h"
 #include "../Structures/StateAllocator.h"
 #include <list>
 #include <string.h>
@@ -45,6 +46,8 @@ ReachabilityResult OrderedStateSearch::reachable(const PetriNet &net,
 	context.analyze();
 
 	OrderableStateSet states(net,&context);
+	//NaiveListStateSet states;
+
 	std::list<Step> stack;
 
 	StateAllocator<1000000> allocator(net);

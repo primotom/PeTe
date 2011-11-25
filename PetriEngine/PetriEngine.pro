@@ -76,7 +76,8 @@ HEADERS		   += \
     Reachability/StateSearch.h \
     Structures/OrderableStateSet.h \
     Reachability/OrderedStateSearch.h \
-    Reachability/FullOrderedStateSearch.h
+    Reachability/FullOrderedStateSearch.h \
+    Structures/NaiveListStateSet.h
 	#Reachability/CoverabilityTreeNode.h
 
 TARGET			= ../PetriEngine
