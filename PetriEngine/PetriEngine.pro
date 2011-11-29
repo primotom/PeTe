@@ -72,7 +72,8 @@ HEADERS		   += \
     Reachability/UltimateSearch.h \
     Reachability/RandomQueryGenerator.h \
     Reachability/StateSearch.h \
-    Structures/OrderableStateSet.h
+    Structures/OrderableStateSet.h \
+    Structures/ROBDDStateSet.h
 	#Reachability/CoverabilityTreeNode.h
 
 TARGET			= ../PetriEngine

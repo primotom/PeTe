@@ -22,6 +22,7 @@
 #include "../Structures/StateSet.h"
 #include "../Structures/OrderableStateSet.h"
 #include "../Structures/StateAllocator.h"
+#include "../Structures/ROBDDStateSet.h"
 #include <list>
 #include <string.h>
 
@@ -40,7 +41,9 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 		return ReachabilityResult(ReachabilityResult::Satisfied,
 								  "A state satisfying the query was found");
 	//Create StateSet
-	StateSet states(net);
+	MonotonicityContext context(&net);
+	context.analyze();
+	ROBDDStateSet states(net,&context);
 	std::list<Step> stack;
 
 	StateAllocator<1000000> allocator(net);

@@ -13,19 +13,17 @@ public:
 	_net = &net;
     }
     bool add(State* state){
-
-	for(std::list<std::pair<bool,State*> >::iterator it = _states.begin() ; it != _states.end();){
-	    if (leq(state,(*it).second)){
-		_states.remove(*it++);
-	    }else{
-		if(leq(state,(*it).second)){
-		    return false;
+		for(std::list<std::pair<bool,State*> >::iterator it = _states.begin() ; it != _states.end();){
+			if (leq(state,(*it).second)){
+				_states.remove(*it++);
+			}else{
+				if(leq(state,(*it).second)){
+				  return false;
+				}
+			it++;
+			}
 		}
-		it++;
-	    }
-	}
-	;
-	_states.push_back(std::make_pair(false,state));;
+	_states.push_back(std::make_pair(false,state));
 	return true;
 
     }
