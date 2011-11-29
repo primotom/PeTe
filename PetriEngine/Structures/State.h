@@ -103,6 +103,8 @@ public:
 				hash ^=	(state->_marking[i] << (i*4 % (sizeof(MarkVal)*8))) | (state->_marking[i] >> (32 - (i*4 % (sizeof(MarkVal)*8))));
 			for(unsigned int i = 0; i < nIntVariables; i++)
 				hash ^= (state->_intValuation[i] << (i*4 % (sizeof(VarVal)*8))) | (state->_intValuation[i] >> (32 - (i*4 % (sizeof(VarVal)*8))));
+			for(unsigned int i = 0; i < nBoolVariables; i++)
+				hash ^= (state->_boolValuation[i] << (i*4 % (sizeof(BoolVal)*8))) | (state->_boolValuation[i] >> (32 - (i*4 % (sizeof(BoolVal)*8))));
 			return hash; //TODO need implementation for bools if we are going to use it
 		}
 		hash(unsigned int places, unsigned int variables)

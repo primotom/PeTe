@@ -1,4 +1,4 @@
-no_processes = 4
+no_processes = 10
 can_fail = False
 
 def print_message(msg):
