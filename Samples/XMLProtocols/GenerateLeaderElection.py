@@ -1,4 +1,4 @@
-no_processes = 10
+no_processes = 25
 can_fail = False
 
 def print_message(msg):
@@ -82,5 +82,6 @@ def print_protocol():
 	print_role('El')
 
 	print '</protocol>'
+
 
 print_protocol()

@@ -1,0 +1,1199 @@
+<protocol name="LeaderElection" medium="SET" capacity="6">
+<messages>
+	<message>msg_0_0</message>
+	<message>msg_0_1</message>
+	<message>msg_0_2</message>
+	<message>msg_0_3</message>
+	<message>msg_0_4</message>
+	<message>msg_0_5</message>
+	<message>msg_0_6</message>
+	<message>msg_0_7</message>
+	<message>msg_0_8</message>
+	<message>msg_0_9</message>
+	<message>msg_1_0</message>
+	<message>msg_1_1</message>
+	<message>msg_1_2</message>
+	<message>msg_1_3</message>
+	<message>msg_1_4</message>
+	<message>msg_1_5</message>
+	<message>msg_1_6</message>
+	<message>msg_1_7</message>
+	<message>msg_1_8</message>
+	<message>msg_1_9</message>
+	<message>msg_2_0</message>
+	<message>msg_2_1</message>
+	<message>msg_2_2</message>
+	<message>msg_2_3</message>
+	<message>msg_2_4</message>
+	<message>msg_2_5</message>
+	<message>msg_2_6</message>
+	<message>msg_2_7</message>
+	<message>msg_2_8</message>
+	<message>msg_2_9</message>
+	<message>msg_3_0</message>
+	<message>msg_3_1</message>
+	<message>msg_3_2</message>
+	<message>msg_3_3</message>
+	<message>msg_3_4</message>
+	<message>msg_3_5</message>
+	<message>msg_3_6</message>
+	<message>msg_3_7</message>
+	<message>msg_3_8</message>
+	<message>msg_3_9</message>
+	<message>msg_4_0</message>
+	<message>msg_4_1</message>
+	<message>msg_4_2</message>
+	<message>msg_4_3</message>
+	<message>msg_4_4</message>
+	<message>msg_4_5</message>
+	<message>msg_4_6</message>
+	<message>msg_4_7</message>
+	<message>msg_4_8</message>
+	<message>msg_4_9</message>
+	<message>msg_5_0</message>
+	<message>msg_5_1</message>
+	<message>msg_5_2</message>
+	<message>msg_5_3</message>
+	<message>msg_5_4</message>
+	<message>msg_5_5</message>
+	<message>msg_5_6</message>
+	<message>msg_5_7</message>
+	<message>msg_5_8</message>
+	<message>msg_5_9</message>
+	<message>msg_6_0</message>
+	<message>msg_6_1</message>
+	<message>msg_6_2</message>
+	<message>msg_6_3</message>
+	<message>msg_6_4</message>
+	<message>msg_6_5</message>
+	<message>msg_6_6</message>
+	<message>msg_6_7</message>
+	<message>msg_6_8</message>
+	<message>msg_6_9</message>
+	<message>msg_7_0</message>
+	<message>msg_7_1</message>
+	<message>msg_7_2</message>
+	<message>msg_7_3</message>
+	<message>msg_7_4</message>
+	<message>msg_7_5</message>
+	<message>msg_7_6</message>
+	<message>msg_7_7</message>
+	<message>msg_7_8</message>
+	<message>msg_7_9</message>
+	<message>msg_8_0</message>
+	<message>msg_8_1</message>
+	<message>msg_8_2</message>
+	<message>msg_8_3</message>
+	<message>msg_8_4</message>
+	<message>msg_8_5</message>
+	<message>msg_8_6</message>
+	<message>msg_8_7</message>
+	<message>msg_8_8</message>
+	<message>msg_8_9</message>
+	<message>msg_9_0</message>
+	<message>msg_9_1</message>
+	<message>msg_9_2</message>
+	<message>msg_9_3</message>
+	<message>msg_9_4</message>
+	<message>msg_9_5</message>
+	<message>msg_9_6</message>
+	<message>msg_9_7</message>
+	<message>msg_9_8</message>
+	<message>msg_9_9</message>
+</messages>
+<role name="El">
+<states>
+	<state type="initial">p0</state>
+	<state type="initial">p1</state>
+	<state type="initial">p2</state>
+	<state type="initial">p3</state>
+	<state type="initial">p4</state>
+	<state type="initial">p5</state>
+	<state type="initial">p6</state>
+	<state type="initial">p7</state>
+	<state type="initial">p8</state>
+	<state type="initial">p9</state>
+	<state>Leader</state>
+</states>
+<rule id="p0_start">
+	<pre>
+		<current_state>p0</current_state>
+	</pre>
+	<post>
+		<next_state>p0</next_state>
+		<send_message>msg_0_1</send_message>
+	</post>
+</rule>
+<rule id="elect_p0">
+	<pre>
+		<current_state>p0</current_state>
+		<received_message>msg_0_0</received_message>
+	</pre>
+	<post>
+		<next_state>Leader</next_state>
+	</post>
+</rule>
+<rule id="receive_larger_p0_1">
+	<pre>
+		<current_state>p0</current_state>
+		<received_message>msg_1_0</received_message>
+	</pre>
+	<post>
+		<next_state>p0</next_state>
+		<send_message>msg_1_1</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p0_2">
+	<pre>
+		<current_state>p0</current_state>
+		<received_message>msg_2_0</received_message>
+	</pre>
+	<post>
+		<next_state>p0</next_state>
+		<send_message>msg_2_1</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p0_3">
+	<pre>
+		<current_state>p0</current_state>
+		<received_message>msg_3_0</received_message>
+	</pre>
+	<post>
+		<next_state>p0</next_state>
+		<send_message>msg_3_1</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p0_4">
+	<pre>
+		<current_state>p0</current_state>
+		<received_message>msg_4_0</received_message>
+	</pre>
+	<post>
+		<next_state>p0</next_state>
+		<send_message>msg_4_1</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p0_5">
+	<pre>
+		<current_state>p0</current_state>
+		<received_message>msg_5_0</received_message>
+	</pre>
+	<post>
+		<next_state>p0</next_state>
+		<send_message>msg_5_1</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p0_6">
+	<pre>
+		<current_state>p0</current_state>
+		<received_message>msg_6_0</received_message>
+	</pre>
+	<post>
+		<next_state>p0</next_state>
+		<send_message>msg_6_1</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p0_7">
+	<pre>
+		<current_state>p0</current_state>
+		<received_message>msg_7_0</received_message>
+	</pre>
+	<post>
+		<next_state>p0</next_state>
+		<send_message>msg_7_1</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p0_8">
+	<pre>
+		<current_state>p0</current_state>
+		<received_message>msg_8_0</received_message>
+	</pre>
+	<post>
+		<next_state>p0</next_state>
+		<send_message>msg_8_1</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p0_9">
+	<pre>
+		<current_state>p0</current_state>
+		<received_message>msg_9_0</received_message>
+	</pre>
+	<post>
+		<next_state>p0</next_state>
+		<send_message>msg_9_1</send_message>
+	</post>
+</rule>
+<rule id="p1_start">
+	<pre>
+		<current_state>p1</current_state>
+	</pre>
+	<post>
+		<next_state>p1</next_state>
+		<send_message>msg_1_2</send_message>
+	</post>
+</rule>
+<rule id="elect_p1">
+	<pre>
+		<current_state>p1</current_state>
+		<received_message>msg_1_1</received_message>
+	</pre>
+	<post>
+		<next_state>Leader</next_state>
+	</post>
+</rule>
+<rule id="receive_smaller_p1_0">
+	<pre>
+		<current_state>p1</current_state>
+		<received_message>msg_0_1</received_message>
+	</pre>
+	<post>
+		<next_state>p1</next_state>
+		<send_message>msg_1_2</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p1_2">
+	<pre>
+		<current_state>p1</current_state>
+		<received_message>msg_2_1</received_message>
+	</pre>
+	<post>
+		<next_state>p1</next_state>
+		<send_message>msg_2_2</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p1_3">
+	<pre>
+		<current_state>p1</current_state>
+		<received_message>msg_3_1</received_message>
+	</pre>
+	<post>
+		<next_state>p1</next_state>
+		<send_message>msg_3_2</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p1_4">
+	<pre>
+		<current_state>p1</current_state>
+		<received_message>msg_4_1</received_message>
+	</pre>
+	<post>
+		<next_state>p1</next_state>
+		<send_message>msg_4_2</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p1_5">
+	<pre>
+		<current_state>p1</current_state>
+		<received_message>msg_5_1</received_message>
+	</pre>
+	<post>
+		<next_state>p1</next_state>
+		<send_message>msg_5_2</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p1_6">
+	<pre>
+		<current_state>p1</current_state>
+		<received_message>msg_6_1</received_message>
+	</pre>
+	<post>
+		<next_state>p1</next_state>
+		<send_message>msg_6_2</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p1_7">
+	<pre>
+		<current_state>p1</current_state>
+		<received_message>msg_7_1</received_message>
+	</pre>
+	<post>
+		<next_state>p1</next_state>
+		<send_message>msg_7_2</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p1_8">
+	<pre>
+		<current_state>p1</current_state>
+		<received_message>msg_8_1</received_message>
+	</pre>
+	<post>
+		<next_state>p1</next_state>
+		<send_message>msg_8_2</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p1_9">
+	<pre>
+		<current_state>p1</current_state>
+		<received_message>msg_9_1</received_message>
+	</pre>
+	<post>
+		<next_state>p1</next_state>
+		<send_message>msg_9_2</send_message>
+	</post>
+</rule>
+<rule id="p2_start">
+	<pre>
+		<current_state>p2</current_state>
+	</pre>
+	<post>
+		<next_state>p2</next_state>
+		<send_message>msg_2_3</send_message>
+	</post>
+</rule>
+<rule id="elect_p2">
+	<pre>
+		<current_state>p2</current_state>
+		<received_message>msg_2_2</received_message>
+	</pre>
+	<post>
+		<next_state>Leader</next_state>
+	</post>
+</rule>
+<rule id="receive_smaller_p2_0">
+	<pre>
+		<current_state>p2</current_state>
+		<received_message>msg_0_2</received_message>
+	</pre>
+	<post>
+		<next_state>p2</next_state>
+		<send_message>msg_2_3</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p2_1">
+	<pre>
+		<current_state>p2</current_state>
+		<received_message>msg_1_2</received_message>
+	</pre>
+	<post>
+		<next_state>p2</next_state>
+		<send_message>msg_2_3</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p2_3">
+	<pre>
+		<current_state>p2</current_state>
+		<received_message>msg_3_2</received_message>
+	</pre>
+	<post>
+		<next_state>p2</next_state>
+		<send_message>msg_3_3</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p2_4">
+	<pre>
+		<current_state>p2</current_state>
+		<received_message>msg_4_2</received_message>
+	</pre>
+	<post>
+		<next_state>p2</next_state>
+		<send_message>msg_4_3</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p2_5">
+	<pre>
+		<current_state>p2</current_state>
+		<received_message>msg_5_2</received_message>
+	</pre>
+	<post>
+		<next_state>p2</next_state>
+		<send_message>msg_5_3</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p2_6">
+	<pre>
+		<current_state>p2</current_state>
+		<received_message>msg_6_2</received_message>
+	</pre>
+	<post>
+		<next_state>p2</next_state>
+		<send_message>msg_6_3</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p2_7">
+	<pre>
+		<current_state>p2</current_state>
+		<received_message>msg_7_2</received_message>
+	</pre>
+	<post>
+		<next_state>p2</next_state>
+		<send_message>msg_7_3</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p2_8">
+	<pre>
+		<current_state>p2</current_state>
+		<received_message>msg_8_2</received_message>
+	</pre>
+	<post>
+		<next_state>p2</next_state>
+		<send_message>msg_8_3</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p2_9">
+	<pre>
+		<current_state>p2</current_state>
+		<received_message>msg_9_2</received_message>
+	</pre>
+	<post>
+		<next_state>p2</next_state>
+		<send_message>msg_9_3</send_message>
+	</post>
+</rule>
+<rule id="p3_start">
+	<pre>
+		<current_state>p3</current_state>
+	</pre>
+	<post>
+		<next_state>p3</next_state>
+		<send_message>msg_3_4</send_message>
+	</post>
+</rule>
+<rule id="elect_p3">
+	<pre>
+		<current_state>p3</current_state>
+		<received_message>msg_3_3</received_message>
+	</pre>
+	<post>
+		<next_state>Leader</next_state>
+	</post>
+</rule>
+<rule id="receive_smaller_p3_0">
+	<pre>
+		<current_state>p3</current_state>
+		<received_message>msg_0_3</received_message>
+	</pre>
+	<post>
+		<next_state>p3</next_state>
+		<send_message>msg_3_4</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p3_1">
+	<pre>
+		<current_state>p3</current_state>
+		<received_message>msg_1_3</received_message>
+	</pre>
+	<post>
+		<next_state>p3</next_state>
+		<send_message>msg_3_4</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p3_2">
+	<pre>
+		<current_state>p3</current_state>
+		<received_message>msg_2_3</received_message>
+	</pre>
+	<post>
+		<next_state>p3</next_state>
+		<send_message>msg_3_4</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p3_4">
+	<pre>
+		<current_state>p3</current_state>
+		<received_message>msg_4_3</received_message>
+	</pre>
+	<post>
+		<next_state>p3</next_state>
+		<send_message>msg_4_4</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p3_5">
+	<pre>
+		<current_state>p3</current_state>
+		<received_message>msg_5_3</received_message>
+	</pre>
+	<post>
+		<next_state>p3</next_state>
+		<send_message>msg_5_4</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p3_6">
+	<pre>
+		<current_state>p3</current_state>
+		<received_message>msg_6_3</received_message>
+	</pre>
+	<post>
+		<next_state>p3</next_state>
+		<send_message>msg_6_4</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p3_7">
+	<pre>
+		<current_state>p3</current_state>
+		<received_message>msg_7_3</received_message>
+	</pre>
+	<post>
+		<next_state>p3</next_state>
+		<send_message>msg_7_4</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p3_8">
+	<pre>
+		<current_state>p3</current_state>
+		<received_message>msg_8_3</received_message>
+	</pre>
+	<post>
+		<next_state>p3</next_state>
+		<send_message>msg_8_4</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p3_9">
+	<pre>
+		<current_state>p3</current_state>
+		<received_message>msg_9_3</received_message>
+	</pre>
+	<post>
+		<next_state>p3</next_state>
+		<send_message>msg_9_4</send_message>
+	</post>
+</rule>
+<rule id="p4_start">
+	<pre>
+		<current_state>p4</current_state>
+	</pre>
+	<post>
+		<next_state>p4</next_state>
+		<send_message>msg_4_5</send_message>
+	</post>
+</rule>
+<rule id="elect_p4">
+	<pre>
+		<current_state>p4</current_state>
+		<received_message>msg_4_4</received_message>
+	</pre>
+	<post>
+		<next_state>Leader</next_state>
+	</post>
+</rule>
+<rule id="receive_smaller_p4_0">
+	<pre>
+		<current_state>p4</current_state>
+		<received_message>msg_0_4</received_message>
+	</pre>
+	<post>
+		<next_state>p4</next_state>
+		<send_message>msg_4_5</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p4_1">
+	<pre>
+		<current_state>p4</current_state>
+		<received_message>msg_1_4</received_message>
+	</pre>
+	<post>
+		<next_state>p4</next_state>
+		<send_message>msg_4_5</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p4_2">
+	<pre>
+		<current_state>p4</current_state>
+		<received_message>msg_2_4</received_message>
+	</pre>
+	<post>
+		<next_state>p4</next_state>
+		<send_message>msg_4_5</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p4_3">
+	<pre>
+		<current_state>p4</current_state>
+		<received_message>msg_3_4</received_message>
+	</pre>
+	<post>
+		<next_state>p4</next_state>
+		<send_message>msg_4_5</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p4_5">
+	<pre>
+		<current_state>p4</current_state>
+		<received_message>msg_5_4</received_message>
+	</pre>
+	<post>
+		<next_state>p4</next_state>
+		<send_message>msg_5_5</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p4_6">
+	<pre>
+		<current_state>p4</current_state>
+		<received_message>msg_6_4</received_message>
+	</pre>
+	<post>
+		<next_state>p4</next_state>
+		<send_message>msg_6_5</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p4_7">
+	<pre>
+		<current_state>p4</current_state>
+		<received_message>msg_7_4</received_message>
+	</pre>
+	<post>
+		<next_state>p4</next_state>
+		<send_message>msg_7_5</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p4_8">
+	<pre>
+		<current_state>p4</current_state>
+		<received_message>msg_8_4</received_message>
+	</pre>
+	<post>
+		<next_state>p4</next_state>
+		<send_message>msg_8_5</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p4_9">
+	<pre>
+		<current_state>p4</current_state>
+		<received_message>msg_9_4</received_message>
+	</pre>
+	<post>
+		<next_state>p4</next_state>
+		<send_message>msg_9_5</send_message>
+	</post>
+</rule>
+<rule id="p5_start">
+	<pre>
+		<current_state>p5</current_state>
+	</pre>
+	<post>
+		<next_state>p5</next_state>
+		<send_message>msg_5_6</send_message>
+	</post>
+</rule>
+<rule id="elect_p5">
+	<pre>
+		<current_state>p5</current_state>
+		<received_message>msg_5_5</received_message>
+	</pre>
+	<post>
+		<next_state>Leader</next_state>
+	</post>
+</rule>
+<rule id="receive_smaller_p5_0">
+	<pre>
+		<current_state>p5</current_state>
+		<received_message>msg_0_5</received_message>
+	</pre>
+	<post>
+		<next_state>p5</next_state>
+		<send_message>msg_5_6</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p5_1">
+	<pre>
+		<current_state>p5</current_state>
+		<received_message>msg_1_5</received_message>
+	</pre>
+	<post>
+		<next_state>p5</next_state>
+		<send_message>msg_5_6</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p5_2">
+	<pre>
+		<current_state>p5</current_state>
+		<received_message>msg_2_5</received_message>
+	</pre>
+	<post>
+		<next_state>p5</next_state>
+		<send_message>msg_5_6</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p5_3">
+	<pre>
+		<current_state>p5</current_state>
+		<received_message>msg_3_5</received_message>
+	</pre>
+	<post>
+		<next_state>p5</next_state>
+		<send_message>msg_5_6</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p5_4">
+	<pre>
+		<current_state>p5</current_state>
+		<received_message>msg_4_5</received_message>
+	</pre>
+	<post>
+		<next_state>p5</next_state>
+		<send_message>msg_5_6</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p5_6">
+	<pre>
+		<current_state>p5</current_state>
+		<received_message>msg_6_5</received_message>
+	</pre>
+	<post>
+		<next_state>p5</next_state>
+		<send_message>msg_6_6</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p5_7">
+	<pre>
+		<current_state>p5</current_state>
+		<received_message>msg_7_5</received_message>
+	</pre>
+	<post>
+		<next_state>p5</next_state>
+		<send_message>msg_7_6</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p5_8">
+	<pre>
+		<current_state>p5</current_state>
+		<received_message>msg_8_5</received_message>
+	</pre>
+	<post>
+		<next_state>p5</next_state>
+		<send_message>msg_8_6</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p5_9">
+	<pre>
+		<current_state>p5</current_state>
+		<received_message>msg_9_5</received_message>
+	</pre>
+	<post>
+		<next_state>p5</next_state>
+		<send_message>msg_9_6</send_message>
+	</post>
+</rule>
+<rule id="p6_start">
+	<pre>
+		<current_state>p6</current_state>
+	</pre>
+	<post>
+		<next_state>p6</next_state>
+		<send_message>msg_6_7</send_message>
+	</post>
+</rule>
+<rule id="elect_p6">
+	<pre>
+		<current_state>p6</current_state>
+		<received_message>msg_6_6</received_message>
+	</pre>
+	<post>
+		<next_state>Leader</next_state>
+	</post>
+</rule>
+<rule id="receive_smaller_p6_0">
+	<pre>
+		<current_state>p6</current_state>
+		<received_message>msg_0_6</received_message>
+	</pre>
+	<post>
+		<next_state>p6</next_state>
+		<send_message>msg_6_7</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p6_1">
+	<pre>
+		<current_state>p6</current_state>
+		<received_message>msg_1_6</received_message>
+	</pre>
+	<post>
+		<next_state>p6</next_state>
+		<send_message>msg_6_7</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p6_2">
+	<pre>
+		<current_state>p6</current_state>
+		<received_message>msg_2_6</received_message>
+	</pre>
+	<post>
+		<next_state>p6</next_state>
+		<send_message>msg_6_7</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p6_3">
+	<pre>
+		<current_state>p6</current_state>
+		<received_message>msg_3_6</received_message>
+	</pre>
+	<post>
+		<next_state>p6</next_state>
+		<send_message>msg_6_7</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p6_4">
+	<pre>
+		<current_state>p6</current_state>
+		<received_message>msg_4_6</received_message>
+	</pre>
+	<post>
+		<next_state>p6</next_state>
+		<send_message>msg_6_7</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p6_5">
+	<pre>
+		<current_state>p6</current_state>
+		<received_message>msg_5_6</received_message>
+	</pre>
+	<post>
+		<next_state>p6</next_state>
+		<send_message>msg_6_7</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p6_7">
+	<pre>
+		<current_state>p6</current_state>
+		<received_message>msg_7_6</received_message>
+	</pre>
+	<post>
+		<next_state>p6</next_state>
+		<send_message>msg_7_7</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p6_8">
+	<pre>
+		<current_state>p6</current_state>
+		<received_message>msg_8_6</received_message>
+	</pre>
+	<post>
+		<next_state>p6</next_state>
+		<send_message>msg_8_7</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p6_9">
+	<pre>
+		<current_state>p6</current_state>
+		<received_message>msg_9_6</received_message>
+	</pre>
+	<post>
+		<next_state>p6</next_state>
+		<send_message>msg_9_7</send_message>
+	</post>
+</rule>
+<rule id="p7_start">
+	<pre>
+		<current_state>p7</current_state>
+	</pre>
+	<post>
+		<next_state>p7</next_state>
+		<send_message>msg_7_8</send_message>
+	</post>
+</rule>
+<rule id="elect_p7">
+	<pre>
+		<current_state>p7</current_state>
+		<received_message>msg_7_7</received_message>
+	</pre>
+	<post>
+		<next_state>Leader</next_state>
+	</post>
+</rule>
+<rule id="receive_smaller_p7_0">
+	<pre>
+		<current_state>p7</current_state>
+		<received_message>msg_0_7</received_message>
+	</pre>
+	<post>
+		<next_state>p7</next_state>
+		<send_message>msg_7_8</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p7_1">
+	<pre>
+		<current_state>p7</current_state>
+		<received_message>msg_1_7</received_message>
+	</pre>
+	<post>
+		<next_state>p7</next_state>
+		<send_message>msg_7_8</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p7_2">
+	<pre>
+		<current_state>p7</current_state>
+		<received_message>msg_2_7</received_message>
+	</pre>
+	<post>
+		<next_state>p7</next_state>
+		<send_message>msg_7_8</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p7_3">
+	<pre>
+		<current_state>p7</current_state>
+		<received_message>msg_3_7</received_message>
+	</pre>
+	<post>
+		<next_state>p7</next_state>
+		<send_message>msg_7_8</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p7_4">
+	<pre>
+		<current_state>p7</current_state>
+		<received_message>msg_4_7</received_message>
+	</pre>
+	<post>
+		<next_state>p7</next_state>
+		<send_message>msg_7_8</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p7_5">
+	<pre>
+		<current_state>p7</current_state>
+		<received_message>msg_5_7</received_message>
+	</pre>
+	<post>
+		<next_state>p7</next_state>
+		<send_message>msg_7_8</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p7_6">
+	<pre>
+		<current_state>p7</current_state>
+		<received_message>msg_6_7</received_message>
+	</pre>
+	<post>
+		<next_state>p7</next_state>
+		<send_message>msg_7_8</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p7_8">
+	<pre>
+		<current_state>p7</current_state>
+		<received_message>msg_8_7</received_message>
+	</pre>
+	<post>
+		<next_state>p7</next_state>
+		<send_message>msg_8_8</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p7_9">
+	<pre>
+		<current_state>p7</current_state>
+		<received_message>msg_9_7</received_message>
+	</pre>
+	<post>
+		<next_state>p7</next_state>
+		<send_message>msg_9_8</send_message>
+	</post>
+</rule>
+<rule id="p8_start">
+	<pre>
+		<current_state>p8</current_state>
+	</pre>
+	<post>
+		<next_state>p8</next_state>
+		<send_message>msg_8_9</send_message>
+	</post>
+</rule>
+<rule id="elect_p8">
+	<pre>
+		<current_state>p8</current_state>
+		<received_message>msg_8_8</received_message>
+	</pre>
+	<post>
+		<next_state>Leader</next_state>
+	</post>
+</rule>
+<rule id="receive_smaller_p8_0">
+	<pre>
+		<current_state>p8</current_state>
+		<received_message>msg_0_8</received_message>
+	</pre>
+	<post>
+		<next_state>p8</next_state>
+		<send_message>msg_8_9</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p8_1">
+	<pre>
+		<current_state>p8</current_state>
+		<received_message>msg_1_8</received_message>
+	</pre>
+	<post>
+		<next_state>p8</next_state>
+		<send_message>msg_8_9</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p8_2">
+	<pre>
+		<current_state>p8</current_state>
+		<received_message>msg_2_8</received_message>
+	</pre>
+	<post>
+		<next_state>p8</next_state>
+		<send_message>msg_8_9</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p8_3">
+	<pre>
+		<current_state>p8</current_state>
+		<received_message>msg_3_8</received_message>
+	</pre>
+	<post>
+		<next_state>p8</next_state>
+		<send_message>msg_8_9</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p8_4">
+	<pre>
+		<current_state>p8</current_state>
+		<received_message>msg_4_8</received_message>
+	</pre>
+	<post>
+		<next_state>p8</next_state>
+		<send_message>msg_8_9</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p8_5">
+	<pre>
+		<current_state>p8</current_state>
+		<received_message>msg_5_8</received_message>
+	</pre>
+	<post>
+		<next_state>p8</next_state>
+		<send_message>msg_8_9</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p8_6">
+	<pre>
+		<current_state>p8</current_state>
+		<received_message>msg_6_8</received_message>
+	</pre>
+	<post>
+		<next_state>p8</next_state>
+		<send_message>msg_8_9</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p8_7">
+	<pre>
+		<current_state>p8</current_state>
+		<received_message>msg_7_8</received_message>
+	</pre>
+	<post>
+		<next_state>p8</next_state>
+		<send_message>msg_8_9</send_message>
+	</post>
+</rule>
+<rule id="receive_larger_p8_9">
+	<pre>
+		<current_state>p8</current_state>
+		<received_message>msg_9_8</received_message>
+	</pre>
+	<post>
+		<next_state>p8</next_state>
+		<send_message>msg_9_9</send_message>
+	</post>
+</rule>
+<rule id="p9_start">
+	<pre>
+		<current_state>p9</current_state>
+	</pre>
+	<post>
+		<next_state>p9</next_state>
+		<send_message>msg_9_0</send_message>
+	</post>
+</rule>
+<rule id="elect_p9">
+	<pre>
+		<current_state>p9</current_state>
+		<received_message>msg_9_9</received_message>
+	</pre>
+	<post>
+		<next_state>Leader</next_state>
+	</post>
+</rule>
+<rule id="receive_smaller_p9_0">
+	<pre>
+		<current_state>p9</current_state>
+		<received_message>msg_0_9</received_message>
+	</pre>
+	<post>
+		<next_state>p9</next_state>
+		<send_message>msg_9_0</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p9_1">
+	<pre>
+		<current_state>p9</current_state>
+		<received_message>msg_1_9</received_message>
+	</pre>
+	<post>
+		<next_state>p9</next_state>
+		<send_message>msg_9_0</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p9_2">
+	<pre>
+		<current_state>p9</current_state>
+		<received_message>msg_2_9</received_message>
+	</pre>
+	<post>
+		<next_state>p9</next_state>
+		<send_message>msg_9_0</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p9_3">
+	<pre>
+		<current_state>p9</current_state>
+		<received_message>msg_3_9</received_message>
+	</pre>
+	<post>
+		<next_state>p9</next_state>
+		<send_message>msg_9_0</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p9_4">
+	<pre>
+		<current_state>p9</current_state>
+		<received_message>msg_4_9</received_message>
+	</pre>
+	<post>
+		<next_state>p9</next_state>
+		<send_message>msg_9_0</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p9_5">
+	<pre>
+		<current_state>p9</current_state>
+		<received_message>msg_5_9</received_message>
+	</pre>
+	<post>
+		<next_state>p9</next_state>
+		<send_message>msg_9_0</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p9_6">
+	<pre>
+		<current_state>p9</current_state>
+		<received_message>msg_6_9</received_message>
+	</pre>
+	<post>
+		<next_state>p9</next_state>
+		<send_message>msg_9_0</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p9_7">
+	<pre>
+		<current_state>p9</current_state>
+		<received_message>msg_7_9</received_message>
+	</pre>
+	<post>
+		<next_state>p9</next_state>
+		<send_message>msg_9_0</send_message>
+	</post>
+</rule>
+<rule id="receive_smaller_p9_8">
+	<pre>
+		<current_state>p9</current_state>
+		<received_message>msg_8_9</received_message>
+	</pre>
+	<post>
+		<next_state>p9</next_state>
+		<send_message>msg_9_0</send_message>
+	</post>
+</rule>
+</role>
+</protocol>
