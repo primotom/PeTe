@@ -30,7 +30,9 @@ SOURCES		   += \
     Reachability/LinearOverApprox.cpp \
     Reachability/UltimateSearch.cpp \
     Reachability/RandomQueryGenerator.cpp \
-    Reachability/StateSearch.cpp
+    Reachability/StateSearch.cpp \
+    Reachability/OrderedStateSearch.cpp \
+    Reachability/FullOrderedStateSearch.cpp
 	#Reachability/CoverabilityTreeNode.cpp
 
 HEADERS		   += \
@@ -72,7 +74,10 @@ HEADERS		   += \
     Reachability/UltimateSearch.h \
     Reachability/RandomQueryGenerator.h \
     Reachability/StateSearch.h \
-    Structures/OrderableStateSet.h
+    Structures/OrderableStateSet.h \
+    Reachability/OrderedStateSearch.h \
+    Reachability/FullOrderedStateSearch.h \
+    Structures/NaiveListStateSet.h
 	#Reachability/CoverabilityTreeNode.h
 
 TARGET			= ../PetriEngine

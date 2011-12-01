@@ -1,25 +1,25 @@
+
 /* PeTe - Petri Engine exTremE
  * Copyright (C) 2011  Jonas Finnemann Jensen <jopsen@gmail.com>,
  *                     Thomas Søndersø Nielsen <primogens@gmail.com>,
  *                     Lars Kærlund Østergaard <larsko@gmail.com>,
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include "DepthFirstReachabilitySearch.h"
+#include "FullOrderedStateSearch.h"
 #include "../PQL/PQL.h"
 #include "../PQL/Contexts.h"
-#include "../Structures/StateSet.h"
 #include "../Structures/OrderableStateSet.h"
 #include "../Structures/StateAllocator.h"
 #include <list>
@@ -30,7 +30,7 @@ using namespace PetriEngine::Structures;
 
 namespace PetriEngine{ namespace Reachability {
 
-ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
+ReachabilityResult FullOrderedStateSearch::reachable(const PetriNet &net,
 														   const MarkVal *m0,
 														   const VarVal *v0,
 														   const BoolVal *b0,
@@ -40,7 +40,10 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 		return ReachabilityResult(ReachabilityResult::Satisfied,
 								  "A state satisfying the query was found");
 	//Create StateSet
-	StateSet states(net);
+	MonotonicityContext context(&net);
+	context.analyze();
+
+	OrderableStateSet states(net,&context);
 	std::list<Step> stack;
 
 	StateAllocator<1000000> allocator(net);
@@ -72,9 +75,8 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 
 		//Take first step of the stack
 		State* s = stack.back().state;
-
-		//if(stack.back().t == 0)
-			//expandedStates++;
+		//Mark as visited
+		//states.visit(s);
 		ns->setParent(s);
 		bool foundSomething = false;
 		for(unsigned int t = stack.back().t; t < net.numberOfTransitions(); t++){
@@ -86,7 +88,11 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 									  "A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
 					stack.back().t = t + 1;
 
-					stack.push_back(Step(ns, 0));
+					if(states.greater(ns,s))
+						stack.push_back(Step(ns,0));
+					else
+						stack.push_front(Step(ns, 0));
+
 					exploredStates++;
 					foundSomething = true;
 					ns = allocator.createState();
