@@ -33,7 +33,9 @@ SOURCES		   += \
     Reachability/StateSearch.cpp \
     Reachability/MonoDFS.cpp \
     Reachability/MonoDFSState.cpp \
-    Reachability/MonoDFSBool.cpp
+    Reachability/MonoDFSBool.cpp \
+    Reachability/MonoBFS.cpp \
+    Reachability/MonoRandomDFS.cpp
 	#Reachability/CoverabilityTreeNode.cpp
 
 HEADERS		   += \
@@ -79,7 +81,9 @@ HEADERS		   += \
     Structures/NaiveListStateSet.h \
     Reachability/MonoDFS.h \
     Reachability/MonoDFSState.h \
-    Reachability/MonoDFSBool.h
+    Reachability/MonoDFSBool.h \
+    Reachability/MonoBFS.h \
+    Reachability/MonoRandomDFS.h
 	#Reachability/CoverabilityTreeNode.h
 
 TARGET			= ../PetriEngine

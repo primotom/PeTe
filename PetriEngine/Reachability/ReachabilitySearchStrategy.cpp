@@ -24,7 +24,9 @@
 #include "MonoDFS.h"
 #include "MonoDFSState.h"
 #include "MonoDFSBool.h"
-
+#include "MonoBFS.h"
+#include "MonoRandomDFS.h"
+#include "RandomDFS.h"
 #include "BestFirstReachabilitySearch.h"
 #include "LinearOverApprox.h"
 #include "RandomDFS.h"
@@ -44,6 +46,8 @@
 #define NAME_MonoDFS							"Ordered DFS"
 #define NAME_MonoDFSState						"Ordered DFS States"
 #define NAME_MonoDFSBool						"Ordered DFS Bools"
+#define NAME_MonoBFS							"Ordered BFS"
+#define NAME_MonoRandomDFS						"Ordered Random DFS"
 
 //Heuristics
 #define NAME_DFSArcCount						"DFS-ArcCount"
@@ -150,8 +154,10 @@ std::vector<std::string> ReachabilitySearchStrategy::listStrategies(){
 	std::string strats[] = {
 		NAME_DFS,
 		NAME_MonoDFS,
+		NAME_MonoBFS,
 		NAME_MonoDFSState,
 		NAME_MonoDFSBool,
+		NAME_MonoRandomDFS,
 		NAME_RandomDFS,
 		NAME_BFS,
 		/*NAME_DFSArcCount,
@@ -212,8 +218,15 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 	if(strategy == NAME_MonoDFSBool)
 		return new MonoDFSBool();
 
+	if(strategy == NAME_MonoBFS)
+		return new MonoBFS();
+
+	if(strategy == NAME_MonoRandomDFS)
+		return new MonoRandomDFS();
+
 	if(strategy == NAME_RandomDFS)
 		return new RandomDFS();
+
 	if(strategy == NAME_BFS)
 		return new BreadthFirstReachabilitySearch();
 /*	if(strategy == NAME_DFSArcCount){
