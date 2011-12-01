@@ -18,16 +18,16 @@ public:
 	bool add(State* state){
 		_countAdd++;
 		for(std::list<std::pair<bool,State*> >::iterator it = _states.begin() ; it != _states.end();){
-			//if (less((*it).second, state)){//TODO: Think about using this again
-			//	_states.remove(*it++);
-				//_countSkip++;
-			//}else{
+			if (less((*it).second, state)){//TODO: Think about using this again
+				_states.remove(*it++);
+				_countSkip++;
+			}else{
 				if(leq(state,(*it).second)){
 					_countSkip++;
 					return false;
 				}
 				it++;
-			//}
+			}
 		}
 		_states.push_back(std::make_pair(false,state));
 		return true;
@@ -68,7 +68,7 @@ public:
 		for(size_t i = 0; i <  _net->numberOfBoolVariables(); i++){
 			if(_context->goodBoolVariables()[i]) {
 				if(s1->boolValuation()[i] && (!s2->boolValuation()[i]))
-					return false;
+					return true;
 			}
 		}
 		return false;

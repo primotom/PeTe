@@ -31,8 +31,9 @@ SOURCES		   += \
     Reachability/UltimateSearch.cpp \
     Reachability/RandomQueryGenerator.cpp \
     Reachability/StateSearch.cpp \
-    Reachability/OrderedStateSearch.cpp \
-    Reachability/FullOrderedStateSearch.cpp
+    Reachability/MonoDFS.cpp \
+    Reachability/MonoDFSState.cpp \
+    Reachability/MonoDFSBool.cpp
 	#Reachability/CoverabilityTreeNode.cpp
 
 HEADERS		   += \
@@ -75,9 +76,10 @@ HEADERS		   += \
     Reachability/RandomQueryGenerator.h \
     Reachability/StateSearch.h \
     Structures/OrderableStateSet.h \
-    Reachability/OrderedStateSearch.h \
-    Reachability/FullOrderedStateSearch.h \
-    Structures/NaiveListStateSet.h
+    Structures/NaiveListStateSet.h \
+    Reachability/MonoDFS.h \
+    Reachability/MonoDFSState.h \
+    Reachability/MonoDFSBool.h
 	#Reachability/CoverabilityTreeNode.h
 
 TARGET			= ../PetriEngine

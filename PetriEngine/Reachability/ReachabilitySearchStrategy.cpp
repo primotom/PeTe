@@ -21,8 +21,9 @@
 //#include "KarpMillerL1SearchStrategy.h"
 #include "DepthFirstReachabilitySearch.h"
 #include "BreadthFirstReachabilitySearch.h"
-#include "OrderedStateSearch.h"
-#include "FullOrderedStateSearch.h"
+#include "MonoDFS.h"
+#include "MonoDFSState.h"
+#include "MonoDFSBool.h"
 
 #include "BestFirstReachabilitySearch.h"
 #include "LinearOverApprox.h"
@@ -40,8 +41,9 @@
 #define NAME_BFS								"Naive BFS with Hash"
 
 //Ordered
-#define NAME_OrderedState						"Fire state with larger bools"
-#define NAME_FullOrderedState					"Fire state with larger states"
+#define NAME_MonoDFS							"Ordered DFS"
+#define NAME_MonoDFSState						"Ordered DFS States"
+#define NAME_MonoDFSBool						"Ordered DFS Bools"
 
 //Heuristics
 #define NAME_DFSArcCount						"DFS-ArcCount"
@@ -147,8 +149,9 @@ namespace PetriEngine { namespace Reachability {
 std::vector<std::string> ReachabilitySearchStrategy::listStrategies(){
 	std::string strats[] = {
 		NAME_DFS,
-		NAME_OrderedState,
-		NAME_FullOrderedState,
+		NAME_MonoDFS,
+		NAME_MonoDFSState,
+		NAME_MonoDFSBool,
 		NAME_RandomDFS,
 		NAME_BFS,
 		/*NAME_DFSArcCount,
@@ -202,10 +205,12 @@ std::vector<std::string> ReachabilitySearchStrategy::listStrategies(){
 ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std::string& strategy){
 	if(strategy == NAME_DFS)
 		return new DepthFirstReachabilitySearch();
-	if(strategy == NAME_OrderedState) //TODO comment in when merge
-		return new OrderedStateSearch();
-	if(strategy == NAME_FullOrderedState)
-		return new FullOrderedStateSearch();
+	if(strategy == NAME_MonoDFS)
+		return new MonoDFS();
+	if(strategy == NAME_MonoDFSState)
+		return new MonoDFSState();
+	if(strategy == NAME_MonoDFSBool)
+		return new MonoDFSBool();
 
 	if(strategy == NAME_RandomDFS)
 		return new RandomDFS();

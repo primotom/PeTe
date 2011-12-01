@@ -17,10 +17,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include "FullOrderedStateSearch.h"
+#include "MonoDFSBool.h"
 #include "../PQL/PQL.h"
 #include "../PQL/Contexts.h"
+#include "../Structures/StateSet.h"
 #include "../Structures/OrderableStateSet.h"
+#include "../Structures/NaiveListStateSet.h"
 #include "../Structures/StateAllocator.h"
 #include <list>
 #include <string.h>
@@ -30,7 +32,7 @@ using namespace PetriEngine::Structures;
 
 namespace PetriEngine{ namespace Reachability {
 
-ReachabilityResult FullOrderedStateSearch::reachable(const PetriNet &net,
+ReachabilityResult MonoDFSBool::reachable(const PetriNet &net,
 														   const MarkVal *m0,
 														   const VarVal *v0,
 														   const BoolVal *b0,
@@ -44,6 +46,8 @@ ReachabilityResult FullOrderedStateSearch::reachable(const PetriNet &net,
 	context.analyze();
 
 	OrderableStateSet states(net,&context);
+	//NaiveListStateSet states;
+
 	std::list<Step> stack;
 
 	StateAllocator<1000000> allocator(net);
@@ -88,7 +92,7 @@ ReachabilityResult FullOrderedStateSearch::reachable(const PetriNet &net,
 									  "A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
 					stack.back().t = t + 1;
 
-					if(states.greater(ns,s))
+					if(states.greaterBool(ns,s))
 						stack.push_back(Step(ns,0));
 					else
 						stack.push_front(Step(ns, 0));
@@ -105,6 +109,7 @@ ReachabilityResult FullOrderedStateSearch::reachable(const PetriNet &net,
 			expandedStates++;
 		}
 	}
+	states.writeStatistics();
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
 							"No state satisfying the query exists.", expandedStates, count);
 }

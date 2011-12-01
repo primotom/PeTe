@@ -1,5 +1,5 @@
-#ifndef ORDEREDSTATESEARCH_H
-#define ORDEREDSTATESEARCH_H
+#ifndef MONODFSBOOL_H
+#define MONODFSBOOL_H
 
 #include "ReachabilitySearchStrategy.h"
 #include "../Structures/State.h"
@@ -7,10 +7,10 @@
 namespace PetriEngine { namespace Reachability {
 
 /** Implements reachability check by trying to select larger states first, using a hash table */
-class OrderedStateSearch : public ReachabilitySearchStrategy
+class MonoDFSBool : public ReachabilitySearchStrategy
 {
 public:
-	OrderedStateSearch() : ReachabilitySearchStrategy(){}
+	MonoDFSBool() : ReachabilitySearchStrategy(){}
 
 	/** Perform reachability check using DFS with hash table */
 	ReachabilityResult reachable(const PetriNet &net,
@@ -32,4 +32,4 @@ private:
 } // Reachability
 } // PetriEngine
 
-#endif // ORDEREDSTATESEARCH_H
+#endif // MONODFSBOOL_H

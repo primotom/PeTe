@@ -17,7 +17,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include "OrderedStateSearch.h"
+#include "MonoDFS.h"
 #include "../PQL/PQL.h"
 #include "../PQL/Contexts.h"
 #include "../Structures/StateSet.h"
@@ -32,7 +32,7 @@ using namespace PetriEngine::Structures;
 
 namespace PetriEngine{ namespace Reachability {
 
-ReachabilityResult OrderedStateSearch::reachable(const PetriNet &net,
+ReachabilityResult MonoDFS::reachable(const PetriNet &net,
 														   const MarkVal *m0,
 														   const VarVal *v0,
 														   const BoolVal *b0,
@@ -91,12 +91,7 @@ ReachabilityResult OrderedStateSearch::reachable(const PetriNet &net,
 						return ReachabilityResult(ReachabilityResult::Satisfied,
 									  "A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
 					stack.back().t = t + 1;
-
-					//if(states.greaterBool(ns,s))
-						stack.push_back(Step(ns,0));
-					//else
-					//	stack.push_front(Step(ns, 0));
-
+					stack.push_back(Step(ns,0));
 					exploredStates++;
 					foundSomething = true;
 					ns = allocator.createState();
