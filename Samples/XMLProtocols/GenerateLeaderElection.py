@@ -62,7 +62,8 @@ def print_role(name):
 		print_rule('elect_p' + str(i), 'p' + str(i), 'msg_' + str(i) + '_' + str(i), 'Leader', '')
 		
 		#fail state
-		print_rule('fail_p' + str(i), 'p' + str(i), '', 'p' + str(i) + '_failed', '')
+		if can_fail:
+			print_rule('fail_p' + str(i), 'p' + str(i), '', 'p' + str(i) + '_failed', '')
 		
 		#receive smaller
 		for s in range(i):
