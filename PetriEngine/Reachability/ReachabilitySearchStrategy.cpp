@@ -207,10 +207,10 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 	if(strategy == NAME_FullOrderedState)
 		return new FullOrderedStateSearch();
 
-//	if(strategy == NAME_RandomDFS)
-//		return new RandomDFS();
-//	if(strategy == NAME_BFS)
-//		return new BreadthFirstReachabilitySearch();
+	if(strategy == NAME_RandomDFS)
+		return new RandomDFS();
+	if(strategy == NAME_BFS)
+		return new BreadthFirstReachabilitySearch();
 /*	if(strategy == NAME_DFSArcCount){
 		int flags = PQL::DistanceContext::ArcCount | PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;
 		return new HeuristicDFS((PQL::DistanceContext::DistanceStrategy)flags);
