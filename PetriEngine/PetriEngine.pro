@@ -83,7 +83,8 @@ HEADERS		   += \
     Reachability/MonoDFSState.h \
     Reachability/MonoDFSBool.h \
     Reachability/MonoBFS.h \
-    Reachability/MonoRandomDFS.h
+    Reachability/MonoRandomDFS.h \
+    Reachability/IndexedSearch.h
 	#Reachability/CoverabilityTreeNode.h
 
 TARGET			= ../PetriEngine

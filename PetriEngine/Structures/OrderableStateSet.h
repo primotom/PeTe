@@ -18,7 +18,7 @@ public:
 	bool add(State* state){
 		_countAdd++;
 		for(std::list<std::pair<bool,State*> >::iterator it = _states.begin() ; it != _states.end();){
-			if (less((*it).second, state)){//TODO: Think about using this again
+			if (less((*it).second, state)){
 				_states.remove(*it++);
 				_countSkip++;
 			}else{
