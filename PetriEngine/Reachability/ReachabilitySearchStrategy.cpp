@@ -28,6 +28,7 @@
 #include "MonoRandomDFS.h"
 #include "RandomDFS.h"
 #include "BestFirstReachabilitySearch.h"
+#include "MonoBestFirstReachabilitySearch.h"
 #include "LinearOverApprox.h"
 #include "RandomDFS.h"
 
@@ -51,6 +52,7 @@
 
 //Heuristics
 #define NAME_BestFSOld							"Old BestFS (Heuristic distance)"
+#define NAME_MonoBestFS							"Old BestFS (Monotonicity Included)"
 
 //Over-approximation by linear programming
 #define NAME_LinearOverApprox					"Linear over-approximation"
@@ -79,7 +81,8 @@ std::vector<std::string> ReachabilitySearchStrategy::listStrategies(){
 		NAME_MonoRandomDFS,
 		NAME_MonoDFSState,
 		NAME_MonoDFSBool,
-		NAME_BestFSOld
+		NAME_BestFSOld,
+		NAME_MonoBestFS
 	};
 	return std::vector<std::string>(strats, strats + sizeof(strats) / sizeof(std::string));
 }
@@ -110,6 +113,10 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 	if(strategy == NAME_BestFSOld){
 		int flags = PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;
 		return new BestFirstReachabilitySearch((PQL::DistanceContext::DistanceStrategy)flags);
+	}
+	if(strategy == NAME_MonoBestFS){
+		int flags = PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;
+		return new MonoBestFirstReachabilitySearch((PQL::DistanceContext::DistanceStrategy)flags);
 	}
 
 
