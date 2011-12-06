@@ -68,6 +68,7 @@ private:
 	void queries();
 	void net();
 	void variable();
+	void booleanVariable();
 	void place();
 	void transition();
 	void arc();

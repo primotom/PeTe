@@ -109,6 +109,8 @@ void PNMLParser::net(){
 			break;	//Don't read more than one page
 		}else if(xml.name() == "variable"){
 			variable();
+		}else if(xml.name() == "boolean_variable"){
+			booleanVariable();
 		}else if(xml.name() == "place"){
 			place();
 		}else if(xml.name() == "transition"){
@@ -132,6 +134,13 @@ void PNMLParser::variable(){
 	builder->addVariable(vname.toStdString(), initialValue, range);
 
 	//Should work fine, even if it's a empty-element
+	xml.skipCurrentElement();
+}
+
+void PNMLParser::booleanVariable(){
+	QString vname = xml.attributes().value("name").toString();
+	bool initialValue = xml.attributes().value("initial-value").toString() == "false" ? false : true;
+	builder->addBoolVariable(vname.toStdString(), initialValue);
 	xml.skipCurrentElement();
 }
 
