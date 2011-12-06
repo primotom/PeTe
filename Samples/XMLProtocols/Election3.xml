@@ -1,135 +1,301 @@
-<protocol name="LeaderElection" medium="SET" capacity="6">
-<messages>
-	<message>msg_0_0</message>
-	<message>msg_0_1</message>
-	<message>msg_0_2</message>
-	<message>msg_1_0</message>
-	<message>msg_1_1</message>
-	<message>msg_1_2</message>
-	<message>msg_2_0</message>
-	<message>msg_2_1</message>
-	<message>msg_2_2</message>
-</messages>
-<role name="El">
-<states>
-	<state type="initial">p0</state>
-	<state type="initial">p1</state>
-	<state type="initial">p2</state>
-	<state>Leader</state>
-</states>
-<rule id="p0_start">
-	<pre>
-		<current_state>p0</current_state>
-	</pre>
-	<post>
-		<next_state>p0</next_state>
-		<send_message>msg_0_1</send_message>
-	</post>
-</rule>
-<rule id="elect_p0">
-	<pre>
-		<current_state>p0</current_state>
-		<received_message>msg_0_0</received_message>
-	</pre>
-	<post>
-		<next_state>Leader</next_state>
-	</post>
-</rule>
-<rule id="receive_larger_p0_1">
-	<pre>
-		<current_state>p0</current_state>
-		<received_message>msg_1_0</received_message>
-	</pre>
-	<post>
-		<next_state>p0</next_state>
-		<send_message>msg_1_1</send_message>
-	</post>
-</rule>
-<rule id="receive_larger_p0_2">
-	<pre>
-		<current_state>p0</current_state>
-		<received_message>msg_2_0</received_message>
-	</pre>
-	<post>
-		<next_state>p0</next_state>
-		<send_message>msg_2_1</send_message>
-	</post>
-</rule>
-<rule id="p1_start">
-	<pre>
-		<current_state>p1</current_state>
-	</pre>
-	<post>
-		<next_state>p1</next_state>
-		<send_message>msg_1_2</send_message>
-	</post>
-</rule>
-<rule id="elect_p1">
-	<pre>
-		<current_state>p1</current_state>
-		<received_message>msg_1_1</received_message>
-	</pre>
-	<post>
-		<next_state>Leader</next_state>
-	</post>
-</rule>
-<rule id="receive_smaller_p1_0">
-	<pre>
-		<current_state>p1</current_state>
-		<received_message>msg_0_1</received_message>
-	</pre>
-	<post>
-		<next_state>p1</next_state>
-		<send_message>msg_1_2</send_message>
-	</post>
-</rule>
-<rule id="receive_larger_p1_2">
-	<pre>
-		<current_state>p1</current_state>
-		<received_message>msg_2_1</received_message>
-	</pre>
-	<post>
-		<next_state>p1</next_state>
-		<send_message>msg_2_2</send_message>
-	</post>
-</rule>
-<rule id="p2_start">
-	<pre>
-		<current_state>p2</current_state>
-	</pre>
-	<post>
-		<next_state>p2</next_state>
-		<send_message>msg_2_0</send_message>
-	</post>
-</rule>
-<rule id="elect_p2">
-	<pre>
-		<current_state>p2</current_state>
-		<received_message>msg_2_2</received_message>
-	</pre>
-	<post>
-		<next_state>Leader</next_state>
-	</post>
-</rule>
-<rule id="receive_smaller_p2_0">
-	<pre>
-		<current_state>p2</current_state>
-		<received_message>msg_0_2</received_message>
-	</pre>
-	<post>
-		<next_state>p2</next_state>
-		<send_message>msg_2_0</send_message>
-	</post>
-</rule>
-<rule id="receive_smaller_p2_1">
-	<pre>
-		<current_state>p2</current_state>
-		<received_message>msg_1_2</received_message>
-	</pre>
-	<post>
-		<next_state>p2</next_state>
-		<send_message>msg_2_0</send_message>
-	</post>
-</rule>
-</role>
-</protocol>
+<?xml version="1.0" encoding="UTF-8"?>
+<pnml>
+     <net>
+          <boolean_variable name="msg_0_0" initial-value="0" range="1"/>
+          <boolean_variable name="msg_0_1" initial-value="0" range="1"/>
+          <boolean_variable name="msg_0_2" initial-value="0" range="1"/>
+          <boolean_variable name="msg_1_0" initial-value="0" range="1"/>
+          <boolean_variable name="msg_1_1" initial-value="0" range="1"/>
+          <boolean_variable name="msg_1_2" initial-value="0" range="1"/>
+          <boolean_variable name="msg_2_0" initial-value="0" range="1"/>
+          <boolean_variable name="msg_2_1" initial-value="0" range="1"/>
+          <boolean_variable name="msg_2_2" initial-value="0" range="1"/>
+          <transition id="El_receive_smaller_p2_1">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p2_1</value>
+               </name>
+               <conditions>msg_1_2</conditions>
+               <assignments>msg_2_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p2_0">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p2_0</value>
+               </name>
+               <conditions>msg_0_2</conditions>
+               <assignments>msg_2_0:= true; </assignments>
+          </transition>
+          <transition id="El_elect_p2">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_elect_p2</value>
+               </name>
+               <conditions>msg_2_2</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="El_p2_start">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_p2_start</value>
+               </name>
+               <conditions></conditions>
+               <assignments>msg_2_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p1_2">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p1_2</value>
+               </name>
+               <conditions>msg_2_1</conditions>
+               <assignments>msg_2_2:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p1_0">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p1_0</value>
+               </name>
+               <conditions>msg_0_1</conditions>
+               <assignments>msg_1_2:= true; </assignments>
+          </transition>
+          <transition id="El_elect_p1">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_elect_p1</value>
+               </name>
+               <conditions>msg_1_1</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="El_p1_start">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_p1_start</value>
+               </name>
+               <conditions></conditions>
+               <assignments>msg_1_2:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p0_2">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p0_2</value>
+               </name>
+               <conditions>msg_2_0</conditions>
+               <assignments>msg_2_1:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p0_1">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p0_1</value>
+               </name>
+               <conditions>msg_1_0</conditions>
+               <assignments>msg_1_1:= true; </assignments>
+          </transition>
+          <transition id="El_elect_p0">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_elect_p0</value>
+               </name>
+               <conditions>msg_0_0</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="El_p0_start">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_p0_start</value>
+               </name>
+               <conditions></conditions>
+               <assignments>msg_0_1:= true; </assignments>
+          </transition>
+          <place id="El_Leader">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_Leader</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="El_p2">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_p2</value>
+               </name>
+               <initialMarking>
+                    <value>1</value>
+               </initialMarking>
+          </place>
+          <place id="El_p1">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_p1</value>
+               </name>
+               <initialMarking>
+                    <value>1</value>
+               </initialMarking>
+          </place>
+          <place id="El_p0">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_p0</value>
+               </name>
+               <initialMarking>
+                    <value>1</value>
+               </initialMarking>
+          </place>
+          <arc source="El_receive_smaller_p2_1" target="El_p2">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p2" target="El_receive_smaller_p2_1">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p2_0" target="El_p2">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p2" target="El_receive_smaller_p2_0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_elect_p2" target="El_Leader">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p2" target="El_elect_p2">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p2_start" target="El_p2">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p2" target="El_p2_start">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p1_2" target="El_p1">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p1" target="El_receive_larger_p1_2">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p1_0" target="El_p1">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p1" target="El_receive_smaller_p1_0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_elect_p1" target="El_Leader">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p1" target="El_elect_p1">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p1_start" target="El_p1">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p1" target="El_p1_start">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p0_2" target="El_p0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p0" target="El_receive_larger_p0_2">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p0_1" target="El_p0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p0" target="El_receive_larger_p0_1">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_elect_p0" target="El_Leader">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p0" target="El_elect_p0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p0_start" target="El_p0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p0" target="El_p0_start">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+     </net>
+     <queries>
+          <query name="No more than 1 leader" strategy="Old BestFS (Heuristic distance)" jit="false">El_Leader &gt; 1</query>
+     </queries>
+</pnml>
