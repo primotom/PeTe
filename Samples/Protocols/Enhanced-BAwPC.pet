@@ -1,0 +1,4632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pnml>
+     <net>
+          <boolean_variable name="Cancel_c" initial-value="false"/>
+          <boolean_variable name="Canceled_p" initial-value="false"/>
+          <boolean_variable name="CannotComplete_p" initial-value="false"/>
+          <boolean_variable name="Close_c" initial-value="false"/>
+          <boolean_variable name="Closed_p" initial-value="false"/>
+          <boolean_variable name="Compensate_c" initial-value="false"/>
+          <boolean_variable name="Compensated_p" initial-value="false"/>
+          <boolean_variable name="Completed_p" initial-value="false"/>
+          <boolean_variable name="Exit_p" initial-value="false"/>
+          <boolean_variable name="Exited_c" initial-value="false"/>
+          <boolean_variable name="Fail_p" initial-value="false"/>
+          <boolean_variable name="Failed_c" initial-value="false"/>
+          <boolean_variable name="NotCompleted_c" initial-value="false"/>
+          <place id="PARTICIPANT_Active">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Active</value>
+               </name>
+               <initialMarking>
+                    <value>1</value>
+               </initialMarking>
+          </place>
+          <place id="PARTICIPANT_Canceling">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Canceling</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="PARTICIPANT_Completed">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Completed</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="PARTICIPANT_Closing">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Closing</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="PARTICIPANT_Compensating">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Compensating</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="PARTICIPANT_FailingActive">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingActive</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="PARTICIPANT_FailingCanceling">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingCanceling</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="PARTICIPANT_FailingCompensating">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingCompensating</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="PARTICIPANT_NotCompleting">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_NotCompleting</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="PARTICIPANT_Exiting">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Exiting</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="PARTICIPANT_EndedCanceled">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedCanceled</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="PARTICIPANT_EndedClosed">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedClosed</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="PARTICIPANT_EndedCompensated">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedCompensated</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="PARTICIPANT_Ended">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Ended</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="PARTICIPANT_Invalid">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Invalid</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <transition id="PARTICIPANT_Active_Exit_p_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Active_Exit_p_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Exit_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_Exiting_Exit_p_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Exiting_Exit_p_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Exit_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_Active_Completed_p_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Active_Completed_p_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Completed_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_Completed_Completed_p_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Completed_Completed_p_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Completed_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_Active_Fail_p_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Active_Fail_p_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Fail_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_Canceling_Fail_p_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Canceling_Fail_p_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Fail_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_Compensating_Fail_p_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Compensating_Fail_p_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Fail_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingActive_Fail_p_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingActive_Fail_p_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Fail_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingCanceling_Fail_p_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingCanceling_Fail_p_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Fail_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingCompensating_Fail_p_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingCompensating_Fail_p_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Fail_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_Active_CannotComplete_p_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Active_CannotComplete_p_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>CannotComplete_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_NotCompleting_CannotComplete_p_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_NotCompleting_CannotComplete_p_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>CannotComplete_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_Canceling_Canceled_p_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Canceling_Canceled_p_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Canceled_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedCanceled_Canceled_p_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedCanceled_Canceled_p_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Canceled_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_Closing_Closed_p_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Closing_Closed_p_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Closed_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedClosed_Closed_p_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedClosed_Closed_p_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Closed_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_Compensating_Compensated_p_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Compensating_Compensated_p_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Compensated_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedCompensated_Compensated_p_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedCompensated_Compensated_p_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Compensated_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_Active_Cancel_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Active_Cancel_c_INBOUND</value>
+               </name>
+               <conditions>Cancel_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Canceling_Cancel_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Canceling_Cancel_c_INBOUND</value>
+               </name>
+               <conditions>Cancel_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Completed_Cancel_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Completed_Cancel_c_INBOUND</value>
+               </name>
+               <conditions>Cancel_c</conditions>
+               <assignments>Completed_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_Closing_Cancel_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Closing_Cancel_c_INBOUND</value>
+               </name>
+               <conditions>Cancel_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Compensating_Cancel_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Compensating_Cancel_c_INBOUND</value>
+               </name>
+               <conditions>Cancel_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingActive_Cancel_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingActive_Cancel_c_INBOUND</value>
+               </name>
+               <conditions>Cancel_c</conditions>
+               <assignments>Fail_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingCanceling_Cancel_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingCanceling_Cancel_c_INBOUND</value>
+               </name>
+               <conditions>Cancel_c</conditions>
+               <assignments>Fail_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingCompensating_Cancel_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingCompensating_Cancel_c_INBOUND</value>
+               </name>
+               <conditions>Cancel_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_NotCompleting_Cancel_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_NotCompleting_Cancel_c_INBOUND</value>
+               </name>
+               <conditions>Cancel_c</conditions>
+               <assignments>CannotComplete_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_Exiting_Cancel_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Exiting_Cancel_c_INBOUND</value>
+               </name>
+               <conditions>Cancel_c</conditions>
+               <assignments>Exit_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedCanceled_Cancel_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedCanceled_Cancel_c_INBOUND</value>
+               </name>
+               <conditions>Cancel_c</conditions>
+               <assignments>Canceled_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedClosed_Cancel_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedClosed_Cancel_c_INBOUND</value>
+               </name>
+               <conditions>Cancel_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedCompensated_Cancel_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedCompensated_Cancel_c_INBOUND</value>
+               </name>
+               <conditions>Cancel_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Ended_Cancel_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Ended_Cancel_c_INBOUND</value>
+               </name>
+               <conditions>Cancel_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Active_Close_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Active_Close_c_INBOUND</value>
+               </name>
+               <conditions>Close_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Canceling_Close_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Canceling_Close_c_INBOUND</value>
+               </name>
+               <conditions>Close_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Completed_Close_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Completed_Close_c_INBOUND</value>
+               </name>
+               <conditions>Close_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Closing_Close_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Closing_Close_c_INBOUND</value>
+               </name>
+               <conditions>Close_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Compensating_Close_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Compensating_Close_c_INBOUND</value>
+               </name>
+               <conditions>Close_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingActive_Close_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingActive_Close_c_INBOUND</value>
+               </name>
+               <conditions>Close_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingCanceling_Close_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingCanceling_Close_c_INBOUND</value>
+               </name>
+               <conditions>Close_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingCompensating_Close_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingCompensating_Close_c_INBOUND</value>
+               </name>
+               <conditions>Close_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_NotCompleting_Close_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_NotCompleting_Close_c_INBOUND</value>
+               </name>
+               <conditions>Close_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Exiting_Close_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Exiting_Close_c_INBOUND</value>
+               </name>
+               <conditions>Close_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedCanceled_Close_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedCanceled_Close_c_INBOUND</value>
+               </name>
+               <conditions>Close_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedClosed_Close_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedClosed_Close_c_INBOUND</value>
+               </name>
+               <conditions>Close_c</conditions>
+               <assignments>Closed_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedCompensated_Close_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedCompensated_Close_c_INBOUND</value>
+               </name>
+               <conditions>Close_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Ended_Close_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Ended_Close_c_INBOUND</value>
+               </name>
+               <conditions>Close_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Active_Compensate_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Active_Compensate_c_INBOUND</value>
+               </name>
+               <conditions>Compensate_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Canceling_Compensate_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Canceling_Compensate_c_INBOUND</value>
+               </name>
+               <conditions>Compensate_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Completed_Compensate_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Completed_Compensate_c_INBOUND</value>
+               </name>
+               <conditions>Compensate_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Closing_Compensate_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Closing_Compensate_c_INBOUND</value>
+               </name>
+               <conditions>Compensate_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Compensating_Compensate_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Compensating_Compensate_c_INBOUND</value>
+               </name>
+               <conditions>Compensate_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingActive_Compensate_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingActive_Compensate_c_INBOUND</value>
+               </name>
+               <conditions>Compensate_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingCanceling_Compensate_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingCanceling_Compensate_c_INBOUND</value>
+               </name>
+               <conditions>Compensate_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingCompensating_Compensate_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingCompensating_Compensate_c_INBOUND</value>
+               </name>
+               <conditions>Compensate_c</conditions>
+               <assignments>Fail_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_NotCompleting_Compensate_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_NotCompleting_Compensate_c_INBOUND</value>
+               </name>
+               <conditions>Compensate_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Exiting_Compensate_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Exiting_Compensate_c_INBOUND</value>
+               </name>
+               <conditions>Compensate_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedCanceled_Compensate_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedCanceled_Compensate_c_INBOUND</value>
+               </name>
+               <conditions>Compensate_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedClosed_Compensate_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedClosed_Compensate_c_INBOUND</value>
+               </name>
+               <conditions>Compensate_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedCompensated_Compensate_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedCompensated_Compensate_c_INBOUND</value>
+               </name>
+               <conditions>Compensate_c</conditions>
+               <assignments>Compensated_p:= true; </assignments>
+          </transition>
+          <transition id="PARTICIPANT_Ended_Compensate_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Ended_Compensate_c_INBOUND</value>
+               </name>
+               <conditions>Compensate_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Active_Failed_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Active_Failed_c_INBOUND</value>
+               </name>
+               <conditions>Failed_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Canceling_Failed_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Canceling_Failed_c_INBOUND</value>
+               </name>
+               <conditions>Failed_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Completed_Failed_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Completed_Failed_c_INBOUND</value>
+               </name>
+               <conditions>Failed_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Closing_Failed_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Closing_Failed_c_INBOUND</value>
+               </name>
+               <conditions>Failed_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Compensating_Failed_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Compensating_Failed_c_INBOUND</value>
+               </name>
+               <conditions>Failed_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingActive_Failed_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingActive_Failed_c_INBOUND</value>
+               </name>
+               <conditions>Failed_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingCanceling_Failed_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingCanceling_Failed_c_INBOUND</value>
+               </name>
+               <conditions>Failed_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingCompensating_Failed_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingCompensating_Failed_c_INBOUND</value>
+               </name>
+               <conditions>Failed_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_NotCompleting_Failed_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_NotCompleting_Failed_c_INBOUND</value>
+               </name>
+               <conditions>Failed_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Exiting_Failed_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Exiting_Failed_c_INBOUND</value>
+               </name>
+               <conditions>Failed_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedCanceled_Failed_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedCanceled_Failed_c_INBOUND</value>
+               </name>
+               <conditions>Failed_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedClosed_Failed_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedClosed_Failed_c_INBOUND</value>
+               </name>
+               <conditions>Failed_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedCompensated_Failed_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedCompensated_Failed_c_INBOUND</value>
+               </name>
+               <conditions>Failed_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Ended_Failed_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Ended_Failed_c_INBOUND</value>
+               </name>
+               <conditions>Failed_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Active_Exited_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Active_Exited_c_INBOUND</value>
+               </name>
+               <conditions>Exited_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Canceling_Exited_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Canceling_Exited_c_INBOUND</value>
+               </name>
+               <conditions>Exited_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Completed_Exited_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Completed_Exited_c_INBOUND</value>
+               </name>
+               <conditions>Exited_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Closing_Exited_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Closing_Exited_c_INBOUND</value>
+               </name>
+               <conditions>Exited_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Compensating_Exited_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Compensating_Exited_c_INBOUND</value>
+               </name>
+               <conditions>Exited_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingActive_Exited_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingActive_Exited_c_INBOUND</value>
+               </name>
+               <conditions>Exited_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingCanceling_Exited_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingCanceling_Exited_c_INBOUND</value>
+               </name>
+               <conditions>Exited_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingCompensating_Exited_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingCompensating_Exited_c_INBOUND</value>
+               </name>
+               <conditions>Exited_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_NotCompleting_Exited_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_NotCompleting_Exited_c_INBOUND</value>
+               </name>
+               <conditions>Exited_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Exiting_Exited_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Exiting_Exited_c_INBOUND</value>
+               </name>
+               <conditions>Exited_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedCanceled_Exited_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedCanceled_Exited_c_INBOUND</value>
+               </name>
+               <conditions>Exited_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedClosed_Exited_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedClosed_Exited_c_INBOUND</value>
+               </name>
+               <conditions>Exited_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedCompensated_Exited_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedCompensated_Exited_c_INBOUND</value>
+               </name>
+               <conditions>Exited_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Ended_Exited_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Ended_Exited_c_INBOUND</value>
+               </name>
+               <conditions>Exited_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Active_NotCompleted_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Active_NotCompleted_c_INBOUND</value>
+               </name>
+               <conditions>NotCompleted_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Canceling_NotCompleted_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Canceling_NotCompleted_c_INBOUND</value>
+               </name>
+               <conditions>NotCompleted_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Completed_NotCompleted_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Completed_NotCompleted_c_INBOUND</value>
+               </name>
+               <conditions>NotCompleted_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Closing_NotCompleted_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Closing_NotCompleted_c_INBOUND</value>
+               </name>
+               <conditions>NotCompleted_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Compensating_NotCompleted_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Compensating_NotCompleted_c_INBOUND</value>
+               </name>
+               <conditions>NotCompleted_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingActive_NotCompleted_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingActive_NotCompleted_c_INBOUND</value>
+               </name>
+               <conditions>NotCompleted_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingCanceling_NotCompleted_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingCanceling_NotCompleted_c_INBOUND</value>
+               </name>
+               <conditions>NotCompleted_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_FailingCompensating_NotCompleted_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_FailingCompensating_NotCompleted_c_INBOUND</value>
+               </name>
+               <conditions>NotCompleted_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_NotCompleting_NotCompleted_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_NotCompleting_NotCompleted_c_INBOUND</value>
+               </name>
+               <conditions>NotCompleted_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Exiting_NotCompleted_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Exiting_NotCompleted_c_INBOUND</value>
+               </name>
+               <conditions>NotCompleted_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedCanceled_NotCompleted_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedCanceled_NotCompleted_c_INBOUND</value>
+               </name>
+               <conditions>NotCompleted_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedClosed_NotCompleted_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedClosed_NotCompleted_c_INBOUND</value>
+               </name>
+               <conditions>NotCompleted_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_EndedCompensated_NotCompleted_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_EndedCompensated_NotCompleted_c_INBOUND</value>
+               </name>
+               <conditions>NotCompleted_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PARTICIPANT_Ended_NotCompleted_c_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PARTICIPANT_Ended_NotCompleted_c_INBOUND</value>
+               </name>
+               <conditions>NotCompleted_c</conditions>
+               <assignments></assignments>
+          </transition>
+          <place id="COORDINATOR_Active">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Active</value>
+               </name>
+               <initialMarking>
+                    <value>1</value>
+               </initialMarking>
+          </place>
+          <place id="COORDINATOR_Canceling">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Canceling</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="COORDINATOR_Completed">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Completed</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="COORDINATOR_Closing">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Closing</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="COORDINATOR_Compensating">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Compensating</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="COORDINATOR_FailingActive">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingActive</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="COORDINATOR_FailingCanceling">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingCanceling</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="COORDINATOR_FailingCompensating">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingCompensating</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="COORDINATOR_NotCompleting">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_NotCompleting</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="COORDINATOR_Exiting">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Exiting</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="COORDINATOR_EndedFailed">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedFailed</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="COORDINATOR_EndedExited">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedExited</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="COORDINATOR_EndedNotCompleted">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedNotCompleted</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="COORDINATOR_Ended">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Ended</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="COORDINATOR_Invalid">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Invalid</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <transition id="COORDINATOR_Active_Cancel_c_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Active_Cancel_c_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Cancel_c:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_Canceling_Cancel_c_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Canceling_Cancel_c_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Cancel_c:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_Completed_Close_c_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Completed_Close_c_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Close_c:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_Closing_Close_c_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Closing_Close_c_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Close_c:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_Completed_Compensate_c_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Completed_Compensate_c_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Compensate_c:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_Compensating_Compensate_c_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Compensating_Compensate_c_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Compensate_c:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingActive_Failed_c_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingActive_Failed_c_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Failed_c:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingCanceling_Failed_c_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingCanceling_Failed_c_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Failed_c:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingCompensating_Failed_c_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingCompensating_Failed_c_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Failed_c:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedFailed_Failed_c_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedFailed_Failed_c_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Failed_c:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_Exiting_Exited_c_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Exiting_Exited_c_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Exited_c:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedExited_Exited_c_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedExited_Exited_c_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>Exited_c:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_NotCompleting_NotCompleted_c_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_NotCompleting_NotCompleted_c_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>NotCompleted_c:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedNotCompleted_NotCompleted_c_OUTBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedNotCompleted_NotCompleted_c_OUTBOUND</value>
+               </name>
+               <conditions></conditions>
+               <assignments>NotCompleted_c:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_Active_Exit_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Active_Exit_p_INBOUND</value>
+               </name>
+               <conditions>Exit_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Canceling_Exit_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Canceling_Exit_p_INBOUND</value>
+               </name>
+               <conditions>Exit_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Completed_Exit_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Completed_Exit_p_INBOUND</value>
+               </name>
+               <conditions>Exit_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Closing_Exit_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Closing_Exit_p_INBOUND</value>
+               </name>
+               <conditions>Exit_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Compensating_Exit_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Compensating_Exit_p_INBOUND</value>
+               </name>
+               <conditions>Exit_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingActive_Exit_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingActive_Exit_p_INBOUND</value>
+               </name>
+               <conditions>Exit_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingCanceling_Exit_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingCanceling_Exit_p_INBOUND</value>
+               </name>
+               <conditions>Exit_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingCompensating_Exit_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingCompensating_Exit_p_INBOUND</value>
+               </name>
+               <conditions>Exit_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_NotCompleting_Exit_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_NotCompleting_Exit_p_INBOUND</value>
+               </name>
+               <conditions>Exit_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Exiting_Exit_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Exiting_Exit_p_INBOUND</value>
+               </name>
+               <conditions>Exit_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedFailed_Exit_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedFailed_Exit_p_INBOUND</value>
+               </name>
+               <conditions>Exit_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedExited_Exit_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedExited_Exit_p_INBOUND</value>
+               </name>
+               <conditions>Exit_p</conditions>
+               <assignments>Exited_c:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedNotCompleted_Exit_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedNotCompleted_Exit_p_INBOUND</value>
+               </name>
+               <conditions>Exit_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Ended_Exit_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Ended_Exit_p_INBOUND</value>
+               </name>
+               <conditions>Exit_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Active_Completed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Active_Completed_p_INBOUND</value>
+               </name>
+               <conditions>Completed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Canceling_Completed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Canceling_Completed_p_INBOUND</value>
+               </name>
+               <conditions>Completed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Completed_Completed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Completed_Completed_p_INBOUND</value>
+               </name>
+               <conditions>Completed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Closing_Completed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Closing_Completed_p_INBOUND</value>
+               </name>
+               <conditions>Completed_p</conditions>
+               <assignments>Close_c:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_Compensating_Completed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Compensating_Completed_p_INBOUND</value>
+               </name>
+               <conditions>Completed_p</conditions>
+               <assignments>Compensate_c:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingActive_Completed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingActive_Completed_p_INBOUND</value>
+               </name>
+               <conditions>Completed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingCanceling_Completed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingCanceling_Completed_p_INBOUND</value>
+               </name>
+               <conditions>Completed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingCompensating_Completed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingCompensating_Completed_p_INBOUND</value>
+               </name>
+               <conditions>Completed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_NotCompleting_Completed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_NotCompleting_Completed_p_INBOUND</value>
+               </name>
+               <conditions>Completed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Exiting_Completed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Exiting_Completed_p_INBOUND</value>
+               </name>
+               <conditions>Completed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedFailed_Completed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedFailed_Completed_p_INBOUND</value>
+               </name>
+               <conditions>Completed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedExited_Completed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedExited_Completed_p_INBOUND</value>
+               </name>
+               <conditions>Completed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedNotCompleted_Completed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedNotCompleted_Completed_p_INBOUND</value>
+               </name>
+               <conditions>Completed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Ended_Completed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Ended_Completed_p_INBOUND</value>
+               </name>
+               <conditions>Completed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Active_Fail_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Active_Fail_p_INBOUND</value>
+               </name>
+               <conditions>Fail_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Canceling_Fail_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Canceling_Fail_p_INBOUND</value>
+               </name>
+               <conditions>Fail_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Completed_Fail_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Completed_Fail_p_INBOUND</value>
+               </name>
+               <conditions>Fail_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Closing_Fail_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Closing_Fail_p_INBOUND</value>
+               </name>
+               <conditions>Fail_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Compensating_Fail_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Compensating_Fail_p_INBOUND</value>
+               </name>
+               <conditions>Fail_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingActive_Fail_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingActive_Fail_p_INBOUND</value>
+               </name>
+               <conditions>Fail_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingCanceling_Fail_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingCanceling_Fail_p_INBOUND</value>
+               </name>
+               <conditions>Fail_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingCompensating_Fail_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingCompensating_Fail_p_INBOUND</value>
+               </name>
+               <conditions>Fail_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_NotCompleting_Fail_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_NotCompleting_Fail_p_INBOUND</value>
+               </name>
+               <conditions>Fail_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Exiting_Fail_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Exiting_Fail_p_INBOUND</value>
+               </name>
+               <conditions>Fail_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedFailed_Fail_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedFailed_Fail_p_INBOUND</value>
+               </name>
+               <conditions>Fail_p</conditions>
+               <assignments>Failed_c:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedExited_Fail_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedExited_Fail_p_INBOUND</value>
+               </name>
+               <conditions>Fail_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedNotCompleted_Fail_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedNotCompleted_Fail_p_INBOUND</value>
+               </name>
+               <conditions>Fail_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Ended_Fail_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Ended_Fail_p_INBOUND</value>
+               </name>
+               <conditions>Fail_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Active_CannotComplete_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Active_CannotComplete_p_INBOUND</value>
+               </name>
+               <conditions>CannotComplete_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Canceling_CannotComplete_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Canceling_CannotComplete_p_INBOUND</value>
+               </name>
+               <conditions>CannotComplete_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Completed_CannotComplete_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Completed_CannotComplete_p_INBOUND</value>
+               </name>
+               <conditions>CannotComplete_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Closing_CannotComplete_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Closing_CannotComplete_p_INBOUND</value>
+               </name>
+               <conditions>CannotComplete_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Compensating_CannotComplete_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Compensating_CannotComplete_p_INBOUND</value>
+               </name>
+               <conditions>CannotComplete_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingActive_CannotComplete_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingActive_CannotComplete_p_INBOUND</value>
+               </name>
+               <conditions>CannotComplete_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingCanceling_CannotComplete_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingCanceling_CannotComplete_p_INBOUND</value>
+               </name>
+               <conditions>CannotComplete_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingCompensating_CannotComplete_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingCompensating_CannotComplete_p_INBOUND</value>
+               </name>
+               <conditions>CannotComplete_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_NotCompleting_CannotComplete_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_NotCompleting_CannotComplete_p_INBOUND</value>
+               </name>
+               <conditions>CannotComplete_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Exiting_CannotComplete_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Exiting_CannotComplete_p_INBOUND</value>
+               </name>
+               <conditions>CannotComplete_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedFailed_CannotComplete_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedFailed_CannotComplete_p_INBOUND</value>
+               </name>
+               <conditions>CannotComplete_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedExited_CannotComplete_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedExited_CannotComplete_p_INBOUND</value>
+               </name>
+               <conditions>CannotComplete_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedNotCompleted_CannotComplete_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedNotCompleted_CannotComplete_p_INBOUND</value>
+               </name>
+               <conditions>CannotComplete_p</conditions>
+               <assignments>NotCompleted_c:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_Ended_CannotComplete_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Ended_CannotComplete_p_INBOUND</value>
+               </name>
+               <conditions>CannotComplete_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Active_Canceled_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Active_Canceled_p_INBOUND</value>
+               </name>
+               <conditions>Canceled_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Canceling_Canceled_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Canceling_Canceled_p_INBOUND</value>
+               </name>
+               <conditions>Canceled_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Completed_Canceled_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Completed_Canceled_p_INBOUND</value>
+               </name>
+               <conditions>Canceled_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Closing_Canceled_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Closing_Canceled_p_INBOUND</value>
+               </name>
+               <conditions>Canceled_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Compensating_Canceled_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Compensating_Canceled_p_INBOUND</value>
+               </name>
+               <conditions>Canceled_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingActive_Canceled_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingActive_Canceled_p_INBOUND</value>
+               </name>
+               <conditions>Canceled_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingCanceling_Canceled_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingCanceling_Canceled_p_INBOUND</value>
+               </name>
+               <conditions>Canceled_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingCompensating_Canceled_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingCompensating_Canceled_p_INBOUND</value>
+               </name>
+               <conditions>Canceled_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_NotCompleting_Canceled_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_NotCompleting_Canceled_p_INBOUND</value>
+               </name>
+               <conditions>Canceled_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Exiting_Canceled_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Exiting_Canceled_p_INBOUND</value>
+               </name>
+               <conditions>Canceled_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedFailed_Canceled_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedFailed_Canceled_p_INBOUND</value>
+               </name>
+               <conditions>Canceled_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedExited_Canceled_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedExited_Canceled_p_INBOUND</value>
+               </name>
+               <conditions>Canceled_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedNotCompleted_Canceled_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedNotCompleted_Canceled_p_INBOUND</value>
+               </name>
+               <conditions>Canceled_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Ended_Canceled_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Ended_Canceled_p_INBOUND</value>
+               </name>
+               <conditions>Canceled_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Active_Closed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Active_Closed_p_INBOUND</value>
+               </name>
+               <conditions>Closed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Canceling_Closed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Canceling_Closed_p_INBOUND</value>
+               </name>
+               <conditions>Closed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Completed_Closed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Completed_Closed_p_INBOUND</value>
+               </name>
+               <conditions>Closed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Closing_Closed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Closing_Closed_p_INBOUND</value>
+               </name>
+               <conditions>Closed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Compensating_Closed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Compensating_Closed_p_INBOUND</value>
+               </name>
+               <conditions>Closed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingActive_Closed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingActive_Closed_p_INBOUND</value>
+               </name>
+               <conditions>Closed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingCanceling_Closed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingCanceling_Closed_p_INBOUND</value>
+               </name>
+               <conditions>Closed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingCompensating_Closed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingCompensating_Closed_p_INBOUND</value>
+               </name>
+               <conditions>Closed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_NotCompleting_Closed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_NotCompleting_Closed_p_INBOUND</value>
+               </name>
+               <conditions>Closed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Exiting_Closed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Exiting_Closed_p_INBOUND</value>
+               </name>
+               <conditions>Closed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedFailed_Closed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedFailed_Closed_p_INBOUND</value>
+               </name>
+               <conditions>Closed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedExited_Closed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedExited_Closed_p_INBOUND</value>
+               </name>
+               <conditions>Closed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedNotCompleted_Closed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedNotCompleted_Closed_p_INBOUND</value>
+               </name>
+               <conditions>Closed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Ended_Closed_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Ended_Closed_p_INBOUND</value>
+               </name>
+               <conditions>Closed_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Active_Compensated_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Active_Compensated_p_INBOUND</value>
+               </name>
+               <conditions>Compensated_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Canceling_Compensated_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Canceling_Compensated_p_INBOUND</value>
+               </name>
+               <conditions>Compensated_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Completed_Compensated_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Completed_Compensated_p_INBOUND</value>
+               </name>
+               <conditions>Compensated_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Closing_Compensated_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Closing_Compensated_p_INBOUND</value>
+               </name>
+               <conditions>Compensated_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Compensating_Compensated_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Compensating_Compensated_p_INBOUND</value>
+               </name>
+               <conditions>Compensated_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingActive_Compensated_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingActive_Compensated_p_INBOUND</value>
+               </name>
+               <conditions>Compensated_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingCanceling_Compensated_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingCanceling_Compensated_p_INBOUND</value>
+               </name>
+               <conditions>Compensated_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_FailingCompensating_Compensated_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_FailingCompensating_Compensated_p_INBOUND</value>
+               </name>
+               <conditions>Compensated_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_NotCompleting_Compensated_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_NotCompleting_Compensated_p_INBOUND</value>
+               </name>
+               <conditions>Compensated_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Exiting_Compensated_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Exiting_Compensated_p_INBOUND</value>
+               </name>
+               <conditions>Compensated_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedFailed_Compensated_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedFailed_Compensated_p_INBOUND</value>
+               </name>
+               <conditions>Compensated_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedExited_Compensated_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedExited_Compensated_p_INBOUND</value>
+               </name>
+               <conditions>Compensated_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_EndedNotCompleted_Compensated_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_EndedNotCompleted_Compensated_p_INBOUND</value>
+               </name>
+               <conditions>Compensated_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="COORDINATOR_Ended_Compensated_p_INBOUND">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Ended_Compensated_p_INBOUND</value>
+               </name>
+               <conditions>Compensated_p</conditions>
+               <assignments></assignments>
+          </transition>
+          <arc source="PARTICIPANT_Active" target="PARTICIPANT_Active_Exit_p_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Active_Exit_p_OUTBOUND" target="PARTICIPANT_Exiting">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Exiting" target="PARTICIPANT_Exiting_Exit_p_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Exiting_Exit_p_OUTBOUND" target="PARTICIPANT_Exiting">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Active" target="PARTICIPANT_Active_Completed_p_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Active_Completed_p_OUTBOUND" target="PARTICIPANT_Completed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Completed" target="PARTICIPANT_Completed_Completed_p_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Completed_Completed_p_OUTBOUND" target="PARTICIPANT_Completed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Active" target="PARTICIPANT_Active_Fail_p_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Active_Fail_p_OUTBOUND" target="PARTICIPANT_FailingActive">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Canceling" target="PARTICIPANT_Canceling_Fail_p_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Canceling_Fail_p_OUTBOUND" target="PARTICIPANT_FailingCanceling">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Compensating" target="PARTICIPANT_Compensating_Fail_p_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Compensating_Fail_p_OUTBOUND" target="PARTICIPANT_FailingCompensating">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingActive" target="PARTICIPANT_FailingActive_Fail_p_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingActive_Fail_p_OUTBOUND" target="PARTICIPANT_FailingActive">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCanceling" target="PARTICIPANT_FailingCanceling_Fail_p_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCanceling_Fail_p_OUTBOUND" target="PARTICIPANT_FailingCanceling">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCompensating" target="PARTICIPANT_FailingCompensating_Fail_p_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCompensating_Fail_p_OUTBOUND" target="PARTICIPANT_FailingCompensating">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Active" target="PARTICIPANT_Active_CannotComplete_p_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Active_CannotComplete_p_OUTBOUND" target="PARTICIPANT_NotCompleting">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_NotCompleting" target="PARTICIPANT_NotCompleting_CannotComplete_p_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_NotCompleting_CannotComplete_p_OUTBOUND" target="PARTICIPANT_NotCompleting">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Canceling" target="PARTICIPANT_Canceling_Canceled_p_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Canceling_Canceled_p_OUTBOUND" target="PARTICIPANT_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCanceled" target="PARTICIPANT_EndedCanceled_Canceled_p_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCanceled_Canceled_p_OUTBOUND" target="PARTICIPANT_EndedCanceled">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Closing" target="PARTICIPANT_Closing_Closed_p_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Closing_Closed_p_OUTBOUND" target="PARTICIPANT_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedClosed" target="PARTICIPANT_EndedClosed_Closed_p_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedClosed_Closed_p_OUTBOUND" target="PARTICIPANT_EndedClosed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Compensating" target="PARTICIPANT_Compensating_Compensated_p_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Compensating_Compensated_p_OUTBOUND" target="PARTICIPANT_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCompensated" target="PARTICIPANT_EndedCompensated_Compensated_p_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCompensated_Compensated_p_OUTBOUND" target="PARTICIPANT_EndedCompensated">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Active" target="PARTICIPANT_Active_Cancel_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Active_Cancel_c_INBOUND" target="PARTICIPANT_Canceling">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Canceling" target="PARTICIPANT_Canceling_Cancel_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Canceling_Cancel_c_INBOUND" target="PARTICIPANT_Canceling">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Completed" target="PARTICIPANT_Completed_Cancel_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Completed_Cancel_c_INBOUND" target="PARTICIPANT_Completed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Closing" target="PARTICIPANT_Closing_Cancel_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Closing_Cancel_c_INBOUND" target="PARTICIPANT_Closing">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Compensating" target="PARTICIPANT_Compensating_Cancel_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Compensating_Cancel_c_INBOUND" target="PARTICIPANT_Compensating">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingActive" target="PARTICIPANT_FailingActive_Cancel_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingActive_Cancel_c_INBOUND" target="PARTICIPANT_FailingActive">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCanceling" target="PARTICIPANT_FailingCanceling_Cancel_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCanceling_Cancel_c_INBOUND" target="PARTICIPANT_FailingCanceling">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCompensating" target="PARTICIPANT_FailingCompensating_Cancel_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCompensating_Cancel_c_INBOUND" target="PARTICIPANT_FailingCompensating">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_NotCompleting" target="PARTICIPANT_NotCompleting_Cancel_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_NotCompleting_Cancel_c_INBOUND" target="PARTICIPANT_NotCompleting">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Exiting" target="PARTICIPANT_Exiting_Cancel_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Exiting_Cancel_c_INBOUND" target="PARTICIPANT_Exiting">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCanceled" target="PARTICIPANT_EndedCanceled_Cancel_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCanceled_Cancel_c_INBOUND" target="PARTICIPANT_EndedCanceled">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedClosed" target="PARTICIPANT_EndedClosed_Cancel_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedClosed_Cancel_c_INBOUND" target="PARTICIPANT_EndedClosed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCompensated" target="PARTICIPANT_EndedCompensated_Cancel_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCompensated_Cancel_c_INBOUND" target="PARTICIPANT_EndedCompensated">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Ended" target="PARTICIPANT_Ended_Cancel_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Ended_Cancel_c_INBOUND" target="PARTICIPANT_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Active" target="PARTICIPANT_Active_Close_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Active_Close_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Canceling" target="PARTICIPANT_Canceling_Close_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Canceling_Close_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Completed" target="PARTICIPANT_Completed_Close_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Completed_Close_c_INBOUND" target="PARTICIPANT_Closing">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Closing" target="PARTICIPANT_Closing_Close_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Closing_Close_c_INBOUND" target="PARTICIPANT_Closing">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Compensating" target="PARTICIPANT_Compensating_Close_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Compensating_Close_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingActive" target="PARTICIPANT_FailingActive_Close_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingActive_Close_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCanceling" target="PARTICIPANT_FailingCanceling_Close_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCanceling_Close_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCompensating" target="PARTICIPANT_FailingCompensating_Close_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCompensating_Close_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_NotCompleting" target="PARTICIPANT_NotCompleting_Close_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_NotCompleting_Close_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Exiting" target="PARTICIPANT_Exiting_Close_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Exiting_Close_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCanceled" target="PARTICIPANT_EndedCanceled_Close_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCanceled_Close_c_INBOUND" target="PARTICIPANT_EndedCanceled">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedClosed" target="PARTICIPANT_EndedClosed_Close_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedClosed_Close_c_INBOUND" target="PARTICIPANT_EndedClosed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCompensated" target="PARTICIPANT_EndedCompensated_Close_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCompensated_Close_c_INBOUND" target="PARTICIPANT_EndedCompensated">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Ended" target="PARTICIPANT_Ended_Close_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Ended_Close_c_INBOUND" target="PARTICIPANT_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Active" target="PARTICIPANT_Active_Compensate_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Active_Compensate_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Canceling" target="PARTICIPANT_Canceling_Compensate_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Canceling_Compensate_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Completed" target="PARTICIPANT_Completed_Compensate_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Completed_Compensate_c_INBOUND" target="PARTICIPANT_Compensating">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Closing" target="PARTICIPANT_Closing_Compensate_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Closing_Compensate_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Compensating" target="PARTICIPANT_Compensating_Compensate_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Compensating_Compensate_c_INBOUND" target="PARTICIPANT_Compensating">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingActive" target="PARTICIPANT_FailingActive_Compensate_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingActive_Compensate_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCanceling" target="PARTICIPANT_FailingCanceling_Compensate_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCanceling_Compensate_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCompensating" target="PARTICIPANT_FailingCompensating_Compensate_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCompensating_Compensate_c_INBOUND" target="PARTICIPANT_FailingCompensating">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_NotCompleting" target="PARTICIPANT_NotCompleting_Compensate_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_NotCompleting_Compensate_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Exiting" target="PARTICIPANT_Exiting_Compensate_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Exiting_Compensate_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCanceled" target="PARTICIPANT_EndedCanceled_Compensate_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCanceled_Compensate_c_INBOUND" target="PARTICIPANT_EndedCanceled">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedClosed" target="PARTICIPANT_EndedClosed_Compensate_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedClosed_Compensate_c_INBOUND" target="PARTICIPANT_EndedClosed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCompensated" target="PARTICIPANT_EndedCompensated_Compensate_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCompensated_Compensate_c_INBOUND" target="PARTICIPANT_EndedCompensated">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Ended" target="PARTICIPANT_Ended_Compensate_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Ended_Compensate_c_INBOUND" target="PARTICIPANT_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Active" target="PARTICIPANT_Active_Failed_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Active_Failed_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Canceling" target="PARTICIPANT_Canceling_Failed_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Canceling_Failed_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Completed" target="PARTICIPANT_Completed_Failed_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Completed_Failed_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Closing" target="PARTICIPANT_Closing_Failed_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Closing_Failed_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Compensating" target="PARTICIPANT_Compensating_Failed_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Compensating_Failed_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingActive" target="PARTICIPANT_FailingActive_Failed_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingActive_Failed_c_INBOUND" target="PARTICIPANT_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCanceling" target="PARTICIPANT_FailingCanceling_Failed_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCanceling_Failed_c_INBOUND" target="PARTICIPANT_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCompensating" target="PARTICIPANT_FailingCompensating_Failed_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCompensating_Failed_c_INBOUND" target="PARTICIPANT_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_NotCompleting" target="PARTICIPANT_NotCompleting_Failed_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_NotCompleting_Failed_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Exiting" target="PARTICIPANT_Exiting_Failed_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Exiting_Failed_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCanceled" target="PARTICIPANT_EndedCanceled_Failed_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCanceled_Failed_c_INBOUND" target="PARTICIPANT_EndedCanceled">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedClosed" target="PARTICIPANT_EndedClosed_Failed_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedClosed_Failed_c_INBOUND" target="PARTICIPANT_EndedClosed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCompensated" target="PARTICIPANT_EndedCompensated_Failed_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCompensated_Failed_c_INBOUND" target="PARTICIPANT_EndedCompensated">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Ended" target="PARTICIPANT_Ended_Failed_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Ended_Failed_c_INBOUND" target="PARTICIPANT_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Active" target="PARTICIPANT_Active_Exited_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Active_Exited_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Canceling" target="PARTICIPANT_Canceling_Exited_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Canceling_Exited_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Completed" target="PARTICIPANT_Completed_Exited_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Completed_Exited_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Closing" target="PARTICIPANT_Closing_Exited_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Closing_Exited_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Compensating" target="PARTICIPANT_Compensating_Exited_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Compensating_Exited_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingActive" target="PARTICIPANT_FailingActive_Exited_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingActive_Exited_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCanceling" target="PARTICIPANT_FailingCanceling_Exited_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCanceling_Exited_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCompensating" target="PARTICIPANT_FailingCompensating_Exited_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCompensating_Exited_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_NotCompleting" target="PARTICIPANT_NotCompleting_Exited_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_NotCompleting_Exited_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Exiting" target="PARTICIPANT_Exiting_Exited_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Exiting_Exited_c_INBOUND" target="PARTICIPANT_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCanceled" target="PARTICIPANT_EndedCanceled_Exited_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCanceled_Exited_c_INBOUND" target="PARTICIPANT_EndedCanceled">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedClosed" target="PARTICIPANT_EndedClosed_Exited_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedClosed_Exited_c_INBOUND" target="PARTICIPANT_EndedClosed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCompensated" target="PARTICIPANT_EndedCompensated_Exited_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCompensated_Exited_c_INBOUND" target="PARTICIPANT_EndedCompensated">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Ended" target="PARTICIPANT_Ended_Exited_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Ended_Exited_c_INBOUND" target="PARTICIPANT_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Active" target="PARTICIPANT_Active_NotCompleted_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Active_NotCompleted_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Canceling" target="PARTICIPANT_Canceling_NotCompleted_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Canceling_NotCompleted_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Completed" target="PARTICIPANT_Completed_NotCompleted_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Completed_NotCompleted_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Closing" target="PARTICIPANT_Closing_NotCompleted_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Closing_NotCompleted_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Compensating" target="PARTICIPANT_Compensating_NotCompleted_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Compensating_NotCompleted_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingActive" target="PARTICIPANT_FailingActive_NotCompleted_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingActive_NotCompleted_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCanceling" target="PARTICIPANT_FailingCanceling_NotCompleted_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCanceling_NotCompleted_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCompensating" target="PARTICIPANT_FailingCompensating_NotCompleted_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_FailingCompensating_NotCompleted_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_NotCompleting" target="PARTICIPANT_NotCompleting_NotCompleted_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_NotCompleting_NotCompleted_c_INBOUND" target="PARTICIPANT_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Exiting" target="PARTICIPANT_Exiting_NotCompleted_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Exiting_NotCompleted_c_INBOUND" target="PARTICIPANT_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCanceled" target="PARTICIPANT_EndedCanceled_NotCompleted_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCanceled_NotCompleted_c_INBOUND" target="PARTICIPANT_EndedCanceled">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedClosed" target="PARTICIPANT_EndedClosed_NotCompleted_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedClosed_NotCompleted_c_INBOUND" target="PARTICIPANT_EndedClosed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCompensated" target="PARTICIPANT_EndedCompensated_NotCompleted_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_EndedCompensated_NotCompleted_c_INBOUND" target="PARTICIPANT_EndedCompensated">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Ended" target="PARTICIPANT_Ended_NotCompleted_c_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PARTICIPANT_Ended_NotCompleted_c_INBOUND" target="PARTICIPANT_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Active" target="COORDINATOR_Active_Cancel_c_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Active_Cancel_c_OUTBOUND" target="COORDINATOR_Canceling">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Canceling" target="COORDINATOR_Canceling_Cancel_c_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Canceling_Cancel_c_OUTBOUND" target="COORDINATOR_Canceling">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Completed" target="COORDINATOR_Completed_Close_c_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Completed_Close_c_OUTBOUND" target="COORDINATOR_Closing">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Closing" target="COORDINATOR_Closing_Close_c_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Closing_Close_c_OUTBOUND" target="COORDINATOR_Closing">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Completed" target="COORDINATOR_Completed_Compensate_c_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Completed_Compensate_c_OUTBOUND" target="COORDINATOR_Compensating">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Compensating" target="COORDINATOR_Compensating_Compensate_c_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Compensating_Compensate_c_OUTBOUND" target="COORDINATOR_Compensating">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingActive" target="COORDINATOR_FailingActive_Failed_c_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingActive_Failed_c_OUTBOUND" target="COORDINATOR_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCanceling" target="COORDINATOR_FailingCanceling_Failed_c_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCanceling_Failed_c_OUTBOUND" target="COORDINATOR_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCompensating" target="COORDINATOR_FailingCompensating_Failed_c_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCompensating_Failed_c_OUTBOUND" target="COORDINATOR_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedFailed" target="COORDINATOR_EndedFailed_Failed_c_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedFailed_Failed_c_OUTBOUND" target="COORDINATOR_EndedFailed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Exiting" target="COORDINATOR_Exiting_Exited_c_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Exiting_Exited_c_OUTBOUND" target="COORDINATOR_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedExited" target="COORDINATOR_EndedExited_Exited_c_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedExited_Exited_c_OUTBOUND" target="COORDINATOR_EndedExited">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_NotCompleting" target="COORDINATOR_NotCompleting_NotCompleted_c_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_NotCompleting_NotCompleted_c_OUTBOUND" target="COORDINATOR_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedNotCompleted" target="COORDINATOR_EndedNotCompleted_NotCompleted_c_OUTBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedNotCompleted_NotCompleted_c_OUTBOUND" target="COORDINATOR_EndedNotCompleted">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Active" target="COORDINATOR_Active_Exit_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Active_Exit_p_INBOUND" target="COORDINATOR_Exiting">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Canceling" target="COORDINATOR_Canceling_Exit_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Canceling_Exit_p_INBOUND" target="COORDINATOR_Exiting">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Completed" target="COORDINATOR_Completed_Exit_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Completed_Exit_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Closing" target="COORDINATOR_Closing_Exit_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Closing_Exit_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Compensating" target="COORDINATOR_Compensating_Exit_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Compensating_Exit_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingActive" target="COORDINATOR_FailingActive_Exit_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingActive_Exit_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCanceling" target="COORDINATOR_FailingCanceling_Exit_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCanceling_Exit_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCompensating" target="COORDINATOR_FailingCompensating_Exit_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCompensating_Exit_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_NotCompleting" target="COORDINATOR_NotCompleting_Exit_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_NotCompleting_Exit_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Exiting" target="COORDINATOR_Exiting_Exit_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Exiting_Exit_p_INBOUND" target="COORDINATOR_Exiting">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedFailed" target="COORDINATOR_EndedFailed_Exit_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedFailed_Exit_p_INBOUND" target="COORDINATOR_EndedFailed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedExited" target="COORDINATOR_EndedExited_Exit_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedExited_Exit_p_INBOUND" target="COORDINATOR_EndedExited">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedNotCompleted" target="COORDINATOR_EndedNotCompleted_Exit_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedNotCompleted_Exit_p_INBOUND" target="COORDINATOR_EndedNotCompleted">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Ended" target="COORDINATOR_Ended_Exit_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Ended_Exit_p_INBOUND" target="COORDINATOR_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Active" target="COORDINATOR_Active_Completed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Active_Completed_p_INBOUND" target="COORDINATOR_Completed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Canceling" target="COORDINATOR_Canceling_Completed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Canceling_Completed_p_INBOUND" target="COORDINATOR_Completed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Completed" target="COORDINATOR_Completed_Completed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Completed_Completed_p_INBOUND" target="COORDINATOR_Completed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Closing" target="COORDINATOR_Closing_Completed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Closing_Completed_p_INBOUND" target="COORDINATOR_Closing">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Compensating" target="COORDINATOR_Compensating_Completed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Compensating_Completed_p_INBOUND" target="COORDINATOR_Compensating">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingActive" target="COORDINATOR_FailingActive_Completed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingActive_Completed_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCanceling" target="COORDINATOR_FailingCanceling_Completed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCanceling_Completed_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCompensating" target="COORDINATOR_FailingCompensating_Completed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCompensating_Completed_p_INBOUND" target="COORDINATOR_FailingCompensating">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_NotCompleting" target="COORDINATOR_NotCompleting_Completed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_NotCompleting_Completed_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Exiting" target="COORDINATOR_Exiting_Completed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Exiting_Completed_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedFailed" target="COORDINATOR_EndedFailed_Completed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedFailed_Completed_p_INBOUND" target="COORDINATOR_EndedFailed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedExited" target="COORDINATOR_EndedExited_Completed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedExited_Completed_p_INBOUND" target="COORDINATOR_EndedExited">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedNotCompleted" target="COORDINATOR_EndedNotCompleted_Completed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedNotCompleted_Completed_p_INBOUND" target="COORDINATOR_EndedNotCompleted">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Ended" target="COORDINATOR_Ended_Completed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Ended_Completed_p_INBOUND" target="COORDINATOR_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Active" target="COORDINATOR_Active_Fail_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Active_Fail_p_INBOUND" target="COORDINATOR_FailingActive">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Canceling" target="COORDINATOR_Canceling_Fail_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Canceling_Fail_p_INBOUND" target="COORDINATOR_FailingCanceling">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Completed" target="COORDINATOR_Completed_Fail_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Completed_Fail_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Closing" target="COORDINATOR_Closing_Fail_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Closing_Fail_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Compensating" target="COORDINATOR_Compensating_Fail_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Compensating_Fail_p_INBOUND" target="COORDINATOR_FailingCompensating">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingActive" target="COORDINATOR_FailingActive_Fail_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingActive_Fail_p_INBOUND" target="COORDINATOR_FailingActive">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCanceling" target="COORDINATOR_FailingCanceling_Fail_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCanceling_Fail_p_INBOUND" target="COORDINATOR_FailingCanceling">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCompensating" target="COORDINATOR_FailingCompensating_Fail_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCompensating_Fail_p_INBOUND" target="COORDINATOR_FailingCompensating">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_NotCompleting" target="COORDINATOR_NotCompleting_Fail_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_NotCompleting_Fail_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Exiting" target="COORDINATOR_Exiting_Fail_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Exiting_Fail_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedFailed" target="COORDINATOR_EndedFailed_Fail_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedFailed_Fail_p_INBOUND" target="COORDINATOR_EndedFailed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedExited" target="COORDINATOR_EndedExited_Fail_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedExited_Fail_p_INBOUND" target="COORDINATOR_EndedExited">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedNotCompleted" target="COORDINATOR_EndedNotCompleted_Fail_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedNotCompleted_Fail_p_INBOUND" target="COORDINATOR_EndedNotCompleted">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Ended" target="COORDINATOR_Ended_Fail_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Ended_Fail_p_INBOUND" target="COORDINATOR_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Active" target="COORDINATOR_Active_CannotComplete_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Active_CannotComplete_p_INBOUND" target="COORDINATOR_NotCompleting">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Canceling" target="COORDINATOR_Canceling_CannotComplete_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Canceling_CannotComplete_p_INBOUND" target="COORDINATOR_NotCompleting">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Completed" target="COORDINATOR_Completed_CannotComplete_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Completed_CannotComplete_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Closing" target="COORDINATOR_Closing_CannotComplete_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Closing_CannotComplete_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Compensating" target="COORDINATOR_Compensating_CannotComplete_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Compensating_CannotComplete_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingActive" target="COORDINATOR_FailingActive_CannotComplete_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingActive_CannotComplete_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCanceling" target="COORDINATOR_FailingCanceling_CannotComplete_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCanceling_CannotComplete_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCompensating" target="COORDINATOR_FailingCompensating_CannotComplete_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCompensating_CannotComplete_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_NotCompleting" target="COORDINATOR_NotCompleting_CannotComplete_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_NotCompleting_CannotComplete_p_INBOUND" target="COORDINATOR_NotCompleting">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Exiting" target="COORDINATOR_Exiting_CannotComplete_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Exiting_CannotComplete_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedFailed" target="COORDINATOR_EndedFailed_CannotComplete_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedFailed_CannotComplete_p_INBOUND" target="COORDINATOR_EndedFailed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedExited" target="COORDINATOR_EndedExited_CannotComplete_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedExited_CannotComplete_p_INBOUND" target="COORDINATOR_EndedExited">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedNotCompleted" target="COORDINATOR_EndedNotCompleted_CannotComplete_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedNotCompleted_CannotComplete_p_INBOUND" target="COORDINATOR_EndedNotCompleted">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Ended" target="COORDINATOR_Ended_CannotComplete_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Ended_CannotComplete_p_INBOUND" target="COORDINATOR_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Active" target="COORDINATOR_Active_Canceled_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Active_Canceled_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Canceling" target="COORDINATOR_Canceling_Canceled_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Canceling_Canceled_p_INBOUND" target="COORDINATOR_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Completed" target="COORDINATOR_Completed_Canceled_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Completed_Canceled_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Closing" target="COORDINATOR_Closing_Canceled_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Closing_Canceled_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Compensating" target="COORDINATOR_Compensating_Canceled_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Compensating_Canceled_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingActive" target="COORDINATOR_FailingActive_Canceled_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingActive_Canceled_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCanceling" target="COORDINATOR_FailingCanceling_Canceled_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCanceling_Canceled_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCompensating" target="COORDINATOR_FailingCompensating_Canceled_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCompensating_Canceled_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_NotCompleting" target="COORDINATOR_NotCompleting_Canceled_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_NotCompleting_Canceled_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Exiting" target="COORDINATOR_Exiting_Canceled_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Exiting_Canceled_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedFailed" target="COORDINATOR_EndedFailed_Canceled_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedFailed_Canceled_p_INBOUND" target="COORDINATOR_EndedFailed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedExited" target="COORDINATOR_EndedExited_Canceled_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedExited_Canceled_p_INBOUND" target="COORDINATOR_EndedExited">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedNotCompleted" target="COORDINATOR_EndedNotCompleted_Canceled_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedNotCompleted_Canceled_p_INBOUND" target="COORDINATOR_EndedNotCompleted">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Ended" target="COORDINATOR_Ended_Canceled_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Ended_Canceled_p_INBOUND" target="COORDINATOR_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Active" target="COORDINATOR_Active_Closed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Active_Closed_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Canceling" target="COORDINATOR_Canceling_Closed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Canceling_Closed_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Completed" target="COORDINATOR_Completed_Closed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Completed_Closed_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Closing" target="COORDINATOR_Closing_Closed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Closing_Closed_p_INBOUND" target="COORDINATOR_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Compensating" target="COORDINATOR_Compensating_Closed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Compensating_Closed_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingActive" target="COORDINATOR_FailingActive_Closed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingActive_Closed_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCanceling" target="COORDINATOR_FailingCanceling_Closed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCanceling_Closed_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCompensating" target="COORDINATOR_FailingCompensating_Closed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCompensating_Closed_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_NotCompleting" target="COORDINATOR_NotCompleting_Closed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_NotCompleting_Closed_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Exiting" target="COORDINATOR_Exiting_Closed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Exiting_Closed_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedFailed" target="COORDINATOR_EndedFailed_Closed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedFailed_Closed_p_INBOUND" target="COORDINATOR_EndedFailed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedExited" target="COORDINATOR_EndedExited_Closed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedExited_Closed_p_INBOUND" target="COORDINATOR_EndedExited">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedNotCompleted" target="COORDINATOR_EndedNotCompleted_Closed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedNotCompleted_Closed_p_INBOUND" target="COORDINATOR_EndedNotCompleted">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Ended" target="COORDINATOR_Ended_Closed_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Ended_Closed_p_INBOUND" target="COORDINATOR_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Active" target="COORDINATOR_Active_Compensated_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Active_Compensated_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Canceling" target="COORDINATOR_Canceling_Compensated_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Canceling_Compensated_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Completed" target="COORDINATOR_Completed_Compensated_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Completed_Compensated_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Closing" target="COORDINATOR_Closing_Compensated_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Closing_Compensated_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Compensating" target="COORDINATOR_Compensating_Compensated_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Compensating_Compensated_p_INBOUND" target="COORDINATOR_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingActive" target="COORDINATOR_FailingActive_Compensated_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingActive_Compensated_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCanceling" target="COORDINATOR_FailingCanceling_Compensated_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCanceling_Compensated_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCompensating" target="COORDINATOR_FailingCompensating_Compensated_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_FailingCompensating_Compensated_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_NotCompleting" target="COORDINATOR_NotCompleting_Compensated_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_NotCompleting_Compensated_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Exiting" target="COORDINATOR_Exiting_Compensated_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Exiting_Compensated_p_INBOUND" target="COORDINATOR_Invalid">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedFailed" target="COORDINATOR_EndedFailed_Compensated_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedFailed_Compensated_p_INBOUND" target="COORDINATOR_EndedFailed">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedExited" target="COORDINATOR_EndedExited_Compensated_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedExited_Compensated_p_INBOUND" target="COORDINATOR_EndedExited">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedNotCompleted" target="COORDINATOR_EndedNotCompleted_Compensated_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_EndedNotCompleted_Compensated_p_INBOUND" target="COORDINATOR_EndedNotCompleted">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Ended" target="COORDINATOR_Ended_Compensated_p_INBOUND">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Ended_Compensated_p_INBOUND" target="COORDINATOR_Ended">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+     </net>
+     <queries>
+          <query name="PARTICIPANT invalid?" strategy="Naive DFS with Hash" jit="false">PARTICIPANT_Invalid &gt; 0</query>
+          <query name="COORDINATOR invalid?" strategy="Naive DFS with Hash" jit="false">COORDINATOR_Invalid &gt; 0</query>
+     </queries>
+</pnml>

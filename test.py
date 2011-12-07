@@ -18,24 +18,10 @@ PeTe = "../PeTe-build-desktop/PeTe"
 ModelDir = "Samples/"
 
 # List of strategies to ignore
-IgnoreList = IgnoreList = [
-"Naive DFS with Hash",
-"Random DFS with Hash",
-"Naive BFS with Hash",
-"DFS-ArcCount",
-"DFS-Delta",
-"DFS-TokenCost",
-"Linear over-approximation",
-#"BestFS-Delta (Sum, Extreme)",
-"BestFS-Delta-Deep (Sum, Extreme)",
-"BestFS-Delta (Sum, Extreme) Lookahead 1",
-"BestFS-Delta (Sum, Extreme) Lookahead 2",
-"BestFS-Delta (Sum, Extreme) Lookahead 3",
-"BestFS-Delta (Sum, Extreme) Lookahead 4",
-"BestFS-Delta (Sum, Extreme) Lookahead 5"]
+IgnoreList = IgnoreList = []
 
 # List of models to run on
-Models = ["MAPK", "DTAPN", "Kanban", "FMS"]
+Models = ["Protocols", "LeaderElection", "MAPK", "Kanban", "FMS"]
 
 # Memory bound in KiB
 MemoryBound = 1048576
@@ -53,10 +39,7 @@ TimeOut = 60
 QueriesToRun = 0
 
 # Query prefixes to ignore
-QueryPrefixIgnoreList = [
-#"fOK",
-"fNOK",
-]
+QueryPrefixIgnoreList = []
 
 # Skip the first n from each model list
 SkipFirstNModels = 0
@@ -131,14 +114,29 @@ MAPK = [
 "MAPK320.pet",
 "MAPK640.pet",
 "MAPK1280.pet",
-"MAPK2560.pet"]
-DTAPN = ["DTAPNs/PrimeNet-7.pet", "DTAPNs/PrimeNet-11.pet", "DTAPNs/PrimeNet-13.pet", "DTAPNs/PrimeNet-17.pet", "DTAPNs/PrimeNet-19.pet"]
+"MAPK2560.pet"
+]
+Protocols = [
+"Protocols/BAwCC.pet",
+"Protocols/BAwPC.pet",
+"Protocols/Enhanced-BAwCC-protocol.pet",
+"Protocols/Enhanced-BAwPC-protocol.pet"
+]
+LeaderElection = [
+"Protocols/Election3.pet",
+"Protocols/Election5.pet",
+"Protocols/Election10.pet",
+"Protocols/Election15.pet",
+"Protocols/Election20.pet",
+"Protocols/Election25.pet"
+]
 modellists = []
 for m in Models:
 	if m == "MAPK": modellists += (MAPK[SkipFirstNModels:],)
-	if m == "DTAPN": modellists += (DTAPN[SkipFirstNModels:],)
 	if m == "Kanban": modellists += (Kanban[SkipFirstNModels:],)
 	if m == "FMS": modellists += (FMS[SkipFirstNModels:],)
+	if m == "Protocols": modellists += (Protocols[SkipFirstNModels:],)
+	if m == "LeaderElection": modellists += (LeaderElection[SkipFirstNModels:],)
 
 def getMemory(pid):
 	argvs = ["ps", "-p", str(pid), "-o", "vsz="]
@@ -226,16 +224,3 @@ def runScaledModels(scaledModels):
 if __name__ == "__main__":
 	for ml in modellists:
 		runScaledModels(ml)
-#
-#for ml in modellists:
-#	for i in range(1,10):
-#		strategy = "Random DFS with Hash"
-#		for model in ml:
-#			queries = listqueries(modeldir+model)
-#			failed = True
-#			for query in queries:
-#				ret, data, mem = run(modeldir + model, strategy, query)
-#				print data.strip() + ",\t" + str(mem)
-#				failed = failed and not ret
-#			if failed:
-#				break

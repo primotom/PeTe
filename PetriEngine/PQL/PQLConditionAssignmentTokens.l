@@ -45,7 +45,7 @@ letter        [a-zA-Z_]
 "="							{return TOKEN(EQUAL);}
 ":="						{return TOKEN(ASSIGN);}
 ";"							{return TOKEN(SEMI);}
-.							{printf("Unknown token %s!\n", pqlcatext); yyterminate();}
+.							{printf("Unknown condition assignment token %s!\n", pqlcatext); yyterminate();}
 
 %%
 

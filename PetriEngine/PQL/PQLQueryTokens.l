@@ -40,7 +40,7 @@ letter        [a-zA-Z_]
 "-"							{return TOKEN(MINUS);}
 "*"							{return TOKEN(MULTIPLY);}
 "="							{return TOKEN(EQUAL);}
-.							{printf("Unknown token %s!\n", pqlqtext); yyterminate();}
+.							{printf("Unknown query token %s!\n", pqlqtext); yyterminate();}
 
 %%
 namespace PetriEngine{ namespace PQL {

@@ -38,7 +38,7 @@ letter        [a-zA-Z_]
 "-"							{return TOKEN(MINUS);}
 "*"							{return TOKEN(MULTIPLY);}
 ";"							{return TOKEN(SEMI);}
-.							{printf("Unknown token %s!\n", pqlatext); yyterminate();}
+.							{printf("Unknown assignment token %s!\n", pqlatext); yyterminate();}
 
 %%
 
