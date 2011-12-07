@@ -7,7 +7,7 @@
 
 namespace PetriEngine { namespace Structures {
 
-class IndexedStateSet : OrderableStateSet {
+class IndexedStateSet : public OrderableStateSet {
 public:
 	IndexedStateSet(const PetriNet& net, PQL::MonotonicityContext* context)
 		: OrderableStateSet(net, context){}
@@ -15,8 +15,8 @@ public:
 	bool add(State* state);
 	bool equal(State* s1, State* s2);
 
+
 };
-}
-}
+}}
 
 #endif // INDEXEDSTATESET_H
