@@ -30,6 +30,7 @@
 #include "BestFirstReachabilitySearch.h"
 #include "LinearOverApprox.h"
 #include "RandomDFS.h"
+#include "IndexedSearch.h"
 
 #include "UltimateSearch.h"
 #include "HeuristicDFS.h"
@@ -48,6 +49,9 @@
 #define NAME_MonoDFSBool						"Ordered DFS Bools"
 #define NAME_MonoBFS							"Ordered BFS"
 #define NAME_MonoRandomDFS						"Ordered Random DFS"
+
+//Indexed
+#define NAME_INDEXED							"Indexed"
 
 //Heuristics
 #define NAME_DFSArcCount						"DFS-ArcCount"
@@ -160,6 +164,7 @@ std::vector<std::string> ReachabilitySearchStrategy::listStrategies(){
 		NAME_MonoRandomDFS,
 		NAME_RandomDFS,
 		NAME_BFS,
+		NAME_INDEXED,
 		/*NAME_DFSArcCount,
 		NAME_DFSTokenCost,
 		NAME_DFSDelta,
@@ -229,6 +234,9 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 
 	if(strategy == NAME_BFS)
 		return new BreadthFirstReachabilitySearch();
+
+	if(strategy == NAME_INDEXED)
+		return new IndexedSearch();
 /*	if(strategy == NAME_DFSArcCount){
 		int flags = PQL::DistanceContext::ArcCount | PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;
 		return new HeuristicDFS((PQL::DistanceContext::DistanceStrategy)flags);

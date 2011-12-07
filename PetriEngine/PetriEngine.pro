@@ -35,7 +35,8 @@ SOURCES		   += \
     Reachability/MonoDFSState.cpp \
     Reachability/MonoDFSBool.cpp \
     Reachability/MonoBFS.cpp \
-    Reachability/MonoRandomDFS.cpp
+    Reachability/MonoRandomDFS.cpp \
+    Reachability/IndexedSearch.cpp
 	#Reachability/CoverabilityTreeNode.cpp
 
 HEADERS		   += \
@@ -84,7 +85,9 @@ HEADERS		   += \
     Reachability/MonoDFSBool.h \
     Reachability/MonoBFS.h \
     Reachability/MonoRandomDFS.h \
-    Reachability/IndexedSearch.h
+    Reachability/IndexedSearch.h \
+    Reachability/IndexedSearch.h \
+    Structures/IndexedStateSet.h
 	#Reachability/CoverabilityTreeNode.h
 
 TARGET			= ../PetriEngine

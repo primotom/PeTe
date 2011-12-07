@@ -17,31 +17,22 @@ public:
 
 	bool add(State* state){
 		_countAdd++;
-		for(std::list<std::pair<bool,State*> >::iterator it = _states.begin() ; it != _states.end();){
-			if (less((*it).second, state)){
+		for(std::list<State*>::iterator it = _states.begin() ; it != _states.end();){
+			if (less(*it, state)){
 				_states.remove(*it++);
 				_countSkip++;
 			}else{
-				if(leq(state,(*it).second)){
+				if(leq(state,*it)){
 					_countSkip++;
 					return false;
 				}
 				it++;
 			}
 		}
-		_states.push_back(std::make_pair(false,state));
+		_states.push_back(state);
 		return true;
 
-    }
-
-    void visit(State* state){
-		for(std::list<std::pair<bool,State*> >::iterator it = _states.begin() ; it != _states.end();it++){
-			if ((*it).second == state){
-				(*it).first = true;
-				return;
-			}
-		}
-    }
+	}
 
 	//Is some good boolean variable or marking in s1 greater than the one in s2, where true > false
 	bool greater(State* s1, State* s2){
@@ -74,7 +65,7 @@ public:
 		return false;
 	}
 
-	std::list<std::pair<bool,State*> > States() {return _states;}
+	std::list<State*> States() {return _states;}
 
 	void writeStatistics(){
 		std::cout<<"Number of states skipped: "<<_countSkip<<std::endl;
@@ -82,7 +73,7 @@ public:
 		std::cout<<"Final size of visited and waiting: "<<_states.size()<<std::endl;
 	}
 
-private:
+protected:
 	//Is S1 less or equal to S2
     bool leq(State* s1, State* s2){
 		for(size_t i = 0; i <  _net->numberOfPlaces(); i++){
@@ -133,7 +124,7 @@ private:
 
     const PetriNet* _net;
 	PQL::MonotonicityContext* _context;
-    std::list<std::pair<bool,State*> > _states; //true = visited //false = waiting
+	std::list<State*> _states;
 
 	int _countSkip;
 	int _countAdd;

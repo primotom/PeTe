@@ -23,9 +23,12 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <iostream>
 #include <string.h>
 #include <algorithm>
 #include <vector>
+
+
 
 namespace PetriEngine { namespace Structures {
 
@@ -91,6 +94,15 @@ public:
 			fprintf(stderr, "%s\n", net.transitionNames()[c->transition()].c_str());
 			c = c->parent();
 		}
+	}
+
+	/** Index of state */
+	int stateIndex(const PetriNet& net){
+		int temp = 0;
+		for(uint i = 0; i < net.numberOfPlaces(); i++){
+			temp += marking()[i];
+		}
+		return temp;
 	}
 
 	/** State specialisation of std::hash */

@@ -1,3 +1,4 @@
+
 /* PeTe - Petri Engine exTremE
  * Copyright (C) 2011  Jonas Finnemann Jensen <jopsen@gmail.com>,
  *                     Thomas Søndersø Nielsen <primogens@gmail.com>,
@@ -16,90 +17,96 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include "MonoBFS.h"
+#include "IndexedSearch.h"
 #include "../PQL/PQL.h"
 #include "../PQL/Contexts.h"
 #include "../Structures/StateSet.h"
-#include "../Structures/OrderableStateSet.h"
+#include "../Structures/IndexedStateSet.h"
 #include "../Structures/StateAllocator.h"
-
 #include <list>
 #include <string.h>
+#include <queue>
 
 using namespace PetriEngine::PQL;
 using namespace PetriEngine::Structures;
 
 namespace PetriEngine{ namespace Reachability {
 
-ReachabilityResult MonoBFS::reachable(const PetriNet &net,
-															 const MarkVal *m0,
-															 const VarVal *v0,
-															 const BoolVal *ba,
-															 PQL::Condition *query){
+ReachabilityResult IndexedSearch::reachable(const PetriNet &net,
+														   const MarkVal *m0,
+														   const VarVal *v0,
+														   const BoolVal *b0,
+														   PQL::Condition *query){
 	//Do we initially satisfy query?
-	if(query->evaluate(PQL::EvaluationContext(m0, v0,ba)))
+	if(query->evaluate(PQL::EvaluationContext(m0, v0, b0)))
 		return ReachabilityResult(ReachabilityResult::Satisfied,
 								  "A state satisfying the query was found");
 	//Create StateSet
 	MonotonicityContext context(&net);
 	context.analyze();
 
-	OrderableStateSet states(net,&context);
-
-	std::list<State*> queue;
+	IndexedStateSet states(net,&context);
+	std::list<Step> stack;
 
 	StateAllocator<1000000> allocator(net);
 
 	State* s0 = allocator.createState();
 	memcpy(s0->marking(), m0, sizeof(MarkVal)*net.numberOfPlaces());
 	memcpy(s0->intValuation(), v0, sizeof(VarVal)*net.numberOfIntVariables());
-	memcpy(s0->boolValuation(), ba, sizeof(BoolVal)*net.numberOfBoolVariables());
+	memcpy(s0->boolValuation(), b0, sizeof(BoolVal)*net.numberOfBoolVariables());
 
-	queue.push_back(s0);
+	stack.push_back(Step(s0, 0));
 
 	unsigned int max = 0;
 	int count = 0;
-	BigInt expandedStates = 0;
 	BigInt exploredStates = 0;
+	BigInt expandedStates = 0;
 	State* ns = allocator.createState();
-	while(!queue.empty()){
-		// Progress reporting and abort checking
-		if(count++ & 1<<17){
-			if(queue.size() > max)
-				max = queue.size();
+	while(!stack.empty()){
+		if(count++ & 1<<18){
+			if(stack.size() > max)
+				max = stack.size();
 			count = 0;
-			// Report progress
-			reportProgress((double)(max - queue.size())/(double)max);
-			// Check abort
+			//report progress
+			reportProgress((double)(max-stack.size())/(double)max);
+			//check abort
 			if(abortRequested())
 				return ReachabilityResult(ReachabilityResult::Unknown,
 										"Search was aborted.");
 		}
 
-		State* s = queue.front();
-		queue.pop_front();
-		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
-			if(net.fire(t, s, ns)){
-				if(states.add(ns)){
-					exploredStates++;
-					ns->setParent(s);
-					ns->setTransition(t);
-					if(query->evaluate(*ns)){
-						//ns->dumpTrace(net);
-						return ReachabilityResult(ReachabilityResult::Satisfied,
-												"A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
-					}
+		//Take first step of the stack
+		State* s = stack.back().state;
 
-					queue.push_back(ns);
+		ns->setParent(s);
+		bool foundSomething = false;
+		for(unsigned int t = stack.back().t; t < net.numberOfTransitions(); t++){
+			if(net.fire(t, s->marking(), s->intValuation(),s->boolValuation(), ns->marking(), ns->intValuation(), ns->boolValuation())){
+				if(states.add(ns)){
+					ns->setTransition(t);
+					if(query->evaluate(PQL::EvaluationContext(ns->marking(), ns->intValuation(), ns->boolValuation())))
+						return ReachabilityResult(ReachabilityResult::Satisfied,
+									  "A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
+					stack.back().t = t + 1;
+
+					stack.push_back(Step(ns, 0));
+					exploredStates++;
+					foundSomething = true;
 					ns = allocator.createState();
+					break;
 				}
 			}
 		}
-		expandedStates++;
+		if(!foundSomething){
+			stack.pop_back();
+			expandedStates++;
+		}
 	}
-
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
-						"No state satisfying the query exists.", expandedStates, exploredStates);
+							"No state satisfying the query exists.", expandedStates, count);
 }
 
-}}
+
+
+} // Reachability
+} // PetriEngine
