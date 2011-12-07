@@ -36,7 +36,8 @@ SOURCES		   += \
     Reachability/MonoDFSBool.cpp \
     Reachability/MonoBFS.cpp \
     Reachability/MonoRandomDFS.cpp \
-    Reachability/IndexedSearch.cpp
+    Reachability/IndexedSearch.cpp \
+    Structures/IndexedStateSet.cpp
 	#Reachability/CoverabilityTreeNode.cpp
 
 HEADERS		   += \

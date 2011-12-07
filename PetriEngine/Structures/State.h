@@ -102,6 +102,20 @@ public:
 		for(uint i = 0; i < net.numberOfPlaces(); i++){
 			temp += marking()[i];
 		}
+		//for(uint i = 0; i < net.numberOfBoolVariables(); i++){
+		//	temp += boolValuation()[i];
+		//}%TODO: check if this is usefull
+		return temp;
+	}
+
+	/** Variation of state */
+	int stateVariation(const PetriNet& net){
+		int avg = stateIndex(net) / net.numberOfPlaces();
+
+		int temp = 0;
+		for(uint i = 0; i < net.numberOfPlaces(); i++){
+			temp += std::abs(avg - marking()[i]);
+		}
 		return temp;
 	}
 
