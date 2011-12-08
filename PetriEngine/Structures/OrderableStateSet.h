@@ -77,6 +77,7 @@ public:
 	std::list<std::pair<bool,State*> > States() {return _states;}
 
 	void writeStatistics(){
+		std::cout<<"Number of call to add: "<<_countAdd<<std::endl;
 		std::cout<<"Number of states skipped: "<<_countSkip<<std::endl;
 		std::cout<<"Number of states not skipped: "<<_countAdd-_countSkip<<std::endl;
 		std::cout<<"Final size of visited and waiting: "<<_states.size()<<std::endl;

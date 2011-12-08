@@ -27,6 +27,7 @@
 #include "MonoBFS.h"
 #include "MonoRandomDFS.h"
 #include "RandomDFS.h"
+#include "MonoNewBestFS.h"
 #include "BestFirstReachabilitySearch.h"
 #include "MonoBestFirstReachabilitySearch.h"
 #include "LinearOverApprox.h"
@@ -49,6 +50,7 @@
 #define NAME_MonoDFSBool						"Ordered DFS Bools"
 #define NAME_MonoBFS							"Ordered BFS"
 #define NAME_MonoRandomDFS						"Ordered Random DFS"
+#define NAME_MonoNewBestFS						"Ordered new Best First Seach"
 
 //Heuristics
 #define NAME_BestFSOld							"Old BestFS (Heuristic distance)"
@@ -82,7 +84,8 @@ std::vector<std::string> ReachabilitySearchStrategy::listStrategies(){
 		NAME_MonoDFSState,
 		NAME_MonoDFSBool,
 		NAME_BestFSOld,
-		NAME_MonoBestFS
+		NAME_MonoBestFS,
+		NAME_MonoNewBestFS
 	};
 	return std::vector<std::string>(strats, strats + sizeof(strats) / sizeof(std::string));
 }
@@ -108,6 +111,8 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 		return new MonoDFSState();
 	if(strategy == NAME_MonoDFSBool)
 		return new MonoDFSBool();
+	if(strategy == NAME_MonoNewBestFS)
+		return new MonoNewBestFS();
 
 	// Heuristic Search Strategies
 	if(strategy == NAME_BestFSOld){
