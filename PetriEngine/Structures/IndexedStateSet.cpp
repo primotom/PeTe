@@ -46,7 +46,11 @@ bool IndexedStateSet::add(State* state){
 	if(foundSomething){
 		return true;
 	}
-	if(_states.empty() || lesser || (bigger && !lesser)){
+	if(bigger && !lesser){
+		_states.push_front(state);
+		return true;
+	}
+	if(_states.empty() || (lesser && !bigger)){
 		_states.push_back(state);
 		return true;
 	}
