@@ -1,0 +1,1 @@
+ruby -I csv2uppaal/ csv2uppaal/xml2uppaal.rb <TargetXMLFile.xml>
