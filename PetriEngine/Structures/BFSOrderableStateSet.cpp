@@ -20,9 +20,13 @@ bool BFSOrderableStateSet::add(State *state){
 	//  equal any states in visited
 	if(!skipVisited){
 		for(iter it = _visited.begin(); it != _visited.end(); it++){
-			if(this->leq(state, *it))
-				return false;
-			it++;
+			if(this->less(*it, state))
+				_visited.remove(*it++);
+			else {
+				if(this->leq(state, *it))
+					return false;
+				it++;
+			}
 		}
 	}
 

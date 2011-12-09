@@ -16,8 +16,10 @@ class PriorityList : map<double, std::list<Item> >
 {
 public:
 	/** Iterator for the priority list */
-	class StateIterator : iterator<input_iterator_tag, Item> {
+	class StateIterator : public iterator<input_iterator_tag, Item> {
 	private:
+		typedef map::iterator Iter;
+
 		Item* _i;
 		PriorityList* _list;
 		Iter _listPos;
@@ -79,7 +81,9 @@ public:
 			return tmp;
 		}
 
-		friend class PriorityList;
+		/** Comparison operators */
+		bool operator==(const StateIterator& rhs) {return _i==rhs._i;}
+		bool operator!=(const StateIterator& rhs) {return _i!=rhs._i;}
 	};
 
 private:
@@ -165,8 +169,15 @@ public:
 
 	/** Erase an item from the list */
 	void remove(StateIterator it) {
-
+		Iter mPos = it._listPos;
+		for(list<Item>::iterator lit = mPos->second.begin(); lit != mPos->second.end(); lit++){
+			if(*lit == it._i)
+				mPos->second.erase(lit);
+				_size -= 1;
+		}
 	}
+
+	friend class StateIterator;
 };
 
 }

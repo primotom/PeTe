@@ -23,13 +23,7 @@ public:
 								 const BoolVal *initialBooleanAssignment,
 								 PQL::Condition *query);
 private:
-	void initialize(const PQL::Condition* query, const PetriNet& net);
-	/** Method for prioritizing different states, lower priority is better */
-	double priority(const Structures::State* state,
-					const PQL::Condition* query,
-					const PetriNet& net);
 	PQL::DistanceContext::DistanceStrategy _distanceStrategy;
-	Structures::DistanceMatrix* _dm;
 };
 
 

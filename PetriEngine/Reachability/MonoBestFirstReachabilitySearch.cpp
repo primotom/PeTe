@@ -2,9 +2,7 @@
 #include "MonoBestFirstReachabilitySearch.h"
 #include "../PQL/PQL.h"
 #include "../PQL/Contexts.h"
-#include "../Structures/PriorityQueue.h"
-#include "../Structures/EnhancedPriorityQueue.h"
-#include "../Structures/OrderableStateSet.h"
+#include "../Structures/BestFSOrderableStateSet.h"
 #include "../Structures/StateAllocator.h"
 
 #include <string.h>
@@ -31,14 +29,11 @@ ReachabilityResult MonoBestFirstReachabilitySearch::reachable(const PetriNet &ne
 		return ReachabilityResult(ReachabilityResult::Satisfied, "Satisfied initially", 0, 0);
 
 	//Initialize subclasses
-	initialize(query, net);
 	MonotonicityContext context(&net, query);
 	context.analyze();
 
-	OrderableStateSet states(net, &context);
+	BestFSOrderableStateSet states(net, &context, query);
 	states.add(s0);
-	EnhancedPriorityQueue<State*> queue;
-	queue.push(0, s0);
 
 	//Allocate new state
 	State* ns = allocator.createState();
@@ -46,19 +41,19 @@ ReachabilityResult MonoBestFirstReachabilitySearch::reachable(const PetriNet &ne
 	BigInt expandedStates = 0;
 	BigInt exploredStates = 0;
 	size_t max = 1;
-	while(!queue.empty()){
+	State* s = states.getNextState();
+	while(s){
 		if(count++ & 1<<17){
 			count = 0;
-			if(queue.size() > max)
-				max = queue.size();
-			this->reportProgress((double)(max - queue.size()) / ((double)(max)));
+			if(states.waitingSize() > max)
+				max = states.waitingSize();
+			this->reportProgress((double)(max - states.waitingSize()) / ((double)(max)));
 			if(this->abortRequested())
 				return ReachabilityResult(ReachabilityResult::Unknown,
 										  "Query aborted!");
 		}
 
 		//Take something out of the queue
-		State* s = queue.pop();
 		expandedStates++;
 
 		// Attempt to fire each transition
@@ -78,37 +73,16 @@ ReachabilityResult MonoBestFirstReachabilitySearch::reachable(const PetriNet &ne
 												  "Query was satified!", expandedStates, exploredStates, ns->pathLength(), ns->trace());
 					}
 
-					// Insert in queue, with given priority
-					double bestp = priority(ns, query, net);
-					queue.push(bestp, ns);
-
 					//Allocate new state, as states take ownership
 					ns = allocator.createState();
 				}
 			}
 		}
+		s = states.getNextState();
 	}
 
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
 							  "Query cannot be satisfied!", expandedStates, exploredStates);
-}
-
-double MonoBestFirstReachabilitySearch::priority(const Structures::State *state,
-												 const PQL::Condition *query,
-												 const PetriNet& net){
-	PQL::DistanceContext context(net,
-								 _distanceStrategy,
-								 state->marking(),
-								 state->intValuation(),
-								 state->boolValuation(),
-								 _dm);
-	double d = query->distance(context);
-	return d;
-}
-
-void MonoBestFirstReachabilitySearch::initialize(const PQL::Condition*,
-												 const PetriNet& net){
-	_dm = new Structures::DistanceMatrix(net);
 }
 
 } // Reachability
