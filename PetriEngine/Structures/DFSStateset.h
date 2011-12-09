@@ -4,14 +4,14 @@
 
 #include "PQL/Contexts.h"
 #include <list>
-
+#include "OrderableStateSet.h"
 namespace PetriEngine { namespace Structures {
 
-class DFSStateSet {
+
+class DFSStateSet : public OrderableStateSet {
 public:
-	DFSStateSet(const PetriNet& net, PQL::MonotonicityContext* context){
-	_context = context;
-	_net = &net;
+	DFSStateSet(const PetriNet& net, PQL::MonotonicityContext* context):
+	OrderableStateSet(net,context){
 	_countSkip =0;
 	_countAdd =0;
 	}
