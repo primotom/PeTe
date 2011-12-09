@@ -32,6 +32,7 @@
 #include "MonoBestFirstReachabilitySearch.h"
 #include "LinearOverApprox.h"
 #include "RandomDFS.h"
+#include "IndexedSearch.h"
 
 #include "UltimateSearch.h"
 #include "HeuristicDFS.h"
@@ -55,6 +56,7 @@
 //Heuristics
 #define NAME_BestFSOld							"Old BestFS (Heuristic distance)"
 #define NAME_MonoBestFS							"Old BestFS (Monotonicity Included)"
+#define NAME_Indexed							"Indexed Search"
 
 //Over-approximation by linear programming
 #define NAME_LinearOverApprox					"Linear over-approximation"
@@ -85,7 +87,8 @@ std::vector<std::string> ReachabilitySearchStrategy::listStrategies(){
 		NAME_MonoDFSBool,
 		NAME_BestFSOld,
 		NAME_MonoBestFS,
-		NAME_MonoNewBestFS
+		NAME_MonoNewBestFS,
+		NAME_Indexed
 	};
 	return std::vector<std::string>(strats, strats + sizeof(strats) / sizeof(std::string));
 }
@@ -113,6 +116,8 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 		return new MonoDFSBool();
 	if(strategy == NAME_MonoNewBestFS)
 		return new MonoNewBestFS();
+	if(strategy == NAME_Indexed)
+		return new IndexedSearch();
 
 	// Heuristic Search Strategies
 	if(strategy == NAME_BestFSOld){

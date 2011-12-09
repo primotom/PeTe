@@ -37,7 +37,7 @@ ReachabilityResult IndexedSearch::reachable(const PetriNet &net,
 														   const VarVal *v0,
 														   const BoolVal *b0,
 														   PQL::Condition *query){
-	/*
+
 	//Do we initially satisfy query?
 	if(query->evaluate(PQL::EvaluationContext(m0, v0, b0)))
 		return ReachabilityResult(ReachabilityResult::Satisfied,
@@ -56,17 +56,18 @@ ReachabilityResult IndexedSearch::reachable(const PetriNet &net,
 	memcpy(s0->intValuation(), v0, sizeof(VarVal)*net.numberOfIntVariables());
 	memcpy(s0->boolValuation(), b0, sizeof(BoolVal)*net.numberOfBoolVariables());
 
-	stack.push_back(Step(s0, 0));
+	states.add(s0);
 
 	unsigned int max = 0;
 	int count = 0;
 	BigInt exploredStates = 0;
 	BigInt expandedStates = 0;
 	State* ns = allocator.createState();
-	while(!stack.empty()){
-		if(count++ & 1<<18){
-			if(stack.size() > max)
-				max = stack.size();
+	State* s = states.getNextState();
+	while(s){
+		if(count++ & 1<<17){ //TODO: Check 17
+			if(states.waitingSize() > max)
+				max = states.waitingSize();
 			count = 0;
 			//report progress
 			reportProgress((double)(max-stack.size())/(double)max);
@@ -76,35 +77,23 @@ ReachabilityResult IndexedSearch::reachable(const PetriNet &net,
 										"Search was aborted.");
 		}
 
-		//Take first step of the stack
-		State* s = stack.back().state;
-
-		ns->setParent(s);
-		bool foundSomething = false;
-		for(unsigned int t = stack.back().t; t < net.numberOfTransitions(); t++){
+		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
 			if(net.fire(t, s->marking(), s->intValuation(),s->boolValuation(), ns->marking(), ns->intValuation(), ns->boolValuation())){
 				if(states.add(ns)){
+					exploredStates++;
+					ns->setParent(s);
 					ns->setTransition(t);
 					if(query->evaluate(PQL::EvaluationContext(ns->marking(), ns->intValuation(), ns->boolValuation())))
 						return ReachabilityResult(ReachabilityResult::Satisfied,
 									  "A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
-					stack.back().t = t + 1;
 
-					stack.push_back(Step(ns, 0));
-					exploredStates++;
-					foundSomething = true;
 					ns = allocator.createState();
-					break;
 				}
 			}
 		}
-		if(!foundSomething){
-			stack.pop_back();
-			expandedStates++;
-		}
-	}*/
-	//return ReachabilityResult(ReachabilityResult::NotSatisfied,
-	//						"No state satisfying the query exists.", expandedStates, count);
+		s = states.getNextState();
+		exploredStates++;//TODO: Should exploredStates be incremented twice?
+	}
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
 							"No state satisfying the query exists.", 0, 0);
 }

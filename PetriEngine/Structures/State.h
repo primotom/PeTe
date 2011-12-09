@@ -102,9 +102,9 @@ public:
 		for(uint i = 0; i < net.numberOfPlaces(); i++){
 			temp += marking()[i];
 		}
-		//for(uint i = 0; i < net.numberOfBoolVariables(); i++){
-		//	temp += boolValuation()[i];
-		//}%TODO: check if this is usefull
+		for(uint i = 0; i < net.numberOfBoolVariables(); i++){
+			temp += boolValuation()[i];
+		}
 		return temp;
 	}
 
@@ -115,6 +115,10 @@ public:
 		int temp = 0;
 		for(uint i = 0; i < net.numberOfPlaces(); i++){
 			temp += std::abs(avg - marking()[i]);
+		}
+		for(uint i = 0; i < net.numberOfBoolVariables(); i++){
+			if(!boolValuation()[i])
+				temp += 1;
 		}
 		return temp;
 	}
