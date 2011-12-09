@@ -76,12 +76,12 @@ ReachabilityResult MonoDFSBool::reachable(const PetriNet &net,
 		}
 
 		//Take first step of the stack
-		State* s = states.getWating().state;
-		//Mark as visited
-		//states.visit(s);
+		Step tstep = states.getNextStep();
+		State* s = tstep.state;
+
 		ns->setParent(s);
 		bool foundSomething = false;
-		for(unsigned int t = states.getWating().t; t < net.numberOfTransitions(); t++){
+		for(unsigned int t = tstep.t; t < net.numberOfTransitions(); t++){
 			if(net.fire(t, s->marking(), s->intValuation(),s->boolValuation(), ns->marking(), ns->intValuation(), ns->boolValuation())){
 				if(states.add(ns ,t)){
 					ns->setTransition(t);

@@ -1,12 +1,13 @@
 
 
 #include "DFSStateset.h"
+
 namespace PetriEngine { namespace Structures {
 
 
 bool DFSStateSet::add(State* state, unsigned int t){
 	_countAdd++;
-	Step* oldBack = &_stack.back();
+
 	for(std::list<Step>::iterator it = _stack.begin() ; it != _stack.end();){
 		if (less((*it).state, state)){
 			_stack.remove(*it++);
@@ -46,16 +47,21 @@ bool DFSStateSet::add(State* state, unsigned int t){
 		_stack.push_back(Step(state,0));
 	}
 
-	_states.push_back(state);
-
-	//we are adding to wating
-
-
-
-
 	return true;
 }
 
+Step DFSStateSet::getNextStep(){
+	if(!_stack.empty()){
+		Step retState = _stack.back();
+		_states.push_back(retState.state);
+		return retState;
+	} else
+		return Step(NULL,0);
+}
+
+size_t DFSStateSet::waitingSize(){
+	return _states.size();
+}
 
 void writeStatistics(){
 	//std::cout<<"Number of call to add: "<<_countAdd<<std::endl;
