@@ -37,6 +37,7 @@ ReachabilityResult IndexedSearch::reachable(const PetriNet &net,
 														   const VarVal *v0,
 														   const BoolVal *b0,
 														   PQL::Condition *query){
+	/*
 	//Do we initially satisfy query?
 	if(query->evaluate(PQL::EvaluationContext(m0, v0, b0)))
 		return ReachabilityResult(ReachabilityResult::Satisfied,
@@ -101,9 +102,11 @@ ReachabilityResult IndexedSearch::reachable(const PetriNet &net,
 			stack.pop_back();
 			expandedStates++;
 		}
-	}
+	}*/
+	//return ReachabilityResult(ReachabilityResult::NotSatisfied,
+	//						"No state satisfying the query exists.", expandedStates, count);
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
-							"No state satisfying the query exists.", expandedStates, count);
+							"No state satisfying the query exists.", 0, 0);
 }
 
 
