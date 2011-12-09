@@ -39,5 +39,9 @@ State* BFSOrderableStateSet::getNextState(){
 	} else return NULL;
 }
 
+size_t BFSOrderableStateSet::waitingSize(){
+	return _waiting.size();
+}
+
 } // Structures
 } // PetriEngine

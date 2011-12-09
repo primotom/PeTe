@@ -18,10 +18,13 @@ public:
 	bool add(State* state);
 
 	/** Get the next state to explore */
-	State* getNextState;
+	State* getNextState();
+
+	/** Get size of waiting */
+	size_t waitingSize();
 
 private:
-	typedef typename list<State*>::iterator iter;
+	typedef typename std::list<State*>::iterator iter;
 
 	std::list<State*> _waiting;
 	std::list<State*> _visited;

@@ -65,11 +65,11 @@ ReachabilityResult MonoBFS::reachable(const PetriNet &net,
 	while(s){
 		// Progress reporting and abort checking
 		if(count++ & 1<<17){
-			if(queue.size() > max)
-				max = queue.size();
+			if(states.waitingSize() > max)
+				max = states.waitingSize();
 			count = 0;
 			// Report progress
-			reportProgress((double)(max - queue.size())/(double)max);
+			reportProgress((double)(max - states.waitingSize())/(double)max);
 			// Check abort
 			if(abortRequested())
 				return ReachabilityResult(ReachabilityResult::Unknown,
