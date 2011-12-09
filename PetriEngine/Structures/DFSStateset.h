@@ -14,9 +14,12 @@ public:
 	OrderableStateSet(net,context){
 	_countSkip =0;
 	_countAdd =0;
+
 	}
 
 	bool add(State* state);
+
+	bool add(Step* state);
 
 	//Is some good boolean variable or marking in s1 greater than the one in s2, where true > false
 	bool greater(State* s1, State* s2);
@@ -25,8 +28,20 @@ public:
 	bool greaterBool(State* s1, State* s2);
 
 	std::list<State*> States() {return _states;}
+	Step popWating(){return stack.pop_back();}
+	Step getWating(){return stack.back();}
 
 	void writeStatistics();
+
+	/** A step in the reachability search */
+	struct Step{
+		Step(Structures::State* s, unsigned int t){
+			state = s;
+			this->t = t;
+		}
+		Structures::State* state;
+		unsigned int t;
+	};
 
 protected:
 	//Is S1 less or equal to S2
@@ -37,10 +52,18 @@ protected:
 
 	const PetriNet* _net;
 	PQL::MonotonicityContext* _context;
+
+	//visited list
 	std::list<State*> _states;
+
+	//wating list
+	std::list<Step> stack;
 
 	int _countSkip;
 	int _countAdd;
+
+
+
 };
 
 }}

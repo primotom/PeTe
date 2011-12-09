@@ -21,7 +21,7 @@
 #include "../PQL/PQL.h"
 #include "../PQL/Contexts.h"
 #include "../Structures/StateSet.h"
-#include "../Structures/OrderableStateSet.h"
+#include "../Structures/DFSStateset.h"
 #include "../Structures/NaiveListStateSet.h"
 #include "../Structures/StateAllocator.h"
 #include <list>
@@ -45,9 +45,7 @@ ReachabilityResult MonoDFS::reachable(const PetriNet &net,
 	MonotonicityContext context(&net);
 	context.analyze();
 
-	OrderableStateSet states(net,&context);
-
-	std::list<Step> stack;
+	DFSStateSet states(net,&context);
 
 	StateAllocator<1000000> allocator(net);
 
@@ -56,7 +54,7 @@ ReachabilityResult MonoDFS::reachable(const PetriNet &net,
 	memcpy(s0->intValuation(), v0, sizeof(VarVal)*net.numberOfIntVariables());
 	memcpy(s0->boolValuation(), b0, sizeof(BoolVal)*net.numberOfBoolVariables());
 
-	stack.push_back(Step(s0, 0));
+	states.add(Step(s0, 0));
 
 	unsigned int max = 0;
 	int count = 0;
@@ -77,12 +75,12 @@ ReachabilityResult MonoDFS::reachable(const PetriNet &net,
 		}
 
 		//Take first step of the stack
-		State* s = stack.back().state;
+		State* s = states.popWating().state;
 		//Mark as visited
 		//states.visit(s);
 		ns->setParent(s);
 		bool foundSomething = false;
-		for(unsigned int t = stack.back().t; t < net.numberOfTransitions(); t++){
+		for(unsigned int t = states.getWating().t; t < net.numberOfTransitions(); t++){
 			if(net.fire(t, s->marking(), s->intValuation(),s->boolValuation(), ns->marking(), ns->intValuation(), ns->boolValuation())){
 				if(states.add(ns)){
 					ns->setTransition(t);
