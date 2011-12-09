@@ -9,10 +9,17 @@
 namespace PetriEngine { namespace Structures {
 
 
+		enum Mode{
+			ModeNormal,
+			ModeGraterBool,
+			ModeGraterState
+		};
+
 class DFSStateSet : public OrderableStateSet {
 public:
-	DFSStateSet(const PetriNet& net, PQL::MonotonicityContext* context):
+	DFSStateSet(const PetriNet& net, PQL::MonotonicityContext* context, Mode mode):
 	OrderableStateSet(net,context){
+		_mode = mode;
 	}
 
 	bool add(State* state){}
@@ -45,7 +52,7 @@ public:
 
 
 protected:
-
+	Mode _mode;
 	//wating list
 	std::list<Step> _stack;
 

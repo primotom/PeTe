@@ -27,7 +27,24 @@ bool DFSStateSet::add(State* state, unsigned int t){
 	}
 
 	_stack.back().t =  t+1;
-	_stack.push_back(Step(state,0));
+	if(_mode == PetriEngine::Structures::ModeGraterBool){
+
+		if(greaterBool(state,stack.back().state))
+			stack.push_back(Step(ns,0));
+		else
+			stack.push_front(Step(ns, 0));
+
+	}else if(){
+
+		if(greater(state,stack.back().state))
+			stack.push_back(Step(ns,0));
+		else
+			stack.push_front(Step(ns, 0));
+
+	}else{
+		_stack.push_back(Step(state,0));
+	}
+
 	_visited.push_back(state);
 
 	//we are adding to wating

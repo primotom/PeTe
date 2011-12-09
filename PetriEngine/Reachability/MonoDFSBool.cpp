@@ -45,7 +45,7 @@ ReachabilityResult MonoDFSBool::reachable(const PetriNet &net,
 	MonotonicityContext context(&net);
 	context.analyze();
 
-	DFSStateSet states(net,&context);
+	DFSStateSet states(net,&context, ModeGraterBool);
 	//NaiveListStateSet states;
 
 	StateAllocator<1000000> allocator(net);

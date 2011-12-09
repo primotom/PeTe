@@ -43,7 +43,7 @@ ReachabilityResult MonoDFSState::reachable(const PetriNet &net,
 	MonotonicityContext context(&net);
 	context.analyze();
 
-	DFSStateSet states(net,&context);
+	DFSStateSet states(net,&context, ModeGraterState);
 
 	StateAllocator<1000000> allocator(net);
 
