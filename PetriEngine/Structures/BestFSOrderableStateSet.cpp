@@ -1,4 +1,5 @@
 #include "BestFSOrderableStateSet.h"
+#include <iostream>
 
 namespace PetriEngine {
 namespace Structures {
@@ -30,6 +31,7 @@ bool BestFSOrderableStateSet::add(State *state){
 			}
 		}
 	}
+
 
 	// Calculate priority, and add
 	PQL::DistanceContext context(*this->_net,
