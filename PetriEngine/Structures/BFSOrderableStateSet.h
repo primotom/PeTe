@@ -21,7 +21,7 @@ public:
 	State* getNextState;
 
 private:
-	typedef typename list<State*>::iterator iter;
+	typedef typename std::list<State*>::iterator iter;
 
 	std::list<State*> _waiting;
 	std::list<State*> _visited;

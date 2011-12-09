@@ -13,9 +13,18 @@ public:
 		: OrderableStateSet(net, context){}
 
 	bool add(State* state);
+	State* getNextState();
+	int waitingSize();
+
+private:
+	typedef typename std::list<State*>::iterator iter;
+
+	std::list<State*> _waiting;
+	std::list<State*> _visited;
+
 	bool equal(State* s1, State* s2);
 
-
+	std::list<State*>::iterator insert_p;
 };
 }}
 
