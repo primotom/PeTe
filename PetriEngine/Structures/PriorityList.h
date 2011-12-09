@@ -81,8 +81,16 @@ public:
 		}
 
 		/** Comparison operators */
-		bool operator==(const StateIterator& rhs) {return _i==rhs._i;}
-		bool operator!=(const StateIterator& rhs) {return _i!=rhs._i;}
+		bool operator==(const StateIterator& rhs) {
+			if(_end)
+				return _end == rhs._end;
+			return _i==rhs._i;
+		}
+		bool operator!=(const StateIterator& rhs) {
+			if(_end)
+				return _end != rhs._end;
+			return _i!=rhs._i;
+		}
 	};
 
 private:
@@ -112,7 +120,7 @@ public:
 
 	/** Delete everything in the list */
 	void clear(){
-		this->clear();
+		Map::clear();
 		_size = 0;
 	}
 
@@ -132,6 +140,8 @@ public:
 		_size -= 1;
 		assert(Map::begin() != Map::end());
 		Iter it = Map::begin();
+		if(it == Map::end())
+			return NULL;
 		assert(!it->second.empty());
 		Item retVal = it->second.back();
 		it->second.pop_back();
@@ -174,12 +184,11 @@ public:
 
 	/** Erase an item from the list */
 	void remove(StateIterator it) {
+		assert(_size > 0);
+		assert(it._listPos != NULL);
 		Iter mPos = it._listPos;
-		for(typename list<Item>::iterator lit = mPos->second.begin(); lit != mPos->second.end(); lit++){
-			if(*lit == it._i)
-				mPos->second.erase(lit);
-				_size -= 1;
-		}
+		mPos->second.remove(it.item());
+		_size -= 1;
 	}
 };
 

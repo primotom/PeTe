@@ -6,6 +6,7 @@
 #include "../Structures/StateAllocator.h"
 
 #include <string.h>
+#include <iostream>
 
 using namespace PetriEngine::Structures;
 using namespace PetriEngine::PQL;
@@ -55,6 +56,7 @@ ReachabilityResult MonoBestFirstReachabilitySearch::reachable(const PetriNet &ne
 
 		//Take something out of the queue
 		expandedStates++;
+
 
 		// Attempt to fire each transition
 		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){

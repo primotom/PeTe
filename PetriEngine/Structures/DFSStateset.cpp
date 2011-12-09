@@ -6,7 +6,7 @@ namespace PetriEngine { namespace Structures {
 
 bool DFSStateSet::add(State* state, unsigned int t){
 	_countAdd++;
-
+	Step* oldBack = &_stack.back();
 	for(std::list<Step>::iterator it = _stack.begin() ; it != _stack.end();){
 		if (less((*it).state, state)){
 			_stack.remove(*it++);
@@ -28,16 +28,16 @@ bool DFSStateSet::add(State* state, unsigned int t){
 	}
 
 	_stack.back().t =  t+1;
-	if(_mode == PetriEngine::Structures::ModeGraterBool){
+	if(_mode == PetriEngine::Structures::ModeGraterBool && state->parent()){
 
-		if(greaterBool(state,_stack.back().state))
+		if(greaterBool(state, state->parent()))
 			_stack.push_back(Step(state,0));
 		else
 			_stack.push_front(Step(state, 0));
 
-	}else if(_mode == PetriEngine::Structures::ModeGraterState){
+	}else if(_mode == PetriEngine::Structures::ModeGraterState && state->parent()){
 
-		if(greater(state,_stack.back().state))
+		if(greater(state, state->parent()))
 			_stack.push_back(Step(state,0));
 		else
 			_stack.push_front(Step(state, 0));

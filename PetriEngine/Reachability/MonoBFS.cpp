@@ -25,6 +25,7 @@
 
 #include <list>
 #include <string.h>
+#include <iostream>
 
 using namespace PetriEngine::PQL;
 using namespace PetriEngine::Structures;
@@ -82,7 +83,7 @@ ReachabilityResult MonoBFS::reachable(const PetriNet &net,
 					exploredStates++;
 					ns->setParent(s);
 					ns->setTransition(t);
-					if(query->evaluate(*ns)){
+					if(query->evaluate(PQL::EvaluationContext(ns->marking(), ns->intValuation(), ns->boolValuation()))){
 						//ns->dumpTrace(net);
 						return ReachabilityResult(ReachabilityResult::Satisfied,
 												"A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
