@@ -20,13 +20,15 @@ public:
 	private:
 		typedef typename map<double, std::list<Item> >::iterator Iter;
 
-		Item* _i;
+		Item _i;
 		PriorityList* _list;
 		Iter _listPos;
 		bool _end;
 	public:
+		friend class PriorityList;
+
 		/** Iterator construction */
-		StateIterator(Item* item, PriorityList* list, Iter listPos) {
+		StateIterator(Item item, PriorityList* list, Iter listPos) {
 			_i = item;
 			_list = list;
 			_listPos = listPos;
@@ -41,13 +43,10 @@ public:
 		/** End iterator constructor */
 		StateIterator() {
 			_end = true;
-			_i = NULL;
-			_list = NULL;
-			_listPos = NULL;
 		}
 
 		/** Get the item */
-		Item* item(){ return _i; }
+		Item item(){ return _i; }
 
 		/** Pre-Increment iterator */
 		StateIterator& operator++() {
@@ -66,7 +65,7 @@ public:
 				}
 			}
 			_listPos++;
-			if(_listPos == _list->end()){
+			if(_listPos == _list->mapEnd()){
 				this->_end = true;
 				return *this;
 			}
@@ -75,7 +74,7 @@ public:
 		}
 
 		/** Post-Increment iterator */
-		StateIterator operator++(Item) {
+		StateIterator operator++(int) {
 			StateIterator tmp(*this);
 			this->operator ++();
 			return tmp;
@@ -89,7 +88,13 @@ public:
 private:
 	typedef typename map<double, std::list<Item> >::iterator Iter;
 	typedef typename map<double, std::list<Item> >::const_iterator ConstIter;
+	typedef map<double, std::list<Item> > Map;
 	size_t _size;
+
+	Iter mapEnd(){
+		return Map::end();
+	}
+
 public:
 	PriorityList(){
 		this->clear();
@@ -115,7 +120,7 @@ public:
 	void push(double priority, const Item& item){
 		_size += 1;
 		Iter it = this->find(priority);
-		if(it != this->end())
+		if(it != Map::end())
 			it->second.push_back(item);
 		else
 			this->insert(pair<double, list<Item> >(priority, list<Item>(1, item)));
@@ -125,11 +130,11 @@ public:
 	Item pop(){
 		assert(_size > 0);
 		_size -= 1;
-		assert(this->begin() != this->end());
-		Iter it = this->begin();
+		assert(Map::begin() != Map::end());
+		Iter it = Map::begin();
 		assert(!it->second.empty());
 		Item retVal = it->second.back();
-		it->scond.pop_back();
+		it->second.pop_back();
 		if(it->second.empty())
 			this->erase(it);
 		return retVal;
@@ -155,11 +160,11 @@ public:
 
 	/** Get iterator at the beginning of the list */
 	StateIterator begin() {
-		Iter mPos = this->begin();
-		if(mPos == this->end())
+		Iter mPos = map<double, std::list<Item> >::begin();
+		if(mPos == map<double, std::list<Item> >::end())
 			return StateIterator();
 		Item i = mPos->second.front();
-		return StateIterator(&i, this, mPos);
+		return StateIterator(i, this, mPos);
 	}
 
 	/** Get iterator past end of the list */
@@ -176,8 +181,6 @@ public:
 				_size -= 1;
 		}
 	}
-
-	friend class StateIterator;
 };
 
 }

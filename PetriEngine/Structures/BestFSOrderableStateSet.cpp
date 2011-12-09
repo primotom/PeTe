@@ -8,7 +8,7 @@ bool BestFSOrderableStateSet::add(State *state){
 	bool skipVisited = false;
 	for(iter it = _waiting.begin(); it != _waiting.end(); it++){
 		if(this->less(it.item(), state)){
-			_waiting.remove(it++.item());
+			_waiting.remove(it++);
 			skipVisited = true;
 		} else {
 			if(this->leq(state, it.item()))
@@ -32,7 +32,7 @@ bool BestFSOrderableStateSet::add(State *state){
 	}
 
 	// Calculate priority, and add
-	PQL::DistanceContext context(this->_net,
+	PQL::DistanceContext context(*this->_net,
 								 _distanceStrategy,
 								 state->marking(),
 								 state->intValuation(),
