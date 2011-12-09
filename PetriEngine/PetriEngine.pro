@@ -94,6 +94,7 @@ HEADERS		   += \
     Reachability/IndexedSearch.h \
     Structures/IndexedStateSet.h \
 	#Reachability/CoverabilityTreeNode.h
+    Structures/BFSOrderableStateSet.h
 
 TARGET			= ../PetriEngine
 
