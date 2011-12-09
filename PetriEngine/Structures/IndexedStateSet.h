@@ -24,7 +24,7 @@ private:
 
 	bool equal(State* s1, State* s2);
 
-	std::list<State*>::iterator insert_p;
+
 };
 }}
 
