@@ -3,7 +3,7 @@
 
 
 
-bool DFSStateSet::add(State* state){
+bool DFSStateSet::add(State* state, unsigned int t){
 
 
 	for(std::list<Step*>::iterator it = _stack.begin() ; it != _stack.end();){
@@ -24,7 +24,8 @@ bool DFSStateSet::add(State* state){
 		}
 	}
 
-	step.t = t+1;
+	_stack.back().t =  t+1;
+	_stack.push_back(Step(state,0));
 	_visited.push_back(state);
 
 	//we are adding to wating

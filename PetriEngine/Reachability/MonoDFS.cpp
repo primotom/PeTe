@@ -54,20 +54,20 @@ ReachabilityResult MonoDFS::reachable(const PetriNet &net,
 	memcpy(s0->intValuation(), v0, sizeof(VarVal)*net.numberOfIntVariables());
 	memcpy(s0->boolValuation(), b0, sizeof(BoolVal)*net.numberOfBoolVariables());
 
-	states.add(Step(s0, 0));
+	states.add(s0, 0);
 
 	unsigned int max = 0;
 	int count = 0;
 	BigInt exploredStates = 0;
 	BigInt expandedStates = 0;
 	State* ns = allocator.createState();
-	while(!stack.empty()){
+	while(!states.Wating().empty()){
 		if(count++ & 1<<18){
-			if(stack.size() > max)
-				max = stack.size();
+			if(states.Wating().size() > max)
+				max = states.Wating().size();
 			count = 0;
 			//report progress
-			reportProgress((double)(max-stack.size())/(double)max);
+			reportProgress((double)(max-states.Wating().size())/(double)max);
 			//check abort
 			if(abortRequested())
 				return ReachabilityResult(ReachabilityResult::Unknown,
@@ -75,20 +75,20 @@ ReachabilityResult MonoDFS::reachable(const PetriNet &net,
 		}
 
 		//Take first step of the stack
-		State* s = states.popWating().state;
+		State* s = states.getWating().state;
 		//Mark as visited
 		//states.visit(s);
 		ns->setParent(s);
 		bool foundSomething = false;
 		for(unsigned int t = states.getWating().t; t < net.numberOfTransitions(); t++){
 			if(net.fire(t, s->marking(), s->intValuation(),s->boolValuation(), ns->marking(), ns->intValuation(), ns->boolValuation())){
-				if(states.add(ns)){
+				if(states.add(ns,t)){
 					ns->setTransition(t);
 					if(query->evaluate(PQL::EvaluationContext(ns->marking(), ns->intValuation(), ns->boolValuation())))
 						return ReachabilityResult(ReachabilityResult::Satisfied,
 									  "A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
-					stack.back().t = t + 1;
-					stack.push_back(Step(ns,0));
+					//stack.back().t = t + 1;
+					//stack.push_back(Step(ns,0));
 					exploredStates++;
 					foundSomething = true;
 					ns = allocator.createState();
@@ -97,7 +97,7 @@ ReachabilityResult MonoDFS::reachable(const PetriNet &net,
 			}
 		}
 		if(!foundSomething){
-			stack.pop_back();
+			states.popWating();
 			expandedStates++;
 		}
 	}

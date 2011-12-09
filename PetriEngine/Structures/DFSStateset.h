@@ -5,6 +5,7 @@
 #include "PQL/Contexts.h"
 #include <list>
 #include "OrderableStateSet.h"
+#include "State.h"
 namespace PetriEngine { namespace Structures {
 
 
@@ -19,19 +20,9 @@ public:
 
 	bool add(State* state);
 
-	bool add(Step* state);
+	bool add(State* state, unsigned int t);
 
-	//Is some good boolean variable or marking in s1 greater than the one in s2, where true > false
-	bool greater(State* s1, State* s2);
 
-	//Is some good boolean variable in s1 greater than the one in s2, where true > false
-	bool greaterBool(State* s1, State* s2);
-
-	std::list<State*> States() {return _states;}
-	Step popWating(){return stack.pop_back();}
-	Step getWating(){return stack.back();}
-
-	void writeStatistics();
 
 	/** A step in the reachability search */
 	struct Step{
@@ -43,12 +34,20 @@ public:
 		unsigned int t;
 	};
 
-protected:
-	//Is S1 less or equal to S2
-	bool leq(State* s1, State* s2);
 
-	//Is S1 less than S2
-	bool less(State* s1, State* s2);
+	Step popWating(){Step temp = _stack.back();
+					_stack.pop_back();
+					return temp;}
+	Step getWating(){return _stack.back();}
+
+	std::list<Step> Wating() {return _stack;}
+
+	virtual State* getNextState(){return NULL;}
+
+	void writeStatistics();
+
+
+protected:
 
 	const PetriNet* _net;
 	PQL::MonotonicityContext* _context;
@@ -57,7 +56,7 @@ protected:
 	std::list<State*> _states;
 
 	//wating list
-	std::list<Step> stack;
+	std::list<Step> _stack;
 
 	int _countSkip;
 	int _countAdd;

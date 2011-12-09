@@ -4,6 +4,7 @@
 #include "PQL/Contexts.h"
 #include <list>
 
+
 namespace PetriEngine { namespace Structures {
 
 class OrderableStateSet {
