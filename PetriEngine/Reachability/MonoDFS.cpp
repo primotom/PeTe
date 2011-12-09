@@ -101,7 +101,7 @@ ReachabilityResult MonoDFS::reachable(const PetriNet &net,
 			expandedStates++;
 		}
 	}
-	states.writeStatistics();
+	//states.writeStatistics();
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
 							"No state satisfying the query exists.", expandedStates, count);
 }

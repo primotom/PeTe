@@ -26,7 +26,7 @@
 
 using namespace PetriEngine;
 using namespace PetriEngine::Structures;
-
+	/*
 SUITE(OrderableStateSetTest){
 	TEST(AddSmallerStateBooleanTest){
 		StateAllocator<> allocator(3,0,1);
@@ -190,7 +190,8 @@ SUITE(OrderableStateSetTest){
 
 		CHECK(set1.States().size() == set2.States().size());
 		CHECK(set1.States().size() == set3.States().size());
-*/
+
+
 	}
 }
-
+*/

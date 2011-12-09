@@ -1,5 +1,7 @@
 #include "RandomDFSStateset.h"
 
+namespace PetriEngine { namespace Structures {
+
 
 bool RandomDFSStateSet::add(State *state){
 	// Ensure we're larger than any state in waiting. Pop any states smaller
@@ -45,3 +47,5 @@ State* RandomDFSStateSet::getNextState(){
 size_t RandomDFSStateSet::waitingSize(){
 	return _waiting.size();
 }
+
+}}
