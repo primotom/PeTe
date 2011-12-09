@@ -20,7 +20,7 @@ public:
 								 PQL::Condition* query);
 private:
 	/** A step in the reachability search */
-	struct Step{
+	/*struct Step{
 		Step(Structures::State* s, unsigned int t){
 			state = s;
 			this->t = t;
@@ -28,6 +28,7 @@ private:
 		Structures::State* state;
 		unsigned int t;
 	};
+	*/
 };
 } // Reachability
 } // PetriEngine

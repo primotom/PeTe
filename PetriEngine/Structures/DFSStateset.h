@@ -15,6 +15,17 @@ enum Mode{
 	ModeGraterBool,
 	ModeGraterState
 };
+/** A step in the reachability search */
+struct Step{
+	Step(Structures::State* s, unsigned int t){
+		state = s;
+		this->t = t;
+	}
+
+	Structures::State* state;
+	bool operator==(const Step& rhs) {return state==rhs.state;}
+	unsigned int t;
+};
 
 class DFSStateSet : public OrderableStateSet {
 public:
@@ -27,17 +38,7 @@ public:
 
 	bool add(State* state, unsigned int t);
 
-	/** A step in the reachability search */
-	struct Step{
-		Step(Structures::State* s, unsigned int t){
-			state = s;
-			this->t = t;
-		}
 
-		Structures::State* state;
-		bool operator==(const Step& rhs) {return state==rhs.state;}
-		unsigned int t;
-	};
 
 
 	Step popWating(){Step temp = _stack.back();
@@ -48,6 +49,10 @@ public:
 	std::list<Step> Wating() {return _stack;}
 
 	virtual State* getNextState(){return NULL;}
+	 Step getNextStep();
+	/** Get size of waiting */
+	size_t waitingSize();
+
 
 	void writeStatistics();
 

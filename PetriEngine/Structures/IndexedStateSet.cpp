@@ -8,9 +8,19 @@ bool IndexedStateSet::add(State* state){
 	bool lesser = false;
 	bool insert = false;
 	bool skipVisited = false;
+	int i =0;
+	iter insert_p;
+	bool retFalse = false;
+	//std::cerr<<"waiting "<<_waiting.size()<<std::endl;
+	//std::cerr<<"visiting "<<_visited.size()<<std::endl;
 
 	for(iter it = _waiting.begin(); it != _waiting.end();){
-		//TODO: Pointer comparison.
+		//std::cerr<<"run "<<i<<". it "<<*it<<". waiting "<<*_waiting.end()<<std::endl;
+		//std::cerr<<_waiting.empty()<<std::endl;
+		i++;
+		//std::cerr<<"done"<<std::endl;
+
+		//std::cerr<<_waiting.size()<<std::endl;
 		int idx_i = (*it)->stateIndex(*_net);
 
 		if(idx_s < idx_i){
@@ -21,13 +31,15 @@ bool IndexedStateSet::add(State* state){
 		}else if(idx_s > idx_i){
 			bigger = true;
 			if(lesser && !insert){
+				_waiting.insert(it, state);
 				insert_p = it;
+				insert_p--;
 				insert = true;
 			}
 			lesser = false;
 
 			if(leq(*it, state)){
-				_waiting.remove(*it++);
+				_waiting.erase(it++);
 				skipVisited = true;
 			}
 			else
@@ -38,7 +50,9 @@ bool IndexedStateSet::add(State* state){
 				return false;
 			else{
 				if((*it)->stateVariation(*_net)>= state->stateVariation(*_net) && !insert){
+					_waiting.insert(it, state);
 					insert_p = it;
+					insert_p--;
 					insert = true;
 				}
 			}
@@ -47,29 +61,53 @@ bool IndexedStateSet::add(State* state){
 		}
 	}
 
-	if(insert && skipVisited){
-		_waiting.insert(insert_p, state);
-		return true;
-	}
+	//if(insert && skipVisited){
+	/*if(!(insert && skipVisited)){//????????????????????
+		std::cerr<<"size before "<<_waiting.size()<<std::endl;
+		std::cerr<<"back "<<_waiting.back()<<std::endl;
+		std::cerr<<"end "<<&_waiting.end()<<std::endl;
+		std::cerr<<"insert "<<&insert_p<<std::endl;
 
+		//_waiting.insert(insert_p, state);
+		_waiting.erase(insert_p);
+		std::cerr<<"size after "<<_waiting.size()<<std::endl;
+	}*/
+	if(insert && skipVisited)
+		return true;
+	int df = 0;
+	int j = 0;
 	for(iter it = _visited.begin(); it != _visited.end();){
-		//TODO: Pointer comparison.
+		//std::cerr<<"Visit: "<<df<<std::endl;
+		df++;
 		int idx_i = (*it)->stateIndex(*_net);
 
 		if(idx_s < idx_i){
-			if(leq(state, *it))
-				return false;
+			if(leq(state, *it)){
+				retFalse = true;
+				break;
+			}
 			it++;
 		} else if(idx_s > idx_i){
-			if(leq(*it, state))
-				_visited.remove(*it++);
+			j++;
+			if(leq(*it, state)){
+				_visited.erase(it++);
+			}
 			else
 				it++;
 		} else{
-			if(equal(state, *it))
-				return false;
+			if(equal(state, *it)){
+				retFalse = true;
+				break;
+			}
 			it++;
 		}
+	}
+
+	//std::cerr<<"Removed from visited: "<<j<<"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1111"<<std::endl;
+	if(retFalse && insert){
+		_waiting.erase(insert_p);
+		//std::cerr<<"Return false"<<std::endl;
+		return false;
 	}
 
 	if((lesser && !bigger && !insert) || _waiting.empty())
@@ -83,6 +121,8 @@ bool IndexedStateSet::add(State* state){
 }
 
 State* IndexedStateSet::getNextState(){
+	if(_waiting.empty())
+		return NULL;
 	State* next = _waiting.front();
 	_waiting.pop_front();
 
@@ -90,7 +130,11 @@ State* IndexedStateSet::getNextState(){
 	bool bigger = false;
 	bool lesser = false;
 
+	int i = 0;
+	//std::cerr<<"start!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1"<<std::endl;
 	for(iter it = _visited.begin(); it != _visited.end();it++){
+		//std::cerr<<i<<std::endl;
+		//i++;
 		int idx_i = (*it)->stateIndex(*_net);
 
 		if(idx_s < idx_i)
@@ -110,12 +154,10 @@ State* IndexedStateSet::getNextState(){
 			}
 		}
 	}
-
 	if((lesser && !bigger) || _visited.empty())
 		_visited.push_back(next);
 	else if(bigger && !lesser)
 		_visited.push_front(next);
-
 	return next;
 
 }

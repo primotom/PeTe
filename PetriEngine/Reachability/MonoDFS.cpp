@@ -22,7 +22,7 @@
 #include "../PQL/Contexts.h"
 #include "../Structures/StateSet.h"
 #include "../Structures/DFSStateset.h"
-#include "../Structures/NaiveListStateSet.h"
+//#include "../Structures/NaiveListStateSet.h"
 #include "../Structures/StateAllocator.h"
 #include <list>
 #include <string.h>
@@ -61,13 +61,13 @@ ReachabilityResult MonoDFS::reachable(const PetriNet &net,
 	BigInt exploredStates = 0;
 	BigInt expandedStates = 0;
 	State* ns = allocator.createState();
-	while(!states.Wating().empty()){
+	while(!states.waitingSize()){
 		if(count++ & 1<<18){
-			if(states.Wating().size() > max)
-				max = states.Wating().size();
+			if(states.waitingSize() > max)
+				max = states.waitingSize();
 			count = 0;
 			//report progress
-			reportProgress((double)(max-states.Wating().size())/(double)max);
+			reportProgress((double)(max-states.waitingSize())/(double)max);
 			//check abort
 			if(abortRequested())
 				return ReachabilityResult(ReachabilityResult::Unknown,
@@ -75,12 +75,12 @@ ReachabilityResult MonoDFS::reachable(const PetriNet &net,
 		}
 
 		//Take first step of the stack
-		State* s = states.getWating().state;
-		//Mark as visited
-		//states.visit(s);
+		Step tstep = states.getNextStep();
+		State* s = tstep.state;
+
 		ns->setParent(s);
 		bool foundSomething = false;
-		for(unsigned int t = states.getWating().t; t < net.numberOfTransitions(); t++){
+		for(unsigned int t = tstep.t; t < net.numberOfTransitions(); t++){
 			if(net.fire(t, s->marking(), s->intValuation(),s->boolValuation(), ns->marking(), ns->intValuation(), ns->boolValuation())){
 				if(states.add(ns,t)){
 					ns->setTransition(t);
