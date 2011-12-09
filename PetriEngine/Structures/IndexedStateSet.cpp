@@ -29,6 +29,7 @@ bool IndexedStateSet::add(State* state){
 				_states.remove(*it++);
 			}
 		}else if(it_idx == idx){
+			bigger = true;
 			if(equal(*it, state)){
 				return false;
 			}
