@@ -23,7 +23,7 @@ public:
 	bool add(State *state);
 
 	/** Get the next state to explore */
-	State* getNextState;
+	State* getNextState();
 
 	/** Get the size of the waiting list */
 	size_t waitingSize();

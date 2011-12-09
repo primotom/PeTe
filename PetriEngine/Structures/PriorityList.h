@@ -18,7 +18,7 @@ public:
 	/** Iterator for the priority list */
 	class StateIterator : public iterator<input_iterator_tag, Item> {
 	private:
-		typedef map::iterator Iter;
+		typedef typename map<double, std::list<Item> >::iterator Iter;
 
 		Item* _i;
 		PriorityList* _list;
@@ -56,7 +56,7 @@ public:
 			if(_listPos->second.size() > 1){
 				//More elements in this list
 				bool found = false;
-				for(list<Item>::iterator it = _listPos->second.begin(); it != _listPos->second.end(); it++){
+				for(typename list<Item>::iterator it = _listPos->second.begin(); it != _listPos->second.end(); it++){
 					if(_i == *it)
 						found = true;
 					else if(_i != *it && found){
@@ -87,8 +87,8 @@ public:
 	};
 
 private:
-	typedef typename map::iterator Iter;
-	typedef typename map::const_iterator ConstIter;
+	typedef typename map<double, std::list<Item> >::iterator Iter;
+	typedef typename map<double, std::list<Item> >::const_iterator ConstIter;
 	size_t _size;
 public:
 	PriorityList(){
@@ -170,7 +170,7 @@ public:
 	/** Erase an item from the list */
 	void remove(StateIterator it) {
 		Iter mPos = it._listPos;
-		for(list<Item>::iterator lit = mPos->second.begin(); lit != mPos->second.end(); lit++){
+		for(typename list<Item>::iterator lit = mPos->second.begin(); lit != mPos->second.end(); lit++){
 			if(*lit == it._i)
 				mPos->second.erase(lit);
 				_size -= 1;

@@ -20,7 +20,7 @@ ReachabilityResult MonoNewBestFS::reachable(const PetriNet &net,
 															const VarVal *v0,
 															const BoolVal *ba,
 															PQL::Condition *query){
-	StateAllocator<> allocator(net);
+	/*StateAllocator<> allocator(net);
 
 	State* s0 = allocator.createState();
 	memcpy(s0->marking(), m0, sizeof(MarkVal) * net.numberOfPlaces());
@@ -88,9 +88,11 @@ ReachabilityResult MonoNewBestFS::reachable(const PetriNet &net,
 			}
 		}
 	}
-	states.writeStatistics();
+	states.writeStatistics();*/
+	//return ReachabilityResult(ReachabilityResult::NotSatisfied,
+	//						  "Query cannot be satisfied!", expandedStates, exploredStates);
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
-							  "Query cannot be satisfied!", expandedStates, exploredStates);
+							  "Query cannot be satisfied!", 0, 0);
 }
 
 double MonoNewBestFS::priority(const Structures::State *state,
