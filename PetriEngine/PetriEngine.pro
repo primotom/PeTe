@@ -41,6 +41,9 @@ SOURCES		   += \
     Reachability/IndexedSearch.cpp \
     Structures/IndexedStateSet.cpp \
 	#Reachability/CoverabilityTreeNode.cpp
+    Structures/DFSStateset.cpp \
+    Structures/BFSOrderableStateSet.cpp \
+    Structures/BestFSOrderableStateSet.cpp
 
 HEADERS		   += \
 	ProgressReporter.h \
@@ -94,6 +97,10 @@ HEADERS		   += \
     Reachability/IndexedSearch.h \
     Structures/IndexedStateSet.h \
 	#Reachability/CoverabilityTreeNode.h
+    Structures/BFSOrderableStateSet.h \
+    Structures/DFSStateset.h \
+    Structures/BestFSOrderableStateSet.h \
+    Structures/PriorityList.h
 
 TARGET			= ../PetriEngine
 

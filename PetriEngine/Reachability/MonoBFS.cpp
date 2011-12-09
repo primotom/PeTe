@@ -20,7 +20,7 @@
 #include "../PQL/PQL.h"
 #include "../PQL/Contexts.h"
 #include "../Structures/StateSet.h"
-#include "../Structures/OrderableStateSet.h"
+#include "../Structures/BFSOrderableStateSet.h"
 #include "../Structures/StateAllocator.h"
 
 #include <list>
@@ -41,12 +41,10 @@ ReachabilityResult MonoBFS::reachable(const PetriNet &net,
 		return ReachabilityResult(ReachabilityResult::Satisfied,
 								  "A state satisfying the query was found");
 	//Create StateSet
-	MonotonicityContext context(&net);
+	MonotonicityContext context(&net, query);
 	context.analyze();
 
-	OrderableStateSet states(net,&context);
-
-	std::list<State*> queue;
+	BFSOrderableStateSet states(net,&context);
 
 	StateAllocator<1000000> allocator(net);
 
@@ -55,14 +53,16 @@ ReachabilityResult MonoBFS::reachable(const PetriNet &net,
 	memcpy(s0->intValuation(), v0, sizeof(VarVal)*net.numberOfIntVariables());
 	memcpy(s0->boolValuation(), ba, sizeof(BoolVal)*net.numberOfBoolVariables());
 
-	queue.push_back(s0);
+
+	states.add(s0);
 
 	unsigned int max = 0;
 	int count = 0;
 	BigInt expandedStates = 0;
 	BigInt exploredStates = 0;
 	State* ns = allocator.createState();
-	while(!queue.empty()){
+	State* s = states.getNextState();
+	while(s){
 		// Progress reporting and abort checking
 		if(count++ & 1<<17){
 			if(queue.size() > max)
@@ -76,8 +76,6 @@ ReachabilityResult MonoBFS::reachable(const PetriNet &net,
 										"Search was aborted.");
 		}
 
-		State* s = queue.front();
-		queue.pop_front();
 		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
 			if(net.fire(t, s, ns)){
 				if(states.add(ns)){
@@ -90,11 +88,11 @@ ReachabilityResult MonoBFS::reachable(const PetriNet &net,
 												"A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
 					}
 
-					queue.push_back(ns);
 					ns = allocator.createState();
 				}
 			}
 		}
+		s = states.getNextState();
 		expandedStates++;
 	}
 

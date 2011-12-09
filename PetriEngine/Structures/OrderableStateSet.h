@@ -4,35 +4,21 @@
 #include "PQL/Contexts.h"
 #include <list>
 
+
 namespace PetriEngine { namespace Structures {
 
 class OrderableStateSet {
 public:
 	OrderableStateSet(const PetriNet& net, PQL::MonotonicityContext* context){
-	_context = context;
-	_net = &net;
-	_countSkip =0;
-	_countAdd =0;
+		_context = context;
+		_net = &net;
+		_countSkip =0;
+		_countAdd =0;
     }
 
-	bool add(State* state){
-		_countAdd++;
-		for(std::list<State*>::iterator it = _states.begin() ; it != _states.end();){
-			if (less(*it, state)){
-				_states.remove(*it++);
-				_countSkip++;
-			}else{
-				if(leq(state,*it)){
-					_countSkip++;
-					return false;
-				}
-				it++;
-			}
-		}
-		_states.push_back(state);
-		return true;
+	virtual bool add(State* state) = 0;
 
-	}
+	virtual State* getNextState() = 0;
 
 	//Is some good boolean variable or marking in s1 greater than the one in s2, where true > false
 	bool greater(State* s1, State* s2){
