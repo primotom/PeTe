@@ -8,7 +8,7 @@
 namespace PetriEngine { namespace Structures {
 
 /** Orderable State Set class which will feed states in a Breadth First manner */
-class BFSOrderableStateSet : OrderableStateSet {
+class BFSOrderableStateSet : public OrderableStateSet {
 public:
 	/** Create the state set */
 	BFSOrderableStateSet(const PetriNet& net, PQL::MonotonicityContext* context)
