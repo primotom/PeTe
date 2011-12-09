@@ -24,7 +24,7 @@ public:
 	size_t waitingSize();
 
 private:
-	typedef typename std::list<State*>::iterator iter;
+	typedef std::list<State*>::iterator iter;
 
 	std::list<State*> _waiting;
 	std::list<State*> _visited;
