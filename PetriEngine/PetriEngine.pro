@@ -43,7 +43,8 @@ SOURCES		   += \
 	#Reachability/CoverabilityTreeNode.cpp
     Structures/DFSStateset.cpp \
     Structures/BFSOrderableStateSet.cpp \
-    Structures/BestFSOrderableStateSet.cpp
+    Structures/BestFSOrderableStateSet.cpp \
+    Structures/RandomDFSStateset.cpp
 
 HEADERS		   += \
 	ProgressReporter.h \
@@ -100,7 +101,8 @@ HEADERS		   += \
     Structures/BFSOrderableStateSet.h \
     Structures/DFSStateset.h \
     Structures/BestFSOrderableStateSet.h \
-    Structures/PriorityList.h
+    Structures/PriorityList.h \
+    Structures/RandomDFSStateset.h
 
 TARGET			= ../PetriEngine
 

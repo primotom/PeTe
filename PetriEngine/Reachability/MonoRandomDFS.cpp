@@ -19,7 +19,7 @@
 #include "MonoRandomDFS.h"
 #include "../PQL/PQL.h"
 #include "../PQL/Contexts.h"
-#include "../Structures/OrderableStateSet.h"
+#include "../Structures/RandomDFSStateset.h"
 #include "../Structures/StateSet.h"
 #include "../Structures/StateAllocator.h"
 
@@ -48,10 +48,10 @@ ReachabilityResult MonoRandomDFS::reachable(const PetriNet &net,
 	MonotonicityContext context(&net);
 	context.analyze();
 
-	OrderableStateSet states(net,&context);
+	RandomDFSStateSet states(net,&context);
 
 	StateAllocator<> allocator(net);
-	std::list<State*> stack;
+	//std::list<State*> stack;
 	srand(time(0));	// Chosen by fair dice roll
 
 	State* s0 = allocator.createState();
@@ -59,7 +59,7 @@ ReachabilityResult MonoRandomDFS::reachable(const PetriNet &net,
 	memcpy(s0->intValuation(), v0, sizeof(VarVal)*net.numberOfIntVariables());
 	memcpy(s0->boolValuation(), ba, sizeof(BoolVal)*net.numberOfBoolVariables());
 
-	stack.push_back(s0);
+	//stack.push_back(s0);
 	states.add(s0);
 	State* ns = allocator.createState();
 
@@ -69,22 +69,21 @@ ReachabilityResult MonoRandomDFS::reachable(const PetriNet &net,
 	BigInt exploredStates = 0;
 	BigInt expandedStates = 0;
 	State* s = s0;
-	while(!stack.empty()){
+	while(states.waitingSize()){
 		// Progress reporting and abort checking
 		if(count++ & 1<<17){
-			if(stack.size() > max)
-				max = stack.size();
+			if(states.waitingSize() > max)
+				max = states.waitingSize();
 			count = 0;
 			// Report progress
-			reportProgress((double)(max - stack.size())/(double)max);
+			reportProgress((double)(max -states.waitingSize())/(double)max);
 			// Check abort
 			if(abortRequested())
 				return ReachabilityResult(ReachabilityResult::Unknown,
 										"Search was aborted.");
 		}
 
-		s = stack.back();
-		stack.pop_back();
+		s = states.getNextState();
 
 		//Hack for when query is null and we're look to print a random state
 		if(!query && countdown-- <= 0){
@@ -124,7 +123,7 @@ ReachabilityResult MonoRandomDFS::reachable(const PetriNet &net,
 			t = random;
 			do{
 				if(succ[t]){
-					stack.push_back(succ[t]);
+					states.pushToWating(succ[t]);
 					succ[t] = NULL;
 					t++;
 					break;
