@@ -1,20 +1,38 @@
 #include "DFSStateset.h"
 
-bool DFSStateSet::add(State* state){
-	_countAdd++;
-	for(std::list<State*>::iterator it = _states.begin() ; it != _states.end();){
+
+
+
+bool DFSStateSet::add(State* state, unsigned int t){
+
+
+	for(std::list<Step*>::iterator it = _stack.begin() ; it != _stack.end();){
+		if (less((*it).state, state)){
+			_visited.remove(*it++);
+		}else
+			it++;
+	}
+
+	for(std::list<State*>::iterator it = _visited.begin() ; it != _visited.end();){
 		if (less(*it, state)){
-			_states.remove(*it++);
-			_countSkip++;
+			_visited.remove(*it++);
 		}else{
 			if(leq(state,*it)){
-				_countSkip++;
 				return false;
 			}
 			it++;
 		}
 	}
-	_states.push_back(state);
+
+	_stack.back().t =  t+1;
+	_stack.push_back(Step(state,0));
+	_visited.push_back(state);
+
+	//we are adding to wating
+
+
+
+
 	return true;
 }
 
