@@ -41,7 +41,8 @@ SOURCES		   += \
     Reachability/IndexedSearch.cpp \
     Structures/IndexedStateSet.cpp \
 	#Reachability/CoverabilityTreeNode.cpp
-    Structures/DFSStateset.cpp
+    Structures/DFSStateset.cpp \
+    Structures/BFSOrderableStateSet.cpp
 
 HEADERS		   += \
 	ProgressReporter.h \
