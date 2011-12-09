@@ -6,14 +6,15 @@
 #include <list>
 #include "OrderableStateSet.h"
 #include "State.h"
+
 namespace PetriEngine { namespace Structures {
 
 
-		enum Mode{
-			ModeNormal,
-			ModeGraterBool,
-			ModeGraterState
-		};
+enum Mode{
+	ModeNormal,
+	ModeGraterBool,
+	ModeGraterState
+};
 
 class DFSStateSet : public OrderableStateSet {
 public:
@@ -26,15 +27,15 @@ public:
 
 	bool add(State* state, unsigned int t);
 
-
-
 	/** A step in the reachability search */
 	struct Step{
 		Step(Structures::State* s, unsigned int t){
 			state = s;
 			this->t = t;
 		}
+
 		Structures::State* state;
+		bool operator==(const Step& rhs) {return state==rhs.state;}
 		unsigned int t;
 	};
 
