@@ -13,12 +13,9 @@ class DFSStateSet : public OrderableStateSet {
 public:
 	DFSStateSet(const PetriNet& net, PQL::MonotonicityContext* context):
 	OrderableStateSet(net,context){
-	_countSkip =0;
-	_countAdd =0;
-
 	}
 
-	bool add(State* state);
+	bool add(State* state){}
 
 	bool add(State* state, unsigned int t);
 
@@ -49,19 +46,11 @@ public:
 
 protected:
 
-	const PetriNet* _net;
-	PQL::MonotonicityContext* _context;
-
-	//visited list
-	std::list<State*> _states;
-
 	//wating list
 	std::list<Step> _stack;
 
 	int _countSkip;
 	int _countAdd;
-
-
 
 };
 
