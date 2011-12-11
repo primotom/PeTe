@@ -15,6 +15,8 @@ public:
 	bool add(State* state);
 	State* getNextState();
 	int waitingSize();
+	void printWaiting();
+	void printVisited();
 
 private:
 	typedef std::list<State*>::iterator iter;

@@ -114,7 +114,7 @@ bool IndexedStateSet::add(State* state){
 		_waiting.push_back(state);
 	else if(bigger && !lesser && !insert)
 		_waiting.push_front(state);
-	else
+	else if(!insert)//TODO: check this
 		_waiting.insert(insert_p, state);
 	return true;
 
@@ -123,8 +123,8 @@ bool IndexedStateSet::add(State* state){
 State* IndexedStateSet::getNextState(){
 	if(_waiting.empty())
 		return NULL;
-	State* next = _waiting.front();
-	_waiting.pop_front();
+	State* next = _waiting.back();//TODO: Think about these two
+	_waiting.pop_back();
 
 	int idx_s = next->stateIndex(*_net);
 	bool bigger = false;
@@ -174,6 +174,28 @@ bool IndexedStateSet::equal(State* s1, State* s2){
 
 int IndexedStateSet::waitingSize(){
 	return _waiting.size();
+}
+
+void IndexedStateSet::printWaiting(){
+	std::cerr<<"Printing waiting. lenght: "<<_waiting.size()<<std::endl;
+	for(iter it = _waiting.begin(); it != _waiting.end(); it++){
+		for(int m = 0; m <_net->numberOfPlaces(); m++)
+			std::cerr<<(*it)->marking()[m]<<" ";
+		for(int b = 0; b < _net->numberOfBoolVariables(); b++)
+			std::cerr<<(*it)->boolValuation()[b]<<" ";
+		std::cerr<<std::endl;
+	}
+}
+
+void IndexedStateSet::printVisited(){
+	std::cerr<<"Printing visited. lenght: "<<_visited.size()<<std::endl;
+	for(iter it = _visited.begin(); it != _visited.end(); it++){
+		for(int m = 0; m <_net->numberOfPlaces(); m++)
+			std::cerr<<(*it)->marking()[m]<<" ";
+		for(int b = 0; b < _net->numberOfBoolVariables(); b++)
+			std::cerr<<(*it)->boolValuation()[b]<<" ";
+		std::cerr<<std::endl;
+	}
 }
 
 }}
