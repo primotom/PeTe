@@ -41,9 +41,7 @@ public:
 
 
 
-	Step popWating(){Step temp = _stack.back();
-					_stack.pop_back();
-					return temp;}
+	Step popWating();
 	Step getWating(){return _stack.back();}
 
 	std::list<Step> Wating() {return _stack;}

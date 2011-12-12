@@ -6,7 +6,7 @@ namespace PetriEngine { namespace Structures {
 bool RandomDFSStateSet::add(State *state){
 	// Ensure we're larger than any state in waiting. Pop any states smaller
 	bool skipVisited = false;
-	for(iter it = _waiting.begin(); it != _waiting.end(); it++){
+	for(iter it = _waiting.begin(); it != _waiting.end(); ){
 		if(this->less(*it, state)){
 			_waiting.remove(*it++);
 			skipVisited = true;
@@ -20,10 +20,14 @@ bool RandomDFSStateSet::add(State *state){
 	// Ensure we haven't been visited, or are smaller than or
 	//  equal any states in visited
 	if(!skipVisited){
-		for(iter it = _visited.begin(); it != _visited.end(); it++){
-			if(this->leq(state, *it))
-				return false;
-			it++;
+		for(iter it = _visited.begin(); it != _visited.end();){
+			if (less(*it, state)){
+				_states.erase(it++);
+			}else{
+				if(this->leq(state, *it))
+					return false;
+				it++;
+			}
 		}
 	}
 

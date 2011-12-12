@@ -1,34 +1,44 @@
 
 
 #include "DFSStateset.h"
-
+using namespace std;
 namespace PetriEngine { namespace Structures {
 
 
 bool DFSStateSet::add(State* state, unsigned int t){
 	_countAdd++;
 
+	bool skipVisited = false;
 	for(std::list<Step>::iterator it = _stack.begin() ; it != _stack.end();){
 		if (less((*it).state, state)){
-			_stack.remove(*it++);
-			_countSkip++;
-		}else
-			it++;
-	}
-
-	for(std::list<State*>::iterator it = _states.begin() ; it != _states.end();){
-		if (less(*it, state)){
-			_states.remove(*it++);
-		}else{
-			if(leq(state,*it)){
-				_countSkip++;
+			_stack.erase(it++);
+			skipVisited = true;
+		} else {
+			if(this->leq(state, (*it).state))
 				return false;
-			}
 			it++;
 		}
 	}
+	// Ensure we haven't been visited, or are smaller than or
+	//  equal any states in visited
+	if(!skipVisited){
+		for(std::list<State*>::iterator it = _states.begin() ; it != _states.end();){
+			if (less(*it, state)){
+				_states.erase(it++);
+			}else{
+				if(leq(state,*it)){
+					_countSkip++;
+					return false;
+				}
+				it++;
+			}
+		}
+	}
 
-	_stack.back().t =  t+1;
+
+
+	_stack.back().t = t + 1;
+
 	if(_mode == PetriEngine::Structures::ModeGraterBool && state->parent()){
 
 		if(greaterBool(state, state->parent()))
@@ -47,20 +57,25 @@ bool DFSStateSet::add(State* state, unsigned int t){
 		_stack.push_back(Step(state,0));
 	}
 
+	_states.push_back(state);
+
 	return true;
 }
 
 Step DFSStateSet::getNextStep(){
-	if(!_stack.empty()){
-		Step retState = _stack.back();
-		_states.push_back(retState.state);
-		return retState;
-	} else
-		return Step(NULL,0);
+	Step retState = _stack.back();
+
+	return retState;
 }
 
 size_t DFSStateSet::waitingSize(){
-	return _states.size();
+	return _stack.size();
+}
+
+Step DFSStateSet::popWating(){
+	Step temp = _stack.back();
+	_stack.pop_back();
+	return temp;
 }
 
 void writeStatistics(){

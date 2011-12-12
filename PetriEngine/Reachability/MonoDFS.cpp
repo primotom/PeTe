@@ -42,7 +42,7 @@ ReachabilityResult MonoDFS::reachable(const PetriNet &net,
 		return ReachabilityResult(ReachabilityResult::Satisfied,
 								  "A state satisfying the query was found");
 	//Create StateSet
-	MonotonicityContext context(&net);
+	MonotonicityContext context(&net,query);
 	context.analyze();
 
 	DFSStateSet states(net,&context, ModeNormal);
@@ -61,7 +61,7 @@ ReachabilityResult MonoDFS::reachable(const PetriNet &net,
 	BigInt exploredStates = 0;
 	BigInt expandedStates = 0;
 	State* ns = allocator.createState();
-	while(!states.waitingSize()){
+	while(states.waitingSize()){
 		if(count++ & 1<<18){
 			if(states.waitingSize() > max)
 				max = states.waitingSize();
@@ -87,8 +87,7 @@ ReachabilityResult MonoDFS::reachable(const PetriNet &net,
 					if(query->evaluate(PQL::EvaluationContext(ns->marking(), ns->intValuation(), ns->boolValuation())))
 						return ReachabilityResult(ReachabilityResult::Satisfied,
 									  "A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
-					//stack.back().t = t + 1;
-					//stack.push_back(Step(ns,0));
+
 					exploredStates++;
 					foundSomething = true;
 					ns = allocator.createState();
