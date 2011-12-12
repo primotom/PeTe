@@ -44,7 +44,7 @@ ReachabilityResult MonoBestFirstReachabilitySearch::reachable(const PetriNet &ne
 	size_t max = 1;
 	State* s = states.getNextState();
 	while(s){
-		if(count++ & 1<<17){
+		if(count++ & 1<<16){
 			count = 0;
 			if(states.waitingSize() > max)
 				max = states.waitingSize();
@@ -56,7 +56,6 @@ ReachabilityResult MonoBestFirstReachabilitySearch::reachable(const PetriNet &ne
 
 		//Take something out of the queue
 		expandedStates++;
-
 
 		// Attempt to fire each transition
 		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){

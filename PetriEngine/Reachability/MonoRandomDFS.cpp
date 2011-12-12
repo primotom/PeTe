@@ -45,7 +45,7 @@ ReachabilityResult MonoRandomDFS::reachable(const PetriNet &net,
 								  "A state satisfying the query was found");
 
 	//Create StateSet
-	MonotonicityContext context(&net);
+	MonotonicityContext context(&net, query);
 	context.analyze();
 
 	RandomDFSStateSet states(net,&context);

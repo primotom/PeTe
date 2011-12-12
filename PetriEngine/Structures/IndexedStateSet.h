@@ -19,14 +19,16 @@ public:
 	void printVisited();
 
 private:
-	typedef std::list<State*>::iterator iter;
+	//typedef std::list<State*>::iterator iter;
+	typedef std::pair<int, State*> IndexedState;
+	typedef std::list<IndexedState>::iterator iter;
 
-	std::list<State*> _waiting;
-	std::list<State*> _visited;
+	//std::list<State*> _waiting;
+	//std::list<State*> _visited;
+	std::list<IndexedState> _waiting;
+	std::list<IndexedState> _visited;
 
 	bool equal(State* s1, State* s2);
-
-
 };
 }}
 

@@ -54,7 +54,6 @@ ReachabilityResult MonoBFS::reachable(const PetriNet &net,
 	memcpy(s0->intValuation(), v0, sizeof(VarVal)*net.numberOfIntVariables());
 	memcpy(s0->boolValuation(), ba, sizeof(BoolVal)*net.numberOfBoolVariables());
 
-
 	states.add(s0);
 
 	unsigned int max = 0;
@@ -65,7 +64,7 @@ ReachabilityResult MonoBFS::reachable(const PetriNet &net,
 	State* s = states.getNextState();
 	while(s){
 		// Progress reporting and abort checking
-		if(count++ & 1<<17){
+		if(count++ & 1<<15){
 			if(states.waitingSize() > max)
 				max = states.waitingSize();
 			count = 0;

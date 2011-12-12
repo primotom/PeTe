@@ -243,6 +243,11 @@ public:
 			for(c = 0; c < _net->numberOfTransitions(); c++)
 				if(_net->getConditions()[c])
 					_net->getConditions()[c]->isBad(*this);
+
+			for(uint i = 0; i < _net->numberOfPlaces(); i++){
+				std::string text = _goodPlaces[i] ? "GOOD" : "BAD";
+				std::cout<<"Place "<<i<<" is "<<text<<std::endl;
+			}
 	}
 
 	/** Set bad places and variables */

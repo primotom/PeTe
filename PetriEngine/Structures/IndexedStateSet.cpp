@@ -1,9 +1,65 @@
 #include "Structures/IndexedStateSet.h"
+#include <iostream>
+
 
 namespace PetriEngine { namespace Structures {
 
 bool IndexedStateSet::add(State* state){
-	int idx_s = state->stateIndex(*_net);
+	int is = state->stateIndex(*_net);
+	bool skipVisited = false;
+	bool foundPos = false;
+	iter insertPos = _waiting.end();
+
+	for(iter it = _waiting.begin(); it != _waiting.end();){
+		int iw = it->first;
+
+		if(is < iw){
+			if(leq(state, it->second))
+				return false;
+		} else if(is > iw){
+			if(!foundPos) {
+				foundPos = true;
+				insertPos = it;
+			}
+
+			if(leq(it->second, state)){
+				if(it == insertPos) insertPos++;
+				_waiting.erase(it++);
+				skipVisited = true;
+				continue;
+			}
+		} else {
+			if(equal(it->second, state)) return false;
+			else {
+				if(it->second->stateVariation(*_net, iw) >= state->stateVariation(*_net, is) && !foundPos){
+					insertPos = it;
+					foundPos = true;
+				}
+			}
+		}
+		it++;
+	}
+
+	if(!skipVisited){
+		for(iter it = _visited.begin(); it != _visited.end();){
+			int iv = it->first;
+
+			if(is <= iv){
+				if(leq(state, it->second))
+					return false;
+			} else {
+				if(less(it->second, state)){
+					_visited.erase(it++);
+					continue;
+				}
+			}
+			it++;
+		}
+	}
+
+	_waiting.insert(insertPos, IndexedState(is, state));
+
+	/*int idx_s = state->stateIndex(*_net);
 	bool bigger = false;
 	bool lesser = false;
 	bool insert = false;
@@ -71,7 +127,7 @@ bool IndexedStateSet::add(State* state){
 		//_waiting.insert(insert_p, state);
 		_waiting.erase(insert_p);
 		std::cerr<<"size after "<<_waiting.size()<<std::endl;
-	}*/
+	}/
 	if(insert && skipVisited)
 		return true;
 	int df = 0;
@@ -117,12 +173,35 @@ bool IndexedStateSet::add(State* state){
 	else if(!insert)//TODO: check this
 		_waiting.insert(insert_p, state);
 	return true;
-
+*/
 }
 
 State* IndexedStateSet::getNextState(){
 	if(_waiting.empty())
 		return NULL;
+	//IndexedState next = _waiting.back();
+	//_waiting.pop_back();
+	IndexedState next = _waiting.front();
+	_waiting.pop_front();
+
+	for(iter it = _visited.begin(); it != _visited.end(); it++){
+		int iv = it->first;
+
+		if(next.first > iv){
+			_visited.insert(it, next);
+			return next.second;
+		} else if(next.first == iv){
+			if(it->second->stateVariation(*_net, it->first) >= next.second->stateVariation(*_net, next.first)){
+				_visited.insert(it, next);
+				return next.second;
+			}
+		}
+	}
+
+	_visited.push_back(next);
+	return next.second;
+
+	/*
 	State* next = _waiting.back();//TODO: Think about these two
 	_waiting.pop_back();
 
@@ -159,7 +238,7 @@ State* IndexedStateSet::getNextState(){
 	else if(bigger && !lesser)
 		_visited.push_front(next);
 	return next;
-
+	*/
 }
 
 bool IndexedStateSet::equal(State* s1, State* s2){
@@ -179,10 +258,10 @@ int IndexedStateSet::waitingSize(){
 void IndexedStateSet::printWaiting(){
 	std::cerr<<"Printing waiting. lenght: "<<_waiting.size()<<std::endl;
 	for(iter it = _waiting.begin(); it != _waiting.end(); it++){
-		for(int m = 0; m <_net->numberOfPlaces(); m++)
-			std::cerr<<(*it)->marking()[m]<<" ";
-		for(int b = 0; b < _net->numberOfBoolVariables(); b++)
-			std::cerr<<(*it)->boolValuation()[b]<<" ";
+		for(uint m = 0; m <_net->numberOfPlaces(); m++)
+			std::cerr<<it->second->marking()[m]<<" ";
+		for(uint b = 0; b < _net->numberOfBoolVariables(); b++)
+			std::cerr<<it->second->boolValuation()[b]<<" ";
 		std::cerr<<std::endl;
 	}
 }
@@ -190,10 +269,10 @@ void IndexedStateSet::printWaiting(){
 void IndexedStateSet::printVisited(){
 	std::cerr<<"Printing visited. lenght: "<<_visited.size()<<std::endl;
 	for(iter it = _visited.begin(); it != _visited.end(); it++){
-		for(int m = 0; m <_net->numberOfPlaces(); m++)
-			std::cerr<<(*it)->marking()[m]<<" ";
-		for(int b = 0; b < _net->numberOfBoolVariables(); b++)
-			std::cerr<<(*it)->boolValuation()[b]<<" ";
+		for(uint m = 0; m <_net->numberOfPlaces(); m++)
+			std::cerr<<it->second->marking()[m]<<" ";
+		for(uint b = 0; b < _net->numberOfBoolVariables(); b++)
+			std::cerr<<it->second->boolValuation()[b]<<" ";
 		std::cerr<<std::endl;
 	}
 }

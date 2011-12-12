@@ -109,8 +109,8 @@ public:
 	}
 
 	/** Variation of state */
-	int stateVariation(const PetriNet& net){
-		int avg = stateIndex(net) / net.numberOfPlaces();
+	int stateVariation(const PetriNet& net, int index){
+		int avg = index / net.numberOfPlaces();
 
 		int temp = 0;
 		for(uint i = 0; i < net.numberOfPlaces(); i++){

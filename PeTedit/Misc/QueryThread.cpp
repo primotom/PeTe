@@ -111,9 +111,9 @@ void QueryThread::run(){
 
 	_finishTime = ((qreal)(clock() - _startClock)) / (qreal)CLOCKS_PER_SEC;
 
-	for(std::vector<unsigned int>::const_iterator iter = _result.trace().begin(); iter != _result.trace().end();iter++ ){
-		std::cout<<_net->transitionNames()[*iter]<<std::endl;
-	}
+	//for(std::vector<unsigned int>::const_iterator iter = _result.trace().begin(); iter != _result.trace().end();iter++ ){
+	//	std::cout<<_net->transitionNames()[*iter]<<std::endl;
+	//}
 
 }
 

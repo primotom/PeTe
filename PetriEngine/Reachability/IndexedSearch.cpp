@@ -43,11 +43,10 @@ ReachabilityResult IndexedSearch::reachable(const PetriNet &net,
 		return ReachabilityResult(ReachabilityResult::Satisfied,
 								  "A state satisfying the query was found");
 	//Create StateSet
-	MonotonicityContext context(&net);
+	MonotonicityContext context(&net, query);
 	context.analyze();
 
 	IndexedStateSet states(net,&context);
-	std::list<Step> stack;
 
 	StateAllocator<1000000> allocator(net);
 
@@ -65,20 +64,22 @@ ReachabilityResult IndexedSearch::reachable(const PetriNet &net,
 	State* ns = allocator.createState();
 	State* s = states.getNextState();
 	while(s){
-		if(count++ & 1<<17){ //TODO: Check 17
+		if(count++ & 1<<15){ //TODO: Check 17
 			if(states.waitingSize() > max)
 				max = states.waitingSize();
 			count = 0;
 			//report progress
-			reportProgress((double)(max-stack.size())/(double)max);
+			reportProgress((double)(max-states.waitingSize())/(double)max);
 			//check abort
 			if(abortRequested())
 				return ReachabilityResult(ReachabilityResult::Unknown,
 										"Search was aborted.");
 		}
 
+		std::cout<<"Expanded states: "<<expandedStates<<std::endl;
+
 		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
-			if(net.fire(t, s->marking(), s->intValuation(),s->boolValuation(), ns->marking(), ns->intValuation(), ns->boolValuation())){
+			if(net.fire(t, s, ns)){
 				//states.printWaiting();
 				if(states.add(ns)){
 					exploredStates++;
@@ -99,10 +100,10 @@ ReachabilityResult IndexedSearch::reachable(const PetriNet &net,
 		s = states.getNextState();
 		//std::cerr<<"after"<<std::endl;
 		//states.printVisited();
-		exploredStates++;//TODO: Should exploredStates be incremented twice?
+		expandedStates++;//TODO: Should exploredStates be incremented twice?
 	}
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
-							"No state satisfying the query exists.", 0, 0);
+							"No state satisfying the query exists.", expandedStates, exploredStates);
 }
 
 
