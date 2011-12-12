@@ -23,7 +23,7 @@ bool BestFSOrderableStateSet::add(State *state){
 	if(!skipVisited){
 		for(liter it = _visited.begin(); it != _visited.end();){
 			if(this->less(*it, state))
-				_visited.remove(*it++);
+				_visited.erase(it++);
 			else {
 				if(this->leq(state, *it))
 					return false;

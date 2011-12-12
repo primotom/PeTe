@@ -8,7 +8,7 @@ bool BFSOrderableStateSet::add(State *state){
 	bool skipVisited = false;
 	for(iter it = _waiting.begin(); it != _waiting.end();){
 		if(this->less(*it, state)){
-			_waiting.remove(*it++);
+			_waiting.erase(it++);
 			skipVisited = true;
 		} else {
 			if(this->leq(state, *it))
@@ -22,7 +22,7 @@ bool BFSOrderableStateSet::add(State *state){
 	if(!skipVisited){
 		for(iter it = _visited.begin(); it != _visited.end();){
 			if(this->less(*it, state))
-				_visited.remove(*it++);
+				_visited.erase(it++);
 			else {
 				if(this->leq(state, *it))
 					return false;
