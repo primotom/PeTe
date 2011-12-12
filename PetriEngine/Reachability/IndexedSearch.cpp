@@ -76,11 +76,8 @@ ReachabilityResult IndexedSearch::reachable(const PetriNet &net,
 										"Search was aborted.");
 		}
 
-		//std::cout<<"Expanded States: "<<expandedStates<<std::endl;
-
 		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
 			if(net.fire(t, s, ns)){
-				//states.printWaiting();
 				if(states.add(ns)){
 					exploredStates++;
 					ns->setParent(s);
@@ -91,22 +88,14 @@ ReachabilityResult IndexedSearch::reachable(const PetriNet &net,
 
 					ns = allocator.createState();
 				}
-				//std::cerr<<"after add"<<std::endl;
-				//states.printWaiting();
 			}
 		}
-		//std::cerr<<"before"<<std::endl;
-		//states.printVisited();
 		s = states.getNextState();
-		//std::cerr<<"after"<<std::endl;
-		//states.printVisited();
 		expandedStates++;//TODO: Should exploredStates be incremented twice?
 	}
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
 							"No state satisfying the query exists.", expandedStates, exploredStates);
 }
-
-
 
 } // Reachability
 } // PetriEngine

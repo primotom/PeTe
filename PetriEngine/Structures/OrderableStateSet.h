@@ -108,7 +108,7 @@ protected:
 		return true;
 	}
 
-    const PetriNet* _net;
+	const PetriNet* _net;
 	PQL::MonotonicityContext* _context;
 	std::list<State*> _states;
 

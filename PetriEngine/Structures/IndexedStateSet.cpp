@@ -23,8 +23,8 @@ bool IndexedStateSet::add(State* state){
 			}
 
 			if(leq(it->second, state)){
-				if(it == insertPos) insertPos++;
-				_waiting.erase(it++);
+				if(it == insertPos) {insertPos++;}
+				it = _waiting.erase(it);
 				skipVisited = true;
 				continue;
 			}
@@ -49,7 +49,7 @@ bool IndexedStateSet::add(State* state){
 					return false;
 			} else {
 				if(less(it->second, state)){
-					_visited.erase(it++);
+					it = _visited.erase(it);
 					continue;
 				}
 			}
@@ -57,10 +57,15 @@ bool IndexedStateSet::add(State* state){
 		}
 	}
 
-	if(insertPos == _waiting.end())
+	if(insertPos == _waiting.end()){
 		_waiting.push_back(IndexedState(is, state));
-	else
+	} else {
 		_waiting.insert(insertPos, IndexedState(is, state));
+	}
+
+	return true;
+
+	//std::cout<<"State added"<<std::endl;
 
 	/*int idx_s = state->stateIndex(*_net);
 	bool bigger = false;
@@ -187,6 +192,11 @@ State* IndexedStateSet::getNextState(){
 	IndexedState next = _waiting.front();
 	_waiting.pop_front();
 
+	if(_visited.empty()){
+		_visited.push_back(next);
+		return next.second;
+	}
+
 	for(iter it = _visited.begin(); it != _visited.end(); it++){
 		int iv = it->first;
 
@@ -259,18 +269,18 @@ int IndexedStateSet::waitingSize(){
 }
 
 void IndexedStateSet::printWaiting(){
-	std::cerr<<"Printing waiting. lenght: "<<_waiting.size()<<std::endl;
+	std::cerr<<"Printing waiting. length: "<<_waiting.size()<<std::endl;
 	for(iter it = _waiting.begin(); it != _waiting.end(); it++){
 		for(uint m = 0; m <_net->numberOfPlaces(); m++)
 			std::cerr<<it->second->marking()[m]<<" ";
 		for(uint b = 0; b < _net->numberOfBoolVariables(); b++)
 			std::cerr<<it->second->boolValuation()[b]<<" ";
-		std::cerr<<std::endl;
+		std::cout<<std::endl;
 	}
 }
 
 void IndexedStateSet::printVisited(){
-	std::cerr<<"Printing visited. lenght: "<<_visited.size()<<std::endl;
+	std::cerr<<"Printing visited. length: "<<_visited.size()<<std::endl;
 	for(iter it = _visited.begin(); it != _visited.end(); it++){
 		for(uint m = 0; m <_net->numberOfPlaces(); m++)
 			std::cerr<<it->second->marking()[m]<<" ";
