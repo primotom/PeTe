@@ -60,7 +60,7 @@ ReachabilityResult MonoRandomDFS::reachable(const PetriNet &net,
 	memcpy(s0->boolValuation(), ba, sizeof(BoolVal)*net.numberOfBoolVariables());
 
 	//stack.push_back(s0);
-	states.add(s0);
+	states.pushToWating(s0);
 	State* ns = allocator.createState();
 
 	int countdown = rand() % 800000;
