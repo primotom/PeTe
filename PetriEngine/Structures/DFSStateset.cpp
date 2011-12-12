@@ -7,21 +7,31 @@ namespace PetriEngine { namespace Structures {
 
 bool DFSStateSet::add(State* state, unsigned int t){
 	_countAdd++;
+
+	bool skipVisited = false;
 	for(std::list<Step>::iterator it = _stack.begin() ; it != _stack.end();){
 		if (less((*it).state, state)){
 			_stack.erase(it++);
+			skipVisited = true;
+		} else {
+			if(this->leq(state, (*it).state))
+				return false;
+			it++;
 		}
 	}
-
-	for(std::list<State*>::iterator it = _states.begin() ; it != _states.end();){
-		if (less(*it, state)){
-			_states.erase(it++);
-		}else{
-			if(leq(state,*it)){
-				_countSkip++;
-				return false;
+	// Ensure we haven't been visited, or are smaller than or
+	//  equal any states in visited
+	if(!skipVisited){
+		for(std::list<State*>::iterator it = _states.begin() ; it != _states.end();){
+			if (less(*it, state)){
+				_states.erase(it++);
+			}else{
+				if(leq(state,*it)){
+					_countSkip++;
+					return false;
+				}
+				it++;
 			}
-			it++;
 		}
 	}
 
