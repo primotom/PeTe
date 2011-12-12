@@ -64,7 +64,7 @@ ReachabilityResult IndexedSearch::reachable(const PetriNet &net,
 	State* ns = allocator.createState();
 	State* s = states.getNextState();
 	while(s){
-		if(count++ & 1<<15){ //TODO: Check 17
+		if(count++ & 1<<14){ //TODO: Check 17
 			if(states.waitingSize() > max)
 				max = states.waitingSize();
 			count = 0;
@@ -76,7 +76,7 @@ ReachabilityResult IndexedSearch::reachable(const PetriNet &net,
 										"Search was aborted.");
 		}
 
-		std::cout<<"Expanded states: "<<expandedStates<<std::endl;
+		//std::cout<<"Expanded States: "<<expandedStates<<std::endl;
 
 		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
 			if(net.fire(t, s, ns)){

@@ -14,7 +14,7 @@ bool IndexedStateSet::add(State* state){
 		int iw = it->first;
 
 		if(is < iw){
-			if(leq(state, it->second))
+			if(less(state, it->second))
 				return false;
 		} else if(is > iw){
 			if(!foundPos) {
@@ -57,7 +57,10 @@ bool IndexedStateSet::add(State* state){
 		}
 	}
 
-	_waiting.insert(insertPos, IndexedState(is, state));
+	if(insertPos == _waiting.end())
+		_waiting.push_back(IndexedState(is, state));
+	else
+		_waiting.insert(insertPos, IndexedState(is, state));
 
 	/*int idx_s = state->stateIndex(*_net);
 	bool bigger = false;
