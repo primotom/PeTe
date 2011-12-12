@@ -1,24 +1,21 @@
 
 
 #include "DFSStateset.h"
-
+using namespace std;
 namespace PetriEngine { namespace Structures {
 
 
 bool DFSStateSet::add(State* state, unsigned int t){
 	_countAdd++;
-
 	for(std::list<Step>::iterator it = _stack.begin() ; it != _stack.end();){
 		if (less((*it).state, state)){
-			_stack.remove(*it++);
-			_countSkip++;
-		}else
-			it++;
+			_stack.erase(it++);
+		}
 	}
 
 	for(std::list<State*>::iterator it = _states.begin() ; it != _states.end();){
 		if (less(*it, state)){
-			_states.remove(*it++);
+			_states.erase(it++);
 		}else{
 			if(leq(state,*it)){
 				_countSkip++;
@@ -28,7 +25,10 @@ bool DFSStateSet::add(State* state, unsigned int t){
 		}
 	}
 
-	_stack.back().t =  t+1;
+
+
+	_stack.back().t = t + 1;
+
 	if(_mode == PetriEngine::Structures::ModeGraterBool && state->parent()){
 
 		if(greaterBool(state, state->parent()))
@@ -47,20 +47,25 @@ bool DFSStateSet::add(State* state, unsigned int t){
 		_stack.push_back(Step(state,0));
 	}
 
+	_states.push_back(state);
+
 	return true;
 }
 
 Step DFSStateSet::getNextStep(){
-	if(!_stack.empty()){
-		Step retState = _stack.back();
-		_states.push_back(retState.state);
-		return retState;
-	} else
-		return Step(NULL,0);
+	Step retState = _stack.back();
+
+	return retState;
 }
 
 size_t DFSStateSet::waitingSize(){
-	return _states.size();
+	return _stack.size();
+}
+
+Step DFSStateSet::popWating(){
+	Step temp = _stack.back();
+	_stack.pop_back();
+	return temp;
 }
 
 void writeStatistics(){

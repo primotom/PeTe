@@ -60,13 +60,13 @@ ReachabilityResult MonoDFSState::reachable(const PetriNet &net,
 	BigInt exploredStates = 0;
 	BigInt expandedStates = 0;
 	State* ns = allocator.createState();
-	while(!states.Wating().empty()){
+	while(!states.waitingSize()){
 		if(count++ & 1<<18){
-			if(states.Wating().size() > max)
-				max = states.Wating().size();
+			if(states.waitingSize() > max)
+				max = states.waitingSize();
 			count = 0;
 			//report progress
-			reportProgress((double)(max-states.Wating().size())/(double)max);
+			reportProgress((double)(max-states.waitingSize())/(double)max);
 			//check abort
 			if(abortRequested())
 				return ReachabilityResult(ReachabilityResult::Unknown,
@@ -86,12 +86,6 @@ ReachabilityResult MonoDFSState::reachable(const PetriNet &net,
 					if(query->evaluate(PQL::EvaluationContext(ns->marking(), ns->intValuation(), ns->boolValuation())))
 						return ReachabilityResult(ReachabilityResult::Satisfied,
 									  "A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
-					//stack.back().t = t + 1;
-
-					//if(states.greater(ns,s))
-					//	stack.push_back(Step(ns,0));
-					//else
-					//	stack.push_front(Step(ns, 0));
 
 					exploredStates++;
 					foundSomething = true;
