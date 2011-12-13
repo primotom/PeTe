@@ -7,7 +7,7 @@
 
 namespace PetriEngine { namespace Structures {
 
-/** Orderable State Set class which will feed states in a Breadth First manner */
+/** Orderable State Set class which will feed states in a Random Depth First manner */
 class RandomDFSStateSet : public OrderableStateSet {
 public:
 	/** Create the state set */

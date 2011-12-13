@@ -103,7 +103,7 @@ bool DFSIndexedStateSet::equal(State* s1, State* s2){
 	return true;
 }
 
-int DFSIndexedStateSet::waitingSize(){
+size_t DFSIndexedStateSet::waitingSize(){
 	return _stack.size();
 }
 

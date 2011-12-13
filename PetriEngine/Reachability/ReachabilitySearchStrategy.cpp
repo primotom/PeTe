@@ -36,6 +36,7 @@
 #include "IndexedBFS.h"
 #include "IndexedDFS.h"
 #include "IndexedBestFS.h"
+#include "IndexedRFS.h"
 #include "UltimateSearch.h"
 #include "HeuristicDFS.h"
 #include "StateSearch.h"
@@ -62,6 +63,8 @@
 #define NAME_IndexedBFSVariance					"Indexed BFS with Variance"
 #define NAME_IndexedBestFS						"Indexed BestFS"
 #define NAME_IndexedBestFSVariance				"Indexed BestFS with Variance"
+#define NAME_IndexedRFS							"Indexed RandomFS"
+#define NAME_IndexedRFSVariance					"Indexed RandomFS with Variance"
 
 #define NAME_IndexedDFS							"Indexed DFS"
 #define NAME_IndexedDFSVariance					"Indexed DFS with Variance"
@@ -104,24 +107,21 @@ std::vector<std::string> ReachabilitySearchStrategy::listStrategies(){
 		NAME_MonoDFSBool,
 		NAME_BestFSOld,
 		NAME_MonoBestFS,
-		NAME_MonoNewBestFS,
+		//NAME_MonoNewBestFS,
 		NAME_Indexed,
 		NAME_IndexedVariance,
 		NAME_IndexedBFS,
 		NAME_IndexedBFSVariance,
-
 		NAME_IndexedDFS,
 		NAME_IndexedDFSVariance,
-
 		NAME_IndexedDFSState,
 		NAME_IndexedDFSStateVariance,
-
 		NAME_IndexedDFSBool,
 		NAME_IndexedDFSBoolVariance,
-
 		NAME_IndexedBestFS,
-		NAME_IndexedBestFSVariance
-
+		NAME_IndexedBestFSVariance,
+		NAME_IndexedRFS,
+		NAME_IndexedRFSVariance
 	};
 	return std::vector<std::string>(strats, strats + sizeof(strats) / sizeof(std::string));
 }
@@ -167,6 +167,10 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 		int flags = PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;
 		return new IndexedBestFS((PQL::DistanceContext::DistanceStrategy)flags);
 	}
+	if(strategy == NAME_IndexedRFS)
+		return new IndexedRFS(false);
+	if(strategy == NAME_IndexedRFSVariance)
+		return new IndexedRFS();
 
 	if(strategy == NAME_IndexedDFS)
 		return new IndexedDFS(false);

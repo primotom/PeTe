@@ -20,6 +20,8 @@ public:
 
 	virtual State* getNextState() = 0;
 
+	virtual size_t waitingSize() = 0;
+
 	//Is some good boolean variable or marking in s1 greater than the one in s2, where true > false
 	bool greater(State* s1, State* s2){
 		for(size_t i = 0; i <  _net->numberOfPlaces(); i++){

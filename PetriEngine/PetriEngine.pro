@@ -50,7 +50,9 @@ SOURCES		   += \
     Structures/DFSIndexedStateSet.cpp \
     Reachability/IndexedDFS.cpp \
     Structures/IndexedBestFSStateSet.cpp \
-    Reachability/IndexedBestFS.cpp
+    Reachability/IndexedBestFS.cpp \
+    Structures/IndexedRFSStateSet.cpp \
+    Reachability/IndexedRFS.cpp
 
 HEADERS		   += \
 	ProgressReporter.h \
@@ -114,7 +116,9 @@ HEADERS		   += \
     Structures/DFSIndexedStateSet.h \
     Reachability/IndexedDFS.h \
     Structures/IndexedBestFSStateSet.h \
-    Reachability/IndexedBestFS.h
+    Reachability/IndexedBestFS.h \
+    Structures/IndexedRFSStateSet.h \
+    Reachability/IndexedRFS.h
 
 TARGET			= ../PetriEngine
 
