@@ -46,7 +46,7 @@ ReachabilityResult IndexedSearch::reachable(const PetriNet &net,
 	MonotonicityContext context(&net, query);
 	context.analyze();
 
-	IndexedStateSet states(net,&context);
+	IndexedStateSet states(net,&context, _varianceFirst);
 
 	StateAllocator<1000000> allocator(net);
 

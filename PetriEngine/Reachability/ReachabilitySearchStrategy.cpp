@@ -56,7 +56,8 @@
 //Heuristics
 #define NAME_BestFSOld							"Old BestFS (Heuristic distance)"
 #define NAME_MonoBestFS							"Old BestFS (Monotonicity Included)"
-#define NAME_Indexed							"Indexed Search"
+#define NAME_Indexed							"Indexed Search without variance"
+#define NAME_IndexedVariance					"Indexed Search with variance"
 
 //Over-approximation by linear programming
 #define NAME_LinearOverApprox					"Linear over-approximation"
@@ -88,7 +89,8 @@ std::vector<std::string> ReachabilitySearchStrategy::listStrategies(){
 		NAME_BestFSOld,
 		NAME_MonoBestFS,
 		NAME_MonoNewBestFS,
-		NAME_Indexed
+		NAME_Indexed,
+		NAME_IndexedVariance
 	};
 	return std::vector<std::string>(strats, strats + sizeof(strats) / sizeof(std::string));
 }
@@ -117,6 +119,8 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 	if(strategy == NAME_MonoNewBestFS)
 		return new MonoNewBestFS();
 	if(strategy == NAME_Indexed)
+		return new IndexedSearch(false);
+	if(strategy == NAME_IndexedVariance)
 		return new IndexedSearch();
 
 	// Heuristic Search Strategies

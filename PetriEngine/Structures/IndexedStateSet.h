@@ -9,8 +9,10 @@ namespace PetriEngine { namespace Structures {
 
 class IndexedStateSet : public OrderableStateSet {
 public:
-	IndexedStateSet(const PetriNet& net, PQL::MonotonicityContext* context)
-		: OrderableStateSet(net, context){}
+	IndexedStateSet(const PetriNet& net, PQL::MonotonicityContext* context, bool variance = true)
+		: OrderableStateSet(net, context){
+		_variance = variance;
+	}
 
 	bool add(State* state);
 	State* getNextState();
@@ -19,16 +21,15 @@ public:
 	void printVisited();
 
 private:
-	//typedef std::list<State*>::iterator iter;
 	typedef std::pair<int, State*> IndexedState;
 	typedef std::list<IndexedState>::iterator iter;
 
-	//std::list<State*> _waiting;
-	//std::list<State*> _visited;
 	std::list<IndexedState> _waiting;
 	std::list<IndexedState> _visited;
 
 	bool equal(State* s1, State* s2);
+
+	bool _variance;
 };
 }}
 

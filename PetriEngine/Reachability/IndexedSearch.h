@@ -12,7 +12,9 @@ namespace PetriEngine { namespace Reachability {
 class IndexedSearch : public ReachabilitySearchStrategy
 {
 public:
-	IndexedSearch() : ReachabilitySearchStrategy(){}
+	IndexedSearch(bool varianceFirst = true) : ReachabilitySearchStrategy(){
+		_varianceFirst = varianceFirst;
+	}
 
 	/** Perform reachability check using DFS with hash table */
 	ReachabilityResult reachable(const PetriNet &net,
@@ -30,6 +32,8 @@ private:
 		Structures::State* state;
 		unsigned int t;
 	};
+
+	bool _varianceFirst;
 };
 } // Reachability
 } // PetriEngine
