@@ -9,9 +9,6 @@ namespace PetriEngine { namespace Structures {
 bool DFSIndexedStateSet::add(State* state , unsigned int t){
 	int is = state->stateIndex(*_net);
 	bool skipVisited = false;
-	//bool foundPos = false;
-	//iter insertPos = _waiting.end();
-
 
 	for(std::list<Step>::iterator it = _stack.begin() ; it != _stack.end();){
 		if (less((*it).state, state)){
@@ -23,49 +20,6 @@ bool DFSIndexedStateSet::add(State* state , unsigned int t){
 			it++;
 		}
 	}
-
-
-	/*
-	// Search waiting first
-	for(iter it = _waiting.begin(); it != _waiting.end();){
-		int iw = it->first;
-
-		if(is < iw){
-			// Index lower, ensure we're not smaller
-			if(less(state, it->second))
-				return false;
-		} else if(is > iw){
-			// Index greater, if we've not found our insert position yet, this is it
-			if(!foundPos) {
-				foundPos = true;
-				insertPos = it;
-			}
-
-			// Check if state on waiting can be removed. If it can, we can skip Visited check
-			if(leq(it->second, state)){
-				if(it == insertPos) {insertPos++;}
-				it = _waiting.erase(it);
-				skipVisited = true;
-				continue;
-			}
-		} else {
-			// Equal indices, check we are not equal, if not, check if we should insert here
-			if(equal(it->second, state)) return false;
-			else {
-				if(_variance){
-					if(it->second->stateVariation(*_net, iw) >= state->stateVariation(*_net, is) && !foundPos){
-						insertPos = it;
-						foundPos = true;
-					}
-				} else if(!foundPos) {
-					insertPos = it;
-					foundPos = true;
-				}
-			}
-		}
-		it++;
-	}
-*/
 
 	if(!skipVisited){
 		for(iter it = _visited.begin(); it != _visited.end();){
@@ -85,18 +39,8 @@ bool DFSIndexedStateSet::add(State* state , unsigned int t){
 			it++;
 		}
 	}
-
-
-	/*
-	// Push our state to waiting and return true
-	if(insertPos == _waiting.end()){
-		_waiting.push_back(IndexedState(is, state));
-	} else {
-		_waiting.insert(insertPos, IndexedState(is, state));
-	}
-	*/
-
-	_stack.back().t = t + 1;
+	if(!_stack.empty())
+		_stack.back().t = t + 1;
 
 	if(_mode == PetriEngine::Structures::ModeGraterBool && state->parent()){
 
@@ -124,6 +68,7 @@ bool DFSIndexedStateSet::add(State* state , unsigned int t){
 		_visited.push_back(next);
 		return true;
 	}
+
 
 	for(iter it = _visited.begin(); it != _visited.end(); it++){
 		int iv = it->first;
@@ -172,18 +117,7 @@ Step DFSIndexedStateSet::popWating(){
 	_stack.pop_back();
 	return temp;
 }
-/*
-void DFSIndexedStateSet::printWaiting(){
-	std::cerr<<"Printing waiting. length: "<<_waiting.size()<<std::endl;
-	for(iter it = _waiting.begin(); it != _waiting.end(); it++){
-		for(uint m = 0; m <_net->numberOfPlaces(); m++)
-			std::cerr<<it->second->marking()[m]<<" ";
-		for(uint b = 0; b < _net->numberOfBoolVariables(); b++)
-			std::cerr<<it->second->boolValuation()[b]<<" ";
-		std::cout<<std::endl;
-	}
-}
-*/
+
 void DFSIndexedStateSet::printVisited(){
 	std::cerr<<"Printing visited. length: "<<_visited.size()<<std::endl;
 	for(iter it = _visited.begin(); it != _visited.end(); it++){

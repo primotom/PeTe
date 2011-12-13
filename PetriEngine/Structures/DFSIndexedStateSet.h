@@ -33,7 +33,7 @@ public:
 		_mode = mode;
 	}
 
-	bool add(State* state){}
+	bool add(State* state){return false;}
 	bool add(State* state, unsigned int t);
 	Step getWating(){return _stack.back();}
 	Step popWating();
@@ -41,7 +41,7 @@ public:
 	virtual State* getNextState(){return NULL;}
 	Step getNextStep();
 	int waitingSize();
-	void printWaiting();
+
 	void printVisited();
 
 private:
