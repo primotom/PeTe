@@ -15,19 +15,25 @@
 	<message>req_4</message>
 	<message>run_4</message>
 	<message>done_4</message>
+	<message>req_5</message>
+	<message>run_5</message>
+	<message>done_5</message>
 </messages>
 <role name="COORDINATOR">
 <states>
 	<state type="initial">Ready</state>
+	<state type="limited">Limit</state>
 	<state>running_p0</state>
 	<state>running_p1</state>
 	<state>running_p2</state>
 	<state>running_p3</state>
 	<state>running_p4</state>
+	<state>running_p5</state>
 </states>
 <rule id="runp0">
 	<pre>
 		<current_state>Ready</current_state>
+		<current_state>Limit</current_state>
 		<received_message>req_0</received_message>
 	</pre>
 	<post>
@@ -47,6 +53,7 @@
 <rule id="runp1">
 	<pre>
 		<current_state>Ready</current_state>
+		<current_state>Limit</current_state>
 		<received_message>req_1</received_message>
 	</pre>
 	<post>
@@ -66,6 +73,7 @@
 <rule id="runp2">
 	<pre>
 		<current_state>Ready</current_state>
+		<current_state>Limit</current_state>
 		<received_message>req_2</received_message>
 	</pre>
 	<post>
@@ -85,6 +93,7 @@
 <rule id="runp3">
 	<pre>
 		<current_state>Ready</current_state>
+		<current_state>Limit</current_state>
 		<received_message>req_3</received_message>
 	</pre>
 	<post>
@@ -104,6 +113,7 @@
 <rule id="runp4">
 	<pre>
 		<current_state>Ready</current_state>
+		<current_state>Limit</current_state>
 		<received_message>req_4</received_message>
 	</pre>
 	<post>
@@ -115,6 +125,26 @@
 	<pre>
 		<current_state>running_p4</current_state>
 		<received_message>done_4</received_message>
+	</pre>
+	<post>
+		<next_state>Ready</next_state>
+	</post>
+</rule>
+<rule id="runp5">
+	<pre>
+		<current_state>Ready</current_state>
+		<current_state>Limit</current_state>
+		<received_message>req_5</received_message>
+	</pre>
+	<post>
+		<next_state>running_p5</next_state>
+		<send_message>run_5</send_message>
+	</post>
+</rule>
+<rule id="donep5">
+	<pre>
+		<current_state>running_p5</current_state>
+		<received_message>done_5</received_message>
 	</pre>
 	<post>
 		<next_state>Ready</next_state>
@@ -154,6 +184,21 @@
 		<send_message>done_0</send_message>
 	</post>
 </rule>
+<rule id="drop">
+	<pre>
+		<current_state>noncritical</current_state>
+		<received_message>run_0</received_message>
+	</pre>
+	<post>
+		<next_state>done</next_state>
+		<send_message>done_0</send_message>
+	</post>
+</rule>
+<rule id="fail">
+	<pre>
+		<current_state>noncritical</current_state>
+	</pre>
+</rule>
 </role>
 <role name="PROCESS_1">
 <states>
@@ -187,6 +232,21 @@
 		<next_state>done</next_state>
 		<send_message>done_1</send_message>
 	</post>
+</rule>
+<rule id="drop">
+	<pre>
+		<current_state>noncritical</current_state>
+		<received_message>run_1</received_message>
+	</pre>
+	<post>
+		<next_state>done</next_state>
+		<send_message>done_1</send_message>
+	</post>
+</rule>
+<rule id="fail">
+	<pre>
+		<current_state>noncritical</current_state>
+	</pre>
 </rule>
 </role>
 <role name="PROCESS_2">
@@ -222,6 +282,21 @@
 		<send_message>done_2</send_message>
 	</post>
 </rule>
+<rule id="drop">
+	<pre>
+		<current_state>noncritical</current_state>
+		<received_message>run_2</received_message>
+	</pre>
+	<post>
+		<next_state>done</next_state>
+		<send_message>done_2</send_message>
+	</post>
+</rule>
+<rule id="fail">
+	<pre>
+		<current_state>noncritical</current_state>
+	</pre>
+</rule>
 </role>
 <role name="PROCESS_3">
 <states>
@@ -256,6 +331,21 @@
 		<send_message>done_3</send_message>
 	</post>
 </rule>
+<rule id="drop">
+	<pre>
+		<current_state>noncritical</current_state>
+		<received_message>run_3</received_message>
+	</pre>
+	<post>
+		<next_state>done</next_state>
+		<send_message>done_3</send_message>
+	</post>
+</rule>
+<rule id="fail">
+	<pre>
+		<current_state>noncritical</current_state>
+	</pre>
+</rule>
 </role>
 <role name="PROCESS_4">
 <states>
@@ -289,6 +379,70 @@
 		<next_state>done</next_state>
 		<send_message>done_4</send_message>
 	</post>
+</rule>
+<rule id="drop">
+	<pre>
+		<current_state>noncritical</current_state>
+		<received_message>run_4</received_message>
+	</pre>
+	<post>
+		<next_state>done</next_state>
+		<send_message>done_4</send_message>
+	</post>
+</rule>
+<rule id="fail">
+	<pre>
+		<current_state>noncritical</current_state>
+	</pre>
+</rule>
+</role>
+<role name="PROCESS_5">
+<states>
+	<state type="initial">noncritical</state>
+	<state>critical</state>
+	<state>done</state>
+</states>
+<rule id="dosendreq">
+	<pre>
+		<current_state>noncritical</current_state>
+	</pre>
+	<post>
+		<next_state>noncritical</next_state>
+		<send_message>req_5</send_message>
+	</post>
+</rule>
+<rule id="dorun">
+	<pre>
+		<current_state>noncritical</current_state>
+		<received_message>run_5</received_message>
+	</pre>
+	<post>
+		<next_state>critical</next_state>
+	</post>
+</rule>
+<rule id="dodone">
+	<pre>
+		<current_state>critical</current_state>
+	</pre>
+	<post>
+		<next_state>done</next_state>
+		<send_message>done_5</send_message>
+	</post>
+</rule>
+<rule id="drop">
+	<pre>
+		<current_state>noncritical</current_state>
+		<received_message>run_5</received_message>
+	</pre>
+	<post>
+		<next_state>done</next_state>
+		<send_message>done_5</send_message>
+	</post>
+</rule>
+<rule id="fail">
+	<pre>
+		<current_state>noncritical</current_state>
+	</pre>
 </rule>
 </role>
 </protocol>
