@@ -23,6 +23,7 @@ bool RandomDFSStateSet::add(State *state){
 		for(iter it = _visited.begin(); it != _visited.end();){
 			if (less(*it, state)){
 				_states.erase(it++);
+				this->_countRemove++;
 			}else{
 				if(this->leq(state, *it))
 					return false;

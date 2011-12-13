@@ -41,6 +41,7 @@ class ReachabilitySearchStrategy {
 public:
 	ReachabilitySearchStrategy(){
 		_reporter = NULL;
+
 	}
 
 	/** Determines if a petrinet is reachable w.r.t. a query */

@@ -48,6 +48,7 @@ ReachabilityResult IndexedRFS::reachable(const PetriNet &net,
 	int count = 0;
 	BigInt exploredStates = 0;
 	BigInt expandedStates = 0;
+	BigInt transitionFired  = 0;
 	State* s = states.getNextState();
 	while(s){
 		// Progress reporting and abort checking
@@ -67,13 +68,14 @@ ReachabilityResult IndexedRFS::reachable(const PetriNet &net,
 		memset(succ, 0, net.numberOfTransitions()*sizeof(State*));
 		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
 			if(net.fire(t, s, ns)){
+				transitionFired++;
 				if(states.add(ns)){
 					exploredStates++;
 					ns->setParent(s);
 					ns->setTransition(t);
 					if(query && query->evaluate(*ns))
 						return ReachabilityResult(ReachabilityResult::Satisfied,
-												"A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
+												"A state satisfying the query was found", expandedStates, exploredStates, transitionFired, states.getCountRemove(), ns->pathLength(), ns->trace());
 					succ[t] = ns;
 					ns = allocator.createState();
 				}
@@ -99,7 +101,7 @@ ReachabilityResult IndexedRFS::reachable(const PetriNet &net,
 		s = states.getNextState();
 	}
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
-						"No state satisfying the query exists.", expandedStates, exploredStates);
+						"No state satisfying the query exists.", expandedStates, exploredStates, transitionFired, states.getCountRemove());
 
 }
 

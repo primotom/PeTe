@@ -44,12 +44,16 @@ public:
 					   const std::string& explanation = "",
 					   BigInt expandedStates = 0,
 					   BigInt exploredStates = 0,
+					   BigInt transitionsFired = 0,
+					   BigInt removedWating = 0,
 					   int pathLength = 0,
 					   const std::vector<unsigned int>& trace = std::vector<unsigned int>()){
 		_result = result;
 		_explanation = explanation;
 		_expandedStates = expandedStates;
 		_exploredStates = exploredStates;
+		_transitionsFired = transitionsFired;
+		_removedWating = removedWating;
 		_pathLength = pathLength;
 		_trace = trace;
 	}
@@ -73,6 +77,8 @@ private:
 	Result _result;
 	BigInt _expandedStates;
 	BigInt _exploredStates;
+	BigInt _transitionsFired;
+	BigInt _removedWating;
 	int _pathLength;
 	std::vector<unsigned int> _trace;
 };

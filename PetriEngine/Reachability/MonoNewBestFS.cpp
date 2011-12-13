@@ -92,7 +92,7 @@ ReachabilityResult MonoNewBestFS::reachable(const PetriNet&,
 	//return ReachabilityResult(ReachabilityResult::NotSatisfied,
 	//						  "Query cannot be satisfied!", expandedStates, exploredStates);
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
-							  "Query cannot be satisfied!", 0, 0);
+							  "Query cannot be satisfied!", 0, 0,0);
 }
 
 double MonoNewBestFS::priority(const Structures::State *state,

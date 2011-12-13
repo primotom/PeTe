@@ -117,7 +117,7 @@ ReachabilityResult StateSearch::reachable(const PetriNet &net,
 				if(query->evaluate(*ns)){
 					return ReachabilityResult(ReachabilityResult::Satisfied,
 											  "Query was satisfied",
-											  expanded, explored, ns->pathLength(), ns->trace());
+											  expanded, explored,0,0, ns->pathLength(), ns->trace());
 				}
 
 				bool isImpossible = true;
@@ -140,14 +140,14 @@ ReachabilityResult StateSearch::reachable(const PetriNet &net,
 				if(!ns)
 					return ReachabilityResult(ReachabilityResult::Unknown,
 											  "Memory bound exceeded",
-											  expanded, explored);
+											  expanded, explored,0);
 			}
 		}
 	}
 
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
 							  "Query cannot be satisfied",
-							  expanded, explored);
+							  expanded, explored,0);
 }
 
 } // Reachability

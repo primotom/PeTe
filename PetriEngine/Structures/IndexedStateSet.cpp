@@ -62,6 +62,7 @@ bool IndexedStateSet::add(State* state){
 				// Clean up any superflous states in visited
 				if(less(it->second, state)){
 					it = _visited.erase(it);
+					this->_countRemove++;
 					continue;
 				}
 			}

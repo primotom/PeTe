@@ -14,6 +14,7 @@ public:
 		_net = &net;
 		_countSkip =0;
 		_countAdd =0;
+		_countRemove = 0;
     }
 
 	virtual bool add(State* state) = 0;
@@ -60,6 +61,8 @@ public:
 		std::cout<<"Number of states not skipped: "<<_countAdd-_countSkip<<std::endl;
 		std::cout<<"Final size of visited and waiting: "<<_states.size()<<std::endl;
 	}
+
+	int getCountRemove(){return this->_countRemove;}
 
 protected:
 	//Is S1 less or equal to S2
@@ -126,6 +129,8 @@ protected:
 
 	int _countSkip;
 	int _countAdd;
+
+	int _countRemove;
 };
 
 }}

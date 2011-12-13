@@ -56,6 +56,7 @@ ReachabilityResult BreadthFirstReachabilitySearch::reachable(const PetriNet &net
 	int count = 0;
 	BigInt expandedStates = 0;
 	BigInt exploredStates = 0;
+	BigInt transitionFired  = 0;
 	State* ns = allocator.createState();
 	while(!queue.empty()){
 		// Progress reporting and abort checking
@@ -75,6 +76,7 @@ ReachabilityResult BreadthFirstReachabilitySearch::reachable(const PetriNet &net
 		queue.pop_front();
 		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
 			if(net.fire(t, s, ns)){
+				transitionFired++;
 				if(states.add(ns)){
 					exploredStates++;
 					ns->setParent(s);
@@ -82,7 +84,7 @@ ReachabilityResult BreadthFirstReachabilitySearch::reachable(const PetriNet &net
 					if(query->evaluate(*ns)){
 						//ns->dumpTrace(net);
 						return ReachabilityResult(ReachabilityResult::Satisfied,
-												"A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
+												"A state satisfying the query was found", expandedStates, exploredStates, transitionFired, 0, ns->pathLength(), ns->trace());
 					}
 
 					queue.push_back(ns);
@@ -94,7 +96,7 @@ ReachabilityResult BreadthFirstReachabilitySearch::reachable(const PetriNet &net
 	}
 
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
-						"No state satisfying the query exists.", expandedStates, exploredStates);
+						"No state satisfying the query exists.", expandedStates, exploredStates, transitionFired,0);
 }
 
 }}

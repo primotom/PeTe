@@ -61,6 +61,7 @@ ReachabilityResult IndexedDFS::reachable(const PetriNet &net,
 	int count = 0;
 	BigInt exploredStates = 0;
 	BigInt expandedStates = 0;
+	BigInt transitionFired  = 0;
 	State* ns = allocator.createState();
 	while(states.waitingSize()){
 		if(count++ & 1<<18){
@@ -83,11 +84,12 @@ ReachabilityResult IndexedDFS::reachable(const PetriNet &net,
 		bool foundSomething = false;
 		for(unsigned int t = tstep.t; t < net.numberOfTransitions(); t++){
 			if(net.fire(t, s->marking(), s->intValuation(),s->boolValuation(), ns->marking(), ns->intValuation(), ns->boolValuation())){
+				transitionFired++;
 				if(states.add(ns,t)){
 					ns->setTransition(t);
 					if(query->evaluate(PQL::EvaluationContext(ns->marking(), ns->intValuation(), ns->boolValuation())))
 						return ReachabilityResult(ReachabilityResult::Satisfied,
-									  "A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
+									  "A state satisfying the query was found", expandedStates, exploredStates, transitionFired, states.getCountRemove(), ns->pathLength(), ns->trace());
 
 					exploredStates++;
 					foundSomething = true;
@@ -103,7 +105,7 @@ ReachabilityResult IndexedDFS::reachable(const PetriNet &net,
 	}
 	//states.writeStatistics();
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
-							"No state satisfying the query exists.", expandedStates, count);
+							"No state satisfying the query exists.", expandedStates, count, transitionFired, states.getCountRemove());
 }
 
 } // Reachability

@@ -60,6 +60,7 @@ ReachabilityResult MonoBFS::reachable(const PetriNet &net,
 	int count = 0;
 	BigInt expandedStates = 0;
 	BigInt exploredStates = 0;
+	BigInt transitionFired  = 0;
 	State* ns = allocator.createState();
 	State* s = states.getNextState();
 	while(s){
@@ -78,6 +79,7 @@ ReachabilityResult MonoBFS::reachable(const PetriNet &net,
 
 		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
 			if(net.fire(t, s, ns)){
+				transitionFired++;
 				if(states.add(ns)){
 					exploredStates++;
 					ns->setParent(s);
@@ -85,7 +87,7 @@ ReachabilityResult MonoBFS::reachable(const PetriNet &net,
 					if(query->evaluate(PQL::EvaluationContext(ns->marking(), ns->intValuation(), ns->boolValuation()))){
 						//ns->dumpTrace(net);
 						return ReachabilityResult(ReachabilityResult::Satisfied,
-												"A state satisfying the query was found", expandedStates, exploredStates, ns->pathLength(), ns->trace());
+												"A state satisfying the query was found", expandedStates, exploredStates, transitionFired, states.getCountRemove(), ns->pathLength(), ns->trace());
 					}
 
 					ns = allocator.createState();
@@ -97,7 +99,7 @@ ReachabilityResult MonoBFS::reachable(const PetriNet &net,
 	}
 
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
-						"No state satisfying the query exists.", expandedStates, exploredStates);
+						"No state satisfying the query exists.", expandedStates, exploredStates, transitionFired, states.getCountRemove());
 }
 
 }}

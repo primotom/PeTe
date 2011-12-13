@@ -32,6 +32,7 @@ bool IndexedBFSStateSet::add(State *state){
 				// Clean up any superfluous states in visited
 				if(less(it->second, state)){
 					it = _visited.erase(it);
+					this->_countRemove++;
 					continue;
 				}
 			}

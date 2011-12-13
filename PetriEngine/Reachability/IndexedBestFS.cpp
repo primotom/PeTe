@@ -41,6 +41,7 @@ ReachabilityResult IndexedBestFS::reachable(const PetriNet &net,
 	int count = 0;
 	BigInt expandedStates = 0;
 	BigInt exploredStates = 0;
+	BigInt transitionFired  = 0;
 	size_t max = 1;
 	State* s = states.getNextState();
 	while(s){
@@ -58,6 +59,7 @@ ReachabilityResult IndexedBestFS::reachable(const PetriNet &net,
 		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
 			if(net.fire(t, s, ns)){
 				//If it's new
+				transitionFired++;
 				if(states.add(ns)){
 					exploredStates++;
 					//Set parent and transition for the state
@@ -68,7 +70,7 @@ ReachabilityResult IndexedBestFS::reachable(const PetriNet &net,
 					if(query->evaluate(*ns)){
 						//ns->dumpTrace(net);
 						return ReachabilityResult(ReachabilityResult::Satisfied,
-												  "Query was satified!", expandedStates, exploredStates, ns->pathLength(), ns->trace());
+												  "Query was satified!", expandedStates, exploredStates, transitionFired, states.getCountRemove(), ns->pathLength(), ns->trace());
 					}
 
 					//Allocate new state, as states take ownership
@@ -82,7 +84,7 @@ ReachabilityResult IndexedBestFS::reachable(const PetriNet &net,
 	}
 
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
-							  "Query cannot be satisfied!", expandedStates, exploredStates);
+							  "Query cannot be satisfied!", expandedStates, exploredStates, transitionFired, states.getCountRemove());
 }
 
 } // Reachability
