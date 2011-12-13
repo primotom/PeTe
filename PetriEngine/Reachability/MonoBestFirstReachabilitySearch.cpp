@@ -54,8 +54,7 @@ ReachabilityResult MonoBestFirstReachabilitySearch::reachable(const PetriNet &ne
 										  "Query aborted!");
 		}
 
-		//Take something out of the queue
-		expandedStates++;
+
 
 		// Attempt to fire each transition
 		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
@@ -79,7 +78,9 @@ ReachabilityResult MonoBestFirstReachabilitySearch::reachable(const PetriNet &ne
 				}
 			}
 		}
+		//Take something out of the queue
 		s = states.getNextState();
+		expandedStates++;
 	}
 
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,

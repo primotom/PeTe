@@ -54,9 +54,6 @@ ReachabilityResult IndexedBestFS::reachable(const PetriNet &net,
 										  "Query aborted!");
 		}
 
-		//Take something out of the queue
-		expandedStates++;
-
 		// Attempt to fire each transition
 		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
 			if(net.fire(t, s, ns)){
@@ -79,6 +76,8 @@ ReachabilityResult IndexedBestFS::reachable(const PetriNet &net,
 				}
 			}
 		}
+		//Take something out of the queue
+		expandedStates++;
 		s = states.getNextState();
 	}
 

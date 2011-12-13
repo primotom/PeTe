@@ -91,7 +91,7 @@ ReachabilityResult IndexedSearch::reachable(const PetriNet &net,
 			}
 		}
 		s = states.getNextState();
-		expandedStates++;//TODO: Should exploredStates be incremented twice?
+		expandedStates++;
 	}
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
 							"No state satisfying the query exists.", expandedStates, exploredStates);
