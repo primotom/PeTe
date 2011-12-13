@@ -10,18 +10,22 @@ bool IndexedStateSet::add(State* state){
 	bool foundPos = false;
 	iter insertPos = _waiting.end();
 
+	// Search waiting first
 	for(iter it = _waiting.begin(); it != _waiting.end();){
 		int iw = it->first;
 
 		if(is < iw){
+			// Index lower, ensure we're not smaller
 			if(less(state, it->second))
 				return false;
 		} else if(is > iw){
+			// Index greater, if we've not found our insert position yet, this is it
 			if(!foundPos) {
 				foundPos = true;
 				insertPos = it;
 			}
 
+			// Check if state on waiting can be removed. If it can, we can skip Visited check
 			if(leq(it->second, state)){
 				if(it == insertPos) {insertPos++;}
 				it = _waiting.erase(it);
@@ -29,6 +33,7 @@ bool IndexedStateSet::add(State* state){
 				continue;
 			}
 		} else {
+			// Equal indices, check we are not equal, if not, check if we should insert here
 			if(equal(it->second, state)) return false;
 			else {
 				if(_variance){
@@ -50,9 +55,11 @@ bool IndexedStateSet::add(State* state){
 			int iv = it->first;
 
 			if(is <= iv){
+				// Check we are not smaller then existing states
 				if(leq(state, it->second))
 					return false;
 			} else {
+				// Clean up any superflous states in visited
 				if(less(it->second, state)){
 					it = _visited.erase(it);
 					continue;
@@ -62,6 +69,7 @@ bool IndexedStateSet::add(State* state){
 		}
 	}
 
+	// Push our state to waiting and return true
 	if(insertPos == _waiting.end()){
 		_waiting.push_back(IndexedState(is, state));
 	} else {
@@ -74,6 +82,7 @@ bool IndexedStateSet::add(State* state){
 State* IndexedStateSet::getNextState(){
 	if(_waiting.empty())
 		return NULL;
+	// Don't know which of these two to use
 	//IndexedState next = _waiting.back();
 	//_waiting.pop_back();
 	IndexedState next = _waiting.front();
