@@ -21,7 +21,7 @@ ModelDir = "Samples/"
 IgnoreList = IgnoreList = []
 
 # List of models to run on
-Models = ["Protocols", "LeaderElection", "MAPK", "Kanban", "FMS"]
+Models = ["Protocols", "LeaderElection", "Mutex", "MAPK", "Kanban", "FMS"]
 
 # Memory bound in KiB
 MemoryBound = 1048576
@@ -122,19 +122,32 @@ Protocols = [
 "Protocols/Enhanced-BAwCC-protocol.pet",
 "Protocols/Enhanced-BAwPC-protocol.pet"
 ]
+Mutex = [
+"Protocols/Mutual2.pet",
+"Protocols/Mutual4.pet",
+"Protocols/Mutual6.pet",
+"Protocols/Mutual8.pet",
+"Protocols/Mutual10.pet"
+]
 LeaderElection = [
-"Protocols/Election3.pet",
-"Protocols/Election5.pet",
-"Protocols/Election10.pet",
-"Protocols/Election15.pet",
+"Protocols/Election16.pet",
+"Protocols/Election18.pet",
 "Protocols/Election20.pet",
-"Protocols/Election25.pet"
+"Protocols/Election22.pet",
+"Protocols/Election24.pet",
+"Protocols/Election26.pet",
+"Protocols/Election28.pet",
+"Protocols/Election30.pet",
+"Protocols/Election32.pet",
+"Protocols/Election34.pet",
+"Protocols/Election36.pet"
 ]
 modellists = []
 for m in Models:
 	if m == "MAPK": modellists += (MAPK[SkipFirstNModels:],)
 	if m == "Kanban": modellists += (Kanban[SkipFirstNModels:],)
 	if m == "FMS": modellists += (FMS[SkipFirstNModels:],)
+	if m == "Mutex": modellists += (Mutex[SkipFirstNModels:],)
 	if m == "Protocols": modellists += (Protocols[SkipFirstNModels:],)
 	if m == "LeaderElection": modellists += (LeaderElection[SkipFirstNModels:],)
 
