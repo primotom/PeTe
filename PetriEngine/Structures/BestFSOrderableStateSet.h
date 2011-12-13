@@ -13,8 +13,12 @@ namespace PetriEngine { namespace Structures {
 class BestFSOrderableStateSet : public OrderableStateSet {
 public:
 	/** Create the state set */
-	BestFSOrderableStateSet(const PetriNet& net, PQL::MonotonicityContext* context, PQL::Condition* query)
+	BestFSOrderableStateSet(const PetriNet& net,
+							PQL::MonotonicityContext* context,
+							PQL::DistanceContext::DistanceStrategy distanceStrategy,
+							PQL::Condition* query)
 		: OrderableStateSet(net, context) {
+		_distanceStrategy = distanceStrategy;
 		_dm = new DistanceMatrix(net);
 		_query = query;
 	}

@@ -34,6 +34,7 @@
 #include "RandomDFS.h"
 #include "IndexedSearch.h"
 #include "IndexedBFS.h"
+#include "IndexedBestFS.h"
 
 #include "UltimateSearch.h"
 #include "HeuristicDFS.h"
@@ -55,18 +56,19 @@
 #define NAME_MonoNewBestFS						"Ordered new Best First Seach"
 
 //Indexed
+#define NAME_Indexed							"Indexed Search"
+#define NAME_IndexedVariance					"Indexed Search with Variance"
 #define NAME_IndexedBFS							"Indexed BFS"
 #define NAME_IndexedBFSVariance					"Indexed BFS with Variance"
+#define NAME_IndexedBestFS						"Indexed BestFS"
+#define NAME_IndexedBestFSVariance				"Indexed BestFS with Variance"
 
 //Heuristics
 #define NAME_BestFSOld							"Old BestFS (Heuristic distance)"
 #define NAME_MonoBestFS							"Old BestFS (Monotonicity Included)"
-#define NAME_Indexed							"Indexed Search"
-#define NAME_IndexedVariance					"Indexed Search with Variance"
 
 //Over-approximation by linear programming
 #define NAME_LinearOverApprox					"Linear over-approximation"
-
 
 #define NAME_UltimateSearchDFS					"BestFS Ultimate Edition DFS"
 #define NAME_UltimateSearchBFS					"BestFS Ultimate Edition BFS"
@@ -97,7 +99,9 @@ std::vector<std::string> ReachabilitySearchStrategy::listStrategies(){
 		NAME_Indexed,
 		NAME_IndexedVariance,
 		NAME_IndexedBFS,
-		NAME_IndexedBFSVariance
+		NAME_IndexedBFSVariance,
+		NAME_IndexedBestFS,
+		NAME_IndexedBestFSVariance
 	};
 	return std::vector<std::string>(strats, strats + sizeof(strats) / sizeof(std::string));
 }
@@ -135,6 +139,14 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 		return new IndexedBFS(false);
 	if(strategy == NAME_IndexedBFSVariance)
 		return new IndexedBFS();
+	if(strategy == NAME_IndexedBestFS){
+		int flags = PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;
+		return new IndexedBestFS((PQL::DistanceContext::DistanceStrategy)flags, false);
+	}
+	if(strategy == NAME_IndexedBestFSVariance){
+		int flags = PQL::DistanceContext::AndSum | PQL::DistanceContext::OrExtreme;
+		return new IndexedBestFS((PQL::DistanceContext::DistanceStrategy)flags);
+	}
 
 	// Heuristic Search Strategies
 	if(strategy == NAME_BestFSOld){
