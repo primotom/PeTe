@@ -5,12 +5,12 @@
 
 namespace PetriEngine { namespace Reachability {
 
-/** Implements reachability check in a BFS manner using a hash table */
+/** Implements reachability check in a BFS manner using a monotonic state set */
 class MonoBFS : public ReachabilitySearchStrategy {
 public:
 	MonoBFS() : ReachabilitySearchStrategy() {}
 
-	/** Perform reachability check using BFS with hasing */
+	/** Perform reachability check using BFS */
 	ReachabilityResult reachable(const PetriNet &net,
 								 const MarkVal *m0,
 								 const VarVal *v0,

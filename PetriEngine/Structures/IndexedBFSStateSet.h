@@ -1,5 +1,5 @@
-#ifndef INDEXEDSTATESET_H
-#define INDEXEDSTATESET_H
+#ifndef INDEXEDBFSSTATESET_H
+#define INDEXEDBFSSTATESET_H
 
 #include "PQL/Contexts.h"
 #include "Structures/OrderableStateSet.h"
@@ -7,18 +7,16 @@
 
 namespace PetriEngine { namespace Structures {
 
-class IndexedStateSet : public OrderableStateSet {
+class IndexedBFSStateSet : public OrderableStateSet {
 public:
-	IndexedStateSet(const PetriNet& net, PQL::MonotonicityContext* context, bool variance = true)
+	IndexedBFSStateSet(const PetriNet& net, PQL::MonotonicityContext* context, bool variance = true)
 		: OrderableStateSet(net, context){
 		_variance = variance;
 	}
 
-	bool add(State* state);
+	bool add(State *state);
 	State* getNextState();
 	size_t waitingSize();
-	void printWaiting();
-	void printVisited();
 
 private:
 	typedef std::pair<int, State*> IndexedState;
@@ -29,6 +27,9 @@ private:
 
 	bool _variance;
 };
-}}
 
-#endif // INDEXEDSTATESET_H
+
+} // Structures
+} // PetriEngine
+
+#endif // INDEXEDBFSSTATESET_H

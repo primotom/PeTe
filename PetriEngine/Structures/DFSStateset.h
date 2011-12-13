@@ -34,7 +34,7 @@ public:
 		_mode = mode;
 	}
 
-	bool add(State* state){}
+	bool add(State*){return false;}
 
 	bool add(State* state, unsigned int t);
 

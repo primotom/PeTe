@@ -33,6 +33,7 @@
 #include "LinearOverApprox.h"
 #include "RandomDFS.h"
 #include "IndexedSearch.h"
+#include "IndexedBFS.h"
 
 #include "UltimateSearch.h"
 #include "HeuristicDFS.h"
@@ -53,11 +54,15 @@
 #define NAME_MonoRandomDFS						"Ordered Random DFS"
 #define NAME_MonoNewBestFS						"Ordered new Best First Seach"
 
+//Indexed
+#define NAME_IndexedBFS							"Indexed BFS"
+#define NAME_IndexedBFSVariance					"Indexed BFS with Variance"
+
 //Heuristics
 #define NAME_BestFSOld							"Old BestFS (Heuristic distance)"
 #define NAME_MonoBestFS							"Old BestFS (Monotonicity Included)"
-#define NAME_Indexed							"Indexed Search without variance"
-#define NAME_IndexedVariance					"Indexed Search with variance"
+#define NAME_Indexed							"Indexed Search"
+#define NAME_IndexedVariance					"Indexed Search with Variance"
 
 //Over-approximation by linear programming
 #define NAME_LinearOverApprox					"Linear over-approximation"
@@ -90,7 +95,9 @@ std::vector<std::string> ReachabilitySearchStrategy::listStrategies(){
 		NAME_MonoBestFS,
 		NAME_MonoNewBestFS,
 		NAME_Indexed,
-		NAME_IndexedVariance
+		NAME_IndexedVariance,
+		NAME_IndexedBFS,
+		NAME_IndexedBFSVariance
 	};
 	return std::vector<std::string>(strats, strats + sizeof(strats) / sizeof(std::string));
 }
@@ -118,10 +125,16 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 		return new MonoDFSBool();
 	if(strategy == NAME_MonoNewBestFS)
 		return new MonoNewBestFS();
+
+	// Indexed Search Strategies
 	if(strategy == NAME_Indexed)
 		return new IndexedSearch(false);
 	if(strategy == NAME_IndexedVariance)
 		return new IndexedSearch();
+	if(strategy == NAME_IndexedBFS)
+		return new IndexedBFS(false);
+	if(strategy == NAME_IndexedBFSVariance)
+		return new IndexedBFS();
 
 	// Heuristic Search Strategies
 	if(strategy == NAME_BestFSOld){

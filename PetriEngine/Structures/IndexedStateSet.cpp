@@ -116,17 +116,7 @@ State* IndexedStateSet::getNextState(){
 	return next.second;
 }
 
-bool IndexedStateSet::equal(State* s1, State* s2){
-	for(uint i= 0; i<_net->numberOfPlaces(); i++)
-		if(s1->marking()[i]!= s2->marking()[i])
-			return false;
-	for(uint i= 0; i<_net->numberOfBoolVariables(); i++)
-		if(s1->boolValuation()[i]!= s2->boolValuation()[i])
-			return false;
-	return true;
-}
-
-int IndexedStateSet::waitingSize(){
+size_t IndexedStateSet::waitingSize(){
 	return _waiting.size();
 }
 

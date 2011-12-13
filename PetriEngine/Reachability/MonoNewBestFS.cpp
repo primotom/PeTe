@@ -15,11 +15,11 @@ using namespace PetriEngine::PQL;
 namespace PetriEngine{
 namespace Reachability{
 
-ReachabilityResult MonoNewBestFS::reachable(const PetriNet &net,
-															const MarkVal *m0,
-															const VarVal *v0,
-															const BoolVal *ba,
-															PQL::Condition *query){
+ReachabilityResult MonoNewBestFS::reachable(const PetriNet&,
+											const MarkVal*,
+											const VarVal*,
+											const BoolVal*,
+											PQL::Condition*){
 	/*StateAllocator<> allocator(net);
 
 	State* s0 = allocator.createState();
@@ -114,7 +114,7 @@ double MonoNewBestFS::priority(const Structures::State *state,
 }
 
 void MonoNewBestFS::initialize(const PQL::Condition*,
-												 const PetriNet& net){
+							   const PetriNet&){
 }
 
 } // Reachability
