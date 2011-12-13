@@ -44,7 +44,11 @@ SOURCES		   += \
     Structures/DFSStateset.cpp \
     Structures/BFSOrderableStateSet.cpp \
     Structures/BestFSOrderableStateSet.cpp \
-    Structures/RandomDFSStateset.cpp
+    Structures/RandomDFSStateset.cpp \
+    Structures/IndexedBFSStateSet.cpp \
+    Reachability/IndexedBFS.cpp \
+    Structures/DFSIndexedStateSet.cpp \
+    Reachability/IndexedDFS.cpp
 
 HEADERS		   += \
 	ProgressReporter.h \
@@ -102,7 +106,11 @@ HEADERS		   += \
     Structures/DFSStateset.h \
     Structures/BestFSOrderableStateSet.h \
     Structures/PriorityList.h \
-    Structures/RandomDFSStateset.h
+    Structures/RandomDFSStateset.h \
+    Structures/IndexedBFSStateSet.h \
+    Reachability/IndexedBFS.h \
+    Structures/DFSIndexedStateSet.h \
+    Reachability/IndexedDFS.h
 
 TARGET			= ../PetriEngine
 
