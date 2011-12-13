@@ -47,6 +47,8 @@ SOURCES		   += \
     Structures/RandomDFSStateset.cpp \
     Structures/IndexedBFSStateSet.cpp \
     Reachability/IndexedBFS.cpp
+    Structures/DFSIndexedStateSet.cpp \
+    Reachability/IndexedDFS.cpp
 
 HEADERS		   += \
 	ProgressReporter.h \
@@ -107,6 +109,8 @@ HEADERS		   += \
     Structures/RandomDFSStateset.h \
     Structures/IndexedBFSStateSet.h \
     Reachability/IndexedBFS.h
+    Structures/DFSIndexedStateSet.h \
+    Reachability/IndexedDFS.h
 
 TARGET			= ../PetriEngine
 
