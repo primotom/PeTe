@@ -34,6 +34,7 @@
 #include "RandomDFS.h"
 #include "IndexedSearch.h"
 #include "IndexedBFS.h"
+#include "IndexedDFS.h"
 
 #include "UltimateSearch.h"
 #include "HeuristicDFS.h"
@@ -57,6 +58,15 @@
 //Indexed
 #define NAME_IndexedBFS							"Indexed BFS"
 #define NAME_IndexedBFSVariance					"Indexed BFS with Variance"
+
+#define NAME_IndexedDFS							"Indexed DFS"
+#define NAME_IndexedDFSVariance					"Indexed DFS with Variance"
+
+#define NAME_IndexedDFSState					"Indexed DFS State"
+#define NAME_IndexedDFSStateVariance			"Indexed DFS State with Variance"
+
+#define NAME_IndexedDFSBool						"Indexed DFS Bool"
+#define NAME_IndexedDFSBoolVariance				"Indexed DFS Bool with Variance"
 
 //Heuristics
 #define NAME_BestFSOld							"Old BestFS (Heuristic distance)"
@@ -97,7 +107,15 @@ std::vector<std::string> ReachabilitySearchStrategy::listStrategies(){
 		NAME_Indexed,
 		NAME_IndexedVariance,
 		NAME_IndexedBFS,
-		NAME_IndexedBFSVariance
+		NAME_IndexedBFSVariance,
+		NAME_IndexedDFS,
+		NAME_IndexedDFSVariance,
+
+		NAME_IndexedDFSState,
+		NAME_IndexedDFSStateVariance,
+
+		NAME_IndexedDFSBool,
+		NAME_IndexedDFSBoolVariance
 	};
 	return std::vector<std::string>(strats, strats + sizeof(strats) / sizeof(std::string));
 }
@@ -135,6 +153,21 @@ ReachabilitySearchStrategy* ReachabilitySearchStrategy::createStrategy(const std
 		return new IndexedBFS(false);
 	if(strategy == NAME_IndexedBFSVariance)
 		return new IndexedBFS();
+
+	if(strategy == NAME_IndexedDFS)
+		return new IndexedDFS(false);
+	if(strategy == NAME_IndexedDFSVariance)
+		return new IndexedDFS(true);
+	if(strategy == NAME_IndexedDFSBool)
+		return new IndexedDFS(false,ModeGraterBool);
+	if(strategy == NAME_IndexedDFSBoolVariance)
+		return new IndexedDFS(true,ModeGraterBool);
+	if(strategy == NAME_IndexedDFSState)
+		return new IndexedDFS(false,ModeGraterState);
+	if(strategy == NAME_IndexedDFSStateVariance)
+		return new IndexedDFS(true,ModeGraterState);
+
+
 
 	// Heuristic Search Strategies
 	if(strategy == NAME_BestFSOld){

@@ -46,7 +46,7 @@ ReachabilityResult IndexedDFS::reachable(const PetriNet &net,
 	MonotonicityContext context(&net,query);
 	context.analyze();
 
-	DFSIndexedStateSet states(net,&context, ModeNormal);
+	DFSIndexedStateSet states(net,&context, _mode);
 
 	StateAllocator<1000000> allocator(net);
 
