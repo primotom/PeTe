@@ -1,0 +1,5 @@
+git checkout branch to branch from
+git pull
+git branch [[name]]
+git checkout [[name]]
+git push origin [[name]] -u
