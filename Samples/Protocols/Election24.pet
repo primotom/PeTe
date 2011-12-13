@@ -21,6 +21,10 @@
           <boolean_variable name="msg_0_17" initial-value="false"/>
           <boolean_variable name="msg_0_18" initial-value="false"/>
           <boolean_variable name="msg_0_19" initial-value="false"/>
+          <boolean_variable name="msg_0_20" initial-value="false"/>
+          <boolean_variable name="msg_0_21" initial-value="false"/>
+          <boolean_variable name="msg_0_22" initial-value="false"/>
+          <boolean_variable name="msg_0_23" initial-value="false"/>
           <boolean_variable name="msg_1_0" initial-value="false"/>
           <boolean_variable name="msg_1_1" initial-value="false"/>
           <boolean_variable name="msg_1_2" initial-value="false"/>
@@ -41,6 +45,10 @@
           <boolean_variable name="msg_1_17" initial-value="false"/>
           <boolean_variable name="msg_1_18" initial-value="false"/>
           <boolean_variable name="msg_1_19" initial-value="false"/>
+          <boolean_variable name="msg_1_20" initial-value="false"/>
+          <boolean_variable name="msg_1_21" initial-value="false"/>
+          <boolean_variable name="msg_1_22" initial-value="false"/>
+          <boolean_variable name="msg_1_23" initial-value="false"/>
           <boolean_variable name="msg_2_0" initial-value="false"/>
           <boolean_variable name="msg_2_1" initial-value="false"/>
           <boolean_variable name="msg_2_2" initial-value="false"/>
@@ -61,6 +69,10 @@
           <boolean_variable name="msg_2_17" initial-value="false"/>
           <boolean_variable name="msg_2_18" initial-value="false"/>
           <boolean_variable name="msg_2_19" initial-value="false"/>
+          <boolean_variable name="msg_2_20" initial-value="false"/>
+          <boolean_variable name="msg_2_21" initial-value="false"/>
+          <boolean_variable name="msg_2_22" initial-value="false"/>
+          <boolean_variable name="msg_2_23" initial-value="false"/>
           <boolean_variable name="msg_3_0" initial-value="false"/>
           <boolean_variable name="msg_3_1" initial-value="false"/>
           <boolean_variable name="msg_3_2" initial-value="false"/>
@@ -81,6 +93,10 @@
           <boolean_variable name="msg_3_17" initial-value="false"/>
           <boolean_variable name="msg_3_18" initial-value="false"/>
           <boolean_variable name="msg_3_19" initial-value="false"/>
+          <boolean_variable name="msg_3_20" initial-value="false"/>
+          <boolean_variable name="msg_3_21" initial-value="false"/>
+          <boolean_variable name="msg_3_22" initial-value="false"/>
+          <boolean_variable name="msg_3_23" initial-value="false"/>
           <boolean_variable name="msg_4_0" initial-value="false"/>
           <boolean_variable name="msg_4_1" initial-value="false"/>
           <boolean_variable name="msg_4_2" initial-value="false"/>
@@ -101,6 +117,10 @@
           <boolean_variable name="msg_4_17" initial-value="false"/>
           <boolean_variable name="msg_4_18" initial-value="false"/>
           <boolean_variable name="msg_4_19" initial-value="false"/>
+          <boolean_variable name="msg_4_20" initial-value="false"/>
+          <boolean_variable name="msg_4_21" initial-value="false"/>
+          <boolean_variable name="msg_4_22" initial-value="false"/>
+          <boolean_variable name="msg_4_23" initial-value="false"/>
           <boolean_variable name="msg_5_0" initial-value="false"/>
           <boolean_variable name="msg_5_1" initial-value="false"/>
           <boolean_variable name="msg_5_2" initial-value="false"/>
@@ -121,6 +141,10 @@
           <boolean_variable name="msg_5_17" initial-value="false"/>
           <boolean_variable name="msg_5_18" initial-value="false"/>
           <boolean_variable name="msg_5_19" initial-value="false"/>
+          <boolean_variable name="msg_5_20" initial-value="false"/>
+          <boolean_variable name="msg_5_21" initial-value="false"/>
+          <boolean_variable name="msg_5_22" initial-value="false"/>
+          <boolean_variable name="msg_5_23" initial-value="false"/>
           <boolean_variable name="msg_6_0" initial-value="false"/>
           <boolean_variable name="msg_6_1" initial-value="false"/>
           <boolean_variable name="msg_6_2" initial-value="false"/>
@@ -141,6 +165,10 @@
           <boolean_variable name="msg_6_17" initial-value="false"/>
           <boolean_variable name="msg_6_18" initial-value="false"/>
           <boolean_variable name="msg_6_19" initial-value="false"/>
+          <boolean_variable name="msg_6_20" initial-value="false"/>
+          <boolean_variable name="msg_6_21" initial-value="false"/>
+          <boolean_variable name="msg_6_22" initial-value="false"/>
+          <boolean_variable name="msg_6_23" initial-value="false"/>
           <boolean_variable name="msg_7_0" initial-value="false"/>
           <boolean_variable name="msg_7_1" initial-value="false"/>
           <boolean_variable name="msg_7_2" initial-value="false"/>
@@ -161,6 +189,10 @@
           <boolean_variable name="msg_7_17" initial-value="false"/>
           <boolean_variable name="msg_7_18" initial-value="false"/>
           <boolean_variable name="msg_7_19" initial-value="false"/>
+          <boolean_variable name="msg_7_20" initial-value="false"/>
+          <boolean_variable name="msg_7_21" initial-value="false"/>
+          <boolean_variable name="msg_7_22" initial-value="false"/>
+          <boolean_variable name="msg_7_23" initial-value="false"/>
           <boolean_variable name="msg_8_0" initial-value="false"/>
           <boolean_variable name="msg_8_1" initial-value="false"/>
           <boolean_variable name="msg_8_2" initial-value="false"/>
@@ -181,6 +213,10 @@
           <boolean_variable name="msg_8_17" initial-value="false"/>
           <boolean_variable name="msg_8_18" initial-value="false"/>
           <boolean_variable name="msg_8_19" initial-value="false"/>
+          <boolean_variable name="msg_8_20" initial-value="false"/>
+          <boolean_variable name="msg_8_21" initial-value="false"/>
+          <boolean_variable name="msg_8_22" initial-value="false"/>
+          <boolean_variable name="msg_8_23" initial-value="false"/>
           <boolean_variable name="msg_9_0" initial-value="false"/>
           <boolean_variable name="msg_9_1" initial-value="false"/>
           <boolean_variable name="msg_9_2" initial-value="false"/>
@@ -201,6 +237,10 @@
           <boolean_variable name="msg_9_17" initial-value="false"/>
           <boolean_variable name="msg_9_18" initial-value="false"/>
           <boolean_variable name="msg_9_19" initial-value="false"/>
+          <boolean_variable name="msg_9_20" initial-value="false"/>
+          <boolean_variable name="msg_9_21" initial-value="false"/>
+          <boolean_variable name="msg_9_22" initial-value="false"/>
+          <boolean_variable name="msg_9_23" initial-value="false"/>
           <boolean_variable name="msg_10_0" initial-value="false"/>
           <boolean_variable name="msg_10_1" initial-value="false"/>
           <boolean_variable name="msg_10_2" initial-value="false"/>
@@ -221,6 +261,10 @@
           <boolean_variable name="msg_10_17" initial-value="false"/>
           <boolean_variable name="msg_10_18" initial-value="false"/>
           <boolean_variable name="msg_10_19" initial-value="false"/>
+          <boolean_variable name="msg_10_20" initial-value="false"/>
+          <boolean_variable name="msg_10_21" initial-value="false"/>
+          <boolean_variable name="msg_10_22" initial-value="false"/>
+          <boolean_variable name="msg_10_23" initial-value="false"/>
           <boolean_variable name="msg_11_0" initial-value="false"/>
           <boolean_variable name="msg_11_1" initial-value="false"/>
           <boolean_variable name="msg_11_2" initial-value="false"/>
@@ -241,6 +285,10 @@
           <boolean_variable name="msg_11_17" initial-value="false"/>
           <boolean_variable name="msg_11_18" initial-value="false"/>
           <boolean_variable name="msg_11_19" initial-value="false"/>
+          <boolean_variable name="msg_11_20" initial-value="false"/>
+          <boolean_variable name="msg_11_21" initial-value="false"/>
+          <boolean_variable name="msg_11_22" initial-value="false"/>
+          <boolean_variable name="msg_11_23" initial-value="false"/>
           <boolean_variable name="msg_12_0" initial-value="false"/>
           <boolean_variable name="msg_12_1" initial-value="false"/>
           <boolean_variable name="msg_12_2" initial-value="false"/>
@@ -261,6 +309,10 @@
           <boolean_variable name="msg_12_17" initial-value="false"/>
           <boolean_variable name="msg_12_18" initial-value="false"/>
           <boolean_variable name="msg_12_19" initial-value="false"/>
+          <boolean_variable name="msg_12_20" initial-value="false"/>
+          <boolean_variable name="msg_12_21" initial-value="false"/>
+          <boolean_variable name="msg_12_22" initial-value="false"/>
+          <boolean_variable name="msg_12_23" initial-value="false"/>
           <boolean_variable name="msg_13_0" initial-value="false"/>
           <boolean_variable name="msg_13_1" initial-value="false"/>
           <boolean_variable name="msg_13_2" initial-value="false"/>
@@ -281,6 +333,10 @@
           <boolean_variable name="msg_13_17" initial-value="false"/>
           <boolean_variable name="msg_13_18" initial-value="false"/>
           <boolean_variable name="msg_13_19" initial-value="false"/>
+          <boolean_variable name="msg_13_20" initial-value="false"/>
+          <boolean_variable name="msg_13_21" initial-value="false"/>
+          <boolean_variable name="msg_13_22" initial-value="false"/>
+          <boolean_variable name="msg_13_23" initial-value="false"/>
           <boolean_variable name="msg_14_0" initial-value="false"/>
           <boolean_variable name="msg_14_1" initial-value="false"/>
           <boolean_variable name="msg_14_2" initial-value="false"/>
@@ -301,6 +357,10 @@
           <boolean_variable name="msg_14_17" initial-value="false"/>
           <boolean_variable name="msg_14_18" initial-value="false"/>
           <boolean_variable name="msg_14_19" initial-value="false"/>
+          <boolean_variable name="msg_14_20" initial-value="false"/>
+          <boolean_variable name="msg_14_21" initial-value="false"/>
+          <boolean_variable name="msg_14_22" initial-value="false"/>
+          <boolean_variable name="msg_14_23" initial-value="false"/>
           <boolean_variable name="msg_15_0" initial-value="false"/>
           <boolean_variable name="msg_15_1" initial-value="false"/>
           <boolean_variable name="msg_15_2" initial-value="false"/>
@@ -321,6 +381,10 @@
           <boolean_variable name="msg_15_17" initial-value="false"/>
           <boolean_variable name="msg_15_18" initial-value="false"/>
           <boolean_variable name="msg_15_19" initial-value="false"/>
+          <boolean_variable name="msg_15_20" initial-value="false"/>
+          <boolean_variable name="msg_15_21" initial-value="false"/>
+          <boolean_variable name="msg_15_22" initial-value="false"/>
+          <boolean_variable name="msg_15_23" initial-value="false"/>
           <boolean_variable name="msg_16_0" initial-value="false"/>
           <boolean_variable name="msg_16_1" initial-value="false"/>
           <boolean_variable name="msg_16_2" initial-value="false"/>
@@ -341,6 +405,10 @@
           <boolean_variable name="msg_16_17" initial-value="false"/>
           <boolean_variable name="msg_16_18" initial-value="false"/>
           <boolean_variable name="msg_16_19" initial-value="false"/>
+          <boolean_variable name="msg_16_20" initial-value="false"/>
+          <boolean_variable name="msg_16_21" initial-value="false"/>
+          <boolean_variable name="msg_16_22" initial-value="false"/>
+          <boolean_variable name="msg_16_23" initial-value="false"/>
           <boolean_variable name="msg_17_0" initial-value="false"/>
           <boolean_variable name="msg_17_1" initial-value="false"/>
           <boolean_variable name="msg_17_2" initial-value="false"/>
@@ -361,6 +429,10 @@
           <boolean_variable name="msg_17_17" initial-value="false"/>
           <boolean_variable name="msg_17_18" initial-value="false"/>
           <boolean_variable name="msg_17_19" initial-value="false"/>
+          <boolean_variable name="msg_17_20" initial-value="false"/>
+          <boolean_variable name="msg_17_21" initial-value="false"/>
+          <boolean_variable name="msg_17_22" initial-value="false"/>
+          <boolean_variable name="msg_17_23" initial-value="false"/>
           <boolean_variable name="msg_18_0" initial-value="false"/>
           <boolean_variable name="msg_18_1" initial-value="false"/>
           <boolean_variable name="msg_18_2" initial-value="false"/>
@@ -381,6 +453,10 @@
           <boolean_variable name="msg_18_17" initial-value="false"/>
           <boolean_variable name="msg_18_18" initial-value="false"/>
           <boolean_variable name="msg_18_19" initial-value="false"/>
+          <boolean_variable name="msg_18_20" initial-value="false"/>
+          <boolean_variable name="msg_18_21" initial-value="false"/>
+          <boolean_variable name="msg_18_22" initial-value="false"/>
+          <boolean_variable name="msg_18_23" initial-value="false"/>
           <boolean_variable name="msg_19_0" initial-value="false"/>
           <boolean_variable name="msg_19_1" initial-value="false"/>
           <boolean_variable name="msg_19_2" initial-value="false"/>
@@ -401,6 +477,1146 @@
           <boolean_variable name="msg_19_17" initial-value="false"/>
           <boolean_variable name="msg_19_18" initial-value="false"/>
           <boolean_variable name="msg_19_19" initial-value="false"/>
+          <boolean_variable name="msg_19_20" initial-value="false"/>
+          <boolean_variable name="msg_19_21" initial-value="false"/>
+          <boolean_variable name="msg_19_22" initial-value="false"/>
+          <boolean_variable name="msg_19_23" initial-value="false"/>
+          <boolean_variable name="msg_20_0" initial-value="false"/>
+          <boolean_variable name="msg_20_1" initial-value="false"/>
+          <boolean_variable name="msg_20_2" initial-value="false"/>
+          <boolean_variable name="msg_20_3" initial-value="false"/>
+          <boolean_variable name="msg_20_4" initial-value="false"/>
+          <boolean_variable name="msg_20_5" initial-value="false"/>
+          <boolean_variable name="msg_20_6" initial-value="false"/>
+          <boolean_variable name="msg_20_7" initial-value="false"/>
+          <boolean_variable name="msg_20_8" initial-value="false"/>
+          <boolean_variable name="msg_20_9" initial-value="false"/>
+          <boolean_variable name="msg_20_10" initial-value="false"/>
+          <boolean_variable name="msg_20_11" initial-value="false"/>
+          <boolean_variable name="msg_20_12" initial-value="false"/>
+          <boolean_variable name="msg_20_13" initial-value="false"/>
+          <boolean_variable name="msg_20_14" initial-value="false"/>
+          <boolean_variable name="msg_20_15" initial-value="false"/>
+          <boolean_variable name="msg_20_16" initial-value="false"/>
+          <boolean_variable name="msg_20_17" initial-value="false"/>
+          <boolean_variable name="msg_20_18" initial-value="false"/>
+          <boolean_variable name="msg_20_19" initial-value="false"/>
+          <boolean_variable name="msg_20_20" initial-value="false"/>
+          <boolean_variable name="msg_20_21" initial-value="false"/>
+          <boolean_variable name="msg_20_22" initial-value="false"/>
+          <boolean_variable name="msg_20_23" initial-value="false"/>
+          <boolean_variable name="msg_21_0" initial-value="false"/>
+          <boolean_variable name="msg_21_1" initial-value="false"/>
+          <boolean_variable name="msg_21_2" initial-value="false"/>
+          <boolean_variable name="msg_21_3" initial-value="false"/>
+          <boolean_variable name="msg_21_4" initial-value="false"/>
+          <boolean_variable name="msg_21_5" initial-value="false"/>
+          <boolean_variable name="msg_21_6" initial-value="false"/>
+          <boolean_variable name="msg_21_7" initial-value="false"/>
+          <boolean_variable name="msg_21_8" initial-value="false"/>
+          <boolean_variable name="msg_21_9" initial-value="false"/>
+          <boolean_variable name="msg_21_10" initial-value="false"/>
+          <boolean_variable name="msg_21_11" initial-value="false"/>
+          <boolean_variable name="msg_21_12" initial-value="false"/>
+          <boolean_variable name="msg_21_13" initial-value="false"/>
+          <boolean_variable name="msg_21_14" initial-value="false"/>
+          <boolean_variable name="msg_21_15" initial-value="false"/>
+          <boolean_variable name="msg_21_16" initial-value="false"/>
+          <boolean_variable name="msg_21_17" initial-value="false"/>
+          <boolean_variable name="msg_21_18" initial-value="false"/>
+          <boolean_variable name="msg_21_19" initial-value="false"/>
+          <boolean_variable name="msg_21_20" initial-value="false"/>
+          <boolean_variable name="msg_21_21" initial-value="false"/>
+          <boolean_variable name="msg_21_22" initial-value="false"/>
+          <boolean_variable name="msg_21_23" initial-value="false"/>
+          <boolean_variable name="msg_22_0" initial-value="false"/>
+          <boolean_variable name="msg_22_1" initial-value="false"/>
+          <boolean_variable name="msg_22_2" initial-value="false"/>
+          <boolean_variable name="msg_22_3" initial-value="false"/>
+          <boolean_variable name="msg_22_4" initial-value="false"/>
+          <boolean_variable name="msg_22_5" initial-value="false"/>
+          <boolean_variable name="msg_22_6" initial-value="false"/>
+          <boolean_variable name="msg_22_7" initial-value="false"/>
+          <boolean_variable name="msg_22_8" initial-value="false"/>
+          <boolean_variable name="msg_22_9" initial-value="false"/>
+          <boolean_variable name="msg_22_10" initial-value="false"/>
+          <boolean_variable name="msg_22_11" initial-value="false"/>
+          <boolean_variable name="msg_22_12" initial-value="false"/>
+          <boolean_variable name="msg_22_13" initial-value="false"/>
+          <boolean_variable name="msg_22_14" initial-value="false"/>
+          <boolean_variable name="msg_22_15" initial-value="false"/>
+          <boolean_variable name="msg_22_16" initial-value="false"/>
+          <boolean_variable name="msg_22_17" initial-value="false"/>
+          <boolean_variable name="msg_22_18" initial-value="false"/>
+          <boolean_variable name="msg_22_19" initial-value="false"/>
+          <boolean_variable name="msg_22_20" initial-value="false"/>
+          <boolean_variable name="msg_22_21" initial-value="false"/>
+          <boolean_variable name="msg_22_22" initial-value="false"/>
+          <boolean_variable name="msg_22_23" initial-value="false"/>
+          <boolean_variable name="msg_23_0" initial-value="false"/>
+          <boolean_variable name="msg_23_1" initial-value="false"/>
+          <boolean_variable name="msg_23_2" initial-value="false"/>
+          <boolean_variable name="msg_23_3" initial-value="false"/>
+          <boolean_variable name="msg_23_4" initial-value="false"/>
+          <boolean_variable name="msg_23_5" initial-value="false"/>
+          <boolean_variable name="msg_23_6" initial-value="false"/>
+          <boolean_variable name="msg_23_7" initial-value="false"/>
+          <boolean_variable name="msg_23_8" initial-value="false"/>
+          <boolean_variable name="msg_23_9" initial-value="false"/>
+          <boolean_variable name="msg_23_10" initial-value="false"/>
+          <boolean_variable name="msg_23_11" initial-value="false"/>
+          <boolean_variable name="msg_23_12" initial-value="false"/>
+          <boolean_variable name="msg_23_13" initial-value="false"/>
+          <boolean_variable name="msg_23_14" initial-value="false"/>
+          <boolean_variable name="msg_23_15" initial-value="false"/>
+          <boolean_variable name="msg_23_16" initial-value="false"/>
+          <boolean_variable name="msg_23_17" initial-value="false"/>
+          <boolean_variable name="msg_23_18" initial-value="false"/>
+          <boolean_variable name="msg_23_19" initial-value="false"/>
+          <boolean_variable name="msg_23_20" initial-value="false"/>
+          <boolean_variable name="msg_23_21" initial-value="false"/>
+          <boolean_variable name="msg_23_22" initial-value="false"/>
+          <boolean_variable name="msg_23_23" initial-value="false"/>
+          <transition id="El_receive_smaller_p23_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_22</value>
+               </name>
+               <conditions>msg_22_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_21</value>
+               </name>
+               <conditions>msg_21_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_20</value>
+               </name>
+               <conditions>msg_20_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_19">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_19</value>
+               </name>
+               <conditions>msg_19_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_18">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_18</value>
+               </name>
+               <conditions>msg_18_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_17">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_17</value>
+               </name>
+               <conditions>msg_17_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_16">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_16</value>
+               </name>
+               <conditions>msg_16_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_15">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_15</value>
+               </name>
+               <conditions>msg_15_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_14">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_14</value>
+               </name>
+               <conditions>msg_14_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_13">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_13</value>
+               </name>
+               <conditions>msg_13_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_12">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_12</value>
+               </name>
+               <conditions>msg_12_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_11">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_11</value>
+               </name>
+               <conditions>msg_11_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_10">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_10</value>
+               </name>
+               <conditions>msg_10_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_9">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_9</value>
+               </name>
+               <conditions>msg_9_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_8">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_8</value>
+               </name>
+               <conditions>msg_8_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_7">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_7</value>
+               </name>
+               <conditions>msg_7_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_6">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_6</value>
+               </name>
+               <conditions>msg_6_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_5">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_5</value>
+               </name>
+               <conditions>msg_5_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_4">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_4</value>
+               </name>
+               <conditions>msg_4_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_3">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_3</value>
+               </name>
+               <conditions>msg_3_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_2">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_2</value>
+               </name>
+               <conditions>msg_2_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_1">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_1</value>
+               </name>
+               <conditions>msg_1_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p23_0">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p23_0</value>
+               </name>
+               <conditions>msg_0_23</conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_elect_p23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_elect_p23</value>
+               </name>
+               <conditions>msg_23_23</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="El_p23_start">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_p23_start</value>
+               </name>
+               <conditions></conditions>
+               <assignments>msg_23_0:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p22_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p22_23</value>
+               </name>
+               <conditions>msg_23_22</conditions>
+               <assignments>msg_23_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_21</value>
+               </name>
+               <conditions>msg_21_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_20</value>
+               </name>
+               <conditions>msg_20_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_19">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_19</value>
+               </name>
+               <conditions>msg_19_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_18">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_18</value>
+               </name>
+               <conditions>msg_18_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_17">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_17</value>
+               </name>
+               <conditions>msg_17_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_16">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_16</value>
+               </name>
+               <conditions>msg_16_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_15">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_15</value>
+               </name>
+               <conditions>msg_15_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_14">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_14</value>
+               </name>
+               <conditions>msg_14_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_13">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_13</value>
+               </name>
+               <conditions>msg_13_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_12">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_12</value>
+               </name>
+               <conditions>msg_12_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_11">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_11</value>
+               </name>
+               <conditions>msg_11_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_10">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_10</value>
+               </name>
+               <conditions>msg_10_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_9">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_9</value>
+               </name>
+               <conditions>msg_9_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_8">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_8</value>
+               </name>
+               <conditions>msg_8_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_7">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_7</value>
+               </name>
+               <conditions>msg_7_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_6">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_6</value>
+               </name>
+               <conditions>msg_6_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_5">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_5</value>
+               </name>
+               <conditions>msg_5_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_4">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_4</value>
+               </name>
+               <conditions>msg_4_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_3">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_3</value>
+               </name>
+               <conditions>msg_3_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_2">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_2</value>
+               </name>
+               <conditions>msg_2_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_1">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_1</value>
+               </name>
+               <conditions>msg_1_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p22_0">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p22_0</value>
+               </name>
+               <conditions>msg_0_22</conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_elect_p22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_elect_p22</value>
+               </name>
+               <conditions>msg_22_22</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="El_p22_start">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_p22_start</value>
+               </name>
+               <conditions></conditions>
+               <assignments>msg_22_23:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p21_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p21_23</value>
+               </name>
+               <conditions>msg_23_21</conditions>
+               <assignments>msg_23_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p21_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p21_22</value>
+               </name>
+               <conditions>msg_22_21</conditions>
+               <assignments>msg_22_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_20</value>
+               </name>
+               <conditions>msg_20_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_19">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_19</value>
+               </name>
+               <conditions>msg_19_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_18">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_18</value>
+               </name>
+               <conditions>msg_18_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_17">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_17</value>
+               </name>
+               <conditions>msg_17_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_16">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_16</value>
+               </name>
+               <conditions>msg_16_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_15">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_15</value>
+               </name>
+               <conditions>msg_15_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_14">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_14</value>
+               </name>
+               <conditions>msg_14_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_13">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_13</value>
+               </name>
+               <conditions>msg_13_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_12">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_12</value>
+               </name>
+               <conditions>msg_12_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_11">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_11</value>
+               </name>
+               <conditions>msg_11_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_10">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_10</value>
+               </name>
+               <conditions>msg_10_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_9">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_9</value>
+               </name>
+               <conditions>msg_9_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_8">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_8</value>
+               </name>
+               <conditions>msg_8_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_7">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_7</value>
+               </name>
+               <conditions>msg_7_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_6">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_6</value>
+               </name>
+               <conditions>msg_6_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_5">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_5</value>
+               </name>
+               <conditions>msg_5_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_4">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_4</value>
+               </name>
+               <conditions>msg_4_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_3">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_3</value>
+               </name>
+               <conditions>msg_3_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_2">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_2</value>
+               </name>
+               <conditions>msg_2_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_1">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_1</value>
+               </name>
+               <conditions>msg_1_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p21_0">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p21_0</value>
+               </name>
+               <conditions>msg_0_21</conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_elect_p21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_elect_p21</value>
+               </name>
+               <conditions>msg_21_21</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="El_p21_start">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_p21_start</value>
+               </name>
+               <conditions></conditions>
+               <assignments>msg_21_22:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p20_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p20_23</value>
+               </name>
+               <conditions>msg_23_20</conditions>
+               <assignments>msg_23_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p20_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p20_22</value>
+               </name>
+               <conditions>msg_22_20</conditions>
+               <assignments>msg_22_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p20_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p20_21</value>
+               </name>
+               <conditions>msg_21_20</conditions>
+               <assignments>msg_21_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_19">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_19</value>
+               </name>
+               <conditions>msg_19_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_18">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_18</value>
+               </name>
+               <conditions>msg_18_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_17">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_17</value>
+               </name>
+               <conditions>msg_17_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_16">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_16</value>
+               </name>
+               <conditions>msg_16_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_15">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_15</value>
+               </name>
+               <conditions>msg_15_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_14">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_14</value>
+               </name>
+               <conditions>msg_14_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_13">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_13</value>
+               </name>
+               <conditions>msg_13_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_12">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_12</value>
+               </name>
+               <conditions>msg_12_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_11">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_11</value>
+               </name>
+               <conditions>msg_11_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_10">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_10</value>
+               </name>
+               <conditions>msg_10_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_9">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_9</value>
+               </name>
+               <conditions>msg_9_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_8">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_8</value>
+               </name>
+               <conditions>msg_8_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_7">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_7</value>
+               </name>
+               <conditions>msg_7_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_6">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_6</value>
+               </name>
+               <conditions>msg_6_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_5">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_5</value>
+               </name>
+               <conditions>msg_5_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_4">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_4</value>
+               </name>
+               <conditions>msg_4_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_3">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_3</value>
+               </name>
+               <conditions>msg_3_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_2">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_2</value>
+               </name>
+               <conditions>msg_2_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_1">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_1</value>
+               </name>
+               <conditions>msg_1_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_smaller_p20_0">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_smaller_p20_0</value>
+               </name>
+               <conditions>msg_0_20</conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_elect_p20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_elect_p20</value>
+               </name>
+               <conditions>msg_20_20</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="El_p20_start">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_p20_start</value>
+               </name>
+               <conditions></conditions>
+               <assignments>msg_20_21:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p19_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p19_23</value>
+               </name>
+               <conditions>msg_23_19</conditions>
+               <assignments>msg_23_20:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p19_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p19_22</value>
+               </name>
+               <conditions>msg_22_19</conditions>
+               <assignments>msg_22_20:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p19_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p19_21</value>
+               </name>
+               <conditions>msg_21_19</conditions>
+               <assignments>msg_21_20:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p19_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p19_20</value>
+               </name>
+               <conditions>msg_20_19</conditions>
+               <assignments>msg_20_20:= true; </assignments>
+          </transition>
           <transition id="El_receive_smaller_p19_18">
                <graphics>
                     <position x="0" y="0"/>
@@ -409,7 +1625,7 @@
                     <value>El_receive_smaller_p19_18</value>
                </name>
                <conditions>msg_18_19</conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
           </transition>
           <transition id="El_receive_smaller_p19_17">
                <graphics>
@@ -419,7 +1635,7 @@
                     <value>El_receive_smaller_p19_17</value>
                </name>
                <conditions>msg_17_19</conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
           </transition>
           <transition id="El_receive_smaller_p19_16">
                <graphics>
@@ -429,7 +1645,7 @@
                     <value>El_receive_smaller_p19_16</value>
                </name>
                <conditions>msg_16_19</conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
           </transition>
           <transition id="El_receive_smaller_p19_15">
                <graphics>
@@ -439,7 +1655,7 @@
                     <value>El_receive_smaller_p19_15</value>
                </name>
                <conditions>msg_15_19</conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
           </transition>
           <transition id="El_receive_smaller_p19_14">
                <graphics>
@@ -449,7 +1665,7 @@
                     <value>El_receive_smaller_p19_14</value>
                </name>
                <conditions>msg_14_19</conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
           </transition>
           <transition id="El_receive_smaller_p19_13">
                <graphics>
@@ -459,7 +1675,7 @@
                     <value>El_receive_smaller_p19_13</value>
                </name>
                <conditions>msg_13_19</conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
           </transition>
           <transition id="El_receive_smaller_p19_12">
                <graphics>
@@ -469,7 +1685,7 @@
                     <value>El_receive_smaller_p19_12</value>
                </name>
                <conditions>msg_12_19</conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
           </transition>
           <transition id="El_receive_smaller_p19_11">
                <graphics>
@@ -479,7 +1695,7 @@
                     <value>El_receive_smaller_p19_11</value>
                </name>
                <conditions>msg_11_19</conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
           </transition>
           <transition id="El_receive_smaller_p19_10">
                <graphics>
@@ -489,7 +1705,7 @@
                     <value>El_receive_smaller_p19_10</value>
                </name>
                <conditions>msg_10_19</conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
           </transition>
           <transition id="El_receive_smaller_p19_9">
                <graphics>
@@ -499,7 +1715,7 @@
                     <value>El_receive_smaller_p19_9</value>
                </name>
                <conditions>msg_9_19</conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
           </transition>
           <transition id="El_receive_smaller_p19_8">
                <graphics>
@@ -509,7 +1725,7 @@
                     <value>El_receive_smaller_p19_8</value>
                </name>
                <conditions>msg_8_19</conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
           </transition>
           <transition id="El_receive_smaller_p19_7">
                <graphics>
@@ -519,7 +1735,7 @@
                     <value>El_receive_smaller_p19_7</value>
                </name>
                <conditions>msg_7_19</conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
           </transition>
           <transition id="El_receive_smaller_p19_6">
                <graphics>
@@ -529,7 +1745,7 @@
                     <value>El_receive_smaller_p19_6</value>
                </name>
                <conditions>msg_6_19</conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
           </transition>
           <transition id="El_receive_smaller_p19_5">
                <graphics>
@@ -539,7 +1755,7 @@
                     <value>El_receive_smaller_p19_5</value>
                </name>
                <conditions>msg_5_19</conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
           </transition>
           <transition id="El_receive_smaller_p19_4">
                <graphics>
@@ -549,7 +1765,7 @@
                     <value>El_receive_smaller_p19_4</value>
                </name>
                <conditions>msg_4_19</conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
           </transition>
           <transition id="El_receive_smaller_p19_3">
                <graphics>
@@ -559,7 +1775,7 @@
                     <value>El_receive_smaller_p19_3</value>
                </name>
                <conditions>msg_3_19</conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
           </transition>
           <transition id="El_receive_smaller_p19_2">
                <graphics>
@@ -569,7 +1785,7 @@
                     <value>El_receive_smaller_p19_2</value>
                </name>
                <conditions>msg_2_19</conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
           </transition>
           <transition id="El_receive_smaller_p19_1">
                <graphics>
@@ -579,7 +1795,7 @@
                     <value>El_receive_smaller_p19_1</value>
                </name>
                <conditions>msg_1_19</conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
           </transition>
           <transition id="El_receive_smaller_p19_0">
                <graphics>
@@ -589,7 +1805,7 @@
                     <value>El_receive_smaller_p19_0</value>
                </name>
                <conditions>msg_0_19</conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
           </transition>
           <transition id="El_elect_p19">
                <graphics>
@@ -609,7 +1825,47 @@
                     <value>El_p19_start</value>
                </name>
                <conditions></conditions>
-               <assignments>msg_19_0:= true; </assignments>
+               <assignments>msg_19_20:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p18_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p18_23</value>
+               </name>
+               <conditions>msg_23_18</conditions>
+               <assignments>msg_23_19:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p18_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p18_22</value>
+               </name>
+               <conditions>msg_22_18</conditions>
+               <assignments>msg_22_19:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p18_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p18_21</value>
+               </name>
+               <conditions>msg_21_18</conditions>
+               <assignments>msg_21_19:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p18_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p18_20</value>
+               </name>
+               <conditions>msg_20_18</conditions>
+               <assignments>msg_20_19:= true; </assignments>
           </transition>
           <transition id="El_receive_larger_p18_19">
                <graphics>
@@ -821,6 +2077,46 @@
                <conditions></conditions>
                <assignments>msg_18_19:= true; </assignments>
           </transition>
+          <transition id="El_receive_larger_p17_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p17_23</value>
+               </name>
+               <conditions>msg_23_17</conditions>
+               <assignments>msg_23_18:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p17_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p17_22</value>
+               </name>
+               <conditions>msg_22_17</conditions>
+               <assignments>msg_22_18:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p17_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p17_21</value>
+               </name>
+               <conditions>msg_21_17</conditions>
+               <assignments>msg_21_18:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p17_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p17_20</value>
+               </name>
+               <conditions>msg_20_17</conditions>
+               <assignments>msg_20_18:= true; </assignments>
+          </transition>
           <transition id="El_receive_larger_p17_19">
                <graphics>
                     <position x="0" y="0"/>
@@ -1030,6 +2326,46 @@
                </name>
                <conditions></conditions>
                <assignments>msg_17_18:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p16_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p16_23</value>
+               </name>
+               <conditions>msg_23_16</conditions>
+               <assignments>msg_23_17:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p16_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p16_22</value>
+               </name>
+               <conditions>msg_22_16</conditions>
+               <assignments>msg_22_17:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p16_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p16_21</value>
+               </name>
+               <conditions>msg_21_16</conditions>
+               <assignments>msg_21_17:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p16_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p16_20</value>
+               </name>
+               <conditions>msg_20_16</conditions>
+               <assignments>msg_20_17:= true; </assignments>
           </transition>
           <transition id="El_receive_larger_p16_19">
                <graphics>
@@ -1241,6 +2577,46 @@
                <conditions></conditions>
                <assignments>msg_16_17:= true; </assignments>
           </transition>
+          <transition id="El_receive_larger_p15_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p15_23</value>
+               </name>
+               <conditions>msg_23_15</conditions>
+               <assignments>msg_23_16:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p15_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p15_22</value>
+               </name>
+               <conditions>msg_22_15</conditions>
+               <assignments>msg_22_16:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p15_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p15_21</value>
+               </name>
+               <conditions>msg_21_15</conditions>
+               <assignments>msg_21_16:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p15_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p15_20</value>
+               </name>
+               <conditions>msg_20_15</conditions>
+               <assignments>msg_20_16:= true; </assignments>
+          </transition>
           <transition id="El_receive_larger_p15_19">
                <graphics>
                     <position x="0" y="0"/>
@@ -1450,6 +2826,46 @@
                </name>
                <conditions></conditions>
                <assignments>msg_15_16:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p14_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p14_23</value>
+               </name>
+               <conditions>msg_23_14</conditions>
+               <assignments>msg_23_15:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p14_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p14_22</value>
+               </name>
+               <conditions>msg_22_14</conditions>
+               <assignments>msg_22_15:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p14_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p14_21</value>
+               </name>
+               <conditions>msg_21_14</conditions>
+               <assignments>msg_21_15:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p14_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p14_20</value>
+               </name>
+               <conditions>msg_20_14</conditions>
+               <assignments>msg_20_15:= true; </assignments>
           </transition>
           <transition id="El_receive_larger_p14_19">
                <graphics>
@@ -1661,6 +3077,46 @@
                <conditions></conditions>
                <assignments>msg_14_15:= true; </assignments>
           </transition>
+          <transition id="El_receive_larger_p13_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p13_23</value>
+               </name>
+               <conditions>msg_23_13</conditions>
+               <assignments>msg_23_14:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p13_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p13_22</value>
+               </name>
+               <conditions>msg_22_13</conditions>
+               <assignments>msg_22_14:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p13_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p13_21</value>
+               </name>
+               <conditions>msg_21_13</conditions>
+               <assignments>msg_21_14:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p13_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p13_20</value>
+               </name>
+               <conditions>msg_20_13</conditions>
+               <assignments>msg_20_14:= true; </assignments>
+          </transition>
           <transition id="El_receive_larger_p13_19">
                <graphics>
                     <position x="0" y="0"/>
@@ -1870,6 +3326,46 @@
                </name>
                <conditions></conditions>
                <assignments>msg_13_14:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p12_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p12_23</value>
+               </name>
+               <conditions>msg_23_12</conditions>
+               <assignments>msg_23_13:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p12_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p12_22</value>
+               </name>
+               <conditions>msg_22_12</conditions>
+               <assignments>msg_22_13:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p12_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p12_21</value>
+               </name>
+               <conditions>msg_21_12</conditions>
+               <assignments>msg_21_13:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p12_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p12_20</value>
+               </name>
+               <conditions>msg_20_12</conditions>
+               <assignments>msg_20_13:= true; </assignments>
           </transition>
           <transition id="El_receive_larger_p12_19">
                <graphics>
@@ -2081,6 +3577,46 @@
                <conditions></conditions>
                <assignments>msg_12_13:= true; </assignments>
           </transition>
+          <transition id="El_receive_larger_p11_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p11_23</value>
+               </name>
+               <conditions>msg_23_11</conditions>
+               <assignments>msg_23_12:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p11_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p11_22</value>
+               </name>
+               <conditions>msg_22_11</conditions>
+               <assignments>msg_22_12:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p11_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p11_21</value>
+               </name>
+               <conditions>msg_21_11</conditions>
+               <assignments>msg_21_12:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p11_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p11_20</value>
+               </name>
+               <conditions>msg_20_11</conditions>
+               <assignments>msg_20_12:= true; </assignments>
+          </transition>
           <transition id="El_receive_larger_p11_19">
                <graphics>
                     <position x="0" y="0"/>
@@ -2290,6 +3826,46 @@
                </name>
                <conditions></conditions>
                <assignments>msg_11_12:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p10_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p10_23</value>
+               </name>
+               <conditions>msg_23_10</conditions>
+               <assignments>msg_23_11:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p10_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p10_22</value>
+               </name>
+               <conditions>msg_22_10</conditions>
+               <assignments>msg_22_11:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p10_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p10_21</value>
+               </name>
+               <conditions>msg_21_10</conditions>
+               <assignments>msg_21_11:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p10_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p10_20</value>
+               </name>
+               <conditions>msg_20_10</conditions>
+               <assignments>msg_20_11:= true; </assignments>
           </transition>
           <transition id="El_receive_larger_p10_19">
                <graphics>
@@ -2501,6 +4077,46 @@
                <conditions></conditions>
                <assignments>msg_10_11:= true; </assignments>
           </transition>
+          <transition id="El_receive_larger_p9_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p9_23</value>
+               </name>
+               <conditions>msg_23_9</conditions>
+               <assignments>msg_23_10:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p9_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p9_22</value>
+               </name>
+               <conditions>msg_22_9</conditions>
+               <assignments>msg_22_10:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p9_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p9_21</value>
+               </name>
+               <conditions>msg_21_9</conditions>
+               <assignments>msg_21_10:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p9_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p9_20</value>
+               </name>
+               <conditions>msg_20_9</conditions>
+               <assignments>msg_20_10:= true; </assignments>
+          </transition>
           <transition id="El_receive_larger_p9_19">
                <graphics>
                     <position x="0" y="0"/>
@@ -2710,6 +4326,46 @@
                </name>
                <conditions></conditions>
                <assignments>msg_9_10:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p8_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p8_23</value>
+               </name>
+               <conditions>msg_23_8</conditions>
+               <assignments>msg_23_9:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p8_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p8_22</value>
+               </name>
+               <conditions>msg_22_8</conditions>
+               <assignments>msg_22_9:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p8_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p8_21</value>
+               </name>
+               <conditions>msg_21_8</conditions>
+               <assignments>msg_21_9:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p8_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p8_20</value>
+               </name>
+               <conditions>msg_20_8</conditions>
+               <assignments>msg_20_9:= true; </assignments>
           </transition>
           <transition id="El_receive_larger_p8_19">
                <graphics>
@@ -2921,6 +4577,46 @@
                <conditions></conditions>
                <assignments>msg_8_9:= true; </assignments>
           </transition>
+          <transition id="El_receive_larger_p7_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p7_23</value>
+               </name>
+               <conditions>msg_23_7</conditions>
+               <assignments>msg_23_8:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p7_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p7_22</value>
+               </name>
+               <conditions>msg_22_7</conditions>
+               <assignments>msg_22_8:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p7_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p7_21</value>
+               </name>
+               <conditions>msg_21_7</conditions>
+               <assignments>msg_21_8:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p7_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p7_20</value>
+               </name>
+               <conditions>msg_20_7</conditions>
+               <assignments>msg_20_8:= true; </assignments>
+          </transition>
           <transition id="El_receive_larger_p7_19">
                <graphics>
                     <position x="0" y="0"/>
@@ -3130,6 +4826,46 @@
                </name>
                <conditions></conditions>
                <assignments>msg_7_8:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p6_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p6_23</value>
+               </name>
+               <conditions>msg_23_6</conditions>
+               <assignments>msg_23_7:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p6_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p6_22</value>
+               </name>
+               <conditions>msg_22_6</conditions>
+               <assignments>msg_22_7:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p6_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p6_21</value>
+               </name>
+               <conditions>msg_21_6</conditions>
+               <assignments>msg_21_7:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p6_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p6_20</value>
+               </name>
+               <conditions>msg_20_6</conditions>
+               <assignments>msg_20_7:= true; </assignments>
           </transition>
           <transition id="El_receive_larger_p6_19">
                <graphics>
@@ -3341,6 +5077,46 @@
                <conditions></conditions>
                <assignments>msg_6_7:= true; </assignments>
           </transition>
+          <transition id="El_receive_larger_p5_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p5_23</value>
+               </name>
+               <conditions>msg_23_5</conditions>
+               <assignments>msg_23_6:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p5_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p5_22</value>
+               </name>
+               <conditions>msg_22_5</conditions>
+               <assignments>msg_22_6:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p5_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p5_21</value>
+               </name>
+               <conditions>msg_21_5</conditions>
+               <assignments>msg_21_6:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p5_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p5_20</value>
+               </name>
+               <conditions>msg_20_5</conditions>
+               <assignments>msg_20_6:= true; </assignments>
+          </transition>
           <transition id="El_receive_larger_p5_19">
                <graphics>
                     <position x="0" y="0"/>
@@ -3550,6 +5326,46 @@
                </name>
                <conditions></conditions>
                <assignments>msg_5_6:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p4_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p4_23</value>
+               </name>
+               <conditions>msg_23_4</conditions>
+               <assignments>msg_23_5:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p4_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p4_22</value>
+               </name>
+               <conditions>msg_22_4</conditions>
+               <assignments>msg_22_5:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p4_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p4_21</value>
+               </name>
+               <conditions>msg_21_4</conditions>
+               <assignments>msg_21_5:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p4_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p4_20</value>
+               </name>
+               <conditions>msg_20_4</conditions>
+               <assignments>msg_20_5:= true; </assignments>
           </transition>
           <transition id="El_receive_larger_p4_19">
                <graphics>
@@ -3761,6 +5577,46 @@
                <conditions></conditions>
                <assignments>msg_4_5:= true; </assignments>
           </transition>
+          <transition id="El_receive_larger_p3_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p3_23</value>
+               </name>
+               <conditions>msg_23_3</conditions>
+               <assignments>msg_23_4:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p3_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p3_22</value>
+               </name>
+               <conditions>msg_22_3</conditions>
+               <assignments>msg_22_4:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p3_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p3_21</value>
+               </name>
+               <conditions>msg_21_3</conditions>
+               <assignments>msg_21_4:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p3_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p3_20</value>
+               </name>
+               <conditions>msg_20_3</conditions>
+               <assignments>msg_20_4:= true; </assignments>
+          </transition>
           <transition id="El_receive_larger_p3_19">
                <graphics>
                     <position x="0" y="0"/>
@@ -3970,6 +5826,46 @@
                </name>
                <conditions></conditions>
                <assignments>msg_3_4:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p2_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p2_23</value>
+               </name>
+               <conditions>msg_23_2</conditions>
+               <assignments>msg_23_3:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p2_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p2_22</value>
+               </name>
+               <conditions>msg_22_2</conditions>
+               <assignments>msg_22_3:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p2_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p2_21</value>
+               </name>
+               <conditions>msg_21_2</conditions>
+               <assignments>msg_21_3:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p2_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p2_20</value>
+               </name>
+               <conditions>msg_20_2</conditions>
+               <assignments>msg_20_3:= true; </assignments>
           </transition>
           <transition id="El_receive_larger_p2_19">
                <graphics>
@@ -4181,6 +6077,46 @@
                <conditions></conditions>
                <assignments>msg_2_3:= true; </assignments>
           </transition>
+          <transition id="El_receive_larger_p1_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p1_23</value>
+               </name>
+               <conditions>msg_23_1</conditions>
+               <assignments>msg_23_2:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p1_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p1_22</value>
+               </name>
+               <conditions>msg_22_1</conditions>
+               <assignments>msg_22_2:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p1_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p1_21</value>
+               </name>
+               <conditions>msg_21_1</conditions>
+               <assignments>msg_21_2:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p1_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p1_20</value>
+               </name>
+               <conditions>msg_20_1</conditions>
+               <assignments>msg_20_2:= true; </assignments>
+          </transition>
           <transition id="El_receive_larger_p1_19">
                <graphics>
                     <position x="0" y="0"/>
@@ -4390,6 +6326,46 @@
                </name>
                <conditions></conditions>
                <assignments>msg_1_2:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p0_23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p0_23</value>
+               </name>
+               <conditions>msg_23_0</conditions>
+               <assignments>msg_23_1:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p0_22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p0_22</value>
+               </name>
+               <conditions>msg_22_0</conditions>
+               <assignments>msg_22_1:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p0_21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p0_21</value>
+               </name>
+               <conditions>msg_21_0</conditions>
+               <assignments>msg_21_1:= true; </assignments>
+          </transition>
+          <transition id="El_receive_larger_p0_20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_receive_larger_p0_20</value>
+               </name>
+               <conditions>msg_20_0</conditions>
+               <assignments>msg_20_1:= true; </assignments>
           </transition>
           <transition id="El_receive_larger_p0_19">
                <graphics>
@@ -4612,6 +6588,50 @@
                     <value>0</value>
                </initialMarking>
           </place>
+          <place id="El_p23">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_p23</value>
+               </name>
+               <initialMarking>
+                    <value>1</value>
+               </initialMarking>
+          </place>
+          <place id="El_p22">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_p22</value>
+               </name>
+               <initialMarking>
+                    <value>1</value>
+               </initialMarking>
+          </place>
+          <place id="El_p21">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_p21</value>
+               </name>
+               <initialMarking>
+                    <value>1</value>
+               </initialMarking>
+          </place>
+          <place id="El_p20">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_p20</value>
+               </name>
+               <initialMarking>
+                    <value>1</value>
+               </initialMarking>
+          </place>
           <place id="El_p19">
                <graphics>
                     <position x="0" y="0"/>
@@ -4832,6 +6852,1046 @@
                     <value>1</value>
                </initialMarking>
           </place>
+          <arc source="El_receive_smaller_p23_22" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_21" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_20" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_19" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_19">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_18" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_18">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_17" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_17">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_16" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_16">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_15" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_15">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_14" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_14">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_13" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_13">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_12" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_12">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_11" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_11">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_10" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_10">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_9" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_9">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_8" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_8">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_7" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_7">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_6" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_6">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_5" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_5">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_4" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_4">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_3" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_3">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_2" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_2">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_1" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_1">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p23_0" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_receive_smaller_p23_0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_elect_p23" target="El_Leader">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_elect_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23_start" target="El_p23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p23" target="El_p23_start">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p22_23" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_larger_p22_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_21" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_20" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_19" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_19">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_18" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_18">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_17" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_17">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_16" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_16">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_15" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_15">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_14" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_14">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_13" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_13">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_12" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_12">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_11" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_11">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_10" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_10">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_9" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_9">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_8" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_8">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_7" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_7">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_6" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_6">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_5" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_5">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_4" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_4">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_3" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_3">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_2" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_2">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_1" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_1">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p22_0" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_receive_smaller_p22_0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_elect_p22" target="El_Leader">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_elect_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22_start" target="El_p22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p22" target="El_p22_start">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p21_23" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_larger_p21_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p21_22" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_larger_p21_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_20" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_19" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_19">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_18" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_18">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_17" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_17">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_16" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_16">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_15" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_15">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_14" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_14">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_13" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_13">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_12" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_12">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_11" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_11">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_10" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_10">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_9" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_9">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_8" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_8">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_7" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_7">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_6" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_6">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_5" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_5">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_4" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_4">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_3" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_3">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_2" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_2">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_1" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_1">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p21_0" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_receive_smaller_p21_0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_elect_p21" target="El_Leader">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_elect_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21_start" target="El_p21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p21" target="El_p21_start">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p20_23" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_larger_p20_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p20_22" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_larger_p20_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p20_21" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_larger_p20_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_19" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_19">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_18" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_18">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_17" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_17">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_16" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_16">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_15" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_15">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_14" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_14">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_13" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_13">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_12" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_12">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_11" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_11">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_10" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_10">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_9" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_9">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_8" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_8">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_7" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_7">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_6" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_6">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_5" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_5">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_4" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_4">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_3" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_3">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_2" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_2">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_1" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_1">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_smaller_p20_0" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_receive_smaller_p20_0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_elect_p20" target="El_Leader">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_elect_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20_start" target="El_p20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p20" target="El_p20_start">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p19_23" target="El_p19">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p19" target="El_receive_larger_p19_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p19_22" target="El_p19">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p19" target="El_receive_larger_p19_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p19_21" target="El_p19">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p19" target="El_receive_larger_p19_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p19_20" target="El_p19">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p19" target="El_receive_larger_p19_20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
           <arc source="El_receive_smaller_p19_18" target="El_p19">
                <inscription>
                     <value>1</value>
@@ -5038,6 +8098,46 @@
                </inscription>
           </arc>
           <arc source="El_p19" target="El_p19_start">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p18_23" target="El_p18">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p18" target="El_receive_larger_p18_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p18_22" target="El_p18">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p18" target="El_receive_larger_p18_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p18_21" target="El_p18">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p18" target="El_receive_larger_p18_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p18_20" target="El_p18">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p18" target="El_receive_larger_p18_20">
                <inscription>
                     <value>1</value>
                </inscription>
@@ -5252,6 +8352,46 @@
                     <value>1</value>
                </inscription>
           </arc>
+          <arc source="El_receive_larger_p17_23" target="El_p17">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p17" target="El_receive_larger_p17_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p17_22" target="El_p17">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p17" target="El_receive_larger_p17_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p17_21" target="El_p17">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p17" target="El_receive_larger_p17_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p17_20" target="El_p17">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p17" target="El_receive_larger_p17_20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
           <arc source="El_receive_larger_p17_19" target="El_p17">
                <inscription>
                     <value>1</value>
@@ -5458,6 +8598,46 @@
                </inscription>
           </arc>
           <arc source="El_p17" target="El_p17_start">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p16_23" target="El_p16">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p16" target="El_receive_larger_p16_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p16_22" target="El_p16">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p16" target="El_receive_larger_p16_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p16_21" target="El_p16">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p16" target="El_receive_larger_p16_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p16_20" target="El_p16">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p16" target="El_receive_larger_p16_20">
                <inscription>
                     <value>1</value>
                </inscription>
@@ -5672,6 +8852,46 @@
                     <value>1</value>
                </inscription>
           </arc>
+          <arc source="El_receive_larger_p15_23" target="El_p15">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p15" target="El_receive_larger_p15_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p15_22" target="El_p15">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p15" target="El_receive_larger_p15_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p15_21" target="El_p15">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p15" target="El_receive_larger_p15_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p15_20" target="El_p15">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p15" target="El_receive_larger_p15_20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
           <arc source="El_receive_larger_p15_19" target="El_p15">
                <inscription>
                     <value>1</value>
@@ -5878,6 +9098,46 @@
                </inscription>
           </arc>
           <arc source="El_p15" target="El_p15_start">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p14_23" target="El_p14">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p14" target="El_receive_larger_p14_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p14_22" target="El_p14">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p14" target="El_receive_larger_p14_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p14_21" target="El_p14">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p14" target="El_receive_larger_p14_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p14_20" target="El_p14">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p14" target="El_receive_larger_p14_20">
                <inscription>
                     <value>1</value>
                </inscription>
@@ -6092,6 +9352,46 @@
                     <value>1</value>
                </inscription>
           </arc>
+          <arc source="El_receive_larger_p13_23" target="El_p13">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p13" target="El_receive_larger_p13_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p13_22" target="El_p13">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p13" target="El_receive_larger_p13_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p13_21" target="El_p13">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p13" target="El_receive_larger_p13_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p13_20" target="El_p13">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p13" target="El_receive_larger_p13_20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
           <arc source="El_receive_larger_p13_19" target="El_p13">
                <inscription>
                     <value>1</value>
@@ -6298,6 +9598,46 @@
                </inscription>
           </arc>
           <arc source="El_p13" target="El_p13_start">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p12_23" target="El_p12">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p12" target="El_receive_larger_p12_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p12_22" target="El_p12">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p12" target="El_receive_larger_p12_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p12_21" target="El_p12">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p12" target="El_receive_larger_p12_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p12_20" target="El_p12">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p12" target="El_receive_larger_p12_20">
                <inscription>
                     <value>1</value>
                </inscription>
@@ -6512,6 +9852,46 @@
                     <value>1</value>
                </inscription>
           </arc>
+          <arc source="El_receive_larger_p11_23" target="El_p11">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p11" target="El_receive_larger_p11_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p11_22" target="El_p11">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p11" target="El_receive_larger_p11_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p11_21" target="El_p11">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p11" target="El_receive_larger_p11_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p11_20" target="El_p11">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p11" target="El_receive_larger_p11_20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
           <arc source="El_receive_larger_p11_19" target="El_p11">
                <inscription>
                     <value>1</value>
@@ -6718,6 +10098,46 @@
                </inscription>
           </arc>
           <arc source="El_p11" target="El_p11_start">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p10_23" target="El_p10">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p10" target="El_receive_larger_p10_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p10_22" target="El_p10">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p10" target="El_receive_larger_p10_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p10_21" target="El_p10">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p10" target="El_receive_larger_p10_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p10_20" target="El_p10">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p10" target="El_receive_larger_p10_20">
                <inscription>
                     <value>1</value>
                </inscription>
@@ -6932,6 +10352,46 @@
                     <value>1</value>
                </inscription>
           </arc>
+          <arc source="El_receive_larger_p9_23" target="El_p9">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p9" target="El_receive_larger_p9_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p9_22" target="El_p9">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p9" target="El_receive_larger_p9_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p9_21" target="El_p9">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p9" target="El_receive_larger_p9_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p9_20" target="El_p9">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p9" target="El_receive_larger_p9_20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
           <arc source="El_receive_larger_p9_19" target="El_p9">
                <inscription>
                     <value>1</value>
@@ -7138,6 +10598,46 @@
                </inscription>
           </arc>
           <arc source="El_p9" target="El_p9_start">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p8_23" target="El_p8">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p8" target="El_receive_larger_p8_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p8_22" target="El_p8">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p8" target="El_receive_larger_p8_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p8_21" target="El_p8">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p8" target="El_receive_larger_p8_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p8_20" target="El_p8">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p8" target="El_receive_larger_p8_20">
                <inscription>
                     <value>1</value>
                </inscription>
@@ -7352,6 +10852,46 @@
                     <value>1</value>
                </inscription>
           </arc>
+          <arc source="El_receive_larger_p7_23" target="El_p7">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p7" target="El_receive_larger_p7_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p7_22" target="El_p7">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p7" target="El_receive_larger_p7_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p7_21" target="El_p7">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p7" target="El_receive_larger_p7_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p7_20" target="El_p7">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p7" target="El_receive_larger_p7_20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
           <arc source="El_receive_larger_p7_19" target="El_p7">
                <inscription>
                     <value>1</value>
@@ -7558,6 +11098,46 @@
                </inscription>
           </arc>
           <arc source="El_p7" target="El_p7_start">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p6_23" target="El_p6">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p6" target="El_receive_larger_p6_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p6_22" target="El_p6">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p6" target="El_receive_larger_p6_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p6_21" target="El_p6">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p6" target="El_receive_larger_p6_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p6_20" target="El_p6">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p6" target="El_receive_larger_p6_20">
                <inscription>
                     <value>1</value>
                </inscription>
@@ -7772,6 +11352,46 @@
                     <value>1</value>
                </inscription>
           </arc>
+          <arc source="El_receive_larger_p5_23" target="El_p5">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p5" target="El_receive_larger_p5_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p5_22" target="El_p5">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p5" target="El_receive_larger_p5_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p5_21" target="El_p5">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p5" target="El_receive_larger_p5_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p5_20" target="El_p5">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p5" target="El_receive_larger_p5_20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
           <arc source="El_receive_larger_p5_19" target="El_p5">
                <inscription>
                     <value>1</value>
@@ -7978,6 +11598,46 @@
                </inscription>
           </arc>
           <arc source="El_p5" target="El_p5_start">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p4_23" target="El_p4">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p4" target="El_receive_larger_p4_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p4_22" target="El_p4">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p4" target="El_receive_larger_p4_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p4_21" target="El_p4">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p4" target="El_receive_larger_p4_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p4_20" target="El_p4">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p4" target="El_receive_larger_p4_20">
                <inscription>
                     <value>1</value>
                </inscription>
@@ -8192,6 +11852,46 @@
                     <value>1</value>
                </inscription>
           </arc>
+          <arc source="El_receive_larger_p3_23" target="El_p3">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p3" target="El_receive_larger_p3_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p3_22" target="El_p3">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p3" target="El_receive_larger_p3_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p3_21" target="El_p3">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p3" target="El_receive_larger_p3_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p3_20" target="El_p3">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p3" target="El_receive_larger_p3_20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
           <arc source="El_receive_larger_p3_19" target="El_p3">
                <inscription>
                     <value>1</value>
@@ -8398,6 +12098,46 @@
                </inscription>
           </arc>
           <arc source="El_p3" target="El_p3_start">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p2_23" target="El_p2">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p2" target="El_receive_larger_p2_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p2_22" target="El_p2">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p2" target="El_receive_larger_p2_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p2_21" target="El_p2">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p2" target="El_receive_larger_p2_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p2_20" target="El_p2">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p2" target="El_receive_larger_p2_20">
                <inscription>
                     <value>1</value>
                </inscription>
@@ -8612,6 +12352,46 @@
                     <value>1</value>
                </inscription>
           </arc>
+          <arc source="El_receive_larger_p1_23" target="El_p1">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p1" target="El_receive_larger_p1_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p1_22" target="El_p1">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p1" target="El_receive_larger_p1_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p1_21" target="El_p1">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p1" target="El_receive_larger_p1_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p1_20" target="El_p1">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p1" target="El_receive_larger_p1_20">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
           <arc source="El_receive_larger_p1_19" target="El_p1">
                <inscription>
                     <value>1</value>
@@ -8818,6 +12598,46 @@
                </inscription>
           </arc>
           <arc source="El_p1" target="El_p1_start">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p0_23" target="El_p0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p0" target="El_receive_larger_p0_23">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p0_22" target="El_p0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p0" target="El_receive_larger_p0_22">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p0_21" target="El_p0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p0" target="El_receive_larger_p0_21">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_receive_larger_p0_20" target="El_p0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p0" target="El_receive_larger_p0_20">
                <inscription>
                     <value>1</value>
                </inscription>
@@ -9036,7 +12856,7 @@
      <queries>
           <query name="Too many Leaders" strategy="Ordered DFS" jit="false">El_Leader&gt; 1</query>
           <query name="A Leader" strategy="Ordered DFS" jit="false">El_Leader == 1</query>
-          <query name="Correct Leader" strategy="Ordered DFS" jit="false">El_Leader == 1 and msg_19_19</query>
+          <query name="Correct Leader" strategy="Ordered DFS" jit="false">El_Leader == 1 and msg_23_23</query>
           <query name="Incorrect Leader" strategy="Ordered DFS" jit="false">El_Leader == 1 and msg_0_0</query>
      </queries>
 </pnml>

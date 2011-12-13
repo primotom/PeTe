@@ -1,12 +1,11 @@
 
-#include "MonoBestFirstReachabilitySearch.h"
+#include "IndexedBestFS.h"
 #include "../PQL/PQL.h"
 #include "../PQL/Contexts.h"
-#include "../Structures/BestFSOrderableStateSet.h"
+#include "../Structures/IndexedBestFSStateSet.h"
 #include "../Structures/StateAllocator.h"
 
 #include <string.h>
-#include <iostream>
 
 using namespace PetriEngine::Structures;
 using namespace PetriEngine::PQL;
@@ -14,11 +13,11 @@ using namespace PetriEngine::PQL;
 namespace PetriEngine{
 namespace Reachability{
 
-ReachabilityResult MonoBestFirstReachabilitySearch::reachable(const PetriNet &net,
-															const MarkVal *m0,
-															const VarVal *v0,
-															const BoolVal *ba,
-															PQL::Condition *query){
+ReachabilityResult IndexedBestFS::reachable(const PetriNet &net,
+											const MarkVal *m0,
+											const VarVal *v0,
+											const BoolVal *ba,
+											PQL::Condition *query){
 	StateAllocator<> allocator(net);
 
 	State* s0 = allocator.createState();
@@ -33,7 +32,8 @@ ReachabilityResult MonoBestFirstReachabilitySearch::reachable(const PetriNet &ne
 	MonotonicityContext context(&net, query);
 	context.analyze();
 
-	BestFSOrderableStateSet states(net, &context, _distanceStrategy, query);
+	//Initialise StateSet
+	IndexedBestFSStateSet states(net, &context, _distanceStrategy, query, _varianceFirst);
 	states.add(s0);
 
 	//Allocate new state
@@ -59,7 +59,7 @@ ReachabilityResult MonoBestFirstReachabilitySearch::reachable(const PetriNet &ne
 
 		// Attempt to fire each transition
 		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
-			if(net.fire(t, s->marking(), s->intValuation(), s->boolValuation(), ns->marking(), ns->intValuation(), ns->boolValuation())){
+			if(net.fire(t, s, ns)){
 				//If it's new
 				if(states.add(ns)){
 					exploredStates++;

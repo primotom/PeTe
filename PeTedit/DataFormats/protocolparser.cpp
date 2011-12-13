@@ -109,6 +109,8 @@ void ProtocolParser::parseState(QString roleName){
 	int initialMarking = 0;
 	if(xml.attributes().value("type").toString() == "initial")
 		initialMarking = 1;
+	else if(xml.attributes().value("type") == "limited")
+		initialMarking = 3;
 
 	QString name = xml.readElementText(QXmlStreamReader::SkipChildElements);
 
