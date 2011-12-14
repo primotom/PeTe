@@ -1894,10 +1894,10 @@
                </inscription>
           </arc>
      </net>
-     <queries>
-          <query name="4 done (Ordered DFS)" strategy="Ordered DFS" jit="false">PROCESS_0_done &gt; 0 and PROCESS_1_done &gt;0 and PROCESS_2_done &gt; 0 and PROCESS_3_done &gt;0</query>
-          <query name="3 done (Ordered DFS)" strategy="Ordered DFS" jit="false">PROCESS_0_done &gt; 0 and PROCESS_1_done &gt;0 and PROCESS_2_done &gt; 0</query>
-          <query name="2 critical (Ordered DFS)" strategy="Ordered DFS" jit="false">PROCESS_0_critical &gt; 0 and PROCESS_1_critical &gt;0</query>
-          <query name="1 critical (Ordered DFS)" strategy="Ordered DFS" jit="false">PROCESS_1_critical &gt;0</query>
+	<queries>
+          <query name="4 Done" strategy="Ordered DFS" jit="false">PROCESS_0_done &gt; 0 and PROCESS_1_done &gt;0 and PROCESS_2_done &gt; 0 and PROCESS_3_done &gt;0</query>
+          <query name="2 Critical" strategy="Ordered DFS" jit="false">PROCESS_0_critical &gt; 0 and PROCESS_1_critical &gt;0</query>
+          <query name="3 Done" strategy="Ordered DFS" jit="false">PROCESS_0_done &gt; 0 and PROCESS_1_done &gt;0 and PROCESS_2_done &gt; 0</query>
+          <query name="1 Critical" strategy="Ordered DFS" jit="false">PROCESS_1_critical &gt;0</query>
      </queries>
 </pnml>

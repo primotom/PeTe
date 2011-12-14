@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pnml>
+     <net>
+          <boolean_variable name="msg_0_0" initial-value="false"/>
+          <place id="El_p0">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_p0</value>
+               </name>
+               <initialMarking>
+                    <value>1</value>
+               </initialMarking>
+          </place>
+          <place id="El_Leader">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_Leader</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <transition id="El_p0_start">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_p0_start</value>
+               </name>
+               <conditions></conditions>
+               <assignments>msg_0_0:= true; </assignments>
+          </transition>
+          <transition id="El_elect_p0">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>El_elect_p0</value>
+               </name>
+               <conditions>msg_0_0</conditions>
+               <assignments></assignments>
+          </transition>
+          <arc source="El_p0" target="El_p0_start">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p0_start" target="El_p0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_p0" target="El_elect_p0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="El_elect_p0" target="El_Leader">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+     </net>
+     <queries>
+          <query name="Too many Leaders" strategy="Ordered DFS" jit="false">El_Leader&gt; 1</query>
+          <query name="Incorrect Leader" strategy="Ordered DFS" jit="false">El_Leader&gt; 1 and msg_0_0</query>
+          <query name="A Leader" strategy="Ordered DFS" jit="false">El_Leader == 1</query>
+          <query name="Correct Leader" strategy="Ordered DFS" jit="false">El_Leader == 1 and msg_0_0</query>
+     </queries>
+</pnml>
