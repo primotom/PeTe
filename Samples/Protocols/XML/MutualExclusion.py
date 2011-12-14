@@ -1,4 +1,4 @@
-no_processes = 10
+no_processes = 15
 
 def print_message(msg):
 	print '\t<message>'+msg+'</message>'

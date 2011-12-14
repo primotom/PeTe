@@ -1,0 +1,83 @@
+<protocol name="MutalExclusion" medium="SET" capacity="6">
+<messages>
+	<message>req_0</message>
+	<message>run_0</message>
+	<message>done_0</message>
+</messages>
+<role name="COORDINATOR">
+<states>
+	<state type="initial">Ready</state>
+	<state type="limited">Limit</state>
+	<state>running_p0</state>
+</states>
+<rule id="runp0">
+	<pre>
+		<current_state>Ready</current_state>
+		<current_state>Limit</current_state>
+		<received_message>req_0</received_message>
+	</pre>
+	<post>
+		<next_state>running_p0</next_state>
+		<send_message>run_0</send_message>
+	</post>
+</rule>
+<rule id="donep0">
+	<pre>
+		<current_state>running_p0</current_state>
+		<received_message>done_0</received_message>
+	</pre>
+	<post>
+		<next_state>Ready</next_state>
+	</post>
+</rule>
+</role>
+<role name="PROCESS_0">
+<states>
+	<state type="initial">noncritical</state>
+	<state>critical</state>
+	<state>done</state>
+</states>
+<rule id="dosendreq">
+	<pre>
+		<current_state>noncritical</current_state>
+	</pre>
+	<post>
+		<next_state>noncritical</next_state>
+		<send_message>req_0</send_message>
+	</post>
+</rule>
+<rule id="dorun">
+	<pre>
+		<current_state>noncritical</current_state>
+		<received_message>run_0</received_message>
+	</pre>
+	<post>
+		<next_state>critical</next_state>
+	</post>
+</rule>
+<rule id="dodone">
+	<pre>
+		<current_state>critical</current_state>
+	</pre>
+	<post>
+		<next_state>done</next_state>
+		<send_message>done_0</send_message>
+	</post>
+</rule>
+<rule id="drop">
+	<pre>
+		<current_state>noncritical</current_state>
+		<received_message>run_0</received_message>
+	</pre>
+	<post>
+		<next_state>done</next_state>
+		<send_message>done_0</send_message>
+	</post>
+</rule>
+<rule id="fail">
+	<pre>
+		<current_state>noncritical</current_state>
+	</pre>
+</rule>
+</role>
+</protocol>

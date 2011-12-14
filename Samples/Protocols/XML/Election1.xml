@@ -1,0 +1,29 @@
+<protocol name="LeaderElection" medium="SET" capacity="6">
+<messages>
+	<message>msg_0_0</message>
+</messages>
+<role name="El">
+<states>
+	<state type="initial">p0</state>
+	<state>Leader</state>
+</states>
+<rule id="p0_start">
+	<pre>
+		<current_state>p0</current_state>
+	</pre>
+	<post>
+		<next_state>p0</next_state>
+		<send_message>msg_0_0</send_message>
+	</post>
+</rule>
+<rule id="elect_p0">
+	<pre>
+		<current_state>p0</current_state>
+		<received_message>msg_0_0</received_message>
+	</pre>
+	<post>
+		<next_state>Leader</next_state>
+	</post>
+</rule>
+</role>
+</protocol>

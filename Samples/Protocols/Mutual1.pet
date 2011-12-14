@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pnml>
+     <net>
+          <boolean_variable name="req_0" initial-value="false"/>
+          <boolean_variable name="run_0" initial-value="false"/>
+          <boolean_variable name="done_0" initial-value="false"/>
+          <place id="COORDINATOR_Ready">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Ready</value>
+               </name>
+               <initialMarking>
+                    <value>1</value>
+               </initialMarking>
+          </place>
+          <place id="COORDINATOR_Limit">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_Limit</value>
+               </name>
+               <initialMarking>
+                    <value>3</value>
+               </initialMarking>
+          </place>
+          <place id="COORDINATOR_running_p0">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_running_p0</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <transition id="COORDINATOR_runp0">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_runp0</value>
+               </name>
+               <conditions>req_0</conditions>
+               <assignments>run_0:= true; </assignments>
+          </transition>
+          <transition id="COORDINATOR_donep0">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>COORDINATOR_donep0</value>
+               </name>
+               <conditions>done_0</conditions>
+               <assignments></assignments>
+          </transition>
+          <place id="PROCESS_0_noncritical">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PROCESS_0_noncritical</value>
+               </name>
+               <initialMarking>
+                    <value>1</value>
+               </initialMarking>
+          </place>
+          <place id="PROCESS_0_critical">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PROCESS_0_critical</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <place id="PROCESS_0_done">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PROCESS_0_done</value>
+               </name>
+               <initialMarking>
+                    <value>0</value>
+               </initialMarking>
+          </place>
+          <transition id="PROCESS_0_dosendreq">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PROCESS_0_dosendreq</value>
+               </name>
+               <conditions></conditions>
+               <assignments>req_0:= true; </assignments>
+          </transition>
+          <transition id="PROCESS_0_dorun">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PROCESS_0_dorun</value>
+               </name>
+               <conditions>run_0</conditions>
+               <assignments></assignments>
+          </transition>
+          <transition id="PROCESS_0_dodone">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PROCESS_0_dodone</value>
+               </name>
+               <conditions></conditions>
+               <assignments>done_0:= true; </assignments>
+          </transition>
+          <transition id="PROCESS_0_drop">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PROCESS_0_drop</value>
+               </name>
+               <conditions>run_0</conditions>
+               <assignments>done_0:= true; </assignments>
+          </transition>
+          <transition id="PROCESS_0_fail">
+               <graphics>
+                    <position x="0" y="0"/>
+               </graphics>
+               <name>
+                    <value>PROCESS_0_fail</value>
+               </name>
+               <conditions></conditions>
+               <assignments></assignments>
+          </transition>
+          <arc source="COORDINATOR_Ready" target="COORDINATOR_runp0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_Limit" target="COORDINATOR_runp0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_runp0" target="COORDINATOR_running_p0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_running_p0" target="COORDINATOR_donep0">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="COORDINATOR_donep0" target="COORDINATOR_Ready">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PROCESS_0_noncritical" target="PROCESS_0_dosendreq">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PROCESS_0_dosendreq" target="PROCESS_0_noncritical">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PROCESS_0_noncritical" target="PROCESS_0_dorun">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PROCESS_0_dorun" target="PROCESS_0_critical">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PROCESS_0_critical" target="PROCESS_0_dodone">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PROCESS_0_dodone" target="PROCESS_0_done">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PROCESS_0_noncritical" target="PROCESS_0_drop">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PROCESS_0_drop" target="PROCESS_0_done">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+          <arc source="PROCESS_0_noncritical" target="PROCESS_0_fail">
+               <inscription>
+                    <value>1</value>
+               </inscription>
+          </arc>
+     </net>
+	<queries>
+          <query name="4 Done" strategy="Ordered DFS" jit="false">PROCESS_0_done &gt; 0 and PROCESS_0_noncritical &gt;0</query>
+          <query name="2 Critical" strategy="Ordered DFS" jit="false">PROCESS_0_critical &gt; 0 and PROCESS_0_done &gt;0</query>
+          <query name="3 Done" strategy="Ordered DFS" jit="false">PROCESS_0_done &gt; 0</query>
+          <query name="1 Critical" strategy="Ordered DFS" jit="false">PROCESS_0_critical &gt;0</query>
+     </queries>
+</pnml>
