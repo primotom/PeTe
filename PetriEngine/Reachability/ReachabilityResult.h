@@ -68,6 +68,10 @@ public:
 	/** Gets the number of explored states.
 		A state is explored when it is visited. */
 	BigInt exploredStates() const { return _exploredStates; }
+	/** Gets the number of transitions fired. */
+	BigInt transitionsFired() const { return _transitionsFired; }
+	/** Gets the number states removed from waiting. */
+	BigInt removedWaiting() const { return _removedWating; }
 	/** Gets the length of the trace path. */
 	int pathLength() const { return _pathLength; }
 	/** Get trace, empty if no trace available or not provided by strategy */

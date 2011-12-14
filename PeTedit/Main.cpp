@@ -288,7 +288,7 @@ int main(int argc, char *argv[])
 		if(queryName.isNull())
 			queryName = "Custom Query";
 
-		std::cout<<name.toStdString()<<",\t"<<queryName.toStdString()<<",\t"<<strategy.toStdString()<<",\t"<<r<<",\t"<<finishTime<<",\t"<<result.expandedStates()<<",\t"<<result.exploredStates()<<",\t"<<result.pathLength()<<std::endl;
+		std::cout<<name.toStdString()<<",\t"<<queryName.toStdString()<<",\t"<<strategy.toStdString()<<",\t"<<r<<",\t"<<finishTime<<",\t"<<result.expandedStates()<<",\t"<<result.exploredStates()<<",\t"<<result.pathLength()<<", \t"<<result.transitionsFired()<<", \t"<<result.removedWaiting()<<std::endl;
 	}
 	return 0;
 }
