@@ -49,35 +49,35 @@
 #define NAME_BFS								"Naive BFS with Hash"
 
 //Ordered
-#define NAME_MonoDFS							"Ordered DFS"
-#define NAME_MonoDFSState						"Ordered DFS States"
-#define NAME_MonoDFSBool						"Ordered DFS Bools"
-#define NAME_MonoBFS							"Ordered BFS"
-#define NAME_MonoRandomDFS						"Ordered Random DFS"
+#define NAME_MonoDFS							"DFS with Monotonicity"
+#define NAME_MonoDFSState						"DFS States with Monotonicity"
+#define NAME_MonoDFSBool						"DFS Bools with Monotonicity"
+#define NAME_MonoBFS							"BFS with Monotonicity"
+#define NAME_MonoRandomDFS						"Random DFS with Monotonicity"
 #define NAME_MonoNewBestFS						"Ordered new Best First Seach"
 
 //Indexed
-#define NAME_Indexed							"Indexed Search"
-#define NAME_IndexedVariance					"Indexed Search with Variance"
-#define NAME_IndexedBFS							"Indexed BFS"
-#define NAME_IndexedBFSVariance					"Indexed BFS with Variance"
-#define NAME_IndexedBestFS						"Indexed BestFS"
-#define NAME_IndexedBestFSVariance				"Indexed BestFS with Variance"
-#define NAME_IndexedRFS							"Indexed RandomFS"
-#define NAME_IndexedRFSVariance					"Indexed RandomFS with Variance"
+#define NAME_Indexed							"Ordered Largest Index Search with Monotonicity"
+#define NAME_IndexedVariance					"Ordered Largest Index Search with Variance and Monotonicity"
+#define NAME_IndexedBFS							"Ordered BFS with Monotonicity"
+#define NAME_IndexedBFSVariance					"Ordered BFS with Variance and Monotonicity"
+#define NAME_IndexedBestFS						"Ordered BestFS with Monotonicity"
+#define NAME_IndexedBestFSVariance				"Ordered BestFS with Variance and Monotonicity"
+#define NAME_IndexedRFS							"Ordered Random DFS with Monotonicity"
+#define NAME_IndexedRFSVariance					"Ordered Random DFS with Variance and Monotonicity"
 
-#define NAME_IndexedDFS							"Indexed DFS"
-#define NAME_IndexedDFSVariance					"Indexed DFS with Variance"
+#define NAME_IndexedDFS							"Ordered DFS with Monotonicity"
+#define NAME_IndexedDFSVariance					"Ordered DFS with Variance and Monotonicity"
 
-#define NAME_IndexedDFSState					"Indexed DFS State"
-#define NAME_IndexedDFSStateVariance			"Indexed DFS State with Variance"
+#define NAME_IndexedDFSState					"Ordered DFS State with Monotonicity"
+#define NAME_IndexedDFSStateVariance			"Ordered DFS State with Variance and Monotonicity"
 
-#define NAME_IndexedDFSBool						"Indexed DFS Bool"
-#define NAME_IndexedDFSBoolVariance				"Indexed DFS Bool with Variance"
+#define NAME_IndexedDFSBool						"Ordered DFS Bool with Monotonicity"
+#define NAME_IndexedDFSBoolVariance				"Ordered DFS Bool with Variance and Monotonicity"
 
 //Heuristics
-#define NAME_BestFSOld							"Old BestFS (Heuristic distance)"
-#define NAME_MonoBestFS							"Old BestFS (Monotonicity Included)"
+#define NAME_BestFSOld							"BestFS with Hash"
+#define NAME_MonoBestFS							"BestFS with Monotonicity"
 
 //Over-approximation by linear programming
 #define NAME_LinearOverApprox					"Linear over-approximation"
@@ -109,19 +109,19 @@ std::vector<std::string> ReachabilitySearchStrategy::listStrategies(){
 		NAME_MonoBestFS,
 		//NAME_MonoNewBestFS,
 		NAME_Indexed,
-		NAME_IndexedVariance,
+		//NAME_IndexedVariance,
 		NAME_IndexedBFS,
-		NAME_IndexedBFSVariance,
+		//NAME_IndexedBFSVariance,
 		NAME_IndexedDFS,
-		NAME_IndexedDFSVariance,
+		//NAME_IndexedDFSVariance,
 		NAME_IndexedDFSState,
-		NAME_IndexedDFSStateVariance,
+		//NAME_IndexedDFSStateVariance,
 		NAME_IndexedDFSBool,
-		NAME_IndexedDFSBoolVariance,
+		//NAME_IndexedDFSBoolVariance,
 		NAME_IndexedBestFS,
-		NAME_IndexedBestFSVariance,
+		//NAME_IndexedBestFSVariance,
 		NAME_IndexedRFS,
-		NAME_IndexedRFSVariance
+		//NAME_IndexedRFSVariance
 	};
 	return std::vector<std::string>(strats, strats + sizeof(strats) / sizeof(std::string));
 }
