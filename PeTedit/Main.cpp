@@ -175,8 +175,6 @@ int main(int argc, char *argv[])
 	}
 
 	if(fileName.count() > 0){
-		std::cout<<fileName.toStdString()<<std::endl;
-		std::cout<<outputFile.toStdString()<<std::endl;
 		if(outputFile.count() > 0){
 			//Load input file
 			QFile file(fileName);
