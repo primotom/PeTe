@@ -102,7 +102,7 @@ ReachabilityResult DepthFirstReachabilitySearch::reachable(const PetriNet &net,
 		}
 	}
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
-							"No state satisfying the query exists.", expandedStates, count, transitionFired, 0);
+							"No state satisfying the query exists.", expandedStates, exploredStates, transitionFired, 0);
 }
 
 } // Reachability

@@ -105,7 +105,7 @@ ReachabilityResult IndexedDFS::reachable(const PetriNet &net,
 	}
 	//states.writeStatistics();
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
-							"No state satisfying the query exists.", expandedStates, count, transitionFired, states.getCountRemove());
+							"No state satisfying the query exists.", expandedStates, explored, transitionFired, states.getCountRemove());
 }
 
 } // Reachability
