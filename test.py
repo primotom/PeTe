@@ -119,8 +119,8 @@ MAPK = [
 Protocols = [
 "Protocols/BAwCC.pet",
 "Protocols/BAwPC.pet",
-"Protocols/Enhanced-BAwCC-protocol.pet",
-"Protocols/Enhanced-BAwPC-protocol.pet"
+"Protocols/Enhanced-BAwCC.pet",
+"Protocols/Enhanced-BAwPC.pet"
 ]
 Mutex = [
 "Protocols/Mutual2.pet",
@@ -234,6 +234,31 @@ def runScaledModels(scaledModels):
 			if failed:
 				break
 
+def runModels(scaledModels):
+	global QueriesToRun
+	model = scaledModels[0]
+	queries = listqueries(modeldir + model)
+	queriesrun = 0
+	for query in queries:
+		skipByPrefix = False
+		for prefix in QueryPrefixIgnoreList:
+			skipByPrefix |= query.startswith(prefix)
+		if skipByPrefix: continue
+		for strategy in strategies:
+			if strategy in IgnoreList:
+				continue
+			for model in scaledModels:
+				ret, data, mem = run(modeldir + model, strategy, query)
+				print data.strip() + ",\t" + str(mem)
+		queriesrun += 1
+		if QueriesToRun != 0 and queriesrun >= QueriesToRun:
+			break
+	
+
 if __name__ == "__main__":
 	for ml in modellists:
-		runScaledModels(ml)
+		runModels(ml)
+		
+		
+		
+		
