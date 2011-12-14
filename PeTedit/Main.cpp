@@ -24,6 +24,8 @@
 
 #include "DataFormats/DTAPNParser.h"
 #include "DataFormats/PNMLParser.h"
+#include "DataFormats/PNMLBuilder.h"
+#include "DataFormats/protocolparser.h"
 #include "Misc/QueryListBuilder.h"
 #include <PetriEngine/PetriNetBuilder.h>
 #include <PetriEngine/PetriNet.h>
@@ -51,6 +53,7 @@ int main(int argc, char *argv[])
 	QString queryName;
 	QString queryString;
 	QString fileName;
+	QString outputFile;
 	QString strategy;
 	QString dtpan;
 	int bound = 0;
@@ -78,6 +81,9 @@ int main(int argc, char *argv[])
 			showGUI = false;
 		} else if(args[i] == "--DTAPN"){
 			dtpan = args[++i];
+			showGUI = false;
+		} else if(args[i] == "--XML2PNML"){
+			outputFile = args[++i];
 			showGUI = false;
 		} else if(args[i] == "-k"){
 			bound = args[++i].toInt();
@@ -169,6 +175,29 @@ int main(int argc, char *argv[])
 	}
 
 	if(fileName.count() > 0){
+		std::cout<<fileName.toStdString()<<std::endl;
+		std::cout<<outputFile.toStdString()<<std::endl;
+		if(outputFile.count() > 0){
+			//Load input file
+			QFile file(fileName);
+			if(!file.open(QIODevice::ReadOnly))
+				return 8;
+			//Load/Create output file
+			QFile outFile(outputFile);
+			if(!outFile.open(QIODevice::WriteOnly))
+				return 9;
+			PNMLBuilder fileBuilder(&outFile);
+			QueryListBuilder qBuilder;
+			ProtocolParser inputParser;
+			inputParser.parse(&file, &fileBuilder, &qBuilder);
+			file.close();
+			foreach(QueryModel::Query q, qBuilder.makeQueries())
+				fileBuilder.addQuery(q);
+			fileBuilder.makePNMLFile();
+			outFile.close();
+			return 0;
+		}
+
 		// Load file
 		QFile file(fileName);
 		if(!file.open(QIODevice::ReadOnly))
