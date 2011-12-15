@@ -13,6 +13,7 @@ bool DFSIndexedStateSet::add(State* state , unsigned int t){
 	for(std::list<Step>::iterator it = _stack.begin() ; it != _stack.end();){
 		if (less((*it).state, state)){
 			_stack.erase(it++);
+			this->_countRemove++;
 			skipVisited = true;
 		} else {
 			if(this->leq(state, (*it).state))
@@ -29,13 +30,6 @@ bool DFSIndexedStateSet::add(State* state , unsigned int t){
 				// Check we are not smaller then existing states
 				if(leq(state, it->second))
 					return false;
-			} else {
-				// Clean up any superflous states in visited
-				if(less(it->second, state)){
-					it = _visited.erase(it);
-					this->_countRemove++;
-					continue;
-				}
 			}
 			it++;
 		}

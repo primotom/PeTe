@@ -13914,6 +13914,9 @@
           </arc>
      </net>
      <queries>
-          <query name="Check Leaders" strategy="Ordered DFS Bools" jit="false">El_Leader &gt; 1	</query>
+          <query name="Too many Leaders" strategy="Ordered DFS" jit="false">El_Leader&gt; 1</query>
+          <query name="Incorrect Leader" strategy="Ordered DFS" jit="false">El_Leader == 1 and msg_0_0</query>
+          <query name="A Leader" strategy="Ordered DFS" jit="false">El_Leader == 1</query>
+          <query name="Correct Leader" strategy="Ordered DFS" jit="false">El_Leader == 1 and msg_24_24</query>
      </queries>
 </pnml>

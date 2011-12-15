@@ -1,0 +1,721 @@
+PeTe batch test script
+BAwCC.pet,	Too Many Tokens?,	DFS with Monotonicity,	Not satisfiable,	0.26,	72,	122,	0, 	709, 	17,	44116
+BAwPC.pet,	Too Many Tokens?,	DFS with Monotonicity,	Not satisfiable,	0.19,	39,	66,	0, 	359, 	1,	44116
+Enhanced-BAwCC.pet,	Too Many Tokens?,	DFS with Monotonicity,	Not satisfiable,	0.25,	77,	79,	0, 	409, 	13,	44116
+Enhanced-BAwPC.pet,	Too Many Tokens?,	DFS with Monotonicity,	Not satisfiable,	0.21,	38,	37,	0, 	160, 	0,	44116
+BAwCC.pet,	Too Many Tokens?,	BFS with Monotonicity,	Not satisfiable,	0.72,	171,	335,	0, 	1497, 	109,	228504
+BAwPC.pet,	Too Many Tokens?,	BFS with Monotonicity,	Not satisfiable,	0.33,	100,	185,	0, 	855, 	59,	208036
+Enhanced-BAwCC.pet,	Too Many Tokens?,	BFS with Monotonicity,	Not satisfiable,	0.27,	80,	90,	0, 	425, 	16,	44116
+Enhanced-BAwPC.pet,	Too Many Tokens?,	BFS with Monotonicity,	Not satisfiable,	0.22,	39,	42,	0, 	163, 	1,	44116
+BAwCC.pet,	Too Many Tokens?,	DFS States with Monotonicity,	Not satisfiable,	0.25,	72,	122,	0, 	709, 	17,	44116
+BAwPC.pet,	Too Many Tokens?,	DFS States with Monotonicity,	Not satisfiable,	0.19,	39,	66,	0, 	359, 	1,	44116
+Enhanced-BAwCC.pet,	Too Many Tokens?,	DFS States with Monotonicity,	Not satisfiable,	0.25,	77,	79,	0, 	409, 	13,	44116
+Enhanced-BAwPC.pet,	Too Many Tokens?,	DFS States with Monotonicity,	Not satisfiable,	0.22,	38,	37,	0, 	160, 	0,	44116
+BAwCC.pet,	Too Many Tokens?,	DFS Bools with Monotonicity,	Not satisfiable,	0.23,	62,	113,	0, 	572, 	7,	44116
+BAwPC.pet,	Too Many Tokens?,	DFS Bools with Monotonicity,	Not satisfiable,	0.18,	41,	80,	0, 	359, 	4,	44116
+Enhanced-BAwCC.pet,	Too Many Tokens?,	DFS Bools with Monotonicity,	Not satisfiable,	0.25,	65,	72,	0, 	358, 	1,	44116
+Enhanced-BAwPC.pet,	Too Many Tokens?,	DFS Bools with Monotonicity,	Not satisfiable,	0.21,	39,	38,	0, 	163, 	1,	44116
+BAwCC.pet,	Too Many Tokens?,	BestFS with Monotonicity,	Not satisfiable,	0.24,	160,	267,	0, 	1358, 	98,	44116
+BAwPC.pet,	Too Many Tokens?,	BestFS with Monotonicity,	Not satisfiable,	0.17,	137,	226,	0, 	1134, 	96,	44116
+Enhanced-BAwCC.pet,	Too Many Tokens?,	BestFS with Monotonicity,	Not satisfiable,	0.16,	87,	86,	0, 	452, 	23,	44116
+Enhanced-BAwPC.pet,	Too Many Tokens?,	BestFS with Monotonicity,	Not satisfiable,	0.13,	58,	57,	0, 	233, 	20,	44116
+BAwCC.pet,	Too Many Tokens?,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.23,	100,	154,	0, 	829, 	14,	44116
+BAwPC.pet,	Too Many Tokens?,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.18,	78,	121,	0, 	648, 	15,	44116
+Enhanced-BAwCC.pet,	Too Many Tokens?,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.24,	68,	70,	0, 	374, 	4,	44116
+Enhanced-BAwPC.pet,	Too Many Tokens?,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.2,	39,	38,	0, 	163, 	1,	44116
+BAwCC.pet,	Too Many Tokens?,	Ordered BFS with Monotonicity,	Not satisfiable,	0.57,	171,	335,	0, 	1497, 	65,	228500
+BAwPC.pet,	Too Many Tokens?,	Ordered BFS with Monotonicity,	Not satisfiable,	0.28,	100,	185,	0, 	855, 	29,	44116
+Enhanced-BAwCC.pet,	Too Many Tokens?,	Ordered BFS with Monotonicity,	Not satisfiable,	0.24,	80,	90,	0, 	425, 	13,	44116
+Enhanced-BAwPC.pet,	Too Many Tokens?,	Ordered BFS with Monotonicity,	Not satisfiable,	0.2,	39,	42,	0, 	163, 	1,	44116
+BAwCC.pet,	Too Many Tokens?,	Ordered DFS with Monotonicity,	Not satisfiable,	0.22,	72,	122,	0, 	709, 	12,	44112
+BAwPC.pet,	Too Many Tokens?,	Ordered DFS with Monotonicity,	Not satisfiable,	0.18,	39,	66,	0, 	359, 	0,	44116
+Enhanced-BAwCC.pet,	Too Many Tokens?,	Ordered DFS with Monotonicity,	Not satisfiable,	0.24,	77,	79,	0, 	409, 	13,	44116
+Enhanced-BAwPC.pet,	Too Many Tokens?,	Ordered DFS with Monotonicity,	Not satisfiable,	0.2,	38,	37,	0, 	160, 	0,	44116
+BAwCC.pet,	Too Many Tokens?,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.19,	160,	267,	0, 	1358, 	42,	44116
+BAwPC.pet,	Too Many Tokens?,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.14,	137,	226,	0, 	1134, 	55,	44116
+Enhanced-BAwCC.pet,	Too Many Tokens?,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.14,	87,	86,	0, 	452, 	23,	44116
+Enhanced-BAwPC.pet,	Too Many Tokens?,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.11,	58,	57,	0, 	233, 	20,	44116
+BAwCC.pet,	PARTICIPANT invalid?,	DFS with Monotonicity,	Satisfied,	0.2,	10,	26,	6, 	135, 	3,	44116
+BAwPC.pet,	PARTICIPANT invalid?,	DFS with Monotonicity,	Satisfied,	0.18,	21,	43,	6, 	242, 	0,	44116
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	DFS with Monotonicity,	Not satisfiable,	0.25,	77,	79,	0, 	409, 	13,	44116
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	DFS with Monotonicity,	Not satisfiable,	0.21,	38,	37,	0, 	160, 	0,	44116
+BAwCC.pet,	PARTICIPANT invalid?,	BFS with Monotonicity,	Satisfied,	0.23,	43,	80,	6, 	223, 	10,	44116
+BAwPC.pet,	PARTICIPANT invalid?,	BFS with Monotonicity,	Satisfied,	0.18,	26,	51,	6, 	127, 	5,	44116
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	BFS with Monotonicity,	Not satisfiable,	0.27,	80,	90,	0, 	425, 	16,	44116
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	BFS with Monotonicity,	Not satisfiable,	0.22,	39,	42,	0, 	163, 	1,	44116
+BAwCC.pet,	PARTICIPANT invalid?,	DFS States with Monotonicity,	Satisfied,	0.2,	10,	26,	6, 	135, 	3,	44116
+BAwPC.pet,	PARTICIPANT invalid?,	DFS States with Monotonicity,	Satisfied,	0.18,	21,	43,	6, 	242, 	0,	44116
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	DFS States with Monotonicity,	Not satisfiable,	0.25,	77,	79,	0, 	409, 	13,	44116
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	DFS States with Monotonicity,	Not satisfiable,	0.22,	38,	37,	0, 	160, 	0,	44116
+BAwCC.pet,	PARTICIPANT invalid?,	DFS Bools with Monotonicity,	Satisfied,	0.2,	16,	30,	7, 	89, 	0,	44116
+BAwPC.pet,	PARTICIPANT invalid?,	DFS Bools with Monotonicity,	Satisfied,	0.17,	10,	18,	6, 	49, 	0,	44116
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	DFS Bools with Monotonicity,	Not satisfiable,	0.24,	65,	72,	0, 	358, 	1,	44116
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	DFS Bools with Monotonicity,	Not satisfiable,	0.2,	39,	38,	0, 	163, 	1,	44116
+BAwCC.pet,	PARTICIPANT invalid?,	BestFS with Monotonicity,	Satisfied,	0.09,	7,	24,	8, 	47, 	1,	44116
+BAwPC.pet,	PARTICIPANT invalid?,	BestFS with Monotonicity,	Satisfied,	0.1,	17,	40,	7, 	126, 	9,	44116
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	BestFS with Monotonicity,	Not satisfiable,	0.15,	71,	70,	0, 	390, 	7,	44116
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	BestFS with Monotonicity,	Not satisfiable,	0.12,	39,	38,	0, 	163, 	1,	44116
+BAwCC.pet,	PARTICIPANT invalid?,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.19,	6,	21,	7, 	39, 	1,	44116
+BAwPC.pet,	PARTICIPANT invalid?,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.17,	5,	16,	6, 	29, 	1,	44116
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.24,	68,	70,	0, 	374, 	4,	44116
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.21,	39,	38,	0, 	163, 	1,	44116
+BAwCC.pet,	PARTICIPANT invalid?,	Ordered BFS with Monotonicity,	Satisfied,	0.2,	43,	80,	6, 	223, 	8,	44116
+BAwPC.pet,	PARTICIPANT invalid?,	Ordered BFS with Monotonicity,	Satisfied,	0.17,	26,	51,	6, 	127, 	5,	44116
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Ordered BFS with Monotonicity,	Not satisfiable,	0.24,	80,	90,	0, 	425, 	13,	44116
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Ordered BFS with Monotonicity,	Not satisfiable,	0.21,	39,	42,	0, 	163, 	1,	44112
+BAwCC.pet,	PARTICIPANT invalid?,	Ordered DFS with Monotonicity,	Satisfied,	0.2,	10,	26,	6, 	135, 	3,	44288
+BAwPC.pet,	PARTICIPANT invalid?,	Ordered DFS with Monotonicity,	Satisfied,	0.17,	21,	43,	6, 	242, 	0,	44116
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Ordered DFS with Monotonicity,	Not satisfiable,	0.24,	77,	79,	0, 	409, 	13,	44116
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Ordered DFS with Monotonicity,	Not satisfiable,	0.21,	38,	37,	0, 	160, 	0,	44116
+BAwCC.pet,	PARTICIPANT invalid?,	Ordered BestFS with Monotonicity,	Satisfied,	0.1,	7,	24,	8, 	47, 	1,	44116
+BAwPC.pet,	PARTICIPANT invalid?,	Ordered BestFS with Monotonicity,	Satisfied,	0.09,	17,	40,	7, 	126, 	4,	44116
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.14,	71,	70,	0, 	390, 	7,	44116
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.12,	39,	38,	0, 	163, 	1,	44116
+BAwCC.pet,	COORDINATOR invalid?,	DFS with Monotonicity,	Satisfied,	0.22,	35,	68,	6, 	351, 	9,	44116
+BAwPC.pet,	COORDINATOR invalid?,	DFS with Monotonicity,	Satisfied,	0.18,	5,	18,	9, 	77, 	0,	44116
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	DFS with Monotonicity,	Satisfied,	0.24,	39,	48,	10, 	215, 	9,	44116
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	DFS with Monotonicity,	Not satisfiable,	0.21,	38,	37,	0, 	160, 	0,	44116
+BAwCC.pet,	COORDINATOR invalid?,	BFS with Monotonicity,	Satisfied,	0.22,	36,	66,	5, 	185, 	7,	44116
+BAwPC.pet,	COORDINATOR invalid?,	BFS with Monotonicity,	Satisfied,	0.18,	24,	45,	5, 	115, 	4,	44116
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	BFS with Monotonicity,	Satisfied,	0.26,	60,	74,	7, 	299, 	13,	44116
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	BFS with Monotonicity,	Not satisfiable,	0.22,	39,	42,	0, 	163, 	1,	44116
+BAwCC.pet,	COORDINATOR invalid?,	DFS States with Monotonicity,	Satisfied,	0.2,	35,	68,	6, 	351, 	9,	44116
+BAwPC.pet,	COORDINATOR invalid?,	DFS States with Monotonicity,	Satisfied,	0.16,	5,	18,	9, 	77, 	0,	44116
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	DFS States with Monotonicity,	Satisfied,	0.24,	39,	48,	10, 	215, 	9,	44116
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	DFS States with Monotonicity,	Not satisfiable,	0.2,	38,	37,	0, 	160, 	0,	44116
+BAwCC.pet,	COORDINATOR invalid?,	DFS Bools with Monotonicity,	Satisfied,	0.21,	25,	57,	6, 	186, 	0,	44116
+BAwPC.pet,	COORDINATOR invalid?,	DFS Bools with Monotonicity,	Satisfied,	0.18,	21,	49,	6, 	148, 	0,	44116
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	DFS Bools with Monotonicity,	Satisfied,	0.24,	48,	57,	7, 	251, 	0,	44116
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	DFS Bools with Monotonicity,	Not satisfiable,	0.22,	39,	38,	0, 	163, 	1,	44116
+BAwCC.pet,	COORDINATOR invalid?,	BestFS with Monotonicity,	Satisfied,	0.13,	27,	70,	11, 	270, 	14,	44116
+BAwPC.pet,	COORDINATOR invalid?,	BestFS with Monotonicity,	Satisfied,	0.09,	10,	32,	5, 	91, 	6,	44116
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	BestFS with Monotonicity,	Satisfied,	0.12,	16,	32,	11, 	105, 	2,	44116
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	BestFS with Monotonicity,	Not satisfiable,	0.12,	39,	38,	0, 	163, 	1,	44116
+BAwCC.pet,	COORDINATOR invalid?,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.21,	43,	86,	11, 	377, 	7,	44116
+BAwPC.pet,	COORDINATOR invalid?,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.16,	27,	53,	8, 	219, 	5,	44116
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.23,	26,	40,	11, 	157, 	1,	44116
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.2,	39,	38,	0, 	163, 	1,	44112
+BAwCC.pet,	COORDINATOR invalid?,	Ordered BFS with Monotonicity,	Satisfied,	0.22,	36,	66,	5, 	185, 	5,	44116
+BAwPC.pet,	COORDINATOR invalid?,	Ordered BFS with Monotonicity,	Satisfied,	0.17,	24,	45,	5, 	115, 	4,	44116
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Ordered BFS with Monotonicity,	Satisfied,	0.24,	60,	74,	7, 	299, 	10,	44116
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Ordered BFS with Monotonicity,	Not satisfiable,	0.2,	39,	42,	0, 	163, 	1,	44116
+BAwCC.pet,	COORDINATOR invalid?,	Ordered DFS with Monotonicity,	Satisfied,	0.21,	35,	68,	6, 	351, 	9,	44116
+BAwPC.pet,	COORDINATOR invalid?,	Ordered DFS with Monotonicity,	Satisfied,	0.18,	5,	18,	9, 	77, 	0,	44116
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Ordered DFS with Monotonicity,	Satisfied,	0.23,	39,	48,	10, 	215, 	9,	44116
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Ordered DFS with Monotonicity,	Not satisfiable,	0.2,	38,	37,	0, 	160, 	0,	44116
+BAwCC.pet,	COORDINATOR invalid?,	Ordered BestFS with Monotonicity,	Satisfied,	0.13,	27,	70,	11, 	270, 	5,	44116
+BAwPC.pet,	COORDINATOR invalid?,	Ordered BestFS with Monotonicity,	Satisfied,	0.09,	10,	32,	5, 	91, 	2,	44116
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Ordered BestFS with Monotonicity,	Satisfied,	0.13,	16,	32,	11, 	105, 	2,	44116
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.1,	39,	38,	0, 	163, 	1,	44116
+Election1.pet,	Too many Leaders,	DFS with Monotonicity,	Not satisfiable,	0.05,	2,	2,	0, 	3, 	0,	44116
+Election5.pet,	Too many Leaders,	DFS with Monotonicity,	Not satisfiable,	0.09,	2,	10,	0, 	72, 	0,	44116
+Election10.pet,	Too many Leaders,	DFS with Monotonicity,	Not satisfiable,	0.21,	2,	20,	0, 	224, 	0,	44116
+Election15.pet,	Too many Leaders,	DFS with Monotonicity,	Not satisfiable,	0.43,	2,	30,	0, 	489, 	0,	383784
+Election20.pet,	Too many Leaders,	DFS with Monotonicity,	Not satisfiable,	0.75,	2,	40,	0, 	854, 	0,	573324
+Election25.pet,	Too many Leaders,	DFS with Monotonicity,	Not satisfiable,	1.29,	2,	50,	0, 	1319, 	0,	813876
+Election30.pet,	Too many Leaders,	DFS with Monotonicity,	Not satisfiable,	1.95,	2,	60,	0, 	1884, 	0,	1102400
+Election35.pet,	Too many Leaders,	DFS with Monotonicity,	Not satisfiable,	3.24,	2,	70,	0, 	3147, 	0,	1439716
+Election40.pet,	Too many Leaders,	DFS with Monotonicity,	Not satisfiable,	4.31,	2,	80,	0, 	4097, 	0,	1825848
+Election45.pet,	Too many Leaders,	DFS with Monotonicity,	Not satisfiable,	6.59,	2,	90,	0, 	5172, 	0,	2261164
+Election50.pet,	Too many Leaders,	DFS with Monotonicity,	Not satisfiable,	8.36,	2,	100,	0, 	6372, 	0,	2745196
+Election1.pet,	Too many Leaders,	BFS with Monotonicity,	Not satisfiable,	0.04,	3,	2,	0, 	3, 	1,	65452
+Election5.pet,	Too many Leaders,	BFS with Monotonicity,	Not satisfiable,	0.1,	11,	20,	0, 	106, 	9,	44116
+Election10.pet,	Too many Leaders,	BFS with Monotonicity,	Not satisfiable,	0.23,	22,	83,	0, 	441, 	20,	44116
+Election15.pet,	Too many Leaders,	BFS with Monotonicity,	Not satisfiable,	0.52,	32,	163,	0, 	966, 	30,	383824
+Election20.pet,	Too many Leaders,	BFS with Monotonicity,	Not satisfiable,	1.23,	42,	268,	0, 	1691, 	40,	574344
+Election25.pet,	Too many Leaders,	BFS with Monotonicity,	Not satisfiable,	2.91,	52,	398,	0, 	2616, 	50,	813856
+Election30.pet,	Too many Leaders,	BFS with Monotonicity,	Not satisfiable,	5.2,	62,	553,	0, 	3741, 	60,	1102276
+Election35.pet,	Too many Leaders,	BFS with Monotonicity,	Not satisfiable,	11.86,	71,	665,	0, 	4966, 	69,	1439720
+Election40.pet,	Too many Leaders,	BFS with Monotonicity,	Not satisfiable,	17.39,	81,	860,	0, 	6476, 	79,	1825868
+Election45.pet,	Too many Leaders,	BFS with Monotonicity,	Not satisfiable,	35.5,	91,	1080,	0, 	8186, 	89,	2261168
+Election50.pet,	Too many Leaders,	BFS with Monotonicity,	Not satisfiable,	48.71,	101,	1325,	0, 	10096, 	99,	2745196
+Election1.pet,	Too many Leaders,	DFS States with Monotonicity,	Not satisfiable,	0.03,	2,	2,	0, 	3, 	0,	44116
+Election5.pet,	Too many Leaders,	DFS States with Monotonicity,	Not satisfiable,	0.09,	2,	10,	0, 	72, 	0,	44116
+Election10.pet,	Too many Leaders,	DFS States with Monotonicity,	Not satisfiable,	0.22,	2,	20,	0, 	224, 	0,	44116
+Election15.pet,	Too many Leaders,	DFS States with Monotonicity,	Not satisfiable,	0.43,	2,	30,	0, 	489, 	0,	383648
+Election20.pet,	Too many Leaders,	DFS States with Monotonicity,	Not satisfiable,	0.75,	2,	40,	0, 	854, 	0,	574364
+Election25.pet,	Too many Leaders,	DFS States with Monotonicity,	Not satisfiable,	1.3,	2,	50,	0, 	1319, 	0,	813868
+Election30.pet,	Too many Leaders,	DFS States with Monotonicity,	Not satisfiable,	1.92,	2,	60,	0, 	1884, 	0,	1102384
+Election35.pet,	Too many Leaders,	DFS States with Monotonicity,	Not satisfiable,	3.21,	2,	70,	0, 	3147, 	0,	1439704
+Election40.pet,	Too many Leaders,	DFS States with Monotonicity,	Not satisfiable,	4.18,	2,	80,	0, 	4097, 	0,	1825844
+Election45.pet,	Too many Leaders,	DFS States with Monotonicity,	Not satisfiable,	6.5,	2,	90,	0, 	5172, 	0,	2261164
+Election50.pet,	Too many Leaders,	DFS States with Monotonicity,	Not satisfiable,	8.37,	2,	100,	0, 	6372, 	0,	2745196
+Election1.pet,	Too many Leaders,	DFS Bools with Monotonicity,	Not satisfiable,	0.05,	2,	2,	0, 	3, 	0,	44116
+Election5.pet,	Too many Leaders,	DFS Bools with Monotonicity,	Not satisfiable,	0.09,	2,	10,	0, 	72, 	0,	44116
+Election10.pet,	Too many Leaders,	DFS Bools with Monotonicity,	Not satisfiable,	0.22,	2,	21,	0, 	254, 	0,	44116
+Election15.pet,	Too many Leaders,	DFS Bools with Monotonicity,	Not satisfiable,	0.44,	2,	31,	0, 	534, 	0,	383816
+Election20.pet,	Too many Leaders,	DFS Bools with Monotonicity,	Not satisfiable,	0.76,	2,	41,	0, 	914, 	0,	574368
+Election25.pet,	Too many Leaders,	DFS Bools with Monotonicity,	Not satisfiable,	1.32,	2,	51,	0, 	1394, 	0,	813868
+Election30.pet,	Too many Leaders,	DFS Bools with Monotonicity,	Not satisfiable,	1.96,	2,	61,	0, 	1974, 	0,	1102304
+Election35.pet,	Too many Leaders,	DFS Bools with Monotonicity,	Not satisfiable,	3.2,	2,	70,	0, 	3147, 	0,	1439716
+Election40.pet,	Too many Leaders,	DFS Bools with Monotonicity,	Not satisfiable,	4.18,	2,	80,	0, 	4097, 	0,	1825872
+Election45.pet,	Too many Leaders,	DFS Bools with Monotonicity,	Not satisfiable,	6.61,	2,	90,	0, 	5172, 	0,	2261140
+Election50.pet,	Too many Leaders,	DFS Bools with Monotonicity,	Not satisfiable,	8.28,	2,	100,	0, 	6372, 	0,	2745152
+Election1.pet,	Too many Leaders,	BestFS with Monotonicity,	Not satisfiable,	0.03,	3,	2,	0, 	3, 	1,	44116
+Election5.pet,	Too many Leaders,	BestFS with Monotonicity,	Not satisfiable,	0.04,	12,	28,	0, 	116, 	10,	44116
+Election10.pet,	Too many Leaders,	BestFS with Monotonicity,	Not satisfiable,	0.13,	21,	65,	0, 	416, 	19,	44116
+Election15.pet,	Too many Leaders,	BestFS with Monotonicity,	Not satisfiable,	0.29,	31,	135,	0, 	926, 	29,	44116
+Election20.pet,	Too many Leaders,	BestFS with Monotonicity,	Not satisfiable,	0.7,	41,	230,	0, 	1636, 	39,	326324
+Election25.pet,	Too many Leaders,	BestFS with Monotonicity,	Not satisfiable,	1.72,	51,	350,	0, 	2546, 	49,	446192
+Election30.pet,	Too many Leaders,	BestFS with Monotonicity,	Not satisfiable,	3.41,	61,	495,	0, 	3656, 	59,	590548
+Election35.pet,	Too many Leaders,	BestFS with Monotonicity,	Not satisfiable,	4.64,	72,	733,	0, 	5066, 	70,	759488
+Election40.pet,	Too many Leaders,	BestFS with Monotonicity,	Not satisfiable,	6.87,	82,	938,	0, 	6591, 	80,	952820
+Election45.pet,	Too many Leaders,	BestFS with Monotonicity,	Not satisfiable,	13.38,	92,	1168,	0, 	8316, 	90,	1170828
+Election50.pet,	Too many Leaders,	BestFS with Monotonicity,	Not satisfiable,	18.84,	102,	1423,	0, 	10241, 	100,	1413112
+Election1.pet,	Too many Leaders,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.05,	3,	2,	0, 	3, 	1,	44116
+Election5.pet,	Too many Leaders,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.1,	11,	28,	0, 	106, 	8,	44116
+Election10.pet,	Too many Leaders,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.23,	21,	65,	0, 	416, 	19,	43984
+Election15.pet,	Too many Leaders,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.44,	31,	135,	0, 	926, 	29,	383824
+Election20.pet,	Too many Leaders,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.79,	41,	230,	0, 	1636, 	39,	574372
+Election25.pet,	Too many Leaders,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	1.44,	51,	350,	0, 	2546, 	49,	813856
+Election30.pet,	Too many Leaders,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	2.27,	61,	495,	0, 	3656, 	59,	1102304
+Election35.pet,	Too many Leaders,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	3.79,	71,	733,	0, 	4966, 	68,	1439676
+Election40.pet,	Too many Leaders,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	5.08,	81,	938,	0, 	6476, 	78,	1825868
+Election45.pet,	Too many Leaders,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	8.54,	91,	1168,	0, 	8186, 	88,	2261156
+Election50.pet,	Too many Leaders,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	11.36,	101,	1423,	0, 	10096, 	98,	2745184
+Election1.pet,	Too many Leaders,	Ordered BFS with Monotonicity,	Not satisfiable,	0.05,	3,	2,	0, 	3, 	1,	44116
+Election5.pet,	Too many Leaders,	Ordered BFS with Monotonicity,	Not satisfiable,	0.1,	11,	20,	0, 	106, 	9,	44116
+Election10.pet,	Too many Leaders,	Ordered BFS with Monotonicity,	Not satisfiable,	0.24,	22,	83,	0, 	441, 	19,	44116
+Election15.pet,	Too many Leaders,	Ordered BFS with Monotonicity,	Not satisfiable,	0.51,	32,	163,	0, 	966, 	29,	383812
+Election20.pet,	Too many Leaders,	Ordered BFS with Monotonicity,	Not satisfiable,	1.19,	42,	268,	0, 	1691, 	39,	574376
+Election25.pet,	Too many Leaders,	Ordered BFS with Monotonicity,	Not satisfiable,	2.64,	52,	398,	0, 	2616, 	49,	813820
+Election30.pet,	Too many Leaders,	Ordered BFS with Monotonicity,	Not satisfiable,	4.82,	62,	553,	0, 	3741, 	59,	1102288
+Election35.pet,	Too many Leaders,	Ordered BFS with Monotonicity,	Not satisfiable,	11.17,	71,	665,	0, 	4966, 	69,	1439672
+Election40.pet,	Too many Leaders,	Ordered BFS with Monotonicity,	Not satisfiable,	16.03,	81,	860,	0, 	6476, 	79,	1825860
+Election45.pet,	Too many Leaders,	Ordered BFS with Monotonicity,	Not satisfiable,	34.33,	91,	1080,	0, 	8186, 	89,	2261152
+Election50.pet,	Too many Leaders,	Ordered BFS with Monotonicity,	Not satisfiable,	48.76,	101,	1325,	0, 	10096, 	99,	2745168
+Election1.pet,	Too many Leaders,	Ordered DFS with Monotonicity,	Not satisfiable,	0.04,	2,	2,	0, 	3, 	0,	44116
+Election5.pet,	Too many Leaders,	Ordered DFS with Monotonicity,	Not satisfiable,	0.1,	2,	10,	0, 	72, 	0,	44116
+Election10.pet,	Too many Leaders,	Ordered DFS with Monotonicity,	Not satisfiable,	0.22,	2,	20,	0, 	224, 	0,	44116
+Election15.pet,	Too many Leaders,	Ordered DFS with Monotonicity,	Not satisfiable,	0.43,	2,	30,	0, 	489, 	0,	383820
+Election20.pet,	Too many Leaders,	Ordered DFS with Monotonicity,	Not satisfiable,	0.75,	2,	40,	0, 	854, 	0,	574364
+Election25.pet,	Too many Leaders,	Ordered DFS with Monotonicity,	Not satisfiable,	1.29,	2,	50,	0, 	1319, 	0,	813704
+Election30.pet,	Too many Leaders,	Ordered DFS with Monotonicity,	Not satisfiable,	1.93,	2,	60,	0, 	1884, 	0,	1102288
+Election35.pet,	Too many Leaders,	Ordered DFS with Monotonicity,	Not satisfiable,	3.2,	2,	70,	0, 	3147, 	0,	1439704
+Election40.pet,	Too many Leaders,	Ordered DFS with Monotonicity,	Not satisfiable,	4.18,	2,	80,	0, 	4097, 	0,	1825868
+Election45.pet,	Too many Leaders,	Ordered DFS with Monotonicity,	Not satisfiable,	6.49,	2,	90,	0, 	5172, 	0,	2261168
+Election50.pet,	Too many Leaders,	Ordered DFS with Monotonicity,	Not satisfiable,	8.29,	2,	100,	0, 	6372, 	0,	2745196
+Election1.pet,	Too many Leaders,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.02,	3,	2,	0, 	3, 	1,	44116
+Election5.pet,	Too many Leaders,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.06,	12,	28,	0, 	116, 	9,	44116
+Election10.pet,	Too many Leaders,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.12,	21,	65,	0, 	416, 	19,	44116
+Election15.pet,	Too many Leaders,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.27,	31,	135,	0, 	926, 	29,	44288
+Election20.pet,	Too many Leaders,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.67,	41,	230,	0, 	1636, 	39,	326320
+Election25.pet,	Too many Leaders,	Ordered BestFS with Monotonicity,	Not satisfiable,	1.67,	51,	350,	0, 	2546, 	49,	446184
+Election30.pet,	Too many Leaders,	Ordered BestFS with Monotonicity,	Not satisfiable,	3.15,	61,	495,	0, 	3656, 	59,	590576
+Election35.pet,	Too many Leaders,	Ordered BestFS with Monotonicity,	Not satisfiable,	4.68,	72,	733,	0, 	5066, 	69,	759528
+Election40.pet,	Too many Leaders,	Ordered BestFS with Monotonicity,	Not satisfiable,	6.82,	82,	938,	0, 	6591, 	79,	952768
+Election45.pet,	Too many Leaders,	Ordered BestFS with Monotonicity,	Not satisfiable,	13.12,	92,	1168,	0, 	8316, 	89,	1170836
+Election50.pet,	Too many Leaders,	Ordered BestFS with Monotonicity,	Not satisfiable,	19.29,	102,	1423,	0, 	10241, 	99,	1413152
+Election1.pet,	Incorrect Leader,	DFS with Monotonicity,	Not satisfiable,	0.05,	2,	2,	0, 	3, 	0,	44116
+Election5.pet,	Incorrect Leader,	DFS with Monotonicity,	Not satisfiable,	0.1,	2,	10,	0, 	72, 	0,	44116
+Election10.pet,	Incorrect Leader,	DFS with Monotonicity,	Not satisfiable,	0.22,	2,	20,	0, 	224, 	0,	44116
+Election15.pet,	Incorrect Leader,	DFS with Monotonicity,	Not satisfiable,	0.42,	2,	30,	0, 	489, 	0,	383824
+Election20.pet,	Incorrect Leader,	DFS with Monotonicity,	Not satisfiable,	0.76,	2,	40,	0, 	854, 	0,	574336
+Election25.pet,	Incorrect Leader,	DFS with Monotonicity,	Not satisfiable,	1.3,	2,	50,	0, 	1319, 	0,	813860
+Election30.pet,	Incorrect Leader,	DFS with Monotonicity,	Not satisfiable,	1.93,	2,	60,	0, 	1884, 	0,	1102400
+Election35.pet,	Incorrect Leader,	DFS with Monotonicity,	Not satisfiable,	3.2,	2,	70,	0, 	3147, 	0,	1439716
+Election40.pet,	Incorrect Leader,	DFS with Monotonicity,	Not satisfiable,	4.21,	2,	80,	0, 	4097, 	0,	1825860
+Election45.pet,	Incorrect Leader,	DFS with Monotonicity,	Not satisfiable,	6.48,	2,	90,	0, 	5172, 	0,	2261112
+Election50.pet,	Incorrect Leader,	DFS with Monotonicity,	Not satisfiable,	8.39,	2,	100,	0, 	6372, 	0,	2745156
+Election1.pet,	Incorrect Leader,	BFS with Monotonicity,	Not satisfiable,	0.04,	3,	2,	0, 	3, 	1,	44116
+Election5.pet,	Incorrect Leader,	BFS with Monotonicity,	Not satisfiable,	0.1,	11,	20,	0, 	106, 	9,	44116
+Election10.pet,	Incorrect Leader,	BFS with Monotonicity,	Not satisfiable,	0.25,	22,	83,	0, 	441, 	20,	44116
+Election15.pet,	Incorrect Leader,	BFS with Monotonicity,	Not satisfiable,	0.53,	32,	163,	0, 	966, 	30,	383820
+Election20.pet,	Incorrect Leader,	BFS with Monotonicity,	Not satisfiable,	1.24,	42,	268,	0, 	1691, 	40,	574372
+Election25.pet,	Incorrect Leader,	BFS with Monotonicity,	Not satisfiable,	3.08,	52,	398,	0, 	2616, 	50,	813868
+Election30.pet,	Incorrect Leader,	BFS with Monotonicity,	Not satisfiable,	5.42,	62,	553,	0, 	3741, 	60,	1102292
+Election35.pet,	Incorrect Leader,	BFS with Monotonicity,	Not satisfiable,	10.12,	71,	665,	0, 	4966, 	69,	1439704
+Election40.pet,	Incorrect Leader,	BFS with Monotonicity,	Not satisfiable,	17.44,	81,	860,	0, 	6476, 	79,	1825868
+Election45.pet,	Incorrect Leader,	BFS with Monotonicity,	Not satisfiable,	34.14,	91,	1080,	0, 	8186, 	89,	2261156
+Election50.pet,	Incorrect Leader,	BFS with Monotonicity,	Not satisfiable,	48.8,	101,	1325,	0, 	10096, 	99,	2745188
+Election1.pet,	Incorrect Leader,	DFS States with Monotonicity,	Not satisfiable,	0.03,	2,	2,	0, 	3, 	0,	44116
+Election5.pet,	Incorrect Leader,	DFS States with Monotonicity,	Not satisfiable,	0.09,	2,	10,	0, 	72, 	0,	44116
+Election10.pet,	Incorrect Leader,	DFS States with Monotonicity,	Not satisfiable,	0.22,	2,	21,	0, 	254, 	0,	44116
+Election15.pet,	Incorrect Leader,	DFS States with Monotonicity,	Not satisfiable,	0.43,	2,	31,	0, 	534, 	0,	383808
+Election20.pet,	Incorrect Leader,	DFS States with Monotonicity,	Not satisfiable,	0.76,	2,	41,	0, 	914, 	0,	574332
+Election25.pet,	Incorrect Leader,	DFS States with Monotonicity,	Not satisfiable,	1.31,	2,	51,	0, 	1394, 	0,	813856
+Election30.pet,	Incorrect Leader,	DFS States with Monotonicity,	Not satisfiable,	1.95,	2,	61,	0, 	1974, 	0,	1102288
+Election35.pet,	Incorrect Leader,	DFS States with Monotonicity,	Not satisfiable,	3.24,	2,	70,	0, 	3147, 	0,	1439688
+Election40.pet,	Incorrect Leader,	DFS States with Monotonicity,	Not satisfiable,	4.17,	2,	80,	0, 	4097, 	0,	1825856
+Election45.pet,	Incorrect Leader,	DFS States with Monotonicity,	Not satisfiable,	6.63,	2,	90,	0, 	5172, 	0,	2261168
+Election50.pet,	Incorrect Leader,	DFS States with Monotonicity,	Not satisfiable,	8.31,	2,	100,	0, 	6372, 	0,	2745188
+Election1.pet,	Incorrect Leader,	DFS Bools with Monotonicity,	Not satisfiable,	0.04,	2,	2,	0, 	3, 	0,	44116
+Election5.pet,	Incorrect Leader,	DFS Bools with Monotonicity,	Not satisfiable,	0.1,	2,	10,	0, 	72, 	0,	44116
+Election10.pet,	Incorrect Leader,	DFS Bools with Monotonicity,	Not satisfiable,	0.23,	2,	21,	0, 	254, 	0,	44116
+Election15.pet,	Incorrect Leader,	DFS Bools with Monotonicity,	Not satisfiable,	0.43,	2,	31,	0, 	534, 	0,	383824
+Election20.pet,	Incorrect Leader,	DFS Bools with Monotonicity,	Not satisfiable,	0.77,	2,	41,	0, 	914, 	0,	574376
+Election25.pet,	Incorrect Leader,	DFS Bools with Monotonicity,	Not satisfiable,	1.32,	2,	51,	0, 	1394, 	0,	813872
+Election30.pet,	Incorrect Leader,	DFS Bools with Monotonicity,	Not satisfiable,	1.94,	2,	61,	0, 	1974, 	0,	1102300
+Election35.pet,	Incorrect Leader,	DFS Bools with Monotonicity,	Not satisfiable,	3.2,	2,	70,	0, 	3147, 	0,	1439708
+Election40.pet,	Incorrect Leader,	DFS Bools with Monotonicity,	Not satisfiable,	4.19,	2,	80,	0, 	4097, 	0,	1825860
+Election45.pet,	Incorrect Leader,	DFS Bools with Monotonicity,	Not satisfiable,	6.52,	2,	90,	0, 	5172, 	0,	2261156
+Election50.pet,	Incorrect Leader,	DFS Bools with Monotonicity,	Not satisfiable,	8.41,	2,	100,	0, 	6372, 	0,	2745196
+Election1.pet,	Incorrect Leader,	BestFS with Monotonicity,	Not satisfiable,	0.02,	3,	2,	0, 	3, 	1,	44116
+Election5.pet,	Incorrect Leader,	BestFS with Monotonicity,	Not satisfiable,	0.04,	12,	28,	0, 	116, 	10,	44116
+Election10.pet,	Incorrect Leader,	BestFS with Monotonicity,	Not satisfiable,	0.12,	21,	65,	0, 	416, 	19,	44116
+Election15.pet,	Incorrect Leader,	BestFS with Monotonicity,	Not satisfiable,	0.28,	31,	135,	0, 	926, 	29,	44116
+Election20.pet,	Incorrect Leader,	BestFS with Monotonicity,	Not satisfiable,	0.72,	41,	230,	0, 	1636, 	39,	326300
+Election25.pet,	Incorrect Leader,	BestFS with Monotonicity,	Not satisfiable,	1.83,	51,	350,	0, 	2546, 	49,	446184
+Election30.pet,	Incorrect Leader,	BestFS with Monotonicity,	Not satisfiable,	3.36,	61,	495,	0, 	3656, 	59,	590580
+Election35.pet,	Incorrect Leader,	BestFS with Monotonicity,	Not satisfiable,	4.93,	72,	733,	0, 	5066, 	70,	759524
+Election40.pet,	Incorrect Leader,	BestFS with Monotonicity,	Not satisfiable,	7,	82,	938,	0, 	6591, 	80,	952812
+Election45.pet,	Incorrect Leader,	BestFS with Monotonicity,	Not satisfiable,	13.4,	92,	1168,	0, 	8316, 	90,	1170824
+Election50.pet,	Incorrect Leader,	BestFS with Monotonicity,	Not satisfiable,	18.8,	102,	1423,	0, 	10241, 	100,	1413112
+Election1.pet,	Incorrect Leader,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.04,	3,	2,	0, 	3, 	1,	41868
+Election5.pet,	Incorrect Leader,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.1,	11,	28,	0, 	106, 	8,	41868
+Election10.pet,	Incorrect Leader,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.23,	21,	65,	0, 	416, 	19,	41868
+Election15.pet,	Incorrect Leader,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.44,	31,	135,	0, 	926, 	29,	383820
+Election20.pet,	Incorrect Leader,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.8,	41,	230,	0, 	1636, 	39,	574372
+Election25.pet,	Incorrect Leader,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	1.47,	51,	350,	0, 	2546, 	49,	813868
+Election30.pet,	Incorrect Leader,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	2.2,	61,	495,	0, 	3656, 	59,	1102300
+Election35.pet,	Incorrect Leader,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	3.8,	71,	733,	0, 	4966, 	68,	1439704
+Election40.pet,	Incorrect Leader,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	5.06,	81,	938,	0, 	6476, 	78,	1825868
+Election45.pet,	Incorrect Leader,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	8.57,	91,	1168,	0, 	8186, 	88,	2261156
+Election50.pet,	Incorrect Leader,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	11.48,	101,	1423,	0, 	10096, 	98,	2745196
+Election1.pet,	Incorrect Leader,	Ordered BFS with Monotonicity,	Not satisfiable,	0.04,	3,	2,	0, 	3, 	1,	41868
+Election5.pet,	Incorrect Leader,	Ordered BFS with Monotonicity,	Not satisfiable,	0.1,	11,	20,	0, 	106, 	9,	41868
+Election10.pet,	Incorrect Leader,	Ordered BFS with Monotonicity,	Not satisfiable,	0.23,	22,	83,	0, 	441, 	19,	41868
+Election15.pet,	Incorrect Leader,	Ordered BFS with Monotonicity,	Not satisfiable,	0.52,	32,	163,	0, 	966, 	29,	383820
+Election20.pet,	Incorrect Leader,	Ordered BFS with Monotonicity,	Not satisfiable,	1.18,	42,	268,	0, 	1691, 	39,	574372
+Election25.pet,	Incorrect Leader,	Ordered BFS with Monotonicity,	Not satisfiable,	2.91,	52,	398,	0, 	2616, 	49,	813692
+Election30.pet,	Incorrect Leader,	Ordered BFS with Monotonicity,	Not satisfiable,	5.11,	62,	553,	0, 	3741, 	59,	1102300
+Election35.pet,	Incorrect Leader,	Ordered BFS with Monotonicity,	Not satisfiable,	11.34,	71,	665,	0, 	4966, 	69,	1439704
+Election40.pet,	Incorrect Leader,	Ordered BFS with Monotonicity,	Not satisfiable,	16,	81,	860,	0, 	6476, 	79,	1825868
+Election45.pet,	Incorrect Leader,	Ordered BFS with Monotonicity,	Not satisfiable,	33.12,	91,	1080,	0, 	8186, 	89,	2261124
+Election50.pet,	Incorrect Leader,	Ordered BFS with Monotonicity,	Not satisfiable,	47.05,	101,	1325,	0, 	10096, 	99,	2745164
+Election1.pet,	Incorrect Leader,	Ordered DFS with Monotonicity,	Not satisfiable,	0.05,	2,	2,	0, 	3, 	0,	41868
+Election5.pet,	Incorrect Leader,	Ordered DFS with Monotonicity,	Not satisfiable,	0.09,	2,	10,	0, 	72, 	0,	41868
+Election10.pet,	Incorrect Leader,	Ordered DFS with Monotonicity,	Not satisfiable,	0.22,	2,	20,	0, 	224, 	0,	41868
+Election15.pet,	Incorrect Leader,	Ordered DFS with Monotonicity,	Not satisfiable,	0.42,	2,	30,	0, 	489, 	0,	383816
+Election20.pet,	Incorrect Leader,	Ordered DFS with Monotonicity,	Not satisfiable,	0.75,	2,	40,	0, 	854, 	0,	574368
+Election25.pet,	Incorrect Leader,	Ordered DFS with Monotonicity,	Not satisfiable,	1.29,	2,	50,	0, 	1319, 	0,	813824
+Election30.pet,	Incorrect Leader,	Ordered DFS with Monotonicity,	Not satisfiable,	1.94,	2,	60,	0, 	1884, 	0,	1102304
+Election35.pet,	Incorrect Leader,	Ordered DFS with Monotonicity,	Not satisfiable,	3.21,	2,	70,	0, 	3147, 	0,	1439716
+Election40.pet,	Incorrect Leader,	Ordered DFS with Monotonicity,	Not satisfiable,	4.2,	2,	80,	0, 	4097, 	0,	1825836
+Election45.pet,	Incorrect Leader,	Ordered DFS with Monotonicity,	Not satisfiable,	6.62,	2,	90,	0, 	5172, 	0,	2261168
+Election50.pet,	Incorrect Leader,	Ordered DFS with Monotonicity,	Not satisfiable,	8.48,	2,	100,	0, 	6372, 	0,	2745148
+Election1.pet,	Incorrect Leader,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.02,	3,	2,	0, 	3, 	1,	41868
+Election5.pet,	Incorrect Leader,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.05,	12,	28,	0, 	116, 	9,	41868
+Election10.pet,	Incorrect Leader,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.12,	21,	65,	0, 	416, 	19,	41868
+Election15.pet,	Incorrect Leader,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.27,	31,	135,	0, 	926, 	29,	41868
+Election20.pet,	Incorrect Leader,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.67,	41,	230,	0, 	1636, 	39,	326312
+Election25.pet,	Incorrect Leader,	Ordered BestFS with Monotonicity,	Not satisfiable,	1.82,	51,	350,	0, 	2546, 	49,	446192
+Election30.pet,	Incorrect Leader,	Ordered BestFS with Monotonicity,	Not satisfiable,	3.15,	61,	495,	0, 	3656, 	59,	590576
+Election35.pet,	Incorrect Leader,	Ordered BestFS with Monotonicity,	Not satisfiable,	5.01,	72,	733,	0, 	5066, 	69,	759524
+Election40.pet,	Incorrect Leader,	Ordered BestFS with Monotonicity,	Not satisfiable,	6.99,	82,	938,	0, 	6591, 	79,	952804
+Election45.pet,	Incorrect Leader,	Ordered BestFS with Monotonicity,	Not satisfiable,	13.87,	92,	1168,	0, 	8316, 	89,	1170824
+Election50.pet,	Incorrect Leader,	Ordered BestFS with Monotonicity,	Not satisfiable,	19.43,	102,	1423,	0, 	10241, 	99,	1413152
+Election1.pet,	A Leader,	DFS with Monotonicity,	Satisfied,	0.04,	0,	1,	2, 	3, 	0,	41868
+Election5.pet,	A Leader,	DFS with Monotonicity,	Satisfied,	0.1,	0,	9,	10, 	60, 	0,	41868
+Election10.pet,	A Leader,	DFS with Monotonicity,	Satisfied,	0.22,	0,	18,	19, 	173, 	0,	41868
+Election15.pet,	A Leader,	DFS with Monotonicity,	Satisfied,	0.43,	0,	28,	29, 	408, 	0,	383660
+Election20.pet,	A Leader,	DFS with Monotonicity,	Satisfied,	0.74,	0,	38,	39, 	743, 	0,	574360
+Election25.pet,	A Leader,	DFS with Monotonicity,	Satisfied,	1.25,	0,	48,	49, 	1178, 	0,	813708
+Election30.pet,	A Leader,	DFS with Monotonicity,	Satisfied,	1.86,	0,	58,	59, 	1713, 	0,	1102272
+Election35.pet,	A Leader,	DFS with Monotonicity,	Satisfied,	3.2,	0,	69,	70, 	3045, 	0,	1439704
+Election40.pet,	A Leader,	DFS with Monotonicity,	Satisfied,	4.1,	0,	79,	80, 	3980, 	0,	1825860
+Election45.pet,	A Leader,	DFS with Monotonicity,	Satisfied,	6.5,	0,	89,	90, 	5040, 	0,	2261168
+Election50.pet,	A Leader,	DFS with Monotonicity,	Satisfied,	8.29,	0,	99,	100, 	6225, 	0,	2745188
+Election1.pet,	A Leader,	BFS with Monotonicity,	Satisfied,	0.04,	1,	2,	2, 	3, 	1,	41868
+Election5.pet,	A Leader,	BFS with Monotonicity,	Satisfied,	0.1,	9,	20,	10, 	94, 	9,	41868
+Election10.pet,	A Leader,	BFS with Monotonicity,	Satisfied,	0.23,	18,	81,	19, 	335, 	18,	41868
+Election15.pet,	A Leader,	BFS with Monotonicity,	Satisfied,	0.51,	28,	161,	29, 	800, 	28,	383824
+Election20.pet,	A Leader,	BFS with Monotonicity,	Satisfied,	1.2,	38,	266,	39, 	1465, 	38,	574368
+Election25.pet,	A Leader,	BFS with Monotonicity,	Satisfied,	2.86,	48,	396,	49, 	2330, 	48,	813860
+Election30.pet,	A Leader,	BFS with Monotonicity,	Satisfied,	5.04,	58,	551,	59, 	3395, 	58,	1102308
+Election35.pet,	A Leader,	BFS with Monotonicity,	Satisfied,	11.82,	69,	665,	70, 	4864, 	69,	1439704
+Election40.pet,	A Leader,	BFS with Monotonicity,	Satisfied,	17.3,	79,	860,	80, 	6359, 	79,	1825868
+Election45.pet,	A Leader,	BFS with Monotonicity,	Satisfied,	35.31,	89,	1080,	90, 	8054, 	89,	2261156
+Election50.pet,	A Leader,	BFS with Monotonicity,	Satisfied,	50.32,	99,	1325,	100, 	9949, 	99,	2745148
+Election1.pet,	A Leader,	DFS States with Monotonicity,	Satisfied,	0.05,	0,	1,	2, 	3, 	0,	41796
+Election5.pet,	A Leader,	DFS States with Monotonicity,	Satisfied,	0.1,	0,	9,	10, 	60, 	0,	41796
+Election10.pet,	A Leader,	DFS States with Monotonicity,	Satisfied,	0.22,	0,	18,	19, 	173, 	0,	41796
+Election15.pet,	A Leader,	DFS States with Monotonicity,	Satisfied,	0.42,	0,	28,	29, 	408, 	0,	383680
+Election20.pet,	A Leader,	DFS States with Monotonicity,	Satisfied,	0.74,	0,	38,	39, 	743, 	0,	574372
+Election25.pet,	A Leader,	DFS States with Monotonicity,	Satisfied,	1.26,	0,	48,	49, 	1178, 	0,	813716
+Election30.pet,	A Leader,	DFS States with Monotonicity,	Satisfied,	1.86,	0,	58,	59, 	1713, 	0,	1102268
+Election35.pet,	A Leader,	DFS States with Monotonicity,	Satisfied,	3.19,	0,	69,	70, 	3045, 	0,	1439676
+Election40.pet,	A Leader,	DFS States with Monotonicity,	Satisfied,	4.12,	0,	79,	80, 	3980, 	0,	1825868
+Election45.pet,	A Leader,	DFS States with Monotonicity,	Satisfied,	6.52,	0,	89,	90, 	5040, 	0,	2261160
+Election50.pet,	A Leader,	DFS States with Monotonicity,	Satisfied,	8.34,	0,	99,	100, 	6225, 	0,	2745196
+Election1.pet,	A Leader,	DFS Bools with Monotonicity,	Satisfied,	0.05,	0,	1,	2, 	3, 	0,	41928
+Election5.pet,	A Leader,	DFS Bools with Monotonicity,	Satisfied,	0.1,	0,	9,	10, 	60, 	0,	41928
+Election10.pet,	A Leader,	DFS Bools with Monotonicity,	Satisfied,	0.22,	0,	18,	19, 	173, 	0,	41868
+Election15.pet,	A Leader,	DFS Bools with Monotonicity,	Satisfied,	0.42,	0,	28,	29, 	408, 	0,	383824
+Election20.pet,	A Leader,	DFS Bools with Monotonicity,	Satisfied,	0.75,	0,	38,	39, 	743, 	0,	574364
+Election25.pet,	A Leader,	DFS Bools with Monotonicity,	Satisfied,	1.27,	0,	48,	49, 	1178, 	0,	813856
+Election30.pet,	A Leader,	DFS Bools with Monotonicity,	Satisfied,	1.87,	0,	58,	59, 	1713, 	0,	1102292
+Election35.pet,	A Leader,	DFS Bools with Monotonicity,	Satisfied,	3.19,	0,	69,	70, 	3045, 	0,	1439664
+Election40.pet,	A Leader,	DFS Bools with Monotonicity,	Satisfied,	4.16,	0,	79,	80, 	3980, 	0,	1825924
+Election45.pet,	A Leader,	DFS Bools with Monotonicity,	Satisfied,	6.52,	0,	89,	90, 	5040, 	0,	2261164
+Election50.pet,	A Leader,	DFS Bools with Monotonicity,	Satisfied,	8.26,	0,	99,	100, 	6225, 	0,	2745188
+Election1.pet,	A Leader,	BestFS with Monotonicity,	Satisfied,	0.03,	1,	2,	2, 	3, 	1,	41928
+Election5.pet,	A Leader,	BestFS with Monotonicity,	Satisfied,	0.04,	8,	27,	9, 	80, 	8,	41928
+Election10.pet,	A Leader,	BestFS with Monotonicity,	Satisfied,	0.13,	19,	65,	20, 	363, 	19,	41928
+Election15.pet,	A Leader,	BestFS with Monotonicity,	Satisfied,	0.27,	29,	135,	30, 	843, 	29,	41928
+Election20.pet,	A Leader,	BestFS with Monotonicity,	Satisfied,	0.68,	39,	230,	40, 	1523, 	39,	326324
+Election25.pet,	A Leader,	BestFS with Monotonicity,	Satisfied,	1.78,	49,	350,	50, 	2403, 	49,	446192
+Election30.pet,	A Leader,	BestFS with Monotonicity,	Satisfied,	3.05,	59,	495,	60, 	3483, 	59,	590572
+Election35.pet,	A Leader,	BestFS with Monotonicity,	Satisfied,	4.69,	68,	732,	69, 	4760, 	68,	759528
+Election40.pet,	A Leader,	BestFS with Monotonicity,	Satisfied,	6.76,	78,	937,	79, 	6240, 	78,	952820
+Election45.pet,	A Leader,	BestFS with Monotonicity,	Satisfied,	13.08,	88,	1167,	89, 	7920, 	88,	1170828
+Election50.pet,	A Leader,	BestFS with Monotonicity,	Satisfied,	19.08,	98,	1422,	99, 	9800, 	98,	1413120
+Election1.pet,	A Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.04,	1,	2,	2, 	3, 	1,	41928
+Election5.pet,	A Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.09,	8,	27,	9, 	80, 	8,	41932
+Election10.pet,	A Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.23,	19,	65,	20, 	363, 	19,	41928
+Election15.pet,	A Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.42,	29,	135,	30, 	843, 	29,	383660
+Election20.pet,	A Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.78,	39,	230,	40, 	1523, 	39,	574376
+Election25.pet,	A Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	1.45,	49,	350,	50, 	2403, 	49,	814812
+Election30.pet,	A Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	2.26,	59,	495,	60, 	3483, 	59,	1102300
+Election35.pet,	A Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	3.76,	68,	732,	69, 	4760, 	68,	1439684
+Election40.pet,	A Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	5.03,	78,	937,	79, 	6240, 	78,	1825860
+Election45.pet,	A Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	8.44,	88,	1167,	89, 	7920, 	88,	2261156
+Election50.pet,	A Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	11.16,	98,	1422,	99, 	9800, 	98,	2745196
+Election1.pet,	A Leader,	Ordered BFS with Monotonicity,	Satisfied,	0.05,	1,	2,	2, 	3, 	1,	41928
+Election5.pet,	A Leader,	Ordered BFS with Monotonicity,	Satisfied,	0.1,	9,	20,	10, 	94, 	9,	41928
+Election10.pet,	A Leader,	Ordered BFS with Monotonicity,	Satisfied,	0.23,	18,	81,	19, 	335, 	18,	41928
+Election15.pet,	A Leader,	Ordered BFS with Monotonicity,	Satisfied,	0.5,	28,	161,	29, 	800, 	28,	383816
+Election20.pet,	A Leader,	Ordered BFS with Monotonicity,	Satisfied,	1.17,	38,	266,	39, 	1465, 	38,	574340
+Election25.pet,	A Leader,	Ordered BFS with Monotonicity,	Satisfied,	2.59,	48,	396,	49, 	2330, 	48,	813868
+Election30.pet,	A Leader,	Ordered BFS with Monotonicity,	Satisfied,	4.73,	58,	551,	59, 	3395, 	58,	1102292
+Election35.pet,	A Leader,	Ordered BFS with Monotonicity,	Satisfied,	11.42,	69,	665,	70, 	4864, 	69,	1439716
+Election40.pet,	A Leader,	Ordered BFS with Monotonicity,	Satisfied,	16.07,	79,	860,	80, 	6359, 	79,	1825868
+Election45.pet,	A Leader,	Ordered BFS with Monotonicity,	Satisfied,	34.71,	89,	1080,	90, 	8054, 	89,	2261156
+Election50.pet,	A Leader,	Ordered BFS with Monotonicity,	Satisfied,	47.26,	99,	1325,	100, 	9949, 	99,	2745156
+Election1.pet,	A Leader,	Ordered DFS with Monotonicity,	Satisfied,	0.04,	0,	1,	2, 	3, 	0,	43984
+Election5.pet,	A Leader,	Ordered DFS with Monotonicity,	Satisfied,	0.1,	0,	9,	10, 	60, 	0,	43984
+Election10.pet,	A Leader,	Ordered DFS with Monotonicity,	Satisfied,	0.21,	0,	18,	19, 	173, 	0,	43984
+Election15.pet,	A Leader,	Ordered DFS with Monotonicity,	Satisfied,	0.43,	0,	28,	29, 	408, 	0,	383832
+Election20.pet,	A Leader,	Ordered DFS with Monotonicity,	Satisfied,	0.74,	0,	38,	39, 	743, 	0,	574356
+Election25.pet,	A Leader,	Ordered DFS with Monotonicity,	Satisfied,	1.25,	0,	48,	49, 	1178, 	0,	813868
+Election30.pet,	A Leader,	Ordered DFS with Monotonicity,	Satisfied,	1.86,	0,	58,	59, 	1713, 	0,	1102300
+Election35.pet,	A Leader,	Ordered DFS with Monotonicity,	Satisfied,	3.16,	0,	69,	70, 	3045, 	0,	1439712
+Election40.pet,	A Leader,	Ordered DFS with Monotonicity,	Satisfied,	4.14,	0,	79,	80, 	3980, 	0,	1825928
+Election45.pet,	A Leader,	Ordered DFS with Monotonicity,	Satisfied,	6.54,	0,	89,	90, 	5040, 	0,	2261156
+Election50.pet,	A Leader,	Ordered DFS with Monotonicity,	Satisfied,	8.15,	0,	99,	100, 	6225, 	0,	2745184
+Election1.pet,	A Leader,	Ordered BestFS with Monotonicity,	Satisfied,	0.02,	1,	2,	2, 	3, 	1,	43984
+Election5.pet,	A Leader,	Ordered BestFS with Monotonicity,	Satisfied,	0.05,	8,	27,	9, 	80, 	8,	43984
+Election10.pet,	A Leader,	Ordered BestFS with Monotonicity,	Satisfied,	0.12,	19,	65,	20, 	363, 	19,	43984
+Election15.pet,	A Leader,	Ordered BestFS with Monotonicity,	Satisfied,	0.28,	29,	135,	30, 	843, 	29,	43984
+Election20.pet,	A Leader,	Ordered BestFS with Monotonicity,	Satisfied,	0.68,	39,	230,	40, 	1523, 	39,	326312
+Election25.pet,	A Leader,	Ordered BestFS with Monotonicity,	Satisfied,	1.63,	49,	350,	50, 	2403, 	49,	446028
+Election30.pet,	A Leader,	Ordered BestFS with Monotonicity,	Satisfied,	3.03,	59,	495,	60, 	3483, 	59,	590540
+Election35.pet,	A Leader,	Ordered BestFS with Monotonicity,	Satisfied,	4.74,	68,	732,	69, 	4760, 	68,	759540
+Election40.pet,	A Leader,	Ordered BestFS with Monotonicity,	Satisfied,	6.77,	78,	937,	79, 	6240, 	78,	952788
+Election45.pet,	A Leader,	Ordered BestFS with Monotonicity,	Satisfied,	13.16,	88,	1167,	89, 	7920, 	88,	1170832
+Election50.pet,	A Leader,	Ordered BestFS with Monotonicity,	Satisfied,	19.08,	98,	1422,	99, 	9800, 	98,	1413164
+Election1.pet,	Correct Leader,	DFS with Monotonicity,	Satisfied,	0.04,	0,	1,	2, 	3, 	0,	43984
+Election5.pet,	Correct Leader,	DFS with Monotonicity,	Satisfied,	0.1,	0,	9,	10, 	60, 	0,	43984
+Election10.pet,	Correct Leader,	DFS with Monotonicity,	Satisfied,	0.22,	0,	18,	19, 	173, 	0,	43984
+Election15.pet,	Correct Leader,	DFS with Monotonicity,	Satisfied,	0.43,	0,	28,	29, 	408, 	0,	383820
+Election20.pet,	Correct Leader,	DFS with Monotonicity,	Satisfied,	0.73,	0,	38,	39, 	743, 	0,	574376
+Election25.pet,	Correct Leader,	DFS with Monotonicity,	Satisfied,	1.25,	0,	48,	49, 	1178, 	0,	813856
+Election30.pet,	Correct Leader,	DFS with Monotonicity,	Satisfied,	1.86,	0,	58,	59, 	1713, 	0,	1102300
+Election35.pet,	Correct Leader,	DFS with Monotonicity,	Satisfied,	3.16,	0,	69,	70, 	3045, 	0,	1439672
+Election40.pet,	Correct Leader,	DFS with Monotonicity,	Satisfied,	4.14,	0,	79,	80, 	3980, 	0,	1825860
+Election45.pet,	Correct Leader,	DFS with Monotonicity,	Satisfied,	6.38,	0,	89,	90, 	5040, 	0,	2261168
+Election50.pet,	Correct Leader,	DFS with Monotonicity,	Satisfied,	8.2,	0,	99,	100, 	6225, 	0,	2745196
+Election1.pet,	Correct Leader,	BFS with Monotonicity,	Satisfied,	0.03,	1,	2,	2, 	3, 	1,	44116
+Election5.pet,	Correct Leader,	BFS with Monotonicity,	Satisfied,	0.09,	9,	20,	10, 	94, 	9,	44116
+Election10.pet,	Correct Leader,	BFS with Monotonicity,	Satisfied,	0.24,	18,	81,	19, 	335, 	18,	44116
+Election15.pet,	Correct Leader,	BFS with Monotonicity,	Satisfied,	0.52,	28,	161,	29, 	800, 	28,	384828
+Election20.pet,	Correct Leader,	BFS with Monotonicity,	Satisfied,	1.21,	38,	266,	39, 	1465, 	38,	574368
+Election25.pet,	Correct Leader,	BFS with Monotonicity,	Satisfied,	2.99,	48,	396,	49, 	2330, 	48,	813860
+Election30.pet,	Correct Leader,	BFS with Monotonicity,	Satisfied,	4.74,	58,	551,	59, 	3395, 	58,	1102300
+Election35.pet,	Correct Leader,	BFS with Monotonicity,	Satisfied,	11.75,	69,	665,	70, 	4864, 	69,	1439712
+Election40.pet,	Correct Leader,	BFS with Monotonicity,	Satisfied,	17.08,	79,	860,	80, 	6359, 	79,	1825860
+Election45.pet,	Correct Leader,	BFS with Monotonicity,	Satisfied,	37.76,	89,	1080,	90, 	8054, 	89,	2261144
+Election50.pet,	Correct Leader,	BFS with Monotonicity,	Satisfied,	50.09,	99,	1325,	100, 	9949, 	99,	2745192
+Election1.pet,	Correct Leader,	DFS States with Monotonicity,	Satisfied,	0.05,	0,	1,	2, 	3, 	0,	44116
+Election5.pet,	Correct Leader,	DFS States with Monotonicity,	Satisfied,	0.1,	0,	9,	10, 	60, 	0,	44116
+Election10.pet,	Correct Leader,	DFS States with Monotonicity,	Satisfied,	0.22,	0,	18,	19, 	173, 	0,	44116
+Election15.pet,	Correct Leader,	DFS States with Monotonicity,	Satisfied,	0.42,	0,	28,	29, 	408, 	0,	383824
+Election20.pet,	Correct Leader,	DFS States with Monotonicity,	Satisfied,	0.74,	0,	38,	39, 	743, 	0,	574364
+Election25.pet,	Correct Leader,	DFS States with Monotonicity,	Satisfied,	1.25,	0,	48,	49, 	1178, 	0,	813856
+Election30.pet,	Correct Leader,	DFS States with Monotonicity,	Satisfied,	1.86,	0,	58,	59, 	1713, 	0,	1102300
+Election35.pet,	Correct Leader,	DFS States with Monotonicity,	Satisfied,	3.19,	0,	69,	70, 	3045, 	0,	1439704
+Election40.pet,	Correct Leader,	DFS States with Monotonicity,	Satisfied,	4.14,	0,	79,	80, 	3980, 	0,	1825840
+Election45.pet,	Correct Leader,	DFS States with Monotonicity,	Satisfied,	6.55,	0,	89,	90, 	5040, 	0,	2261112
+Election50.pet,	Correct Leader,	DFS States with Monotonicity,	Satisfied,	8.17,	0,	99,	100, 	6225, 	0,	2745200
+Election1.pet,	Correct Leader,	DFS Bools with Monotonicity,	Satisfied,	0.04,	0,	1,	2, 	3, 	0,	44116
+Election5.pet,	Correct Leader,	DFS Bools with Monotonicity,	Satisfied,	0.1,	0,	9,	10, 	60, 	0,	44116
+Election10.pet,	Correct Leader,	DFS Bools with Monotonicity,	Satisfied,	0.22,	0,	18,	19, 	173, 	0,	44116
+Election15.pet,	Correct Leader,	DFS Bools with Monotonicity,	Satisfied,	0.42,	0,	28,	29, 	408, 	0,	383764
+Election20.pet,	Correct Leader,	DFS Bools with Monotonicity,	Satisfied,	0.75,	0,	38,	39, 	743, 	0,	574364
+Election25.pet,	Correct Leader,	DFS Bools with Monotonicity,	Satisfied,	1.27,	0,	48,	49, 	1178, 	0,	813860
+Election30.pet,	Correct Leader,	DFS Bools with Monotonicity,	Satisfied,	1.86,	0,	58,	59, 	1713, 	0,	1102292
+Election35.pet,	Correct Leader,	DFS Bools with Monotonicity,	Satisfied,	3.2,	0,	69,	70, 	3045, 	0,	1439676
+Election40.pet,	Correct Leader,	DFS Bools with Monotonicity,	Satisfied,	4.11,	0,	79,	80, 	3980, 	0,	1825860
+Election45.pet,	Correct Leader,	DFS Bools with Monotonicity,	Satisfied,	6.53,	0,	89,	90, 	5040, 	0,	2261156
+Election50.pet,	Correct Leader,	DFS Bools with Monotonicity,	Satisfied,	8.21,	0,	99,	100, 	6225, 	0,	2745188
+Election1.pet,	Correct Leader,	BestFS with Monotonicity,	Satisfied,	0.02,	1,	2,	2, 	3, 	1,	44116
+PeTe error, returned: -11,	44116
+Election10.pet,	Correct Leader,	BestFS with Monotonicity,	Satisfied,	0.13,	19,	65,	20, 	363, 	19,	44116
+Election15.pet,	Correct Leader,	BestFS with Monotonicity,	Satisfied,	0.28,	29,	135,	30, 	843, 	29,	44116
+Election20.pet,	Correct Leader,	BestFS with Monotonicity,	Satisfied,	0.68,	39,	230,	40, 	1523, 	39,	326304
+Election25.pet,	Correct Leader,	BestFS with Monotonicity,	Satisfied,	1.73,	49,	350,	50, 	2403, 	49,	446188
+Election30.pet,	Correct Leader,	BestFS with Monotonicity,	Satisfied,	3.31,	59,	495,	60, 	3483, 	59,	590580
+PeTe error, returned: -11,	759528
+PeTe error, returned: -11,	952812
+PeTe error, returned: -11,	1170824
+PeTe error, returned: -11,	1413112
+Election1.pet,	Correct Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.04,	1,	2,	2, 	3, 	1,	44116
+Election5.pet,	Correct Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.09,	8,	27,	9, 	80, 	8,	44116
+Election10.pet,	Correct Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.23,	19,	65,	20, 	363, 	19,	44116
+Election15.pet,	Correct Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.44,	29,	135,	30, 	843, 	29,	383824
+Election20.pet,	Correct Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.78,	39,	230,	40, 	1523, 	39,	574372
+Election25.pet,	Correct Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	1.4,	49,	350,	50, 	2403, 	49,	813692
+Election30.pet,	Correct Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	2.25,	59,	495,	60, 	3483, 	59,	1102296
+Election35.pet,	Correct Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	3.68,	68,	732,	69, 	4760, 	68,	1439692
+Election40.pet,	Correct Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	5.04,	78,	937,	79, 	6240, 	78,	1825828
+Election45.pet,	Correct Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	8.44,	88,	1167,	89, 	7920, 	88,	2261152
+Election50.pet,	Correct Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	11.31,	98,	1422,	99, 	9800, 	98,	2745196
+Election1.pet,	Correct Leader,	Ordered BFS with Monotonicity,	Satisfied,	0.04,	1,	2,	2, 	3, 	1,	44116
+Election5.pet,	Correct Leader,	Ordered BFS with Monotonicity,	Satisfied,	0.1,	9,	20,	10, 	94, 	9,	44116
+Election10.pet,	Correct Leader,	Ordered BFS with Monotonicity,	Satisfied,	0.23,	18,	81,	19, 	335, 	18,	44116
+Election15.pet,	Correct Leader,	Ordered BFS with Monotonicity,	Satisfied,	0.5,	28,	161,	29, 	800, 	28,	383784
+Election20.pet,	Correct Leader,	Ordered BFS with Monotonicity,	Satisfied,	1.16,	38,	266,	39, 	1465, 	38,	574376
+Election25.pet,	Correct Leader,	Ordered BFS with Monotonicity,	Satisfied,	2.84,	48,	396,	49, 	2330, 	48,	813848
+Election30.pet,	Correct Leader,	Ordered BFS with Monotonicity,	Satisfied,	5.06,	58,	551,	59, 	3395, 	58,	1102304
+Election35.pet,	Correct Leader,	Ordered BFS with Monotonicity,	Satisfied,	11.18,	69,	665,	70, 	4864, 	69,	1439716
+Election40.pet,	Correct Leader,	Ordered BFS with Monotonicity,	Satisfied,	16.35,	79,	860,	80, 	6359, 	79,	1825868
+Election45.pet,	Correct Leader,	Ordered BFS with Monotonicity,	Satisfied,	33.29,	89,	1080,	90, 	8054, 	89,	2261156
+Election50.pet,	Correct Leader,	Ordered BFS with Monotonicity,	Satisfied,	53.39,	99,	1325,	100, 	9949, 	99,	2745188
+Election1.pet,	Correct Leader,	Ordered DFS with Monotonicity,	Satisfied,	0.04,	0,	1,	2, 	3, 	0,	44116
+Election5.pet,	Correct Leader,	Ordered DFS with Monotonicity,	Satisfied,	0.08,	0,	9,	10, 	60, 	0,	44116
+Election10.pet,	Correct Leader,	Ordered DFS with Monotonicity,	Satisfied,	0.23,	0,	18,	19, 	173, 	0,	44116
+Election15.pet,	Correct Leader,	Ordered DFS with Monotonicity,	Satisfied,	0.43,	0,	28,	29, 	408, 	0,	383816
+Election20.pet,	Correct Leader,	Ordered DFS with Monotonicity,	Satisfied,	0.75,	0,	38,	39, 	743, 	0,	574360
+Election25.pet,	Correct Leader,	Ordered DFS with Monotonicity,	Satisfied,	1.25,	0,	48,	49, 	1178, 	0,	813868
+Election30.pet,	Correct Leader,	Ordered DFS with Monotonicity,	Satisfied,	1.86,	0,	58,	59, 	1713, 	0,	1102264
+Election35.pet,	Correct Leader,	Ordered DFS with Monotonicity,	Satisfied,	3.21,	0,	69,	70, 	3045, 	0,	1439708
+Election40.pet,	Correct Leader,	Ordered DFS with Monotonicity,	Satisfied,	4.13,	0,	79,	80, 	3980, 	0,	1825868
+Election45.pet,	Correct Leader,	Ordered DFS with Monotonicity,	Satisfied,	6.51,	0,	89,	90, 	5040, 	0,	2261156
+Election50.pet,	Correct Leader,	Ordered DFS with Monotonicity,	Satisfied,	8.25,	0,	99,	100, 	6225, 	0,	2745196
+Election1.pet,	Correct Leader,	Ordered BestFS with Monotonicity,	Satisfied,	0.02,	1,	2,	2, 	3, 	1,	44116
+PeTe error, returned: -11,	44116
+Election10.pet,	Correct Leader,	Ordered BestFS with Monotonicity,	Satisfied,	0.12,	19,	65,	20, 	363, 	19,	44116
+Election15.pet,	Correct Leader,	Ordered BestFS with Monotonicity,	Satisfied,	0.27,	29,	135,	30, 	843, 	29,	44116
+Election20.pet,	Correct Leader,	Ordered BestFS with Monotonicity,	Satisfied,	0.66,	39,	230,	40, 	1523, 	39,	326316
+Election25.pet,	Correct Leader,	Ordered BestFS with Monotonicity,	Satisfied,	1.68,	49,	350,	50, 	2403, 	49,	446016
+Election30.pet,	Correct Leader,	Ordered BestFS with Monotonicity,	Satisfied,	3.01,	59,	495,	60, 	3483, 	59,	590584
+Election35.pet,	Correct Leader,	Ordered BestFS with Monotonicity,	Satisfied,	4.68,	68,	732,	69, 	4760, 	68,	759540
+PeTe error, returned: -11,	952760
+PeTe error, returned: -11,	1170824
+PeTe error, returned: -11,	1413116
+Mutual1.pet,	4 Done,	DFS with Monotonicity,	Not satisfiable,	0.06,	5,	5,	0, 	11, 	0,	44116
+Mutual5.pet,	4 Done,	DFS with Monotonicity,	Not satisfiable,	0.2,	114,	168,	0, 	960, 	95,	44116
+Mutual10.pet,	4 Done,	DFS with Monotonicity,	Not satisfiable,	4.93,	1601,	1610,	0, 	26775, 	45,	294840
+Mutual15.pet,	4 Done,	DFS with Monotonicity,	Not satisfiable,	8.4,	1158,	3045,	0, 	54868, 	2318,	387596
+Mutual20.pet,	4 Done,	DFS with Monotonicity,	Not satisfiable,	41.46,	2189,	7519,	0, 	180937, 	6201,	480544
+Mutual25.pet,	4 Done,	DFS with Monotonicity,	Not satisfiable,	95.3,	3379,	13120,	0, 	399048, 	11038,	573256
+Mutual1.pet,	4 Done,	BFS with Monotonicity,	Not satisfiable,	0.07,	6,	5,	0, 	12, 	1,	44116
+Mutual5.pet,	4 Done,	BFS with Monotonicity,	Not satisfiable,	0.56,	356,	450,	0, 	2735, 	165,	201920
+Mutual10.pet,	4 Done,	BFS with Monotonicity,	Not satisfiable,	48.93,	1566,	1655,	0, 	26145, 	10,	294832
+Mutual15.pet,	4 Done,	BFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	387604
+Mutual20.pet,	4 Done,	BFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	480488
+Mutual25.pet,	4 Done,	BFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	573416
+Mutual1.pet,	4 Done,	DFS States with Monotonicity,	Not satisfiable,	0.07,	5,	5,	0, 	11, 	0,	44116
+Mutual5.pet,	4 Done,	DFS States with Monotonicity,	Not satisfiable,	0.2,	114,	168,	0, 	960, 	95,	44116
+Mutual10.pet,	4 Done,	DFS States with Monotonicity,	Not satisfiable,	4.96,	1601,	1610,	0, 	26775, 	45,	294836
+Mutual15.pet,	4 Done,	DFS States with Monotonicity,	Not satisfiable,	8.35,	1158,	3045,	0, 	54868, 	2318,	387608
+Mutual20.pet,	4 Done,	DFS States with Monotonicity,	Not satisfiable,	41.58,	2189,	7519,	0, 	180937, 	6201,	480532
+Mutual25.pet,	4 Done,	DFS States with Monotonicity,	Not satisfiable,	97.34,	3379,	13120,	0, 	399048, 	11038,	573256
+Mutual1.pet,	4 Done,	DFS Bools with Monotonicity,	Not satisfiable,	0.07,	5,	5,	0, 	11, 	0,	44116
+Mutual5.pet,	4 Done,	DFS Bools with Monotonicity,	Not satisfiable,	0.19,	68,	84,	0, 	509, 	5,	44116
+Mutual10.pet,	4 Done,	DFS Bools with Monotonicity,	Not satisfiable,	15.37,	1556,	1565,	0, 	26010, 	0,	294832
+Mutual15.pet,	4 Done,	DFS Bools with Monotonicity,	Not satisfiable,	12.58,	713,	769,	0, 	19109, 	15,	387576
+Mutual20.pet,	4 Done,	DFS Bools with Monotonicity,	Not satisfiable,	56.67,	1298,	1374,	0, 	47684, 	20,	480540
+Mutual25.pet,	4 Done,	DFS Bools with Monotonicity,	Not satisfiable,	172.42,	2058,	2154,	0, 	96109, 	25,	573264
+Mutual1.pet,	4 Done,	BestFS with Monotonicity,	Not satisfiable,	0.03,	6,	5,	0, 	12, 	1,	44116
+Mutual5.pet,	4 Done,	BestFS with Monotonicity,	Not satisfiable,	0.33,	206,	225,	0, 	1530, 	15,	139884
+Mutual10.pet,	4 Done,	BestFS with Monotonicity,	Not satisfiable,	65.25,	4423,	8520,	0, 	75451, 	2867,	186412
+Mutual15.pet,	4 Done,	BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	232804
+Mutual20.pet,	4 Done,	BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	279360
+Mutual25.pet,	4 Done,	BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	325876
+Mutual1.pet,	4 Done,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.06,	6,	5,	0, 	12, 	1,	44116
+Mutual5.pet,	4 Done,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.22,	206,	225,	0, 	1530, 	11,	44116
+Mutual10.pet,	4 Done,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	9.68,	1611,	1700,	0, 	26910, 	46,	294840
+Mutual15.pet,	4 Done,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	190.62,	5466,	5675,	0, 	144765, 	106,	387728
+Mutual20.pet,	4 Done,	Ordered Largest Index Search with Monotonicity,	OutOfTime,	-,	-,	-,	-,	480540
+Mutual25.pet,	4 Done,	Ordered Largest Index Search with Monotonicity,	OutOfTime,	-,	-,	-,	-,	573280
+Mutual1.pet,	4 Done,	Ordered BFS with Monotonicity,	Not satisfiable,	0.07,	6,	5,	0, 	12, 	1,	44116
+Mutual5.pet,	4 Done,	Ordered BFS with Monotonicity,	Not satisfiable,	0.38,	356,	450,	0, 	2735, 	99,	201924
+Mutual10.pet,	4 Done,	Ordered BFS with Monotonicity,	Not satisfiable,	17.18,	1566,	1655,	0, 	26145, 	1,	294852
+Mutual15.pet,	4 Done,	Ordered BFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	387592
+Mutual20.pet,	4 Done,	Ordered BFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	480552
+Mutual25.pet,	4 Done,	Ordered BFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	573284
+Mutual1.pet,	4 Done,	Ordered DFS with Monotonicity,	Not satisfiable,	0.07,	5,	5,	0, 	11, 	0,	44116
+Mutual5.pet,	4 Done,	Ordered DFS with Monotonicity,	Not satisfiable,	0.19,	114,	168,	0, 	960, 	46,	44116
+Mutual10.pet,	4 Done,	Ordered DFS with Monotonicity,	Not satisfiable,	2.88,	1601,	1610,	0, 	26775, 	45,	294844
+Mutual15.pet,	4 Done,	Ordered DFS with Monotonicity,	Not satisfiable,	6.5,	1158,	3045,	0, 	54868, 	587,	387600
+Mutual20.pet,	4 Done,	Ordered DFS with Monotonicity,	Not satisfiable,	27.78,	2189,	7519,	0, 	180937, 	1041,	480492
+Mutual25.pet,	4 Done,	Ordered DFS with Monotonicity,	Not satisfiable,	66,	3379,	13120,	0, 	399048, 	1981,	573556
+Mutual1.pet,	4 Done,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.02,	6,	5,	0, 	12, 	1,	44116
+Mutual5.pet,	4 Done,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.15,	206,	225,	0, 	1530, 	11,	44116
+Mutual10.pet,	4 Done,	Ordered BestFS with Monotonicity,	Not satisfiable,	37.81,	4423,	8520,	0, 	75451, 	1096,	186432
+Mutual15.pet,	4 Done,	Ordered BestFS with Monotonicity,	Not satisfiable,	201.35,	5466,	5675,	0, 	144765, 	106,	232944
+Mutual20.pet,	4 Done,	Ordered BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	279368
+Mutual25.pet,	4 Done,	Ordered BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	325920
+Mutual1.pet,	2 Critical,	DFS with Monotonicity,	Not satisfiable,	0.06,	5,	5,	0, 	11, 	0,	44116
+Mutual5.pet,	2 Critical,	DFS with Monotonicity,	Not satisfiable,	0.19,	114,	168,	0, 	960, 	95,	44116
+Mutual10.pet,	2 Critical,	DFS with Monotonicity,	Not satisfiable,	4.87,	1601,	1610,	0, 	26775, 	45,	294824
+Mutual15.pet,	2 Critical,	DFS with Monotonicity,	Not satisfiable,	8.39,	1158,	3045,	0, 	54868, 	2318,	387580
+Mutual20.pet,	2 Critical,	DFS with Monotonicity,	Not satisfiable,	41.39,	2189,	7519,	0, 	180937, 	6201,	480488
+Mutual25.pet,	2 Critical,	DFS with Monotonicity,	Not satisfiable,	95.05,	3379,	13120,	0, 	399048, 	11038,	573284
+Mutual1.pet,	2 Critical,	BFS with Monotonicity,	Not satisfiable,	0.06,	6,	5,	0, 	12, 	1,	44116
+Mutual5.pet,	2 Critical,	BFS with Monotonicity,	Not satisfiable,	0.55,	356,	450,	0, 	2735, 	165,	201924
+Mutual10.pet,	2 Critical,	BFS with Monotonicity,	Not satisfiable,	49.96,	1566,	1655,	0, 	26145, 	10,	294820
+Mutual15.pet,	2 Critical,	BFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	387556
+Mutual20.pet,	2 Critical,	BFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	480500
+Mutual25.pet,	2 Critical,	BFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	573276
+Mutual1.pet,	2 Critical,	DFS States with Monotonicity,	Not satisfiable,	0.06,	5,	5,	0, 	11, 	0,	44116
+Mutual5.pet,	2 Critical,	DFS States with Monotonicity,	Not satisfiable,	0.2,	114,	168,	0, 	960, 	95,	44116
+Mutual10.pet,	2 Critical,	DFS States with Monotonicity,	Not satisfiable,	4.91,	1601,	1610,	0, 	26775, 	45,	294832
+Mutual15.pet,	2 Critical,	DFS States with Monotonicity,	Not satisfiable,	8.41,	1158,	3045,	0, 	54868, 	2318,	387600
+Mutual20.pet,	2 Critical,	DFS States with Monotonicity,	Not satisfiable,	41.54,	2189,	7519,	0, 	180937, 	6201,	480544
+Mutual25.pet,	2 Critical,	DFS States with Monotonicity,	Not satisfiable,	96,	3379,	13120,	0, 	399048, 	11038,	573276
+Mutual1.pet,	2 Critical,	DFS Bools with Monotonicity,	Not satisfiable,	0.06,	5,	5,	0, 	11, 	0,	44116
+Mutual5.pet,	2 Critical,	DFS Bools with Monotonicity,	Not satisfiable,	0.19,	68,	84,	0, 	509, 	5,	44116
+Mutual10.pet,	2 Critical,	DFS Bools with Monotonicity,	Not satisfiable,	15.36,	1556,	1565,	0, 	26010, 	0,	294840
+Mutual15.pet,	2 Critical,	DFS Bools with Monotonicity,	Not satisfiable,	12.44,	713,	769,	0, 	19109, 	15,	387608
+Mutual20.pet,	2 Critical,	DFS Bools with Monotonicity,	Not satisfiable,	56.5,	1298,	1374,	0, 	47684, 	20,	480540
+Mutual25.pet,	2 Critical,	DFS Bools with Monotonicity,	Not satisfiable,	172.04,	2058,	2154,	0, 	96109, 	25,	573284
+Mutual1.pet,	2 Critical,	BestFS with Monotonicity,	Not satisfiable,	0.03,	6,	5,	0, 	12, 	1,	44116
+Mutual5.pet,	2 Critical,	BestFS with Monotonicity,	Not satisfiable,	0.32,	206,	225,	0, 	1530, 	15,	77920
+Mutual10.pet,	2 Critical,	BestFS with Monotonicity,	Not satisfiable,	54.97,	2782,	4277,	0, 	47677, 	1226,	186416
+Mutual15.pet,	2 Critical,	BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	232932
+Mutual20.pet,	2 Critical,	BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	279364
+Mutual25.pet,	2 Critical,	BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	325908
+Mutual1.pet,	2 Critical,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.07,	6,	5,	0, 	12, 	1,	44116
+Mutual5.pet,	2 Critical,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.22,	206,	225,	0, 	1530, 	11,	44116
+Mutual10.pet,	2 Critical,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	10.07,	1611,	1700,	0, 	26910, 	46,	294832
+Mutual15.pet,	2 Critical,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	196.54,	5466,	5675,	0, 	144765, 	106,	387704
+Mutual20.pet,	2 Critical,	Ordered Largest Index Search with Monotonicity,	OutOfTime,	-,	-,	-,	-,	480500
+Mutual25.pet,	2 Critical,	Ordered Largest Index Search with Monotonicity,	OutOfTime,	-,	-,	-,	-,	573284
+Mutual1.pet,	2 Critical,	Ordered BFS with Monotonicity,	Not satisfiable,	0.06,	6,	5,	0, 	12, 	1,	44116
+Mutual5.pet,	2 Critical,	Ordered BFS with Monotonicity,	Not satisfiable,	0.38,	356,	450,	0, 	2735, 	99,	201928
+Mutual10.pet,	2 Critical,	Ordered BFS with Monotonicity,	Not satisfiable,	17.56,	1566,	1655,	0, 	26145, 	1,	294800
+Mutual15.pet,	2 Critical,	Ordered BFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	387564
+Mutual20.pet,	2 Critical,	Ordered BFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	480540
+Mutual25.pet,	2 Critical,	Ordered BFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	573276
+Mutual1.pet,	2 Critical,	Ordered DFS with Monotonicity,	Not satisfiable,	0.07,	5,	5,	0, 	11, 	0,	44116
+Mutual5.pet,	2 Critical,	Ordered DFS with Monotonicity,	Not satisfiable,	0.2,	114,	168,	0, 	960, 	46,	44116
+Mutual10.pet,	2 Critical,	Ordered DFS with Monotonicity,	Not satisfiable,	2.81,	1601,	1610,	0, 	26775, 	45,	294824
+Mutual15.pet,	2 Critical,	Ordered DFS with Monotonicity,	Not satisfiable,	6.51,	1158,	3045,	0, 	54868, 	587,	387592
+Mutual20.pet,	2 Critical,	Ordered DFS with Monotonicity,	Not satisfiable,	27.12,	2189,	7519,	0, 	180937, 	1041,	480532
+Mutual25.pet,	2 Critical,	Ordered DFS with Monotonicity,	Not satisfiable,	66.06,	3379,	13120,	0, 	399048, 	1981,	573532
+Mutual1.pet,	2 Critical,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.04,	6,	5,	0, 	12, 	1,	44116
+Mutual5.pet,	2 Critical,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.15,	206,	225,	0, 	1530, 	11,	44116
+Mutual10.pet,	2 Critical,	Ordered BestFS with Monotonicity,	Not satisfiable,	20.91,	2782,	4277,	0, 	47677, 	555,	186416
+Mutual15.pet,	2 Critical,	Ordered BestFS with Monotonicity,	Not satisfiable,	201.2,	5466,	5675,	0, 	144765, 	106,	232944
+Mutual20.pet,	2 Critical,	Ordered BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	279360
+Mutual25.pet,	2 Critical,	Ordered BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	325908
+Mutual1.pet,	3 Done,	DFS with Monotonicity,	Satisfied,	0.07,	0,	3,	4, 	5, 	0,	44116
+Mutual5.pet,	3 Done,	DFS with Monotonicity,	Satisfied,	0.17,	26,	53,	15, 	262, 	15,	44116
+Mutual10.pet,	3 Done,	DFS with Monotonicity,	Satisfied,	4.18,	1471,	1488,	18, 	24624, 	28,	294816
+Mutual15.pet,	3 Done,	DFS with Monotonicity,	Satisfied,	0.76,	70,	328,	15, 	5337, 	197,	387588
+Mutual20.pet,	3 Done,	DFS with Monotonicity,	Satisfied,	3.46,	291,	1263,	15, 	30416, 	1017,	480496
+Mutual25.pet,	3 Done,	DFS with Monotonicity,	Satisfied,	2.49,	104,	840,	15, 	24130, 	514,	573276
+Mutual1.pet,	3 Done,	BFS with Monotonicity,	Satisfied,	0.06,	2,	4,	3, 	8, 	1,	44116
+Mutual5.pet,	3 Done,	BFS with Monotonicity,	Satisfied,	0.3,	151,	285,	11, 	1425, 	97,	44116
+Mutual10.pet,	3 Done,	BFS with Monotonicity,	Satisfied,	17.46,	709,	1502,	18, 	13375, 	10,	294816
+Mutual15.pet,	3 Done,	BFS with Monotonicity,	Satisfied,	6.7,	209,	2294,	11, 	6254, 	159,	387604
+Mutual20.pet,	3 Done,	BFS with Monotonicity,	Satisfied,	12.55,	209,	3339,	11, 	8344, 	159,	480384
+Mutual25.pet,	3 Done,	BFS with Monotonicity,	Satisfied,	18.48,	209,	4384,	11, 	10434, 	159,	573284
+Mutual1.pet,	3 Done,	DFS States with Monotonicity,	Satisfied,	0.07,	0,	3,	4, 	5, 	0,	44116
+Mutual5.pet,	3 Done,	DFS States with Monotonicity,	Satisfied,	0.18,	26,	53,	15, 	262, 	15,	44116
+Mutual10.pet,	3 Done,	DFS States with Monotonicity,	Satisfied,	4.24,	1471,	1488,	18, 	24624, 	28,	294828
+Mutual15.pet,	3 Done,	DFS States with Monotonicity,	Satisfied,	0.76,	70,	328,	15, 	5337, 	197,	387596
+Mutual20.pet,	3 Done,	DFS States with Monotonicity,	Satisfied,	3.52,	291,	1263,	15, 	30416, 	1017,	480532
+Mutual25.pet,	3 Done,	DFS States with Monotonicity,	Satisfied,	2.49,	104,	840,	15, 	24130, 	514,	573272
+Mutual1.pet,	3 Done,	DFS Bools with Monotonicity,	Satisfied,	0.07,	0,	3,	3, 	5, 	0,	44116
+Mutual5.pet,	3 Done,	DFS Bools with Monotonicity,	Satisfied,	0.16,	15,	41,	13, 	182, 	5,	44116
+Mutual10.pet,	3 Done,	DFS Bools with Monotonicity,	Satisfied,	10.95,	1019,	1514,	18, 	17993, 	0,	294836
+Mutual15.pet,	3 Done,	DFS Bools with Monotonicity,	Satisfied,	0.53,	35,	121,	23, 	1432, 	15,	387616
+Mutual20.pet,	3 Done,	DFS Bools with Monotonicity,	Satisfied,	0.8,	45,	161,	28, 	2507, 	20,	480540
+Mutual25.pet,	3 Done,	DFS Bools with Monotonicity,	Satisfied,	1.1,	55,	201,	33, 	3882, 	25,	573256
+Mutual1.pet,	3 Done,	BestFS with Monotonicity,	Satisfied,	0.03,	2,	4,	3, 	8, 	1,	44116
+Mutual5.pet,	3 Done,	BestFS with Monotonicity,	Satisfied,	0.21,	143,	170,	13, 	1049, 	8,	44116
+Mutual10.pet,	3 Done,	BestFS with Monotonicity,	Satisfied,	0.28,	26,	161,	11, 	476, 	22,	44116
+Mutual15.pet,	3 Done,	BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	232944
+Mutual20.pet,	3 Done,	BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	279356
+Mutual25.pet,	3 Done,	BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	325920
+Mutual1.pet,	3 Done,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.07,	2,	4,	3, 	8, 	1,	44116
+Mutual5.pet,	3 Done,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.19,	142,	170,	13, 	1042, 	4,	44116
+Mutual10.pet,	3 Done,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.31,	17,	135,	18, 	423, 	1,	44116
+Mutual15.pet,	3 Done,	Ordered Largest Index Search with Monotonicity,	Satisfied,	182.7,	5282,	5500,	23, 	139717, 	79,	387596
+Mutual20.pet,	3 Done,	Ordered Largest Index Search with Monotonicity,	OutOfTime,	-,	-,	-,	-,	480536
+Mutual25.pet,	3 Done,	Ordered Largest Index Search with Monotonicity,	OutOfTime,	-,	-,	-,	-,	573260
+Mutual1.pet,	3 Done,	Ordered BFS with Monotonicity,	Satisfied,	0.07,	2,	4,	3, 	8, 	1,	44116
+Mutual5.pet,	3 Done,	Ordered BFS with Monotonicity,	Satisfied,	0.26,	151,	285,	11, 	1425, 	56,	44116
+Mutual10.pet,	3 Done,	Ordered BFS with Monotonicity,	Satisfied,	8.73,	709,	1502,	18, 	13375, 	1,	294812
+Mutual15.pet,	3 Done,	Ordered BFS with Monotonicity,	Satisfied,	6.85,	209,	2294,	11, 	6254, 	76,	387584
+Mutual20.pet,	3 Done,	Ordered BFS with Monotonicity,	Satisfied,	12.66,	209,	3339,	11, 	8344, 	76,	480540
+Mutual25.pet,	3 Done,	Ordered BFS with Monotonicity,	Satisfied,	18.6,	209,	4384,	11, 	10434, 	76,	573248
+Mutual1.pet,	3 Done,	Ordered DFS with Monotonicity,	Satisfied,	0.07,	0,	3,	4, 	5, 	0,	44116
+Mutual5.pet,	3 Done,	Ordered DFS with Monotonicity,	Satisfied,	0.16,	26,	53,	15, 	262, 	7,	44116
+Mutual10.pet,	3 Done,	Ordered DFS with Monotonicity,	Satisfied,	2.55,	1471,	1488,	18, 	24624, 	28,	294824
+Mutual15.pet,	3 Done,	Ordered DFS with Monotonicity,	Satisfied,	0.71,	70,	328,	15, 	5337, 	39,	387588
+Mutual20.pet,	3 Done,	Ordered DFS with Monotonicity,	Satisfied,	2.9,	291,	1263,	15, 	30416, 	164,	480532
+Mutual25.pet,	3 Done,	Ordered DFS with Monotonicity,	Satisfied,	2.23,	104,	840,	15, 	24130, 	55,	573284
+Mutual1.pet,	3 Done,	Ordered BestFS with Monotonicity,	Satisfied,	0.04,	2,	4,	3, 	8, 	1,	44116
+Mutual5.pet,	3 Done,	Ordered BestFS with Monotonicity,	Satisfied,	0.12,	143,	170,	13, 	1049, 	4,	44116
+Mutual10.pet,	3 Done,	Ordered BestFS with Monotonicity,	Satisfied,	0.28,	26,	161,	11, 	476, 	10,	44116
+Mutual15.pet,	3 Done,	Ordered BestFS with Monotonicity,	Satisfied,	191.72,	5283,	5500,	23, 	139744, 	79,	232940
+Mutual20.pet,	3 Done,	Ordered BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	279360
+Mutual25.pet,	3 Done,	Ordered BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	325908
+Mutual1.pet,	1 Critical,	DFS with Monotonicity,	Satisfied,	0.07,	0,	2,	3, 	4, 	0,	44116
+Mutual5.pet,	1 Critical,	DFS with Monotonicity,	Satisfied,	0.17,	0,	10,	11, 	18, 	0,	44116
+Mutual10.pet,	1 Critical,	DFS with Monotonicity,	Satisfied,	0.31,	27,	44,	18, 	649, 	0,	44116
+Mutual15.pet,	1 Critical,	DFS with Monotonicity,	Satisfied,	0.4,	0,	10,	11, 	18, 	0,	387564
+Mutual20.pet,	1 Critical,	DFS with Monotonicity,	Satisfied,	0.52,	0,	10,	11, 	18, 	0,	480536
+Mutual25.pet,	1 Critical,	DFS with Monotonicity,	Satisfied,	0.65,	0,	10,	11, 	18, 	0,	573280
+Mutual1.pet,	1 Critical,	BFS with Monotonicity,	Satisfied,	0.06,	2,	3,	3, 	7, 	1,	44116
+Mutual5.pet,	1 Critical,	BFS with Monotonicity,	Satisfied,	0.16,	7,	33,	4, 	79, 	5,	44116
+Mutual10.pet,	1 Critical,	BFS with Monotonicity,	Satisfied,	0.33,	19,	128,	12, 	470, 	10,	294824
+Mutual15.pet,	1 Critical,	BFS with Monotonicity,	Satisfied,	0.46,	7,	103,	4, 	219, 	5,	387592
+Mutual20.pet,	1 Critical,	BFS with Monotonicity,	Satisfied,	0.63,	7,	138,	4, 	289, 	5,	480540
+Mutual25.pet,	1 Critical,	BFS with Monotonicity,	Satisfied,	0.82,	7,	173,	4, 	359, 	5,	573276
+Mutual1.pet,	1 Critical,	DFS States with Monotonicity,	Satisfied,	0.06,	0,	2,	3, 	4, 	0,	44116
+Mutual5.pet,	1 Critical,	DFS States with Monotonicity,	Satisfied,	0.17,	0,	10,	11, 	18, 	0,	44116
+Mutual10.pet,	1 Critical,	DFS States with Monotonicity,	Satisfied,	0.3,	27,	44,	18, 	649, 	0,	44116
+Mutual15.pet,	1 Critical,	DFS States with Monotonicity,	Satisfied,	0.41,	0,	10,	11, 	18, 	0,	387588
+Mutual20.pet,	1 Critical,	DFS States with Monotonicity,	Satisfied,	0.52,	0,	10,	11, 	18, 	0,	480532
+Mutual25.pet,	1 Critical,	DFS States with Monotonicity,	Satisfied,	0.63,	0,	10,	11, 	18, 	0,	573284
+Mutual1.pet,	1 Critical,	DFS Bools with Monotonicity,	Satisfied,	0.08,	0,	2,	3, 	4, 	0,	44524
+Mutual5.pet,	1 Critical,	DFS Bools with Monotonicity,	Satisfied,	0.16,	4,	23,	10, 	83, 	5,	44116
+Mutual10.pet,	1 Critical,	DFS Bools with Monotonicity,	Satisfied,	0.31,	17,	45,	12, 	505, 	0,	44116
+Mutual15.pet,	1 Critical,	DFS Bools with Monotonicity,	Satisfied,	0.43,	4,	63,	20, 	533, 	15,	387596
+Mutual20.pet,	1 Critical,	DFS Bools with Monotonicity,	Satisfied,	0.58,	4,	83,	25, 	908, 	20,	480528
+Mutual25.pet,	1 Critical,	DFS Bools with Monotonicity,	Satisfied,	0.72,	4,	103,	30, 	1383, 	25,	573284
+Mutual1.pet,	1 Critical,	BestFS with Monotonicity,	Satisfied,	0.04,	2,	3,	3, 	7, 	1,	44116
+Mutual5.pet,	1 Critical,	BestFS with Monotonicity,	Satisfied,	0.09,	17,	48,	13, 	170, 	5,	44116
+Mutual10.pet,	1 Critical,	BestFS with Monotonicity,	Satisfied,	0.19,	7,	77,	8, 	159, 	6,	44116
+Mutual15.pet,	1 Critical,	BestFS with Monotonicity,	Satisfied,	0.58,	67,	308,	23, 	1955, 	15,	232808
+Mutual20.pet,	1 Critical,	BestFS with Monotonicity,	Satisfied,	1.28,	92,	513,	28, 	3635, 	20,	279356
+Mutual25.pet,	1 Critical,	BestFS with Monotonicity,	Satisfied,	2.31,	117,	768,	33, 	5840, 	25,	325920
+Mutual1.pet,	1 Critical,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.07,	2,	3,	3, 	7, 	1,	44116
+Mutual5.pet,	1 Critical,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.17,	16,	48,	13, 	163, 	1,	44116
+Mutual10.pet,	1 Critical,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.3,	14,	124,	15, 	363, 	1,	44116
+Mutual15.pet,	1 Critical,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.48,	66,	308,	23, 	1928, 	1,	387560
+Mutual20.pet,	1 Critical,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.73,	91,	513,	28, 	3598, 	1,	480520
+Mutual25.pet,	1 Critical,	Ordered Largest Index Search with Monotonicity,	Satisfied,	1.03,	116,	768,	33, 	5793, 	1,	573248
+Mutual1.pet,	1 Critical,	Ordered BFS with Monotonicity,	Satisfied,	0.06,	2,	3,	3, 	7, 	1,	44116
+Mutual5.pet,	1 Critical,	Ordered BFS with Monotonicity,	Satisfied,	0.16,	7,	33,	4, 	79, 	4,	44116
+Mutual10.pet,	1 Critical,	Ordered BFS with Monotonicity,	Satisfied,	0.33,	19,	128,	12, 	470, 	1,	294836
+Mutual15.pet,	1 Critical,	Ordered BFS with Monotonicity,	Satisfied,	0.45,	7,	103,	4, 	219, 	4,	387592
+Mutual20.pet,	1 Critical,	Ordered BFS with Monotonicity,	Satisfied,	0.65,	7,	138,	4, 	289, 	4,	480544
+Mutual25.pet,	1 Critical,	Ordered BFS with Monotonicity,	Satisfied,	0.82,	7,	173,	4, 	359, 	4,	573236
+Mutual1.pet,	1 Critical,	Ordered DFS with Monotonicity,	Satisfied,	0.06,	0,	2,	3, 	4, 	0,	44116
+Mutual5.pet,	1 Critical,	Ordered DFS with Monotonicity,	Satisfied,	0.17,	0,	10,	11, 	18, 	0,	44116
+Mutual10.pet,	1 Critical,	Ordered DFS with Monotonicity,	Satisfied,	0.31,	27,	44,	18, 	649, 	0,	44116
+Mutual15.pet,	1 Critical,	Ordered DFS with Monotonicity,	Satisfied,	0.41,	0,	10,	11, 	18, 	0,	387596
+Mutual20.pet,	1 Critical,	Ordered DFS with Monotonicity,	Satisfied,	0.52,	0,	10,	11, 	18, 	0,	480540
+Mutual25.pet,	1 Critical,	Ordered DFS with Monotonicity,	Satisfied,	0.65,	0,	10,	11, 	18, 	0,	573284
+Mutual1.pet,	1 Critical,	Ordered BestFS with Monotonicity,	Satisfied,	0.03,	2,	3,	3, 	7, 	1,	44116
+Mutual5.pet,	1 Critical,	Ordered BestFS with Monotonicity,	Satisfied,	0.1,	17,	48,	13, 	170, 	1,	44116
+Mutual10.pet,	1 Critical,	Ordered BestFS with Monotonicity,	Satisfied,	0.17,	7,	77,	8, 	159, 	6,	44116
+Mutual15.pet,	1 Critical,	Ordered BestFS with Monotonicity,	Satisfied,	0.47,	67,	308,	23, 	1955, 	1,	232776
+Mutual20.pet,	1 Critical,	Ordered BestFS with Monotonicity,	Satisfied,	0.91,	92,	513,	28, 	3635, 	1,	279368
+Mutual25.pet,	1 Critical,	Ordered BestFS with Monotonicity,	Satisfied,	1.59,	117,	768,	33, 	5840, 	1,	325908

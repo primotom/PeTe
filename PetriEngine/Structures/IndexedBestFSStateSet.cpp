@@ -13,6 +13,7 @@ bool IndexedBestFSStateSet::add(State *state){
 	for(waitingIter it = _waiting.begin(); it != _waiting.end();){
 		if(this->less(it.item(), state)){
 			_waiting.remove(it++);
+			this->_countRemove++;
 			skipVisited = true;
 		} else {
 			if(this->leq(state, it.item()))
@@ -33,13 +34,6 @@ bool IndexedBestFSStateSet::add(State *state){
 				// Check we are not smaller then existing states
 				if(leq(state, it->second))
 					return false;
-			} else {
-				// Clean up any superflous states in visited
-				if(less(it->second, state)){
-					it = _visited.erase(it);
-					this->_countRemove++;
-					continue;
-				}
 			}
 			it++;
 		}
