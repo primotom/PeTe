@@ -2,16 +2,16 @@
 
 namespace PetriEngine { namespace Structures {
 
-bool IndexedRFSStateSet::add(State *state){
+bool IndexedRFSStateSet::add(State *state, unsigned int t){
 	// Ensure we're larger than any state in waiting. Pop any states smaller
 	bool skipVisited = false;
-	for(waitingIter it = _waiting.begin(); it != _waiting.end(); ){
-		if(this->less(*it, state)){
-			_waiting.remove(*it++);
+	for(std::list<RStep>::iterator it = _stack.begin() ; it != _stack.end();){
+		if (less((*it).state, state)){
+			_stack.erase(it++);
 			this->_countRemove++;
 			skipVisited = true;
 		} else {
-			if(this->leq(state, *it))
+			if(this->leq(state, (*it).state))
 				return false;
 			it++;
 		}
@@ -39,19 +39,10 @@ bool IndexedRFSStateSet::add(State *state){
 		}
 	}
 
-	return true;
-}
+	_stack.push_back(RStep(state,_net));
 
-void IndexedRFSStateSet::pushToWaiting(State *state){
-	_waiting.push_front(state);
-}
 
-State* IndexedRFSStateSet::getNextState(){
-	if(_waiting.empty())
-		return NULL;
-
-	State* next = _waiting.front();
-	_waiting.pop_front();
+	State* next = state;
 
 	int is = next->stateIndex(*_net);
 
@@ -80,11 +71,25 @@ State* IndexedRFSStateSet::getNextState(){
 	}
 
 	_visited.push_back(IndexedState(is, next));
-	return next;
+
+
+	return true;
+}
+
+
+RStep IndexedRFSStateSet::getNextStep(){
+	RStep retState = _stack.back();
+	return retState;
 }
 
 size_t IndexedRFSStateSet::waitingSize(){
-	return _waiting.size();
+	return _stack.size();
+}
+
+RStep IndexedRFSStateSet::popWating(){
+	RStep temp = _stack.back();
+	_stack.pop_back();
+	return temp;
 }
 
 } // Structures
