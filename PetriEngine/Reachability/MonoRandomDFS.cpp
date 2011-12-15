@@ -60,7 +60,7 @@ ReachabilityResult MonoRandomDFS::reachable(const PetriNet &net,
 	memcpy(s0->boolValuation(), ba, sizeof(BoolVal)*net.numberOfBoolVariables());
 
 	//stack.push_back(s0);
-	states.pushToWating(s0);
+	states.add(s0,0);
 	State* ns = allocator.createState();
 
 	int countdown = rand() % 800000;
@@ -71,85 +71,49 @@ ReachabilityResult MonoRandomDFS::reachable(const PetriNet &net,
 	BigInt transitionFired  = 0;
 	State* s = s0;
 	while(states.waitingSize()){
-		// Progress reporting and abort checking
-		if(count++ & 1<<17){
+		if(count++ & 1<<18){
 			if(states.waitingSize() > max)
 				max = states.waitingSize();
 			count = 0;
-			// Report progress
-			reportProgress((double)(max -states.waitingSize())/(double)max);
-			// Check abort
+			//report progress
+			reportProgress((double)(max-states.waitingSize())/(double)max);
+			//check abort
 			if(abortRequested())
 				return ReachabilityResult(ReachabilityResult::Unknown,
 										"Search was aborted.");
 		}
 
-		s = states.getNextState();
+		//Take first step of the stack
+		RStep tstep = states.getNextStep();
+		State* s = tstep.state;
 
-		//Hack for when query is null and we're look to print a random state
-		if(!query && countdown-- <= 0){
-			//TODO: Remove this hack or copy the code for random state generation, if we need that feature...
-			printf("%s == %i ", net.placeNames()[0].c_str(), s->marking()[0]);
-			for(unsigned int p = 1; p < net.numberOfPlaces(); p++)
-				printf(" and %s == %i ", net.placeNames()[p].c_str(), s->marking()[p]);
-			for(unsigned int x = 0; x < net.numberOfIntVariables(); x++)
-				printf(" and %s == %i ", net.intVariableNames()[x].c_str(), s->intValuation()[x]);
-			for(unsigned int x = 0; x < net.numberOfBoolVariables(); x++)
-				printf(" and %s == %i ", net.boolVariableNames()[x].c_str(), s->boolValuation()[x]);
-			return ReachabilityResult();
-		}
-
-		State* succ[net.numberOfTransitions()];
-		memset(succ, 0, net.numberOfTransitions()*sizeof(State*));
-		for(unsigned int t = 0; t < net.numberOfTransitions(); t++){
-			if(net.fire(t, s, ns)){
+		ns->setParent(s);
+		bool foundSomething = false;
+		for(unsigned int t = tstep.t.back(); !tstep.t.empty(); tstep.t.pop_back()){
+			t = tstep.t.back();
+			if(net.fire(t, s->marking(), s->intValuation(),s->boolValuation(), ns->marking(), ns->intValuation(), ns->boolValuation())){
 				transitionFired++;
-				if(states.add(ns)){
-					exploredStates++;
-					ns->setParent(s);
+				if(states.add(ns,t)){
 					ns->setTransition(t);
-					if(query && query->evaluate(*ns))
+					if(query->evaluate(PQL::EvaluationContext(ns->marking(), ns->intValuation(), ns->boolValuation())))
 						return ReachabilityResult(ReachabilityResult::Satisfied,
-												"A state satisfying the query was found", expandedStates, exploredStates, transitionFired, states.getCountRemove(), ns->pathLength(), ns->trace());
-					succ[t] = ns;
+									  "A state satisfying the query was found", expandedStates, exploredStates, transitionFired, states.getCountRemove(), ns->pathLength(), ns->trace());
+
+					exploredStates++;
+					foundSomething = true;
 					ns = allocator.createState();
+					break;
 				}
 			}
 		}
-		// Randomly sorts states into the stack
-		expandedStates++;
-		int random;
-		int t;
-		do {
-			random = rand() % net.numberOfTransitions();
-			t = random;
-			do{
-				if(succ[t]){
-					states.pushToWating(succ[t]);
-					succ[t] = NULL;
-					t++;
-					break;
-				}
-				t = (t+1) % net.numberOfTransitions();
-			} while(t != random);
-		} while(t != random);
+		if(!foundSomething){
+			states.popWating();
+			expandedStates++;
+		}
 	}
-
-	//Hack for when query is null and we're look to print a random state
-	if(!query){
-		printf("%s == %i ", net.placeNames()[0].c_str(), s->marking()[0]);
-			for(unsigned int p = 1; p < net.numberOfPlaces(); p++)
-				printf(" and %s == %i ", net.placeNames()[p].c_str(), s->marking()[p]);
-			for(unsigned int x = 0; x < net.numberOfIntVariables(); x++)
-				printf(" and %s == %i ", net.intVariableNames()[x].c_str(), s->intValuation()[x]);
-			for(unsigned int x = 0; x < net.numberOfBoolVariables(); x++)
-				printf(" and %s == %i ", net.boolVariableNames()[x].c_str(), s->boolValuation()[x]);
-
-	}
-
-
+	//states.writeStatistics();
 	return ReachabilityResult(ReachabilityResult::NotSatisfied,
-						"No state satisfying the query exists.", expandedStates, exploredStates, transitionFired, states.getCountRemove());
+							"No state satisfying the query exists.", expandedStates, exploredStates, transitionFired, states.getCountRemove());
 }
 
 }} // Namespaces
