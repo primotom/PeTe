@@ -33,7 +33,7 @@ PollTime = 2
 InitialPollTime = 0.2
 
 # Seconds before timeout
-TimeOut = 60
+TimeOut = 60*4
 
 # Number of queries to run from each model (0 for all)
 QueriesToRun = 0
@@ -123,24 +123,25 @@ Protocols = [
 "Protocols/Enhanced-BAwPC.pet"
 ]
 Mutex = [
-"Protocols/Mutual2.pet",
-"Protocols/Mutual4.pet",
-"Protocols/Mutual6.pet",
-"Protocols/Mutual8.pet",
-"Protocols/Mutual10.pet"
+"Protocols/Mutual1.pet",
+"Protocols/Mutual5.pet",
+"Protocols/Mutual10.pet",
+"Protocols/Mutual15.pet",
+"Protocols/Mutual20.pet",
+"Protocols/Mutual25.pet"
 ]
 LeaderElection = [
-"Protocols/Election16.pet",
-"Protocols/Election18.pet",
+"Protocols/Election1.pet",
+"Protocols/Election5.pet",
+"Protocols/Election10.pet",
+"Protocols/Election15.pet",
 "Protocols/Election20.pet",
-"Protocols/Election22.pet",
-"Protocols/Election24.pet",
-"Protocols/Election26.pet",
-"Protocols/Election28.pet",
+"Protocols/Election25.pet",
 "Protocols/Election30.pet",
-"Protocols/Election32.pet",
-"Protocols/Election34.pet",
-"Protocols/Election36.pet"
+"Protocols/Election35.pet",
+"Protocols/Election40.pet",
+"Protocols/Election45.pet",
+"Protocols/Election50.pet"
 ]
 modellists = []
 for m in Models:
