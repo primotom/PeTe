@@ -5842,7 +5842,9 @@
           </arc>
      </net>
      <queries>
-          <query name="PARTICIPANT invalid?" strategy="Naive DFS with Hash" jit="false">PARTICIPANT_Invalid &gt; 0</query>
-          <query name="COORDINATOR invalid?" strategy="Naive DFS with Hash" jit="false">COORDINATOR_Invalid &gt; 0</query>
+		<query name ="Too Many Tokens?" strategy="Naive DFS with Hash" jit="false">COORDINATOR_Active &gt; 1</query>
+        <query name="PARTICIPANT invalid?" strategy="Naive DFS with Hash" jit="false">PARTICIPANT_Invalid &gt; 0</query>
+        <query name="COORDINATOR invalid?" strategy="Naive DFS with Hash" jit="false">COORDINATOR_Invalid &gt; 0</query>
      </queries>
+
 </pnml>

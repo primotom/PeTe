@@ -8,6 +8,7 @@ bool IndexedRFSStateSet::add(State *state){
 	for(waitingIter it = _waiting.begin(); it != _waiting.end(); ){
 		if(this->less(*it, state)){
 			_waiting.remove(*it++);
+			this->_countRemove++;
 			skipVisited = true;
 		} else {
 			if(this->leq(state, *it))

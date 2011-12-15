@@ -12,6 +12,7 @@ bool DFSStateSet::add(State* state, unsigned int t){
 	for(std::list<Step>::iterator it = _stack.begin() ; it != _stack.end();){
 		if (less((*it).state, state)){
 			_stack.erase(it++);
+			this->_countRemove++;
 			skipVisited = true;
 		} else {
 			if(this->leq(state, (*it).state))

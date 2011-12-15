@@ -29,6 +29,7 @@ bool IndexedStateSet::add(State* state){
 			if(leq(it->second, state)){
 				if(it == insertPos) {insertPos++;}
 				it = _waiting.erase(it);
+				this->_countRemove++;
 				skipVisited = true;
 				continue;
 			}
