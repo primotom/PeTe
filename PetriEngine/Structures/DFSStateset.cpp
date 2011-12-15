@@ -24,16 +24,11 @@ bool DFSStateSet::add(State* state, unsigned int t){
 	//  equal any states in visited
 	if(!skipVisited){
 		for(std::list<State*>::iterator it = _states.begin() ; it != _states.end();){
-			if (less(*it, state)){
-				_states.erase(it++);
-				this->_countRemove++;
-			}else{
-				if(leq(state,*it)){
-					_countSkip++;
-					return false;
-				}
-				it++;
+			if(leq(state,*it)){
+				_countSkip++;
+				return false;
 			}
+			it++;
 		}
 	}
 
