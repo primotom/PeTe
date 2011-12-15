@@ -33,13 +33,6 @@ bool IndexedBestFSStateSet::add(State *state){
 				// Check we are not smaller then existing states
 				if(leq(state, it->second))
 					return false;
-			} else {
-				// Clean up any superflous states in visited
-				if(less(it->second, state)){
-					it = _visited.erase(it);
-					this->_countRemove++;
-					continue;
-				}
 			}
 			it++;
 		}

@@ -22,14 +22,9 @@ bool BestFSOrderableStateSet::add(State *state){
 	//  equal any states in visited
 	if(!skipVisited){
 		for(liter it = _visited.begin(); it != _visited.end();){
-			if(this->less(*it, state)){
-				_visited.erase(it++);
-				this->_countRemove++;
-			}else {
-				if(this->leq(state, *it))
-					return false;
-				it++;
-			}
+			if(this->leq(state, *it))
+				return false;
+			it++;
 		}
 	}
 
