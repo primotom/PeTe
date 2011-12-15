@@ -9,6 +9,7 @@ bool BFSOrderableStateSet::add(State *state){
 	for(iter it = _waiting.begin(); it != _waiting.end();){
 		if(this->less(*it, state)){
 			_waiting.erase(it++);
+			this->_countRemove++;
 			skipVisited = true;
 		} else {
 			if(this->leq(state, *it))

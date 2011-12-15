@@ -8,7 +8,8 @@ bool RandomDFSStateSet::add(State *state){
 	bool skipVisited = false;
 	for(iter it = _waiting.begin(); it != _waiting.end(); ){
 		if(this->less(*it, state)){
-			_waiting.remove(*it++);
+			_waiting.erase(it++);
+			this->_countRemove++;
 			skipVisited = true;
 		} else {
 			if(this->leq(state, *it))
