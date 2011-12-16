@@ -1,0 +1,45 @@
+PeTe batch test script
+Election5.pet,	Too many Leaders,	DFS with Monotonicity,	Not satisfiable,	0.1,	2,	10,	0, 	72, 	9,	44108
+Election35.pet,	Too many Leaders,	DFS with Monotonicity,	Not satisfiable,	3.23,	2,	70,	0, 	3147, 	69,	1439708
+Election40.pet,	Too many Leaders,	DFS with Monotonicity,	Not satisfiable,	4.18,	2,	80,	0, 	4097, 	79,	1825852
+Election45.pet,	Too many Leaders,	DFS with Monotonicity,	Not satisfiable,	6.55,	2,	90,	0, 	5172, 	89,	2261160
+Election50.pet,	Too many Leaders,	DFS with Monotonicity,	Not satisfiable,	8.32,	2,	100,	0, 	6372, 	99,	2745188
+Election5.pet,	Too many Leaders,	BestFS with Monotonicity,	Not satisfiable,	0.05,	12,	28,	0, 	116, 	17,	41856
+Election35.pet,	Too many Leaders,	BestFS with Monotonicity,	Not satisfiable,	5.06,	72,	733,	0, 	5066, 	662,	759512
+Election40.pet,	Too many Leaders,	BestFS with Monotonicity,	Not satisfiable,	7.36,	82,	938,	0, 	6591, 	857,	952804
+Election45.pet,	Too many Leaders,	BestFS with Monotonicity,	Not satisfiable,	13.79,	92,	1168,	0, 	8316, 	1077,	1170836
+Election50.pet,	Too many Leaders,	BestFS with Monotonicity,	Not satisfiable,	19.16,	102,	1423,	0, 	10241, 	1322,	1413164
+Election5.pet,	Incorrect Leader,	DFS with Monotonicity,	Not satisfiable,	0.1,	2,	10,	0, 	72, 	9,	44108
+Election35.pet,	Incorrect Leader,	DFS with Monotonicity,	Not satisfiable,	3.19,	2,	70,	0, 	3147, 	69,	1439708
+Election40.pet,	Incorrect Leader,	DFS with Monotonicity,	Not satisfiable,	4.19,	2,	80,	0, 	4097, 	79,	1825852
+Election45.pet,	Incorrect Leader,	DFS with Monotonicity,	Not satisfiable,	6.56,	2,	90,	0, 	5172, 	89,	2261160
+Election50.pet,	Incorrect Leader,	DFS with Monotonicity,	Not satisfiable,	8.26,	2,	100,	0, 	6372, 	99,	2745180
+Election5.pet,	Incorrect Leader,	BestFS with Monotonicity,	Not satisfiable,	0.05,	12,	28,	0, 	116, 	17,	44108
+Election35.pet,	Incorrect Leader,	BestFS with Monotonicity,	Not satisfiable,	5.01,	72,	733,	0, 	5066, 	662,	759532
+Election40.pet,	Incorrect Leader,	BestFS with Monotonicity,	Not satisfiable,	7.36,	82,	938,	0, 	6591, 	857,	952812
+Election45.pet,	Incorrect Leader,	BestFS with Monotonicity,	Not satisfiable,	13.79,	92,	1168,	0, 	8316, 	1077,	1170816
+Election50.pet,	Incorrect Leader,	BestFS with Monotonicity,	Not satisfiable,	20.33,	102,	1423,	0, 	10241, 	1322,	1413148
+Election5.pet,	A Leader,	DFS with Monotonicity,	Satisfied,	0.09,	0,	9,	10, 	60, 	9,	44108
+Election35.pet,	A Leader,	DFS with Monotonicity,	Satisfied,	3.17,	0,	69,	70, 	3045, 	69,	1439696
+Election40.pet,	A Leader,	DFS with Monotonicity,	Satisfied,	4.11,	0,	79,	80, 	3980, 	79,	1825860
+Election45.pet,	A Leader,	DFS with Monotonicity,	Satisfied,	6.44,	0,	89,	90, 	5040, 	89,	2261160
+Election50.pet,	A Leader,	DFS with Monotonicity,	Satisfied,	8.15,	0,	99,	100, 	6225, 	99,	2745148
+Election5.pet,	A Leader,	BestFS with Monotonicity,	Satisfied,	0.04,	8,	27,	9, 	80, 	17,	44108
+Election35.pet,	A Leader,	BestFS with Monotonicity,	Satisfied,	5.17,	68,	732,	69, 	4760, 	662,	759516
+Election40.pet,	A Leader,	BestFS with Monotonicity,	Satisfied,	7.01,	78,	937,	79, 	6240, 	857,	952820
+Election45.pet,	A Leader,	BestFS with Monotonicity,	Satisfied,	13.46,	88,	1167,	89, 	7920, 	1077,	1170816
+Election50.pet,	A Leader,	BestFS with Monotonicity,	Satisfied,	20.58,	98,	1422,	99, 	9800, 	1322,	1413156
+Election5.pet,	Correct Leader,	DFS with Monotonicity,	Satisfied,	0.1,	0,	9,	10, 	60, 	9,	44108
+Election35.pet,	Correct Leader,	DFS with Monotonicity,	Satisfied,	3.15,	0,	69,	70, 	3045, 	69,	1439720
+Election40.pet,	Correct Leader,	DFS with Monotonicity,	Satisfied,	4.09,	0,	79,	80, 	3980, 	79,	1825828
+Election45.pet,	Correct Leader,	DFS with Monotonicity,	Satisfied,	6.47,	0,	89,	90, 	5040, 	89,	2261152
+Election50.pet,	Correct Leader,	DFS with Monotonicity,	Satisfied,	8.14,	0,	99,	100, 	6225, 	99,	2745180
+
+
+Election5.pet,	Correct Leader,	BestFS with Monotonicity,	Satisfied,	0.04,	8,	27,	9, 	80, 	17,	44108
+
+
+PeTe error, returned: -11,	759520
+PeTe error, returned: -11,	952764
+PeTe error, returned: -11,	1170796
+PeTe error, returned: -11,	1413104

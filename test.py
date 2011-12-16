@@ -144,8 +144,8 @@ LeaderElection = [
 "Protocols/Election50.pet"
 ]
 ExLeaderElection = [
-"Protocols/Election25.pet",
-"Protocols/Election30.pet"
+"Protocols/Election1.pet",
+"Protocols/Election5.pet"
 ]
 modellists = []
 for m in Models:
@@ -251,11 +251,18 @@ def runModels(scaledModels):
 			skipByPrefix |= query.startswith(prefix)
 		if skipByPrefix: continue
 		for strategy in strategies:
+			failed = True
 			if strategy in IgnoreList:
 				continue
 			for model in scaledModels:
-				ret, data, mem = run(modeldir + model, strategy, query)
-				print data.strip() + ",\t" + str(mem)
+				for i in range(10):
+					ret, data, mem = run(modeldir + model, strategy, query)
+					print data.strip() + ",\t" + str(mem)
+					failed = not ret
+					if failed:
+						break
+				if failed:
+					break
 		queriesrun += 1
 		if QueriesToRun != 0 and queriesrun >= QueriesToRun:
 			break
