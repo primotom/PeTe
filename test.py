@@ -255,7 +255,7 @@ def runModels(scaledModels):
 			if strategy in IgnoreList:
 				continue
 			for model in scaledModels:
-				for i in range(10):
+				for i in range(40):
 					ret, data, mem = run(modeldir + model, strategy, query)
 					print data.strip() + ",\t" + str(mem)
 					failed = not ret
