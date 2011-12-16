@@ -212,9 +212,7 @@
           </arc>
      </net>
 	<queries>
-          <query name="4 Done" strategy="Ordered DFS" jit="false">PROCESS_0_done &gt; 0 and PROCESS_0_noncritical &gt;0</query>
-          <query name="2 Critical" strategy="Ordered DFS" jit="false">PROCESS_0_critical &gt; 0 and PROCESS_0_done &gt;0</query>
-          <query name="3 Done" strategy="Ordered DFS" jit="false">PROCESS_0_done &gt; 0</query>
-          <query name="1 Critical" strategy="Ordered DFS" jit="false">PROCESS_0_critical &gt;0</query>
-     </queries>
+	<query name="Too Many in Critical" strategy="Ordered DFS" jit="false">PROCESS_0_critical &gt; 0 and PROCESS_0_done &gt; 0</query>
+	<query name="One Done" strategy="Ordered DFS" jit="false">PROCESS_0_done &gt; 0</query>
+</queries>
 </pnml>

@@ -1,0 +1,113 @@
+PeTe batch test script
+Election25.pet,	Too many Leaders,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	814668
+Election30.pet,	Too many Leaders,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	1103040
+Election25.pet,	Too many Leaders,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	815304
+Election30.pet,	Too many Leaders,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	1103504
+Election25.pet,	Too many Leaders,	DFS with Monotonicity,	Not satisfiable,	1.29,	2,	50,	0, 	1319, 	0,	813820
+Election30.pet,	Too many Leaders,	DFS with Monotonicity,	Not satisfiable,	1.95,	2,	60,	0, 	1884, 	0,	1102292
+Election25.pet,	Too many Leaders,	BFS with Monotonicity,	Not satisfiable,	2.92,	52,	398,	0, 	2616, 	50,	813832
+Election30.pet,	Too many Leaders,	BFS with Monotonicity,	Not satisfiable,	5.45,	62,	553,	0, 	3741, 	60,	1102300
+Election25.pet,	Too many Leaders,	DFS States with Monotonicity,	Not satisfiable,	1.3,	2,	50,	0, 	1319, 	0,	813856
+Election30.pet,	Too many Leaders,	DFS States with Monotonicity,	Not satisfiable,	1.93,	2,	60,	0, 	1884, 	0,	1102300
+Election25.pet,	Too many Leaders,	DFS Bools with Monotonicity,	Not satisfiable,	1.3,	2,	51,	0, 	1394, 	0,	813868
+Election30.pet,	Too many Leaders,	DFS Bools with Monotonicity,	Not satisfiable,	1.95,	2,	61,	0, 	1974, 	0,	1102280
+Election25.pet,	Too many Leaders,	BestFS with Hash,	OutOfTime,	-,	-,	-,	-,	446524
+Election30.pet,	Too many Leaders,	BestFS with Hash,	OutOfTime,	-,	-,	-,	-,	590804
+Election25.pet,	Too many Leaders,	BestFS with Monotonicity,	Not satisfiable,	1.84,	51,	350,	0, 	2546, 	49,	446184
+Election30.pet,	Too many Leaders,	BestFS with Monotonicity,	Not satisfiable,	3.3,	61,	495,	0, 	3656, 	59,	590548
+Election25.pet,	Too many Leaders,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	1.41,	51,	350,	0, 	2546, 	49,	813868
+Election30.pet,	Too many Leaders,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	2.19,	61,	495,	0, 	3656, 	59,	1102288
+Election25.pet,	Too many Leaders,	Ordered BFS with Monotonicity,	Not satisfiable,	2.62,	52,	398,	0, 	2616, 	49,	813856
+Election30.pet,	Too many Leaders,	Ordered BFS with Monotonicity,	Not satisfiable,	4.85,	62,	553,	0, 	3741, 	59,	1102260
+Election25.pet,	Too many Leaders,	Ordered DFS with Monotonicity,	Not satisfiable,	1.29,	2,	50,	0, 	1319, 	0,	813868
+Election30.pet,	Too many Leaders,	Ordered DFS with Monotonicity,	Not satisfiable,	1.92,	2,	60,	0, 	1884, 	0,	1102300
+Election25.pet,	Too many Leaders,	Ordered DFS State with Monotonicity,	Not satisfiable,	1.28,	2,	50,	0, 	1319, 	0,	813868
+Election30.pet,	Too many Leaders,	Ordered DFS State with Monotonicity,	Not satisfiable,	1.91,	2,	60,	0, 	1884, 	0,	1102292
+Election25.pet,	Too many Leaders,	Ordered DFS Bool with Monotonicity,	Not satisfiable,	1.28,	2,	50,	0, 	1319, 	0,	813816
+Election30.pet,	Too many Leaders,	Ordered DFS Bool with Monotonicity,	Not satisfiable,	1.93,	2,	60,	0, 	1884, 	0,	1102260
+Election25.pet,	Too many Leaders,	Ordered BestFS with Monotonicity,	Not satisfiable,	1.67,	51,	350,	0, 	2546, 	49,	446020
+Election30.pet,	Too many Leaders,	Ordered BestFS with Monotonicity,	Not satisfiable,	3.08,	61,	495,	0, 	3656, 	59,	590588
+Election25.pet,	Incorrect Leader,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	814700
+Election30.pet,	Incorrect Leader,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	1103028
+Election25.pet,	Incorrect Leader,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	815304
+Election30.pet,	Incorrect Leader,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	1103504
+Election25.pet,	Incorrect Leader,	DFS with Monotonicity,	Not satisfiable,	1.29,	2,	50,	0, 	1319, 	0,	813828
+Election30.pet,	Incorrect Leader,	DFS with Monotonicity,	Not satisfiable,	1.94,	2,	60,	0, 	1884, 	0,	1102296
+Election25.pet,	Incorrect Leader,	BFS with Monotonicity,	Not satisfiable,	2.89,	52,	398,	0, 	2616, 	50,	813868
+Election30.pet,	Incorrect Leader,	BFS with Monotonicity,	Not satisfiable,	5.07,	62,	553,	0, 	3741, 	60,	1102296
+Election25.pet,	Incorrect Leader,	DFS States with Monotonicity,	Not satisfiable,	1.32,	2,	51,	0, 	1394, 	0,	813856
+Election30.pet,	Incorrect Leader,	DFS States with Monotonicity,	Not satisfiable,	1.97,	2,	61,	0, 	1974, 	0,	1102296
+Election25.pet,	Incorrect Leader,	DFS Bools with Monotonicity,	Not satisfiable,	1.32,	2,	51,	0, 	1394, 	0,	813720
+Election30.pet,	Incorrect Leader,	DFS Bools with Monotonicity,	Not satisfiable,	1.98,	2,	61,	0, 	1974, 	0,	1102300
+Election25.pet,	Incorrect Leader,	BestFS with Hash,	OutOfTime,	-,	-,	-,	-,	446532
+Election30.pet,	Incorrect Leader,	BestFS with Hash,	OutOfTime,	-,	-,	-,	-,	590768
+Election25.pet,	Incorrect Leader,	BestFS with Monotonicity,	Not satisfiable,	1.83,	51,	350,	0, 	2546, 	49,	446184
+Election30.pet,	Incorrect Leader,	BestFS with Monotonicity,	Not satisfiable,	3.12,	61,	495,	0, 	3656, 	59,	590580
+Election25.pet,	Incorrect Leader,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	1.45,	51,	350,	0, 	2546, 	49,	813856
+Election30.pet,	Incorrect Leader,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	2.3,	61,	495,	0, 	3656, 	59,	1102280
+Election25.pet,	Incorrect Leader,	Ordered BFS with Monotonicity,	Not satisfiable,	2.91,	52,	398,	0, 	2616, 	49,	813868
+Election30.pet,	Incorrect Leader,	Ordered BFS with Monotonicity,	Not satisfiable,	5.21,	62,	553,	0, 	3741, 	59,	1102280
+Election25.pet,	Incorrect Leader,	Ordered DFS with Monotonicity,	Not satisfiable,	1.28,	2,	50,	0, 	1319, 	0,	813860
+Election30.pet,	Incorrect Leader,	Ordered DFS with Monotonicity,	Not satisfiable,	1.93,	2,	60,	0, 	1884, 	0,	1102292
+Election25.pet,	Incorrect Leader,	Ordered DFS State with Monotonicity,	Not satisfiable,	1.29,	2,	50,	0, 	1319, 	0,	813716
+Election30.pet,	Incorrect Leader,	Ordered DFS State with Monotonicity,	Not satisfiable,	1.94,	2,	60,	0, 	1884, 	0,	1102292
+Election25.pet,	Incorrect Leader,	Ordered DFS Bool with Monotonicity,	Not satisfiable,	1.28,	2,	50,	0, 	1319, 	0,	813868
+Election30.pet,	Incorrect Leader,	Ordered DFS Bool with Monotonicity,	Not satisfiable,	1.92,	2,	60,	0, 	1884, 	0,	1102300
+Election25.pet,	Incorrect Leader,	Ordered BestFS with Monotonicity,	Not satisfiable,	1.68,	51,	350,	0, 	2546, 	49,	446140
+Election30.pet,	Incorrect Leader,	Ordered BestFS with Monotonicity,	Not satisfiable,	3.28,	61,	495,	0, 	3656, 	59,	590576
+Election25.pet,	A Leader,	Naive DFS with Hash,	Satisfied,	1.06,	0,	48,	49, 	1178, 	0,	813856
+Election30.pet,	A Leader,	Naive DFS with Hash,	Satisfied,	1.46,	0,	58,	59, 	1713, 	0,	1102292
+Election25.pet,	A Leader,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	815316
+Election30.pet,	A Leader,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	1103496
+Election25.pet,	A Leader,	DFS with Monotonicity,	Satisfied,	1.24,	0,	48,	49, 	1178, 	0,	813868
+Election30.pet,	A Leader,	DFS with Monotonicity,	Satisfied,	1.87,	0,	58,	59, 	1713, 	0,	1102256
+Election25.pet,	A Leader,	BFS with Monotonicity,	Satisfied,	2.82,	48,	396,	49, 	2330, 	48,	813868
+Election30.pet,	A Leader,	BFS with Monotonicity,	Satisfied,	5.09,	58,	551,	59, 	3395, 	58,	1102288
+Election25.pet,	A Leader,	DFS States with Monotonicity,	Satisfied,	1.26,	0,	48,	49, 	1178, 	0,	813868
+Election30.pet,	A Leader,	DFS States with Monotonicity,	Satisfied,	1.86,	0,	58,	59, 	1713, 	0,	1102300
+Election25.pet,	A Leader,	DFS Bools with Monotonicity,	Satisfied,	1.26,	0,	48,	49, 	1178, 	0,	813864
+Election30.pet,	A Leader,	DFS Bools with Monotonicity,	Satisfied,	1.86,	0,	58,	59, 	1713, 	0,	1102292
+Election25.pet,	A Leader,	BestFS with Hash,	Satisfied,	0.49,	50,	350,	50, 	2403, 	0,	446144
+Election30.pet,	A Leader,	BestFS with Hash,	Satisfied,	0.68,	60,	495,	60, 	3483, 	0,	590572
+Election25.pet,	A Leader,	BestFS with Monotonicity,	Satisfied,	1.78,	49,	350,	50, 	2403, 	49,	446180
+Election30.pet,	A Leader,	BestFS with Monotonicity,	Satisfied,	3.31,	59,	495,	60, 	3483, 	59,	590564
+Election25.pet,	A Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	1.44,	49,	350,	50, 	2403, 	49,	813700
+Election30.pet,	A Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	2.23,	59,	495,	60, 	3483, 	59,	1102292
+Election25.pet,	A Leader,	Ordered BFS with Monotonicity,	Satisfied,	2.58,	48,	396,	49, 	2330, 	48,	813856
+Election30.pet,	A Leader,	Ordered BFS with Monotonicity,	Satisfied,	4.8,	58,	551,	59, 	3395, 	58,	1102256
+Election25.pet,	A Leader,	Ordered DFS with Monotonicity,	Satisfied,	1.25,	0,	48,	49, 	1178, 	0,	813856
+Election30.pet,	A Leader,	Ordered DFS with Monotonicity,	Satisfied,	1.86,	0,	58,	59, 	1713, 	0,	1102300
+Election25.pet,	A Leader,	Ordered DFS State with Monotonicity,	Satisfied,	1.26,	0,	48,	49, 	1178, 	0,	813868
+Election30.pet,	A Leader,	Ordered DFS State with Monotonicity,	Satisfied,	1.88,	0,	58,	59, 	1713, 	0,	1102252
+Election25.pet,	A Leader,	Ordered DFS Bool with Monotonicity,	Satisfied,	1.25,	0,	48,	49, 	1178, 	0,	813868
+Election30.pet,	A Leader,	Ordered DFS Bool with Monotonicity,	Satisfied,	1.87,	0,	58,	59, 	1713, 	0,	1102308
+Election25.pet,	A Leader,	Ordered BestFS with Monotonicity,	Satisfied,	1.67,	49,	350,	50, 	2403, 	49,	446180
+Election30.pet,	A Leader,	Ordered BestFS with Monotonicity,	Satisfied,	3.06,	59,	495,	60, 	3483, 	59,	590572
+Election25.pet,	Correct Leader,	Naive DFS with Hash,	Satisfied,	1.06,	0,	48,	49, 	1178, 	0,	813860
+Election30.pet,	Correct Leader,	Naive DFS with Hash,	Satisfied,	1.48,	0,	58,	59, 	1713, 	0,	1102288
+Election25.pet,	Correct Leader,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	815280
+Election30.pet,	Correct Leader,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	1103452
+Election25.pet,	Correct Leader,	DFS with Monotonicity,	Satisfied,	1.26,	0,	48,	49, 	1178, 	0,	813708
+Election30.pet,	Correct Leader,	DFS with Monotonicity,	Satisfied,	1.87,	0,	58,	59, 	1713, 	0,	1102308
+Election25.pet,	Correct Leader,	BFS with Monotonicity,	Satisfied,	2.89,	48,	396,	49, 	2330, 	48,	813820
+Election30.pet,	Correct Leader,	BFS with Monotonicity,	Satisfied,	5.31,	58,	551,	59, 	3395, 	58,	1102264
+Election25.pet,	Correct Leader,	DFS States with Monotonicity,	Satisfied,	1.26,	0,	48,	49, 	1178, 	0,	813860
+Election30.pet,	Correct Leader,	DFS States with Monotonicity,	Satisfied,	1.85,	0,	58,	59, 	1713, 	0,	1102284
+Election25.pet,	Correct Leader,	DFS Bools with Monotonicity,	Satisfied,	1.26,	0,	48,	49, 	1178, 	0,	813860
+Election30.pet,	Correct Leader,	DFS Bools with Monotonicity,	Satisfied,	1.86,	0,	58,	59, 	1713, 	0,	1102304
+Election25.pet,	Correct Leader,	BestFS with Hash,	Satisfied,	0.49,	50,	350,	50, 	2403, 	0,	446180
+Election30.pet,	Correct Leader,	BestFS with Hash,	Satisfied,	0.69,	60,	495,	60, 	3483, 	0,	590580
+Election25.pet,	Correct Leader,	BestFS with Monotonicity,	Satisfied,	1.68,	49,	350,	50, 	2403, 	49,	446160
+Election30.pet,	Correct Leader,	BestFS with Monotonicity,	Satisfied,	3.25,	59,	495,	60, 	3483, 	59,	590576
+Election25.pet,	Correct Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	1.35,	49,	350,	50, 	2403, 	49,	813860
+Election30.pet,	Correct Leader,	Ordered Largest Index Search with Monotonicity,	Satisfied,	2.26,	59,	495,	60, 	3483, 	59,	1102300
+Election25.pet,	Correct Leader,	Ordered BFS with Monotonicity,	Satisfied,	2.86,	48,	396,	49, 	2330, 	48,	813868
+Election30.pet,	Correct Leader,	Ordered BFS with Monotonicity,	Satisfied,	5.06,	58,	551,	59, 	3395, 	58,	1102256
+Election25.pet,	Correct Leader,	Ordered DFS with Monotonicity,	Satisfied,	1.25,	0,	48,	49, 	1178, 	0,	813832
+Election30.pet,	Correct Leader,	Ordered DFS with Monotonicity,	Satisfied,	1.85,	0,	58,	59, 	1713, 	0,	1102300
+Election25.pet,	Correct Leader,	Ordered DFS State with Monotonicity,	Satisfied,	1.25,	0,	48,	49, 	1178, 	0,	813868
+Election30.pet,	Correct Leader,	Ordered DFS State with Monotonicity,	Satisfied,	1.87,	0,	58,	59, 	1713, 	0,	1102300
+Election25.pet,	Correct Leader,	Ordered DFS Bool with Monotonicity,	Satisfied,	1.25,	0,	48,	49, 	1178, 	0,	813724
+Election30.pet,	Correct Leader,	Ordered DFS Bool with Monotonicity,	Satisfied,	1.87,	0,	58,	59, 	1713, 	0,	1102312
+Election25.pet,	Correct Leader,	Ordered BestFS with Monotonicity,	Satisfied,	1.68,	49,	350,	50, 	2403, 	49,	446184
+Election30.pet,	Correct Leader,	Ordered BestFS with Monotonicity,	Satisfied,	3,	59,	495,	60, 	3483, 	59,	590576

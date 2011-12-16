@@ -1,0 +1,1714 @@
+PeTe batch test script
+BAwCC.pet,	PARTICIPANT invalid?,	Naive DFS with Hash,	Satisfied,	0.23,	32,	37,	6,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Naive DFS with Hash,	Satisfied,	0.22,	634,	639,	6,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Naive DFS with Hash,	Satisfied,	0.19,	32,	37,	6,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Naive DFS with Hash,	Satisfied,	0.19,	82,	90,	9,	44668
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Naive DFS with Hash,	Not satisfiable,	0.25,	121,	241,	0,	44104
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Naive DFS with Hash,	Satisfied,	0.24,	55,	64,	10,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Naive DFS with Hash,	Not satisfiable,	0.23,	60,	119,	0,	44276
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Naive DFS with Hash,	Not satisfiable,	0.21,	60,	119,	0,	44276
+BAwCC.pet,	PARTICIPANT invalid?,	Naive BFS with Hash,	Satisfied,	0.22,	40,	76,	5,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Naive BFS with Hash,	Satisfied,	0.22,	55,	112,	5,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Naive BFS with Hash,	Satisfied,	0.18,	28,	54,	5,	44116
+BAwPC.pet,	COORDINATOR invalid?,	Naive BFS with Hash,	Satisfied,	0.19,	43,	87,	5,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Naive BFS with Hash,	Not satisfiable,	0.25,	121,	120,	0,	44104
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Naive BFS with Hash,	Satisfied,	0.25,	83,	91,	7,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Naive BFS with Hash,	Not satisfiable,	0.22,	60,	59,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Naive BFS with Hash,	Not satisfiable,	0.23,	60,	59,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Random DFS with Hash,	Satisfied,	0.1,	7,	22,	8,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Random DFS with Hash,	Satisfied,	0.11,	627,	644,	8,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Random DFS with Hash,	Satisfied,	0.09,	45,	57,	7,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Random DFS with Hash,	Satisfied,	0.09,	4,	18,	5,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Random DFS with Hash,	Not satisfiable,	0.13,	121,	120,	0,	44104
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Random DFS with Hash,	Satisfied,	0.13,	22,	36,	10,	44100
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Random DFS with Hash,	Not satisfiable,	0.11,	60,	59,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Random DFS with Hash,	Not satisfiable,	0.12,	60,	59,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Ordered DFS,	Satisfied,	0.2,	10,	26,	6,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Ordered DFS,	Satisfied,	0.2,	35,	68,	6,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Ordered DFS,	Satisfied,	0.17,	21,	43,	6,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Ordered DFS,	Satisfied,	0.17,	5,	18,	9,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Ordered DFS,	Not satisfiable,	0.24,	77,	156,	0,	44104
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Ordered DFS,	Satisfied,	0.23,	39,	48,	10,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Ordered DFS,	Not satisfiable,	0.21,	38,	75,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Ordered DFS,	Not satisfiable,	0.21,	38,	75,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Ordered BFS,	Satisfied,	0.22,	43,	80,	6,	44276
+BAwCC.pet,	COORDINATOR invalid?,	Ordered BFS,	Satisfied,	0.22,	36,	66,	5,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Ordered BFS,	Satisfied,	0.17,	26,	51,	6,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Ordered BFS,	Satisfied,	0.19,	24,	45,	5,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Ordered BFS,	Not satisfiable,	0.27,	80,	90,	0,	44104
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Ordered BFS,	Satisfied,	0.25,	60,	74,	7,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Ordered BFS,	Not satisfiable,	0.22,	39,	42,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Ordered BFS,	Not satisfiable,	0.22,	39,	42,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Ordered Random DFS,	Satisfied,	0.11,	4,	16,	5,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Ordered Random DFS,	Satisfied,	0.16,	81,	156,	10,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Ordered Random DFS,	Satisfied,	0.09,	5,	16,	6,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Ordered Random DFS,	Satisfied,	0.1,	25,	57,	8,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Ordered Random DFS,	Not satisfiable,	0.16,	82,	89,	0,	44276
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Ordered Random DFS,	Satisfied,	0.13,	56,	65,	11,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Ordered Random DFS,	Not satisfiable,	0.12,	54,	54,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Ordered Random DFS,	Not satisfiable,	0.13,	57,	57,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Ordered DFS States,	Satisfied,	0.21,	10,	26,	6,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Ordered DFS States,	Satisfied,	0.22,	35,	68,	6,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Ordered DFS States,	Satisfied,	0.18,	21,	43,	6,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Ordered DFS States,	Satisfied,	0.17,	5,	18,	9,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Ordered DFS States,	Not satisfiable,	0.24,	77,	156,	0,	44104
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Ordered DFS States,	Satisfied,	0.24,	39,	48,	10,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Ordered DFS States,	Not satisfiable,	0.21,	38,	75,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Ordered DFS States,	Not satisfiable,	0.21,	38,	75,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Ordered DFS Bools,	Satisfied,	0.2,	16,	30,	7,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Ordered DFS Bools,	Satisfied,	0.21,	25,	57,	6,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Ordered DFS Bools,	Satisfied,	0.16,	10,	18,	6,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Ordered DFS Bools,	Satisfied,	0.18,	21,	49,	6,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Ordered DFS Bools,	Not satisfiable,	0.25,	65,	137,	0,	44116
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Ordered DFS Bools,	Satisfied,	0.24,	48,	57,	7,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Ordered DFS Bools,	Not satisfiable,	0.21,	39,	77,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Ordered DFS Bools,	Not satisfiable,	0.21,	39,	77,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Old BestFS (Heuristic distance),	Satisfied,	0.09,	8,	24,	8,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Old BestFS (Heuristic distance),	Satisfied,	0.1,	116,	136,	11,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Old BestFS (Heuristic distance),	Satisfied,	0.09,	46,	57,	7,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Old BestFS (Heuristic distance),	Satisfied,	0.09,	37,	48,	5,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Old BestFS (Heuristic distance),	Not satisfiable,	0.12,	121,	120,	0,	44276
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Old BestFS (Heuristic distance),	Satisfied,	0.11,	17,	32,	11,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Old BestFS (Heuristic distance),	Not satisfiable,	0.1,	60,	59,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Old BestFS (Heuristic distance),	Not satisfiable,	0.1,	60,	59,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Old BestFS (Monotonicity Included),	Satisfied,	0.1,	8,	24,	8,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Old BestFS (Monotonicity Included),	Satisfied,	0.12,	28,	70,	11,	44100
+BAwPC.pet,	PARTICIPANT invalid?,	Old BestFS (Monotonicity Included),	Satisfied,	0.09,	18,	40,	7,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Old BestFS (Monotonicity Included),	Satisfied,	0.1,	11,	32,	5,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Old BestFS (Monotonicity Included),	Not satisfiable,	0.15,	71,	70,	0,	44104
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Old BestFS (Monotonicity Included),	Satisfied,	0.12,	17,	32,	11,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Old BestFS (Monotonicity Included),	Not satisfiable,	0.13,	39,	38,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Old BestFS (Monotonicity Included),	Not satisfiable,	0.11,	39,	38,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Indexed Search,	Satisfied,	0.2,	6,	21,	7,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Indexed Search,	Satisfied,	0.21,	43,	86,	11,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Indexed Search,	Satisfied,	0.17,	5,	16,	6,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Indexed Search,	Satisfied,	0.18,	27,	53,	8,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Indexed Search,	Not satisfiable,	0.24,	68,	70,	0,	44104
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Indexed Search,	Satisfied,	0.23,	26,	40,	11,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Indexed Search,	Not satisfiable,	0.21,	39,	38,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Indexed Search,	Not satisfiable,	0.21,	39,	38,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Indexed Search with Variance,	Satisfied,	0.2,	6,	21,	7,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Indexed Search with Variance,	Satisfied,	0.21,	43,	86,	11,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Indexed Search with Variance,	Satisfied,	0.17,	5,	16,	6,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Indexed Search with Variance,	Satisfied,	0.16,	27,	53,	8,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Indexed Search with Variance,	Not satisfiable,	0.24,	68,	70,	0,	44104
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Indexed Search with Variance,	Satisfied,	0.22,	26,	40,	11,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Indexed Search with Variance,	Not satisfiable,	0.2,	39,	38,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Indexed Search with Variance,	Not satisfiable,	0.2,	39,	38,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Indexed BFS,	Satisfied,	0.22,	43,	80,	6,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Indexed BFS,	Satisfied,	0.21,	36,	66,	5,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Indexed BFS,	Satisfied,	0.17,	26,	51,	6,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Indexed BFS,	Satisfied,	0.17,	24,	45,	5,	43972
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Indexed BFS,	Not satisfiable,	0.24,	80,	90,	0,	44104
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Indexed BFS,	Satisfied,	0.23,	60,	74,	7,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Indexed BFS,	Not satisfiable,	0.22,	39,	42,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Indexed BFS,	Not satisfiable,	0.2,	39,	42,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Indexed BFS with Variance,	Satisfied,	0.22,	43,	80,	6,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Indexed BFS with Variance,	Satisfied,	0.21,	36,	66,	5,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Indexed BFS with Variance,	Satisfied,	0.18,	26,	51,	6,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Indexed BFS with Variance,	Satisfied,	0.18,	24,	45,	5,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Indexed BFS with Variance,	Not satisfiable,	0.24,	80,	90,	0,	44104
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Indexed BFS with Variance,	Satisfied,	0.24,	60,	74,	7,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Indexed BFS with Variance,	Not satisfiable,	0.21,	39,	42,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Indexed BFS with Variance,	Not satisfiable,	0.2,	39,	42,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Indexed DFS,	Satisfied,	0.2,	10,	26,	6,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Indexed DFS,	Satisfied,	0.21,	35,	68,	6,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Indexed DFS,	Satisfied,	0.17,	21,	43,	6,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Indexed DFS,	Satisfied,	0.16,	5,	18,	9,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Indexed DFS,	Not satisfiable,	0.24,	77,	156,	0,	44104
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Indexed DFS,	Satisfied,	0.23,	39,	48,	10,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Indexed DFS,	Not satisfiable,	0.21,	38,	75,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Indexed DFS,	Not satisfiable,	0.2,	38,	75,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Indexed DFS with Variance,	Satisfied,	0.21,	10,	26,	6,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Indexed DFS with Variance,	Satisfied,	0.21,	35,	68,	6,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Indexed DFS with Variance,	Satisfied,	0.17,	21,	43,	6,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Indexed DFS with Variance,	Satisfied,	0.18,	5,	18,	9,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Indexed DFS with Variance,	Not satisfiable,	0.24,	77,	156,	0,	44104
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Indexed DFS with Variance,	Satisfied,	0.23,	39,	48,	10,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Indexed DFS with Variance,	Not satisfiable,	0.21,	38,	75,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Indexed DFS with Variance,	Not satisfiable,	0.2,	38,	75,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Indexed DFS State,	Satisfied,	0.2,	10,	26,	6,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Indexed DFS State,	Satisfied,	0.21,	35,	68,	6,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Indexed DFS State,	Satisfied,	0.17,	21,	43,	6,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Indexed DFS State,	Satisfied,	0.18,	5,	18,	9,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Indexed DFS State,	Not satisfiable,	0.23,	77,	156,	0,	44104
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Indexed DFS State,	Satisfied,	0.23,	39,	48,	10,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Indexed DFS State,	Not satisfiable,	0.2,	38,	75,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Indexed DFS State,	Not satisfiable,	0.2,	38,	75,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Indexed DFS State with Variance,	Satisfied,	0.19,	10,	26,	6,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Indexed DFS State with Variance,	Satisfied,	0.21,	35,	68,	6,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Indexed DFS State with Variance,	Satisfied,	0.18,	21,	43,	6,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Indexed DFS State with Variance,	Satisfied,	0.16,	5,	18,	9,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Indexed DFS State with Variance,	Not satisfiable,	0.24,	77,	156,	0,	44104
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Indexed DFS State with Variance,	Satisfied,	0.23,	39,	48,	10,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Indexed DFS State with Variance,	Not satisfiable,	0.2,	38,	75,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Indexed DFS State with Variance,	Not satisfiable,	0.22,	38,	75,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Indexed DFS Bool,	Satisfied,	0.19,	10,	26,	6,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Indexed DFS Bool,	Satisfied,	0.22,	35,	68,	6,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Indexed DFS Bool,	Satisfied,	0.18,	21,	43,	6,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Indexed DFS Bool,	Satisfied,	0.17,	5,	18,	9,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Indexed DFS Bool,	Not satisfiable,	0.25,	77,	156,	0,	44104
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Indexed DFS Bool,	Satisfied,	0.23,	39,	48,	10,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Indexed DFS Bool,	Not satisfiable,	0.21,	38,	75,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Indexed DFS Bool,	Not satisfiable,	0.2,	38,	75,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Indexed DFS Bool with Variance,	Satisfied,	0.19,	10,	26,	6,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Indexed DFS Bool with Variance,	Satisfied,	0.21,	35,	68,	6,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Indexed DFS Bool with Variance,	Satisfied,	0.17,	21,	43,	6,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Indexed DFS Bool with Variance,	Satisfied,	0.18,	5,	18,	9,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Indexed DFS Bool with Variance,	Not satisfiable,	0.25,	77,	156,	0,	44104
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Indexed DFS Bool with Variance,	Satisfied,	0.23,	39,	48,	10,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Indexed DFS Bool with Variance,	Not satisfiable,	0.22,	38,	75,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Indexed DFS Bool with Variance,	Not satisfiable,	0.21,	38,	75,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Indexed BestFS,	Satisfied,	0.1,	8,	24,	8,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Indexed BestFS,	Satisfied,	0.11,	28,	70,	11,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Indexed BestFS,	Satisfied,	0.09,	18,	40,	7,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Indexed BestFS,	Satisfied,	0.09,	11,	32,	5,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Indexed BestFS,	Not satisfiable,	0.13,	71,	70,	0,	44104
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Indexed BestFS,	Satisfied,	0.11,	17,	32,	11,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Indexed BestFS,	Not satisfiable,	0.1,	39,	38,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Indexed BestFS,	Not satisfiable,	0.11,	39,	38,	0,	44104
+BAwCC.pet,	PARTICIPANT invalid?,	Indexed BestFS with Variance,	Satisfied,	0.1,	8,	24,	8,	44104
+BAwCC.pet,	COORDINATOR invalid?,	Indexed BestFS with Variance,	Satisfied,	0.12,	28,	70,	11,	44104
+BAwPC.pet,	PARTICIPANT invalid?,	Indexed BestFS with Variance,	Satisfied,	0.1,	18,	40,	7,	44104
+BAwPC.pet,	COORDINATOR invalid?,	Indexed BestFS with Variance,	Satisfied,	0.08,	11,	32,	5,	44104
+Enhanced-BAwCC.pet,	PARTICIPANT invalid?,	Indexed BestFS with Variance,	Not satisfiable,	0.14,	71,	70,	0,	44104
+Enhanced-BAwCC.pet,	COORDINATOR invalid?,	Indexed BestFS with Variance,	Satisfied,	0.12,	17,	32,	11,	44104
+Enhanced-BAwPC.pet,	PARTICIPANT invalid?,	Indexed BestFS with Variance,	Not satisfiable,	0.11,	39,	38,	0,	44104
+Enhanced-BAwPC.pet,	COORDINATOR invalid?,	Indexed BestFS with Variance,	Not satisfiable,	0.1,	39,	38,	0,	44104
+Election16.pet,	Too many Leaders,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	419420
+Election16.pet,	A Leader,	Naive DFS with Hash,	Satisfied,	0.49,	0,	30,	31,	417968
+Election16.pet,	Correct Leader,	Naive DFS with Hash,	Satisfied,	0.49,	0,	30,	31,	417968
+Election16.pet,	Incorrect Leader,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	419424
+Election18.pet,	Too many Leaders,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	493324
+Election18.pet,	A Leader,	Naive DFS with Hash,	Satisfied,	0.57,	0,	34,	35,	492360
+Election18.pet,	Correct Leader,	Naive DFS with Hash,	Satisfied,	0.6,	0,	34,	35,	492352
+Election18.pet,	Incorrect Leader,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	493284
+Election20.pet,	Too many Leaders,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	575400
+Election20.pet,	A Leader,	Naive DFS with Hash,	Satisfied,	0.73,	0,	38,	39,	574316
+Election20.pet,	Correct Leader,	Naive DFS with Hash,	Satisfied,	0.72,	0,	38,	39,	574352
+Election20.pet,	Incorrect Leader,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	575400
+Election22.pet,	Too many Leaders,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	665304
+Election22.pet,	A Leader,	Naive DFS with Hash,	Satisfied,	0.85,	0,	42,	43,	664188
+Election22.pet,	Correct Leader,	Naive DFS with Hash,	Satisfied,	0.85,	0,	42,	43,	664204
+Election22.pet,	Incorrect Leader,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	665296
+Election24.pet,	Too many Leaders,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	762896
+Election24.pet,	A Leader,	Naive DFS with Hash,	Satisfied,	0.94,	0,	46,	47,	762176
+Election24.pet,	Correct Leader,	Naive DFS with Hash,	Satisfied,	0.99,	0,	46,	47,	762180
+Election24.pet,	Incorrect Leader,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	762916
+Election26.pet,	Too many Leaders,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	868460
+Election26.pet,	A Leader,	Naive DFS with Hash,	Satisfied,	1.14,	0,	50,	51,	867560
+Election26.pet,	Correct Leader,	Naive DFS with Hash,	Satisfied,	1.09,	0,	50,	51,	867528
+Election26.pet,	Incorrect Leader,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	868460
+Election28.pet,	Too many Leaders,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	981828
+Election28.pet,	A Leader,	Naive DFS with Hash,	Satisfied,	1.3,	0,	54,	55,	980956
+Election28.pet,	Correct Leader,	Naive DFS with Hash,	Satisfied,	1.24,	0,	54,	55,	980960
+Election28.pet,	Incorrect Leader,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	981836
+Election30.pet,	Too many Leaders,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	1103020
+Election30.pet,	A Leader,	Naive DFS with Hash,	Satisfied,	1.48,	0,	58,	59,	1102280
+Election30.pet,	Correct Leader,	Naive DFS with Hash,	Satisfied,	1.49,	0,	58,	59,	1102292
+Election30.pet,	Incorrect Leader,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	1103020
+Election32.pet,	Too many Leaders,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	1232020
+Election32.pet,	A Leader,	Naive DFS with Hash,	Satisfied,	1.66,	0,	62,	63,	1231460
+Election32.pet,	Correct Leader,	Naive DFS with Hash,	Satisfied,	1.68,	0,	62,	63,	1231476
+Election32.pet,	Incorrect Leader,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	1232008
+Election34.pet,	Too many Leaders,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	1368852
+Election34.pet,	A Leader,	Naive DFS with Hash,	Satisfied,	1.85,	0,	66,	67,	1368264
+Election34.pet,	Correct Leader,	Naive DFS with Hash,	Satisfied,	1.86,	0,	66,	67,	1368252
+Election34.pet,	Incorrect Leader,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	1368864
+Election36.pet,	Too many Leaders,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	1513456
+Election36.pet,	A Leader,	Naive DFS with Hash,	Satisfied,	2.08,	0,	70,	71,	1512916
+Election36.pet,	Correct Leader,	Naive DFS with Hash,	Satisfied,	2.08,	0,	70,	71,	1512948
+Election36.pet,	Incorrect Leader,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	1513460
+Election16.pet,	Too many Leaders,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	419160
+Election16.pet,	A Leader,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	419192
+Election16.pet,	Correct Leader,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	419180
+Election16.pet,	Incorrect Leader,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	419048
+Election16.pet,	Too many Leaders,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	249088
+Election16.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.25,	31,	199,	32,	44104
+Election16.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.25,	31,	204,	32,	44104
+Election16.pet,	Incorrect Leader,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	249112
+Election18.pet,	Too many Leaders,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	286284
+Election18.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.3,	35,	222,	36,	285332
+Election18.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.31,	35,	199,	36,	285148
+Election18.pet,	Incorrect Leader,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	286292
+Election20.pet,	Too many Leaders,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	327364
+Election20.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.37,	39,	286,	40,	326312
+Election20.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.36,	39,	260,	40,	326312
+Election20.pet,	Incorrect Leader,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	327208
+Election22.pet,	Too many Leaders,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	372072
+Election22.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.43,	43,	288,	44,	371220
+Election22.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.43,	43,	392,	44,	371232
+Election22.pet,	Incorrect Leader,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	372060
+Election24.pet,	Too many Leaders,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	420988
+Election24.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.5,	47,	436,	48,	420164
+Election24.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.5,	47,	413,	48,	420396
+Election24.pet,	Incorrect Leader,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	420968
+Election26.pet,	Too many Leaders,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	473416
+Election26.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.58,	51,	408,	52,	473028
+Election26.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.59,	51,	432,	52,	473008
+Election26.pet,	Incorrect Leader,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	473556
+Election28.pet,	Too many Leaders,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	530160
+Election28.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.67,	55,	537,	56,	529768
+Election28.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.67,	55,	502,	56,	529784
+Election28.pet,	Incorrect Leader,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	530144
+Election30.pet,	Too many Leaders,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	590796
+Election30.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.76,	59,	531,	60,	590560
+Election30.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.76,	59,	529,	60,	590568
+Election30.pet,	Incorrect Leader,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	591160
+Election32.pet,	Too many Leaders,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	655444
+Election32.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.86,	63,	634,	64,	655324
+Election32.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.88,	63,	620,	64,	655324
+Election32.pet,	Incorrect Leader,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	655700
+Election34.pet,	Too many Leaders,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	723956
+Election34.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.97,	67,	751,	68,	723712
+Election34.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.98,	67,	746,	68,	723712
+Election34.pet,	Incorrect Leader,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	723956
+Election36.pet,	Too many Leaders,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	796164
+Election36.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.1,	71,	837,	72,	796144
+Election36.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.09,	71,	711,	72,	796160
+Election36.pet,	Incorrect Leader,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	796152
+Election16.pet,	Too many Leaders,	Ordered DFS,	Not satisfiable,	0.47,	2,	34,	0,	417972
+Election16.pet,	A Leader,	Ordered DFS,	Satisfied,	0.47,	0,	30,	31,	417980
+Election16.pet,	Correct Leader,	Ordered DFS,	Satisfied,	0.47,	0,	30,	31,	417828
+Election16.pet,	Incorrect Leader,	Ordered DFS,	Not satisfiable,	0.48,	2,	34,	0,	417968
+Election18.pet,	Too many Leaders,	Ordered DFS,	Not satisfiable,	0.6,	2,	38,	0,	492352
+Election18.pet,	A Leader,	Ordered DFS,	Satisfied,	0.59,	0,	34,	35,	492376
+Election18.pet,	Correct Leader,	Ordered DFS,	Satisfied,	0.58,	0,	34,	35,	492372
+Election18.pet,	Incorrect Leader,	Ordered DFS,	Not satisfiable,	0.59,	2,	38,	0,	492372
+Election20.pet,	Too many Leaders,	Ordered DFS,	Not satisfiable,	0.76,	2,	42,	0,	574360
+Election20.pet,	A Leader,	Ordered DFS,	Satisfied,	0.73,	0,	38,	39,	574332
+Election20.pet,	Correct Leader,	Ordered DFS,	Satisfied,	0.74,	0,	38,	39,	574360
+Election20.pet,	Incorrect Leader,	Ordered DFS,	Not satisfiable,	0.74,	2,	42,	0,	574332
+Election22.pet,	Too many Leaders,	Ordered DFS,	Not satisfiable,	0.94,	2,	46,	0,	664168
+Election22.pet,	A Leader,	Ordered DFS,	Satisfied,	0.91,	0,	42,	43,	664180
+Election22.pet,	Correct Leader,	Ordered DFS,	Satisfied,	0.9,	0,	42,	43,	664196
+Election22.pet,	Incorrect Leader,	Ordered DFS,	Not satisfiable,	0.92,	2,	46,	0,	664188
+Election24.pet,	Too many Leaders,	Ordered DFS,	Not satisfiable,	1.1,	2,	50,	0,	762184
+Election24.pet,	A Leader,	Ordered DFS,	Satisfied,	1.08,	0,	46,	47,	762188
+Election24.pet,	Correct Leader,	Ordered DFS,	Satisfied,	1.09,	0,	46,	47,	762184
+Election24.pet,	Incorrect Leader,	Ordered DFS,	Not satisfiable,	1.1,	2,	50,	0,	762180
+Election26.pet,	Too many Leaders,	Ordered DFS,	Not satisfiable,	1.35,	2,	54,	0,	867560
+Election26.pet,	A Leader,	Ordered DFS,	Satisfied,	1.32,	0,	50,	51,	867560
+Election26.pet,	Correct Leader,	Ordered DFS,	Satisfied,	1.31,	0,	50,	51,	867556
+Election26.pet,	Incorrect Leader,	Ordered DFS,	Not satisfiable,	1.34,	2,	54,	0,	867576
+Election28.pet,	Too many Leaders,	Ordered DFS,	Not satisfiable,	1.69,	2,	58,	0,	980952
+Election28.pet,	A Leader,	Ordered DFS,	Satisfied,	1.66,	0,	54,	55,	980968
+Election28.pet,	Correct Leader,	Ordered DFS,	Satisfied,	1.63,	0,	54,	55,	980960
+Election28.pet,	Incorrect Leader,	Ordered DFS,	Not satisfiable,	1.68,	2,	58,	0,	980956
+Election30.pet,	Too many Leaders,	Ordered DFS,	Not satisfiable,	1.9,	2,	62,	0,	1102280
+Election30.pet,	A Leader,	Ordered DFS,	Satisfied,	1.87,	0,	58,	59,	1102276
+Election30.pet,	Correct Leader,	Ordered DFS,	Satisfied,	1.85,	0,	58,	59,	1102292
+Election30.pet,	Incorrect Leader,	Ordered DFS,	Not satisfiable,	1.9,	2,	62,	0,	1102272
+Election32.pet,	Too many Leaders,	Ordered DFS,	Not satisfiable,	2.2,	2,	66,	0,	1231484
+Election32.pet,	A Leader,	Ordered DFS,	Satisfied,	2.11,	0,	62,	63,	1231484
+Election32.pet,	Correct Leader,	Ordered DFS,	Satisfied,	2.15,	0,	62,	63,	1231468
+Election32.pet,	Incorrect Leader,	Ordered DFS,	Not satisfiable,	2.18,	2,	66,	0,	1231484
+Election34.pet,	Too many Leaders,	Ordered DFS,	Not satisfiable,	2.61,	2,	70,	0,	1368208
+Election34.pet,	A Leader,	Ordered DFS,	Satisfied,	2.56,	0,	66,	67,	1368264
+Election34.pet,	Correct Leader,	Ordered DFS,	Satisfied,	2.54,	0,	66,	67,	1368240
+Election34.pet,	Incorrect Leader,	Ordered DFS,	Not satisfiable,	2.63,	2,	70,	0,	1368252
+Election36.pet,	Too many Leaders,	Ordered DFS,	Not satisfiable,	3.31,	2,	74,	0,	1512960
+Election36.pet,	A Leader,	Ordered DFS,	Satisfied,	3.16,	0,	70,	71,	1512952
+Election36.pet,	Correct Leader,	Ordered DFS,	Satisfied,	3.14,	0,	70,	71,	1513980
+Election36.pet,	Incorrect Leader,	Ordered DFS,	Not satisfiable,	3.26,	2,	74,	0,	1512952
+Election16.pet,	Too many Leaders,	Ordered BFS,	Not satisfiable,	0.61,	34,	182,	0,	417976
+Election16.pet,	A Leader,	Ordered BFS,	Satisfied,	0.61,	30,	180,	31,	417952
+Election16.pet,	Correct Leader,	Ordered BFS,	Satisfied,	0.59,	30,	180,	31,	417972
+Election16.pet,	Incorrect Leader,	Ordered BFS,	Not satisfiable,	0.62,	34,	182,	0,	417976
+Election18.pet,	Too many Leaders,	Ordered BFS,	Not satisfiable,	0.84,	38,	223,	0,	492356
+Election18.pet,	A Leader,	Ordered BFS,	Satisfied,	0.82,	34,	221,	35,	492368
+Election18.pet,	Correct Leader,	Ordered BFS,	Satisfied,	0.82,	34,	221,	35,	492356
+Election18.pet,	Incorrect Leader,	Ordered BFS,	Not satisfiable,	0.83,	38,	223,	0,	492364
+Election20.pet,	Too many Leaders,	Ordered BFS,	Not satisfiable,	1.23,	42,	268,	0,	574360
+Election20.pet,	A Leader,	Ordered BFS,	Satisfied,	1.19,	38,	266,	39,	574184
+Election20.pet,	Correct Leader,	Ordered BFS,	Satisfied,	1.19,	38,	266,	39,	574360
+Election20.pet,	Incorrect Leader,	Ordered BFS,	Not satisfiable,	1.24,	42,	268,	0,	574348
+Election22.pet,	Too many Leaders,	Ordered BFS,	Not satisfiable,	1.63,	46,	317,	0,	664184
+Election22.pet,	A Leader,	Ordered BFS,	Satisfied,	1.66,	42,	315,	43,	664184
+Election22.pet,	Correct Leader,	Ordered BFS,	Satisfied,	1.71,	42,	315,	43,	664188
+Election22.pet,	Incorrect Leader,	Ordered BFS,	Not satisfiable,	1.76,	46,	317,	0,	664184
+Election24.pet,	Too many Leaders,	Ordered BFS,	Not satisfiable,	2.29,	50,	370,	0,	762196
+Election24.pet,	A Leader,	Ordered BFS,	Satisfied,	2.25,	46,	368,	47,	762184
+Election24.pet,	Correct Leader,	Ordered BFS,	Satisfied,	2.14,	46,	368,	47,	762184
+Election24.pet,	Incorrect Leader,	Ordered BFS,	Not satisfiable,	2.31,	50,	370,	0,	762176
+Election26.pet,	Too many Leaders,	Ordered BFS,	Not satisfiable,	3.14,	54,	427,	0,	867560
+Election26.pet,	A Leader,	Ordered BFS,	Satisfied,	3.03,	50,	425,	51,	867560
+Election26.pet,	Correct Leader,	Ordered BFS,	Satisfied,	3.03,	50,	425,	51,	867572
+Election26.pet,	Incorrect Leader,	Ordered BFS,	Not satisfiable,	2.99,	54,	427,	0,	867556
+Election28.pet,	Too many Leaders,	Ordered BFS,	Not satisfiable,	4.35,	58,	488,	0,	980844
+Election28.pet,	A Leader,	Ordered BFS,	Satisfied,	4.23,	54,	486,	55,	980960
+Election28.pet,	Correct Leader,	Ordered BFS,	Satisfied,	4.47,	54,	486,	55,	980956
+Election28.pet,	Incorrect Leader,	Ordered BFS,	Not satisfiable,	4.19,	58,	488,	0,	980832
+Election30.pet,	Too many Leaders,	Ordered BFS,	Not satisfiable,	5.4,	62,	553,	0,	1102292
+Election30.pet,	A Leader,	Ordered BFS,	Satisfied,	5.27,	58,	551,	59,	1102368
+Election30.pet,	Correct Leader,	Ordered BFS,	Satisfied,	4.69,	58,	551,	59,	1102272
+Election30.pet,	Incorrect Leader,	Ordered BFS,	Not satisfiable,	5.4,	62,	553,	0,	1102288
+Election32.pet,	Too many Leaders,	Ordered BFS,	Not satisfiable,	6.61,	66,	622,	0,	1231488
+Election32.pet,	A Leader,	Ordered BFS,	Satisfied,	6.29,	62,	620,	63,	1231488
+Election32.pet,	Correct Leader,	Ordered BFS,	Satisfied,	5.91,	62,	620,	63,	1231512
+Election32.pet,	Incorrect Leader,	Ordered BFS,	Not satisfiable,	6.52,	66,	622,	0,	1231508
+Election34.pet,	Too many Leaders,	Ordered BFS,	Not satisfiable,	8.76,	70,	695,	0,	1368236
+Election34.pet,	A Leader,	Ordered BFS,	Satisfied,	7.6,	66,	693,	67,	1368264
+Election34.pet,	Correct Leader,	Ordered BFS,	Satisfied,	8.47,	66,	693,	67,	1368248
+Election34.pet,	Incorrect Leader,	Ordered BFS,	Not satisfiable,	8.65,	70,	695,	0,	1368252
+Election36.pet,	Too many Leaders,	Ordered BFS,	Not satisfiable,	11.17,	74,	772,	0,	1512956
+Election36.pet,	A Leader,	Ordered BFS,	Satisfied,	11.57,	70,	770,	71,	1512948
+Election36.pet,	Correct Leader,	Ordered BFS,	Satisfied,	11.74,	70,	770,	71,	1512944
+Election36.pet,	Incorrect Leader,	Ordered BFS,	Not satisfiable,	11.23,	74,	772,	0,	1512972
+Election16.pet,	Too many Leaders,	Ordered Random DFS,	Not satisfiable,	1.1,	339,	817,	0,	248068
+Election16.pet,	A Leader,	Ordered Random DFS,	Satisfied,	1.01,	296,	777,	32,	248048
+Election16.pet,	Correct Leader,	Ordered Random DFS,	Satisfied,	1.12,	349,	667,	32,	248056
+Election16.pet,	Incorrect Leader,	Ordered Random DFS,	Not satisfiable,	1.29,	393,	758,	0,	248064
+Election18.pet,	Too many Leaders,	Ordered Random DFS,	Not satisfiable,	2.04,	422,	1125,	0,	285324
+Election18.pet,	A Leader,	Ordered Random DFS,	Satisfied,	2.27,	480,	942,	36,	285320
+Election18.pet,	Correct Leader,	Ordered Random DFS,	Satisfied,	2.34,	467,	986,	36,	285328
+Election18.pet,	Incorrect Leader,	Ordered Random DFS,	Not satisfiable,	2.18,	457,	1095,	0,	285332
+Election20.pet,	Too many Leaders,	Ordered Random DFS,	Not satisfiable,	3.81,	468,	1367,	0,	326308
+Election20.pet,	A Leader,	Ordered Random DFS,	Satisfied,	4.12,	563,	1077,	40,	326268
+Election20.pet,	Correct Leader,	Ordered Random DFS,	Satisfied,	3.62,	429,	1364,	40,	326320
+Election20.pet,	Incorrect Leader,	Ordered Random DFS,	Not satisfiable,	7.12,	635,	1297,	0,	326304
+Election22.pet,	Too many Leaders,	Ordered Random DFS,	Not satisfiable,	8.92,	727,	1705,	0,	371220
+Election22.pet,	A Leader,	Ordered Random DFS,	Satisfied,	7.33,	623,	1639,	44,	371216
+Election22.pet,	Correct Leader,	Ordered Random DFS,	Satisfied,	9.11,	732,	1676,	44,	371228
+Election22.pet,	Incorrect Leader,	Ordered Random DFS,	Not satisfiable,	6.88,	675,	1564,	0,	371196
+Election24.pet,	Too many Leaders,	Ordered Random DFS,	Not satisfiable,	10.49,	824,	1644,	0,	420388
+Election24.pet,	A Leader,	Ordered Random DFS,	Satisfied,	14.11,	939,	1914,	48,	420348
+Election24.pet,	Correct Leader,	Ordered Random DFS,	Satisfied,	9.61,	715,	1988,	48,	420388
+Election24.pet,	Incorrect Leader,	Ordered Random DFS,	Not satisfiable,	12.68,	910,	1766,	0,	420380
+Election26.pet,	Too many Leaders,	Ordered Random DFS,	Not satisfiable,	16.4,	892,	2297,	0,	472992
+Election26.pet,	A Leader,	Ordered Random DFS,	Satisfied,	17.92,	1015,	2164,	52,	473008
+Election26.pet,	Correct Leader,	Ordered Random DFS,	Satisfied,	16.88,	899,	2333,	52,	473028
+Election26.pet,	Incorrect Leader,	Ordered Random DFS,	Not satisfiable,	15.74,	901,	2305,	0,	473024
+Election28.pet,	Too many Leaders,	Ordered Random DFS,	Not satisfiable,	26.4,	1152,	2721,	0,	529696
+Election28.pet,	A Leader,	Ordered Random DFS,	Satisfied,	32.72,	1227,	2662,	56,	529788
+Election28.pet,	Correct Leader,	Ordered Random DFS,	Satisfied,	29.24,	1076,	2824,	56,	529776
+Election28.pet,	Incorrect Leader,	Ordered Random DFS,	Not satisfiable,	30.91,	1059,	2798,	0,	529776
+Election30.pet,	Too many Leaders,	Ordered Random DFS,	Not satisfiable,	29.72,	1135,	3148,	0,	590564
+Election30.pet,	A Leader,	Ordered Random DFS,	Satisfied,	32.12,	1151,	3164,	60,	590556
+Election30.pet,	Correct Leader,	Ordered Random DFS,	Satisfied,	39.04,	1242,	3183,	60,	590576
+Election30.pet,	Incorrect Leader,	Ordered Random DFS,	Not satisfiable,	38.66,	1324,	2967,	0,	590544
+Election32.pet,	Too many Leaders,	Ordered Random DFS,	Not satisfiable,	40.05,	1337,	3371,	0,	655324
+Election32.pet,	A Leader,	Ordered Random DFS,	Satisfied,	50.85,	1712,	3006,	64,	655324
+Election32.pet,	Correct Leader,	Ordered Random DFS,	Satisfied,	48.38,	1566,	2720,	64,	655304
+Election32.pet,	Incorrect Leader,	Ordered Random DFS,	Not satisfiable,	57.01,	1592,	3465,	0,	655324
+Election34.pet,	Too many Leaders,	Ordered Random DFS,	Not satisfiable,	66.6,	1777,	3367,	0,	723728
+Election34.pet,	A Leader,	Ordered Random DFS,	Satisfied,	52.27,	1256,	4105,	68,	723720
+Election34.pet,	Correct Leader,	Ordered Random DFS,	Satisfied,	63.3,	1624,	4051,	68,	723732
+Election34.pet,	Incorrect Leader,	Ordered Random DFS,	Not satisfiable,	65.53,	1724,	3703,	0,	723732
+Election36.pet,	Too many Leaders,	Ordered Random DFS,	Not satisfiable,	87.5,	1908,	3800,	0,	796160
+Election36.pet,	A Leader,	Ordered Random DFS,	Satisfied,	117.7,	1850,	4689,	72,	796156
+Election36.pet,	Correct Leader,	Ordered Random DFS,	Satisfied,	93.95,	1749,	4546,	72,	796252
+Election36.pet,	Incorrect Leader,	Ordered Random DFS,	Not satisfiable,	76.86,	1584,	4597,	0,	796116
+Election16.pet,	Too many Leaders,	Ordered DFS States,	Not satisfiable,	0.48,	2,	34,	0,	417972
+Election16.pet,	A Leader,	Ordered DFS States,	Satisfied,	0.46,	0,	30,	31,	418980
+Election16.pet,	Correct Leader,	Ordered DFS States,	Satisfied,	0.47,	0,	30,	31,	417972
+Election16.pet,	Incorrect Leader,	Ordered DFS States,	Not satisfiable,	0.47,	2,	35,	0,	417984
+Election18.pet,	Too many Leaders,	Ordered DFS States,	Not satisfiable,	0.58,	2,	38,	0,	492356
+Election18.pet,	A Leader,	Ordered DFS States,	Satisfied,	0.58,	0,	34,	35,	492356
+Election18.pet,	Correct Leader,	Ordered DFS States,	Satisfied,	0.59,	0,	34,	35,	492360
+Election18.pet,	Incorrect Leader,	Ordered DFS States,	Not satisfiable,	0.6,	2,	39,	0,	492312
+Election20.pet,	Too many Leaders,	Ordered DFS States,	Not satisfiable,	0.75,	2,	42,	0,	574356
+Election20.pet,	A Leader,	Ordered DFS States,	Satisfied,	0.74,	0,	38,	39,	574364
+Election20.pet,	Correct Leader,	Ordered DFS States,	Satisfied,	0.73,	0,	38,	39,	574340
+Election20.pet,	Incorrect Leader,	Ordered DFS States,	Not satisfiable,	0.76,	2,	43,	0,	574180
+Election22.pet,	Too many Leaders,	Ordered DFS States,	Not satisfiable,	0.92,	2,	46,	0,	664188
+Election22.pet,	A Leader,	Ordered DFS States,	Satisfied,	0.91,	0,	42,	43,	664176
+Election22.pet,	Correct Leader,	Ordered DFS States,	Satisfied,	0.9,	0,	42,	43,	664192
+Election22.pet,	Incorrect Leader,	Ordered DFS States,	Not satisfiable,	0.94,	2,	47,	0,	664184
+Election24.pet,	Too many Leaders,	Ordered DFS States,	Not satisfiable,	1.11,	2,	50,	0,	762176
+Election24.pet,	A Leader,	Ordered DFS States,	Satisfied,	1.09,	0,	46,	47,	762172
+Election24.pet,	Correct Leader,	Ordered DFS States,	Satisfied,	1.09,	0,	46,	47,	762188
+Election24.pet,	Incorrect Leader,	Ordered DFS States,	Not satisfiable,	1.13,	2,	51,	0,	762176
+Election26.pet,	Too many Leaders,	Ordered DFS States,	Not satisfiable,	1.35,	2,	54,	0,	867552
+Election26.pet,	A Leader,	Ordered DFS States,	Satisfied,	1.32,	0,	50,	51,	867560
+Election26.pet,	Correct Leader,	Ordered DFS States,	Satisfied,	1.31,	0,	50,	51,	867560
+Election26.pet,	Incorrect Leader,	Ordered DFS States,	Not satisfiable,	1.4,	2,	55,	0,	867576
+Election28.pet,	Too many Leaders,	Ordered DFS States,	Not satisfiable,	1.69,	2,	58,	0,	980940
+Election28.pet,	A Leader,	Ordered DFS States,	Satisfied,	1.65,	0,	54,	55,	980856
+Election28.pet,	Correct Leader,	Ordered DFS States,	Satisfied,	1.64,	0,	54,	55,	980924
+Election28.pet,	Incorrect Leader,	Ordered DFS States,	Not satisfiable,	1.73,	2,	59,	0,	980868
+Election30.pet,	Too many Leaders,	Ordered DFS States,	Not satisfiable,	1.92,	2,	62,	0,	1102268
+Election30.pet,	A Leader,	Ordered DFS States,	Satisfied,	1.87,	0,	58,	59,	1103308
+Election30.pet,	Correct Leader,	Ordered DFS States,	Satisfied,	1.87,	0,	58,	59,	1102388
+Election30.pet,	Incorrect Leader,	Ordered DFS States,	Not satisfiable,	1.96,	2,	63,	0,	1102280
+Election32.pet,	Too many Leaders,	Ordered DFS States,	Not satisfiable,	2.23,	2,	66,	0,	1231520
+Election32.pet,	A Leader,	Ordered DFS States,	Satisfied,	2.13,	0,	62,	63,	1231460
+Election32.pet,	Correct Leader,	Ordered DFS States,	Satisfied,	2.15,	0,	62,	63,	1231488
+Election32.pet,	Incorrect Leader,	Ordered DFS States,	Not satisfiable,	2.24,	2,	67,	0,	1231504
+Election34.pet,	Too many Leaders,	Ordered DFS States,	Not satisfiable,	2.64,	2,	70,	0,	1368256
+Election34.pet,	A Leader,	Ordered DFS States,	Satisfied,	2.57,	0,	66,	67,	1368244
+Election34.pet,	Correct Leader,	Ordered DFS States,	Satisfied,	2.56,	0,	66,	67,	1368244
+Election34.pet,	Incorrect Leader,	Ordered DFS States,	Not satisfiable,	2.67,	2,	71,	0,	1368364
+Election36.pet,	Too many Leaders,	Ordered DFS States,	Not satisfiable,	3.29,	2,	74,	0,	1512952
+Election36.pet,	A Leader,	Ordered DFS States,	Satisfied,	3.16,	0,	70,	71,	1512960
+Election36.pet,	Correct Leader,	Ordered DFS States,	Satisfied,	3.19,	0,	70,	71,	1512956
+Election36.pet,	Incorrect Leader,	Ordered DFS States,	Not satisfiable,	3.35,	2,	75,	0,	1512940
+Election16.pet,	Too many Leaders,	Ordered DFS Bools,	Not satisfiable,	0.47,	2,	35,	0,	417976
+Election16.pet,	A Leader,	Ordered DFS Bools,	Satisfied,	0.46,	0,	30,	31,	417968
+Election16.pet,	Correct Leader,	Ordered DFS Bools,	Satisfied,	0.47,	0,	30,	31,	417976
+Election16.pet,	Incorrect Leader,	Ordered DFS Bools,	Not satisfiable,	0.48,	2,	35,	0,	417952
+Election18.pet,	Too many Leaders,	Ordered DFS Bools,	Not satisfiable,	0.59,	2,	39,	0,	492360
+Election18.pet,	A Leader,	Ordered DFS Bools,	Satisfied,	0.58,	0,	34,	35,	492364
+Election18.pet,	Correct Leader,	Ordered DFS Bools,	Satisfied,	0.59,	0,	34,	35,	492348
+Election18.pet,	Incorrect Leader,	Ordered DFS Bools,	Not satisfiable,	0.6,	2,	39,	0,	492352
+Election20.pet,	Too many Leaders,	Ordered DFS Bools,	Not satisfiable,	0.76,	2,	43,	0,	574348
+Election20.pet,	A Leader,	Ordered DFS Bools,	Satisfied,	0.74,	0,	38,	39,	574376
+Election20.pet,	Correct Leader,	Ordered DFS Bools,	Satisfied,	0.75,	0,	38,	39,	574328
+Election20.pet,	Incorrect Leader,	Ordered DFS Bools,	Not satisfiable,	0.75,	2,	43,	0,	574368
+Election22.pet,	Too many Leaders,	Ordered DFS Bools,	Not satisfiable,	0.95,	2,	47,	0,	664184
+Election22.pet,	A Leader,	Ordered DFS Bools,	Satisfied,	0.91,	0,	42,	43,	664180
+Election22.pet,	Correct Leader,	Ordered DFS Bools,	Satisfied,	0.91,	0,	42,	43,	664176
+Election22.pet,	Incorrect Leader,	Ordered DFS Bools,	Not satisfiable,	0.93,	2,	47,	0,	664180
+Election24.pet,	Too many Leaders,	Ordered DFS Bools,	Not satisfiable,	1.13,	2,	51,	0,	762176
+Election24.pet,	A Leader,	Ordered DFS Bools,	Satisfied,	1.08,	0,	46,	47,	762172
+Election24.pet,	Correct Leader,	Ordered DFS Bools,	Satisfied,	1.08,	0,	46,	47,	762184
+Election24.pet,	Incorrect Leader,	Ordered DFS Bools,	Not satisfiable,	1.12,	2,	51,	0,	762188
+Election26.pet,	Too many Leaders,	Ordered DFS Bools,	Not satisfiable,	1.37,	2,	55,	0,	867560
+Election26.pet,	A Leader,	Ordered DFS Bools,	Satisfied,	1.32,	0,	50,	51,	867560
+Election26.pet,	Correct Leader,	Ordered DFS Bools,	Satisfied,	1.31,	0,	50,	51,	867560
+Election26.pet,	Incorrect Leader,	Ordered DFS Bools,	Not satisfiable,	1.38,	2,	55,	0,	867556
+Election28.pet,	Too many Leaders,	Ordered DFS Bools,	Not satisfiable,	1.71,	2,	59,	0,	980848
+Election28.pet,	A Leader,	Ordered DFS Bools,	Satisfied,	1.64,	0,	54,	55,	980852
+Election28.pet,	Correct Leader,	Ordered DFS Bools,	Satisfied,	1.64,	0,	54,	55,	980956
+Election28.pet,	Incorrect Leader,	Ordered DFS Bools,	Not satisfiable,	1.73,	2,	59,	0,	980952
+Election30.pet,	Too many Leaders,	Ordered DFS Bools,	Not satisfiable,	1.94,	2,	63,	0,	1102280
+Election30.pet,	A Leader,	Ordered DFS Bools,	Satisfied,	1.86,	0,	58,	59,	1102256
+Election30.pet,	Correct Leader,	Ordered DFS Bools,	Satisfied,	1.87,	0,	58,	59,	1102300
+Election30.pet,	Incorrect Leader,	Ordered DFS Bools,	Not satisfiable,	1.95,	2,	63,	0,	1102288
+Election32.pet,	Too many Leaders,	Ordered DFS Bools,	Not satisfiable,	2.24,	2,	67,	0,	1231476
+Election32.pet,	A Leader,	Ordered DFS Bools,	Satisfied,	2.13,	0,	62,	63,	1231496
+Election32.pet,	Correct Leader,	Ordered DFS Bools,	Satisfied,	2.14,	0,	62,	63,	1231496
+Election32.pet,	Incorrect Leader,	Ordered DFS Bools,	Not satisfiable,	2.23,	2,	67,	0,	1231520
+Election34.pet,	Too many Leaders,	Ordered DFS Bools,	Not satisfiable,	2.68,	2,	71,	0,	1368244
+Election34.pet,	A Leader,	Ordered DFS Bools,	Satisfied,	2.59,	0,	66,	67,	1368264
+Election34.pet,	Correct Leader,	Ordered DFS Bools,	Satisfied,	2.56,	0,	66,	67,	1368244
+Election34.pet,	Incorrect Leader,	Ordered DFS Bools,	Not satisfiable,	2.7,	2,	71,	0,	1368252
+Election36.pet,	Too many Leaders,	Ordered DFS Bools,	Not satisfiable,	3.37,	2,	75,	0,	1512940
+Election36.pet,	A Leader,	Ordered DFS Bools,	Satisfied,	3.17,	0,	70,	71,	1512944
+Election36.pet,	Correct Leader,	Ordered DFS Bools,	Satisfied,	3.24,	0,	70,	71,	1512944
+Election36.pet,	Incorrect Leader,	Ordered DFS Bools,	Not satisfiable,	3.32,	2,	75,	0,	1513040
+Election16.pet,	Too many Leaders,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	248852
+Election16.pet,	A Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.22,	32,	152,	32,	44104
+Election16.pet,	Correct Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.22,	32,	152,	32,	44104
+Election16.pet,	Incorrect Leader,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	248852
+Election18.pet,	Too many Leaders,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	286012
+Election18.pet,	A Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.28,	36,	189,	36,	44104
+Election18.pet,	Correct Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.28,	36,	189,	36,	44104
+Election18.pet,	Incorrect Leader,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	286016
+Election20.pet,	Too many Leaders,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	327060
+Election20.pet,	A Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.33,	40,	230,	40,	326308
+Election20.pet,	Correct Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.32,	40,	230,	40,	326312
+Election20.pet,	Incorrect Leader,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	327084
+Election22.pet,	Too many Leaders,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	371700
+Election22.pet,	A Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.39,	44,	275,	44,	371216
+Election22.pet,	Correct Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.39,	44,	275,	44,	371208
+Election22.pet,	Incorrect Leader,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	371700
+Election24.pet,	Too many Leaders,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	420628
+Election24.pet,	A Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.45,	48,	324,	48,	420380
+Election24.pet,	Correct Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.45,	48,	324,	48,	420376
+Election24.pet,	Incorrect Leader,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	420612
+Election26.pet,	Too many Leaders,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	473420
+Election26.pet,	A Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.53,	52,	377,	52,	473000
+Election26.pet,	Correct Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.52,	52,	377,	52,	473024
+Election26.pet,	Incorrect Leader,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	473436
+Election28.pet,	Too many Leaders,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	530152
+Election28.pet,	A Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.61,	56,	434,	56,	529764
+Election28.pet,	Correct Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.6,	56,	434,	56,	529788
+Election28.pet,	Incorrect Leader,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	530116
+Election30.pet,	Too many Leaders,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	590764
+Election30.pet,	A Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.7,	60,	495,	60,	590568
+Election30.pet,	Correct Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.7,	60,	495,	60,	590568
+Election30.pet,	Incorrect Leader,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	590792
+Election32.pet,	Too many Leaders,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	655320
+Election32.pet,	A Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.79,	64,	560,	64,	655304
+Election32.pet,	Correct Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.79,	64,	560,	64,	655332
+Election32.pet,	Incorrect Leader,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	655340
+Election34.pet,	Too many Leaders,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	723948
+Election34.pet,	A Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.89,	68,	629,	68,	723696
+Election34.pet,	Correct Leader,	Old BestFS (Heuristic distance),	Satisfied,	0.88,	68,	629,	68,	723724
+Election34.pet,	Incorrect Leader,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	723956
+Election36.pet,	Too many Leaders,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	796392
+Election36.pet,	A Leader,	Old BestFS (Heuristic distance),	Satisfied,	1.01,	72,	702,	72,	796152
+Election36.pet,	Correct Leader,	Old BestFS (Heuristic distance),	Satisfied,	1.01,	72,	702,	72,	796156
+Election36.pet,	Incorrect Leader,	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	796392
+Election16.pet,	Too many Leaders,	Old BestFS (Monotonicity Included),	Not satisfiable,	0.34,	33,	152,	0,	248048
+Election16.pet,	A Leader,	Old BestFS (Monotonicity Included),	Satisfied,	0.33,	32,	152,	32,	248060
+Election16.pet,	Correct Leader,	Old BestFS (Monotonicity Included),	Satisfied,	0.32,	32,	152,	32,	248060
+Election16.pet,	Incorrect Leader,	Old BestFS (Monotonicity Included),	Not satisfiable,	0.33,	33,	152,	0,	248068
+Election18.pet,	Too many Leaders,	Old BestFS (Monotonicity Included),	Not satisfiable,	0.46,	37,	189,	0,	285332
+Election18.pet,	A Leader,	Old BestFS (Monotonicity Included),	Satisfied,	0.45,	36,	189,	36,	285324
+Election18.pet,	Correct Leader,	Old BestFS (Monotonicity Included),	Satisfied,	0.45,	36,	189,	36,	285324
+Election18.pet,	Incorrect Leader,	Old BestFS (Monotonicity Included),	Not satisfiable,	0.46,	37,	189,	0,	285312
+Election20.pet,	Too many Leaders,	Old BestFS (Monotonicity Included),	Not satisfiable,	0.71,	41,	230,	0,	326304
+Election20.pet,	A Leader,	Old BestFS (Monotonicity Included),	Satisfied,	0.68,	40,	230,	40,	326288
+Election20.pet,	Correct Leader,	Old BestFS (Monotonicity Included),	Satisfied,	0.7,	40,	230,	40,	326312
+Election20.pet,	Incorrect Leader,	Old BestFS (Monotonicity Included),	Not satisfiable,	0.7,	41,	230,	0,	326304
+Election22.pet,	Too many Leaders,	Old BestFS (Monotonicity Included),	Not satisfiable,	1.03,	45,	275,	0,	371224
+Election22.pet,	A Leader,	Old BestFS (Monotonicity Included),	Satisfied,	1.01,	44,	275,	44,	371240
+Election22.pet,	Correct Leader,	Old BestFS (Monotonicity Included),	Satisfied,	0.96,	44,	275,	44,	371220
+Election22.pet,	Incorrect Leader,	Old BestFS (Monotonicity Included),	Not satisfiable,	0.99,	45,	275,	0,	371216
+Election24.pet,	Too many Leaders,	Old BestFS (Monotonicity Included),	Not satisfiable,	1.35,	49,	324,	0,	420344
+Election24.pet,	A Leader,	Old BestFS (Monotonicity Included),	Satisfied,	1.33,	48,	324,	48,	420404
+Election24.pet,	Correct Leader,	Old BestFS (Monotonicity Included),	Satisfied,	1.26,	48,	324,	48,	420388
+Election24.pet,	Incorrect Leader,	Old BestFS (Monotonicity Included),	Not satisfiable,	1.34,	49,	324,	0,	420192
+Election26.pet,	Too many Leaders,	Old BestFS (Monotonicity Included),	Not satisfiable,	1.76,	53,	377,	0,	473028
+Election26.pet,	A Leader,	Old BestFS (Monotonicity Included),	Satisfied,	1.83,	52,	377,	52,	473020
+Election26.pet,	Correct Leader,	Old BestFS (Monotonicity Included),	Satisfied,	1.82,	52,	377,	52,	473028
+Election26.pet,	Incorrect Leader,	Old BestFS (Monotonicity Included),	Not satisfiable,	1.86,	53,	377,	0,	473036
+Election28.pet,	Too many Leaders,	Old BestFS (Monotonicity Included),	Not satisfiable,	2.74,	57,	434,	0,	529672
+Election28.pet,	A Leader,	Old BestFS (Monotonicity Included),	Satisfied,	2.8,	56,	434,	56,	529796
+Election28.pet,	Correct Leader,	Old BestFS (Monotonicity Included),	Satisfied,	2.77,	56,	434,	56,	529696
+Election28.pet,	Incorrect Leader,	Old BestFS (Monotonicity Included),	Not satisfiable,	2.81,	57,	434,	0,	529780
+Election30.pet,	Too many Leaders,	Old BestFS (Monotonicity Included),	Not satisfiable,	3.13,	61,	495,	0,	590560
+Election30.pet,	A Leader,	Old BestFS (Monotonicity Included),	Satisfied,	3.27,	60,	495,	60,	590556
+Election30.pet,	Correct Leader,	Old BestFS (Monotonicity Included),	Satisfied,	3.31,	60,	495,	60,	590568
+Election30.pet,	Incorrect Leader,	Old BestFS (Monotonicity Included),	Not satisfiable,	3.33,	61,	495,	0,	590564
+Election32.pet,	Too many Leaders,	Old BestFS (Monotonicity Included),	Not satisfiable,	3.73,	65,	560,	0,	655324
+Election32.pet,	A Leader,	Old BestFS (Monotonicity Included),	Satisfied,	3.75,	64,	560,	64,	655316
+Election32.pet,	Correct Leader,	Old BestFS (Monotonicity Included),	Satisfied,	3.7,	64,	560,	64,	655312
+Election32.pet,	Incorrect Leader,	Old BestFS (Monotonicity Included),	Not satisfiable,	4.09,	65,	560,	0,	655184
+Election34.pet,	Too many Leaders,	Old BestFS (Monotonicity Included),	Not satisfiable,	5.39,	69,	629,	0,	723716
+Election34.pet,	A Leader,	Old BestFS (Monotonicity Included),	Satisfied,	4.96,	68,	629,	68,	723732
+Election34.pet,	Correct Leader,	Old BestFS (Monotonicity Included),	Satisfied,	4.84,	68,	629,	68,	723712
+Election34.pet,	Incorrect Leader,	Old BestFS (Monotonicity Included),	Not satisfiable,	5.34,	69,	629,	0,	723732
+Election36.pet,	Too many Leaders,	Old BestFS (Monotonicity Included),	Not satisfiable,	6.94,	73,	702,	0,	796152
+Election36.pet,	A Leader,	Old BestFS (Monotonicity Included),	Satisfied,	6.95,	72,	702,	72,	796164
+Election36.pet,	Correct Leader,	Old BestFS (Monotonicity Included),	Satisfied,	7.45,	72,	702,	72,	796156
+Election36.pet,	Incorrect Leader,	Old BestFS (Monotonicity Included),	Not satisfiable,	7.64,	73,	702,	0,	796104
+Election16.pet,	Too many Leaders,	Indexed Search,	Not satisfiable,	0.48,	33,	152,	0,	417968
+Election16.pet,	A Leader,	Indexed Search,	Satisfied,	0.48,	31,	152,	32,	417968
+Election16.pet,	Correct Leader,	Indexed Search,	Satisfied,	0.48,	31,	152,	32,	417976
+Election16.pet,	Incorrect Leader,	Indexed Search,	Not satisfiable,	0.49,	33,	152,	0,	417976
+Election18.pet,	Too many Leaders,	Indexed Search,	Not satisfiable,	0.62,	37,	189,	0,	492356
+Election18.pet,	A Leader,	Indexed Search,	Satisfied,	0.6,	35,	189,	36,	492356
+Election18.pet,	Correct Leader,	Indexed Search,	Satisfied,	0.61,	35,	189,	36,	492364
+Election18.pet,	Incorrect Leader,	Indexed Search,	Not satisfiable,	0.61,	37,	189,	0,	492364
+Election20.pet,	Too many Leaders,	Indexed Search,	Not satisfiable,	0.79,	41,	230,	0,	574344
+Election20.pet,	A Leader,	Indexed Search,	Satisfied,	0.78,	39,	230,	40,	574360
+Election20.pet,	Correct Leader,	Indexed Search,	Satisfied,	0.78,	39,	230,	40,	574356
+Election20.pet,	Incorrect Leader,	Indexed Search,	Not satisfiable,	0.78,	41,	230,	0,	574332
+Election22.pet,	Too many Leaders,	Indexed Search,	Not satisfiable,	0.98,	45,	275,	0,	664200
+Election22.pet,	A Leader,	Indexed Search,	Satisfied,	0.99,	43,	275,	44,	664164
+Election22.pet,	Correct Leader,	Indexed Search,	Satisfied,	0.99,	43,	275,	44,	664176
+Election22.pet,	Incorrect Leader,	Indexed Search,	Not satisfiable,	0.98,	45,	275,	0,	664176
+Election24.pet,	Too many Leaders,	Indexed Search,	Not satisfiable,	1.21,	49,	324,	0,	762184
+Election24.pet,	A Leader,	Indexed Search,	Satisfied,	1.18,	47,	324,	48,	762176
+Election24.pet,	Correct Leader,	Indexed Search,	Satisfied,	1.19,	47,	324,	48,	762184
+Election24.pet,	Incorrect Leader,	Indexed Search,	Not satisfiable,	1.22,	49,	324,	0,	762188
+Election26.pet,	Too many Leaders,	Indexed Search,	Not satisfiable,	1.51,	53,	377,	0,	867560
+Election26.pet,	A Leader,	Indexed Search,	Satisfied,	1.47,	51,	377,	52,	867560
+Election26.pet,	Correct Leader,	Indexed Search,	Satisfied,	1.45,	51,	377,	52,	867552
+Election26.pet,	Incorrect Leader,	Indexed Search,	Not satisfiable,	1.51,	53,	377,	0,	867556
+Election28.pet,	Too many Leaders,	Indexed Search,	Not satisfiable,	1.92,	57,	434,	0,	980956
+Election28.pet,	A Leader,	Indexed Search,	Satisfied,	1.89,	55,	434,	56,	980964
+Election28.pet,	Correct Leader,	Indexed Search,	Satisfied,	1.93,	55,	434,	56,	980936
+Election28.pet,	Incorrect Leader,	Indexed Search,	Not satisfiable,	1.96,	57,	434,	0,	980956
+Election30.pet,	Too many Leaders,	Indexed Search,	Not satisfiable,	2.26,	61,	495,	0,	1102288
+Election30.pet,	A Leader,	Indexed Search,	Satisfied,	2.14,	59,	495,	60,	1102280
+Election30.pet,	Correct Leader,	Indexed Search,	Satisfied,	2.23,	59,	495,	60,	1102260
+Election30.pet,	Incorrect Leader,	Indexed Search,	Not satisfiable,	2.26,	61,	495,	0,	1102288
+Election32.pet,	Too many Leaders,	Indexed Search,	Not satisfiable,	2.63,	65,	560,	0,	1231468
+Election32.pet,	A Leader,	Indexed Search,	Satisfied,	2.54,	63,	560,	64,	1231496
+Election32.pet,	Correct Leader,	Indexed Search,	Satisfied,	2.55,	63,	560,	64,	1231496
+Election32.pet,	Incorrect Leader,	Indexed Search,	Not satisfiable,	2.44,	65,	560,	0,	1231508
+Election34.pet,	Too many Leaders,	Indexed Search,	Not satisfiable,	3.24,	69,	629,	0,	1368264
+Election34.pet,	A Leader,	Indexed Search,	Satisfied,	3.22,	67,	629,	68,	1368264
+Election34.pet,	Correct Leader,	Indexed Search,	Satisfied,	3.21,	67,	629,	68,	1368256
+Election34.pet,	Incorrect Leader,	Indexed Search,	Not satisfiable,	3.28,	69,	629,	0,	1368256
+Election36.pet,	Too many Leaders,	Indexed Search,	Not satisfiable,	4.29,	73,	702,	0,	1512964
+Election36.pet,	A Leader,	Indexed Search,	Satisfied,	4.2,	71,	702,	72,	1512952
+Election36.pet,	Correct Leader,	Indexed Search,	Satisfied,	4.14,	71,	702,	72,	1512948
+Election36.pet,	Incorrect Leader,	Indexed Search,	Not satisfiable,	4.14,	73,	702,	0,	1512948
+Election16.pet,	Too many Leaders,	Indexed Search with Variance,	Not satisfiable,	0.48,	33,	152,	0,	417976
+Election16.pet,	A Leader,	Indexed Search with Variance,	Satisfied,	0.49,	31,	152,	32,	417960
+Election16.pet,	Correct Leader,	Indexed Search with Variance,	Satisfied,	0.48,	31,	152,	32,	417948
+Election16.pet,	Incorrect Leader,	Indexed Search with Variance,	Not satisfiable,	0.48,	33,	152,	0,	417796
+Election18.pet,	Too many Leaders,	Indexed Search with Variance,	Not satisfiable,	0.61,	37,	189,	0,	492176
+Election18.pet,	A Leader,	Indexed Search with Variance,	Satisfied,	0.6,	35,	189,	36,	492372
+Election18.pet,	Correct Leader,	Indexed Search with Variance,	Satisfied,	0.61,	35,	189,	36,	492376
+Election18.pet,	Incorrect Leader,	Indexed Search with Variance,	Not satisfiable,	0.62,	37,	189,	0,	492356
+Election20.pet,	Too many Leaders,	Indexed Search with Variance,	Not satisfiable,	0.79,	41,	230,	0,	574352
+Election20.pet,	A Leader,	Indexed Search with Variance,	Satisfied,	0.78,	39,	230,	40,	574332
+Election20.pet,	Correct Leader,	Indexed Search with Variance,	Satisfied,	0.78,	39,	230,	40,	574352
+Election20.pet,	Incorrect Leader,	Indexed Search with Variance,	Not satisfiable,	0.78,	41,	230,	0,	574360
+Election22.pet,	Too many Leaders,	Indexed Search with Variance,	Not satisfiable,	0.98,	45,	275,	0,	664188
+Election22.pet,	A Leader,	Indexed Search with Variance,	Satisfied,	1,	43,	275,	44,	664168
+Election22.pet,	Correct Leader,	Indexed Search with Variance,	Satisfied,	0.99,	43,	275,	44,	664188
+Election22.pet,	Incorrect Leader,	Indexed Search with Variance,	Not satisfiable,	1.01,	45,	275,	0,	664188
+Election24.pet,	Too many Leaders,	Indexed Search with Variance,	Not satisfiable,	1.21,	49,	324,	0,	762172
+Election24.pet,	A Leader,	Indexed Search with Variance,	Satisfied,	1.21,	47,	324,	48,	762172
+Election24.pet,	Correct Leader,	Indexed Search with Variance,	Satisfied,	1.2,	47,	324,	48,	762184
+Election24.pet,	Incorrect Leader,	Indexed Search with Variance,	Not satisfiable,	1.21,	49,	324,	0,	762180
+Election26.pet,	Too many Leaders,	Indexed Search with Variance,	Not satisfiable,	1.51,	53,	377,	0,	867552
+Election26.pet,	A Leader,	Indexed Search with Variance,	Satisfied,	1.51,	51,	377,	52,	867556
+Election26.pet,	Correct Leader,	Indexed Search with Variance,	Satisfied,	1.48,	51,	377,	52,	867560
+Election26.pet,	Incorrect Leader,	Indexed Search with Variance,	Not satisfiable,	1.54,	53,	377,	0,	867564
+Election28.pet,	Too many Leaders,	Indexed Search with Variance,	Not satisfiable,	1.91,	57,	434,	0,	980860
+Election28.pet,	A Leader,	Indexed Search with Variance,	Satisfied,	1.92,	55,	434,	56,	980956
+Election28.pet,	Correct Leader,	Indexed Search with Variance,	Satisfied,	1.99,	55,	434,	56,	980856
+Election28.pet,	Incorrect Leader,	Indexed Search with Variance,	Not satisfiable,	1.88,	57,	434,	0,	980944
+Election30.pet,	Too many Leaders,	Indexed Search with Variance,	Not satisfiable,	2.19,	61,	495,	0,	1102296
+Election30.pet,	A Leader,	Indexed Search with Variance,	Satisfied,	2.2,	59,	495,	60,	1102280
+Election30.pet,	Correct Leader,	Indexed Search with Variance,	Satisfied,	2.15,	59,	495,	60,	1102276
+Election30.pet,	Incorrect Leader,	Indexed Search with Variance,	Not satisfiable,	2.26,	61,	495,	0,	1102268
+Election32.pet,	Too many Leaders,	Indexed Search with Variance,	Not satisfiable,	2.66,	65,	560,	0,	1231504
+Election32.pet,	A Leader,	Indexed Search with Variance,	Satisfied,	2.41,	63,	560,	64,	1231500
+Election32.pet,	Correct Leader,	Indexed Search with Variance,	Satisfied,	2.63,	63,	560,	64,	1231508
+Election32.pet,	Incorrect Leader,	Indexed Search with Variance,	Not satisfiable,	2.69,	65,	560,	0,	1231484
+Election34.pet,	Too many Leaders,	Indexed Search with Variance,	Not satisfiable,	3.11,	69,	629,	0,	1368364
+Election34.pet,	A Leader,	Indexed Search with Variance,	Satisfied,	3.22,	67,	629,	68,	1368244
+Election34.pet,	Correct Leader,	Indexed Search with Variance,	Satisfied,	3.04,	67,	629,	68,	1368252
+Election34.pet,	Incorrect Leader,	Indexed Search with Variance,	Not satisfiable,	3.21,	69,	629,	0,	1368260
+Election36.pet,	Too many Leaders,	Indexed Search with Variance,	Not satisfiable,	4.26,	73,	702,	0,	1512952
+Election36.pet,	A Leader,	Indexed Search with Variance,	Satisfied,	4.2,	71,	702,	72,	1512944
+Election36.pet,	Correct Leader,	Indexed Search with Variance,	Satisfied,	4.19,	71,	702,	72,	1512952
+Election36.pet,	Incorrect Leader,	Indexed Search with Variance,	Not satisfiable,	4.23,	73,	702,	0,	1512948
+Election16.pet,	Too many Leaders,	Indexed BFS,	Not satisfiable,	0.6,	34,	182,	0,	417968
+Election16.pet,	A Leader,	Indexed BFS,	Satisfied,	0.59,	30,	180,	31,	417968
+Election16.pet,	Correct Leader,	Indexed BFS,	Satisfied,	0.59,	30,	180,	31,	417968
+Election16.pet,	Incorrect Leader,	Indexed BFS,	Not satisfiable,	0.59,	34,	182,	0,	417976
+Election18.pet,	Too many Leaders,	Indexed BFS,	Not satisfiable,	0.8,	38,	223,	0,	492356
+Election18.pet,	A Leader,	Indexed BFS,	Satisfied,	0.81,	34,	221,	35,	492356
+Election18.pet,	Correct Leader,	Indexed BFS,	Satisfied,	0.81,	34,	221,	35,	492340
+Election18.pet,	Incorrect Leader,	Indexed BFS,	Not satisfiable,	0.81,	38,	223,	0,	492356
+Election20.pet,	Too many Leaders,	Indexed BFS,	Not satisfiable,	1.17,	42,	268,	0,	574356
+Election20.pet,	A Leader,	Indexed BFS,	Satisfied,	1.15,	38,	266,	39,	574328
+Election20.pet,	Correct Leader,	Indexed BFS,	Satisfied,	1.15,	38,	266,	39,	574328
+Election20.pet,	Incorrect Leader,	Indexed BFS,	Not satisfiable,	1.18,	42,	268,	0,	574372
+Election22.pet,	Too many Leaders,	Indexed BFS,	Not satisfiable,	1.6,	46,	317,	0,	664288
+Election22.pet,	A Leader,	Indexed BFS,	Satisfied,	1.58,	42,	315,	43,	664188
+Election22.pet,	Correct Leader,	Indexed BFS,	Satisfied,	1.57,	42,	315,	43,	664184
+Election22.pet,	Incorrect Leader,	Indexed BFS,	Not satisfiable,	1.65,	46,	317,	0,	664188
+Election24.pet,	Too many Leaders,	Indexed BFS,	Not satisfiable,	2.15,	50,	370,	0,	762196
+Election24.pet,	A Leader,	Indexed BFS,	Satisfied,	2.12,	46,	368,	47,	762184
+Election24.pet,	Correct Leader,	Indexed BFS,	Satisfied,	2.14,	46,	368,	47,	762188
+Election24.pet,	Incorrect Leader,	Indexed BFS,	Not satisfiable,	2.08,	50,	370,	0,	762176
+Election26.pet,	Too many Leaders,	Indexed BFS,	Not satisfiable,	2.95,	54,	427,	0,	867560
+Election26.pet,	A Leader,	Indexed BFS,	Satisfied,	2.89,	50,	425,	51,	867548
+Election26.pet,	Correct Leader,	Indexed BFS,	Satisfied,	2.79,	50,	425,	51,	867532
+Election26.pet,	Incorrect Leader,	Indexed BFS,	Not satisfiable,	2.94,	54,	427,	0,	867544
+Election28.pet,	Too many Leaders,	Indexed BFS,	Not satisfiable,	4.21,	58,	488,	0,	980964
+Election28.pet,	A Leader,	Indexed BFS,	Satisfied,	4.14,	54,	486,	55,	980956
+Election28.pet,	Correct Leader,	Indexed BFS,	Satisfied,	4.3,	54,	486,	55,	980952
+Election28.pet,	Incorrect Leader,	Indexed BFS,	Not satisfiable,	4.34,	58,	488,	0,	980956
+Election30.pet,	Too many Leaders,	Indexed BFS,	Not satisfiable,	4.84,	62,	553,	0,	1102288
+Election30.pet,	A Leader,	Indexed BFS,	Satisfied,	5.17,	58,	551,	59,	1102300
+Election30.pet,	Correct Leader,	Indexed BFS,	Satisfied,	4.89,	58,	551,	59,	1102272
+Election30.pet,	Incorrect Leader,	Indexed BFS,	Not satisfiable,	5.09,	62,	553,	0,	1102280
+Election32.pet,	Too many Leaders,	Indexed BFS,	Not satisfiable,	6.19,	66,	622,	0,	1231500
+Election32.pet,	A Leader,	Indexed BFS,	Satisfied,	5.69,	62,	620,	63,	1231508
+Election32.pet,	Correct Leader,	Indexed BFS,	Satisfied,	6.06,	62,	620,	63,	1231500
+Election32.pet,	Incorrect Leader,	Indexed BFS,	Not satisfiable,	5.22,	66,	622,	0,	1231496
+Election34.pet,	Too many Leaders,	Indexed BFS,	Not satisfiable,	8.26,	70,	695,	0,	1368264
+Election34.pet,	A Leader,	Indexed BFS,	Satisfied,	8.14,	66,	693,	67,	1368252
+Election34.pet,	Correct Leader,	Indexed BFS,	Satisfied,	8.15,	66,	693,	67,	1368244
+Election34.pet,	Incorrect Leader,	Indexed BFS,	Not satisfiable,	8.15,	70,	695,	0,	1368244
+Election36.pet,	Too many Leaders,	Indexed BFS,	Not satisfiable,	11.59,	74,	772,	0,	1512952
+Election36.pet,	A Leader,	Indexed BFS,	Satisfied,	11.7,	70,	770,	71,	1512952
+Election36.pet,	Correct Leader,	Indexed BFS,	Satisfied,	11.77,	70,	770,	71,	1513036
+Election36.pet,	Incorrect Leader,	Indexed BFS,	Not satisfiable,	11.26,	74,	772,	0,	1512936
+Election16.pet,	Too many Leaders,	Indexed BFS with Variance,	Not satisfiable,	0.58,	34,	182,	0,	417976
+Election16.pet,	A Leader,	Indexed BFS with Variance,	Satisfied,	0.59,	30,	180,	31,	417976
+Election16.pet,	Correct Leader,	Indexed BFS with Variance,	Satisfied,	0.58,	30,	180,	31,	417964
+Election16.pet,	Incorrect Leader,	Indexed BFS with Variance,	Not satisfiable,	0.59,	34,	182,	0,	417980
+Election18.pet,	Too many Leaders,	Indexed BFS with Variance,	Not satisfiable,	0.81,	38,	223,	0,	492356
+Election18.pet,	A Leader,	Indexed BFS with Variance,	Satisfied,	0.79,	34,	221,	35,	492364
+Election18.pet,	Correct Leader,	Indexed BFS with Variance,	Satisfied,	0.79,	34,	221,	35,	492348
+Election18.pet,	Incorrect Leader,	Indexed BFS with Variance,	Not satisfiable,	0.82,	38,	223,	0,	492356
+Election20.pet,	Too many Leaders,	Indexed BFS with Variance,	Not satisfiable,	1.16,	42,	268,	0,	574360
+Election20.pet,	A Leader,	Indexed BFS with Variance,	Satisfied,	1.16,	38,	266,	39,	574364
+Election20.pet,	Correct Leader,	Indexed BFS with Variance,	Satisfied,	1.16,	38,	266,	39,	574352
+Election20.pet,	Incorrect Leader,	Indexed BFS with Variance,	Not satisfiable,	1.18,	42,	268,	0,	574352
+Election22.pet,	Too many Leaders,	Indexed BFS with Variance,	Not satisfiable,	1.61,	46,	317,	0,	664176
+Election22.pet,	A Leader,	Indexed BFS with Variance,	Satisfied,	1.53,	42,	315,	43,	664172
+Election22.pet,	Correct Leader,	Indexed BFS with Variance,	Satisfied,	1.65,	42,	315,	43,	664192
+Election22.pet,	Incorrect Leader,	Indexed BFS with Variance,	Not satisfiable,	1.62,	46,	317,	0,	664176
+Election24.pet,	Too many Leaders,	Indexed BFS with Variance,	Not satisfiable,	2.12,	50,	370,	0,	762176
+Election24.pet,	A Leader,	Indexed BFS with Variance,	Satisfied,	2.14,	46,	368,	47,	762196
+Election24.pet,	Correct Leader,	Indexed BFS with Variance,	Satisfied,	1.95,	46,	368,	47,	762176
+Election24.pet,	Incorrect Leader,	Indexed BFS with Variance,	Not satisfiable,	2.17,	50,	370,	0,	762184
+Election26.pet,	Too many Leaders,	Indexed BFS with Variance,	Not satisfiable,	2.93,	54,	427,	0,	867548
+Election26.pet,	A Leader,	Indexed BFS with Variance,	Satisfied,	2.92,	50,	425,	51,	867548
+Election26.pet,	Correct Leader,	Indexed BFS with Variance,	Satisfied,	2.78,	50,	425,	51,	867568
+Election26.pet,	Incorrect Leader,	Indexed BFS with Variance,	Not satisfiable,	3.02,	54,	427,	0,	867568
+Election28.pet,	Too many Leaders,	Indexed BFS with Variance,	Not satisfiable,	4.16,	58,	488,	0,	980968
+Election28.pet,	A Leader,	Indexed BFS with Variance,	Satisfied,	4.09,	54,	486,	55,	980956
+Election28.pet,	Correct Leader,	Indexed BFS with Variance,	Satisfied,	4.25,	54,	486,	55,	980956
+Election28.pet,	Incorrect Leader,	Indexed BFS with Variance,	Not satisfiable,	4.1,	58,	488,	0,	980956
+Election30.pet,	Too many Leaders,	Indexed BFS with Variance,	Not satisfiable,	4.82,	62,	553,	0,	1102288
+Election30.pet,	A Leader,	Indexed BFS with Variance,	Satisfied,	4.77,	58,	551,	59,	1102288
+Election30.pet,	Correct Leader,	Indexed BFS with Variance,	Satisfied,	5.03,	58,	551,	59,	1102296
+Election30.pet,	Incorrect Leader,	Indexed BFS with Variance,	Not satisfiable,	5.11,	62,	553,	0,	1102296
+Election32.pet,	Too many Leaders,	Indexed BFS with Variance,	Not satisfiable,	6.14,	66,	622,	0,	1231484
+Election32.pet,	A Leader,	Indexed BFS with Variance,	Satisfied,	5.24,	62,	620,	63,	1231504
+Election32.pet,	Correct Leader,	Indexed BFS with Variance,	Satisfied,	5.7,	62,	620,	63,	1231484
+Election32.pet,	Incorrect Leader,	Indexed BFS with Variance,	Not satisfiable,	5.95,	66,	622,	0,	1231496
+Election34.pet,	Too many Leaders,	Indexed BFS with Variance,	Not satisfiable,	8.21,	70,	695,	0,	1368244
+Election34.pet,	A Leader,	Indexed BFS with Variance,	Satisfied,	8.11,	66,	693,	67,	1368256
+Election34.pet,	Correct Leader,	Indexed BFS with Variance,	Satisfied,	7.7,	66,	693,	67,	1368244
+Election34.pet,	Incorrect Leader,	Indexed BFS with Variance,	Not satisfiable,	7.65,	70,	695,	0,	1368272
+Election36.pet,	Too many Leaders,	Indexed BFS with Variance,	Not satisfiable,	11.58,	74,	772,	0,	1512960
+Election36.pet,	A Leader,	Indexed BFS with Variance,	Satisfied,	11.46,	70,	770,	71,	1512952
+Election36.pet,	Correct Leader,	Indexed BFS with Variance,	Satisfied,	11.51,	70,	770,	71,	1512968
+Election36.pet,	Incorrect Leader,	Indexed BFS with Variance,	Not satisfiable,	11.84,	74,	772,	0,	1512952
+Election16.pet,	Too many Leaders,	Indexed DFS,	Not satisfiable,	0.47,	2,	34,	0,	417968
+Election16.pet,	A Leader,	Indexed DFS,	Satisfied,	0.46,	0,	30,	31,	417976
+Election16.pet,	Correct Leader,	Indexed DFS,	Satisfied,	0.46,	0,	30,	31,	417980
+Election16.pet,	Incorrect Leader,	Indexed DFS,	Not satisfiable,	0.48,	2,	34,	0,	417964
+Election18.pet,	Too many Leaders,	Indexed DFS,	Not satisfiable,	0.58,	2,	38,	0,	492348
+Election18.pet,	A Leader,	Indexed DFS,	Satisfied,	0.59,	0,	34,	35,	492380
+Election18.pet,	Correct Leader,	Indexed DFS,	Satisfied,	0.58,	0,	34,	35,	492364
+Election18.pet,	Incorrect Leader,	Indexed DFS,	Not satisfiable,	0.6,	2,	38,	0,	492324
+Election20.pet,	Too many Leaders,	Indexed DFS,	Not satisfiable,	0.76,	2,	42,	0,	574332
+Election20.pet,	A Leader,	Indexed DFS,	Satisfied,	0.74,	0,	38,	39,	574360
+Election20.pet,	Correct Leader,	Indexed DFS,	Satisfied,	0.73,	0,	38,	39,	574348
+Election20.pet,	Incorrect Leader,	Indexed DFS,	Not satisfiable,	0.76,	2,	42,	0,	574356
+Election22.pet,	Too many Leaders,	Indexed DFS,	Not satisfiable,	0.93,	2,	46,	0,	664188
+Election22.pet,	A Leader,	Indexed DFS,	Satisfied,	0.91,	0,	42,	43,	664164
+Election22.pet,	Correct Leader,	Indexed DFS,	Satisfied,	0.9,	0,	42,	43,	664196
+Election22.pet,	Incorrect Leader,	Indexed DFS,	Not satisfiable,	0.94,	2,	46,	0,	664188
+Election24.pet,	Too many Leaders,	Indexed DFS,	Not satisfiable,	1.1,	2,	50,	0,	762184
+Election24.pet,	A Leader,	Indexed DFS,	Satisfied,	1.09,	0,	46,	47,	762172
+Election24.pet,	Correct Leader,	Indexed DFS,	Satisfied,	1.09,	0,	46,	47,	762184
+Election24.pet,	Incorrect Leader,	Indexed DFS,	Not satisfiable,	1.11,	2,	50,	0,	762176
+Election26.pet,	Too many Leaders,	Indexed DFS,	Not satisfiable,	1.35,	2,	54,	0,	867548
+Election26.pet,	A Leader,	Indexed DFS,	Satisfied,	1.31,	0,	50,	51,	867552
+Election26.pet,	Correct Leader,	Indexed DFS,	Satisfied,	1.32,	0,	50,	51,	867580
+Election26.pet,	Incorrect Leader,	Indexed DFS,	Not satisfiable,	1.35,	2,	54,	0,	867572
+Election28.pet,	Too many Leaders,	Indexed DFS,	Not satisfiable,	1.7,	2,	58,	0,	980956
+Election28.pet,	A Leader,	Indexed DFS,	Satisfied,	1.64,	0,	54,	55,	980976
+Election28.pet,	Correct Leader,	Indexed DFS,	Satisfied,	1.64,	0,	54,	55,	980968
+Election28.pet,	Incorrect Leader,	Indexed DFS,	Not satisfiable,	1.7,	2,	58,	0,	980960
+Election30.pet,	Too many Leaders,	Indexed DFS,	Not satisfiable,	1.92,	2,	62,	0,	1102288
+Election30.pet,	A Leader,	Indexed DFS,	Satisfied,	1.87,	0,	58,	59,	1102284
+Election30.pet,	Correct Leader,	Indexed DFS,	Satisfied,	1.86,	0,	58,	59,	1102288
+Election30.pet,	Incorrect Leader,	Indexed DFS,	Not satisfiable,	1.93,	2,	62,	0,	1102284
+Election32.pet,	Too many Leaders,	Indexed DFS,	Not satisfiable,	2.19,	2,	66,	0,	1231492
+Election32.pet,	A Leader,	Indexed DFS,	Satisfied,	2.13,	0,	62,	63,	1231484
+Election32.pet,	Correct Leader,	Indexed DFS,	Satisfied,	2.13,	0,	62,	63,	1231484
+Election32.pet,	Incorrect Leader,	Indexed DFS,	Not satisfiable,	2.17,	2,	66,	0,	1231512
+Election34.pet,	Too many Leaders,	Indexed DFS,	Not satisfiable,	2.63,	2,	70,	0,	1368244
+Election34.pet,	A Leader,	Indexed DFS,	Satisfied,	2.55,	0,	66,	67,	1368252
+Election34.pet,	Correct Leader,	Indexed DFS,	Satisfied,	2.54,	0,	66,	67,	1368260
+Election34.pet,	Incorrect Leader,	Indexed DFS,	Not satisfiable,	2.64,	2,	70,	0,	1368264
+Election36.pet,	Too many Leaders,	Indexed DFS,	Not satisfiable,	3.3,	2,	74,	0,	1512948
+Election36.pet,	A Leader,	Indexed DFS,	Satisfied,	3.18,	0,	70,	71,	1512964
+Election36.pet,	Correct Leader,	Indexed DFS,	Satisfied,	3.17,	0,	70,	71,	1512952
+Election36.pet,	Incorrect Leader,	Indexed DFS,	Not satisfiable,	3.29,	2,	74,	0,	1512952
+Election16.pet,	Too many Leaders,	Indexed DFS with Variance,	Not satisfiable,	0.48,	2,	34,	0,	417968
+Election16.pet,	A Leader,	Indexed DFS with Variance,	Satisfied,	0.47,	0,	30,	31,	417976
+Election16.pet,	Correct Leader,	Indexed DFS with Variance,	Satisfied,	0.46,	0,	30,	31,	417980
+Election16.pet,	Incorrect Leader,	Indexed DFS with Variance,	Not satisfiable,	0.47,	2,	34,	0,	417972
+Election18.pet,	Too many Leaders,	Indexed DFS with Variance,	Not satisfiable,	0.6,	2,	38,	0,	492380
+Election18.pet,	A Leader,	Indexed DFS with Variance,	Satisfied,	0.58,	0,	34,	35,	492356
+Election18.pet,	Correct Leader,	Indexed DFS with Variance,	Satisfied,	0.59,	0,	34,	35,	492368
+Election18.pet,	Incorrect Leader,	Indexed DFS with Variance,	Not satisfiable,	0.6,	2,	38,	0,	492356
+Election20.pet,	Too many Leaders,	Indexed DFS with Variance,	Not satisfiable,	0.75,	2,	42,	0,	574356
+Election20.pet,	A Leader,	Indexed DFS with Variance,	Satisfied,	0.74,	0,	38,	39,	574368
+Election20.pet,	Correct Leader,	Indexed DFS with Variance,	Satisfied,	0.74,	0,	38,	39,	574352
+Election20.pet,	Incorrect Leader,	Indexed DFS with Variance,	Not satisfiable,	0.75,	2,	42,	0,	574348
+Election22.pet,	Too many Leaders,	Indexed DFS with Variance,	Not satisfiable,	0.92,	2,	46,	0,	664184
+Election22.pet,	A Leader,	Indexed DFS with Variance,	Satisfied,	0.9,	0,	42,	43,	664196
+Election22.pet,	Correct Leader,	Indexed DFS with Variance,	Satisfied,	0.9,	0,	42,	43,	664184
+Election22.pet,	Incorrect Leader,	Indexed DFS with Variance,	Not satisfiable,	0.92,	2,	46,	0,	664176
+Election24.pet,	Too many Leaders,	Indexed DFS with Variance,	Not satisfiable,	1.11,	2,	50,	0,	762176
+Election24.pet,	A Leader,	Indexed DFS with Variance,	Satisfied,	1.07,	0,	46,	47,	762184
+Election24.pet,	Correct Leader,	Indexed DFS with Variance,	Satisfied,	1.08,	0,	46,	47,	762176
+Election24.pet,	Incorrect Leader,	Indexed DFS with Variance,	Not satisfiable,	1.12,	2,	50,	0,	762176
+Election26.pet,	Too many Leaders,	Indexed DFS with Variance,	Not satisfiable,	1.34,	2,	54,	0,	867564
+Election26.pet,	A Leader,	Indexed DFS with Variance,	Satisfied,	1.31,	0,	50,	51,	867548
+Election26.pet,	Correct Leader,	Indexed DFS with Variance,	Satisfied,	1.31,	0,	50,	51,	867564
+Election26.pet,	Incorrect Leader,	Indexed DFS with Variance,	Not satisfiable,	1.35,	2,	54,	0,	867528
+Election28.pet,	Too many Leaders,	Indexed DFS with Variance,	Not satisfiable,	1.68,	2,	58,	0,	980956
+Election28.pet,	A Leader,	Indexed DFS with Variance,	Satisfied,	1.63,	0,	54,	55,	980848
+Election28.pet,	Correct Leader,	Indexed DFS with Variance,	Satisfied,	1.64,	0,	54,	55,	980960
+Election28.pet,	Incorrect Leader,	Indexed DFS with Variance,	Not satisfiable,	1.69,	2,	58,	0,	980960
+Election30.pet,	Too many Leaders,	Indexed DFS with Variance,	Not satisfiable,	1.91,	2,	62,	0,	1102292
+Election30.pet,	A Leader,	Indexed DFS with Variance,	Satisfied,	1.86,	0,	58,	59,	1102284
+Election30.pet,	Correct Leader,	Indexed DFS with Variance,	Satisfied,	1.86,	0,	58,	59,	1102280
+Election30.pet,	Incorrect Leader,	Indexed DFS with Variance,	Not satisfiable,	1.91,	2,	62,	0,	1102292
+Election32.pet,	Too many Leaders,	Indexed DFS with Variance,	Not satisfiable,	2.17,	2,	66,	0,	1231476
+Election32.pet,	A Leader,	Indexed DFS with Variance,	Satisfied,	2.13,	0,	62,	63,	1231496
+Election32.pet,	Correct Leader,	Indexed DFS with Variance,	Satisfied,	2.12,	0,	62,	63,	1231496
+Election32.pet,	Incorrect Leader,	Indexed DFS with Variance,	Not satisfiable,	2.18,	2,	66,	0,	1231488
+Election34.pet,	Too many Leaders,	Indexed DFS with Variance,	Not satisfiable,	2.63,	2,	70,	0,	1368264
+Election34.pet,	A Leader,	Indexed DFS with Variance,	Satisfied,	2.55,	0,	66,	67,	1368244
+Election34.pet,	Correct Leader,	Indexed DFS with Variance,	Satisfied,	2.55,	0,	66,	67,	1368232
+Election34.pet,	Incorrect Leader,	Indexed DFS with Variance,	Not satisfiable,	2.63,	2,	70,	0,	1368264
+Election36.pet,	Too many Leaders,	Indexed DFS with Variance,	Not satisfiable,	3.29,	2,	74,	0,	1512952
+Election36.pet,	A Leader,	Indexed DFS with Variance,	Satisfied,	3.18,	0,	70,	71,	1513056
+Election36.pet,	Correct Leader,	Indexed DFS with Variance,	Satisfied,	3.17,	0,	70,	71,	1512952
+Election36.pet,	Incorrect Leader,	Indexed DFS with Variance,	Not satisfiable,	3.28,	2,	74,	0,	1512956
+Election16.pet,	Too many Leaders,	Indexed DFS State,	Not satisfiable,	0.47,	2,	34,	0,	417968
+Election16.pet,	A Leader,	Indexed DFS State,	Satisfied,	0.47,	0,	30,	31,	417976
+Election16.pet,	Correct Leader,	Indexed DFS State,	Satisfied,	0.46,	0,	30,	31,	417976
+Election16.pet,	Incorrect Leader,	Indexed DFS State,	Not satisfiable,	0.48,	2,	34,	0,	417984
+Election18.pet,	Too many Leaders,	Indexed DFS State,	Not satisfiable,	0.59,	2,	38,	0,	492352
+Election18.pet,	A Leader,	Indexed DFS State,	Satisfied,	0.59,	0,	34,	35,	492356
+Election18.pet,	Correct Leader,	Indexed DFS State,	Satisfied,	0.6,	0,	34,	35,	492352
+Election18.pet,	Incorrect Leader,	Indexed DFS State,	Not satisfiable,	0.59,	2,	38,	0,	492364
+Election20.pet,	Too many Leaders,	Indexed DFS State,	Not satisfiable,	0.75,	2,	42,	0,	574308
+Election20.pet,	A Leader,	Indexed DFS State,	Satisfied,	0.75,	0,	38,	39,	574368
+Election20.pet,	Correct Leader,	Indexed DFS State,	Satisfied,	0.73,	0,	38,	39,	574336
+Election20.pet,	Incorrect Leader,	Indexed DFS State,	Not satisfiable,	0.76,	2,	42,	0,	574348
+Election22.pet,	Too many Leaders,	Indexed DFS State,	Not satisfiable,	0.91,	2,	46,	0,	664156
+Election22.pet,	A Leader,	Indexed DFS State,	Satisfied,	0.92,	0,	42,	43,	664188
+Election22.pet,	Correct Leader,	Indexed DFS State,	Satisfied,	0.91,	0,	42,	43,	664188
+Election22.pet,	Incorrect Leader,	Indexed DFS State,	Not satisfiable,	0.93,	2,	46,	0,	664184
+Election24.pet,	Too many Leaders,	Indexed DFS State,	Not satisfiable,	1.11,	2,	50,	0,	763212
+Election24.pet,	A Leader,	Indexed DFS State,	Satisfied,	1.08,	0,	46,	47,	762172
+Election24.pet,	Correct Leader,	Indexed DFS State,	Satisfied,	1.08,	0,	46,	47,	762152
+Election24.pet,	Incorrect Leader,	Indexed DFS State,	Not satisfiable,	1.11,	2,	50,	0,	762172
+Election26.pet,	Too many Leaders,	Indexed DFS State,	Not satisfiable,	1.36,	2,	54,	0,	867560
+Election26.pet,	A Leader,	Indexed DFS State,	Satisfied,	1.32,	0,	50,	51,	867568
+Election26.pet,	Correct Leader,	Indexed DFS State,	Satisfied,	1.31,	0,	50,	51,	867560
+Election26.pet,	Incorrect Leader,	Indexed DFS State,	Not satisfiable,	1.34,	2,	54,	0,	867548
+Election28.pet,	Too many Leaders,	Indexed DFS State,	Not satisfiable,	1.69,	2,	58,	0,	980852
+Election28.pet,	A Leader,	Indexed DFS State,	Satisfied,	1.64,	0,	54,	55,	980956
+Election28.pet,	Correct Leader,	Indexed DFS State,	Satisfied,	1.64,	0,	54,	55,	980852
+Election28.pet,	Incorrect Leader,	Indexed DFS State,	Not satisfiable,	1.69,	2,	58,	0,	980956
+Election30.pet,	Too many Leaders,	Indexed DFS State,	Not satisfiable,	1.92,	2,	62,	0,	1102288
+Election30.pet,	A Leader,	Indexed DFS State,	Satisfied,	1.86,	0,	58,	59,	1102288
+Election30.pet,	Correct Leader,	Indexed DFS State,	Satisfied,	1.85,	0,	58,	59,	1102276
+Election30.pet,	Incorrect Leader,	Indexed DFS State,	Not satisfiable,	1.93,	2,	62,	0,	1102280
+Election32.pet,	Too many Leaders,	Indexed DFS State,	Not satisfiable,	2.19,	2,	66,	0,	1231496
+Election32.pet,	A Leader,	Indexed DFS State,	Satisfied,	2.11,	0,	62,	63,	1231476
+Election32.pet,	Correct Leader,	Indexed DFS State,	Satisfied,	2.12,	0,	62,	63,	1231508
+Election32.pet,	Incorrect Leader,	Indexed DFS State,	Not satisfiable,	2.19,	2,	66,	0,	1231492
+Election34.pet,	Too many Leaders,	Indexed DFS State,	Not satisfiable,	2.64,	2,	70,	0,	1368244
+Election34.pet,	A Leader,	Indexed DFS State,	Satisfied,	2.55,	0,	66,	67,	1368256
+Election34.pet,	Correct Leader,	Indexed DFS State,	Satisfied,	2.55,	0,	66,	67,	1368244
+Election34.pet,	Incorrect Leader,	Indexed DFS State,	Not satisfiable,	2.61,	2,	70,	0,	1368244
+Election36.pet,	Too many Leaders,	Indexed DFS State,	Not satisfiable,	3.28,	2,	74,	0,	1512936
+Election36.pet,	A Leader,	Indexed DFS State,	Satisfied,	3.17,	0,	70,	71,	1512988
+Election36.pet,	Correct Leader,	Indexed DFS State,	Satisfied,	3.14,	0,	70,	71,	1512936
+Election36.pet,	Incorrect Leader,	Indexed DFS State,	Not satisfiable,	3.26,	2,	74,	0,	1512944
+Election16.pet,	Too many Leaders,	Indexed DFS State with Variance,	Not satisfiable,	0.48,	2,	34,	0,	417968
+Election16.pet,	A Leader,	Indexed DFS State with Variance,	Satisfied,	0.48,	0,	30,	31,	417968
+Election16.pet,	Correct Leader,	Indexed DFS State with Variance,	Satisfied,	0.47,	0,	30,	31,	417968
+Election16.pet,	Incorrect Leader,	Indexed DFS State with Variance,	Not satisfiable,	0.47,	2,	34,	0,	417824
+Election18.pet,	Too many Leaders,	Indexed DFS State with Variance,	Not satisfiable,	0.59,	2,	38,	0,	492352
+Election18.pet,	A Leader,	Indexed DFS State with Variance,	Satisfied,	0.58,	0,	34,	35,	492364
+Election18.pet,	Correct Leader,	Indexed DFS State with Variance,	Satisfied,	0.59,	0,	34,	35,	492364
+Election18.pet,	Incorrect Leader,	Indexed DFS State with Variance,	Not satisfiable,	0.59,	2,	38,	0,	492352
+Election20.pet,	Too many Leaders,	Indexed DFS State with Variance,	Not satisfiable,	0.75,	2,	42,	0,	574364
+Election20.pet,	A Leader,	Indexed DFS State with Variance,	Satisfied,	0.73,	0,	38,	39,	574348
+Election20.pet,	Correct Leader,	Indexed DFS State with Variance,	Satisfied,	0.73,	0,	38,	39,	574364
+Election20.pet,	Incorrect Leader,	Indexed DFS State with Variance,	Not satisfiable,	0.75,	2,	42,	0,	574348
+Election22.pet,	Too many Leaders,	Indexed DFS State with Variance,	Not satisfiable,	0.93,	2,	46,	0,	664188
+Election22.pet,	A Leader,	Indexed DFS State with Variance,	Satisfied,	0.91,	0,	42,	43,	664180
+Election22.pet,	Correct Leader,	Indexed DFS State with Variance,	Satisfied,	0.9,	0,	42,	43,	664188
+Election22.pet,	Incorrect Leader,	Indexed DFS State with Variance,	Not satisfiable,	0.93,	2,	46,	0,	664196
+Election24.pet,	Too many Leaders,	Indexed DFS State with Variance,	Not satisfiable,	1.11,	2,	50,	0,	762196
+Election24.pet,	A Leader,	Indexed DFS State with Variance,	Satisfied,	1.08,	0,	46,	47,	762144
+Election24.pet,	Correct Leader,	Indexed DFS State with Variance,	Satisfied,	1.09,	0,	46,	47,	762168
+Election24.pet,	Incorrect Leader,	Indexed DFS State with Variance,	Not satisfiable,	1.11,	2,	50,	0,	763196
+Election26.pet,	Too many Leaders,	Indexed DFS State with Variance,	Not satisfiable,	1.36,	2,	54,	0,	867556
+Election26.pet,	A Leader,	Indexed DFS State with Variance,	Satisfied,	1.32,	0,	50,	51,	867556
+Election26.pet,	Correct Leader,	Indexed DFS State with Variance,	Satisfied,	1.31,	0,	50,	51,	867552
+Election26.pet,	Incorrect Leader,	Indexed DFS State with Variance,	Not satisfiable,	1.33,	2,	54,	0,	867560
+Election28.pet,	Too many Leaders,	Indexed DFS State with Variance,	Not satisfiable,	1.68,	2,	58,	0,	980968
+Election28.pet,	A Leader,	Indexed DFS State with Variance,	Satisfied,	1.66,	0,	54,	55,	980960
+Election28.pet,	Correct Leader,	Indexed DFS State with Variance,	Satisfied,	1.63,	0,	54,	55,	980956
+Election28.pet,	Incorrect Leader,	Indexed DFS State with Variance,	Not satisfiable,	1.68,	2,	58,	0,	980960
+Election30.pet,	Too many Leaders,	Indexed DFS State with Variance,	Not satisfiable,	1.92,	2,	62,	0,	1102276
+Election30.pet,	A Leader,	Indexed DFS State with Variance,	Satisfied,	1.89,	0,	58,	59,	1102288
+Election30.pet,	Correct Leader,	Indexed DFS State with Variance,	Satisfied,	1.86,	0,	58,	59,	1102276
+Election30.pet,	Incorrect Leader,	Indexed DFS State with Variance,	Not satisfiable,	1.92,	2,	62,	0,	1102272
+Election32.pet,	Too many Leaders,	Indexed DFS State with Variance,	Not satisfiable,	2.18,	2,	66,	0,	1231464
+Election32.pet,	A Leader,	Indexed DFS State with Variance,	Satisfied,	2.12,	0,	62,	63,	1231484
+Election32.pet,	Correct Leader,	Indexed DFS State with Variance,	Satisfied,	2.13,	0,	62,	63,	1231484
+Election32.pet,	Incorrect Leader,	Indexed DFS State with Variance,	Not satisfiable,	2.19,	2,	66,	0,	1231500
+Election34.pet,	Too many Leaders,	Indexed DFS State with Variance,	Not satisfiable,	2.63,	2,	70,	0,	1368264
+Election34.pet,	A Leader,	Indexed DFS State with Variance,	Satisfied,	2.54,	0,	66,	67,	1368264
+Election34.pet,	Correct Leader,	Indexed DFS State with Variance,	Satisfied,	2.58,	0,	66,	67,	1368244
+Election34.pet,	Incorrect Leader,	Indexed DFS State with Variance,	Not satisfiable,	2.63,	2,	70,	0,	1368236
+Election36.pet,	Too many Leaders,	Indexed DFS State with Variance,	Not satisfiable,	3.28,	2,	74,	0,	1512960
+Election36.pet,	A Leader,	Indexed DFS State with Variance,	Satisfied,	3.16,	0,	70,	71,	1512952
+Election36.pet,	Correct Leader,	Indexed DFS State with Variance,	Satisfied,	3.18,	0,	70,	71,	1512972
+Election36.pet,	Incorrect Leader,	Indexed DFS State with Variance,	Not satisfiable,	3.28,	2,	74,	0,	1512976
+Election16.pet,	Too many Leaders,	Indexed DFS Bool,	Not satisfiable,	0.47,	2,	34,	0,	417968
+Election16.pet,	A Leader,	Indexed DFS Bool,	Satisfied,	0.46,	0,	30,	31,	417964
+Election16.pet,	Correct Leader,	Indexed DFS Bool,	Satisfied,	0.47,	0,	30,	31,	417976
+Election16.pet,	Incorrect Leader,	Indexed DFS Bool,	Not satisfiable,	0.47,	2,	34,	0,	417976
+Election18.pet,	Too many Leaders,	Indexed DFS Bool,	Not satisfiable,	0.58,	2,	38,	0,	492376
+Election18.pet,	A Leader,	Indexed DFS Bool,	Satisfied,	0.59,	0,	34,	35,	492364
+Election18.pet,	Correct Leader,	Indexed DFS Bool,	Satisfied,	0.59,	0,	34,	35,	492364
+Election18.pet,	Incorrect Leader,	Indexed DFS Bool,	Not satisfiable,	0.59,	2,	38,	0,	492364
+Election20.pet,	Too many Leaders,	Indexed DFS Bool,	Not satisfiable,	0.76,	2,	42,	0,	574360
+Election20.pet,	A Leader,	Indexed DFS Bool,	Satisfied,	0.73,	0,	38,	39,	574348
+Election20.pet,	Correct Leader,	Indexed DFS Bool,	Satisfied,	0.74,	0,	38,	39,	574352
+Election20.pet,	Incorrect Leader,	Indexed DFS Bool,	Not satisfiable,	0.76,	2,	42,	0,	574368
+Election22.pet,	Too many Leaders,	Indexed DFS Bool,	Not satisfiable,	0.93,	2,	46,	0,	664184
+Election22.pet,	A Leader,	Indexed DFS Bool,	Satisfied,	0.9,	0,	42,	43,	664176
+Election22.pet,	Correct Leader,	Indexed DFS Bool,	Satisfied,	0.91,	0,	42,	43,	664168
+Election22.pet,	Incorrect Leader,	Indexed DFS Bool,	Not satisfiable,	0.93,	2,	46,	0,	664180
+Election24.pet,	Too many Leaders,	Indexed DFS Bool,	Not satisfiable,	1.11,	2,	50,	0,	762172
+Election24.pet,	A Leader,	Indexed DFS Bool,	Satisfied,	1.09,	0,	46,	47,	762176
+Election24.pet,	Correct Leader,	Indexed DFS Bool,	Satisfied,	1.08,	0,	46,	47,	762144
+Election24.pet,	Incorrect Leader,	Indexed DFS Bool,	Not satisfiable,	1.11,	2,	50,	0,	762176
+Election26.pet,	Too many Leaders,	Indexed DFS Bool,	Not satisfiable,	1.34,	2,	54,	0,	867564
+Election26.pet,	A Leader,	Indexed DFS Bool,	Satisfied,	1.31,	0,	50,	51,	867560
+Election26.pet,	Correct Leader,	Indexed DFS Bool,	Satisfied,	1.3,	0,	50,	51,	867556
+Election26.pet,	Incorrect Leader,	Indexed DFS Bool,	Not satisfiable,	1.34,	2,	54,	0,	867560
+Election28.pet,	Too many Leaders,	Indexed DFS Bool,	Not satisfiable,	1.69,	2,	58,	0,	980820
+Election28.pet,	A Leader,	Indexed DFS Bool,	Satisfied,	1.64,	0,	54,	55,	980956
+Election28.pet,	Correct Leader,	Indexed DFS Bool,	Satisfied,	1.62,	0,	54,	55,	980852
+Election28.pet,	Incorrect Leader,	Indexed DFS Bool,	Not satisfiable,	1.69,	2,	58,	0,	980980
+Election30.pet,	Too many Leaders,	Indexed DFS Bool,	Not satisfiable,	1.95,	2,	62,	0,	1102288
+Election30.pet,	A Leader,	Indexed DFS Bool,	Satisfied,	1.91,	0,	58,	59,	1102268
+Election30.pet,	Correct Leader,	Indexed DFS Bool,	Satisfied,	1.86,	0,	58,	59,	1102236
+Election30.pet,	Incorrect Leader,	Indexed DFS Bool,	Not satisfiable,	1.94,	2,	62,	0,	1102280
+Election32.pet,	Too many Leaders,	Indexed DFS Bool,	Not satisfiable,	2.17,	2,	66,	0,	1231496
+Election32.pet,	A Leader,	Indexed DFS Bool,	Satisfied,	2.11,	0,	62,	63,	1231468
+Election32.pet,	Correct Leader,	Indexed DFS Bool,	Satisfied,	2.12,	0,	62,	63,	1231484
+Election32.pet,	Incorrect Leader,	Indexed DFS Bool,	Not satisfiable,	2.19,	2,	66,	0,	1231448
+Election34.pet,	Too many Leaders,	Indexed DFS Bool,	Not satisfiable,	2.62,	2,	70,	0,	1368264
+Election34.pet,	A Leader,	Indexed DFS Bool,	Satisfied,	2.54,	0,	66,	67,	1368244
+Election34.pet,	Correct Leader,	Indexed DFS Bool,	Satisfied,	2.55,	0,	66,	67,	1368252
+Election34.pet,	Incorrect Leader,	Indexed DFS Bool,	Not satisfiable,	2.67,	2,	70,	0,	1368244
+Election36.pet,	Too many Leaders,	Indexed DFS Bool,	Not satisfiable,	3.28,	2,	74,	0,	1512948
+Election36.pet,	A Leader,	Indexed DFS Bool,	Satisfied,	3.22,	0,	70,	71,	1512948
+Election36.pet,	Correct Leader,	Indexed DFS Bool,	Satisfied,	3.18,	0,	70,	71,	1512932
+Election36.pet,	Incorrect Leader,	Indexed DFS Bool,	Not satisfiable,	3.31,	2,	74,	0,	1512960
+Election16.pet,	Too many Leaders,	Indexed DFS Bool with Variance,	Not satisfiable,	0.47,	2,	34,	0,	417972
+Election16.pet,	A Leader,	Indexed DFS Bool with Variance,	Satisfied,	0.47,	0,	30,	31,	417968
+Election16.pet,	Correct Leader,	Indexed DFS Bool with Variance,	Satisfied,	0.47,	0,	30,	31,	417976
+Election16.pet,	Incorrect Leader,	Indexed DFS Bool with Variance,	Not satisfiable,	0.48,	2,	34,	0,	417832
+Election18.pet,	Too many Leaders,	Indexed DFS Bool with Variance,	Not satisfiable,	0.59,	2,	38,	0,	492364
+Election18.pet,	A Leader,	Indexed DFS Bool with Variance,	Satisfied,	0.58,	0,	34,	35,	492364
+Election18.pet,	Correct Leader,	Indexed DFS Bool with Variance,	Satisfied,	0.58,	0,	34,	35,	492352
+Election18.pet,	Incorrect Leader,	Indexed DFS Bool with Variance,	Not satisfiable,	0.59,	2,	38,	0,	492352
+Election20.pet,	Too many Leaders,	Indexed DFS Bool with Variance,	Not satisfiable,	0.76,	2,	42,	0,	574352
+Election20.pet,	A Leader,	Indexed DFS Bool with Variance,	Satisfied,	0.73,	0,	38,	39,	574360
+Election20.pet,	Correct Leader,	Indexed DFS Bool with Variance,	Satisfied,	0.74,	0,	38,	39,	574356
+Election20.pet,	Incorrect Leader,	Indexed DFS Bool with Variance,	Not satisfiable,	0.75,	2,	42,	0,	574324
+Election22.pet,	Too many Leaders,	Indexed DFS Bool with Variance,	Not satisfiable,	0.93,	2,	46,	0,	664176
+Election22.pet,	A Leader,	Indexed DFS Bool with Variance,	Satisfied,	0.91,	0,	42,	43,	664192
+Election22.pet,	Correct Leader,	Indexed DFS Bool with Variance,	Satisfied,	0.91,	0,	42,	43,	664188
+Election22.pet,	Incorrect Leader,	Indexed DFS Bool with Variance,	Not satisfiable,	0.94,	2,	46,	0,	664176
+Election24.pet,	Too many Leaders,	Indexed DFS Bool with Variance,	Not satisfiable,	1.11,	2,	50,	0,	762180
+Election24.pet,	A Leader,	Indexed DFS Bool with Variance,	Satisfied,	1.08,	0,	46,	47,	762180
+Election24.pet,	Correct Leader,	Indexed DFS Bool with Variance,	Satisfied,	1.08,	0,	46,	47,	762144
+Election24.pet,	Incorrect Leader,	Indexed DFS Bool with Variance,	Not satisfiable,	1.12,	2,	50,	0,	762180
+Election26.pet,	Too many Leaders,	Indexed DFS Bool with Variance,	Not satisfiable,	1.35,	2,	54,	0,	867556
+Election26.pet,	A Leader,	Indexed DFS Bool with Variance,	Satisfied,	1.31,	0,	50,	51,	867564
+Election26.pet,	Correct Leader,	Indexed DFS Bool with Variance,	Satisfied,	1.31,	0,	50,	51,	867560
+Election26.pet,	Incorrect Leader,	Indexed DFS Bool with Variance,	Not satisfiable,	1.36,	2,	54,	0,	867552
+Election28.pet,	Too many Leaders,	Indexed DFS Bool with Variance,	Not satisfiable,	1.7,	2,	58,	0,	980860
+Election28.pet,	A Leader,	Indexed DFS Bool with Variance,	Satisfied,	1.64,	0,	54,	55,	980964
+Election28.pet,	Correct Leader,	Indexed DFS Bool with Variance,	Satisfied,	1.67,	0,	54,	55,	980960
+Election28.pet,	Incorrect Leader,	Indexed DFS Bool with Variance,	Not satisfiable,	1.68,	2,	58,	0,	980960
+Election30.pet,	Too many Leaders,	Indexed DFS Bool with Variance,	Not satisfiable,	1.91,	2,	62,	0,	1102284
+Election30.pet,	A Leader,	Indexed DFS Bool with Variance,	Satisfied,	1.85,	0,	58,	59,	1102288
+Election30.pet,	Correct Leader,	Indexed DFS Bool with Variance,	Satisfied,	1.87,	0,	58,	59,	1102284
+Election30.pet,	Incorrect Leader,	Indexed DFS Bool with Variance,	Not satisfiable,	1.92,	2,	62,	0,	1102292
+Election32.pet,	Too many Leaders,	Indexed DFS Bool with Variance,	Not satisfiable,	2.18,	2,	66,	0,	1231484
+Election32.pet,	A Leader,	Indexed DFS Bool with Variance,	Satisfied,	2.11,	0,	62,	63,	1231484
+Election32.pet,	Correct Leader,	Indexed DFS Bool with Variance,	Satisfied,	2.13,	0,	62,	63,	1231496
+Election32.pet,	Incorrect Leader,	Indexed DFS Bool with Variance,	Not satisfiable,	2.18,	2,	66,	0,	1231500
+Election34.pet,	Too many Leaders,	Indexed DFS Bool with Variance,	Not satisfiable,	2.62,	2,	70,	0,	1368208
+Election34.pet,	A Leader,	Indexed DFS Bool with Variance,	Satisfied,	2.53,	0,	66,	67,	1368248
+Election34.pet,	Correct Leader,	Indexed DFS Bool with Variance,	Satisfied,	2.55,	0,	66,	67,	1368224
+Election34.pet,	Incorrect Leader,	Indexed DFS Bool with Variance,	Not satisfiable,	2.62,	2,	70,	0,	1368244
+Election36.pet,	Too many Leaders,	Indexed DFS Bool with Variance,	Not satisfiable,	3.28,	2,	74,	0,	1512952
+Election36.pet,	A Leader,	Indexed DFS Bool with Variance,	Satisfied,	3.18,	0,	70,	71,	1512936
+Election36.pet,	Correct Leader,	Indexed DFS Bool with Variance,	Satisfied,	3.17,	0,	70,	71,	1513068
+Election36.pet,	Incorrect Leader,	Indexed DFS Bool with Variance,	Not satisfiable,	3.28,	2,	74,	0,	1512952
+Election16.pet,	Too many Leaders,	Indexed BestFS,	Not satisfiable,	0.32,	33,	152,	0,	248040
+Election16.pet,	A Leader,	Indexed BestFS,	Satisfied,	0.33,	32,	152,	32,	248056
+Election16.pet,	Correct Leader,	Indexed BestFS,	Satisfied,	0.31,	32,	152,	32,	248048
+Election16.pet,	Incorrect Leader,	Indexed BestFS,	Not satisfiable,	0.31,	33,	152,	0,	248064
+Election18.pet,	Too many Leaders,	Indexed BestFS,	Not satisfiable,	0.44,	37,	189,	0,	285268
+Election18.pet,	A Leader,	Indexed BestFS,	Satisfied,	0.43,	36,	189,	36,	285184
+Election18.pet,	Correct Leader,	Indexed BestFS,	Satisfied,	0.44,	36,	189,	36,	285324
+Election18.pet,	Incorrect Leader,	Indexed BestFS,	Not satisfiable,	0.45,	37,	189,	0,	285288
+Election20.pet,	Too many Leaders,	Indexed BestFS,	Not satisfiable,	0.67,	41,	230,	0,	326312
+Election20.pet,	A Leader,	Indexed BestFS,	Satisfied,	0.66,	40,	230,	40,	326300
+Election20.pet,	Correct Leader,	Indexed BestFS,	Satisfied,	0.65,	40,	230,	40,	326296
+Election20.pet,	Incorrect Leader,	Indexed BestFS,	Not satisfiable,	0.65,	41,	230,	0,	326308
+Election22.pet,	Too many Leaders,	Indexed BestFS,	Not satisfiable,	0.96,	45,	275,	0,	371212
+Election22.pet,	A Leader,	Indexed BestFS,	Satisfied,	0.93,	44,	275,	44,	371208
+Election22.pet,	Correct Leader,	Indexed BestFS,	Satisfied,	0.92,	44,	275,	44,	371216
+Election22.pet,	Incorrect Leader,	Indexed BestFS,	Not satisfiable,	0.94,	45,	275,	0,	371208
+Election24.pet,	Too many Leaders,	Indexed BestFS,	Not satisfiable,	1.26,	49,	324,	0,	420396
+Election24.pet,	A Leader,	Indexed BestFS,	Satisfied,	1.23,	48,	324,	48,	420376
+Election24.pet,	Correct Leader,	Indexed BestFS,	Satisfied,	1.22,	48,	324,	48,	420388
+Election24.pet,	Incorrect Leader,	Indexed BestFS,	Not satisfiable,	1.25,	49,	324,	0,	420380
+Election26.pet,	Too many Leaders,	Indexed BestFS,	Not satisfiable,	1.71,	53,	377,	0,	473000
+Election26.pet,	A Leader,	Indexed BestFS,	Satisfied,	1.71,	52,	377,	52,	473028
+Election26.pet,	Correct Leader,	Indexed BestFS,	Satisfied,	1.69,	52,	377,	52,	472920
+Election26.pet,	Incorrect Leader,	Indexed BestFS,	Not satisfiable,	1.75,	53,	377,	0,	473032
+Election28.pet,	Too many Leaders,	Indexed BestFS,	Not satisfiable,	2.5,	57,	434,	0,	529784
+Election28.pet,	A Leader,	Indexed BestFS,	Satisfied,	2.49,	56,	434,	56,	529788
+Election28.pet,	Correct Leader,	Indexed BestFS,	Satisfied,	2.54,	56,	434,	56,	529676
+Election28.pet,	Incorrect Leader,	Indexed BestFS,	Not satisfiable,	2.55,	57,	434,	0,	529788
+Election30.pet,	Too many Leaders,	Indexed BestFS,	Not satisfiable,	3.05,	61,	495,	0,	590560
+Election30.pet,	A Leader,	Indexed BestFS,	Satisfied,	3,	60,	495,	60,	590568
+Election30.pet,	Correct Leader,	Indexed BestFS,	Satisfied,	3.07,	60,	495,	60,	590568
+Election30.pet,	Incorrect Leader,	Indexed BestFS,	Not satisfiable,	3.1,	61,	495,	0,	590552
+Election32.pet,	Too many Leaders,	Indexed BestFS,	Not satisfiable,	3.71,	65,	560,	0,	655324
+Election32.pet,	A Leader,	Indexed BestFS,	Satisfied,	3.72,	64,	560,	64,	655324
+Election32.pet,	Correct Leader,	Indexed BestFS,	Satisfied,	3.69,	64,	560,	64,	655312
+Election32.pet,	Incorrect Leader,	Indexed BestFS,	Not satisfiable,	3.69,	65,	560,	0,	655324
+Election34.pet,	Too many Leaders,	Indexed BestFS,	Not satisfiable,	5.01,	69,	629,	0,	723724
+Election34.pet,	A Leader,	Indexed BestFS,	Satisfied,	5.02,	68,	629,	68,	723732
+Election34.pet,	Correct Leader,	Indexed BestFS,	Satisfied,	4.98,	68,	629,	68,	723708
+Election34.pet,	Incorrect Leader,	Indexed BestFS,	Not satisfiable,	5.06,	69,	629,	0,	723712
+Election36.pet,	Too many Leaders,	Indexed BestFS,	Not satisfiable,	7.14,	73,	702,	0,	796148
+Election36.pet,	A Leader,	Indexed BestFS,	Satisfied,	7.04,	72,	702,	72,	796152
+Election36.pet,	Correct Leader,	Indexed BestFS,	Satisfied,	7.14,	72,	702,	72,	796272
+Election36.pet,	Incorrect Leader,	Indexed BestFS,	Not satisfiable,	7.12,	73,	702,	0,	796168
+Election16.pet,	Too many Leaders,	Indexed BestFS with Variance,	Not satisfiable,	0.32,	33,	152,	0,	248052
+Election16.pet,	A Leader,	Indexed BestFS with Variance,	Satisfied,	0.32,	32,	152,	32,	248056
+Election16.pet,	Correct Leader,	Indexed BestFS with Variance,	Satisfied,	0.33,	32,	152,	32,	248036
+Election16.pet,	Incorrect Leader,	Indexed BestFS with Variance,	Not satisfiable,	0.32,	33,	152,	0,	248052
+Election18.pet,	Too many Leaders,	Indexed BestFS with Variance,	Not satisfiable,	0.44,	37,	189,	0,	285336
+Election18.pet,	A Leader,	Indexed BestFS with Variance,	Satisfied,	0.44,	36,	189,	36,	285324
+Election18.pet,	Correct Leader,	Indexed BestFS with Variance,	Satisfied,	0.44,	36,	189,	36,	285336
+Election18.pet,	Incorrect Leader,	Indexed BestFS with Variance,	Not satisfiable,	0.45,	37,	189,	0,	285324
+Election20.pet,	Too many Leaders,	Indexed BestFS with Variance,	Not satisfiable,	0.66,	41,	230,	0,	326308
+Election20.pet,	A Leader,	Indexed BestFS with Variance,	Satisfied,	0.66,	40,	230,	40,	326308
+Election20.pet,	Correct Leader,	Indexed BestFS with Variance,	Satisfied,	0.65,	40,	230,	40,	326312
+Election20.pet,	Incorrect Leader,	Indexed BestFS with Variance,	Not satisfiable,	0.66,	41,	230,	0,	326324
+Election22.pet,	Too many Leaders,	Indexed BestFS with Variance,	Not satisfiable,	0.96,	45,	275,	0,	371216
+Election22.pet,	A Leader,	Indexed BestFS with Variance,	Satisfied,	0.94,	44,	275,	44,	371220
+Election22.pet,	Correct Leader,	Indexed BestFS with Variance,	Satisfied,	0.93,	44,	275,	44,	371224
+Election22.pet,	Incorrect Leader,	Indexed BestFS with Variance,	Not satisfiable,	0.96,	45,	275,	0,	371208
+Election24.pet,	Too many Leaders,	Indexed BestFS with Variance,	Not satisfiable,	1.24,	49,	324,	0,	420344
+Election24.pet,	A Leader,	Indexed BestFS with Variance,	Satisfied,	1.25,	48,	324,	48,	420376
+Election24.pet,	Correct Leader,	Indexed BestFS with Variance,	Satisfied,	1.2,	48,	324,	48,	420348
+Election24.pet,	Incorrect Leader,	Indexed BestFS with Variance,	Not satisfiable,	1.25,	49,	324,	0,	420376
+Election26.pet,	Too many Leaders,	Indexed BestFS with Variance,	Not satisfiable,	1.82,	53,	377,	0,	473028
+Election26.pet,	A Leader,	Indexed BestFS with Variance,	Satisfied,	1.72,	52,	377,	52,	473036
+Election26.pet,	Correct Leader,	Indexed BestFS with Variance,	Satisfied,	1.7,	52,	377,	52,	473024
+Election26.pet,	Incorrect Leader,	Indexed BestFS with Variance,	Not satisfiable,	1.84,	53,	377,	0,	473028
+Election28.pet,	Too many Leaders,	Indexed BestFS with Variance,	Not satisfiable,	2.48,	57,	434,	0,	529764
+Election28.pet,	A Leader,	Indexed BestFS with Variance,	Satisfied,	2.48,	56,	434,	56,	529784
+Election28.pet,	Correct Leader,	Indexed BestFS with Variance,	Satisfied,	2.55,	56,	434,	56,	529788
+Election28.pet,	Incorrect Leader,	Indexed BestFS with Variance,	Not satisfiable,	2.57,	57,	434,	0,	529804
+Election30.pet,	Too many Leaders,	Indexed BestFS with Variance,	Not satisfiable,	3.02,	61,	495,	0,	590568
+Election30.pet,	A Leader,	Indexed BestFS with Variance,	Satisfied,	2.98,	60,	495,	60,	590556
+Election30.pet,	Correct Leader,	Indexed BestFS with Variance,	Satisfied,	3.04,	60,	495,	60,	590560
+Election30.pet,	Incorrect Leader,	Indexed BestFS with Variance,	Not satisfiable,	3.03,	61,	495,	0,	590552
+Election32.pet,	Too many Leaders,	Indexed BestFS with Variance,	Not satisfiable,	3.68,	65,	560,	0,	655312
+Election32.pet,	A Leader,	Indexed BestFS with Variance,	Satisfied,	3.66,	64,	560,	64,	655328
+Election32.pet,	Correct Leader,	Indexed BestFS with Variance,	Satisfied,	3.59,	64,	560,	64,	655332
+Election32.pet,	Incorrect Leader,	Indexed BestFS with Variance,	Not satisfiable,	3.72,	65,	560,	0,	655336
+Election34.pet,	Too many Leaders,	Indexed BestFS with Variance,	Not satisfiable,	5.03,	69,	629,	0,	723732
+Election34.pet,	A Leader,	Indexed BestFS with Variance,	Satisfied,	4.94,	68,	629,	68,	723684
+Election34.pet,	Correct Leader,	Indexed BestFS with Variance,	Satisfied,	4.84,	68,	629,	68,	723696
+Election34.pet,	Incorrect Leader,	Indexed BestFS with Variance,	Not satisfiable,	5.13,	69,	629,	0,	723712
+Election36.pet,	Too many Leaders,	Indexed BestFS with Variance,	Not satisfiable,	7.22,	73,	702,	0,	796132
+Election36.pet,	A Leader,	Indexed BestFS with Variance,	Satisfied,	7.11,	72,	702,	72,	796156
+Election36.pet,	Correct Leader,	Indexed BestFS with Variance,	Satisfied,	7.18,	72,	702,	72,	796152
+Election36.pet,	Incorrect Leader,	Indexed BestFS with Variance,	Not satisfiable,	7.15,	73,	702,	0,	796144
+Mutual2.pet,	2 done (Ordered DFS),	Naive DFS with Hash,	Satisfied,	0.1,	55,	63,	9,	44104
+Mutual2.pet,	2 critical (Ordered DFS),	Naive DFS with Hash,	Not satisfiable,	0.1,	106,	211,	0,	44104
+Mutual2.pet,	1 critical (Ordered DFS),	Naive DFS with Hash,	Satisfied,	0.1,	38,	41,	4,	44104
+Mutual4.pet,	4 done (Ordered DFS),	Naive DFS with Hash,	Not satisfiable,	0.17,	4496,	8991,	0,	44104
+Mutual4.pet,	3 done (Ordered DFS),	Naive DFS with Hash,	Satisfied,	0.15,	463,	474,	12,	44104
+Mutual4.pet,	2 critical (Ordered DFS),	Naive DFS with Hash,	Not satisfiable,	0.18,	4496,	8991,	0,	44104
+Mutual4.pet,	1 critical (Ordered DFS),	Naive DFS with Hash,	Satisfied,	0.16,	38,	43,	6,	44104
+Mutual6.pet,	4 done (Ordered DFS),	Naive DFS with Hash,	Not satisfiable,	6.49,	145152,	28158,	0,	223576
+Mutual6.pet,	3 done (Ordered DFS),	Naive DFS with Hash,	Satisfied,	0.21,	463,	476,	14,	44104
+Mutual6.pet,	2 critical (Ordered DFS),	Naive DFS with Hash,	Not satisfiable,	6.47,	145152,	28158,	0,	223576
+Mutual6.pet,	1 critical (Ordered DFS),	Naive DFS with Hash,	Satisfied,	0.22,	38,	45,	8,	44104
+Mutual8.pet,	4 done (Ordered DFS),	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	277156
+Mutual8.pet,	3 done (Ordered DFS),	Naive DFS with Hash,	Satisfied,	0.27,	463,	478,	16,	44104
+Mutual8.pet,	2 critical (Ordered DFS),	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	277064
+Mutual8.pet,	1 critical (Ordered DFS),	Naive DFS with Hash,	Satisfied,	0.26,	38,	47,	10,	44104
+Mutual10.pet,	4 done (Ordered DFS),	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	531356
+Mutual10.pet,	3 done (Ordered DFS),	Naive DFS with Hash,	Satisfied,	0.32,	463,	480,	18,	78008
+Mutual10.pet,	2 critical (Ordered DFS),	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	314560
+Mutual10.pet,	1 critical (Ordered DFS),	Naive DFS with Hash,	Satisfied,	0.31,	38,	49,	12,	44104
+Mutual2.pet,	2 done (Ordered DFS),	Naive BFS with Hash,	Satisfied,	0.1,	61,	73,	7,	44104
+Mutual2.pet,	2 critical (Ordered DFS),	Naive BFS with Hash,	Not satisfiable,	0.1,	106,	105,	0,	44104
+Mutual2.pet,	1 critical (Ordered DFS),	Naive BFS with Hash,	Satisfied,	0.11,	10,	23,	3,	44116
+Mutual4.pet,	4 done (Ordered DFS),	Naive BFS with Hash,	Not satisfiable,	0.17,	4496,	4495,	0,	44104
+Mutual4.pet,	3 done (Ordered DFS),	Naive BFS with Hash,	Satisfied,	0.16,	3382,	3969,	11,	44104
+Mutual4.pet,	2 critical (Ordered DFS),	Naive BFS with Hash,	Not satisfiable,	0.15,	4496,	4495,	0,	44104
+Mutual4.pet,	1 critical (Ordered DFS),	Naive BFS with Hash,	Satisfied,	0.15,	38,	129,	3,	44104
+Mutual6.pet,	4 done (Ordered DFS),	Naive BFS with Hash,	Not satisfiable,	6.09,	145152,	145151,	0,	223724
+Mutual6.pet,	3 done (Ordered DFS),	Naive BFS with Hash,	Satisfied,	1.48,	56001,	76046,	11,	222028
+Mutual6.pet,	2 critical (Ordered DFS),	Naive BFS with Hash,	Not satisfiable,	6.12,	145152,	145151,	0,	223832
+Mutual6.pet,	1 critical (Ordered DFS),	Naive BFS with Hash,	Satisfied,	0.21,	82,	379,	3,	44104
+Mutual8.pet,	4 done (Ordered DFS),	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	468928
+Mutual8.pet,	3 done (Ordered DFS),	Naive BFS with Hash,	Satisfied,	221.45,	599393,	929876,	11,	281420
+Mutual8.pet,	2 critical (Ordered DFS),	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	471992
+Mutual8.pet,	1 critical (Ordered DFS),	Naive BFS with Hash,	Satisfied,	0.24,	142,	837,	3,	44104
+Mutual10.pet,	4 done (Ordered DFS),	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	318448
+Mutual10.pet,	3 done (Ordered DFS),	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	318392
+Mutual10.pet,	2 critical (Ordered DFS),	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	318308
+Mutual10.pet,	1 critical (Ordered DFS),	Naive BFS with Hash,	Satisfied,	0.33,	218,	1567,	3,	294824
+Mutual2.pet,	2 done (Ordered DFS),	Random DFS with Hash,	Satisfied,	0.04,	20,	33,	8,	44104
+Mutual2.pet,	2 critical (Ordered DFS),	Random DFS with Hash,	Not satisfiable,	0.05,	106,	105,	0,	44104
+Mutual2.pet,	1 critical (Ordered DFS),	Random DFS with Hash,	Satisfied,	0.05,	5,	11,	4,	44104
+Mutual4.pet,	4 done (Ordered DFS),	Random DFS with Hash,	Not satisfiable,	0.1,	4496,	4495,	0,	44104
+Mutual4.pet,	3 done (Ordered DFS),	Random DFS with Hash,	Satisfied,	0.08,	1893,	1923,	13,	44104
+Mutual4.pet,	2 critical (Ordered DFS),	Random DFS with Hash,	Not satisfiable,	0.09,	4496,	4495,	0,	44104
+Mutual4.pet,	1 critical (Ordered DFS),	Random DFS with Hash,	Satisfied,	0.07,	5,	27,	6,	44104
+Mutual6.pet,	4 done (Ordered DFS),	Random DFS with Hash,	Not satisfiable,	6.11,	145152,	145151,	0,	152436
+Mutual6.pet,	3 done (Ordered DFS),	Random DFS with Hash,	Satisfied,	0.36,	30895,	30949,	16,	149836
+Mutual6.pet,	2 critical (Ordered DFS),	Random DFS with Hash,	Not satisfiable,	5.29,	145152,	145151,	0,	152196
+Mutual6.pet,	1 critical (Ordered DFS),	Random DFS with Hash,	Satisfied,	0.12,	4505,	4568,	10,	44104
+Mutual8.pet,	4 done (Ordered DFS),	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	275708
+Mutual8.pet,	3 done (Ordered DFS),	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	367400
+Mutual8.pet,	2 critical (Ordered DFS),	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	367400
+Mutual8.pet,	1 critical (Ordered DFS),	Random DFS with Hash,	Satisfied,	0.13,	192,	308,	17,	43972
+Mutual10.pet,	4 done (Ordered DFS),	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	311116
+Mutual10.pet,	3 done (Ordered DFS),	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	428132
+Mutual10.pet,	2 critical (Ordered DFS),	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	312024
+Mutual10.pet,	1 critical (Ordered DFS),	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	312828
+Mutual2.pet,	2 done (Ordered DFS),	Ordered DFS,	Satisfied,	0.1,	0,	6,	7,	44104
+Mutual2.pet,	2 critical (Ordered DFS),	Ordered DFS,	Not satisfiable,	0.09,	17,	35,	0,	44104
+Mutual2.pet,	1 critical (Ordered DFS),	Ordered DFS,	Satisfied,	0.08,	7,	10,	4,	44104
+Mutual4.pet,	4 done (Ordered DFS),	Ordered DFS,	Not satisfiable,	0.17,	105,	213,	0,	44104
+Mutual4.pet,	3 done (Ordered DFS),	Ordered DFS,	Satisfied,	0.14,	47,	58,	12,	44104
+Mutual4.pet,	2 critical (Ordered DFS),	Ordered DFS,	Not satisfiable,	0.15,	105,	213,	0,	44104
+Mutual4.pet,	1 critical (Ordered DFS),	Ordered DFS,	Satisfied,	0.13,	3,	14,	12,	44104
+Mutual6.pet,	4 done (Ordered DFS),	Ordered DFS,	Not satisfiable,	0.43,	345,	695,	0,	220468
+Mutual6.pet,	3 done (Ordered DFS),	Ordered DFS,	Satisfied,	0.35,	263,	276,	14,	220468
+Mutual6.pet,	2 critical (Ordered DFS),	Ordered DFS,	Not satisfiable,	0.44,	345,	695,	0,	220468
+Mutual6.pet,	1 critical (Ordered DFS),	Ordered DFS,	Satisfied,	0.19,	11,	24,	14,	44104
+Mutual8.pet,	4 done (Ordered DFS),	Ordered DFS,	Not satisfiable,	1.22,	817,	1641,	0,	257664
+Mutual8.pet,	3 done (Ordered DFS),	Ordered DFS,	Satisfied,	1.02,	711,	726,	16,	257716
+Mutual8.pet,	2 critical (Ordered DFS),	Ordered DFS,	Not satisfiable,	1.23,	817,	1641,	0,	257544
+Mutual8.pet,	1 critical (Ordered DFS),	Ordered DFS,	Satisfied,	0.24,	19,	34,	16,	44104
+Mutual10.pet,	4 done (Ordered DFS),	Ordered DFS,	Not satisfiable,	4.8,	1601,	3211,	0,	294796
+Mutual10.pet,	3 done (Ordered DFS),	Ordered DFS,	Satisfied,	4.14,	1471,	1488,	18,	294796
+Mutual10.pet,	2 critical (Ordered DFS),	Ordered DFS,	Not satisfiable,	4.83,	1601,	3211,	0,	294812
+Mutual10.pet,	1 critical (Ordered DFS),	Ordered DFS,	Satisfied,	0.31,	27,	44,	18,	44104
+Mutual2.pet,	2 done (Ordered DFS),	Ordered BFS,	Satisfied,	0.09,	11,	15,	7,	44104
+Mutual2.pet,	2 critical (Ordered DFS),	Ordered BFS,	Not satisfiable,	0.09,	18,	19,	0,	44104
+Mutual2.pet,	1 critical (Ordered DFS),	Ordered BFS,	Satisfied,	0.09,	3,	8,	4,	44104
+Mutual4.pet,	4 done (Ordered DFS),	Ordered BFS,	Not satisfiable,	0.19,	103,	114,	0,	44104
+Mutual4.pet,	3 done (Ordered DFS),	Ordered BFS,	Satisfied,	0.16,	70,	101,	12,	44104
+Mutual4.pet,	2 critical (Ordered DFS),	Ordered BFS,	Not satisfiable,	0.18,	103,	114,	0,	44104
+Mutual4.pet,	1 critical (Ordered DFS),	Ordered BFS,	Satisfied,	0.15,	7,	26,	6,	44104
+Mutual6.pet,	4 done (Ordered DFS),	Ordered BFS,	Not satisfiable,	1.22,	336,	365,	0,	220460
+Mutual6.pet,	3 done (Ordered DFS),	Ordered BFS,	Satisfied,	0.67,	187,	328,	14,	220476
+Mutual6.pet,	2 critical (Ordered DFS),	Ordered BFS,	Not satisfiable,	1.21,	336,	365,	0,	220468
+Mutual6.pet,	1 critical (Ordered DFS),	Ordered BFS,	Satisfied,	0.2,	11,	52,	8,	44104
+Mutual8.pet,	4 done (Ordered DFS),	Ordered BFS,	Not satisfiable,	7.12,	797,	852,	0,	257712
+Mutual8.pet,	3 done (Ordered DFS),	Ordered BFS,	Satisfied,	3.02,	392,	771,	16,	257708
+Mutual8.pet,	2 critical (Ordered DFS),	Ordered BFS,	Not satisfiable,	7.13,	797,	852,	0,	257724
+Mutual8.pet,	1 critical (Ordered DFS),	Ordered BFS,	Satisfied,	0.25,	15,	86,	10,	44104
+Mutual10.pet,	4 done (Ordered DFS),	Ordered BFS,	Not satisfiable,	47.42,	1566,	1655,	0,	294824
+Mutual10.pet,	3 done (Ordered DFS),	Ordered BFS,	Satisfied,	17.25,	709,	1502,	18,	294812
+Mutual10.pet,	2 critical (Ordered DFS),	Ordered BFS,	Not satisfiable,	47.27,	1566,	1655,	0,	294784
+Mutual10.pet,	1 critical (Ordered DFS),	Ordered BFS,	Satisfied,	0.33,	19,	128,	12,	294820
+Mutual2.pet,	2 done (Ordered DFS),	Ordered Random DFS,	Satisfied,	0.04,	6,	12,	7,	44104
+Mutual2.pet,	2 critical (Ordered DFS),	Ordered Random DFS,	Not satisfiable,	0.05,	24,	26,	0,	44104
+Mutual2.pet,	1 critical (Ordered DFS),	Ordered Random DFS,	Satisfied,	0.05,	8,	16,	7,	44104
+Mutual4.pet,	4 done (Ordered DFS),	Ordered Random DFS,	Not satisfiable,	0.12,	115,	129,	0,	44104
+Mutual4.pet,	3 done (Ordered DFS),	Ordered Random DFS,	Satisfied,	0.06,	15,	35,	12,	44104
+Mutual4.pet,	2 critical (Ordered DFS),	Ordered Random DFS,	Not satisfiable,	0.11,	115,	129,	0,	44104
+Mutual4.pet,	1 critical (Ordered DFS),	Ordered Random DFS,	Satisfied,	0.08,	15,	49,	9,	44104
+Mutual6.pet,	4 done (Ordered DFS),	Ordered Random DFS,	Not satisfiable,	1.05,	356,	397,	0,	149160
+Mutual6.pet,	3 done (Ordered DFS),	Ordered Random DFS,	Satisfied,	0.14,	35,	100,	15,	44104
+Mutual6.pet,	2 critical (Ordered DFS),	Ordered Random DFS,	Not satisfiable,	1.15,	387,	440,	0,	149184
+Mutual6.pet,	1 critical (Ordered DFS),	Ordered Random DFS,	Satisfied,	0.1,	16,	71,	12,	44104
+Mutual8.pet,	4 done (Ordered DFS),	Ordered Random DFS,	Not satisfiable,	7.69,	1117,	1351,	0,	167716
+Mutual8.pet,	3 done (Ordered DFS),	Ordered Random DFS,	Satisfied,	0.18,	36,	117,	17,	44104
+Mutual8.pet,	2 critical (Ordered DFS),	Ordered Random DFS,	Not satisfiable,	7.62,	1119,	1335,	0,	167868
+Mutual8.pet,	1 critical (Ordered DFS),	Ordered Random DFS,	Satisfied,	0.12,	9,	85,	9,	44104
+Mutual10.pet,	4 done (Ordered DFS),	Ordered Random DFS,	Not satisfiable,	46.14,	2343,	3035,	0,	186420
+Mutual10.pet,	3 done (Ordered DFS),	Ordered Random DFS,	Satisfied,	0.26,	32,	157,	19,	44104
+Mutual10.pet,	2 critical (Ordered DFS),	Ordered Random DFS,	Not satisfiable,	43.37,	1888,	2341,	0,	186444
+Mutual10.pet,	1 critical (Ordered DFS),	Ordered Random DFS,	Satisfied,	0.23,	33,	170,	16,	44104
+Mutual2.pet,	2 done (Ordered DFS),	Ordered DFS States,	Satisfied,	0.09,	0,	6,	7,	44104
+Mutual2.pet,	2 critical (Ordered DFS),	Ordered DFS States,	Not satisfiable,	0.08,	17,	35,	0,	44104
+Mutual2.pet,	1 critical (Ordered DFS),	Ordered DFS States,	Satisfied,	0.09,	7,	10,	4,	44104
+Mutual4.pet,	4 done (Ordered DFS),	Ordered DFS States,	Not satisfiable,	0.16,	105,	213,	0,	44104
+Mutual4.pet,	3 done (Ordered DFS),	Ordered DFS States,	Satisfied,	0.14,	47,	58,	12,	44104
+Mutual4.pet,	2 critical (Ordered DFS),	Ordered DFS States,	Not satisfiable,	0.17,	105,	213,	0,	44104
+Mutual4.pet,	1 critical (Ordered DFS),	Ordered DFS States,	Satisfied,	0.14,	3,	14,	12,	44104
+Mutual6.pet,	4 done (Ordered DFS),	Ordered DFS States,	Not satisfiable,	0.43,	345,	695,	0,	220480
+Mutual6.pet,	3 done (Ordered DFS),	Ordered DFS States,	Satisfied,	0.36,	263,	276,	14,	220568
+Mutual6.pet,	2 critical (Ordered DFS),	Ordered DFS States,	Not satisfiable,	0.44,	345,	695,	0,	220468
+Mutual6.pet,	1 critical (Ordered DFS),	Ordered DFS States,	Satisfied,	0.2,	11,	24,	14,	44104
+Mutual8.pet,	4 done (Ordered DFS),	Ordered DFS States,	Not satisfiable,	1.23,	817,	1641,	0,	257724
+Mutual8.pet,	3 done (Ordered DFS),	Ordered DFS States,	Satisfied,	1.02,	711,	726,	16,	257732
+Mutual8.pet,	2 critical (Ordered DFS),	Ordered DFS States,	Not satisfiable,	1.23,	817,	1641,	0,	257716
+Mutual8.pet,	1 critical (Ordered DFS),	Ordered DFS States,	Satisfied,	0.25,	19,	34,	16,	44104
+Mutual10.pet,	4 done (Ordered DFS),	Ordered DFS States,	Not satisfiable,	4.82,	1601,	3211,	0,	294820
+Mutual10.pet,	3 done (Ordered DFS),	Ordered DFS States,	Satisfied,	4.13,	1471,	1488,	18,	294812
+Mutual10.pet,	2 critical (Ordered DFS),	Ordered DFS States,	Not satisfiable,	4.83,	1601,	3211,	0,	294812
+Mutual10.pet,	1 critical (Ordered DFS),	Ordered DFS States,	Satisfied,	0.31,	27,	44,	18,	44104
+Mutual2.pet,	2 done (Ordered DFS),	Ordered DFS Bools,	Satisfied,	0.09,	5,	11,	7,	44104
+Mutual2.pet,	2 critical (Ordered DFS),	Ordered DFS Bools,	Not satisfiable,	0.09,	16,	33,	0,	44104
+Mutual2.pet,	1 critical (Ordered DFS),	Ordered DFS Bools,	Satisfied,	0.09,	1,	5,	4,	44104
+Mutual4.pet,	4 done (Ordered DFS),	Ordered DFS Bools,	Not satisfiable,	0.16,	99,	201,	0,	44276
+Mutual4.pet,	3 done (Ordered DFS),	Ordered DFS Bools,	Satisfied,	0.16,	62,	87,	12,	44104
+Mutual4.pet,	2 critical (Ordered DFS),	Ordered DFS Bools,	Not satisfiable,	0.16,	99,	201,	0,	44104
+Mutual4.pet,	1 critical (Ordered DFS),	Ordered DFS Bools,	Satisfied,	0.14,	5,	15,	6,	44104
+Mutual6.pet,	4 done (Ordered DFS),	Ordered DFS Bools,	Not satisfiable,	0.59,	330,	665,	0,	220476
+Mutual6.pet,	3 done (Ordered DFS),	Ordered DFS Bools,	Satisfied,	0.47,	217,	308,	14,	220484
+Mutual6.pet,	2 critical (Ordered DFS),	Ordered DFS Bools,	Not satisfiable,	0.6,	330,	665,	0,	220476
+Mutual6.pet,	1 critical (Ordered DFS),	Ordered DFS Bools,	Satisfied,	0.19,	9,	25,	8,	44104
+Mutual8.pet,	4 done (Ordered DFS),	Ordered DFS Bools,	Not satisfiable,	2.61,	789,	1585,	0,	257728
+Mutual8.pet,	3 done (Ordered DFS),	Ordered DFS Bools,	Satisfied,	1.97,	520,	757,	16,	257724
+Mutual8.pet,	2 critical (Ordered DFS),	Ordered DFS Bools,	Not satisfiable,	2.61,	789,	1585,	0,	257724
+Mutual8.pet,	1 critical (Ordered DFS),	Ordered DFS Bools,	Satisfied,	0.25,	13,	35,	10,	44104
+Mutual10.pet,	4 done (Ordered DFS),	Ordered DFS Bools,	Not satisfiable,	15.16,	1556,	3121,	0,	294820
+Mutual10.pet,	3 done (Ordered DFS),	Ordered DFS Bools,	Satisfied,	11.03,	1019,	1514,	18,	294812
+Mutual10.pet,	2 critical (Ordered DFS),	Ordered DFS Bools,	Not satisfiable,	14.97,	1556,	3121,	0,	294824
+Mutual10.pet,	1 critical (Ordered DFS),	Ordered DFS Bools,	Satisfied,	0.31,	17,	45,	12,	44104
+Mutual2.pet,	2 done (Ordered DFS),	Old BestFS (Heuristic distance),	Satisfied,	0.04,	17,	36,	9,	44104
+Mutual2.pet,	2 critical (Ordered DFS),	Old BestFS (Heuristic distance),	Not satisfiable,	0.04,	106,	105,	0,	44104
+Mutual2.pet,	1 critical (Ordered DFS),	Old BestFS (Heuristic distance),	Satisfied,	0.04,	14,	33,	10,	44104
+Mutual4.pet,	4 done (Ordered DFS),	Old BestFS (Heuristic distance),	Not satisfiable,	0.08,	4496,	4495,	0,	44104
+Mutual4.pet,	3 done (Ordered DFS),	Old BestFS (Heuristic distance),	Satisfied,	0.07,	523,	580,	11,	44104
+Mutual4.pet,	2 critical (Ordered DFS),	Old BestFS (Heuristic distance),	Not satisfiable,	0.09,	4496,	4495,	0,	44104
+Mutual4.pet,	1 critical (Ordered DFS),	Old BestFS (Heuristic distance),	Satisfied,	0.08,	74,	133,	10,	44104
+Mutual6.pet,	4 done (Ordered DFS),	Old BestFS (Heuristic distance),	Not satisfiable,	3.45,	145152,	145151,	0,	152312
+Mutual6.pet,	3 done (Ordered DFS),	Old BestFS (Heuristic distance),	Satisfied,	0.16,	10763,	10864,	11,	44104
+Mutual6.pet,	2 critical (Ordered DFS),	Old BestFS (Heuristic distance),	Not satisfiable,	3.84,	145152,	145151,	0,	152312
+Mutual6.pet,	1 critical (Ordered DFS),	Old BestFS (Heuristic distance),	Satisfied,	0.1,	1034,	1133,	10,	44104
+Mutual8.pet,	4 done (Ordered DFS),	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	373208
+Mutual8.pet,	3 done (Ordered DFS),	Old BestFS (Heuristic distance),	Satisfied,	7.92,	213003,	213148,	11,	171800
+Mutual8.pet,	2 critical (Ordered DFS),	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	376428
+Mutual8.pet,	1 critical (Ordered DFS),	Old BestFS (Heuristic distance),	Satisfied,	0.24,	16394,	16533,	10,	41856
+Mutual10.pet,	4 done (Ordered DFS),	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	429732
+Mutual10.pet,	3 done (Ordered DFS),	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	429728
+Mutual10.pet,	2 critical (Ordered DFS),	Old BestFS (Heuristic distance),	OutOfTime,	-,	-,	-,	-,	549080
+Mutual10.pet,	1 critical (Ordered DFS),	Old BestFS (Heuristic distance),	Satisfied,	12.79,	262154,	262333,	10,	191300
+Mutual2.pet,	2 done (Ordered DFS),	Old BestFS (Monotonicity Included),	Satisfied,	0.05,	7,	12,	7,	41784
+Mutual2.pet,	2 critical (Ordered DFS),	Old BestFS (Monotonicity Included),	Not satisfiable,	0.05,	21,	22,	0,	41784
+Mutual2.pet,	1 critical (Ordered DFS),	Old BestFS (Monotonicity Included),	Satisfied,	0.05,	8,	13,	8,	41784
+Mutual4.pet,	4 done (Ordered DFS),	Old BestFS (Monotonicity Included),	Not satisfiable,	0.16,	180,	209,	0,	41784
+Mutual4.pet,	3 done (Ordered DFS),	Old BestFS (Monotonicity Included),	Satisfied,	0.07,	15,	41,	11,	41784
+Mutual4.pet,	2 critical (Ordered DFS),	Old BestFS (Monotonicity Included),	Not satisfiable,	0.13,	121,	140,	0,	41916
+Mutual4.pet,	1 critical (Ordered DFS),	Old BestFS (Monotonicity Included),	Satisfied,	0.07,	8,	29,	8,	41784
+Mutual6.pet,	4 done (Ordered DFS),	Old BestFS (Monotonicity Included),	Not satisfiable,	1.82,	710,	1002,	0,	149184
+Mutual6.pet,	3 done (Ordered DFS),	Old BestFS (Monotonicity Included),	Satisfied,	0.11,	19,	73,	11,	41784
+Mutual6.pet,	2 critical (Ordered DFS),	Old BestFS (Monotonicity Included),	Not satisfiable,	1.26,	419,	506,	0,	149184
+Mutual6.pet,	1 critical (Ordered DFS),	Old BestFS (Monotonicity Included),	Satisfied,	0.1,	8,	45,	8,	41784
+Mutual8.pet,	4 done (Ordered DFS),	Old BestFS (Monotonicity Included),	Not satisfiable,	10.49,	1936,	3196,	0,	167884
+Mutual8.pet,	3 done (Ordered DFS),	Old BestFS (Monotonicity Included),	Satisfied,	0.17,	23,	113,	11,	41784
+Mutual8.pet,	2 critical (Ordered DFS),	Old BestFS (Monotonicity Included),	Not satisfiable,	7.86,	1164,	1550,	0,	167876
+Mutual8.pet,	1 critical (Ordered DFS),	Old BestFS (Monotonicity Included),	Satisfied,	0.14,	8,	61,	8,	41916
+Mutual10.pet,	4 done (Ordered DFS),	Old BestFS (Monotonicity Included),	Not satisfiable,	63.31,	4423,	8520,	0,	186432
+Mutual10.pet,	3 done (Ordered DFS),	Old BestFS (Monotonicity Included),	Satisfied,	0.28,	27,	161,	11,	41916
+Mutual10.pet,	2 critical (Ordered DFS),	Old BestFS (Monotonicity Included),	Not satisfiable,	52.62,	2782,	4277,	0,	186416
+Mutual10.pet,	1 critical (Ordered DFS),	Old BestFS (Monotonicity Included),	Satisfied,	0.18,	8,	77,	8,	41916
+Mutual2.pet,	2 done (Ordered DFS),	Indexed Search,	Satisfied,	0.09,	6,	11,	7,	41916
+Mutual2.pet,	2 critical (Ordered DFS),	Indexed Search,	Not satisfiable,	0.08,	19,	20,	0,	41916
+Mutual2.pet,	1 critical (Ordered DFS),	Indexed Search,	Satisfied,	0.09,	6,	12,	7,	41916
+Mutual4.pet,	4 done (Ordered DFS),	Indexed Search,	Not satisfiable,	0.15,	109,	120,	0,	41916
+Mutual4.pet,	3 done (Ordered DFS),	Indexed Search,	Satisfied,	0.14,	11,	33,	12,	41916
+Mutual4.pet,	2 critical (Ordered DFS),	Indexed Search,	Not satisfiable,	0.15,	109,	120,	0,	41916
+Mutual4.pet,	1 critical (Ordered DFS),	Indexed Search,	Satisfied,	0.14,	8,	28,	9,	41916
+Mutual6.pet,	4 done (Ordered DFS),	Indexed Search,	Not satisfiable,	0.49,	351,	380,	0,	220480
+Mutual6.pet,	3 done (Ordered DFS),	Indexed Search,	Satisfied,	0.19,	13,	59,	14,	41916
+Mutual6.pet,	2 critical (Ordered DFS),	Indexed Search,	Not satisfiable,	0.48,	351,	380,	0,	220476
+Mutual6.pet,	1 critical (Ordered DFS),	Indexed Search,	Satisfied,	0.18,	10,	52,	11,	41916
+Mutual8.pet,	4 done (Ordered DFS),	Indexed Search,	Not satisfiable,	1.86,	825,	880,	0,	257720
+Mutual8.pet,	3 done (Ordered DFS),	Indexed Search,	Satisfied,	0.25,	15,	93,	16,	41916
+Mutual8.pet,	2 critical (Ordered DFS),	Indexed Search,	Not satisfiable,	1.87,	825,	880,	0,	257720
+Mutual8.pet,	1 critical (Ordered DFS),	Indexed Search,	Satisfied,	0.24,	12,	84,	13,	41916
+Mutual10.pet,	4 done (Ordered DFS),	Indexed Search,	Not satisfiable,	9.5,	1611,	1700,	0,	294812
+Mutual10.pet,	3 done (Ordered DFS),	Indexed Search,	Satisfied,	0.3,	17,	135,	18,	41916
+Mutual10.pet,	2 critical (Ordered DFS),	Indexed Search,	Not satisfiable,	9.62,	1611,	1700,	0,	294812
+Mutual10.pet,	1 critical (Ordered DFS),	Indexed Search,	Satisfied,	0.29,	14,	124,	15,	41916
+Mutual2.pet,	2 done (Ordered DFS),	Indexed Search with Variance,	Satisfied,	0.09,	6,	11,	7,	41916
+Mutual2.pet,	2 critical (Ordered DFS),	Indexed Search with Variance,	Not satisfiable,	0.09,	19,	20,	0,	41916
+Mutual2.pet,	1 critical (Ordered DFS),	Indexed Search with Variance,	Satisfied,	0.1,	6,	12,	7,	41916
+Mutual4.pet,	4 done (Ordered DFS),	Indexed Search with Variance,	Not satisfiable,	0.16,	109,	120,	0,	41916
+Mutual4.pet,	3 done (Ordered DFS),	Indexed Search with Variance,	Satisfied,	0.14,	11,	33,	12,	41916
+Mutual4.pet,	2 critical (Ordered DFS),	Indexed Search with Variance,	Not satisfiable,	0.16,	109,	120,	0,	41916
+Mutual4.pet,	1 critical (Ordered DFS),	Indexed Search with Variance,	Satisfied,	0.15,	8,	28,	9,	41916
+Mutual6.pet,	4 done (Ordered DFS),	Indexed Search with Variance,	Not satisfiable,	0.53,	351,	380,	0,	220472
+Mutual6.pet,	3 done (Ordered DFS),	Indexed Search with Variance,	Satisfied,	0.2,	13,	59,	14,	41916
+Mutual6.pet,	2 critical (Ordered DFS),	Indexed Search with Variance,	Not satisfiable,	0.53,	351,	380,	0,	220468
+Mutual6.pet,	1 critical (Ordered DFS),	Indexed Search with Variance,	Satisfied,	0.18,	10,	52,	11,	41916
+Mutual8.pet,	4 done (Ordered DFS),	Indexed Search with Variance,	Not satisfiable,	2.08,	825,	880,	0,	257720
+Mutual8.pet,	3 done (Ordered DFS),	Indexed Search with Variance,	Satisfied,	0.24,	15,	93,	16,	41916
+Mutual8.pet,	2 critical (Ordered DFS),	Indexed Search with Variance,	Not satisfiable,	2.07,	825,	880,	0,	257716
+Mutual8.pet,	1 critical (Ordered DFS),	Indexed Search with Variance,	Satisfied,	0.23,	12,	84,	13,	41916
+Mutual10.pet,	4 done (Ordered DFS),	Indexed Search with Variance,	Not satisfiable,	10.91,	1611,	1700,	0,	294824
+Mutual10.pet,	3 done (Ordered DFS),	Indexed Search with Variance,	Satisfied,	0.3,	17,	135,	18,	41916
+Mutual10.pet,	2 critical (Ordered DFS),	Indexed Search with Variance,	Not satisfiable,	10.88,	1611,	1700,	0,	294816
+Mutual10.pet,	1 critical (Ordered DFS),	Indexed Search with Variance,	Satisfied,	0.28,	14,	124,	15,	41916
+Mutual2.pet,	2 done (Ordered DFS),	Indexed BFS,	Satisfied,	0.1,	11,	15,	7,	43968
+Mutual2.pet,	2 critical (Ordered DFS),	Indexed BFS,	Not satisfiable,	0.09,	18,	19,	0,	41916
+Mutual2.pet,	1 critical (Ordered DFS),	Indexed BFS,	Satisfied,	0.09,	3,	8,	4,	41916
+Mutual4.pet,	4 done (Ordered DFS),	Indexed BFS,	Not satisfiable,	0.16,	103,	114,	0,	43968
+Mutual4.pet,	3 done (Ordered DFS),	Indexed BFS,	Satisfied,	0.15,	70,	101,	12,	43968
+Mutual4.pet,	2 critical (Ordered DFS),	Indexed BFS,	Not satisfiable,	0.15,	103,	114,	0,	43972
+Mutual4.pet,	1 critical (Ordered DFS),	Indexed BFS,	Satisfied,	0.15,	7,	26,	6,	43972
+Mutual6.pet,	4 done (Ordered DFS),	Indexed BFS,	Not satisfiable,	0.51,	336,	365,	0,	220480
+Mutual6.pet,	3 done (Ordered DFS),	Indexed BFS,	Satisfied,	0.4,	187,	328,	14,	220468
+Mutual6.pet,	2 critical (Ordered DFS),	Indexed BFS,	Not satisfiable,	0.54,	336,	365,	0,	220468
+Mutual6.pet,	1 critical (Ordered DFS),	Indexed BFS,	Satisfied,	0.2,	11,	52,	8,	43972
+Mutual8.pet,	4 done (Ordered DFS),	Indexed BFS,	Not satisfiable,	2.65,	797,	852,	0,	257732
+Mutual8.pet,	3 done (Ordered DFS),	Indexed BFS,	Satisfied,	1.47,	392,	771,	16,	257724
+Mutual8.pet,	2 critical (Ordered DFS),	Indexed BFS,	Not satisfiable,	2.56,	797,	852,	0,	257660
+Mutual8.pet,	1 critical (Ordered DFS),	Indexed BFS,	Satisfied,	0.26,	15,	86,	10,	43972
+Mutual10.pet,	4 done (Ordered DFS),	Indexed BFS,	Not satisfiable,	17.13,	1566,	1655,	0,	294832
+Mutual10.pet,	3 done (Ordered DFS),	Indexed BFS,	Satisfied,	8.41,	709,	1502,	18,	294824
+Mutual10.pet,	2 critical (Ordered DFS),	Indexed BFS,	Not satisfiable,	16.92,	1566,	1655,	0,	294820
+Mutual10.pet,	1 critical (Ordered DFS),	Indexed BFS,	Satisfied,	0.32,	19,	128,	12,	294828
+Mutual2.pet,	2 done (Ordered DFS),	Indexed BFS with Variance,	Satisfied,	0.09,	11,	15,	7,	43972
+Mutual2.pet,	2 critical (Ordered DFS),	Indexed BFS with Variance,	Not satisfiable,	0.09,	18,	19,	0,	44104
+Mutual2.pet,	1 critical (Ordered DFS),	Indexed BFS with Variance,	Satisfied,	0.08,	3,	8,	4,	44104
+Mutual4.pet,	4 done (Ordered DFS),	Indexed BFS with Variance,	Not satisfiable,	0.16,	103,	114,	0,	44104
+Mutual4.pet,	3 done (Ordered DFS),	Indexed BFS with Variance,	Satisfied,	0.16,	70,	101,	12,	44104
+Mutual4.pet,	2 critical (Ordered DFS),	Indexed BFS with Variance,	Not satisfiable,	0.16,	103,	114,	0,	44104
+Mutual4.pet,	1 critical (Ordered DFS),	Indexed BFS with Variance,	Satisfied,	0.14,	7,	26,	6,	44104
+Mutual6.pet,	4 done (Ordered DFS),	Indexed BFS with Variance,	Not satisfiable,	0.53,	336,	365,	0,	220472
+Mutual6.pet,	3 done (Ordered DFS),	Indexed BFS with Variance,	Satisfied,	0.39,	187,	328,	14,	220488
+Mutual6.pet,	2 critical (Ordered DFS),	Indexed BFS with Variance,	Not satisfiable,	0.53,	336,	365,	0,	220468
+Mutual6.pet,	1 critical (Ordered DFS),	Indexed BFS with Variance,	Satisfied,	0.21,	11,	52,	8,	44104
+Mutual8.pet,	4 done (Ordered DFS),	Indexed BFS with Variance,	Not satisfiable,	2.61,	797,	852,	0,	257716
+Mutual8.pet,	3 done (Ordered DFS),	Indexed BFS with Variance,	Satisfied,	1.48,	392,	771,	16,	257740
+Mutual8.pet,	2 critical (Ordered DFS),	Indexed BFS with Variance,	Not satisfiable,	2.6,	797,	852,	0,	257724
+Mutual8.pet,	1 critical (Ordered DFS),	Indexed BFS with Variance,	Satisfied,	0.25,	15,	86,	10,	44104
+Mutual10.pet,	4 done (Ordered DFS),	Indexed BFS with Variance,	Not satisfiable,	17.01,	1566,	1655,	0,	294804
+Mutual10.pet,	3 done (Ordered DFS),	Indexed BFS with Variance,	Satisfied,	8.43,	709,	1502,	18,	294800
+Mutual10.pet,	2 critical (Ordered DFS),	Indexed BFS with Variance,	Not satisfiable,	17.28,	1566,	1655,	0,	294836
+Mutual10.pet,	1 critical (Ordered DFS),	Indexed BFS with Variance,	Satisfied,	0.32,	19,	128,	12,	294780
+Mutual2.pet,	2 done (Ordered DFS),	Indexed DFS,	Satisfied,	0.1,	0,	6,	7,	44104
+Mutual2.pet,	2 critical (Ordered DFS),	Indexed DFS,	Not satisfiable,	0.09,	17,	35,	0,	44104
+Mutual2.pet,	1 critical (Ordered DFS),	Indexed DFS,	Satisfied,	0.08,	7,	10,	4,	44104
+Mutual4.pet,	4 done (Ordered DFS),	Indexed DFS,	Not satisfiable,	0.16,	105,	213,	0,	44104
+Mutual4.pet,	3 done (Ordered DFS),	Indexed DFS,	Satisfied,	0.14,	47,	58,	12,	44104
+Mutual4.pet,	2 critical (Ordered DFS),	Indexed DFS,	Not satisfiable,	0.14,	105,	213,	0,	44104
+Mutual4.pet,	1 critical (Ordered DFS),	Indexed DFS,	Satisfied,	0.14,	3,	14,	12,	44104
+Mutual6.pet,	4 done (Ordered DFS),	Indexed DFS,	Not satisfiable,	0.36,	345,	695,	0,	220472
+Mutual6.pet,	3 done (Ordered DFS),	Indexed DFS,	Satisfied,	0.31,	263,	276,	14,	44104
+Mutual6.pet,	2 critical (Ordered DFS),	Indexed DFS,	Not satisfiable,	0.36,	345,	695,	0,	220472
+Mutual6.pet,	1 critical (Ordered DFS),	Indexed DFS,	Satisfied,	0.19,	11,	24,	14,	44104
+Mutual8.pet,	4 done (Ordered DFS),	Indexed DFS,	Not satisfiable,	0.86,	817,	1641,	0,	257716
+Mutual8.pet,	3 done (Ordered DFS),	Indexed DFS,	Satisfied,	0.72,	711,	726,	16,	257724
+Mutual8.pet,	2 critical (Ordered DFS),	Indexed DFS,	Not satisfiable,	0.85,	817,	1641,	0,	257736
+Mutual8.pet,	1 critical (Ordered DFS),	Indexed DFS,	Satisfied,	0.25,	19,	34,	16,	44104
+Mutual10.pet,	4 done (Ordered DFS),	Indexed DFS,	Not satisfiable,	2.86,	1601,	3211,	0,	294820
+Mutual10.pet,	3 done (Ordered DFS),	Indexed DFS,	Satisfied,	2.53,	1471,	1488,	18,	294832
+Mutual10.pet,	2 critical (Ordered DFS),	Indexed DFS,	Not satisfiable,	2.83,	1601,	3211,	0,	294816
+Mutual10.pet,	1 critical (Ordered DFS),	Indexed DFS,	Satisfied,	0.3,	27,	44,	18,	44104
+Mutual2.pet,	2 done (Ordered DFS),	Indexed DFS with Variance,	Satisfied,	0.08,	0,	6,	7,	44104
+Mutual2.pet,	2 critical (Ordered DFS),	Indexed DFS with Variance,	Not satisfiable,	0.1,	17,	35,	0,	44104
+Mutual2.pet,	1 critical (Ordered DFS),	Indexed DFS with Variance,	Satisfied,	0.09,	7,	10,	4,	44104
+Mutual4.pet,	4 done (Ordered DFS),	Indexed DFS with Variance,	Not satisfiable,	0.15,	105,	213,	0,	44104
+Mutual4.pet,	3 done (Ordered DFS),	Indexed DFS with Variance,	Satisfied,	0.15,	47,	58,	12,	44104
+Mutual4.pet,	2 critical (Ordered DFS),	Indexed DFS with Variance,	Not satisfiable,	0.15,	105,	213,	0,	44104
+Mutual4.pet,	1 critical (Ordered DFS),	Indexed DFS with Variance,	Satisfied,	0.15,	3,	14,	12,	44104
+Mutual6.pet,	4 done (Ordered DFS),	Indexed DFS with Variance,	Not satisfiable,	0.36,	345,	695,	0,	220472
+Mutual6.pet,	3 done (Ordered DFS),	Indexed DFS with Variance,	Satisfied,	0.31,	263,	276,	14,	44104
+Mutual6.pet,	2 critical (Ordered DFS),	Indexed DFS with Variance,	Not satisfiable,	0.36,	345,	695,	0,	220464
+Mutual6.pet,	1 critical (Ordered DFS),	Indexed DFS with Variance,	Satisfied,	0.19,	11,	24,	14,	44104
+Mutual8.pet,	4 done (Ordered DFS),	Indexed DFS with Variance,	Not satisfiable,	0.88,	817,	1641,	0,	257720
+Mutual8.pet,	3 done (Ordered DFS),	Indexed DFS with Variance,	Satisfied,	0.73,	711,	726,	16,	257716
+Mutual8.pet,	2 critical (Ordered DFS),	Indexed DFS with Variance,	Not satisfiable,	0.84,	817,	1641,	0,	257716
+Mutual8.pet,	1 critical (Ordered DFS),	Indexed DFS with Variance,	Satisfied,	0.25,	19,	34,	16,	44104
+Mutual10.pet,	4 done (Ordered DFS),	Indexed DFS with Variance,	Not satisfiable,	2.86,	1601,	3211,	0,	294812
+Mutual10.pet,	3 done (Ordered DFS),	Indexed DFS with Variance,	Satisfied,	2.52,	1471,	1488,	18,	294824
+Mutual10.pet,	2 critical (Ordered DFS),	Indexed DFS with Variance,	Not satisfiable,	2.9,	1601,	3211,	0,	294824
+Mutual10.pet,	1 critical (Ordered DFS),	Indexed DFS with Variance,	Satisfied,	0.31,	27,	44,	18,	44104
+Mutual2.pet,	2 done (Ordered DFS),	Indexed DFS State,	Satisfied,	0.09,	0,	6,	7,	44104
+Mutual2.pet,	2 critical (Ordered DFS),	Indexed DFS State,	Not satisfiable,	0.1,	17,	35,	0,	44104
+Mutual2.pet,	1 critical (Ordered DFS),	Indexed DFS State,	Satisfied,	0.08,	7,	10,	4,	44104
+Mutual4.pet,	4 done (Ordered DFS),	Indexed DFS State,	Not satisfiable,	0.15,	105,	213,	0,	44104
+Mutual4.pet,	3 done (Ordered DFS),	Indexed DFS State,	Satisfied,	0.14,	47,	58,	12,	44104
+Mutual4.pet,	2 critical (Ordered DFS),	Indexed DFS State,	Not satisfiable,	0.15,	105,	213,	0,	44104
+Mutual4.pet,	1 critical (Ordered DFS),	Indexed DFS State,	Satisfied,	0.14,	3,	14,	12,	44104
+Mutual6.pet,	4 done (Ordered DFS),	Indexed DFS State,	Not satisfiable,	0.35,	345,	695,	0,	220476
+Mutual6.pet,	3 done (Ordered DFS),	Indexed DFS State,	Satisfied,	0.31,	263,	276,	14,	44104
+Mutual6.pet,	2 critical (Ordered DFS),	Indexed DFS State,	Not satisfiable,	0.36,	345,	695,	0,	220436
+Mutual6.pet,	1 critical (Ordered DFS),	Indexed DFS State,	Satisfied,	0.19,	11,	24,	14,	44104
+Mutual8.pet,	4 done (Ordered DFS),	Indexed DFS State,	Not satisfiable,	0.87,	817,	1641,	0,	257728
+Mutual8.pet,	3 done (Ordered DFS),	Indexed DFS State,	Satisfied,	0.73,	711,	726,	16,	257560
+Mutual8.pet,	2 critical (Ordered DFS),	Indexed DFS State,	Not satisfiable,	0.87,	817,	1641,	0,	257724
+Mutual8.pet,	1 critical (Ordered DFS),	Indexed DFS State,	Satisfied,	0.23,	19,	34,	16,	44104
+Mutual10.pet,	4 done (Ordered DFS),	Indexed DFS State,	Not satisfiable,	2.91,	1601,	3211,	0,	294824
+Mutual10.pet,	3 done (Ordered DFS),	Indexed DFS State,	Satisfied,	2.55,	1471,	1488,	18,	294832
+Mutual10.pet,	2 critical (Ordered DFS),	Indexed DFS State,	Not satisfiable,	2.99,	1601,	3211,	0,	294816
+Mutual10.pet,	1 critical (Ordered DFS),	Indexed DFS State,	Satisfied,	0.3,	27,	44,	18,	44104
+Mutual2.pet,	2 done (Ordered DFS),	Indexed DFS State with Variance,	Satisfied,	0.08,	0,	6,	7,	44104
+Mutual2.pet,	2 critical (Ordered DFS),	Indexed DFS State with Variance,	Not satisfiable,	0.09,	17,	35,	0,	44104
+Mutual2.pet,	1 critical (Ordered DFS),	Indexed DFS State with Variance,	Satisfied,	0.09,	7,	10,	4,	44104
+Mutual4.pet,	4 done (Ordered DFS),	Indexed DFS State with Variance,	Not satisfiable,	0.15,	105,	213,	0,	44104
+Mutual4.pet,	3 done (Ordered DFS),	Indexed DFS State with Variance,	Satisfied,	0.15,	47,	58,	12,	44104
+Mutual4.pet,	2 critical (Ordered DFS),	Indexed DFS State with Variance,	Not satisfiable,	0.14,	105,	213,	0,	44104
+Mutual4.pet,	1 critical (Ordered DFS),	Indexed DFS State with Variance,	Satisfied,	0.14,	3,	14,	12,	44104
+Mutual6.pet,	4 done (Ordered DFS),	Indexed DFS State with Variance,	Not satisfiable,	0.35,	345,	695,	0,	220460
+Mutual6.pet,	3 done (Ordered DFS),	Indexed DFS State with Variance,	Satisfied,	0.31,	263,	276,	14,	44104
+Mutual6.pet,	2 critical (Ordered DFS),	Indexed DFS State with Variance,	Not satisfiable,	0.36,	345,	695,	0,	220468
+Mutual6.pet,	1 critical (Ordered DFS),	Indexed DFS State with Variance,	Satisfied,	0.2,	11,	24,	14,	44104
+Mutual8.pet,	4 done (Ordered DFS),	Indexed DFS State with Variance,	Not satisfiable,	0.86,	817,	1641,	0,	257712
+Mutual8.pet,	3 done (Ordered DFS),	Indexed DFS State with Variance,	Satisfied,	0.74,	711,	726,	16,	257724
+Mutual8.pet,	2 critical (Ordered DFS),	Indexed DFS State with Variance,	Not satisfiable,	0.86,	817,	1641,	0,	257712
+Mutual8.pet,	1 critical (Ordered DFS),	Indexed DFS State with Variance,	Satisfied,	0.24,	19,	34,	16,	44104
+Mutual10.pet,	4 done (Ordered DFS),	Indexed DFS State with Variance,	Not satisfiable,	2.99,	1601,	3211,	0,	294696
+Mutual10.pet,	3 done (Ordered DFS),	Indexed DFS State with Variance,	Satisfied,	2.53,	1471,	1488,	18,	294812
+Mutual10.pet,	2 critical (Ordered DFS),	Indexed DFS State with Variance,	Not satisfiable,	2.94,	1601,	3211,	0,	295844
+Mutual10.pet,	1 critical (Ordered DFS),	Indexed DFS State with Variance,	Satisfied,	0.31,	27,	44,	18,	44104
+Mutual2.pet,	2 done (Ordered DFS),	Indexed DFS Bool,	Satisfied,	0.08,	0,	6,	7,	44104
+Mutual2.pet,	2 critical (Ordered DFS),	Indexed DFS Bool,	Not satisfiable,	0.1,	17,	35,	0,	44104
+Mutual2.pet,	1 critical (Ordered DFS),	Indexed DFS Bool,	Satisfied,	0.09,	7,	10,	4,	44104
+Mutual4.pet,	4 done (Ordered DFS),	Indexed DFS Bool,	Not satisfiable,	0.16,	105,	213,	0,	44104
+Mutual4.pet,	3 done (Ordered DFS),	Indexed DFS Bool,	Satisfied,	0.14,	47,	58,	12,	44104
+Mutual4.pet,	2 critical (Ordered DFS),	Indexed DFS Bool,	Not satisfiable,	0.15,	105,	213,	0,	44104
+Mutual4.pet,	1 critical (Ordered DFS),	Indexed DFS Bool,	Satisfied,	0.14,	3,	14,	12,	44104
+Mutual6.pet,	4 done (Ordered DFS),	Indexed DFS Bool,	Not satisfiable,	0.36,	345,	695,	0,	220472
+Mutual6.pet,	3 done (Ordered DFS),	Indexed DFS Bool,	Satisfied,	0.31,	263,	276,	14,	44104
+Mutual6.pet,	2 critical (Ordered DFS),	Indexed DFS Bool,	Not satisfiable,	0.35,	345,	695,	0,	220476
+Mutual6.pet,	1 critical (Ordered DFS),	Indexed DFS Bool,	Satisfied,	0.19,	11,	24,	14,	44104
+Mutual8.pet,	4 done (Ordered DFS),	Indexed DFS Bool,	Not satisfiable,	0.86,	817,	1641,	0,	257728
+Mutual8.pet,	3 done (Ordered DFS),	Indexed DFS Bool,	Satisfied,	0.73,	711,	726,	16,	257716
+Mutual8.pet,	2 critical (Ordered DFS),	Indexed DFS Bool,	Not satisfiable,	0.86,	817,	1641,	0,	257716
+Mutual8.pet,	1 critical (Ordered DFS),	Indexed DFS Bool,	Satisfied,	0.24,	19,	34,	16,	44104
+Mutual10.pet,	4 done (Ordered DFS),	Indexed DFS Bool,	Not satisfiable,	2.91,	1601,	3211,	0,	294804
+Mutual10.pet,	3 done (Ordered DFS),	Indexed DFS Bool,	Satisfied,	2.52,	1471,	1488,	18,	294824
+Mutual10.pet,	2 critical (Ordered DFS),	Indexed DFS Bool,	Not satisfiable,	2.95,	1601,	3211,	0,	294804
+Mutual10.pet,	1 critical (Ordered DFS),	Indexed DFS Bool,	Satisfied,	0.31,	27,	44,	18,	44104
+Mutual2.pet,	2 done (Ordered DFS),	Indexed DFS Bool with Variance,	Satisfied,	0.08,	0,	6,	7,	44104
+Mutual2.pet,	2 critical (Ordered DFS),	Indexed DFS Bool with Variance,	Not satisfiable,	0.1,	17,	35,	0,	44104
+Mutual2.pet,	1 critical (Ordered DFS),	Indexed DFS Bool with Variance,	Satisfied,	0.09,	7,	10,	4,	44104
+Mutual4.pet,	4 done (Ordered DFS),	Indexed DFS Bool with Variance,	Not satisfiable,	0.16,	105,	213,	0,	44104
+Mutual4.pet,	3 done (Ordered DFS),	Indexed DFS Bool with Variance,	Satisfied,	0.15,	47,	58,	12,	44104
+Mutual4.pet,	2 critical (Ordered DFS),	Indexed DFS Bool with Variance,	Not satisfiable,	0.16,	105,	213,	0,	44104
+Mutual4.pet,	1 critical (Ordered DFS),	Indexed DFS Bool with Variance,	Satisfied,	0.15,	3,	14,	12,	44104
+Mutual6.pet,	4 done (Ordered DFS),	Indexed DFS Bool with Variance,	Not satisfiable,	0.37,	345,	695,	0,	220480
+Mutual6.pet,	3 done (Ordered DFS),	Indexed DFS Bool with Variance,	Satisfied,	0.31,	263,	276,	14,	44104
+Mutual6.pet,	2 critical (Ordered DFS),	Indexed DFS Bool with Variance,	Not satisfiable,	0.36,	345,	695,	0,	220480
+Mutual6.pet,	1 critical (Ordered DFS),	Indexed DFS Bool with Variance,	Satisfied,	0.19,	11,	24,	14,	44104
+Mutual8.pet,	4 done (Ordered DFS),	Indexed DFS Bool with Variance,	Not satisfiable,	0.87,	817,	1641,	0,	257724
+Mutual8.pet,	3 done (Ordered DFS),	Indexed DFS Bool with Variance,	Satisfied,	0.73,	711,	726,	16,	257724
+Mutual8.pet,	2 critical (Ordered DFS),	Indexed DFS Bool with Variance,	Not satisfiable,	0.85,	817,	1641,	0,	257716
+Mutual8.pet,	1 critical (Ordered DFS),	Indexed DFS Bool with Variance,	Satisfied,	0.25,	19,	34,	16,	44104
+Mutual10.pet,	4 done (Ordered DFS),	Indexed DFS Bool with Variance,	Not satisfiable,	2.92,	1601,	3211,	0,	294740
+Mutual10.pet,	3 done (Ordered DFS),	Indexed DFS Bool with Variance,	Satisfied,	2.51,	1471,	1488,	18,	294832
+Mutual10.pet,	2 critical (Ordered DFS),	Indexed DFS Bool with Variance,	Not satisfiable,	2.96,	1601,	3211,	0,	294824
+Mutual10.pet,	1 critical (Ordered DFS),	Indexed DFS Bool with Variance,	Satisfied,	0.31,	27,	44,	18,	44104
+Mutual2.pet,	2 done (Ordered DFS),	Indexed BestFS,	Satisfied,	0.05,	7,	12,	7,	44104
+Mutual2.pet,	2 critical (Ordered DFS),	Indexed BestFS,	Not satisfiable,	0.05,	21,	22,	0,	44104
+Mutual2.pet,	1 critical (Ordered DFS),	Indexed BestFS,	Satisfied,	0.05,	8,	13,	8,	44104
+Mutual4.pet,	4 done (Ordered DFS),	Indexed BestFS,	Not satisfiable,	0.11,	180,	209,	0,	44104
+Mutual4.pet,	3 done (Ordered DFS),	Indexed BestFS,	Satisfied,	0.07,	15,	41,	11,	44104
+Mutual4.pet,	2 critical (Ordered DFS),	Indexed BestFS,	Not satisfiable,	0.1,	121,	140,	0,	44104
+Mutual4.pet,	1 critical (Ordered DFS),	Indexed BestFS,	Satisfied,	0.06,	8,	29,	8,	43972
+Mutual6.pet,	4 done (Ordered DFS),	Indexed BestFS,	Not satisfiable,	1.08,	710,	1002,	0,	149192
+Mutual6.pet,	3 done (Ordered DFS),	Indexed BestFS,	Satisfied,	0.12,	19,	73,	11,	44104
+Mutual6.pet,	2 critical (Ordered DFS),	Indexed BestFS,	Not satisfiable,	0.56,	419,	506,	0,	149188
+Mutual6.pet,	1 critical (Ordered DFS),	Indexed BestFS,	Satisfied,	0.1,	8,	45,	8,	44104
+Mutual8.pet,	4 done (Ordered DFS),	Indexed BestFS,	Not satisfiable,	5.9,	1936,	3196,	0,	167892
+Mutual8.pet,	3 done (Ordered DFS),	Indexed BestFS,	Satisfied,	0.17,	23,	113,	11,	44104
+Mutual8.pet,	2 critical (Ordered DFS),	Indexed BestFS,	Not satisfiable,	3.11,	1164,	1550,	0,	167872
+Mutual8.pet,	1 critical (Ordered DFS),	Indexed BestFS,	Satisfied,	0.14,	8,	61,	8,	44104
+Mutual10.pet,	4 done (Ordered DFS),	Indexed BestFS,	Not satisfiable,	37.99,	4423,	8520,	0,	186416
+Mutual10.pet,	3 done (Ordered DFS),	Indexed BestFS,	Satisfied,	0.27,	27,	161,	11,	44104
+Mutual10.pet,	2 critical (Ordered DFS),	Indexed BestFS,	Not satisfiable,	20.81,	2782,	4277,	0,	186408
+Mutual10.pet,	1 critical (Ordered DFS),	Indexed BestFS,	Satisfied,	0.18,	8,	77,	8,	44104
+Mutual2.pet,	2 done (Ordered DFS),	Indexed BestFS with Variance,	Satisfied,	0.05,	7,	12,	7,	44104
+Mutual2.pet,	2 critical (Ordered DFS),	Indexed BestFS with Variance,	Not satisfiable,	0.05,	21,	22,	0,	44104
+Mutual2.pet,	1 critical (Ordered DFS),	Indexed BestFS with Variance,	Satisfied,	0.05,	8,	13,	8,	44104
+Mutual4.pet,	4 done (Ordered DFS),	Indexed BestFS with Variance,	Not satisfiable,	0.12,	180,	209,	0,	44104
+Mutual4.pet,	3 done (Ordered DFS),	Indexed BestFS with Variance,	Satisfied,	0.07,	15,	41,	11,	44104
+Mutual4.pet,	2 critical (Ordered DFS),	Indexed BestFS with Variance,	Not satisfiable,	0.09,	121,	140,	0,	44104
+Mutual4.pet,	1 critical (Ordered DFS),	Indexed BestFS with Variance,	Satisfied,	0.08,	8,	29,	8,	44104
+Mutual6.pet,	4 done (Ordered DFS),	Indexed BestFS with Variance,	Not satisfiable,	1.19,	710,	1002,	0,	149160
+Mutual6.pet,	3 done (Ordered DFS),	Indexed BestFS with Variance,	Satisfied,	0.12,	19,	73,	11,	44104
+Mutual6.pet,	2 critical (Ordered DFS),	Indexed BestFS with Variance,	Not satisfiable,	0.59,	419,	506,	0,	149144
+Mutual6.pet,	1 critical (Ordered DFS),	Indexed BestFS with Variance,	Satisfied,	0.1,	8,	45,	8,	44104
+Mutual8.pet,	4 done (Ordered DFS),	Indexed BestFS with Variance,	Not satisfiable,	6.59,	1936,	3196,	0,	167892
+Mutual8.pet,	3 done (Ordered DFS),	Indexed BestFS with Variance,	Satisfied,	0.16,	23,	113,	11,	44104
+Mutual8.pet,	2 critical (Ordered DFS),	Indexed BestFS with Variance,	Not satisfiable,	3.37,	1164,	1550,	0,	167880
+Mutual8.pet,	1 critical (Ordered DFS),	Indexed BestFS with Variance,	Satisfied,	0.13,	8,	61,	8,	44104
+Mutual10.pet,	4 done (Ordered DFS),	Indexed BestFS with Variance,	Not satisfiable,	42.07,	4423,	8520,	0,	186420
+Mutual10.pet,	3 done (Ordered DFS),	Indexed BestFS with Variance,	Satisfied,	0.28,	27,	161,	11,	44596
+Mutual10.pet,	2 critical (Ordered DFS),	Indexed BestFS with Variance,	Not satisfiable,	23.04,	2782,	4277,	0,	186404
+Mutual10.pet,	1 critical (Ordered DFS),	Indexed BestFS with Variance,	Satisfied,	0.18,	8,	77,	8,	44104
+MAPK8.pet,	fOK192210,	Naive DFS with Hash,	Satisfied,	24.68,	88667,	5084994,	4996328,	848844
+MAPK8.pet,	fOK195246,	Naive DFS with Hash,	Satisfied,	6.21,	4152,	1719895,	1715744,	376824
+MAPK8.pet,	fOK193646,	Naive DFS with Hash,	Satisfied,	11.56,	13820,	2792322,	2778503,	518048
+MAPK8.pet,	fOK191292,	Naive DFS with Hash,	Satisfied,	4.2,	1787,	1143352,	1141566,	339816
+MAPK8.pet,	fOK193040,	Naive DFS with Hash,	Satisfied,	17.61,	44053,	4094978,	4050926,	686424
+MAPK8.pet,	fOK195609,	Naive DFS with Hash,	Satisfied,	13.46,	19912,	3177973,	3158062,	538628
+MAPK8.pet,	fOK191935,	Naive DFS with Hash,	Satisfied,	28.25,	141609,	5782083,	5640475,	989368
+MAPK8.pet,	fOK195881,	Naive DFS with Hash,	Satisfied,	17.82,	44888,	4121291,	4076404,	685632
+MAPK8.pet,	fOK191385,	Naive DFS with Hash,	Satisfied,	11.4,	13291,	2752756,	2739466,	517376
+MAPK8.pet,	fOK198144,	Naive DFS with Hash,	Satisfied,	9.28,	7935,	2256316,	2248382,	515060
+MAPK8.pet,	fNOK190939,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77880
+MAPK8.pet,	fNOK190212,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	78936
+MAPK8.pet,	fNOK199690,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77888
+MAPK8.pet,	fNOK190700,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77992
+MAPK8.pet,	fNOK198469,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK8.pet,	fNOK191135,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK8.pet,	fNOK193050,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77892
+MAPK8.pet,	fNOK196324,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK8.pet,	fNOK194463,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77884
+MAPK8.pet,	fNOK196130,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK40.pet,	fOK192210,	Naive DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2211904
+MAPK40.pet,	fOK195246,	Naive DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2211560
+MAPK40.pet,	fOK193646,	Naive DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2211912
+MAPK40.pet,	fOK191292,	Naive DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2211428
+MAPK40.pet,	fOK193040,	Naive DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2211920
+MAPK40.pet,	fOK195609,	Naive DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2211912
+MAPK40.pet,	fOK191935,	Naive DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2187224
+MAPK40.pet,	fOK195881,	Naive DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2210912
+MAPK40.pet,	fOK191385,	Naive DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2211824
+MAPK40.pet,	fOK198144,	Naive DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2187236
+MAPK40.pet,	fNOK190939,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK40.pet,	fNOK190212,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77892
+MAPK40.pet,	fNOK199690,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK40.pet,	fNOK190700,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK40.pet,	fNOK198469,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77868
+MAPK40.pet,	fNOK191135,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK40.pet,	fNOK193050,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77892
+MAPK40.pet,	fNOK196324,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77892
+MAPK40.pet,	fNOK194463,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK40.pet,	fNOK196130,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77864
+MAPK8.pet,	fOK192210,	Naive BFS with Hash,	Satisfied,	37.65,	4124611,	4415042,	46,	749036
+MAPK8.pet,	fOK195246,	Naive BFS with Hash,	Satisfied,	42.8,	4620063,	4872149,	48,	749020
+MAPK8.pet,	fOK193646,	Naive BFS with Hash,	Satisfied,	21.82,	2631425,	2948094,	41,	473152
+MAPK8.pet,	fOK191292,	Naive BFS with Hash,	Satisfied,	13.1,	1741643,	2016584,	38,	340888
+MAPK8.pet,	fOK193040,	Naive BFS with Hash,	Satisfied,	34.32,	4041686,	4332532,	46,	712752
+MAPK8.pet,	fOK195609,	Naive BFS with Hash,	Satisfied,	6.91,	972435,	1167510,	34,	319196
+MAPK8.pet,	fOK191935,	Naive BFS with Hash,	Satisfied,	33.21,	3816826,	4122373,	45,	709320
+MAPK8.pet,	fOK195881,	Naive BFS with Hash,	Satisfied,	4.35,	653477,	803429,	32,	205872
+MAPK8.pet,	fOK191385,	Naive BFS with Hash,	Satisfied,	14.23,	1838789,	2118315,	38,	450252
+MAPK8.pet,	fOK198144,	Naive BFS with Hash,	Satisfied,	25.06,	2968034,	3288882,	42,	585704
+MAPK8.pet,	fNOK190939,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK8.pet,	fNOK190212,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77916
+MAPK8.pet,	fNOK199690,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK8.pet,	fNOK190700,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77892
+MAPK8.pet,	fNOK198469,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK8.pet,	fNOK191135,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK8.pet,	fNOK193050,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77892
+MAPK8.pet,	fNOK196324,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77892
+MAPK8.pet,	fNOK194463,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK8.pet,	fNOK196130,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77920
+MAPK40.pet,	fOK192210,	Naive BFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2187992
+MAPK40.pet,	fOK195246,	Naive BFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2187900
+MAPK40.pet,	fOK193646,	Naive BFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2197756
+MAPK40.pet,	fOK191292,	Naive BFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2187900
+MAPK40.pet,	fOK193040,	Naive BFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2187512
+MAPK40.pet,	fOK195609,	Naive BFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2188032
+MAPK40.pet,	fOK191935,	Naive BFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2187768
+MAPK40.pet,	fOK195881,	Naive BFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2187252
+MAPK40.pet,	fOK191385,	Naive BFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2187776
+MAPK40.pet,	fOK198144,	Naive BFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2199396
+MAPK40.pet,	fNOK190939,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK40.pet,	fNOK190212,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77908
+MAPK40.pet,	fNOK199690,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK40.pet,	fNOK190700,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77892
+MAPK40.pet,	fNOK198469,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK40.pet,	fNOK191135,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK40.pet,	fNOK193050,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK40.pet,	fNOK196324,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK40.pet,	fNOK194463,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77908
+MAPK40.pet,	fNOK196130,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	77888
+MAPK8.pet,	fOK192210,	Random DFS with Hash,	Satisfied,	25.07,	1022740,	4961291,	900028,	803116
+MAPK8.pet,	fOK195246,	Random DFS with Hash,	Satisfied,	17.16,	753539,	4005245,	688128,	643364
+MAPK8.pet,	fOK193646,	Random DFS with Hash,	Satisfied,	26.52,	1080582,	5134945,	941335,	798776
+MAPK8.pet,	fOK191292,	Random DFS with Hash,	Satisfied,	21.98,	893749,	4533167,	800880,	744584
+MAPK8.pet,	fOK193040,	Random DFS with Hash,	Satisfied,	23.82,	968191,	4768348,	856624,	789940
+MAPK8.pet,	fOK195609,	Random DFS with Hash,	Satisfied,	16.84,	741734,	3958220,	677634,	643496
+MAPK8.pet,	fOK191935,	Random DFS with Hash,	Satisfied,	31.79,	1314448,	5745069,	1091541,	927392
+MAPK8.pet,	fOK195881,	Random DFS with Hash,	Satisfied,	2.78,	141269,	984062,	138014,	211400
+MAPK8.pet,	fOK191385,	Random DFS with Hash,	Satisfied,	17.01,	747420,	3969690,	681726,	642976
+MAPK8.pet,	fOK198144,	Random DFS with Hash,	Satisfied,	26.93,	1095874,	5178936,	951936,	798660
+MAPK8.pet,	fNOK190939,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77892
+MAPK8.pet,	fNOK190212,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77892
+MAPK8.pet,	fNOK199690,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK8.pet,	fNOK190700,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77860
+MAPK8.pet,	fNOK198469,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK8.pet,	fNOK191135,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77892
+MAPK8.pet,	fNOK193050,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77892
+MAPK8.pet,	fNOK196324,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77916
+MAPK8.pet,	fNOK194463,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77892
+MAPK8.pet,	fNOK196130,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77864
+MAPK40.pet,	fOK192210,	Random DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2241776
+MAPK40.pet,	fOK195246,	Random DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2240884
+MAPK40.pet,	fOK193646,	Random DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2241156
+MAPK40.pet,	fOK191292,	Random DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2237216
+MAPK40.pet,	fOK193040,	Random DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2240852
+MAPK40.pet,	fOK195609,	Random DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2239704
+MAPK40.pet,	fOK191935,	Random DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2240356
+MAPK40.pet,	fOK195881,	Random DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2239792
+MAPK40.pet,	fOK191385,	Random DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2240192
+MAPK40.pet,	fOK198144,	Random DFS with Hash,	OutOfMemory,	-,	-,	-,	-,	2239740
+MAPK40.pet,	fNOK190939,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK40.pet,	fNOK190212,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77864
+MAPK40.pet,	fNOK199690,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77892
+MAPK40.pet,	fNOK190700,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77904
+MAPK40.pet,	fNOK198469,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77892
+MAPK40.pet,	fNOK191135,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK40.pet,	fNOK193050,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK40.pet,	fNOK196324,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK40.pet,	fNOK194463,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK40.pet,	fNOK196130,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK8.pet,	fOK192210,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	187776
+MAPK8.pet,	fOK195246,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	187792
+MAPK8.pet,	fOK193646,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	187792
+MAPK8.pet,	fOK191292,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	187800
+MAPK8.pet,	fOK193040,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	187792
+MAPK8.pet,	fOK195609,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	187800
+MAPK8.pet,	fOK191935,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	188816
+MAPK8.pet,	fOK195881,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	187800
+MAPK8.pet,	fOK191385,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	187796
+MAPK8.pet,	fOK198144,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	187404
+MAPK8.pet,	fNOK190939,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	77908
+MAPK8.pet,	fNOK190212,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK8.pet,	fNOK199690,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	77868
+MAPK8.pet,	fNOK190700,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK8.pet,	fNOK198469,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	77868
+MAPK8.pet,	fNOK191135,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK8.pet,	fNOK193050,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	77908
+MAPK8.pet,	fNOK196324,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK8.pet,	fNOK194463,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK8.pet,	fNOK196130,	Ordered DFS,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK8.pet,	fOK192210,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	187528
+MAPK8.pet,	fOK195246,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	187536
+MAPK8.pet,	fOK193646,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	187404
+MAPK8.pet,	fOK191292,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	187528
+MAPK8.pet,	fOK193040,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	187404
+MAPK8.pet,	fOK195609,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	187404
+MAPK8.pet,	fOK191935,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	187528
+MAPK8.pet,	fOK195881,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	187404
+MAPK8.pet,	fOK191385,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	187252
+MAPK8.pet,	fOK198144,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	187536
+MAPK8.pet,	fNOK190939,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK8.pet,	fNOK190212,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	77892
+MAPK8.pet,	fNOK199690,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	77860
+MAPK8.pet,	fNOK190700,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	77908
+MAPK8.pet,	fNOK198469,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK8.pet,	fNOK191135,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	77908
+MAPK8.pet,	fNOK193050,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK8.pet,	fNOK196324,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	77880
+MAPK8.pet,	fNOK194463,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	77892
+MAPK8.pet,	fNOK196130,	Ordered BFS,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK8.pet,	fOK192210,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	132980
+MAPK8.pet,	fOK195246,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	132712
+MAPK8.pet,	fOK193646,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	132948
+MAPK8.pet,	fOK191292,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	132980
+MAPK8.pet,	fOK193040,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	132700
+MAPK8.pet,	fOK195609,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	132708
+MAPK8.pet,	fOK191935,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	132980
+MAPK8.pet,	fOK195881,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	132712
+MAPK8.pet,	fOK191385,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	132680
+MAPK8.pet,	fOK198144,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	132724
+MAPK8.pet,	fNOK190939,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK8.pet,	fNOK190212,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	77892
+MAPK8.pet,	fNOK199690,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK8.pet,	fNOK190700,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	77904
+MAPK8.pet,	fNOK198469,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK8.pet,	fNOK191135,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	77892
+MAPK8.pet,	fNOK193050,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	77896
+MAPK8.pet,	fNOK196324,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK8.pet,	fNOK194463,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	77900
+MAPK8.pet,	fNOK196130,	Ordered Random DFS,	OutOfTime,	-,	-,	-,	-,	77888
+MAPK8.pet,	fOK192210,	Ordered DFS States,	OutOfTime,	-,	-,	-,	-,	187664
+MAPK8.pet,	fOK195246,	Ordered DFS States,	OutOfTime,	-,	-,	-,	-,	187660
+MAPK8.pet,	fOK193646,	Ordered DFS States,	OutOfTime,	-,	-,	-,	-,	187420
+MAPK8.pet,	fOK191292,	Ordered DFS States,	OutOfTime,	-,	-,	-,	-,	187660
+MAPK8.pet,	fOK193040,	Ordered DFS States,	OutOfTime,	-,	-,	-,	-,	187404
+MAPK8.pet,	fOK195609,	Ordered DFS States,	OutOfTime,	-,	-,	-,	-,	187368
+MAPK8.pet,	fOK191935,	Ordered DFS States,	OutOfTime,	-,	-,	-,	-,	187408
+MAPK8.pet,	fOK195881,	Ordered DFS States,	OutOfTime,	-,	-,	-,	-,	187664
+MAPK8.pet,	fOK191385,	Ordered DFS States,	OutOfTime,	-,	-,	-,	-,	187260
+MAPK8.pet,	fOK198144,	Ordered DFS States,	OutOfTime,	-,	-,	-,	-,	187652
+MAPK8.pet,	fNOK190939,	Ordered DFS States,	OutOfTime,	-,	-,	-,	-,	77892

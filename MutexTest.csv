@@ -1,0 +1,121 @@
+PeTe batch test script
+Mutual1.pet,	Too Many in Critical,	Naive DFS with Hash,	Not satisfiable,	0.06,	13,	12,	0, 	16, 	0,	44108
+Mutual5.pet,	Too Many in Critical,	Naive DFS with Hash,	Not satisfiable,	0.31,	26144,	26143,	0, 	130880, 	0,	202448
+Mutual10.pet,	Too Many in Critical,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	314580
+Mutual15.pet,	Too Many in Critical,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	717220
+Mutual20.pet,	Too Many in Critical,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	499236
+Mutual25.pet,	Too Many in Critical,	Naive DFS with Hash,	OutOfTime,	-,	-,	-,	-,	591108
+Mutual1.pet,	Too Many in Critical,	Naive BFS with Hash,	Not satisfiable,	0.07,	13,	12,	0, 	16, 	0,	44108
+Mutual5.pet,	Too Many in Critical,	Naive BFS with Hash,	Not satisfiable,	0.35,	26144,	26143,	0, 	130880, 	0,	202504
+Mutual10.pet,	Too Many in Critical,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	318216
+Mutual15.pet,	Too Many in Critical,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	408552
+Mutual20.pet,	Too Many in Critical,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	496532
+Mutual25.pet,	Too Many in Critical,	Naive BFS with Hash,	OutOfTime,	-,	-,	-,	-,	586468
+Mutual1.pet,	Too Many in Critical,	DFS with Monotonicity,	Not satisfiable,	0.07,	5,	5,	0, 	11, 	1,	44108
+Mutual5.pet,	Too Many in Critical,	DFS with Monotonicity,	Not satisfiable,	0.19,	114,	168,	0, 	960, 	55,	44108
+Mutual10.pet,	Too Many in Critical,	DFS with Monotonicity,	Not satisfiable,	3.35,	1601,	1610,	0, 	26775, 	10,	294804
+Mutual15.pet,	Too Many in Critical,	DFS with Monotonicity,	Not satisfiable,	14.11,	1158,	3045,	0, 	54868, 	1888,	387712
+Mutual20.pet,	Too Many in Critical,	DFS with Monotonicity,	Not satisfiable,	79.98,	2189,	7519,	0, 	180937, 	5331,	480616
+Mutual25.pet,	Too Many in Critical,	DFS with Monotonicity,	Not satisfiable,	225.11,	3379,	13120,	0, 	399048, 	9742,	573672
+Mutual1.pet,	Too Many in Critical,	BFS with Monotonicity,	Not satisfiable,	0.06,	6,	5,	0, 	12, 	0,	44108
+Mutual5.pet,	Too Many in Critical,	BFS with Monotonicity,	Not satisfiable,	0.66,	356,	450,	0, 	2735, 	95,	201908
+Mutual10.pet,	Too Many in Critical,	BFS with Monotonicity,	Not satisfiable,	32.74,	1566,	1655,	0, 	26145, 	90,	294832
+Mutual15.pet,	Too Many in Critical,	BFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	387552
+Mutual20.pet,	Too Many in Critical,	BFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	480624
+Mutual25.pet,	Too Many in Critical,	BFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	573544
+Mutual1.pet,	Too Many in Critical,	BestFS with Hash,	Not satisfiable,	0.03,	13,	12,	0, 	16, 	0,	44108
+Mutual5.pet,	Too Many in Critical,	BestFS with Hash,	Not satisfiable,	0.29,	26144,	26143,	0, 	130880, 	0,	44108
+Mutual10.pet,	Too Many in Critical,	BestFS with Hash,	OutOfTime,	-,	-,	-,	-,	547992
+Mutual15.pet,	Too Many in Critical,	BestFS with Hash,	OutOfTime,	-,	-,	-,	-,	403752
+Mutual20.pet,	Too Many in Critical,	BestFS with Hash,	OutOfTime,	-,	-,	-,	-,	496532
+Mutual25.pet,	Too Many in Critical,	BestFS with Hash,	OutOfTime,	-,	-,	-,	-,	589308
+Mutual1.pet,	Too Many in Critical,	BestFS with Monotonicity,	Not satisfiable,	0.03,	6,	5,	0, 	12, 	0,	44108
+Mutual5.pet,	Too Many in Critical,	BestFS with Monotonicity,	Not satisfiable,	0.2,	206,	225,	0, 	1530, 	20,	44108
+Mutual10.pet,	Too Many in Critical,	BestFS with Monotonicity,	Not satisfiable,	22.56,	1701,	2030,	0, 	28755, 	330,	186428
+Mutual15.pet,	Too Many in Critical,	BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	232956
+Mutual20.pet,	Too Many in Critical,	BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	279480
+Mutual25.pet,	Too Many in Critical,	BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	326052
+Mutual1.pet,	Too Many in Critical,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.06,	6,	5,	0, 	12, 	0,	44108
+Mutual5.pet,	Too Many in Critical,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	0.21,	206,	225,	0, 	1530, 	20,	44108
+Mutual10.pet,	Too Many in Critical,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	9.25,	1611,	1700,	0, 	26910, 	90,	294812
+Mutual15.pet,	Too Many in Critical,	Ordered Largest Index Search with Monotonicity,	Not satisfiable,	183.97,	5466,	5675,	0, 	144765, 	210,	387712
+Mutual20.pet,	Too Many in Critical,	Ordered Largest Index Search with Monotonicity,	OutOfTime,	-,	-,	-,	-,	480588
+Mutual25.pet,	Too Many in Critical,	Ordered Largest Index Search with Monotonicity,	OutOfTime,	-,	-,	-,	-,	573540
+Mutual1.pet,	Too Many in Critical,	Ordered BFS with Monotonicity,	Not satisfiable,	0.07,	6,	5,	0, 	12, 	0,	44108
+Mutual5.pet,	Too Many in Critical,	Ordered BFS with Monotonicity,	Not satisfiable,	0.37,	356,	450,	0, 	2735, 	95,	201924
+Mutual10.pet,	Too Many in Critical,	Ordered BFS with Monotonicity,	Not satisfiable,	16.62,	1566,	1655,	0, 	26145, 	90,	294800
+Mutual15.pet,	Too Many in Critical,	Ordered BFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	387724
+Mutual20.pet,	Too Many in Critical,	Ordered BFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	480596
+Mutual25.pet,	Too Many in Critical,	Ordered BFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	573552
+Mutual1.pet,	Too Many in Critical,	Ordered DFS with Monotonicity,	Not satisfiable,	0.08,	5,	5,	0, 	11, 	1,	44108
+Mutual5.pet,	Too Many in Critical,	Ordered DFS with Monotonicity,	Not satisfiable,	0.19,	114,	168,	0, 	960, 	55,	44108
+Mutual10.pet,	Too Many in Critical,	Ordered DFS with Monotonicity,	Not satisfiable,	2.56,	1601,	1610,	0, 	26775, 	10,	294816
+Mutual15.pet,	Too Many in Critical,	Ordered DFS with Monotonicity,	Not satisfiable,	5.04,	1158,	3045,	0, 	54868, 	1888,	387720
+Mutual20.pet,	Too Many in Critical,	Ordered DFS with Monotonicity,	Not satisfiable,	21.32,	2189,	7519,	0, 	180937, 	5331,	480580
+Mutual25.pet,	Too Many in Critical,	Ordered DFS with Monotonicity,	Not satisfiable,	48.51,	3379,	13120,	0, 	399048, 	9742,	573528
+Mutual1.pet,	Too Many in Critical,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.03,	6,	5,	0, 	12, 	0,	44108
+Mutual5.pet,	Too Many in Critical,	Ordered BestFS with Monotonicity,	Not satisfiable,	0.14,	206,	225,	0, 	1530, 	20,	43976
+Mutual10.pet,	Too Many in Critical,	Ordered BestFS with Monotonicity,	Not satisfiable,	11.07,	1701,	2030,	0, 	28755, 	330,	186420
+Mutual15.pet,	Too Many in Critical,	Ordered BestFS with Monotonicity,	Not satisfiable,	204.6,	5466,	5675,	0, 	144765, 	210,	233072
+Mutual20.pet,	Too Many in Critical,	Ordered BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	279428
+Mutual25.pet,	Too Many in Critical,	Ordered BestFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	326052
+Mutual1.pet,	One Done,	Naive DFS with Hash,	Satisfied,	0.08,	0,	3,	4, 	5, 	0,	44108
+Mutual5.pet,	One Done,	Naive DFS with Hash,	Satisfied,	0.18,	0,	3,	4, 	5, 	0,	44108
+Mutual10.pet,	One Done,	Naive DFS with Hash,	Satisfied,	0.32,	3,	14,	12, 	17, 	0,	78044
+Mutual15.pet,	One Done,	Naive DFS with Hash,	Satisfied,	0.44,	0,	3,	4, 	5, 	0,	387592
+Mutual20.pet,	One Done,	Naive DFS with Hash,	Satisfied,	0.58,	0,	3,	4, 	5, 	0,	480492
+Mutual25.pet,	One Done,	Naive DFS with Hash,	Satisfied,	0.71,	0,	3,	4, 	5, 	0,	573380
+Mutual1.pet,	One Done,	Naive BFS with Hash,	Satisfied,	0.06,	3,	6,	3, 	8, 	0,	44108
+Mutual5.pet,	One Done,	Naive BFS with Hash,	Satisfied,	0.18,	11,	62,	3, 	108, 	0,	44108
+Mutual10.pet,	One Done,	Naive BFS with Hash,	Satisfied,	0.31,	58,	582,	3, 	1115, 	0,	44108
+Mutual15.pet,	One Done,	Naive BFS with Hash,	Satisfied,	0.43,	31,	482,	3, 	918, 	0,	387584
+Mutual20.pet,	One Done,	Naive BFS with Hash,	Satisfied,	0.56,	41,	842,	3, 	1623, 	0,	480492
+Mutual25.pet,	One Done,	Naive BFS with Hash,	Satisfied,	0.73,	51,	1302,	3, 	2528, 	0,	573408
+Mutual1.pet,	One Done,	DFS with Monotonicity,	Satisfied,	0.07,	0,	3,	4, 	5, 	1,	44108
+Mutual5.pet,	One Done,	DFS with Monotonicity,	Satisfied,	0.16,	0,	3,	4, 	5, 	1,	44280
+Mutual10.pet,	One Done,	DFS with Monotonicity,	Satisfied,	0.28,	0,	11,	12, 	133, 	10,	44108
+Mutual15.pet,	One Done,	DFS with Monotonicity,	Satisfied,	0.39,	0,	3,	4, 	5, 	1,	387568
+Mutual20.pet,	One Done,	DFS with Monotonicity,	Satisfied,	0.51,	0,	3,	4, 	5, 	1,	480544
+Mutual25.pet,	One Done,	DFS with Monotonicity,	Satisfied,	0.64,	0,	3,	4, 	5, 	1,	573432
+Mutual1.pet,	One Done,	BFS with Monotonicity,	Satisfied,	0.07,	2,	4,	3, 	8, 	0,	44108
+Mutual5.pet,	One Done,	BFS with Monotonicity,	Satisfied,	0.17,	2,	12,	3, 	24, 	4,	44108
+Mutual10.pet,	One Done,	BFS with Monotonicity,	Satisfied,	0.31,	11,	111,	12, 	277, 	90,	44108
+Mutual15.pet,	One Done,	BFS with Monotonicity,	Satisfied,	0.41,	2,	32,	3, 	64, 	14,	387548
+Mutual20.pet,	One Done,	BFS with Monotonicity,	Satisfied,	0.55,	2,	42,	3, 	84, 	19,	480460
+Mutual25.pet,	One Done,	BFS with Monotonicity,	Satisfied,	0.68,	2,	52,	3, 	104, 	24,	573444
+Mutual1.pet,	One Done,	BestFS with Hash,	Satisfied,	0.04,	6,	7,	3, 	9, 	0,	44108
+Mutual5.pet,	One Done,	BestFS with Hash,	Satisfied,	0.07,	10,	35,	7, 	37, 	0,	44108
+Mutual10.pet,	One Done,	BestFS with Hash,	Satisfied,	0.15,	3,	60,	3, 	61, 	0,	44108
+Mutual15.pet,	One Done,	BestFS with Hash,	Satisfied,	0.22,	20,	245,	17, 	247, 	0,	44108
+Mutual20.pet,	One Done,	BestFS with Hash,	Satisfied,	0.31,	25,	425,	22, 	427, 	0,	43976
+Mutual25.pet,	One Done,	BestFS with Hash,	Satisfied,	0.44,	30,	655,	27, 	657, 	0,	326028
+Mutual1.pet,	One Done,	BestFS with Monotonicity,	Satisfied,	0.03,	2,	4,	3, 	8, 	0,	44108
+Mutual5.pet,	One Done,	BestFS with Monotonicity,	Satisfied,	0.09,	6,	32,	7, 	86, 	20,	44108
+Mutual10.pet,	One Done,	BestFS with Monotonicity,	Satisfied,	0.14,	2,	30,	3, 	61, 	9,	44108
+Mutual15.pet,	One Done,	BestFS with Monotonicity,	Satisfied,	0.3,	16,	242,	17, 	631, 	210,	44108
+Mutual20.pet,	One Done,	BestFS with Monotonicity,	Satisfied,	0.51,	21,	422,	22, 	1091, 	380,	279480
+Mutual25.pet,	One Done,	BestFS with Monotonicity,	Satisfied,	0.82,	26,	652,	27, 	1676, 	600,	326024
+Mutual1.pet,	One Done,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.05,	2,	4,	3, 	8, 	0,	44108
+Mutual5.pet,	One Done,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.15,	6,	32,	7, 	86, 	20,	41860
+Mutual10.pet,	One Done,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.28,	11,	111,	12, 	295, 	90,	44108
+Mutual15.pet,	One Done,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.43,	16,	242,	17, 	631, 	210,	387716
+Mutual20.pet,	One Done,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.57,	21,	422,	22, 	1091, 	380,	480492
+Mutual25.pet,	One Done,	Ordered Largest Index Search with Monotonicity,	Satisfied,	0.73,	26,	652,	27, 	1676, 	600,	573412
+Mutual1.pet,	One Done,	Ordered BFS with Monotonicity,	Satisfied,	0.06,	2,	4,	3, 	8, 	0,	44108
+Mutual5.pet,	One Done,	Ordered BFS with Monotonicity,	Satisfied,	0.16,	2,	12,	3, 	24, 	4,	44108
+Mutual10.pet,	One Done,	Ordered BFS with Monotonicity,	Satisfied,	0.31,	11,	111,	12, 	277, 	90,	44108
+Mutual15.pet,	One Done,	Ordered BFS with Monotonicity,	Satisfied,	0.43,	2,	32,	3, 	64, 	14,	387552
+Mutual20.pet,	One Done,	Ordered BFS with Monotonicity,	Satisfied,	0.54,	2,	42,	3, 	84, 	19,	480492
+Mutual25.pet,	One Done,	Ordered BFS with Monotonicity,	Satisfied,	0.68,	2,	52,	3, 	104, 	24,	573412
+Mutual1.pet,	One Done,	Ordered DFS with Monotonicity,	Satisfied,	0.07,	0,	3,	4, 	5, 	1,	44108
+Mutual5.pet,	One Done,	Ordered DFS with Monotonicity,	Satisfied,	0.16,	0,	3,	4, 	5, 	1,	44108
+Mutual10.pet,	One Done,	Ordered DFS with Monotonicity,	Satisfied,	0.29,	0,	11,	12, 	133, 	10,	44108
+Mutual15.pet,	One Done,	Ordered DFS with Monotonicity,	Satisfied,	0.4,	0,	3,	4, 	5, 	1,	387584
+Mutual20.pet,	One Done,	Ordered DFS with Monotonicity,	Satisfied,	0.53,	0,	3,	4, 	5, 	1,	480492
+Mutual25.pet,	One Done,	Ordered DFS with Monotonicity,	Satisfied,	0.64,	0,	3,	4, 	5, 	1,	573424
+Mutual1.pet,	One Done,	Ordered BestFS with Monotonicity,	Satisfied,	0.03,	2,	4,	3, 	8, 	0,	44108
+Mutual5.pet,	One Done,	Ordered BestFS with Monotonicity,	Satisfied,	0.09,	6,	32,	7, 	86, 	20,	44108
+Mutual10.pet,	One Done,	Ordered BestFS with Monotonicity,	Satisfied,	0.15,	2,	30,	3, 	61, 	9,	44108
+Mutual15.pet,	One Done,	Ordered BestFS with Monotonicity,	Satisfied,	0.28,	16,	242,	17, 	631, 	210,	44108
+Mutual20.pet,	One Done,	Ordered BestFS with Monotonicity,	Satisfied,	0.5,	21,	422,	22, 	1091, 	380,	279476
+Mutual25.pet,	One Done,	Ordered BestFS with Monotonicity,	Satisfied,	0.8,	26,	652,	27, 	1676, 	600,	326040
