@@ -39,6 +39,10 @@ for line in f:
 		if( lSp[3].find("OutOfTime") >= 0):
 			sat = "Out Of Time"
 			print lSp[0].strip(".pet") + " & " + sat + " & - & - & - & - & - & - & " + lSp[8].strip("\n")  + "\\\\\\hline"
+	
+		if( lSp[3].find("OutOfMemory") >= 0):
+			sat = "Out Of Memory"
+			print lSp[0].strip(".pet") + " & " + sat + " & - & - & - & - & - & - & " + lSp[8].strip("\n")  + "\\\\\\hline"
 
 		
 		
