@@ -1,0 +1,1440 @@
+PeTe batch test script
+Election1.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.03,	3,	2,	0, 	3, 	0,	44108
+Election1.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.01,	3,	2,	0, 	3, 	0,	44108
+Election1.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.03,	3,	2,	0, 	3, 	0,	43976
+Election1.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.03,	3,	2,	0, 	3, 	0,	44108
+Election1.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.03,	3,	2,	0, 	3, 	0,	44108
+Election1.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.03,	3,	2,	0, 	3, 	0,	44108
+Election1.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.02,	3,	2,	0, 	3, 	0,	44108
+Election1.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.02,	3,	2,	0, 	3, 	0,	44108
+Election1.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.02,	3,	2,	0, 	3, 	0,	44108
+Election1.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.01,	3,	2,	0, 	3, 	0,	44108
+Election5.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.06,	112,	111,	0, 	1064, 	0,	44108
+Election5.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.06,	112,	111,	0, 	1064, 	0,	44108
+Election5.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.06,	112,	111,	0, 	1064, 	0,	44108
+Election5.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.05,	112,	111,	0, 	1064, 	0,	44108
+Election5.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.05,	112,	111,	0, 	1064, 	0,	44108
+Election5.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.05,	112,	111,	0, 	1064, 	0,	44108
+Election5.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.05,	112,	111,	0, 	1064, 	0,	44108
+Election5.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.05,	112,	111,	0, 	1064, 	0,	44108
+Election5.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.06,	112,	111,	0, 	1064, 	0,	44108
+Election5.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	0.05,	112,	111,	0, 	1064, 	0,	44108
+Election10.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	1.03,	6144,	6143,	0, 	121088, 	0,	160172
+Election10.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	1.2,	6144,	6143,	0, 	121088, 	0,	160032
+Election10.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	1.17,	6144,	6143,	0, 	121088, 	0,	160044
+Election10.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	1.15,	6144,	6143,	0, 	121088, 	0,	160180
+Election10.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	1.2,	6144,	6143,	0, 	121088, 	0,	160052
+Election10.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	1.27,	6144,	6143,	0, 	121088, 	0,	160044
+Election10.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	1.24,	6144,	6143,	0, 	121088, 	0,	160176
+Election10.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	1.14,	6144,	6143,	0, 	121088, 	0,	160180
+Election10.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	1.2,	6144,	6143,	0, 	121088, 	0,	160048
+Election10.pet,	Too many Leaders,	Random DFS with Hash,	Not satisfiable,	1.23,	6144,	6143,	0, 	121088, 	0,	160044
+Election15.pet,	Too many Leaders,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	232136
+Election1.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.01,	2,	2,	0, 	4, 	1,	44108
+Election1.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.02,	2,	2,	0, 	4, 	1,	44108
+Election1.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.03,	2,	2,	0, 	5, 	1,	44108
+Election1.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.03,	2,	2,	0, 	5, 	1,	44108
+Election1.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.03,	2,	2,	0, 	5, 	1,	44108
+Election1.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.02,	2,	2,	0, 	4, 	1,	44108
+Election1.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.03,	2,	2,	0, 	4, 	1,	44108
+Election1.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.01,	2,	2,	0, 	4, 	1,	44108
+Election1.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.02,	2,	2,	0, 	4, 	1,	44108
+Election1.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.03,	2,	2,	0, 	4, 	1,	44108
+Election5.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	70, 	9,	44108
+Election5.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.06,	2,	10,	0, 	70, 	9,	44108
+Election5.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	11,	0, 	68, 	10,	44108
+Election5.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	11,	0, 	68, 	10,	44108
+Election5.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	69, 	9,	43976
+Election5.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.06,	2,	10,	0, 	69, 	9,	44108
+Election5.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.04,	2,	10,	0, 	69, 	9,	44108
+Election5.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	63, 	9,	44108
+Election5.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.06,	2,	10,	0, 	63, 	9,	44108
+Election5.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.04,	2,	10,	0, 	55, 	9,	44108
+Election10.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.12,	2,	20,	0, 	131, 	19,	44108
+Election10.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	131, 	19,	44108
+Election10.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	215, 	19,	44108
+Election10.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	215, 	19,	44108
+Election10.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	177, 	19,	44108
+Election10.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.12,	2,	20,	0, 	177, 	19,	44108
+Election10.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.12,	2,	20,	0, 	232, 	19,	44108
+Election10.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	232, 	19,	44108
+Election10.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	232, 	19,	44108
+Election10.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	197, 	19,	44108
+Election15.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	451, 	29,	44108
+Election15.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	360, 	29,	44108
+Election15.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	360, 	29,	44108
+Election15.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	360, 	29,	44108
+Election15.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.23,	2,	30,	0, 	418, 	29,	44108
+Election15.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	418, 	29,	44108
+Election15.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	318, 	29,	44104
+Election15.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	318, 	29,	41860
+Election15.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	405, 	29,	44108
+Election15.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.23,	2,	30,	0, 	405, 	29,	44108
+Election20.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.43,	2,	40,	0, 	730, 	39,	326308
+Election20.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.42,	2,	40,	0, 	679, 	39,	326316
+Election20.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.41,	2,	40,	0, 	666, 	39,	326312
+Election20.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.41,	2,	40,	0, 	622, 	39,	326332
+Election20.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.41,	2,	40,	0, 	628, 	39,	326308
+Election20.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.4,	2,	40,	0, 	544, 	39,	326308
+Election20.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.42,	2,	40,	0, 	653, 	39,	326312
+Election20.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.41,	2,	40,	0, 	695, 	39,	326308
+Election20.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.41,	2,	40,	0, 	632, 	39,	326312
+Election20.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.42,	2,	40,	0, 	678, 	39,	326316
+Election25.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.77,	2,	50,	0, 	1008, 	49,	446140
+Election25.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.72,	2,	50,	0, 	958, 	49,	446172
+Election25.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.72,	2,	50,	0, 	900, 	49,	446184
+Election25.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.74,	2,	50,	0, 	918, 	49,	446188
+Election25.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.77,	2,	50,	0, 	1079, 	49,	446184
+Election25.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.72,	2,	50,	0, 	873, 	49,	446184
+Election25.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.74,	2,	50,	0, 	958, 	49,	446196
+Election25.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.74,	2,	50,	0, 	999, 	49,	446184
+Election25.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.77,	2,	50,	0, 	1033, 	49,	446176
+Election25.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	0.76,	2,	50,	0, 	1029, 	49,	446176
+Election30.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.13,	2,	60,	0, 	1405, 	59,	590572
+Election30.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.16,	2,	60,	0, 	1548, 	59,	590644
+Election30.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.17,	2,	60,	0, 	1474, 	59,	590672
+Election30.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.12,	2,	60,	0, 	1284, 	59,	590572
+Election30.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.09,	2,	60,	0, 	1285, 	59,	590532
+Election30.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.14,	2,	60,	0, 	1376, 	59,	590564
+Election30.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.11,	2,	60,	0, 	1350, 	59,	590540
+Election30.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.12,	2,	60,	0, 	1362, 	59,	590572
+Election30.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.11,	2,	60,	0, 	1259, 	59,	590568
+Election30.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.06,	2,	60,	0, 	1230, 	59,	590532
+Election35.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.74,	2,	70,	0, 	1917, 	69,	759520
+Election35.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.82,	2,	70,	0, 	1914, 	69,	759524
+Election35.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.81,	2,	70,	0, 	1836, 	69,	759520
+Election35.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.81,	2,	70,	0, 	1953, 	69,	759532
+Election35.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.86,	2,	70,	0, 	1994, 	69,	759520
+Election35.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.74,	2,	70,	0, 	1713, 	69,	759532
+Election35.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.83,	2,	70,	0, 	1879, 	69,	759520
+Election35.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.84,	2,	70,	0, 	2073, 	69,	759512
+Election35.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.88,	2,	70,	0, 	2115, 	69,	759532
+Election35.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	1.74,	2,	70,	0, 	1809, 	69,	759524
+Election40.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	2.53,	2,	80,	0, 	2427, 	79,	952804
+Election40.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	2.54,	2,	80,	0, 	2481, 	79,	952816
+Election40.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	2.52,	2,	80,	0, 	2419, 	79,	952804
+Election40.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	2.52,	2,	80,	0, 	2421, 	79,	952768
+Election40.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	2.57,	2,	80,	0, 	2462, 	79,	952800
+Election40.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	2.4,	2,	80,	0, 	2234, 	79,	952804
+Election40.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	2.51,	2,	80,	0, 	2405, 	79,	952804
+Election40.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	2.63,	2,	80,	0, 	2600, 	79,	952800
+Election40.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	2.68,	2,	80,	0, 	2738, 	79,	952784
+Election40.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	2.22,	2,	80,	0, 	2249, 	79,	952812
+Election45.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	3.58,	2,	90,	0, 	2840, 	89,	1170780
+Election45.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	3.8,	2,	90,	0, 	3147, 	89,	1170828
+Election45.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	3.49,	2,	90,	0, 	2664, 	89,	1170776
+Election45.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	3.5,	2,	90,	0, 	2768, 	89,	1170828
+Election45.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	3.77,	2,	90,	0, 	3103, 	89,	1170816
+Election45.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	3.66,	2,	90,	0, 	2971, 	89,	1170768
+Election45.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	3.58,	2,	90,	0, 	2866, 	89,	1170804
+Election45.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	3.46,	2,	90,	0, 	2661, 	89,	1170820
+Election45.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	3.92,	2,	90,	0, 	3074, 	89,	1170784
+Election45.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	3.73,	2,	90,	0, 	3024, 	89,	1170784
+Election50.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	4.5,	2,	100,	0, 	3460, 	99,	1413112
+Election50.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	4.43,	2,	100,	0, 	3302, 	99,	1413148
+Election50.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	4.73,	2,	100,	0, 	3697, 	99,	1413164
+Election50.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	4.64,	2,	100,	0, 	3609, 	99,	1413144
+Election50.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	4.61,	2,	100,	0, 	3615, 	99,	1413108
+Election50.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	4.77,	2,	100,	0, 	3753, 	99,	1413156
+Election50.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	4.79,	2,	100,	0, 	3797, 	99,	1413148
+Election50.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	4.55,	2,	100,	0, 	3463, 	99,	1413144
+Election50.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	4.41,	2,	100,	0, 	3343, 	99,	1413144
+Election50.pet,	Too many Leaders,	Random DFS with Monotonicity,	Not satisfiable,	4.44,	2,	100,	0, 	3190, 	99,	1413152
+Election1.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.01,	2,	2,	0, 	5, 	1,	44108
+Election1.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.02,	2,	2,	0, 	5, 	1,	44108
+Election1.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.02,	2,	2,	0, 	5, 	1,	44108
+Election1.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.03,	2,	2,	0, 	5, 	1,	44108
+Election1.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.02,	2,	2,	0, 	5, 	1,	44108
+Election1.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.02,	2,	2,	0, 	5, 	1,	44108
+Election1.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.03,	2,	2,	0, 	4, 	1,	44108
+Election1.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.03,	2,	2,	0, 	4, 	1,	44108
+Election1.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.03,	2,	2,	0, 	4, 	1,	44108
+Election1.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.02,	2,	2,	0, 	5, 	1,	44108
+Election5.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	65, 	9,	44108
+Election5.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	68, 	9,	43976
+Election5.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	68, 	9,	44108
+Election5.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.04,	2,	10,	0, 	68, 	9,	44108
+Election5.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	59, 	9,	44108
+Election5.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	59, 	9,	44108
+Election5.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	61, 	9,	44108
+Election5.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.06,	2,	10,	0, 	61, 	9,	44108
+Election5.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	59, 	9,	44108
+Election5.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	59, 	9,	44108
+Election10.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.12,	2,	20,	0, 	193, 	19,	44108
+Election10.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.12,	2,	20,	0, 	204, 	19,	44108
+Election10.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.12,	2,	20,	0, 	204, 	19,	44108
+Election10.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	187, 	19,	44108
+Election10.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.13,	2,	20,	0, 	187, 	19,	44108
+Election10.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	187, 	19,	44108
+Election10.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.12,	2,	20,	0, 	163, 	19,	44108
+Election10.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	163, 	19,	44108
+Election10.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.12,	2,	20,	0, 	236, 	19,	44108
+Election10.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.12,	2,	20,	0, 	236, 	19,	44108
+Election15.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	296, 	29,	44108
+Election15.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.21,	2,	30,	0, 	296, 	29,	44108
+Election15.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	296, 	29,	44108
+Election15.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.21,	2,	30,	0, 	403, 	29,	44108
+Election15.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.23,	2,	30,	0, 	403, 	29,	44108
+Election15.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.21,	2,	30,	0, 	273, 	29,	44108
+Election15.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	273, 	29,	44108
+Election15.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	403, 	29,	44108
+Election15.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	403, 	29,	44108
+Election15.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.23,	2,	30,	0, 	403, 	29,	44108
+Election20.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.42,	2,	40,	0, 	757, 	39,	326304
+Election20.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.42,	2,	40,	0, 	698, 	39,	326292
+Election20.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.41,	2,	40,	0, 	638, 	39,	326304
+Election20.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.42,	2,	40,	0, 	712, 	39,	326316
+Election20.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.42,	2,	40,	0, 	687, 	39,	326316
+Election20.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.42,	2,	40,	0, 	679, 	39,	326280
+Election20.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.4,	2,	40,	0, 	620, 	39,	326316
+Election20.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.42,	2,	40,	0, 	711, 	39,	326316
+Election20.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.43,	2,	40,	0, 	719, 	39,	326316
+Election20.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.4,	2,	40,	0, 	631, 	39,	326292
+Election25.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.69,	2,	50,	0, 	867, 	49,	446184
+Election25.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.74,	2,	50,	0, 	963, 	49,	446172
+Election25.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.71,	2,	50,	0, 	874, 	49,	446132
+Election25.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.76,	2,	50,	0, 	1066, 	49,	446176
+Election25.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.75,	2,	50,	0, 	925, 	49,	446104
+Election25.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.73,	2,	50,	0, 	923, 	49,	446172
+Election25.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.79,	2,	50,	0, 	1133, 	49,	446176
+Election25.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.75,	2,	50,	0, 	1032, 	49,	446184
+Election25.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.75,	2,	50,	0, 	1005, 	49,	446176
+Election25.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.76,	2,	50,	0, 	985, 	49,	446176
+Election30.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.12,	2,	60,	0, 	1351, 	59,	590564
+Election30.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.15,	2,	60,	0, 	1458, 	59,	590552
+Election30.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.11,	2,	60,	0, 	1338, 	59,	590568
+Election30.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.08,	2,	60,	0, 	1235, 	59,	590572
+Election30.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.07,	2,	60,	0, 	1194, 	59,	590532
+Election30.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.12,	2,	60,	0, 	1394, 	59,	590576
+Election30.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.11,	2,	60,	0, 	1378, 	59,	590532
+Election30.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.06,	2,	60,	0, 	1253, 	59,	590572
+Election30.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.19,	2,	60,	0, 	1599, 	59,	590564
+Election30.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.13,	2,	60,	0, 	1495, 	59,	590572
+Election35.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.69,	2,	70,	0, 	1724, 	69,	759496
+Election35.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.75,	2,	70,	0, 	1904, 	69,	759480
+Election35.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.72,	2,	70,	0, 	1783, 	69,	759532
+Election35.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.69,	2,	70,	0, 	1715, 	69,	759520
+Election35.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.89,	2,	70,	0, 	2164, 	69,	759524
+Election35.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.8,	2,	70,	0, 	1938, 	69,	759520
+Election35.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.66,	2,	70,	0, 	1655, 	69,	759528
+Election35.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.77,	2,	70,	0, 	1855, 	69,	759520
+Election35.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.74,	2,	70,	0, 	1847, 	69,	759520
+Election35.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.73,	2,	70,	0, 	1790, 	69,	759488
+Election40.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.36,	2,	80,	0, 	2183, 	79,	952812
+Election40.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.61,	2,	80,	0, 	2581, 	79,	952776
+Election40.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.49,	2,	80,	0, 	2374, 	79,	952768
+Election40.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.41,	2,	80,	0, 	2259, 	79,	952804
+Election40.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.48,	2,	80,	0, 	2415, 	79,	952812
+Election40.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.48,	2,	80,	0, 	2425, 	79,	952808
+Election40.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.19,	2,	80,	0, 	1866, 	79,	952812
+Election40.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.38,	2,	80,	0, 	2222, 	79,	952812
+Election40.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.36,	2,	80,	0, 	2146, 	79,	952800
+Election40.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.37,	2,	80,	0, 	2174, 	79,	952772
+Election45.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.56,	2,	90,	0, 	2889, 	89,	1170816
+Election45.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.66,	2,	90,	0, 	2960, 	89,	1170796
+Election45.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.6,	2,	90,	0, 	2954, 	89,	1170816
+Election45.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.58,	2,	90,	0, 	2898, 	89,	1170816
+Election45.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.65,	2,	90,	0, 	3033, 	89,	1170828
+Election45.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.6,	2,	90,	0, 	2979, 	89,	1170828
+Election45.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.56,	2,	90,	0, 	2851, 	89,	1170816
+Election45.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.48,	2,	90,	0, 	2836, 	89,	1170816
+Election45.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.29,	2,	90,	0, 	2561, 	89,	1170828
+Election45.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.57,	2,	90,	0, 	2933, 	89,	1170776
+Election50.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.57,	2,	100,	0, 	3533, 	99,	1413148
+Election50.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.61,	2,	100,	0, 	3631, 	99,	1413148
+Election50.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.38,	2,	100,	0, 	3288, 	99,	1413144
+Election50.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.84,	2,	100,	0, 	3859, 	99,	1413160
+Election50.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.56,	2,	100,	0, 	3556, 	99,	1413116
+Election50.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	5.08,	2,	100,	0, 	4271, 	99,	1413148
+Election50.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.68,	2,	100,	0, 	3634, 	99,	1413148
+Election50.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.59,	2,	100,	0, 	3536, 	99,	1413116
+Election50.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.83,	2,	100,	0, 	3852, 	99,	1413104
+Election50.pet,	Too many Leaders,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.84,	2,	100,	0, 	3888, 	99,	1413148
+Election1.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.02,	3,	2,	0, 	3, 	0,	44108
+Election1.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.02,	3,	2,	0, 	3, 	0,	44108
+Election1.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.04,	3,	2,	0, 	3, 	0,	44108
+Election1.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.03,	3,	2,	0, 	3, 	0,	44108
+Election1.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.01,	3,	2,	0, 	3, 	0,	44108
+Election1.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.03,	3,	2,	0, 	3, 	0,	44108
+Election1.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.02,	3,	2,	0, 	3, 	0,	44108
+Election1.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.02,	3,	2,	0, 	3, 	0,	44108
+Election1.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.03,	3,	2,	0, 	3, 	0,	44108
+Election1.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.03,	3,	2,	0, 	3, 	0,	44108
+Election5.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.06,	112,	111,	0, 	1064, 	0,	44108
+Election5.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.05,	112,	111,	0, 	1064, 	0,	44108
+Election5.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.06,	112,	111,	0, 	1064, 	0,	44108
+Election5.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.04,	112,	111,	0, 	1064, 	0,	44108
+Election5.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.06,	112,	111,	0, 	1064, 	0,	44108
+Election5.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.06,	112,	111,	0, 	1064, 	0,	44108
+Election5.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.07,	112,	111,	0, 	1064, 	0,	44108
+Election5.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.06,	112,	111,	0, 	1064, 	0,	44108
+Election5.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.06,	112,	111,	0, 	1064, 	0,	44108
+Election5.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	0.04,	112,	111,	0, 	1064, 	0,	44108
+Election10.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	1.11,	6144,	6143,	0, 	121088, 	0,	160180
+Election10.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	1.22,	6144,	6143,	0, 	121088, 	0,	160172
+Election10.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	1.2,	6144,	6143,	0, 	121088, 	0,	160020
+Election10.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	1.17,	6144,	6143,	0, 	121088, 	0,	160036
+Election10.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	1.2,	6144,	6143,	0, 	121088, 	0,	160168
+Election10.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	1.18,	6144,	6143,	0, 	121088, 	0,	160044
+Election10.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	1.18,	6144,	6143,	0, 	121088, 	0,	160180
+Election10.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	1.15,	6144,	6143,	0, 	121088, 	0,	160172
+Election10.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	1.3,	6144,	6143,	0, 	121088, 	0,	160040
+Election10.pet,	Incorrect Leader,	Random DFS with Hash,	Not satisfiable,	1.15,	6144,	6143,	0, 	121088, 	0,	160160
+Election15.pet,	Incorrect Leader,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	232136
+Election1.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.02,	2,	2,	0, 	4, 	1,	44108
+Election1.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.02,	2,	2,	0, 	4, 	1,	44108
+Election1.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.02,	2,	2,	0, 	5, 	1,	44108
+Election1.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.01,	2,	2,	0, 	5, 	1,	44108
+Election1.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.02,	2,	2,	0, 	5, 	1,	44108
+Election1.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.03,	2,	2,	0, 	4, 	1,	44108
+Election1.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.01,	2,	2,	0, 	4, 	1,	44108
+Election1.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.03,	2,	2,	0, 	4, 	1,	44108
+Election1.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.02,	2,	2,	0, 	4, 	1,	44108
+Election1.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.03,	2,	2,	0, 	4, 	1,	44108
+Election5.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.06,	2,	10,	0, 	71, 	9,	44108
+Election5.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.06,	2,	10,	0, 	71, 	9,	44108
+Election5.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.04,	2,	10,	0, 	60, 	9,	44108
+Election5.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	60, 	9,	44108
+Election5.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	56, 	9,	44108
+Election5.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.04,	2,	10,	0, 	56, 	9,	44108
+Election5.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.06,	2,	10,	0, 	56, 	9,	44108
+Election5.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	58, 	9,	44104
+Election5.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.04,	2,	10,	0, 	58, 	9,	44108
+Election5.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	59, 	9,	44108
+Election10.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.12,	2,	20,	0, 	217, 	19,	44108
+Election10.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.12,	2,	20,	0, 	178, 	19,	44108
+Election10.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	178, 	19,	44108
+Election10.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	178, 	19,	44108
+Election10.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	210, 	19,	44108
+Election10.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.12,	2,	20,	0, 	210, 	19,	44108
+Election10.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.12,	2,	20,	0, 	179, 	19,	44108
+Election10.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.12,	2,	20,	0, 	179, 	19,	44108
+Election10.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.12,	2,	20,	0, 	179, 	19,	44108
+Election10.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	180, 	19,	44108
+Election15.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	402, 	29,	44108
+Election15.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	337, 	29,	44108
+Election15.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.21,	2,	30,	0, 	337, 	29,	44108
+Election15.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	402, 	29,	44108
+Election15.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	402, 	29,	44108
+Election15.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.23,	2,	30,	0, 	402, 	29,	44108
+Election15.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	335, 	29,	44108
+Election15.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.21,	2,	30,	0, 	335, 	29,	44108
+Election15.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	421, 	29,	44108
+Election15.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	421, 	29,	44108
+Election20.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.43,	2,	40,	0, 	777, 	39,	326280
+Election20.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.43,	2,	40,	0, 	690, 	39,	326316
+Election20.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.41,	2,	40,	0, 	673, 	39,	326332
+Election20.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.4,	2,	40,	0, 	559, 	39,	326312
+Election20.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.41,	2,	40,	0, 	666, 	39,	326308
+Election20.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.41,	2,	40,	0, 	643, 	39,	326276
+Election20.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.41,	2,	40,	0, 	673, 	39,	326304
+Election20.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.43,	2,	40,	0, 	747, 	39,	326308
+Election20.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.41,	2,	40,	0, 	702, 	39,	326304
+Election20.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.4,	2,	40,	0, 	525, 	39,	326316
+Election25.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.68,	2,	50,	0, 	791, 	49,	446180
+Election25.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.73,	2,	50,	0, 	894, 	49,	446028
+Election25.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.69,	2,	50,	0, 	815, 	49,	446172
+Election25.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.71,	2,	50,	0, 	852, 	49,	446172
+Election25.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.72,	2,	50,	0, 	920, 	49,	446184
+Election25.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.77,	2,	50,	0, 	1097, 	49,	446188
+Election25.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.76,	2,	50,	0, 	1000, 	49,	446172
+Election25.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.73,	2,	50,	0, 	987, 	49,	446172
+Election25.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.71,	2,	50,	0, 	861, 	49,	446020
+Election25.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	0.76,	2,	50,	0, 	1063, 	49,	446176
+Election30.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.11,	2,	60,	0, 	1200, 	59,	590564
+Election30.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.1,	2,	60,	0, 	1246, 	59,	590528
+Election30.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.1,	2,	60,	0, 	1216, 	59,	590572
+Election30.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.09,	2,	60,	0, 	1352, 	59,	590560
+Election30.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.09,	2,	60,	0, 	1308, 	59,	590560
+Election30.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.18,	2,	60,	0, 	1476, 	59,	590556
+Election30.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.14,	2,	60,	0, 	1471, 	59,	590576
+Election30.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.08,	2,	60,	0, 	1318, 	59,	590572
+Election30.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.01,	2,	60,	0, 	1038, 	59,	590568
+Election30.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.17,	2,	60,	0, 	1565, 	59,	590532
+Election35.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.77,	2,	70,	0, 	1875, 	69,	759488
+Election35.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.71,	2,	70,	0, 	1689, 	69,	759512
+Election35.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.74,	2,	70,	0, 	1779, 	69,	759484
+Election35.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.73,	2,	70,	0, 	1862, 	69,	759520
+Election35.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.65,	2,	70,	0, 	1607, 	69,	759484
+Election35.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.82,	2,	70,	0, 	1976, 	69,	759520
+Election35.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.81,	2,	70,	0, 	1898, 	69,	759532
+Election35.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.73,	2,	70,	0, 	1726, 	69,	759532
+Election35.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.73,	2,	70,	0, 	1708, 	69,	759532
+Election35.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	1.69,	2,	70,	0, 	1662, 	69,	759532
+Election40.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	2.56,	2,	80,	0, 	2544, 	79,	952812
+Election40.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	2.48,	2,	80,	0, 	2553, 	79,	952740
+Election40.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	2.46,	2,	80,	0, 	2461, 	79,	952812
+Election40.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	2.49,	2,	80,	0, 	2434, 	79,	952804
+Election40.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	2.31,	2,	80,	0, 	2417, 	79,	952812
+Election40.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	2.48,	2,	80,	0, 	2372, 	79,	952804
+Election40.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	2.41,	2,	80,	0, 	2308, 	79,	952804
+Election40.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	2.65,	2,	80,	0, 	2695, 	79,	952788
+Election40.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	2.37,	2,	80,	0, 	2462, 	79,	952808
+Election40.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	2.56,	2,	80,	0, 	2559, 	79,	952800
+Election45.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	3.66,	2,	90,	0, 	2959, 	89,	1170816
+Election45.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	3.35,	2,	90,	0, 	2617, 	89,	1170828
+Election45.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	3.67,	2,	90,	0, 	2924, 	89,	1170836
+Election45.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	3.79,	2,	90,	0, 	3119, 	89,	1170828
+Election45.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	3.87,	2,	90,	0, 	3237, 	89,	1170828
+Election45.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	3.51,	2,	90,	0, 	2812, 	89,	1170816
+Election45.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	3.71,	2,	90,	0, 	3115, 	89,	1170828
+Election45.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	3.48,	2,	90,	0, 	2768, 	89,	1170816
+Election45.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	3.68,	2,	90,	0, 	3089, 	89,	1170776
+Election45.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	3.94,	2,	90,	0, 	3265, 	89,	1170828
+Election50.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	4.48,	2,	100,	0, 	3395, 	99,	1413104
+Election50.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	4.52,	2,	100,	0, 	3496, 	99,	1413104
+Election50.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	4.56,	2,	100,	0, 	3524, 	99,	1413104
+Election50.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	4.36,	2,	100,	0, 	3252, 	99,	1413148
+Election50.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	4.59,	2,	100,	0, 	3423, 	99,	1413148
+Election50.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	4.63,	2,	100,	0, 	3595, 	99,	1413148
+Election50.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	4.52,	2,	100,	0, 	3463, 	99,	1413152
+Election50.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	4.55,	2,	100,	0, 	3510, 	99,	1413116
+Election50.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	4.7,	2,	100,	0, 	3631, 	99,	1413144
+Election50.pet,	Incorrect Leader,	Random DFS with Monotonicity,	Not satisfiable,	4.55,	2,	100,	0, 	3456, 	99,	1413104
+Election1.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.03,	2,	2,	0, 	5, 	1,	43976
+Election1.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.02,	2,	2,	0, 	5, 	1,	44108
+Election1.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.03,	2,	2,	0, 	4, 	1,	44108
+Election1.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.03,	2,	2,	0, 	4, 	1,	44108
+Election1.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.02,	2,	2,	0, 	4, 	1,	44108
+Election1.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.01,	2,	2,	0, 	5, 	1,	44108
+Election1.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.02,	2,	2,	0, 	5, 	1,	44108
+Election1.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.03,	2,	2,	0, 	5, 	1,	44108
+Election1.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.02,	2,	2,	0, 	5, 	1,	44108
+Election1.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.02,	2,	2,	0, 	5, 	1,	44108
+Election5.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	61, 	9,	44108
+Election5.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	61, 	9,	44108
+Election5.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	58, 	9,	44108
+Election5.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	58, 	9,	44108
+Election5.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	73, 	9,	44108
+Election5.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.04,	2,	10,	0, 	73, 	9,	44108
+Election5.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	73, 	9,	44108
+Election5.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	11,	0, 	58, 	10,	44108
+Election5.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	11,	0, 	58, 	10,	44108
+Election5.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.05,	2,	10,	0, 	59, 	9,	44108
+Election10.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	201, 	19,	44108
+Election10.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.12,	2,	20,	0, 	201, 	19,	44108
+Election10.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	183, 	19,	44108
+Election10.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	183, 	19,	44108
+Election10.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	239, 	19,	44108
+Election10.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	239, 	19,	44108
+Election10.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.12,	2,	20,	0, 	180, 	19,	44108
+Election10.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	180, 	19,	44108
+Election10.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.12,	2,	20,	0, 	180, 	19,	44108
+Election10.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.11,	2,	20,	0, 	239, 	19,	44108
+Election15.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	410, 	29,	44108
+Election15.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.23,	2,	30,	0, 	449, 	29,	44108
+Election15.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.23,	2,	30,	0, 	449, 	29,	44108
+Election15.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.23,	2,	30,	0, 	442, 	29,	44108
+Election15.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.23,	2,	30,	0, 	442, 	29,	44108
+Election15.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	442, 	29,	44108
+Election15.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.23,	2,	30,	0, 	364, 	29,	44108
+Election15.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	364, 	29,	44108
+Election15.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.23,	2,	30,	0, 	499, 	29,	44600
+Election15.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.22,	2,	30,	0, 	490, 	29,	44108
+Election20.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.41,	2,	40,	0, 	596, 	39,	326316
+Election20.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.4,	2,	40,	0, 	584, 	39,	326272
+Election20.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.41,	2,	40,	0, 	589, 	39,	326304
+Election20.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.42,	2,	40,	0, 	700, 	39,	326304
+Election20.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.41,	2,	40,	0, 	663, 	39,	326304
+Election20.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.42,	2,	40,	0, 	672, 	39,	326308
+Election20.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.41,	2,	40,	0, 	623, 	39,	326308
+Election20.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.42,	2,	40,	0, 	672, 	39,	326304
+Election20.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.42,	2,	40,	0, 	766, 	39,	326316
+Election20.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.41,	2,	40,	0, 	623, 	39,	326276
+Election25.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.73,	2,	50,	0, 	962, 	49,	446196
+Election25.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.72,	2,	50,	0, 	967, 	49,	446008
+Election25.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.74,	2,	50,	0, 	940, 	49,	446164
+Election25.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.71,	2,	50,	0, 	897, 	49,	446176
+Election25.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.71,	2,	50,	0, 	901, 	49,	446180
+Election25.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.72,	2,	50,	0, 	892, 	49,	446184
+Election25.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.72,	2,	50,	0, 	942, 	49,	446172
+Election25.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.77,	2,	50,	0, 	1067, 	49,	446180
+Election25.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.7,	2,	50,	0, 	825, 	49,	446176
+Election25.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.73,	2,	50,	0, 	1008, 	49,	446136
+Election30.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.09,	2,	60,	0, 	1376, 	59,	590564
+Election30.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.03,	2,	60,	0, 	1198, 	59,	590560
+Election30.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.14,	2,	60,	0, 	1483, 	59,	590576
+Election30.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.09,	2,	60,	0, 	1286, 	59,	590552
+Election30.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.2,	2,	60,	0, 	1580, 	59,	590528
+Election30.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.08,	2,	60,	0, 	1356, 	59,	590556
+Election30.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.09,	2,	60,	0, 	1367, 	59,	590564
+Election30.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.03,	2,	60,	0, 	1154, 	59,	590560
+Election30.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.12,	2,	60,	0, 	1350, 	59,	590564
+Election30.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.11,	2,	60,	0, 	1381, 	59,	590580
+Election35.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.76,	2,	70,	0, 	1805, 	69,	759484
+Election35.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.72,	2,	70,	0, 	1740, 	69,	759532
+Election35.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.74,	2,	70,	0, 	1765, 	69,	759532
+Election35.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.78,	2,	70,	0, 	1837, 	69,	759520
+Election35.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.73,	2,	70,	0, 	1799, 	69,	759476
+Election35.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.74,	2,	70,	0, 	1788, 	69,	759528
+Election35.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.81,	2,	70,	0, 	1910, 	69,	759532
+Election35.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.88,	2,	70,	0, 	2052, 	69,	759532
+Election35.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.61,	2,	70,	0, 	1558, 	69,	759532
+Election35.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	1.64,	2,	70,	0, 	1568, 	69,	759520
+Election40.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.53,	2,	80,	0, 	2437, 	79,	952812
+Election40.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.34,	2,	80,	0, 	2085, 	79,	952812
+Election40.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.35,	2,	80,	0, 	2178, 	79,	952796
+Election40.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.41,	2,	80,	0, 	2241, 	79,	952784
+Election40.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.41,	2,	80,	0, 	2250, 	79,	952800
+Election40.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.31,	2,	80,	0, 	2065, 	79,	952804
+Election40.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.46,	2,	80,	0, 	2359, 	79,	952792
+Election40.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.65,	2,	80,	0, 	2726, 	79,	952812
+Election40.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.46,	2,	80,	0, 	2368, 	79,	952812
+Election40.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	2.35,	2,	80,	0, 	2159, 	79,	952804
+Election45.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.4,	2,	90,	0, 	2706, 	89,	1170784
+Election45.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.72,	2,	90,	0, 	3132, 	89,	1170816
+Election45.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.51,	2,	90,	0, 	2845, 	89,	1170816
+Election45.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.62,	2,	90,	0, 	2986, 	89,	1170772
+Election45.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.61,	2,	90,	0, 	2987, 	89,	1170832
+Election45.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.46,	2,	90,	0, 	2734, 	89,	1170828
+Election45.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.69,	2,	90,	0, 	3068, 	89,	1170776
+Election45.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.47,	2,	90,	0, 	2787, 	89,	1170828
+Election45.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.45,	2,	90,	0, 	2755, 	89,	1170828
+Election45.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	3.53,	2,	90,	0, 	2760, 	89,	1170820
+Election50.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	5.11,	2,	100,	0, 	4213, 	99,	1413152
+Election50.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	5.12,	2,	100,	0, 	4185, 	99,	1413104
+Election50.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.8,	2,	100,	0, 	3841, 	99,	1413116
+Election50.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.49,	2,	100,	0, 	3412, 	99,	1413156
+Election50.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.41,	2,	100,	0, 	3310, 	99,	1413156
+Election50.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.58,	2,	100,	0, 	3537, 	99,	1413148
+Election50.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.5,	2,	100,	0, 	3463, 	99,	1413104
+Election50.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.44,	2,	100,	0, 	3405, 	99,	1413124
+Election50.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.36,	2,	100,	0, 	3258, 	99,	1413156
+Election50.pet,	Incorrect Leader,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.32,	2,	100,	0, 	3228, 	99,	1413156
+Election1.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.02,	1,	2,	2, 	3, 	0,	44108
+Election1.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.02,	1,	2,	2, 	3, 	0,	44108
+Election1.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.03,	1,	2,	2, 	3, 	0,	44108
+Election1.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.02,	1,	2,	2, 	3, 	0,	44108
+Election1.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.02,	1,	2,	2, 	3, 	0,	44108
+Election1.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.03,	1,	2,	2, 	3, 	0,	44108
+Election1.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.03,	1,	2,	2, 	3, 	0,	44108
+Election1.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.03,	1,	2,	2, 	3, 	0,	44108
+Election1.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.02,	1,	2,	2, 	3, 	0,	44108
+Election1.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.02,	1,	2,	2, 	3, 	0,	44108
+Election5.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.05,	9,	23,	10, 	94, 	0,	44108
+Election5.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.05,	9,	23,	10, 	94, 	0,	44108
+Election5.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.05,	9,	23,	10, 	94, 	0,	44108
+Election5.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.06,	9,	24,	10, 	94, 	0,	44108
+Election5.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.05,	9,	24,	10, 	94, 	0,	44108
+Election5.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.07,	9,	27,	10, 	94, 	0,	44108
+Election5.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.05,	9,	27,	10, 	94, 	0,	44108
+Election5.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.06,	9,	27,	10, 	94, 	0,	44108
+Election5.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.06,	9,	21,	10, 	94, 	0,	44108
+Election5.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.05,	9,	21,	10, 	94, 	0,	44108
+Election10.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.12,	19,	69,	20, 	363, 	0,	44108
+Election10.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.13,	19,	69,	20, 	363, 	0,	44108
+Election10.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.12,	19,	78,	20, 	363, 	0,	44108
+Election10.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.12,	19,	78,	20, 	363, 	0,	44108
+Election10.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.13,	19,	78,	20, 	363, 	0,	44108
+Election10.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.12,	19,	75,	20, 	363, 	0,	44108
+Election10.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.12,	19,	75,	20, 	363, 	0,	44108
+Election10.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.11,	19,	76,	20, 	363, 	0,	44108
+Election10.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.12,	19,	76,	20, 	363, 	0,	44108
+Election10.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.11,	19,	75,	20, 	363, 	0,	44108
+Election15.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.23,	29,	188,	30, 	843, 	0,	44108
+Election15.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.22,	29,	188,	30, 	843, 	0,	44108
+Election15.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.22,	29,	142,	30, 	843, 	0,	44108
+Election15.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.22,	29,	142,	30, 	843, 	0,	44108
+Election15.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.23,	29,	192,	30, 	843, 	0,	44108
+Election15.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.22,	29,	171,	30, 	843, 	0,	44600
+Election15.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.22,	29,	171,	30, 	843, 	0,	44108
+Election15.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.23,	29,	147,	30, 	843, 	0,	44108
+Election15.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.22,	29,	147,	30, 	843, 	0,	44108
+Election15.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.22,	29,	147,	30, 	843, 	0,	44108
+Election20.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.36,	39,	287,	40, 	1523, 	0,	326292
+Election20.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.37,	39,	318,	40, 	1523, 	0,	326304
+Election20.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.36,	39,	270,	40, 	1523, 	0,	326304
+Election20.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.36,	39,	242,	40, 	1523, 	0,	326316
+Election20.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.37,	39,	303,	40, 	1523, 	0,	326316
+Election20.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.36,	39,	281,	40, 	1523, 	0,	326316
+Election20.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.36,	39,	267,	40, 	1523, 	0,	326304
+Election20.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.36,	39,	295,	40, 	1523, 	0,	326316
+Election20.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.36,	39,	230,	40, 	1523, 	0,	326308
+Election20.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.37,	39,	235,	40, 	1523, 	0,	326288
+Election25.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.55,	49,	521,	50, 	2403, 	0,	446184
+Election25.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.54,	49,	400,	50, 	2403, 	0,	446136
+Election25.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.55,	49,	357,	50, 	2403, 	0,	446172
+Election25.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.53,	49,	376,	50, 	2403, 	0,	446176
+Election25.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.55,	49,	414,	50, 	2403, 	0,	446184
+Election25.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.54,	49,	383,	50, 	2403, 	0,	446144
+Election25.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.55,	49,	373,	50, 	2403, 	0,	446144
+Election25.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.53,	49,	387,	50, 	2403, 	0,	446184
+Election25.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.54,	49,	352,	50, 	2403, 	0,	446172
+Election25.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.54,	49,	473,	50, 	2403, 	0,	446188
+Election30.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.76,	59,	587,	60, 	3483, 	0,	590548
+Election30.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.76,	59,	510,	60, 	3483, 	0,	590564
+Election30.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.77,	59,	556,	60, 	3483, 	0,	590552
+Election30.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.76,	59,	523,	60, 	3483, 	0,	590548
+Election30.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.77,	59,	615,	60, 	3483, 	0,	590568
+Election30.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.78,	59,	741,	60, 	3483, 	0,	590584
+Election30.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.76,	59,	497,	60, 	3483, 	0,	590572
+Election30.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.76,	59,	597,	60, 	3483, 	0,	590532
+Election30.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.76,	59,	519,	60, 	3483, 	0,	590572
+Election30.pet,	A Leader,	Random DFS with Hash,	Satisfied,	0.76,	59,	572,	60, 	3483, 	0,	590572
+Election35.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.02,	69,	687,	70, 	4864, 	0,	759480
+Election35.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.03,	69,	688,	70, 	4864, 	0,	759520
+Election35.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.03,	69,	709,	70, 	4864, 	0,	759524
+Election35.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.02,	69,	685,	70, 	4864, 	0,	759532
+Election35.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.02,	69,	703,	70, 	4864, 	0,	759480
+Election35.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.02,	69,	669,	70, 	4864, 	0,	759520
+Election35.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.02,	69,	703,	70, 	4864, 	0,	759532
+Election35.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.02,	69,	690,	70, 	4864, 	0,	759480
+Election35.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.02,	69,	698,	70, 	4864, 	0,	759520
+Election35.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.02,	69,	718,	70, 	4864, 	0,	759472
+Election40.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.34,	79,	904,	80, 	6359, 	0,	952804
+Election40.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.34,	79,	881,	80, 	6359, 	0,	952804
+Election40.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.33,	79,	917,	80, 	6359, 	0,	952812
+Election40.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.33,	79,	923,	80, 	6359, 	0,	952772
+Election40.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.35,	79,	904,	80, 	6359, 	0,	952772
+Election40.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.37,	79,	901,	80, 	6359, 	0,	952812
+Election40.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.33,	79,	862,	80, 	6359, 	0,	952804
+Election40.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.34,	79,	898,	80, 	6359, 	0,	952804
+Election40.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.36,	79,	868,	80, 	6359, 	0,	952784
+Election40.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.34,	79,	901,	80, 	6359, 	0,	952768
+Election45.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.73,	89,	1117,	90, 	8054, 	0,	1170784
+Election45.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.72,	89,	1168,	90, 	8054, 	0,	1170828
+Election45.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.71,	89,	1147,	90, 	8054, 	0,	1170816
+Election45.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.7,	89,	1155,	90, 	8054, 	0,	1170828
+Election45.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.7,	89,	1109,	90, 	8054, 	0,	1170816
+Election45.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.69,	89,	1082,	90, 	8054, 	0,	1170816
+Election45.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.71,	89,	1110,	90, 	8054, 	0,	1170816
+Election45.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.74,	89,	1080,	90, 	8054, 	0,	1171844
+Election45.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.72,	89,	1115,	90, 	8054, 	0,	1170828
+Election45.pet,	A Leader,	Random DFS with Hash,	Satisfied,	1.68,	89,	1108,	90, 	8054, 	0,	1170828
+Election50.pet,	A Leader,	Random DFS with Hash,	Satisfied,	2.15,	99,	1389,	100, 	9949, 	0,	1413144
+Election50.pet,	A Leader,	Random DFS with Hash,	Satisfied,	2.15,	99,	1375,	100, 	9949, 	0,	1413152
+Election50.pet,	A Leader,	Random DFS with Hash,	Satisfied,	2.15,	99,	1364,	100, 	9949, 	0,	1413148
+Election50.pet,	A Leader,	Random DFS with Hash,	Satisfied,	2.13,	99,	1412,	100, 	9949, 	0,	1413148
+Election50.pet,	A Leader,	Random DFS with Hash,	Satisfied,	2.12,	99,	1353,	100, 	9949, 	0,	1413144
+Election50.pet,	A Leader,	Random DFS with Hash,	Satisfied,	2.14,	99,	1371,	100, 	9949, 	0,	1413148
+Election50.pet,	A Leader,	Random DFS with Hash,	Satisfied,	2.17,	99,	1419,	100, 	9949, 	0,	1413156
+Election50.pet,	A Leader,	Random DFS with Hash,	Satisfied,	2.21,	99,	1372,	100, 	9949, 	0,	1413144
+Election50.pet,	A Leader,	Random DFS with Hash,	Satisfied,	2.12,	99,	1360,	100, 	9949, 	0,	1413148
+Election50.pet,	A Leader,	Random DFS with Hash,	Satisfied,	2.13,	99,	1369,	100, 	9949, 	0,	1413156
+Election1.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	2, 	1,	44108
+Election1.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	2, 	1,	44108
+Election1.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.03,	0,	1,	2, 	3, 	1,	44108
+Election1.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.03,	0,	1,	2, 	3, 	1,	44108
+Election1.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.01,	0,	1,	2, 	3, 	1,	44108
+Election1.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	3, 	1,	44108
+Election1.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	2, 	1,	44108
+Election1.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	2, 	1,	44108
+Election1.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.03,	0,	1,	2, 	2, 	1,	43976
+Election1.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	3, 	1,	44108
+Election5.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.04,	0,	9,	10, 	33, 	9,	44108
+Election5.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.06,	0,	9,	10, 	36, 	9,	44600
+Election5.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	36, 	9,	44108
+Election5.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	36, 	9,	44108
+Election5.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	39, 	9,	44108
+Election5.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	39, 	9,	44108
+Election5.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	48, 	9,	44108
+Election5.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	48, 	9,	44108
+Election5.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.06,	0,	9,	10, 	32, 	9,	44108
+Election5.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.04,	0,	9,	10, 	32, 	9,	44108
+Election10.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	110, 	19,	44108
+Election10.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	121, 	19,	44108
+Election10.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	121, 	19,	44108
+Election10.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	156, 	19,	44108
+Election10.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	156, 	19,	43976
+Election10.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	156, 	19,	44108
+Election10.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	100, 	19,	44108
+Election10.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.12,	0,	19,	20, 	100, 	19,	44108
+Election10.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.12,	0,	19,	20, 	182, 	19,	44108
+Election10.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	182, 	19,	44108
+Election15.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	295, 	29,	44108
+Election15.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	295, 	29,	44108
+Election15.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.21,	0,	29,	30, 	295, 	29,	44108
+Election15.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	244, 	29,	44108
+Election15.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	244, 	29,	44108
+Election15.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.21,	0,	29,	30, 	290, 	29,	44108
+Election15.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	290, 	29,	44108
+Election15.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.21,	0,	29,	30, 	318, 	29,	44108
+Election15.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.23,	0,	29,	30, 	318, 	29,	44108
+Election15.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	318, 	29,	44108
+Election20.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.39,	0,	39,	40, 	461, 	39,	326304
+Election20.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.38,	0,	39,	40, 	423, 	39,	326308
+Election20.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.39,	0,	39,	40, 	426, 	39,	326308
+Election20.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.4,	0,	39,	40, 	511, 	39,	326316
+Election20.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.39,	0,	39,	40, 	476, 	39,	326288
+Election20.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.42,	0,	39,	40, 	657, 	39,	326260
+Election20.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.4,	0,	39,	40, 	537, 	39,	326312
+Election20.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.39,	0,	39,	40, 	423, 	39,	326276
+Election20.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.39,	0,	39,	40, 	588, 	39,	326324
+Election20.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.41,	0,	39,	40, 	638, 	39,	326316
+Election25.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.69,	0,	49,	50, 	839, 	49,	446192
+Election25.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.68,	0,	49,	50, 	689, 	49,	446180
+Election25.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.72,	0,	49,	50, 	913, 	49,	446136
+Election25.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.69,	0,	49,	50, 	753, 	49,	446172
+Election25.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.76,	0,	49,	50, 	1013, 	49,	446172
+Election25.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.68,	0,	49,	50, 	716, 	49,	446180
+Election25.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.67,	0,	49,	50, 	641, 	49,	446156
+Election25.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.7,	0,	49,	50, 	807, 	49,	446136
+Election25.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.71,	0,	49,	50, 	890, 	49,	446184
+Election25.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.72,	0,	49,	50, 	880, 	49,	446172
+Election30.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	1.05,	0,	59,	60, 	1208, 	59,	590572
+Election30.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	1.17,	0,	59,	60, 	1490, 	59,	590532
+Election30.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	1.01,	0,	59,	60, 	1051, 	59,	590572
+Election30.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	1.04,	0,	59,	60, 	1106, 	59,	590572
+Election30.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.97,	0,	59,	60, 	903, 	59,	590572
+Election30.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	1.01,	0,	59,	60, 	1059, 	59,	590556
+Election30.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	1.1,	0,	59,	60, 	1267, 	59,	590560
+Election30.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	1.08,	0,	59,	60, 	1184, 	59,	590568
+Election30.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	0.97,	0,	59,	60, 	886, 	59,	590532
+Election30.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	1.1,	0,	59,	60, 	1279, 	59,	590528
+Election35.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	1.65,	0,	69,	70, 	1604, 	69,	759520
+Election35.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	1.72,	0,	69,	70, 	1686, 	69,	759480
+Election35.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	1.68,	0,	69,	70, 	1730, 	69,	759524
+Election35.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	1.63,	0,	69,	70, 	1487, 	69,	759524
+Election35.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	1.88,	0,	69,	70, 	2040, 	69,	759476
+Election35.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	1.72,	0,	69,	70, 	1879, 	69,	759504
+Election35.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	1.55,	0,	69,	70, 	1388, 	69,	759520
+Election35.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	1.65,	0,	69,	70, 	1715, 	69,	759532
+Election35.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	1.66,	0,	69,	70, 	1525, 	69,	759516
+Election35.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	1.76,	0,	69,	70, 	1750, 	69,	759520
+Election40.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	2.18,	0,	79,	80, 	1825, 	79,	952804
+Election40.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	2.37,	0,	79,	80, 	2194, 	79,	952800
+Election40.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	2.25,	0,	79,	80, 	1971, 	79,	952772
+Election40.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	2.43,	0,	79,	80, 	2265, 	79,	952764
+Election40.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	2.34,	0,	79,	80, 	2127, 	79,	952812
+Election40.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	2.22,	0,	79,	80, 	1929, 	79,	952792
+Election40.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	2.32,	0,	79,	80, 	2216, 	79,	952812
+Election40.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	2.42,	0,	79,	80, 	2256, 	79,	952812
+Election40.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	2.31,	0,	79,	80, 	2052, 	79,	952816
+Election40.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	2.11,	0,	79,	80, 	1964, 	79,	952804
+Election45.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	3.31,	0,	89,	90, 	2548, 	89,	1170828
+Election45.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	3.41,	0,	89,	90, 	2636, 	89,	1170816
+Election45.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	3.33,	0,	89,	90, 	2526, 	89,	1170816
+Election45.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	3.42,	0,	89,	90, 	2635, 	89,	1170816
+Election45.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	3.44,	0,	89,	90, 	2709, 	89,	1170820
+Election45.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	3.38,	0,	89,	90, 	2593, 	89,	1170776
+Election45.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	3.52,	0,	89,	90, 	2809, 	89,	1170768
+Election45.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	3.51,	0,	89,	90, 	2789, 	89,	1170828
+Election45.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	3.78,	0,	89,	90, 	3118, 	89,	1170824
+Election45.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	3.28,	0,	89,	90, 	2452, 	89,	1170816
+Election50.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	4.32,	0,	99,	100, 	3195, 	99,	1413104
+Election50.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	4.62,	0,	99,	100, 	3539, 	99,	1413148
+Election50.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	4.69,	0,	99,	100, 	3655, 	99,	1413156
+Election50.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	4.28,	0,	99,	100, 	3188, 	99,	1413160
+Election50.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	4.32,	0,	99,	100, 	3191, 	99,	1413160
+Election50.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	3.92,	0,	99,	100, 	2700, 	99,	1413144
+Election50.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	4.53,	0,	99,	100, 	3443, 	99,	1413156
+Election50.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	4.33,	0,	99,	100, 	3215, 	99,	1413132
+Election50.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	4.34,	0,	99,	100, 	3305, 	99,	1413148
+Election50.pet,	A Leader,	Random DFS with Monotonicity,	Satisfied,	4.5,	0,	99,	100, 	3410, 	99,	1413144
+Election1.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.01,	0,	1,	2, 	3, 	1,	44108
+Election1.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	3, 	1,	44108
+Election1.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	2, 	1,	44108
+Election1.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	2, 	1,	44108
+Election1.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	2, 	1,	44108
+Election1.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	3, 	1,	44108
+Election1.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.01,	0,	1,	2, 	3, 	1,	44108
+Election1.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.03,	0,	1,	2, 	3, 	1,	44108
+Election1.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	3, 	1,	44108
+Election1.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	3, 	1,	44108
+Election5.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.04,	0,	9,	10, 	44, 	9,	44108
+Election5.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.04,	0,	9,	10, 	44, 	9,	44108
+Election5.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.06,	0,	9,	10, 	45, 	9,	44108
+Election5.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	45, 	9,	44108
+Election5.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.04,	0,	9,	10, 	19, 	9,	44108
+Election5.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.06,	0,	9,	10, 	19, 	9,	44108
+Election5.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	19, 	9,	44108
+Election5.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	34, 	9,	44108
+Election5.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.06,	0,	9,	10, 	34, 	9,	44108
+Election5.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.04,	0,	9,	10, 	50, 	9,	44108
+Election10.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	133, 	19,	44108
+Election10.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.12,	0,	19,	20, 	133, 	19,	44108
+Election10.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	167, 	19,	44108
+Election10.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.12,	0,	19,	20, 	167, 	19,	44108
+Election10.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.12,	0,	19,	20, 	146, 	19,	44108
+Election10.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	146, 	19,	44108
+Election10.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	154, 	19,	44108
+Election10.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	154, 	19,	44108
+Election10.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	154, 	19,	44108
+Election10.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.12,	0,	19,	20, 	119, 	19,	44108
+Election15.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.21,	0,	29,	30, 	318, 	29,	44108
+Election15.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	359, 	29,	44108
+Election15.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.23,	0,	29,	30, 	359, 	29,	44108
+Election15.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.21,	0,	29,	30, 	359, 	29,	44108
+Election15.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	322, 	29,	44108
+Election15.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	322, 	29,	44108
+Election15.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	339, 	29,	44280
+Election15.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	339, 	29,	44108
+Election15.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.23,	0,	29,	30, 	312, 	29,	44108
+Election15.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	312, 	29,	44108
+Election20.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.39,	0,	39,	40, 	530, 	39,	326308
+Election20.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.39,	0,	39,	40, 	530, 	39,	326276
+Election20.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.39,	0,	39,	40, 	460, 	39,	326308
+Election20.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.39,	0,	39,	40, 	467, 	39,	326300
+Election20.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.39,	0,	39,	40, 	498, 	39,	326308
+Election20.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.39,	0,	39,	40, 	532, 	39,	326272
+Election20.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.39,	0,	39,	40, 	476, 	39,	326304
+Election20.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.4,	0,	39,	40, 	505, 	39,	326296
+Election20.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.4,	0,	39,	40, 	576, 	39,	326308
+Election20.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.38,	0,	39,	40, 	437, 	39,	326304
+Election25.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.68,	0,	49,	50, 	716, 	49,	446172
+Election25.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.65,	0,	49,	50, 	651, 	49,	446176
+Election25.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.71,	0,	49,	50, 	836, 	49,	446172
+Election25.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.7,	0,	49,	50, 	905, 	49,	446200
+Election25.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.72,	0,	49,	50, 	938, 	49,	446172
+Election25.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.66,	0,	49,	50, 	690, 	49,	446184
+Election25.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.71,	0,	49,	50, 	840, 	49,	446148
+Election25.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.7,	0,	49,	50, 	884, 	49,	446196
+Election25.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.69,	0,	49,	50, 	811, 	49,	446172
+Election25.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.69,	0,	49,	50, 	782, 	49,	446184
+Election30.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.09,	0,	59,	60, 	1322, 	59,	590560
+Election30.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.05,	0,	59,	60, 	1151, 	59,	590544
+Election30.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.11,	0,	59,	60, 	1317, 	59,	590548
+Election30.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.14,	0,	59,	60, 	1405, 	59,	590544
+Election30.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.01,	0,	59,	60, 	1056, 	59,	590556
+Election30.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.02,	0,	59,	60, 	1018, 	59,	590676
+Election30.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.07,	0,	59,	60, 	1232, 	59,	590552
+Election30.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.07,	0,	59,	60, 	1217, 	59,	590572
+Election30.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.06,	0,	59,	60, 	1248, 	59,	590572
+Election30.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.09,	0,	59,	60, 	1316, 	59,	590572
+Election35.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.68,	0,	69,	70, 	1726, 	69,	759528
+Election35.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.64,	0,	69,	70, 	1553, 	69,	759520
+Election35.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.73,	0,	69,	70, 	1739, 	69,	759532
+Election35.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.64,	0,	69,	70, 	1611, 	69,	759520
+Election35.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.71,	0,	69,	70, 	1746, 	69,	759532
+Election35.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.66,	0,	69,	70, 	1632, 	69,	759516
+Election35.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.55,	0,	69,	70, 	1390, 	69,	759520
+Election35.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.68,	0,	69,	70, 	1680, 	69,	759532
+Election35.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.63,	0,	69,	70, 	1605, 	69,	759480
+Election35.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.67,	0,	69,	70, 	1585, 	69,	759520
+Election40.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.35,	0,	79,	80, 	2128, 	79,	952884
+Election40.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.49,	0,	79,	80, 	2397, 	79,	952784
+Election40.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.24,	0,	79,	80, 	1947, 	79,	952776
+Election40.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.32,	0,	79,	80, 	2030, 	79,	952788
+Election40.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.48,	0,	79,	80, 	2383, 	79,	952804
+Election40.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.3,	0,	79,	80, 	2094, 	79,	952812
+Election40.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.43,	0,	79,	80, 	2310, 	79,	952776
+Election40.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.59,	0,	79,	80, 	2565, 	79,	952808
+Election40.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.32,	0,	79,	80, 	2114, 	79,	952812
+Election40.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.42,	0,	79,	80, 	2271, 	79,	952756
+Election45.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.54,	0,	89,	90, 	2879, 	89,	1170828
+Election45.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.71,	0,	89,	90, 	3111, 	89,	1170828
+Election45.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.44,	0,	89,	90, 	2768, 	89,	1170816
+Election45.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.48,	0,	89,	90, 	2809, 	89,	1170816
+Election45.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.05,	0,	89,	90, 	2203, 	89,	1170816
+Election45.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.57,	0,	89,	90, 	2947, 	89,	1170828
+Election45.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.23,	0,	89,	90, 	2473, 	89,	1170836
+Election45.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.28,	0,	89,	90, 	2517, 	89,	1170816
+Election45.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.44,	0,	89,	90, 	2762, 	89,	1170828
+Election45.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.52,	0,	89,	90, 	2872, 	89,	1170820
+Election50.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	4.66,	0,	99,	100, 	3705, 	99,	1413144
+Election50.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	4.63,	0,	99,	100, 	3620, 	99,	1413148
+Election50.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	4.51,	0,	99,	100, 	3457, 	99,	1413116
+Election50.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	4.44,	0,	99,	100, 	3412, 	99,	1413156
+Election50.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	4.45,	0,	99,	100, 	3386, 	99,	1413148
+Election50.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	4.45,	0,	99,	100, 	3374, 	99,	1413164
+Election50.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	4.49,	0,	99,	100, 	3418, 	99,	1413152
+Election50.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	4.46,	0,	99,	100, 	3424, 	99,	1413148
+Election50.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	4.6,	0,	99,	100, 	3504, 	99,	1413148
+Election50.pet,	A Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	4.21,	0,	99,	100, 	3056, 	99,	1413148
+Election1.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.01,	1,	2,	2, 	3, 	0,	44108
+Election1.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.02,	1,	2,	2, 	3, 	0,	44108
+Election1.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.03,	1,	2,	2, 	3, 	0,	44108
+Election1.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.03,	1,	2,	2, 	3, 	0,	44120
+Election1.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.02,	1,	2,	2, 	3, 	0,	44108
+Election1.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.03,	1,	2,	2, 	3, 	0,	44108
+Election1.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.03,	1,	2,	2, 	3, 	0,	44108
+Election1.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.03,	1,	2,	2, 	3, 	0,	44108
+Election1.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.02,	1,	2,	2, 	3, 	0,	44108
+Election1.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.03,	1,	2,	2, 	3, 	0,	44108
+Election5.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.05,	9,	20,	10, 	94, 	0,	44108
+Election5.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.05,	9,	23,	10, 	94, 	0,	44108
+Election5.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.06,	9,	23,	10, 	94, 	0,	44108
+Election5.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.05,	9,	25,	10, 	94, 	0,	44108
+Election5.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.07,	9,	25,	10, 	94, 	0,	44108
+Election5.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.04,	9,	25,	10, 	94, 	0,	44108
+Election5.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.05,	9,	24,	10, 	94, 	0,	44108
+Election5.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.06,	9,	24,	10, 	94, 	0,	44108
+Election5.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.05,	9,	20,	10, 	94, 	0,	44108
+Election5.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.06,	9,	20,	10, 	94, 	0,	43976
+Election10.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.12,	19,	82,	20, 	363, 	0,	44108
+Election10.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.12,	19,	82,	20, 	363, 	0,	44108
+Election10.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.13,	19,	82,	20, 	363, 	0,	44108
+Election10.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.13,	19,	100,	20, 	363, 	0,	44108
+Election10.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.11,	19,	100,	20, 	363, 	0,	44108
+Election10.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.12,	19,	73,	20, 	363, 	0,	44108
+Election10.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.13,	19,	73,	20, 	363, 	0,	41856
+Election10.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.12,	19,	73,	20, 	363, 	0,	44108
+Election10.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.12,	19,	79,	20, 	363, 	0,	44108
+Election10.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.12,	19,	79,	20, 	363, 	0,	44108
+Election15.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.23,	29,	155,	30, 	843, 	0,	44108
+Election15.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.22,	29,	155,	30, 	843, 	0,	44108
+Election15.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.22,	29,	143,	30, 	843, 	0,	44108
+Election15.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.22,	29,	143,	30, 	843, 	0,	44108
+Election15.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.23,	29,	143,	30, 	843, 	0,	44108
+Election15.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.23,	29,	173,	30, 	843, 	0,	44108
+Election15.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.23,	29,	173,	30, 	843, 	0,	44108
+Election15.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.23,	29,	165,	30, 	843, 	0,	44108
+Election15.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.23,	29,	165,	30, 	843, 	0,	44108
+Election15.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.22,	29,	170,	30, 	843, 	0,	44280
+Election20.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.37,	39,	242,	40, 	1523, 	0,	326316
+Election20.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.36,	39,	255,	40, 	1523, 	0,	326316
+Election20.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.36,	39,	271,	40, 	1523, 	0,	326316
+Election20.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.37,	39,	256,	40, 	1523, 	0,	326288
+Election20.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.36,	39,	241,	40, 	1523, 	0,	326272
+Election20.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.37,	39,	230,	40, 	1523, 	0,	326324
+Election20.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.37,	39,	266,	40, 	1523, 	0,	326316
+Election20.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.37,	39,	290,	40, 	1523, 	0,	326308
+Election20.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.36,	39,	240,	40, 	1523, 	0,	326304
+Election20.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.36,	39,	247,	40, 	1523, 	0,	326280
+Election25.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.55,	49,	471,	50, 	2403, 	0,	446136
+Election25.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.55,	49,	382,	50, 	2403, 	0,	446180
+Election25.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.54,	49,	436,	50, 	2403, 	0,	446184
+Election25.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.55,	49,	394,	50, 	2403, 	0,	446152
+Election25.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.54,	49,	393,	50, 	2403, 	0,	446176
+Election25.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.55,	49,	419,	50, 	2403, 	0,	446156
+Election25.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.55,	49,	360,	50, 	2403, 	0,	446144
+Election25.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.55,	49,	431,	50, 	2403, 	0,	446176
+Election25.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.55,	49,	432,	50, 	2403, 	0,	446184
+Election25.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.55,	49,	400,	50, 	2403, 	0,	446172
+Election30.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.77,	59,	536,	60, 	3483, 	0,	590556
+Election30.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.77,	59,	529,	60, 	3483, 	0,	590568
+Election30.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.76,	59,	574,	60, 	3483, 	0,	590572
+Election30.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.76,	59,	497,	60, 	3483, 	0,	590536
+Election30.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.77,	59,	742,	60, 	3483, 	0,	590560
+Election30.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.76,	59,	537,	60, 	3483, 	0,	590568
+Election30.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.75,	59,	541,	60, 	3483, 	0,	590564
+Election30.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.76,	59,	629,	60, 	3483, 	0,	590532
+Election30.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.75,	59,	525,	60, 	3483, 	0,	590576
+Election30.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	0.76,	59,	531,	60, 	3483, 	0,	590540
+Election35.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.02,	69,	672,	70, 	4864, 	0,	759520
+Election35.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.03,	69,	670,	70, 	4864, 	0,	759504
+Election35.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.02,	69,	693,	70, 	4864, 	0,	759488
+Election35.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.02,	69,	697,	70, 	4864, 	0,	759520
+Election35.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.02,	69,	677,	70, 	4864, 	0,	759548
+Election35.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.04,	69,	732,	70, 	4864, 	0,	759480
+Election35.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.04,	69,	704,	70, 	4864, 	0,	759532
+Election35.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.02,	69,	701,	70, 	4864, 	0,	759520
+Election35.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.03,	69,	719,	70, 	4864, 	0,	759524
+Election35.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.02,	69,	677,	70, 	4864, 	0,	759520
+Election40.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.35,	79,	901,	80, 	6359, 	0,	952764
+Election40.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.34,	79,	908,	80, 	6359, 	0,	952808
+Election40.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.37,	79,	898,	80, 	6359, 	0,	952812
+Election40.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.36,	79,	897,	80, 	6359, 	0,	952804
+Election40.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.33,	79,	878,	80, 	6359, 	0,	952804
+Election40.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.33,	79,	911,	80, 	6359, 	0,	952804
+Election40.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.35,	79,	886,	80, 	6359, 	0,	952884
+Election40.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.35,	79,	888,	80, 	6359, 	0,	952812
+Election40.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.33,	79,	860,	80, 	6359, 	0,	952804
+Election40.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.32,	79,	875,	80, 	6359, 	0,	952812
+Election45.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.71,	89,	1089,	90, 	8054, 	0,	1170832
+Election45.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.75,	89,	1131,	90, 	8054, 	0,	1170808
+Election45.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.72,	89,	1094,	90, 	8054, 	0,	1170816
+Election45.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.72,	89,	1172,	90, 	8054, 	0,	1170828
+Election45.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.73,	89,	1123,	90, 	8054, 	0,	1170816
+Election45.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.72,	89,	1110,	90, 	8054, 	0,	1170828
+Election45.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.73,	89,	1109,	90, 	8054, 	0,	1170816
+Election45.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.71,	89,	1111,	90, 	8054, 	0,	1170820
+Election45.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.71,	89,	1129,	90, 	8054, 	0,	1170824
+Election45.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	1.75,	89,	1153,	90, 	8054, 	0,	1170776
+Election50.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	2.23,	99,	1397,	100, 	9949, 	0,	1413108
+Election50.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	2.16,	99,	1376,	100, 	9949, 	0,	1413160
+Election50.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	2.13,	99,	1336,	100, 	9949, 	0,	1413144
+Election50.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	2.23,	99,	1391,	100, 	9949, 	0,	1413156
+Election50.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	2.17,	99,	1334,	100, 	9949, 	0,	1413144
+Election50.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	2.1,	99,	1325,	100, 	9949, 	0,	1413148
+Election50.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	2.13,	99,	1392,	100, 	9949, 	0,	1413148
+Election50.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	2.12,	99,	1335,	100, 	9949, 	0,	1413148
+Election50.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	2.19,	99,	1432,	100, 	9949, 	0,	1413156
+Election50.pet,	Correct Leader,	Random DFS with Hash,	Satisfied,	2.17,	99,	1333,	100, 	9949, 	0,	1413104
+Election1.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.03,	0,	1,	2, 	3, 	1,	44108
+Election1.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	2, 	1,	44108
+Election1.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	2, 	1,	44108
+Election1.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	2, 	1,	44108
+Election1.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.01,	0,	1,	2, 	2, 	1,	44108
+Election1.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.01,	0,	1,	2, 	2, 	1,	44108
+Election1.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	3, 	1,	44108
+Election1.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.03,	0,	1,	2, 	3, 	1,	44108
+Election1.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.01,	0,	1,	2, 	2, 	1,	44108
+Election1.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	2, 	1,	44108
+Election5.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	39, 	9,	44108
+Election5.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.04,	0,	9,	10, 	46, 	9,	44108
+Election5.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	46, 	9,	44108
+Election5.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.06,	0,	9,	10, 	50, 	9,	44108
+Election5.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.04,	0,	9,	10, 	50, 	9,	44108
+Election5.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	50, 	9,	44108
+Election5.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	41, 	9,	44108
+Election5.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.04,	0,	9,	10, 	41, 	9,	44108
+Election5.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.04,	0,	9,	10, 	40, 	9,	44108
+Election5.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	40, 	9,	44108
+Election10.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	130, 	19,	44108
+Election10.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	130, 	19,	44108
+Election10.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.1,	0,	19,	20, 	130, 	19,	44108
+Election10.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	148, 	19,	44108
+Election10.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	148, 	19,	44108
+Election10.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	115, 	19,	44108
+Election10.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.12,	0,	19,	20, 	115, 	19,	44108
+Election10.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.12,	0,	19,	20, 	115, 	19,	44108
+Election10.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	146, 	19,	44108
+Election10.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	146, 	19,	44108
+Election15.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	344, 	29,	44108
+Election15.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.23,	0,	29,	30, 	344, 	29,	44108
+Election15.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	296, 	29,	44108
+Election15.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	296, 	29,	44108
+Election15.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.21,	0,	29,	30, 	296, 	29,	44108
+Election15.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	353, 	29,	44108
+Election15.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.21,	0,	29,	30, 	185, 	29,	44280
+Election15.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.21,	0,	29,	30, 	185, 	29,	44108
+Election15.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	364, 	29,	44108
+Election15.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.23,	0,	29,	30, 	319, 	29,	44108
+Election20.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.4,	0,	39,	40, 	518, 	39,	326304
+Election20.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.41,	0,	39,	40, 	553, 	39,	326316
+Election20.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.4,	0,	39,	40, 	572, 	39,	326288
+Election20.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.41,	0,	39,	40, 	647, 	39,	326304
+Election20.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.4,	0,	39,	40, 	565, 	39,	326308
+Election20.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.41,	0,	39,	40, 	568, 	39,	326308
+Election20.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.39,	0,	39,	40, 	502, 	39,	326304
+Election20.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.4,	0,	39,	40, 	515, 	39,	326324
+Election20.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.4,	0,	39,	40, 	557, 	39,	326312
+Election20.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.37,	0,	39,	40, 	352, 	39,	326316
+Election25.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.7,	0,	49,	50, 	823, 	49,	446188
+Election25.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.69,	0,	49,	50, 	813, 	49,	446172
+Election25.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.72,	0,	49,	50, 	926, 	49,	446176
+Election25.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.7,	0,	49,	50, 	772, 	49,	446176
+Election25.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.71,	0,	49,	50, 	832, 	49,	446172
+Election25.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.65,	0,	49,	50, 	662, 	49,	446132
+Election25.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.69,	0,	49,	50, 	777, 	49,	446184
+Election25.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.68,	0,	49,	50, 	749, 	49,	446188
+Election25.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.69,	0,	49,	50, 	757, 	49,	446184
+Election25.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	0.71,	0,	49,	50, 	845, 	49,	446188
+Election30.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1.09,	0,	59,	60, 	1232, 	59,	590564
+Election30.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1.02,	0,	59,	60, 	974, 	59,	590552
+Election30.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1,	0,	59,	60, 	1119, 	59,	590572
+Election30.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1.03,	0,	59,	60, 	1096, 	59,	590564
+Election30.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1.07,	0,	59,	60, 	1304, 	59,	590568
+Election30.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1.03,	0,	59,	60, 	1065, 	59,	590572
+Election30.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1.03,	0,	59,	60, 	1046, 	59,	590576
+Election30.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1.06,	0,	59,	60, 	1192, 	59,	590568
+Election30.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1.07,	0,	59,	60, 	1215, 	59,	590564
+Election30.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1.05,	0,	59,	60, 	1239, 	59,	590568
+Election35.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1.81,	0,	69,	70, 	1894, 	69,	759520
+Election35.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1.58,	0,	69,	70, 	1424, 	69,	759524
+Election35.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1.67,	0,	69,	70, 	1633, 	69,	759520
+Election35.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1.64,	0,	69,	70, 	1583, 	69,	759532
+Election35.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1.61,	0,	69,	70, 	1684, 	69,	759480
+Election35.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1.73,	0,	69,	70, 	1748, 	69,	759520
+Election35.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1.6,	0,	69,	70, 	1465, 	69,	759496
+Election35.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1.68,	0,	69,	70, 	1626, 	69,	759520
+Election35.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1.57,	0,	69,	70, 	1341, 	69,	759528
+Election35.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	1.67,	0,	69,	70, 	1735, 	69,	759492
+Election40.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	2.21,	0,	79,	80, 	1903, 	79,	952800
+Election40.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	2.17,	0,	79,	80, 	1806, 	79,	952804
+Election40.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	2.42,	0,	79,	80, 	2288, 	79,	952800
+Election40.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	2.31,	0,	79,	80, 	2082, 	79,	952812
+Election40.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	2.37,	0,	79,	80, 	2338, 	79,	952772
+Election40.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	2.19,	0,	79,	80, 	1923, 	79,	952800
+Election40.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	2.21,	0,	79,	80, 	1891, 	79,	952812
+Election40.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	2.38,	0,	79,	80, 	2178, 	79,	952820
+Election40.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	2.38,	0,	79,	80, 	2212, 	79,	952760
+Election40.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	2.2,	0,	79,	80, 	1856, 	79,	952808
+Election45.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	3.52,	0,	89,	90, 	2837, 	89,	1170812
+Election45.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	3.44,	0,	89,	90, 	2679, 	89,	1170768
+Election45.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	3.24,	0,	89,	90, 	2385, 	89,	1170820
+Election45.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	3.23,	0,	89,	90, 	2408, 	89,	1170816
+Election45.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	3.41,	0,	89,	90, 	2669, 	89,	1170828
+Election45.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	3.23,	0,	89,	90, 	2378, 	89,	1170816
+Election45.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	3.22,	0,	89,	90, 	2427, 	89,	1170812
+Election45.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	3.28,	0,	89,	90, 	2486, 	89,	1170828
+Election45.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	3.38,	0,	89,	90, 	2562, 	89,	1170772
+Election45.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	3.53,	0,	89,	90, 	2729, 	89,	1170808
+Election50.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	4.49,	0,	99,	100, 	3277, 	99,	1413136
+Election50.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	4.2,	0,	99,	100, 	3004, 	99,	1413156
+Election50.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	4.26,	0,	99,	100, 	3114, 	99,	1413156
+Election50.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	4.44,	0,	99,	100, 	3367, 	99,	1413156
+Election50.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	4.31,	0,	99,	100, 	3163, 	99,	1413148
+Election50.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	4.16,	0,	99,	100, 	2933, 	99,	1413148
+Election50.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	4.62,	0,	99,	100, 	3588, 	99,	1413112
+Election50.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	3.98,	0,	99,	100, 	2767, 	99,	1413156
+Election50.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	4.67,	0,	99,	100, 	3557, 	99,	1413112
+Election50.pet,	Correct Leader,	Random DFS with Monotonicity,	Satisfied,	4.19,	0,	99,	100, 	3005, 	99,	1413148
+Election1.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.03,	0,	1,	2, 	3, 	1,	44600
+Election1.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	2, 	1,	44108
+Election1.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.03,	0,	1,	2, 	2, 	1,	44108
+Election1.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	2, 	1,	44108
+Election1.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	3, 	1,	44108
+Election1.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.02,	0,	1,	2, 	3, 	1,	44108
+Election1.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.03,	0,	1,	2, 	2, 	1,	44108
+Election1.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.03,	0,	1,	2, 	2, 	1,	44108
+Election1.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.03,	0,	1,	2, 	3, 	1,	44108
+Election1.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.03,	0,	1,	2, 	3, 	1,	44108
+Election5.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	50, 	9,	44108
+Election5.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.04,	0,	9,	10, 	34, 	9,	44108
+Election5.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	34, 	9,	44108
+Election5.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.04,	0,	9,	10, 	28, 	9,	44108
+Election5.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	28, 	9,	44108
+Election5.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.04,	0,	9,	10, 	28, 	9,	44108
+Election5.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	18, 	9,	44108
+Election5.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.03,	0,	9,	10, 	18, 	9,	44108
+Election5.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	47, 	9,	44108
+Election5.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.05,	0,	9,	10, 	47, 	9,	44108
+Election10.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.12,	0,	19,	20, 	186, 	19,	44108
+Election10.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	186, 	19,	44108
+Election10.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	186, 	19,	44108
+Election10.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	106, 	19,	44108
+Election10.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	106, 	19,	44108
+Election10.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	123, 	19,	44108
+Election10.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	123, 	19,	44108
+Election10.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.1,	0,	19,	20, 	123, 	19,	44108
+Election10.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	137, 	19,	44108
+Election10.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.11,	0,	19,	20, 	137, 	19,	44108
+Election15.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.21,	0,	29,	30, 	319, 	29,	44108
+Election15.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	319, 	29,	44108
+Election15.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	387, 	29,	44108
+Election15.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.23,	0,	29,	30, 	387, 	29,	44108
+Election15.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.21,	0,	29,	30, 	387, 	29,	44108
+Election15.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.21,	0,	29,	30, 	318, 	29,	44108
+Election15.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	318, 	29,	44108
+Election15.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.23,	0,	29,	30, 	358, 	29,	44108
+Election15.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	295, 	29,	44108
+Election15.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.22,	0,	29,	30, 	295, 	29,	41860
+Election20.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.39,	0,	39,	40, 	448, 	39,	326296
+Election20.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.4,	0,	39,	40, 	551, 	39,	326304
+Election20.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.41,	0,	39,	40, 	598, 	39,	326316
+Election20.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.39,	0,	39,	40, 	444, 	39,	326316
+Election20.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.41,	0,	39,	40, 	595, 	39,	326304
+Election20.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.39,	0,	39,	40, 	435, 	39,	326292
+Election20.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.41,	0,	39,	40, 	639, 	39,	326316
+Election20.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.4,	0,	39,	40, 	523, 	39,	326308
+Election20.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.39,	0,	39,	40, 	504, 	39,	326312
+Election20.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.39,	0,	39,	40, 	483, 	39,	326316
+Election25.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.72,	0,	49,	50, 	906, 	49,	446188
+Election25.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.72,	0,	49,	50, 	841, 	49,	446184
+Election25.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.7,	0,	49,	50, 	831, 	49,	446132
+Election25.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.71,	0,	49,	50, 	874, 	49,	446184
+Election25.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.74,	0,	49,	50, 	948, 	49,	446168
+Election25.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.75,	0,	49,	50, 	975, 	49,	446176
+Election25.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.71,	0,	49,	50, 	818, 	49,	446168
+Election25.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.69,	0,	49,	50, 	846, 	49,	446184
+Election25.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.72,	0,	49,	50, 	855, 	49,	446184
+Election25.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.7,	0,	49,	50, 	790, 	49,	446172
+Election30.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.11,	0,	59,	60, 	1396, 	59,	590564
+Election30.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	0.96,	0,	59,	60, 	1018, 	59,	590540
+Election30.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.07,	0,	59,	60, 	1118, 	59,	590560
+Election30.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.05,	0,	59,	60, 	1133, 	59,	590520
+Election30.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.08,	0,	59,	60, 	1193, 	59,	590568
+Election30.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.03,	0,	59,	60, 	1123, 	59,	590560
+Election30.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.01,	0,	59,	60, 	1152, 	59,	590532
+Election30.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.02,	0,	59,	60, 	1239, 	59,	590568
+Election30.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.1,	0,	59,	60, 	1323, 	59,	590532
+Election30.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.06,	0,	59,	60, 	1128, 	59,	590548
+Election35.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.72,	0,	69,	70, 	1764, 	69,	759532
+Election35.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.7,	0,	69,	70, 	1704, 	69,	759500
+Election35.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.77,	0,	69,	70, 	1846, 	69,	759520
+Election35.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.61,	0,	69,	70, 	1512, 	69,	759468
+Election35.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.59,	0,	69,	70, 	1464, 	69,	759520
+Election35.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.6,	0,	69,	70, 	1503, 	69,	759524
+Election35.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.69,	0,	69,	70, 	1647, 	69,	759516
+Election35.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.7,	0,	69,	70, 	1732, 	69,	759520
+Election35.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.69,	0,	69,	70, 	1688, 	69,	759520
+Election35.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	1.66,	0,	69,	70, 	1615, 	69,	759548
+Election40.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.22,	0,	79,	80, 	1893, 	79,	952812
+Election40.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.33,	0,	79,	80, 	2118, 	79,	952812
+Election40.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.36,	0,	79,	80, 	2235, 	79,	952804
+Election40.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.33,	0,	79,	80, 	2108, 	79,	952804
+Election40.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.3,	0,	79,	80, 	2094, 	79,	952820
+Election40.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.47,	0,	79,	80, 	2367, 	79,	952800
+Election40.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.19,	0,	79,	80, 	1853, 	79,	952884
+Election40.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.19,	0,	79,	80, 	1900, 	79,	952780
+Election40.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.27,	0,	79,	80, 	2027, 	79,	952800
+Election40.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	2.25,	0,	79,	80, 	2110, 	79,	952760
+Election45.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.43,	0,	89,	90, 	2772, 	89,	1170828
+Election45.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.41,	0,	89,	90, 	2680, 	89,	1170816
+Election45.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.13,	0,	89,	90, 	2322, 	89,	1170776
+Election45.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.46,	0,	89,	90, 	2701, 	89,	1170828
+Election45.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.48,	0,	89,	90, 	2795, 	89,	1170776
+Election45.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.12,	0,	89,	90, 	2302, 	89,	1170820
+Election45.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.17,	0,	89,	90, 	2381, 	89,	1170820
+Election45.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.31,	0,	89,	90, 	2587, 	89,	1170812
+Election45.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.47,	0,	89,	90, 	2767, 	89,	1170828
+Election45.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.65,	0,	89,	90, 	3003, 	89,	1170828
+Election50.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	4.25,	0,	99,	100, 	3063, 	99,	1413144
+Election50.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	3.98,	0,	99,	100, 	2807, 	99,	1413148
+Election50.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	4.3,	0,	99,	100, 	3251, 	99,	1413156
+Election50.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	4.18,	0,	99,	100, 	3036, 	99,	1413152
+Election50.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	4.08,	0,	99,	100, 	2934, 	99,	1413152
+Election50.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	4.34,	0,	99,	100, 	3315, 	99,	1413144
+Election50.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	4.05,	0,	99,	100, 	2885, 	99,	1413104
+Election50.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	4.4,	0,	99,	100, 	3310, 	99,	1413156
+Election50.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	4.4,	0,	99,	100, 	3334, 	99,	1413148
+Election50.pet,	Correct Leader,	Ordered Random DFS with Monotonicity,	Satisfied,	4.27,	0,	99,	100, 	3201, 	99,	1413156
+Mutual1.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.04,	13,	12,	0, 	16, 	0,	44108
+Mutual1.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.03,	13,	12,	0, 	16, 	0,	44108
+Mutual1.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.04,	13,	12,	0, 	16, 	0,	44108
+Mutual1.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.03,	13,	12,	0, 	16, 	0,	44108
+Mutual1.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.04,	13,	12,	0, 	16, 	0,	44108
+Mutual1.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.02,	13,	12,	0, 	16, 	0,	44108
+Mutual1.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.04,	13,	12,	0, 	16, 	0,	44108
+Mutual1.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.04,	13,	12,	0, 	16, 	0,	44108
+Mutual1.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.04,	13,	12,	0, 	16, 	0,	44108
+Mutual1.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.04,	13,	12,	0, 	16, 	0,	44108
+Mutual5.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.29,	26144,	26143,	0, 	130880, 	0,	44108
+Mutual5.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.29,	26144,	26143,	0, 	130880, 	0,	44108
+Mutual5.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.26,	26144,	26143,	0, 	130880, 	0,	44108
+Mutual5.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.28,	26144,	26143,	0, 	130880, 	0,	44108
+Mutual5.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.29,	26144,	26143,	0, 	130880, 	0,	44108
+Mutual5.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.28,	26144,	26143,	0, 	130880, 	0,	44108
+Mutual5.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.29,	26144,	26143,	0, 	130880, 	0,	44108
+Mutual5.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.29,	26144,	26143,	0, 	130880, 	0,	44108
+Mutual5.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.27,	26144,	26143,	0, 	130880, 	0,	44108
+Mutual5.pet,	Too Many in Critical,	Random DFS with Hash,	Not satisfiable,	0.29,	26144,	26143,	0, 	130880, 	0,	44108
+Mutual10.pet,	Too Many in Critical,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	312064
+Mutual1.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.04,	5,	5,	0, 	18, 	1,	44108
+Mutual1.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.04,	5,	5,	0, 	19, 	1,	44108
+Mutual1.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.04,	5,	5,	0, 	19, 	1,	44108
+Mutual1.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.02,	5,	5,	0, 	19, 	1,	44108
+Mutual1.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.03,	5,	5,	0, 	20, 	1,	44108
+Mutual1.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.03,	5,	5,	0, 	20, 	1,	44108
+Mutual1.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.04,	5,	5,	0, 	16, 	1,	44108
+Mutual1.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.04,	5,	5,	0, 	16, 	1,	44108
+Mutual1.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.04,	5,	5,	0, 	16, 	1,	44108
+Mutual1.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.02,	5,	5,	0, 	18, 	1,	44108
+Mutual5.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.19,	211,	234,	0, 	2680, 	24,	44108
+Mutual5.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.2,	203,	223,	0, 	2529, 	21,	44108
+Mutual5.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.18,	203,	223,	0, 	2529, 	21,	43976
+Mutual5.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.18,	202,	216,	0, 	2519, 	15,	44108
+Mutual5.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.19,	202,	216,	0, 	2519, 	15,	44600
+Mutual5.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.19,	202,	216,	0, 	2519, 	15,	44108
+Mutual5.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.19,	202,	227,	0, 	2595, 	26,	44108
+Mutual5.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.19,	202,	227,	0, 	2595, 	26,	44108
+Mutual5.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.19,	202,	216,	0, 	2465, 	15,	44108
+Mutual5.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	0.17,	202,	216,	0, 	2465, 	15,	44108
+Mutual10.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	8.7,	1645,	1911,	0, 	46012, 	267,	186400
+Mutual10.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	7.05,	1604,	1681,	0, 	43230, 	78,	186416
+Mutual10.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	8.66,	1697,	1902,	0, 	47132, 	206,	186416
+Mutual10.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	7.72,	1644,	1760,	0, 	44932, 	117,	186416
+Mutual10.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	9,	1698,	1958,	0, 	47278, 	261,	186404
+Mutual10.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	7.45,	1607,	1686,	0, 	43046, 	80,	186392
+Mutual10.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	7.39,	1607,	1720,	0, 	43771, 	114,	186408
+Mutual10.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	7.23,	1604,	1675,	0, 	43353, 	72,	186428
+Mutual10.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	8.78,	1660,	1927,	0, 	46494, 	268,	186376
+Mutual10.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	8.09,	1631,	1788,	0, 	45198, 	158,	186412
+Mutual15.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	146.21,	5499,	5752,	0, 	234154, 	254,	232888
+Mutual15.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	150.37,	5517,	6020,	0, 	235593, 	504,	232932
+Mutual15.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	151.6,	5562,	6109,	0, 	237964, 	548,	232936
+Mutual15.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	144.12,	5468,	5804,	0, 	233565, 	337,	232940
+Mutual15.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	133.87,	5456,	5561,	0, 	229627, 	106,	232928
+Mutual15.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	143.32,	5482,	5839,	0, 	232177, 	358,	232936
+Mutual15.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	156.22,	5501,	6126,	0, 	237661, 	626,	232920
+Mutual15.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	149.04,	5552,	6040,	0, 	236815, 	489,	232948
+Mutual15.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	148.13,	5473,	5928,	0, 	234487, 	456,	232936
+Mutual15.pet,	Too Many in Critical,	Random DFS with Monotonicity,	Not satisfiable,	151.82,	5523,	6048,	0, 	236538, 	526,	232928
+Mutual20.pet,	Too Many in Critical,	Random DFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	279448
+Mutual1.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.04,	5,	5,	0, 	19, 	1,	44108
+Mutual1.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.03,	5,	5,	0, 	19, 	1,	44108
+Mutual1.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.02,	5,	5,	0, 	19, 	1,	44108
+Mutual1.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.04,	5,	5,	0, 	19, 	1,	44108
+Mutual1.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.04,	5,	5,	0, 	19, 	1,	44104
+Mutual1.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.03,	5,	5,	0, 	15, 	1,	44108
+Mutual1.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.04,	5,	5,	0, 	15, 	1,	44108
+Mutual1.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.03,	5,	5,	0, 	17, 	1,	44108
+Mutual1.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.04,	5,	5,	0, 	17, 	1,	44108
+Mutual1.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.03,	5,	5,	0, 	17, 	1,	44108
+Mutual5.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.15,	201,	205,	0, 	2558, 	5,	44108
+Mutual5.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.16,	201,	205,	0, 	2558, 	5,	44108
+Mutual5.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.16,	202,	219,	0, 	2559, 	18,	44108
+Mutual5.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.15,	202,	219,	0, 	2559, 	18,	44108
+Mutual5.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.14,	203,	223,	0, 	2523, 	21,	44108
+Mutual5.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.15,	203,	223,	0, 	2523, 	21,	44108
+Mutual5.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.16,	203,	223,	0, 	2523, 	21,	44108
+Mutual5.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.15,	202,	225,	0, 	2568, 	24,	44108
+Mutual5.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.16,	202,	225,	0, 	2568, 	24,	44108
+Mutual5.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	0.15,	215,	242,	0, 	2741, 	28,	44108
+Mutual10.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	5.03,	1628,	1761,	0, 	44408, 	134,	186408
+Mutual10.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.88,	1604,	1694,	0, 	43791, 	91,	186444
+Mutual10.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	5.03,	1647,	1913,	0, 	45711, 	267,	186432
+Mutual10.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.82,	1603,	1664,	0, 	43436, 	62,	186432
+Mutual10.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	5.09,	1663,	1837,	0, 	45916, 	175,	186444
+Mutual10.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.82,	1623,	1728,	0, 	44329, 	106,	186436
+Mutual10.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.96,	1655,	1746,	0, 	45055, 	92,	186412
+Mutual10.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	5,	1631,	1686,	0, 	44543, 	56,	186404
+Mutual10.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.91,	1627,	1707,	0, 	43775, 	81,	186416
+Mutual10.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	4.73,	1601,	1631,	0, 	43096, 	31,	186404
+Mutual15.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	65.43,	5469,	5757,	0, 	232003, 	289,	232928
+Mutual15.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	67.47,	5506,	6253,	0, 	236977, 	748,	233060
+Mutual15.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	95.72,	5462,	5808,	0, 	231799, 	347,	232936
+Mutual15.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	66.59,	5564,	6116,	0, 	238537, 	553,	233060
+Mutual15.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	67.27,	5535,	5897,	0, 	236035, 	363,	232932
+Mutual15.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	70.57,	5603,	6429,	0, 	240913, 	827,	233060
+Mutual15.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	69.32,	5539,	5937,	0, 	236763, 	399,	232940
+Mutual15.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	71.25,	5614,	6480,	0, 	244710, 	867,	232960
+Mutual15.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	66.37,	5559,	6020,	0, 	238099, 	462,	233072
+Mutual15.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	Not satisfiable,	65.25,	5464,	5646,	0, 	231972, 	183,	232932
+Mutual20.pet,	Too Many in Critical,	Ordered Random DFS with Monotonicity,	OutOfTime,	-,	-,	-,	-,	279452
+Mutual1.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.04,	2,	6,	3, 	8, 	0,	44108
+Mutual1.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.04,	2,	6,	3, 	8, 	0,	44108
+Mutual1.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.05,	3,	6,	3, 	8, 	0,	44108
+Mutual1.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.04,	3,	6,	3, 	8, 	0,	44108
+Mutual1.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.04,	3,	6,	3, 	8, 	0,	44108
+Mutual1.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.05,	3,	6,	3, 	8, 	0,	44108
+Mutual1.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.04,	3,	6,	3, 	8, 	0,	44108
+Mutual1.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.03,	3,	6,	3, 	8, 	0,	44108
+Mutual1.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.04,	3,	6,	3, 	8, 	0,	44108
+Mutual1.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.04,	3,	6,	3, 	8, 	0,	44108
+Mutual5.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.09,	7,	50,	8, 	58, 	0,	44108
+Mutual5.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.09,	7,	34,	7, 	36, 	0,	44108
+Mutual5.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.09,	7,	34,	7, 	36, 	0,	44108
+Mutual5.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.08,	7,	34,	7, 	36, 	0,	44108
+Mutual5.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.1,	4,	42,	5, 	47, 	0,	44108
+Mutual5.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.08,	4,	42,	5, 	47, 	0,	44108
+Mutual5.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.09,	9,	45,	8, 	51, 	0,	44108
+Mutual5.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.09,	9,	45,	8, 	51, 	0,	44108
+Mutual5.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.09,	5,	52,	6, 	63, 	0,	44108
+Mutual5.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.09,	5,	52,	6, 	63, 	0,	44108
+Mutual10.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.16,	22,	165,	15, 	193, 	0,	44108
+Mutual10.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.15,	13,	207,	14, 	230, 	0,	44108
+Mutual10.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.15,	13,	207,	14, 	230, 	0,	44108
+Mutual10.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.16,	28,	219,	17, 	239, 	0,	44108
+Mutual10.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.15,	28,	219,	17, 	239, 	0,	44108
+Mutual10.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.15,	28,	219,	17, 	239, 	0,	44108
+Mutual10.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.16,	39,	227,	18, 	255, 	0,	44108
+Mutual10.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.15,	39,	227,	18, 	255, 	0,	44108
+Mutual10.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.17,	27,	159,	15, 	172, 	0,	44108
+Mutual10.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.16,	27,	159,	15, 	172, 	0,	44108
+Mutual15.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.23,	17,	341,	18, 	367, 	0,	44108
+Mutual15.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.22,	17,	341,	18, 	367, 	0,	44108
+Mutual15.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.22,	17,	341,	18, 	367, 	0,	44108
+Mutual15.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.23,	26,	391,	23, 	430, 	0,	44120
+Mutual15.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.24,	26,	391,	23, 	430, 	0,	44108
+Mutual15.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.23,	18,	375,	19, 	429, 	0,	44108
+Mutual15.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.22,	18,	375,	19, 	429, 	0,	44108
+Mutual15.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.22,	18,	375,	19, 	429, 	0,	41860
+Mutual15.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.22,	19,	380,	20, 	423, 	0,	44108
+Mutual15.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.23,	19,	380,	20, 	423, 	0,	44108
+Mutual20.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.31,	28,	807,	29, 	920, 	0,	44108
+Mutual20.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.3,	21,	681,	22, 	801, 	0,	44108
+Mutual20.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.29,	21,	712,	22, 	847, 	0,	44108
+Mutual20.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.29,	18,	600,	19, 	693, 	0,	44108
+Mutual20.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.77,	16403,	17026,	20, 	180965, 	0,	279320
+Mutual20.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.29,	24,	819,	25, 	958, 	0,	44108
+Mutual20.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.3,	22,	699,	23, 	792, 	0,	44104
+Mutual20.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.29,	19,	734,	20, 	893, 	0,	44108
+Mutual20.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.3,	152,	838,	25, 	1597, 	0,	44108
+Mutual20.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.3,	39,	595,	24, 	663, 	0,	44108
+Mutual25.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.36,	25,	1001,	26, 	1125, 	0,	325848
+Mutual25.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.38,	543,	1601,	32, 	4808, 	0,	325852
+Mutual25.pet,	One Done,	Random DFS with Hash,	Satisfied,	0.4,	1059,	2458,	36, 	10872, 	0,	325848
+Mutual25.pet,	One Done,	Random DFS with Hash,	OutOfTime,	-,	-,	-,	-,	588684
+Mutual1.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.03,	0,	3,	4, 	5, 	1,	44108
+Mutual1.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.03,	0,	2,	3, 	5, 	1,	44108
+Mutual1.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.03,	0,	2,	3, 	5, 	1,	44108
+Mutual1.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.03,	0,	3,	4, 	8, 	1,	44108
+Mutual1.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.03,	0,	3,	4, 	8, 	1,	44108
+Mutual1.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.03,	0,	3,	4, 	8, 	1,	44108
+Mutual1.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.04,	0,	2,	3, 	6, 	1,	44108
+Mutual1.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.04,	0,	2,	3, 	6, 	1,	44108
+Mutual1.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.04,	0,	3,	4, 	6, 	1,	44108
+Mutual1.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.02,	0,	3,	4, 	6, 	1,	44108
+Mutual5.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.09,	0,	6,	7, 	17, 	4,	44108
+Mutual5.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.08,	0,	6,	7, 	17, 	4,	44108
+Mutual5.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.09,	0,	6,	7, 	17, 	4,	44108
+Mutual5.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.08,	0,	4,	5, 	8, 	3,	44108
+Mutual5.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.08,	0,	4,	5, 	8, 	3,	44108
+Mutual5.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.08,	0,	6,	7, 	13, 	4,	44108
+Mutual5.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.08,	0,	6,	7, 	13, 	4,	44108
+Mutual5.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.08,	0,	6,	7, 	13, 	4,	44108
+Mutual5.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.09,	0,	2,	3, 	4, 	1,	44108
+Mutual5.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.08,	0,	2,	3, 	4, 	1,	44108
+Mutual10.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.14,	0,	5,	6, 	8, 	4,	44108
+Mutual10.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.14,	0,	5,	6, 	8, 	4,	44108
+Mutual10.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.15,	0,	8,	9, 	25, 	7,	44108
+Mutual10.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.14,	0,	8,	9, 	25, 	7,	44108
+Mutual10.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.14,	0,	8,	9, 	25, 	7,	44108
+Mutual10.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.14,	0,	11,	12, 	33, 	9,	44108
+Mutual10.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.14,	0,	11,	12, 	33, 	9,	44108
+Mutual10.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.14,	0,	9,	10, 	28, 	8,	44108
+Mutual10.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.14,	0,	9,	10, 	28, 	8,	44108
+Mutual10.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.15,	0,	9,	10, 	28, 	8,	43976
+Mutual15.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.2,	0,	9,	10, 	24, 	7,	44280
+Mutual15.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.19,	0,	9,	10, 	24, 	7,	44108
+Mutual15.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.21,	0,	14,	15, 	50, 	12,	44108
+Mutual15.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.2,	0,	14,	15, 	50, 	12,	44108
+Mutual15.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.21,	0,	17,	18, 	80, 	15,	44108
+Mutual15.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.2,	0,	17,	18, 	80, 	15,	44108
+Mutual15.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.2,	0,	17,	18, 	80, 	15,	44108
+Mutual15.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.2,	0,	16,	17, 	58, 	14,	44108
+Mutual15.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.2,	0,	16,	17, 	58, 	14,	44108
+Mutual15.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.21,	0,	14,	15, 	40, 	12,	44108
+Mutual20.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.25,	0,	15,	16, 	50, 	13,	44108
+Mutual20.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.27,	0,	16,	17, 	57, 	14,	44108
+Mutual20.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.26,	0,	8,	9, 	18, 	7,	44108
+Mutual20.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.27,	0,	20,	21, 	61, 	19,	44600
+Mutual20.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.27,	0,	15,	16, 	45, 	14,	44108
+Mutual20.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.26,	0,	19,	20, 	69, 	17,	44108
+Mutual20.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.26,	0,	11,	12, 	21, 	10,	44108
+Mutual20.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.27,	0,	6,	7, 	12, 	4,	44108
+Mutual20.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.26,	0,	10,	11, 	26, 	9,	44108
+Mutual20.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.26,	0,	16,	17, 	51, 	15,	44108
+Mutual25.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.32,	0,	13,	14, 	24, 	12,	325852
+Mutual25.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.33,	0,	16,	17, 	34, 	15,	325848
+Mutual25.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.31,	0,	24,	25, 	68, 	22,	325828
+Mutual25.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.32,	0,	19,	20, 	59, 	18,	325864
+Mutual25.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.32,	0,	14,	15, 	36, 	13,	325848
+Mutual25.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.32,	0,	14,	15, 	22, 	12,	325900
+Mutual25.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.33,	0,	18,	19, 	40, 	16,	325860
+Mutual25.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.32,	0,	12,	13, 	37, 	10,	325860
+Mutual25.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.32,	0,	19,	20, 	56, 	18,	325860
+Mutual25.pet,	One Done,	Random DFS with Monotonicity,	Satisfied,	0.32,	0,	21,	22, 	60, 	20,	325860
+Mutual1.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.04,	0,	2,	3, 	5, 	1,	44108
+Mutual1.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.04,	0,	3,	4, 	5, 	1,	44108
+Mutual1.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.04,	0,	3,	4, 	5, 	1,	44108
+Mutual1.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.03,	0,	3,	4, 	4, 	1,	44108
+Mutual1.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.04,	0,	3,	4, 	4, 	1,	44108
+Mutual1.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.03,	0,	3,	4, 	4, 	1,	44108
+Mutual1.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.02,	0,	2,	3, 	4, 	1,	44104
+Mutual1.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.03,	0,	2,	3, 	4, 	1,	44108
+Mutual1.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.03,	0,	2,	3, 	5, 	1,	44108
+Mutual1.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.03,	0,	2,	3, 	5, 	1,	44108
+Mutual5.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.08,	0,	6,	7, 	24, 	4,	44108
+Mutual5.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.08,	0,	6,	7, 	24, 	4,	44108
+Mutual5.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.08,	0,	6,	7, 	24, 	4,	44108
+Mutual5.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.08,	0,	4,	5, 	10, 	3,	44108
+Mutual5.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.08,	0,	4,	5, 	10, 	3,	44108
+Mutual5.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.08,	0,	5,	6, 	7, 	4,	44108
+Mutual5.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.09,	0,	5,	6, 	7, 	4,	44108
+Mutual5.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.08,	0,	5,	6, 	7, 	4,	44108
+Mutual5.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.09,	0,	7,	8, 	26, 	5,	44108
+Mutual5.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.09,	0,	7,	8, 	26, 	5,	44108
+Mutual10.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.14,	0,	7,	8, 	15, 	6,	44108
+Mutual10.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.14,	0,	7,	8, 	15, 	6,	44108
+Mutual10.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.15,	0,	6,	7, 	14, 	4,	44108
+Mutual10.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.14,	0,	6,	7, 	14, 	4,	44108
+Mutual10.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.14,	0,	6,	7, 	14, 	4,	44108
+Mutual10.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.14,	0,	4,	5, 	16, 	3,	44108
+Mutual10.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.15,	0,	4,	5, 	16, 	3,	44108
+Mutual10.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.14,	0,	9,	10, 	30, 	8,	44108
+Mutual10.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.14,	0,	9,	10, 	30, 	8,	44108
+Mutual10.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.15,	0,	9,	10, 	30, 	8,	44108
+Mutual15.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.2,	0,	15,	16, 	55, 	13,	44108
+Mutual15.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.19,	0,	15,	16, 	55, 	13,	44108
+Mutual15.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.2,	0,	14,	15, 	39, 	13,	44108
+Mutual15.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.2,	0,	14,	15, 	39, 	13,	44108
+Mutual15.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.2,	0,	6,	7, 	8, 	4,	44108
+Mutual15.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.2,	0,	6,	7, 	8, 	4,	44108
+Mutual15.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.2,	0,	6,	7, 	8, 	4,	44108
+Mutual15.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.2,	0,	15,	16, 	70, 	14,	44108
+Mutual15.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.2,	0,	15,	16, 	70, 	14,	44108
+Mutual15.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.21,	0,	16,	17, 	78, 	14,	44108
+Mutual20.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.27,	0,	15,	16, 	46, 	14,	44108
+Mutual20.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.26,	0,	11,	12, 	31, 	10,	44108
+Mutual20.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.26,	0,	11,	12, 	31, 	10,	44108
+Mutual20.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.27,	0,	16,	17, 	49, 	15,	44108
+Mutual20.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.27,	0,	5,	6, 	10, 	4,	44108
+Mutual20.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.26,	0,	18,	19, 	77, 	17,	44108
+Mutual20.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.26,	0,	12,	13, 	25, 	10,	44108
+Mutual20.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.27,	0,	18,	19, 	65, 	16,	44600
+Mutual20.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.26,	0,	20,	21, 	73, 	19,	44108
+Mutual20.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.26,	0,	10,	11, 	16, 	9,	44108
+Mutual25.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.33,	0,	19,	20, 	53, 	18,	325816
+Mutual25.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.32,	0,	10,	11, 	18, 	9,	325848
+Mutual25.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.32,	0,	8,	9, 	17, 	7,	325860
+Mutual25.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.32,	0,	18,	19, 	64, 	17,	325848
+Mutual25.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.32,	0,	12,	13, 	30, 	11,	325860
+Mutual25.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.32,	0,	15,	16, 	53, 	14,	325864
+Mutual25.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.32,	0,	22,	23, 	97, 	21,	325860
+Mutual25.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.33,	0,	20,	21, 	91, 	19,	325812
+Mutual25.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.32,	0,	16,	17, 	43, 	14,	325860
+Mutual25.pet,	One Done,	Ordered Random DFS with Monotonicity,	Satisfied,	0.33,	0,	10,	11, 	17, 	9,	325860
