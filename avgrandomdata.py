@@ -1,9 +1,9 @@
 
 
 def printthis(count,model,curcurry,method,sat,time,Expanded,Explored,Path,fired,Removed):
-	print model + " " + curCurry + " with " + method  + ", " + str(time / count) + ", " + str(Expanded / count) + ", " + str(Explored / count) + ", " + str(Path/count) + ", " + str(fired / count) + ", " + str(Removed / count)
+	print model + "," + curCurry + "," + method + "," + sat + "," + str(time / count) + "," + str(Expanded / count) + "," + str(Explored / count) + "," + str(Path/count) + "," + str(fired / count) + "," + str(Removed / count)
 
-f = open("RandomTest - Sheet 1.csv")
+f = open("MoreRandomTests.csv")
 
 
 i = 0
@@ -23,13 +23,14 @@ Removed = 0.0
 for line in f:
 	if(i > 0):
 		
-		line.strip("\t")
+		line.strip()
 		lSp = line.split(",")
 		if (curCurry != lSp[1] or method != lSp[2] or model != lSp[0]):
 			#begin new table	
 
 			if (i>1 and count > 0):
 				printthis(count,model,curCurry,method,sat,time,Expanded,Explored,Path,fired,Removed)
+			
 			
 			time = 0.0
 			Expanded= 0.0
@@ -57,7 +58,7 @@ for line in f:
 
 
 			count += 1
-		sat = "N/A"
+		sat = lSp[3]
 
 		
 		

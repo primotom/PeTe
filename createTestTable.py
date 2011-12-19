@@ -1,4 +1,4 @@
-f = open("SuperNewTests.csv")
+f = open("SuperNewTestsSheet1.csv")
 
 curCurry = ""
 model = ""
@@ -30,11 +30,14 @@ for line in f:
 			#print lSp[0].strip(".pet") + " & " + sat + " & " + lSp[4]+ " & " + lSp[5] + " & " + lSp[6] + " & " + lSp[7] + " & " + lSp[8]  + " & " + lSp[9] + "\\\\\\hline"
 		
 		if( lSp[3].find("Satisfied") >= 0):
-			sat = "YES"
+			sat = "Yes"
 			#print lSp[0].strip(".pet") + " & " + sat + " & " + lSp[4]+ " & " + lSp[5] + " & " + lSp[6] + " & " + lSp[7] + " & " + lSp[8]  + " & " + lSp[9] + "\\\\\\hline"
 		
 		if( lSp[3].find("OutOfTime") >= 0):
 			sat = "Out of time"
+
+		if( lSp[3].find("Skipped") >= 0):
+			sat = "Skipped"
 		#	print lSp[0].strip(".pet") + " & " + sat + " & - & - & - & - & - & - \\\\\\hline"
 		
 		if( lSp[3].find("OutOfMemory") >= 0):
