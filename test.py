@@ -143,10 +143,6 @@ LeaderElection = [
 "Protocols/Election45.pet",
 "Protocols/Election50.pet"
 ]
-ExLeaderElection = [
-"Protocols/Election1.pet",
-"Protocols/Election5.pet"
-]
 modellists = []
 for m in Models:
 	if m == "MAPK": modellists += (MAPK[SkipFirstNModels:],)
@@ -155,7 +151,6 @@ for m in Models:
 	if m == "Mutex": modellists += (Mutex[SkipFirstNModels:],)
 	if m == "Protocols": modellists += (Protocols[SkipFirstNModels:],)
 	if m == "LeaderElection": modellists += (LeaderElection[SkipFirstNModels:],)
-	if m == "ExLeaderElection": modellists += (ExLeaderElection[SkipFirstNModels:],)
 
 def getMemory(pid):
 	argvs = ["ps", "-p", str(pid), "-o", "vsz="]
