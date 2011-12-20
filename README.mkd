@@ -1,7 +1,6 @@
 PeTe - Petri Engine exTremE
 ===========================
 PeTe is a graphical Petri net modelling and verification tool.
-A binary package for Ubuntu can be found [here](https://github.com/downloads/jopsen/PeTe/pete_1.0-1ubuntu1_i386.deb) and a PPA for Ubuntu 10.10 is available [here](https://launchpad.net/~jopsen/+archive/pete).
 
 Building PeTe
 -------------
@@ -21,11 +20,18 @@ non-unix platform. Following dependencies are required for building:
 
 License
 -------
-PeTe is available under the terms of the GNU GPL versoin 3 or (at your option) any later version.
+PeTe is available under the terms of the GNU GPL version 3 or (at your option) any later version.
 If this license doesn't suit you're welcome to contact us, and purpose an alternative license.
 
 Authors
 -------
+Original PeTe team
   * Jonas Finnemann Jensen
   * Thomas Søndersø Nielsen
   * Lars Kærlund Østergaard
+
+Boolean and monotonicity extensions
+  * Karsten Jakobsen
+  * Anne Kathrine Jensen
+  * Sabrine Conny Hjøllund Mouritsen
+  * Thomas Søndersø Nielsen
